@@ -1,0 +1,191 @@
+//
+.line {
+    @include screen('mobile') {
+        .linedel {
+            display: none;
+        }
+
+        //header
+        .header {
+
+            .login_mobile_btn,
+            .member_mobile_btn {
+                display: none;
+            }
+
+
+            >.container {
+                .sidebarCtrl {
+                    display: none !important;
+                }
+            }
+        }
+
+        .keywordHot,
+        .related_block,
+        .newbooks_block,
+        .themebook_block,
+        .featured_block {
+            display: none;
+        }
+
+        //
+        .advanced_search {
+            display: none;
+        }
+
+        //小鍵盤
+        .keyboardInputInitiator {
+            display: none;
+        }
+
+        //
+        .search_blockin {
+            .searchsystem {
+                .btn_grp {
+                    .branchsearch {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        //排序方式
+
+        .sortbyblock {
+            ul {
+                li {
+                    width: 50% !important;
+
+                    &.linedel {
+                        display: none;
+                    }
+
+                    &:nth-child(2) {}
+                }
+            }
+        }
+
+        //分享愛心
+        .booklist_block .booklist .bookmidblock .bookshare ul li:first-child {
+            display: none;
+        }
+
+        //option檢視方式
+        .option {
+            display: none;
+        }
+
+        //
+        .booklist .bookleftblock {
+            label {
+                input[type="checkbox"] {
+                    display: none;
+                }
+            }
+        }
+
+        //星星評論
+        .booklist_block .booklist .score_star,
+        .booklist_block .booklist .then{
+            display: none;
+        }
+        .booklist_block .booklist .bookleftblock .book .score{
+            display: none;
+        }
+        //function
+        .function {
+            display: none;
+        }
+
+        .collection {
+            display: none;
+        }
+
+        //
+        .book_detail {
+
+            .fraction,
+            .score_star,
+            .then {
+                display: none;
+            }
+        }
+
+        //cp頁面不要的區塊
+        .book_detaildata {
+            #node04,
+            #node07,
+            #node08,
+            #node09 {
+                display: none;
+            }
+        }
+
+        //
+        .mystudyname {
+            padding: 20px 0 25px;
+
+            .member_pic {
+                display: none;
+            }
+
+            .nameblock {
+                h2 {
+                    display: none;
+                }
+
+                .name {
+                    em {
+                        span {
+                            display: block;
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                .mystudybtn {
+                    input {
+                        &.btn {
+                            display: none
+                        }
+
+                        &.linedel {
+                            display: inline-block;
+                        }
+
+                    }
+
+                }
+            }
+        }
+
+        //
+        .mystudycontent {
+            .mynotice {
+                display: none;
+            }
+
+            .mycard {
+                .mycardlist {
+                    li {
+                        &.linedel {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        //清單查詢
+        .mystudysearchbtn{
+            display: none;
+        }
+
+    }
+
+    @media(max-width: 480px) {
+        .mainrightblock .book_detaildata .bookdata h2.fixed {
+            top: 64px;
+        }
+    }
+}

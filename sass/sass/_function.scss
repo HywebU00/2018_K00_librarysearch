@@ -1,0 +1,137 @@
+$function_color:#888;
+
+//可自訂顏色，或是自帶既有變數，但請注意背景色與字的對比度
+//範例：$function_color:#000;
+//icon基本設定
+%function_before {
+    vertical-align: middle;
+    content: "";
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: .2em;
+    display: inline-block;
+}
+
+.function {
+    margin: 0px;
+    padding: 8px 5px 5px;
+    overflow: hidden;
+    text-align: right;
+    border-bottom: 1px solid $color-gray;
+    @include box-sizing();
+
+    @media(max-width: 480px) {
+        text-align: center;
+
+        &.fixed {
+            top: 55px;
+            position: fixed;
+            width: 100%;
+            background-color: #eee;
+            z-index: 999;
+            border-bottom:none;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+            display: block;
+            display: inline-block;
+            margin: 0 3px 3px 0;
+            position: relative;
+            list-style-type: none;
+
+            button,
+            a {
+                display: block;
+                padding: .2em 1em .2em 2em;
+                background-color: #fff;
+                border: 1px solid $color-gray;
+                color: #333;
+                @include border-radius(4px);
+
+                &:hover,
+                &:focus {
+                    background-color: #eee;
+                }
+            }
+
+            // 回上一頁
+            &.icon_back {
+                &:before {
+                    @extend %function_before;
+                    background: url(../images/icon_back.png) no-repeat center center;
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                }
+            }
+
+            //上一筆
+            &.icon_pre {
+                a {
+                    @media(max-width: 480px) {
+                        padding: .2em .5em .2em 1.2em;
+                    }
+                }
+
+                &:before {
+                    @extend %function_before;
+                    background: url(../images/icon_pre.png) no-repeat center center;
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+
+                    @media(max-width: 480px) {
+                        left: 0px;
+                    }
+                }
+            }
+
+            //下一筆
+            &.icon_next {
+                a {
+                    padding: .2em 2em .2em 1em;
+
+                    @media(max-width: 480px) {
+                        padding: .2em 1.2em .2em .5em;
+                    }
+                }
+
+                &:before {
+                    @extend %function_before;
+                    background: url(../images/icon_next.png) no-repeat center center;
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+
+                    @media(max-width: 480px) {
+                        right: -3px;
+                    }
+                }
+            }
+
+            // 友善列印
+            &.icon_print {
+                a:before {
+                    @extend %function_before;
+                    background: url(../images/basic/icon_print.svg) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+
+            // 轉寄友人
+            &.icon_forward {
+                a:before {
+                    @extend %function_before;
+                    background: url(../images/basic/icon_forward.svg) no-repeat center center;
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}

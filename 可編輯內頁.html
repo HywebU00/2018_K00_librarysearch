@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>凌網科技圖書館查詢系統</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 出版年度css -->
+    <link rel="stylesheet" href="vendor/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
+    <link rel="stylesheet" href="css/hyui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+    <!-- wrapper 最大寬度 -->
+   <div class="wrapper">
+        <!-- sidebar  start-->
+        <aside class="sidebar">
+            <div class="m_area">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <nav class="navigation">
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                </nav>
+                <button type="button" class="sidebarClose">關閉</button>
+            </div>
+            <div class="menu_overlay"></div>
+        </aside>
+        <!-- sidebar  end-->
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <button type="button" class="sidebarCtrl">側欄選單</button>
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <!-- navigation Start -->
+                <nav class="navigation">
+                    <!-- 一組ul預設靠右 -->
+                    <!-- 兩組ul已寫JQ靠左靠右 -->
+                    <ul>
+                        <li><a href="javascript:;">Help</a></li>
+                        <li><a href="javascript:;">圖書館首頁</a></li>
+                    </ul>
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                    <!-- login start -->
+                    <div class="login loginbtn">
+                        <button type="button" class="btn btn-sm">登入/線上辦證</button>
+                    </div>
+                    <!-- login end-->
+                    <!-- 登入燈箱start -->
+                    <div class="login_lightbox">
+                        <div class="overlay"></div>
+                        <div class="loginblock">
+                            <div class="close"></div>
+                            <h2>讀者登入</h2>
+                            <p>登入說明文字：本校校職員生的帳號密碼與資訊服務相同，帳號為學號/員工編號，密碼若忘記，請洽圖書館暨資訊處系統開發組， (電話：07-78111151轉2830) </p>
+                            <form>
+                                <div class="form_grp form_inline">
+                                    <label for="username">讀者帳號:</label>
+                                    <input name="username" type="text" placeholder="請輸入文字">
+                                </div>
+                                <div class="form_grp form_inline">
+                                    <label for="password">讀者密碼:</label>
+                                    <input name="password" type="password" placeholder="請輸入密碼">
+                                </div>
+                                <div class="btn_grp">
+                                    <input name="" type="submit" value="登入" />
+                                </div>
+                                <div class="unable_login">
+                                    <h3><span>無法登入?</span></h3>
+                                    <input name="" type="button" value="忘記密碼" />
+                                    <input name="" type="button" value="網路辦證" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 登入燈箱end-->
+                </nav>
+                <!-- 手機才出現的按鈕 start -->
+                <div class="login  loginbtn login_mobile_btn">
+                    <button type="button" class="btn btn-sm">登入</button>
+                </div>
+                <!-- 手機才出現的按鈕 end -->
+                <h1><a href="index.html"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="javascript:;">網站導覽</a>
+                </noscript>
+                <!-- 手機版才出現的menu start-->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <!-- 手機版才出現的menu end-->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <!-- 中間圖start -->
+            <section class="section col-12 search_blockin2">
+                <div class="container">
+                    <div class="col">
+                    </div>
+                </div>
+            </section>
+            <!-- 中間圖end -->
+            <!-- 分欄start -->
+            <div class="maincolumn">
+                <div class="container">
+                    <!-- 右欄 start  -->
+                    <div class="mainrightblock2">
+                        <!-- 右欄左線start -->
+                        <div class="rightlineblock">
+                            <!-- 路徑start -->
+                            <div class="breadcrumb">
+                                <span>現在位置：</span>
+                                <ul>
+                                    <li><a href="javascript:;">首頁</a></li>
+                                    <li>網路辦證</li>
+                                </ul>
+                            </div>
+                            <!-- 路徑end-->
+                            <!-- 可編輯內頁 start-->
+                            <div class="cp_content">
+                                <h2>天下雜誌的隱私權政策與使用條款</h2>
+                                <h3>一、簡介</h3>
+                                <p>歡迎您使用天下雜誌集團（天下雜誌股份有限公司、天下生活出版股份有限公司、親子天下股份有限公司、財團法人天下雜誌教育基金會、天宇股份有限公司，以下簡稱本集團）網站，為了保障您的權益，並打造更佳的服務，本集團在您開始使用本集團網站前，請先詳讀本隱私權政策與使用條款（以下簡稱「本政策」）： </p>
+                                <h4>說明</h4>
+                                <p>歡迎您使用天下雜誌集團（天下雜誌股份有限公司、天下生活出版股份有限公司、親子天下股份有限公司、財團法人天下雜誌教育基金會、天宇股份有限公司，以下簡稱本集團）網站，為了保障您的權益，並打造更佳的服務，本集團在您開始使用本集團網站前，請先詳讀本隱私權政策與使用條款（以下簡稱「本政策」）： </p>
+                                <h3>二、本政策適用範圍</h3>
+                                <p>本政策適用本集團所有服務，包括提供內容註冊會員、發表留言或提問、購買商品或課程、報名活動、投稿。我們可能不定時推出新服務。若推出新服務使收集與使用個人資料的方式有變動，我們會提供變動的項目。除非推出的新服務有特別說明，否則這類服務仍須遵守本政策。 </p>
+                                <h3>三、我們如何收集您的個人資料</h3>
+                                <p>本集團基於消費者、客戶管理與服務、行銷、採購與供應管理及其他合於營業登記項目或章程所定業務需要之特定目的，使用以下方式收集您的個人資料： </p>
+                                <ol>
+                                    <li>當您瀏覽網站時 - 我們會收集您瀏覽網站的使用情形，例如閱讀哪些文章、在哪些地方離開網頁、閱讀日期與時間、Cookie 資料、您的 IP 位址、瀏覽器類型、連線至網站的裝置類型。</li>
+                                    <li>當您註冊會員時 - 我們會收集您的個人資料，例如：姓名、電子信箱、手機，以便為您提供會員服務。</li>
+                                    <li>當您投稿時 - 我們會收集您的個人資料，例如：姓名、電子信箱、手機、個人照片、職業、著作、身分證統一編號、匯款資料，以便與您聯絡投稿事宜、編輯文稿、處理稿費與投寄贈書。</li>
+                                    <li>當您購買商品或課程時 - 您必須先註冊成為天下雜誌集團會員，再進行消費。我們會收集您的姓名、電子信箱、手機、地址，以便後續為您派送商品或課程入場券。</li>
+                                    <li>來自天下雜誌集團 - 當您在其他天下雜誌集團子網站登入使用服務時，若依據您的個資包括電子郵件、姓名、手機經程式比對為相同一人，我們將同步您在其他子網站使用服務的紀錄。</li>
+                                    <li>來自第三方 - 我們會從與我們合作的第三方，包括廣告商與合作夥伴，收集到有關您的個人資料（請參閱下方第五節）。只有當您同意第三方或本集團進行資料分享、或註冊成為會員時，我們才會使用。</li>
+                                </ol>
+                                <h3>四、我們如何使用您的個人資料</h3>
+                                <ol>
+                                    <li>提供個人化的服務，包括內容和廣告 - 我們會用您所提供的個人資料，為您打造個人化的服務，包括個人化內容或建議活動。例如：若您過去曾參與某一系列活動，代表您對該活動有興趣，當該活動有最新消息，我們會優先知會予您。<br />依據您的設定，本集團網站與第三方服務可能會根據您的興趣向您顯示個人化廣告。例如：若您曾造訪天下雜誌出版的書籍網頁，之後您瀏覽的網站包含我們與第三方合作的廣告時，可能會看到類似書籍的廣告。</li>
+                                    <li>評估成效 - 為了了解本服務的使用情形，我們會收集並分析資料。我們會運用Google Analytics（分析）等多種工具分析，而這些分析結果將用來改善服務，為您提供更佳的內容。</li>
+                                    <li>與您互動交流 - 我們會使用向您收集到的電子郵件、手機、社交媒體帳號與您互動。例如：您若參與本集團網站舉辦的活動並獲得獎項，我們會使用以上個人資料與您聯絡後續領獎事宜。我們也可能在推出新服務時，寄送通知給您。</li>
+                                    <li>保護天下雜誌集團使用者和一般大眾 - 我們會應用相關資料來改善天下雜誌集團所提供服務的穩定與安全。包括：偵測與預防可能造成天下雜誌集團使用者傷害的濫用行為、安全性風險，並做出回應。</li>
+                                </ol>
+                                <h3>九、如何與我們聯絡</h3>
+                                <p>如果您對天下雜誌集團服務或本協議有疑問，請利用以下方式與天下雜誌集團客服部聯絡：</p>
+                                <ul class="">
+                                    <li>讀者服務信箱：bill@cw.com.tw</li>
+                                    <li>讀者服務專線：886-2-2662-0332</li>
+                                    <li>傳真電話：886-2-2662-6048</li>
+                                    <li>服務時間：週一～週五：09:00~17:30</li>
+                                    <li>台北市104南京東路二段139號11樓</li>
+                                </ul>
+                                <p>感謝您閱讀我們的條款。希望您能盡情享受 天下雜誌集團所提供的服務！</p>
+                                <table>
+                                    <tr>
+                                        <th>th 1</th>
+                                        <th>th 2</th>
+                                        <th>th 3</th>
+                                        <th>th 4</th>
+                                        <th>th 5</th>
+                                        <th>th 6</th>
+                                    </tr>
+                                    <tr>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                    </tr>
+                                    <tr>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                    </tr>
+                                    <tr>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                        <td>td 資料</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- 可編輯內頁 end-->
+                        </div>
+                        <!-- 右欄左線end -->
+                    </div>
+                    <!-- 右欄 end  -->
+                </div>
+            </div>
+            <!-- 分欄end -->
+        </div>
+        <!-- fatfooter Start -->
+        <section class="fatfooter">
+            <div class="container">
+                <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+                <nav>
+                    <ul>
+                        <li><a href="javascript:;">關於我們</a>
+                            <ul>
+                                <li><a href="javascript:;">個人資料蒐集告知聲明</a></li>
+                                <li><a href="javascript:;">網路隱私權政策</a></li>
+                                <li><a href="javascript:;">交通資訊導引</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">常用連結</a>
+                            <ul>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                                <li><a href="javascript:;">機構典藏</a></li>
+                                <li><a href="javascript:;">facebook粉絲團</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">其他連結</a>
+                            <ul>
+                                <li><a href="javascript:;">HELP</a></li>
+                                <li><a href="javascript:;">借閱政策</a></li>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- fatfooter end -->
+        <!-- footer start-->
+        <footer>
+            <div class="container">
+                <div class="footer_info">
+                    <ul>
+                        <li>屏東縣政府文化處</li>
+                        <li>90054 屏東市大連路69號</li>
+                        <li>08-7360330</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end-->
+    </div>
+    <!-- 燈箱區塊 start-->
+    <!-- 檢視閱讀權限燈箱start -->
+    <div class="lightboxstyle" id="read_permissionstyle">
+        <div class="overlay"></div>
+        <div class="lightboxstyle_block">
+            <div class="close"></div>
+            <h2>檢視閱讀權限</h2>
+            <form>
+                <div class="lightbox_data">
+                    <p>借閱件數：(本/件/間/張)</p>
+                    <div class="listdata">
+                        <ul>
+                            <li>教授指定參考資料：<em>2</em> 件</li>
+                            <li>教授指定參考資料：<em>2</em> 件</li>
+                            <li>教授指定參考資料：<em>2</em> 件</li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 檢視閱讀權限燈箱end -->
+    <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
+    <script type="text/javascript" src="vendor/slick/slick.js">
+    </script>
+    <!-- 出版年度js -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- 出版年度js -->
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

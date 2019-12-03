@@ -1,0 +1,143 @@
+.tabSet {
+    max-width: 90%;
+    margin: 20px auto;
+  
+    @include clearfix1;
+    @include screen('mobile') {
+        max-width: 100%;
+        width: auto;
+        height: auto !important;
+    }
+}
+
+.tabs {
+    position: relative;
+    @include screen('mobile') {
+        position: relative;
+    }
+    &>.tabItem {
+        &.active>a {
+            background-color:$importantColor;
+            color: #FFF;
+            position: relative;
+            border:none;
+        }
+        float: left;
+        font-size: 1em;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        font-weight: normal;
+       
+
+        @include screen('(max-width:767px)') {
+            float: none;
+            &>a {
+                width: 100% !important;
+                border-bottom: 1px solid #888;
+            }
+            &.active>a {
+                border-color: #bbb;
+            }
+        }
+        &>a {
+            display: block;
+            padding: 16px 5px 14px;
+            text-align: center;
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+             @include text-overflow;
+            // margin:0 5px;
+            @include box-sizing();
+            &:hover {
+                 background-color:$importantColor;
+                  color: #fff;
+            }
+        }
+       
+
+    }
+}
+
+//多組 可設定差異
+.example-2 {
+    .tabItem>a:hover {
+        background: $secondaryColor;
+    }
+    .tabItem.active>a {
+        background: $secondaryColor;
+    }
+}
+
+// 顯示content
+.active+.tabContent {
+    display: block;
+}
+
+.tabContent {
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    clear: both;
+    padding: 30px 0px;
+    display: none;
+    @include screen('mobile') {
+        position: static;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+    li {
+        margin: 0 0 1.3em 0;
+        padding: 0;
+        border-bottom: 1px #CCC dashed;
+         @include screen('mobile') {
+            @include text-overflow();
+        }
+
+        span {
+            display: inline-block;
+            margin: 0 0 0 1em;
+            font-size: .813em;
+            color: #666;
+        }
+    }
+    .slick-dots li{
+        margin:0 10px;
+        border-bottom: none;
+    }
+    .slick-dots li button:before {
+        background-color: #fff;
+        opacity:1;
+    }
+    .slick-dots li.slick-active button:before {
+        background-color: #000;
+    }
+    // .more {
+    //     text-align: right;
+    //      @include screen('mobile') {
+    //         text-align: center;
+    //     }
+    //     a {
+    //         display: inline-block;
+    //         background: $color-gray;
+    //         color: #FFF;
+    //         width: auto;
+    //         font-size: .813em;
+    //         padding: .5em 2em;
+    //         @include border-radius(4px);
+    //         @include transition(all, .3s, ease-out);
+    //         &:hover,
+    //         &:focus {
+    //             background: darken($color-gray, 10);
+    //         }
+    //     }
+    // }
+}

@@ -1,0 +1,131 @@
+footer {
+    @include box-sizing(border-box);
+    @include clearfix;
+    background-color: #313131;
+    text-align: left;
+    font-size: 0.938em;
+    position: relative;
+    z-index: 9;
+    
+    @include screen('mobile') {
+        display: none;
+    }
+    .container{
+        @include gutter();
+        >div{
+            padding-bottom: 1em;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+        &:hover,
+        &:focus {
+            color: darken(nth($primaryColor,$style), 10);
+        }
+    }
+    // .footer_logo {
+    //     @include make-xs-column(8);
+    //     @include make-sm-column(3);
+    //     @include make-md-column(3);
+    //     @include make-lg-column(3);
+    //     @include gutter();
+    // }
+    .footer_info {
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(12);
+        @include make-lg-column(12);
+        @include gutter();
+    }
+    // .footer_icon {
+    //     @include make-xs-column(12);
+    //     @include make-sm-column(3);
+    //     @include make-md-column(3);
+    //     @include make-lg-column(3);
+    //     @include gutter();
+    // } // 版權連結
+    .footer_link {
+        @include li-reset();
+        @include clearfix();
+        li {
+            float: left;
+            display: block;
+            margin: 0px 5px 5px 0px;
+            a {
+                display: block;
+                padding: .5em 1em;
+                background: nth($primaryColor,$style);
+                color: #FFF;
+                @include border-radius(3px);
+                @include transition(all, .3s, ease-out);
+                &:hover,
+                &:focus {
+                    background: darken(nth($primaryColor,$style), 10);
+                }
+            }
+        }
+    }
+    p {
+        line-height: 1.65em;
+        text-align: center;
+         color: #fff;
+    }
+    .update,
+    .counter {
+        display: inline-block;
+        margin-right: 5px;
+        em {
+            font-style: normal;
+            color: nth($primaryColor,$style);
+            padding: 0 .5em;
+        }
+    }
+    .footer_icon {
+        a {
+            display: inline-block;
+            vertical-align: top;
+        }
+        img {
+            max-width: 120px;
+        }
+    }
+    ul{
+        margin:0;
+        padding:0;
+        text-align: center;
+        @include screen('mobile') {
+            margin: 20px 0 10px;
+        }
+        li{
+            display: inline-block;
+            color:#fff;
+            padding:0 10px;
+            position: relative;
+            
+            &:before{
+                content: '';
+                position: absolute;
+                width:1px;
+                height: 15px;
+                background-color: #fff;
+                top:5px;
+                right:-4px;
+            }
+            &:last-child{
+                &:before{
+                    width: 0;
+                }
+            }
+            a{
+                color:#fff;
+            }
+            @include screen('mobile') {
+                display: block;
+                &:before{
+                    width: 0;
+                }
+            }
+        }
+    }
+}

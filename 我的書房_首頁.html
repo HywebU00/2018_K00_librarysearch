@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>凌網科技圖書館查詢系統</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 出版年度css -->
+    <link rel="stylesheet" href="vendor/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
+    <link rel="stylesheet" href="css/hyui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+    <!-- wrapper 最大寬度 -->
+   <div class="wrapper">
+        <!-- sidebar  start-->
+        <aside class="sidebar">
+            <div class="m_area">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <nav class="navigation">
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                </nav>
+                <button type="button" class="sidebarClose">關閉</button>
+            </div>
+            <div class="menu_overlay"></div>
+        </aside>
+        <!-- sidebar  end-->
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <button type="button" class="sidebarCtrl">側欄選單</button>
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <!-- navigation Start -->
+                <nav class="navigation">
+                    <!-- 一組ul預設靠右 -->
+                    <!-- 兩組ul已寫JQ靠左靠右 -->
+                    <ul>
+                        <li><a href="javascript:;">Help</a></li>
+                        <li><a href="javascript:;">圖書館首頁</a></li>
+                    </ul>
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                    <!-- login start -->
+                    <div class="login loginbtn">
+                        <button type="button" class="btn btn-sm">登入/線上辦證</button>
+                    </div>
+                    <!-- login end-->
+                    <!-- 登入燈箱start -->
+                    <div class="login_lightbox">
+                        <div class="overlay"></div>
+                        <div class="loginblock">
+                            <div class="close"></div>
+                            <h2>讀者登入</h2>
+                            <p>登入說明文字：本校校職員生的帳號密碼與資訊服務相同，帳號為學號/員工編號，密碼若忘記，請洽圖書館暨資訊處系統開發組， (電話：07-78111151轉2830) </p>
+                            <form>
+                                <div class="form_grp form_inline">
+                                    <label for="username">讀者帳號:</label>
+                                    <input name="username" type="text" placeholder="請輸入文字">
+                                </div>
+                                <div class="form_grp form_inline">
+                                    <label for="password">讀者密碼:</label>
+                                    <input name="password" type="password" placeholder="請輸入密碼">
+                                </div>
+                                <div class="btn_grp">
+                                    <input name="" type="submit" value="登入" />
+                                </div>
+                                <div class="unable_login">
+                                    <h3><span>無法登入?</span></h3>
+                                    <input name="" type="button" value="忘記密碼" />
+                                    <input name="" type="button" value="網路辦證" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 登入燈箱end-->
+                </nav>
+                <!-- 手機才出現的按鈕 start -->
+                <div class="login  loginbtn login_mobile_btn">
+                    <button type="button" class="btn btn-sm">登入</button>
+                </div>
+                <!-- 手機才出現的按鈕 end -->
+                <h1><a href="index.html"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="javascript:;">網站導覽</a>
+                </noscript>
+                <!-- 手機版才出現的menu start-->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <!-- 手機版才出現的menu end-->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <!-- 我的書房start -->
+            <section class="section col-12 mystudyname">
+                <div class="container">
+                    <div class="col">
+                        <div class="member_pic"><a href="#"><img src="images/featured_people04.jpg" alt="照片"></a>
+                            <span>555</span>
+                        </div>
+                        <div class="nameblock">
+                            <h2>我的個人書房</h2>
+                            <div class="name"><em>HI ! 王小明您好，<span>A111222233</span></em>歡迎來到您的專屬書房</div>
+                            <div class="mystudybtn"><input type="button" name="" class="btnstyle whitebg mobile_visible" value="帳戶與紀錄" id="mystudymenulightbox"><input type="button" name="" class="btnstyle whitebg" value="檢視閱讀權限" id="read_permissionbtn"><input type="button" name="" class="btnstyle whitebg mobile_hidden" value="登出"><input type="button" name="" class="btnstyle whitebg linedel" value="借閱證切換" id="read_permissionbtn"><input type="button" name="" class="btnstyle whitebg linedel" value="通知時間" id="read_permissionbtn">
+                            </div>
+                        </div>
+                        <!-- 檢視閱讀權限燈箱start -->
+                        <div class="lightboxstyle" id="read_permissionstyle">
+                            <div class="overlay"></div>
+                            <div class="lightboxstyle_block">
+                                <div class="close"></div>
+                                <h2>檢視閱讀權限</h2>
+                                <form>
+                                    <div class="lightbox_data">
+                                        <p>借閱件數：(本/件/間/張)</p>
+                                        <div class="listdata">
+                                            <ul>
+                                                <li>教授指定參考資料：<em>2</em> 件</li>
+                                                <li>教授指定參考資料：<em>2</em> 件</li>
+                                                <li>教授指定參考資料：<em>2</em> 件</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- 檢視閱讀權限燈箱end -->
+                        <!-- 帳戶與紀錄燈箱 start-->
+                        <div class="mystudymenu_lightbox">
+                            <div class="overlay"></div>
+                            <div class="mystudybox">
+                                <div class="close"></div>
+                                <div class="member_data2">
+                                    <ul>
+                                        <li><a href="#">我的帳戶</a>
+                                            <ul>
+                                                <li><a href="#">我的主頁</a></li>
+                                                <li><a href="#">修改個人資料</a></li>
+                                                <li><a href="#">待繳費用/罰則紀錄</a></li>
+                                                <li><a href="#">與圖書館對話</a></li>
+                                                <li><a href="#">借閱證線上掛失</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">我的閱讀紀錄</a>
+                                            <ul>
+                                                <li><a href="#">我的借閱紀錄</a></li>
+                                                <li><a href="#">我的預約記錄</a></li>
+                                                <li><a href="#">我的跨館通閱清單</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">我的書櫃</a>
+                                            <ul>
+                                                <li><a href="#">我的收藏</a></li>
+                                                <li><a href="#">我的標籤</a></li>
+                                                <li><a href="#">評分/評論紀錄</a></li>
+                                                <li><a href="#">我的推薦採購書籍</a></li>
+                                                <li><a href="#">我的興趣主題</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">其他紀錄</a>
+                                            <ul>
+                                                <li><a href="#">我的借閱歷史紀錄</a></li>
+                                                <li><a href="#">我的預約歷史紀錄</a></li>
+                                                <li><a href="#">我的跨館通閱歷史紀錄</a></li>
+                                                <li><a href="#">我的罰則歷史紀錄</a></li>
+                                                <li><a href="#">我的查詢歷史紀錄</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 帳戶與紀錄燈箱 end-->
+                    </div>
+                </div>
+            </section>
+            <!-- 我的書房end -->
+            <!-- 分欄start -->
+            <div class="maincolumn">
+                <div class="container">
+                    <!-- 左欄 start  -->
+                    <div class="mainleftblock">
+                        <div class="mainleftcontent">
+                            <!-- 我的書房menu start -->
+                            <div class="mystudymenu">
+                                <ul>
+                                    <li><a href="javascript:;">我的帳戶</a>
+                                        <ul>
+                                            <li><a href="javascript:;">我的主頁</a></li>
+                                            <li><a href="javascript:;">修改個人資料</a></li>
+                                            <li><a href="javascript:;">待繳費用/罰則紀錄</a></li>
+                                            <li><a href="javascript:;">與圖書館對話</a></li>
+                                            <li><a href="javascript:;">借閱證線上掛失</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">我的閱讀紀錄</a>
+                                        <ul>
+                                            <li><a href="javascript:;">我的借閱紀錄</a></li>
+                                            <li><a href="javascript:;">我的預約記錄</a></li>
+                                            <li><a href="javascript:;">我的跨館通閱清單</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">我的書櫃</a>
+                                        <ul>
+                                            <li><a href="javascript:;">我的收藏</a></li>
+                                            <li><a href="javascript:;">我的標籤</a></li>
+                                            <li><a href="javascript:;">評分/評論紀錄</a></li>
+                                            <li><a href="javascript:;">我的推薦採購書籍</a></li>
+                                            <li><a href="javascript:;">我的興趣主題</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">其他紀錄</a>
+                                        <ul>
+                                            <li><a href="javascript:;">我的借閱歷史紀錄</a></li>
+                                            <li><a href="javascript:;">我的預約歷史紀錄</a></li>
+                                            <li><a href="javascript:;">我的跨館通閱歷史紀錄</a></li>
+                                            <li><a href="javascript:;">我的罰則歷史紀錄</a></li>
+                                            <li><a href="javascript:;">我的查詢歷史紀錄</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 我的書房menu end -->
+                        </div>
+                    </div>
+                    <!-- 左欄 end  -->
+                    <!-- 右欄 start  -->
+                    <div class="mainrightblock">
+                        <!-- 右欄左線start -->
+                        <div class="rightlineblock">
+                            <!-- 路徑start -->
+                            <div class="breadcrumb">
+                                <span>現在位置：</span>
+                                <ul>
+                                    <li><a href="javascript:;">首頁</a></li>
+                                    <li><a href="#">節點</a></li>
+                                    <li>節點</li>
+                                </ul>
+                            </div>
+                            <!-- 路徑end-->
+                            <!-- mystudycontent start -->
+                            <div class="mystudycontent">
+                                <!-- 我的通知 start-->
+                                <div class="mynotice">
+                                    <h2>我的通知</h2>
+                                    <ul class="booknotice">
+                                        <li><em>預約</em>您的預約書：《百歲醫生教你養小孩》，已抵達 <span class="word_blue">恆春分館</span>。請於<span class="word_orange">2018/09/31</span>前持證件領取。過長就...呈現，點選連結到我的預約清單頁面</li>
+                                        <li><em class="redbg">逾期</em>您的借閱書：《百歲醫生教你養小孩》，已於<span class="word_orange">2018/08/31</span>到期，請盡速返還書籍。過長就...呈現，點選連結到我的借閱清單頁面</li>
+                                        <li><em class="orangebg">即將到期</em>您的借閱書：《百歲醫生教你養小孩》，將在<span class="word_orange">2018/09/31</span>到期，請準時歸還。過長就...呈現，點選連結到我的借閱清單頁面</li>
+                                        <li><em class="greenbg">圖書館通知</em>後臺撰寫的文字直接呈現在此。過長就...呈現，點選連結到圖書館通知頁面</li>
+                                        <li><em class="greenbg">意見反應</em>後臺撰寫的文字直接呈現在此。過長就...呈現，點選連結到該則意見反應頁面</li>
+                                    </ul>
+                                </div>
+                                <!-- 我的通知 end-->
+                                <!-- 我的卡片 start-->
+                                <div class="mycard">
+                                    <h2>我的卡片</h2>
+                                    <ul class="mycardlist">
+                                        <li><a href="#">
+                                                <div class="cardblock redblock">
+                                                    <h3>借閱紀錄</h3>
+                                                    <div class="data"><span class="word_red"><em>55</em>本逾期</span><span><em>47</em>本借閱中</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li><a href="#">
+                                                <div class="cardblock blueblock">
+                                                    <h3>預約紀錄</h3>
+                                                    <div class="data"><span><em>20</em>本預約中</span> <span><em>17</em>本預約到館</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="linedel">
+                                            <a href="#">
+                                                <div class="cardblock greenblock">
+                                                    <h3>跨館通閱紀錄</h3>
+                                                    <div class="data"><span><em>999</em>本申請中</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="linedel">
+                                            <a href="#">
+                                                <div class="cardblock yellowblock">
+                                                    <h3>待繳費用</h3>
+                                                    <div class="data"><span><em>$99,999</em>元</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="linedel">
+                                            <div class="cardblock orangeblock">
+                                                <h3>停權日期</h3>
+                                                <div class="badrecord">
+                                                    <div class="caveat"><img src="images/icon_caveat.png"></div>
+                                                    <ul>
+                                                        <li>暫停借閱至<span>2018/09/30</span></li>
+                                                        <!-- <li>暫停預約至<span>2018/09/30</span></li>
+                                                        <li>暫停通閱至<span>2018/09/30</span></li> -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="linedel">
+                                            <div class="cardblock purpleblock">
+                                                <h3>罰則紀錄</h3>
+                                                <div class="badrecord">
+                                                    <div class="caveat"><img src="images/icon_caveat.png"></div>
+                                                    <ul>
+                                                        <li>勞動服務<span>9,999</span>次</li>
+                                                        <li>賠書本數<span>9,999</span>本</li>
+                                                        <li>違規計點<span>9,999</span>點</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="linedel">
+                                            <div class="cardblock">
+                                                <div class="customcard"><a href="javascript:;"><img src="images/icon_customcard.png">自訂卡片</a></div>
+                                                <div class="complete_custom"><a href="javascript:;"><img src="images/icon_customcard.png">完成自訂</a></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <!-- 自訂卡片 start-->
+                                    <div class="cardstyle">
+                                        <form>
+                                            <ul>
+                                                <li><label><input type="checkbox" value="">預約狀態</label></li>
+                                                <li><label><input type="checkbox" value="">借閱狀態</label></li>
+                                                <li><label><input type="checkbox" value="">待繳費用</label></li>
+                                                <li><label><input type="checkbox" value="">跨館通閱狀態</label></li>
+                                                <li><label><input type="checkbox" value="">停權日期</label></li>
+                                                <li><label><input type="checkbox" value="">罰則紀錄</label></li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                    <!-- 自訂卡片 start-->
+                                </div>
+                                <!-- 我的卡片 end-->
+                                <!-- 我的收藏 start -->
+                                <div class="newbooks_block">
+                                    <h2>我的收藏</h2>
+                                    <div class="newbooks">
+                                        <div><a href="javascript:;"><img src="images/newbook01.jpg">深度學習力：學歷貶值時代</a></div>
+                                        <div><a href="javascript:;"><img src="images/bookcover.jpg">劈你的雷正在路上：築設人生避雷針</a></div>
+                                        <div><a href="javascript:;"><img src="images/newbook03.jpg">how fun 如何爽當youtuber</a></div>
+                                        <div><a href="javascript:;"><img src="images/newbook04.jpg">影響孩子一生的曼思妙答</a></div>
+                                        <div><a href="javascript:;"><img src="images/newbook05.jpg">大數據資本主義：金融資本主義退位，重新定義市場</a></div>
+                                        <div><a href="javascript:;"><img src="images/newbook06.jpg">劈你的雷正在路上：築設人生避雷針</a></div>
+                                        <div><a href="javascript:;"><img src="images/newbook01.jpg">深度學習力：學歷貶值時代</a></div>
+                                        <div><a href="javascript:;"><img src="images/newbook02.jpg">劈你的雷正在路上：築設人生避雷針</a></div>
+                                        <div><a href="javascript:;"><img src="images/newbook03.jpg">how fun 如何爽當youtuber</a></div>
+                                        <div><a href="javascript:;"><img src="images/newbook04.jpg">影響孩子一生的曼思妙答</a></div>
+                                        <div><a href="javascript:;"><img src="images/newbook05.jpg">大數據資本主義：金融資本主義退位，重新定義市場</a></div>
+                                        <div><a href="javascript:;"><img src="images/newbook06.jpg">劈你的雷正在路上：築設人生避雷針</a></div>
+                                    </div>
+                                    <div class="more"><a href="javascript:;" class="btnstyle brownbg">更多</a></div>
+                                </div>
+                                <!-- 我的收藏 end -->
+                            </div>
+                            <!-- mystudycontent end -->
+                        </div>
+                        <!-- 右欄左線end -->
+                    </div>
+                    <!-- 右欄 end  -->
+                </div>
+            </div>
+            <!-- 分欄end -->
+        </div>
+        <!-- fatfooter Start -->
+        <section class="fatfooter">
+            <div class="container">
+                <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+                <nav>
+                    <ul>
+                        <li><a href="javascript:;">關於我們</a>
+                            <ul>
+                                <li><a href="javascript:;">個人資料蒐集告知聲明</a></li>
+                                <li><a href="javascript:;">網路隱私權政策</a></li>
+                                <li><a href="javascript:;">交通資訊導引</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">常用連結</a>
+                            <ul>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                                <li><a href="javascript:;">機構典藏</a></li>
+                                <li><a href="javascript:;">facebook粉絲團</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">其他連結</a>
+                            <ul>
+                                <li><a href="javascript:;">HELP</a></li>
+                                <li><a href="javascript:;">借閱政策</a></li>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- fatfooter end -->
+        <!-- footer start-->
+        <footer>
+            <div class="container">
+                <div class="footer_info">
+                    <ul>
+                        <li>屏東縣政府文化處</li>
+                        <li>90054 屏東市大連路69號</li>
+                        <li>08-7360330</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end-->
+    </div>
+    <!-- 燈箱區塊 start-->
+    <!-- 登入燈箱start -->
+    <!-- <div class="login_lightbox">
+        <div class="overlay"></div>
+        <div class="loginblock">
+            <div class="close"></div>
+            <h2>讀者登入</h2>
+            <p>登入說明文字：本校校職員生的帳號密碼與資訊服務相同，帳號為學號/員工編號，密碼若忘記，請洽圖書館暨資訊處系統開發組， (電話：07-78111151轉2830)
+            </p>
+            <form>
+                <div class="form_grp form_inline">
+                    <label for="username">讀者帳號:</label>
+                    <input name="username" type="text" placeholder="請輸入文字">
+                </div>
+                <div class="form_grp form_inline">
+                    <label for="password">讀者密碼:</label>
+                    <input name="password" type="password" placeholder="請輸入密碼">
+                </div>
+                <div class="btn_grp">
+                    <input name="" type="submit" value="登入" />
+                </div>
+                <div class="unable_login">
+                    <h3><span>無法登入?</span></h3>
+                   <input name="" type="button" value="忘記密碼" />
+                    <input name="" type="button" value="網路辦證" /> 
+                </div>
+            </form>
+        </div>
+    </div> -->
+    <!-- 登入燈箱end-->
+    <!-- 燈箱區塊 end-->
+    <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
+    <script type="text/javascript" src="vendor/slick/slick.js">
+    </script>
+    <!-- 出版年度js -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- 出版年度js -->
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

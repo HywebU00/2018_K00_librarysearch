@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>凌網科技圖書館查詢系統</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
+    <link rel="stylesheet" href="css/hyui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+    <!-- wrapper 最大寬度 -->
+    <div class="wrapper version03">
+        <!-- 隱私權同意 start-->
+        <div class="privacy_consent">
+            <div class="container">
+                <span>為提供您更多優質的內容，本網站使用cookies分析技術。若繼續閱覽本網站內容，即表示您同意我們使用 cookies，關於更多cookies資訊請閱讀我們的隱私權政策與使用條款。</span>
+                <div class="btnstyle whitebg Iknow"><a href="#">我知道了</a></div>
+            </div>
+        </div>
+        <!-- 隱私權同意 end-->
+        <!-- sidebar  start-->
+        <aside class="sidebar">
+            <div class="m_area">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <nav class="navigation">
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                </nav>
+                <button type="button" class="sidebarClose">關閉</button>
+            </div>
+            <div class="menu_overlay"></div>
+        </aside>
+        <!-- sidebar  end-->
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <button type="button" class="sidebarCtrl">側欄選單</button>
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <!-- navigation Start -->
+                <nav class="navigation">
+                    <!-- 一組ul預設靠右 -->
+                    <!-- 兩組ul已寫JQ靠左靠右 -->
+                    <ul>
+                        <li><a href="javascript:;">Help</a></li>
+                        <li><a href="javascript:;">圖書館首頁</a></li>
+                    </ul>
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                    <!-- login start -->
+                    <div class="login loginbtn">
+                        <button type="button" class="btn btn-sm">登入</button>
+                    </div>
+                    <!-- login end-->
+                    <!-- 登入燈箱start -->
+                    <div class="login_lightbox">
+                        <div class="overlay"></div>
+                        <div class="loginblock">
+                            <div class="close"></div>
+                            <h2>會員登入</h2>
+                            <p>登入說明文字：會員登入
+                                <!-- 本校校職員生的帳號密碼與資訊服務相同，帳號為學號/員工編號，密碼若忘記，請洽圖書館暨資訊處系統開發組， (電話：07-78111151轉2830) -->
+                            </p>
+                            <form>
+                                <div class="form_grp form_inline">
+                                    <label for="username">帳號:</label>
+                                    <input name="username" type="text" placeholder="請輸入文字">
+                                </div>
+                                <div class="form_grp form_inline">
+                                    <label for="password">密碼:</label>
+                                    <input name="password" type="password" placeholder="請輸入密碼">
+                                </div>
+                                <div class="btn_grp">
+                                    <input name="" type="button" value="忘記密碼" />
+                                    <input name="" type="reset" value="清除">
+                                    <input name="" type="submit" value="確認" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 登入燈箱end-->
+                </nav>
+                <!-- 手機才出現的按鈕 start -->
+                <div class="login  loginbtn login_mobile_btn">
+                    <button type="button" class="btn btn-sm">登入</button>
+                </div>
+                <!-- 手機才出現的按鈕 end -->
+                <h1><a href="index.html"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="javascript:;">網站導覽</a>
+                </noscript>
+                <!-- 手機版才出現的menu start-->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <!-- 手機版才出現的menu end-->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main">
+            <div class="main_mp">
+                <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+                <!-- 查詢系統start -->
+                <section class="section col-12 search_block">
+                    <div class="container">
+                        <div class="col">
+                            <!-- 查詢內容start -->
+                            <div class="searchsystem">
+                                <h2>凌網科技圖書館查詢系統</h2>
+                                <form>
+                                    <div class="form_search">
+                                        <input type="text" name="" value="" placeholder="請輸入關鍵文字" class="keyboardInput">
+                                        <input type="submit" name="" value="">
+                                        <!-- 最近搜尋 start -->
+                                        <div class="recent_searches">
+                                            <ul class="promptword">
+                                                <li><a href="#">我們與惡的距離</a></li>
+                                                <li><a href="#">我看我的冠軍女兒</a></li>
+                                                <li><a href="#">我的決定</a></li>
+                                                <li><a href="#">我想念我自己</a></li>
+                                            </ul>
+                                            <div class="title">查詢記錄</div>
+                                            <div class="save_record"><a href="#">儲存查詢紀錄</a></div>
+                                            <ul class="record_list">
+                                                <li><a href="#">提名，東京<span>2019-08-15<em>10:50</em></span>結果，60筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">作者，村上村樹<span>2019-08-15<em>10:50</em></span>結果，3筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">出版者，遠流出版社<span>2019-08-15<em>10:50</em></span>結果，360筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，2筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                                <li><a href="#">提名，東京and作者村上村樹<span>2019-08-15<em>10:50</em></span>結果，97筆</a>
+                                                    <div class="del"><a href="#">移除</a></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- 最近搜尋 end -->
+                                    </div>
+                                    <div class="onlysearch"><input type="checkbox" name="" value="">僅查詢目前可借閱館藏</div>
+                                    <div class="searchall">
+                                        <div class="advancedsearch"><a href="javascript:;">進階查詢</a></div>
+                                        <div class="branchsearch"><a href="javascript:;">分館查詢</a></div>
+                                    </div>
+                                </form>
+                                <div class="keywordHot">
+                                    <span>熱門關鍵字：</span>
+                                    <ul>
+                                        <li><a href="javascript:;">正義一場思辨之旅正義一場思辨之旅正義一場思辨之旅</a></li>
+                                        <li><a href="javascript:;">正義一場思辨之旅</a></li>
+                                        <li><a href="javascript:;">光榮城市</a></li>
+                                        <li><a href="javascript:;">正義一場思辨之旅</a></li>
+                                        <li><a href="javascript:;">快思慢想</a></li>
+                                        <li><a href="javascript:;">光榮城市</a></li>
+                                        <li><a href="javascript:;">正義一場思辨之旅正義一場思辨之旅正義一場思辨之旅</a></li>
+                                        <li><a href="javascript:;">光榮城市</a></li>
+                                        <li><a href="javascript:;">正義一場思辨之旅</a></li>
+                                        <li><a href="javascript:;">光榮城市</a></li>
+                                        <li><a href="javascript:;">正義一場思辨之旅</a></li>
+                                    </ul>
+                                </div>
+                                <!-- <button type="button" class="btn btn-lg btn-yellow">分館查詢</button> -->
+                            </div>
+                            <!-- 查詢內容end -->
+                        </div>
+                    </div>
+                </section>
+                <!-- 查詢系統end -->
+                <!-- 相關連結start -->
+                <section class="section col-12 related_block">
+                    <div class="container">
+                        <div class="col">
+                            <div class="related_links">
+                                <div><a href="javascript:;" class="ralated_all"><span><img src="images/link_icon01.png"></span>全部</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon02.png"></span>新書通報</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon03.png"></span>網路辦證</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon04.png"></span>線上協尋</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon05.png"></span>設備預約</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon06.png"></span>圖書推薦</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon07.png"></span>館藏瀏覽</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon08.png"></span>讀者建議</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon09.png"></span>精挑細選</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon10.png"></span>合作播映</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon11.png"></span>聽視障</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon12.png"></span>多元館藏</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon13.png"></span>兒童版</a></div>
+                                <div><a href="javascript:;"><span><img src="images/link_icon14.png"></span>原住民</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 相關連結全部燈箱start -->
+                    <div class="related_lightbox">
+                        <div class="overlay"></div>
+                        <div class="relatedboxmp">
+                            <div class="close"></div>
+                            <!-- <h2>全部</h2> -->
+                            <div class="relatedlist">
+                                <ul>
+                                    <li><a href="#">最新消息</a></li>
+                                    <li><a href="#">設備預約</a></li>
+                                    <li><a href="#">新書通報</a></li>
+                                    <li><a href="#">館藏瀏覽</a></li>
+                                    <li><a href="#">網路辦證</a></li>
+                                    <li><a href="#">學科導航</a></li>
+                                    <li><a href="#">指定參考書</a></li>
+                                    <li><a href="#">線上協尋書</a></li>
+                                    <li><a href="#">圖書推薦</a></li>
+                                    <li><a href="#">其他功能</a></li>
+                                    <li><a href="#">其他功能</a></li>
+                                    <li><a href="#">其他功能</a></li>
+                                    <li><a href="#">最新消息</a></li>
+                                    <li><a href="#">設備預約</a></li>
+                                    <li><a href="#">新書通報</a></li>
+                                    <li><a href="#">館藏瀏覽</a></li>
+                                    <li><a href="#">網路辦證</a></li>
+                                    <li><a href="#">學科導航</a></li>
+                                    <li><a href="#">指定參考書</a></li>
+                                    <li><a href="#">線上協尋書</a></li>
+                                    <li><a href="#">圖書推薦</a></li>
+                                    <li><a href="#">其他功能</a></li>
+                                    <li><a href="#">其他功能</a></li>
+                                    <li><a href="#">其他功能</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 相關連結全部燈箱end -->
+                </section>
+                <!-- 相關連結end -->
+                <!-- 新到圖書start -->
+                <section class="section col-12 newbooks_block">
+                    <div class="container">
+                        <div class="col">
+                            <h2>新到圖書</h2>
+                            <div class="newbooks">
+                                <div><a href="javascript:;"><img src="images/newbook01.jpg">深度學習力：學歷貶值時代</a></div>
+                                <div><a href="javascript:;"><img src="images/bookcover.jpg">劈你的雷正在路上：築設人生避雷針</a></div>
+                                <div><a href="javascript:;"><img src="images/newbook03.jpg">how fun 如何爽當youtuber</a></div>
+                                <div><a href="javascript:;"><img src="images/newbook04.jpg">影響孩子一生的曼思妙答</a></div>
+                                <div><a href="javascript:;"><img src="images/newbook05.jpg">大數據資本主義：金融資本主義退位，重新定義市場</a></div>
+                                <div><a href="javascript:;"><img src="images/newbook06.jpg">劈你的雷正在路上：築設人生避雷針</a></div>
+                                <div><a href="javascript:;"><img src="images/newbook01.jpg">深度學習力：學歷貶值時代</a></div>
+                                <div><a href="javascript:;"><img src="images/newbook02.jpg">劈你的雷正在路上：築設人生避雷針</a></div>
+                                <div><a href="javascript:;"><img src="images/newbook03.jpg">how fun 如何爽當youtuber</a></div>
+                                <div><a href="javascript:;"><img src="images/newbook04.jpg">影響孩子一生的曼思妙答</a></div>
+                                <div><a href="javascript:;"><img src="images/newbook05.jpg">大數據資本主義：金融資本主義退位，重新定義市場</a></div>
+                                <div><a href="javascript:;"><img src="images/newbook06.jpg">劈你的雷正在路上：築設人生避雷針</a></div>
+                            </div>
+                            <div class="more"><a href="javascript:;" class="btnstyle brownbg">更多資料</a></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 新到圖書end -->
+                <!-- 主題書展start -->
+                <section class="section col-12 themebook_block hidden">
+                    <div class="container">
+                        <div class="col">
+                            <h2>主題書展</h2>
+                            <div class="tabSet">
+                                <section class="tabs example-1">
+                                    <div class="tabItem active"><a href="javascript:;">醫學倫理醫學倫理醫學倫理</a></div>
+                                    <!--選到的頁籤項目-->
+                                    <div class="tabContent">
+                                        <div class="themebook">
+                                            <div><a href="javascript:;"><img src="images/themebook01.jpg">
+                                                    <div>Tools for Helpful SoulsTools for Helpful Souls</div>
+                                                </a></div>
+                                            <div><a href="javascript:;"><img src="images/themebook02.jpg">
+                                                    <div>失智可以預防，更可以治癒</div>
+                                                </a></div>
+                                            <div><a href="javascript:;"><img src="images/themebook03.jpg">
+                                                    <div>法醫．屍體．解剖室2：謀殺診斷書：專
+                                                </a></div>
+                                        </div>
+                                        <div><a href="javascript:;"><img src="images/themebook04.jpg">
+                                                <div>太極米漿粥：來自桂林古本傷寒雜病論，
+                                            </a></div>
+                                    </div>
+                                    <div><a href="javascript:;"><img src="images/themebook05.jpg">
+                                            <div>牙～40年名醫的真心告白</div>
+                                        </a></div>
+                                    <div><a href="javascript:;"><img src="images/themebook06.jpg">
+                                            <div>太極米漿粥：來自桂林古本傷寒雜病論，太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                                        </a></div>
+                                    <div><a href="javascript:;"><img src="images/themebook01.jpg">Tools for Helpful Souls</a></div>
+                                    <div><a href="javascript:;"><img src="images/themebook02.jpg">
+                                            <div>失智可以預防，更可以治癒</div>
+                                        </a></div>
+                                    <div><a href="javascript:;"><img src="images/themebook03.jpg">
+                                            <div>法醫．屍體．解剖室2：謀殺診斷書：專
+                                        </a></div>
+                            </div>
+                            <div><a href="javascript:;"><img src="images/themebook04.jpg">
+                                    <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                                </a></div>
+                            <div><a href="javascript:;"><img src="images/themebook05.jpg">
+                                    <div>牙～40年名醫的真心告白</div>
+                                </a></div>
+                            <div><a href="javascript:;"><img src="images/themebook06.jpg">
+                                    <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                                </a></div>
+                        </div>
+                        <div class="more"><a href="javascript:;" class="btnstyle brownbg">更多醫學倫理</a></div>
+                    </div>
+                    <div class="tabItem"><a href="javascript:;">驚悚小說展驚悚小說展驚悚小說展驚悚小說展</a></div>
+                    <div class="tabContent">
+                        <div class="themebook">
+                            <div><a href="javascript:;"><img src="images/themebook02.jpg">
+                                    <div>失智可以預防，更可以治癒</div>
+                                </a></div>
+                            <div><a href="javascript:;"><img src="images/themebook01.jpg">
+                                    <div>Tools for Helpful Souls Tools for Helpful Souls</div>
+                                </a></div>
+                            <div><a href="javascript:;"><img src="images/themebook03.jpg">
+                                    <div>法醫．屍體．解剖室2：謀殺診斷書：專
+                                </a></div>
+                        </div>
+                        <div><a href="javascript:;"><img src="images/themebook04.jpg">
+                                <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                            </a></div>
+                        <div><a href="javascript:;"><img src="images/themebook05.jpg">
+                                <div>牙～40年名醫的真心告白</div>
+                            </a></div>
+                        <div><a href="javascript:;"><img src="images/themebook06.jpg">
+                                <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                            </a></div>
+                        <div><a href="javascript:;"><img src="images/themebook01.jpg">
+                                <div>Tools for Helpful Souls</div>
+                            </a></div>
+                        <div><a href="javascript:;"><img src="images/themebook02.jpg">
+                                <div>失智可以預防，更可以治癒</div>
+                            </a></div>
+                        <div><a href="javascript:;"><img src="images/themebook03.jpg">
+                                <div>法醫．屍體．解剖室2：謀殺診斷書：專法醫．屍體．解剖室2：謀殺診斷書：專</div>
+                            </a></div>
+                        <div><a href="javascript:;"><img src="images/themebook04.jpg">
+                                <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                            </a></div>
+                        <div><a href="javascript:;"><img src="images/themebook05.jpg">
+                                <div>牙～40年名醫的真心告白</div>
+                            </a></div>
+                        <div><a href="javascript:;"><img src="images/themebook06.jpg">
+                                <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                            </a></div>
+                    </div>
+                    <div class="more"><a href="javascript:;" class="btnstyle brownbg">更多驚悚小說展</a></div>
+            </div>
+            <div class="tabItem"><a href="javascript:;">語言學習</a></div>
+            <div class="tabContent">
+                <div class="themebook">
+                    <div><a href="javascript:;"><img src="images/themebook03.jpg">
+                            <div>法醫．屍體．解剖室2：謀殺診斷書：專</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook01.jpg">
+                            <div>Tools for Helpful Souls</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook02.jpg">
+                            <div>失智可以預防，更可以治癒</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook04.jpg">
+                            <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook05.jpg">
+                            <div>牙～40年名醫的真心告白</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook06.jpg">
+                            <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook01.jpg">
+                            <div>Tools for Helpful Souls</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook02.jpg">
+                            <div>失智可以預防，更可以治癒</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook03.jpg">
+                            <div>法醫．屍體．解剖室2：謀殺診斷書：專</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook04.jpg">
+                            <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook05.jpg">
+                            <div>牙～40年名醫的真心告白</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook06.jpg">
+                            <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                        </a></div>
+                </div>
+                <div class="more"><a href="javascript:;" class="btnstyle brownbg">更多語言學習</a></div>
+            </div>
+            <div class="tabItem"><a href="javascript:;">財務金融</a></div>
+            <div class="tabContent">
+                <div class="themebook">
+                    <div><a href="javascript:;"><img src="images/themebook04.jpg">
+                            <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook01.jpg">
+                            <div>Tools for Helpful Souls</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook02.jpg">
+                            <div>失智可以預防，更可以治癒</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook03.jpg">
+                            <div>法醫．屍體．解剖室2：謀殺診斷書：專</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook05.jpg">
+                            <div>牙～40年名醫的真心告白</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook06.jpg">
+                            <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook01.jpg">
+                            <div>Tools for Helpful Souls</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook02.jpg">
+                            <div>失智可以預防，更可以治癒</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook03.jpg">
+                            <div>法醫．屍體．解剖室2：謀殺診斷書：專</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook04.jpg">
+                            <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook05.jpg">
+                            <div>牙～40年名醫的真心告白</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook06.jpg">
+                            <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                        </a></div>
+                </div>
+                <div class="more"><a href="javascript:;" class="btnstyle brownbg">更多財務金融</a></div>
+            </div>
+            <div class="tabItem"><a href="javascript:;">健康養生</a></div>
+            <div class="tabContent">
+                <div class="themebook">
+                    <div><a href="javascript:;"><img src="images/themebook06.jpg">
+                            <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook01.jpg">
+                            <div>Tools for Helpful Souls</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook02.jpg">
+                            <div>失智可以預防，更可以治癒</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook03.jpg">
+                            <div>法醫．屍體．解剖室2：謀殺診斷書：專</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook04.jpg">
+                            <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook05.jpg">
+                            <div>牙～40年名醫的真心告白</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook01.jpg">
+                            <div>Tools for Helpful Souls</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook02.jpg">
+                            <div>失智可以預防，更可以治癒</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook03.jpg">
+                            <div>法醫．屍體．解剖室2：謀殺診斷書：專</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook04.jpg">
+                            <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook05.jpg">
+                            <div>牙～40年名醫的真心告白</div>
+                        </a></div>
+                    <div><a href="javascript:;"><img src="images/themebook06.jpg">
+                            <div>太極米漿粥：來自桂林古本傷寒雜病論，</div>
+                        </a></div>
+                </div>
+                <div class="more"><a href="javascript:;" class="btnstyle brownbg">更多健康養生</a></div>
+            </div>
+            <div class="tabItem"><a href="javascript:;">更多主題</a></div>
+            <div class="tabContent">
+            </div>
+            </section>
+        </div>
+    </div>
+    </div>
+    </section>
+    <!-- 主題書展end -->
+    <!-- 館員的精挑細選 start-->
+    <section class="section col-12 featured_block">
+        <div class="container">
+            <div class="col">
+                <h2>館員的精挑細選</h2>
+                <!-- 精選書本資料1 start-->
+                <div class="featured_data">
+                    <a href="javascript:;">
+                        <div class="datablock_top">
+                            <div class="images"><img src="images/featured_pic01.jpg"></div>
+                            <div class="description">
+                                <p> 你聽過一期一會嗎?</p>
+                            </div>
+                        </div>
+                        <div class="datablock_down">
+                            <h3>2017圖書館週-悅讀趣主題書展</h3>
+                            <ul class="datalist">
+                                <li>展示期間：<span>2017-11-11 ~ 2018-03-28</span></li>
+                                <!-- <li>選書者：<span>呈現後臺管理者名稱或ID</span></li> -->
+                            </ul>
+                            <!-- <ul class="personal_photos">
+                                <li class="redbg">溫</li>
+                                <li class="orangebg">吳</li>
+                                <li class="yellowbg">曾</li>
+                                <li class="greenbg more">Ａ</li>
+                            </ul>
+                            <div class="btn_grp"><input type="button" name="" value="喜歡" class="btnstyle whitebg">
+                            </div> -->
+                        </div>
+                    </a>
+                </div>
+                <!-- 精選書本資料1 end-->
+                <!-- 精選書本資料2 start-->
+                <div class="featured_data">
+                    <a href="javascript:;">
+                        <div class="datablock_top">
+                            <div class="images"><img src="images/featured_pic02.jpg"></div>
+                            <div class="description">
+                                <p> 去年11月，我們介紹了來自巴士海峽彼岸的南朋友給你，今年11月，換你去拜訪南朋友囉！你或許聽說許多關於南朋友的軼事，或關於他們家鄉的大小事，但是你親自看過過南朋友的家嗎？</p>
+                            </div>
+                        </div>
+                        <div class="datablock_down">
+                            <h3>愛的萬物論‧輪椅上的天才物理學家--史蒂芬‧霍金紀念特展</h3>
+                            <ul class="datalist">
+                                <li>展示期間：<span>2017-12-23 ~ 2018-03-28</span></li>
+                                <!--  <li>選書者：<span>呈現後臺管理者名稱或ID</span></li> -->
+                            </ul>
+                            <!--  <ul class="personal_photos">
+                                <li class="bluebg">溫</li>
+                                <li class="darkbluebg">吳</li>
+                                <li class="purplebg">Ａ</li>
+                                <li class="redbg more">曾</li>
+                            </ul>
+                            <div class="btn_grp"><input type="button" name="" value="喜歡" class="btnstyle whitebg"></div> -->
+                        </div>
+                    </a>
+                </div>
+                <!-- 精選書本資料2 end-->
+                <!-- 精選書本資料3 start-->
+                <div class="featured_data">
+                    <a href="javascript:;">
+                        <div class="datablock_top">
+                            <div class="images"><img src="images/featured_pic05.jpg"></div>
+                            <div class="description">
+                                <p> 生而在世，都有看待世界的既定角度。從自己的價值觀看世界，從自己的專業剖析世界，從自己的偏好選擇世界。但是這樣的單一視角，有時候，也會成為禁錮自己靈魂的牢籠。</p>
+                            </div>
+                        </div>
+                        <div class="datablock_down">
+                            <h3>2017圖書館週-悅讀趣主題書展悅讀趣主題書展</h3>
+                            <ul class="datalist">
+                                <li>展示期間：<span>2017-12-01 ~ 2018-03-28</span></li>
+                                <!-- <li>選書者：<span>呈現後臺管理者名稱或ID</span></li> -->
+                            </ul>
+                            <!-- <ul class="personal_photos">
+                                <li><img src="images/featured_people01.jpg" alt=""></li>
+                                <li><img src="images/featured_people02.jpg" alt=""></li>
+                                <li><img src="images/featured_people03.jpg" alt=""></li>
+                                <li class="more"><img src="images/featured_people04.jpg" alt=""></li>
+                            </ul>
+                            <div class="btn_grp"><input type="button" name="" value="喜歡" class="btnstyle whitebg"></div> -->
+                        </div>
+                    </a>
+                </div>
+                <!-- 精選書本資料3 end-->
+                <!-- 精選書本資料4 start-->
+                <div class="featured_data">
+                    <a href="javascript:;">
+                        <div class="datablock_top">
+                            <div class="images"><img src="images/featured_pic06.jpg"></div>
+                            <div class="description">
+                                <p> 總有人會說，○○歸○○，政治歸政治，忍者龜忍者。可是，你知道，在這社會上，基本上任何事情都會與政治有關。舉凡比賽的舉辦、各類資源的分配、經濟、娛樂，都沒辦法與政治脫鉤噢。嗯? 覺得沒這麼嚴重嗎?沒關係，我們讓「政」據說話，看看政治如何影響我們的生活，影響周遭的人事物。看看政治在世界上有多大的影響力。請你看完這些書，沉澱兩個月，然後在兩個月後的選舉，作出問心無愧的判斷吧!</p>
+                            </div>
+                        </div>
+                        <div class="datablock_down">
+                            <h3>2018圖書館週-主題書展</h3>
+                            <ul class="datalist">
+                                <li>展示期間：<span>2017-12-01 ~ 2018-03-28</span></li>
+                                <!-- <li>選書者：<span>呈現後臺管理者名稱或ID</span></li> -->
+                            </ul>
+                            <!-- <ul class="personal_photos">
+                                <li><img src="images/featured_people01.jpg" alt=""></li>
+                                <li><img src="images/featured_people02.jpg" alt=""></li>
+                                <li><img src="images/featured_people03.jpg" alt=""></li>
+                                <li class="more"><img src="images/featured_people04.jpg" alt=""></li>
+                            </ul>
+                            <div class="btn_grp"><input type="button" name="" value="喜歡" class="btnstyle whitebg"></div> -->
+                        </div>
+                    </a>
+                </div>
+                <div class="more"><a href="javascript:;" class="btnstyle brownbg">更多資料</a></div>
+                <!-- 精選書本資料4 end-->
+                <h2>館員的精挑細選</h2>
+                <!-- 當剩下一個主題展的時候 -->
+                <!-- 精選書本資料1 start-->
+                <div class="featured_data">
+                    <a href="javascript:;">
+                        <div class="datablock_top">
+                            <div class="images"><img src="images/featured_pic01.jpg"></div>
+                            <div class="description">
+                                <p> 你聽過一期一會嗎?</p>
+                            </div>
+                        </div>
+                        <div class="datablock_down">
+                            <h3>2017圖書館週-悅讀趣主題書展</h3>
+                            <ul class="datalist">
+                                <li>展示期間：<span>2017-12-01 ~ 2018-03-28</span></li>
+                                <!-- <li>選書者：<span>呈現後臺管理者名稱或ID</span></li> -->
+                            </ul>
+                            <ul class="personal_photos">
+                                <li class="redbg">溫</li>
+                                <li class="orangebg">吳</li>
+                                <li class="yellowbg">曾</li>
+                                <li class="greenbg more">Ａ</li>
+                            </ul>
+                            <div class="btn_grp"><input type="button" name="" value="喜歡" class="btnstyle whitebg"></div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 精選書本資料1 end-->
+                <!-- 當剩下一個主題展的時候，右邊就會出現書本 -->
+                <div class="themebook2">
+                    <ul>
+                        <li><a href="javascript:;"><img src="images/book01.jpg"><span>太極米漿粥：來自桂林古本傷寒雜病論，來自桂林古本傷寒雜病論</span></a></li>
+                        <li><a href="javascript:;"><img src="images/themebook01.jpg"><span>Tools for Helpful Souls</span></a></li>
+                        <li><a href="javascript:;"><img src="images/themebook02.jpg"><span>失智可以預防，更可以治癒</span></a></li>
+                        <li><a href="javascript:;"><img src="images/themebook03.jpg"><span>法醫．屍體．解剖室2：謀殺診斷書：專法醫．屍體．解剖室2：謀殺診斷書：專</span></a></li>
+                    </ul>
+                </div>
+                <div class="more"><a href="javascript:;" class="btnstyle brownbg">更多資料</a></div>
+            </div>
+        </div>
+    </section>
+    <!-- 館員的精挑細選 end-->
+    <!-- 熱門排行start -->
+    <section class="section col-12 hotrankings_block">
+        <div class="container">
+            <div class="col">
+                <h2>熱門排行</h2>
+                <!-- 熱門排行頁籤start -->
+                <div class="hotrankings">
+                    <div class="sort"><a href="javascript:;" class="here">熱門借閱</a></div>
+                    <div class="sort"><a href="javascript:;">熱門預約</a></div>
+                    <div class="sort"><a href="javascript:;">熱門點閱</a></div>
+                    <div class="sort"><a href="javascript:;">熱門評論/評分</a></div>
+                </div>
+                <!-- 熱門排行頁籤end -->
+                <!-- 熱門借閱start -->
+                <div class="hotbook_column">
+                    <!-- 1 -->
+                    <div class="hotbook_block01">
+                        <!-- 標題start -->
+                        <div class="hotbook_title">
+                            <h2>熱門借閱</h2>
+                            <div class="image">
+                                <img src="images/hotbook_icon01.png" alt="熱門借閱">
+                                <!--  <img src="images/hotbook_icon02.png" alt="熱門預約"> -->
+                                <!-- <img src="images/hotbook_icon03.png" alt="熱門點閱"> -->
+                                <!--  <img src="images/hotbook_icon04.png" alt="熱門評論/評分"> -->
+                            </div>
+                            <div class="RSS_button">
+                                <a href="#" class="btn">RSS</a>
+                            </div>
+                        </div>
+                        <!-- 標題end -->
+                        <!-- 第一名書 start -->
+                        <div class="bookno01">
+                            <!-- 點閱次數start -->
+                            <div class="clickblock">
+                                <div class="ranking">#1</div>
+                                <div class="clicktimes">3次</div>
+                                <!-- 評分start -->
+                                <!-- <div class="score_star">
+                                    <img src="images/starall.png">
+                                    <span class="score_color">
+                                        <img src="images/star_color.gif" width="50px"></span>
+                                </div> -->
+                                <!-- 評分end -->
+                            </div>
+                            <!-- 點閱次數end -->
+                            <div class="image"><img src="images/bookcover.jpg"></div>
+                            <h3><a href="#">深度學習力：學歷貶值時代</a></h3>
+                        </div>
+                        <!-- 第一名書 end -->
+                    </div>
+                    <!-- 2 -->
+                    <div class="hotbook_block02">
+                        <div class="hotbooklist">
+                            <div class="image"><img src="images/bookcover.jpg"></div>
+                            <!-- 點閱次數start -->
+                            <div class="clickblock">
+                                <div class="ranking">#2</div>
+                                <div class="clicktimes">4次</div>
+                                <!-- 評分start -->
+                                <!-- <div class="score_star">
+                                    <img src="images/starall.png">
+                                    <span class="score_color">
+                                        <img src="images/star_color.gif" width="50px"></span>
+                                </div> -->
+                                <!-- 評分end -->
+                            </div>
+                            <!-- 點閱次數end -->
+                            <h3><a href="#">深度學習力</a></h3>
+                        </div>
+                        <!--  -->
+                        <div class="hotbooklist">
+                            <div class="image"><img src="images/bookcover.jpg"></div>
+                            <!-- 點閱次數start -->
+                            <div class="clickblock">
+                                <div class="ranking">#3</div>
+                                <!-- <div class="clicktimes">152,987次</div> -->
+                                <!-- 評分start -->
+                                <div class="score_star">
+                                    <img src="images/starall.png">
+                                    <span class="score_color">
+                                        <img src="images/star_color.gif" width="50px"></span>
+                                </div>
+                                <!-- 評分end -->
+                            </div>
+                            <!-- 點閱次數end -->
+                            <h3><a href="#">深度學習力：學歷貶值時代</a></h3>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="hotbook_block03">
+                        <div class="hotbooklist">
+                            <div class="image"><img src="images/bookcover.jpg"></div>
+                            <!-- 點閱次數start -->
+                            <div class="clickblock">
+                                <div class="ranking">#4</div>
+                                <div class="clicktimes">152,987次</div>
+                                <!-- 評分start -->
+                                <!-- <div class="score_star">
+                                    <img src="images/starall.png">
+                                    <span class="score_color">
+                                        <img src="images/star_color.gif" width="50px"></span>
+                                </div> -->
+                                <!-- 評分end -->
+                            </div>
+                            <!-- 點閱次數end-->
+                            <h3><a href="#">深度學習力：學歷貶值時代</a></h3>
+                        </div>
+                        <!--  -->
+                        <div class="hotbooklist">
+                            <div class="image"><img src="images/bookcover.jpg"></div>
+                            <!-- 點閱次數start -->
+                            <div class="clickblock">
+                                <div class="ranking">#5</div>
+                                <div class="clicktimes">152,987次</div>
+                                <!-- 評分start -->
+                                <!-- <div class="score_star">
+                                    <img src="images/starall.png">
+                                    <span class="score_color">
+                                        <img src="images/star_color.gif" width="50px"></span>
+                                </div> -->
+                                <!-- 評分end -->
+                            </div>
+                            <!-- 點閱次數start -->
+                            <h3><a href="#">深度學習力：學歷貶值時代</a></h3>
+                        </div>
+                    </div>
+                    <!-- 手機版排名書 start-->
+                    <!-- 4 -->
+                    <div class="hotbook_block04">
+                        <!-- 第一名書 start -->
+                        <div class="bookno01">
+                            <!-- 點閱次數start -->
+                            <div class="clickblock">
+                                <div class="ranking">#1</div>
+                                <!-- <div class="clicktimes">152,987次</div> -->
+                                <!-- 評分start -->
+                                <div class="score_star">
+                                    <img src="images/starall.png">
+                                    <span class="score_color">
+                                        <img src="images/star_color.gif" width="50px"></span>
+                                </div>
+                                <!-- 評分end -->
+                            </div>
+                            <!-- 點閱次數end -->
+                            <div class="image"><img src="images/themebook02.jpg"></div>
+                            <h3><a href="#">深度學習力：學歷貶值時代</a></h3>
+                        </div>
+                        <!-- 第一名書 end -->
+                    </div>
+                    <!-- 5 -->
+                    <div class="hotbook_block05">
+                        <!-- 第二名書 start -->
+                        <div class="bookno02">
+                            <!-- 點閱次數start -->
+                            <div class="clickblock">
+                                <div class="ranking">#2</div>
+                                <div class="clicktimes">152,987次</div>
+                                <!-- 評分start -->
+                                <!-- <div class="score_star">
+                                    <img src="images/starall.png">
+                                    <span class="score_color">
+                                        <img src="images/star_color.gif" width="50px"></span>
+                                </div> -->
+                                <!-- 評分end -->
+                            </div>
+                            <!-- 點閱次數end -->
+                            <div class="image"><img src="images/themebook01.jpg"></div>
+                            <h3><a href="#">深度學習力：學歷貶值時代</a></h3>
+                        </div>
+                        <!-- 第二名書 end -->
+                    </div>
+                    <!-- 6 -->
+                    <div class="hotbook_block06">
+                        <!-- 第三名書 start -->
+                        <div class="bookno03">
+                            <!-- 點閱次數start -->
+                            <div class="clickblock">
+                                <div class="ranking">#3</div>
+                                <div class="clicktimes">152,987次</div>
+                                <!-- 評分start -->
+                                <!-- <div class="score_star">
+                                    <img src="images/starall.png">
+                                    <span class="score_color">
+                                        <img src="images/star_color.gif" width="50px"></span>
+                                </div> -->
+                                <!-- 評分end -->
+                            </div>
+                            <!-- 點閱次數end -->
+                            <div class="image"><img src="images/themebook03.jpg"></div>
+                            <h3><a href="#">深度學習力：學歷貶值時代</a></h3>
+                        </div>
+                        <!-- 第三名書 end -->
+                    </div>
+                    <!-- 手機版排名書 end-->
+                </div>
+                <!-- 熱門借閱end -->
+                <div class="more"><a href="javascript:;" class="btnstyle brownbg">更多資料</a></div>
+            </div>
+        </div>
+    </section>
+    <!-- 熱門排行end -->
+    </div>
+    </div>
+    <!-- fatfooter Start -->
+    <section class="fatfooter">
+        <div class="container">
+            <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+            <nav>
+                <ul>
+                    <li><a href="javascript:;">關於我們</a>
+                        <ul>
+                            <li><a href="javascript:;">個人資料蒐集告知聲明</a></li>
+                            <li><a href="javascript:;">網路隱私權政策</a></li>
+                            <li><a href="javascript:;">交通資訊導引</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">常用連結</a>
+                        <ul>
+                            <li><a href="javascript:;">圖書館首頁</a></li>
+                            <li><a href="javascript:;">機構典藏</a></li>
+                            <li><a href="javascript:;">facebook粉絲團</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="javascript:;">其他連結</a>
+                        <ul>
+                            <li><a href="javascript:;">HELP</a></li>
+                            <li><a href="javascript:;">借閱政策</a></li>
+                            <li><a href="javascript:;">圖書館首頁</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <!-- fatfooter end -->
+    <!-- footer start-->
+    <footer>
+        <div class="container">
+            <div class="footer_info">
+                <ul>
+                    <li>屏東縣政府文化處</li>
+                    <li>90054 屏東市大連路69號</li>
+                    <li>08-7360330</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end-->
+    </div>
+    <!-- 燈箱區塊 start-->
+    <!-- 燈箱區塊 end-->
+    <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
+    <script type="text/javascript" src="vendor/slick/slick.js">
+    </script>
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

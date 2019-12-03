@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>凌網科技圖書館查詢系統</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 出版年度css -->
+    <link rel="stylesheet" href="vendor/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
+    <link rel="stylesheet" href="css/hyui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+    <!-- wrapper 最大寬度 -->
+   <div class="wrapper">
+        <!-- sidebar  start-->
+        <aside class="sidebar">
+            <div class="m_area">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <nav class="navigation">
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                </nav>
+                <button type="button" class="sidebarClose">關閉</button>
+            </div>
+            <div class="menu_overlay"></div>
+        </aside>
+        <!-- sidebar  end-->
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <button type="button" class="sidebarCtrl">側欄選單</button>
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <!-- navigation Start -->
+                <nav class="navigation">
+                    <!-- 一組ul預設靠右 -->
+                    <!-- 兩組ul已寫JQ靠左靠右 -->
+                    <ul>
+                        <li><a href="javascript:;">Help</a></li>
+                        <li><a href="javascript:;">圖書館首頁</a></li>
+                    </ul>
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                    <!-- login start -->
+                    <div class="login loginbtn">
+                        <button type="button" class="btn btn-sm">登入/線上辦證</button>
+                    </div>
+                    <!-- login end-->
+                </nav>
+                <!-- 手機才出現的按鈕 start -->
+                <div class="login  loginbtn login_mobile_btn">
+                    <button type="button" class="btn btn-sm">登入</button>
+                </div>
+                <!-- 手機才出現的按鈕 end -->
+                <h1><a href="index.html"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="javascript:;">網站導覽</a>
+                </noscript>
+                <!-- 手機版才出現的menu start-->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <!-- 手機版才出現的menu end-->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <!-- 中間圖start -->
+            <section class="section col-12 search_blockin2">
+                <div class="container">
+                    <div class="col">
+                    </div>
+                </div>
+            </section>
+            <!-- 中間圖end -->
+            <!-- 分欄start -->
+            <div class="maincolumn">
+                <div class="container">
+                    <!-- 右欄 start  -->
+                    <div class="mainrightblock2">
+                        <!-- 右欄左線start -->
+                        <div class="rightlineblock">
+                            <!-- 路徑start -->
+                            <div class="breadcrumb">
+                                <span>現在位置：</span>
+                                <ul>
+                                    <li><a href="javascript:;">首頁</a></li>
+                                    <li>線上協尋書</li>
+                                </ul>
+                            </div>
+                            <!-- 路徑end-->
+                            <!-- 線上協尋書區塊 start-->
+                            <div class="onlinesearch_block">
+                                <h2>線上協尋書</h2>
+                                <!-- 線上協尋書資料 start-->
+                                <div class="onlinesearch">
+                                    <p>請輸入想要協尋書籍/資料的關鍵字進行查詢</p>
+                                    <!-- 查詢內容start -->
+                                    <div class="searchsystem">
+                                        <form>
+                                            <div class="select_left">
+                                                <select name="" id="selectSample">
+                                                    <option value="">關鍵字六個字</option>
+                                                    <option value="">書名</option>
+                                                    <option value="">作者</option>
+                                                    <option value="">出版社</option>
+                                                    <option value="">條碼號條碼號</option>
+                                                </select>
+                                            </div>
+                                            <div class="form_search">
+                                                <input type="text" name="" value="" placeholder="請輸入關鍵文字" class="keyboardInput">
+                                                <span><a href="#"></a></span>
+                                                <input type="submit" name="" value="">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!-- 查詢內容end -->
+                                    <!-- 無結果start -->
+                                    <div class="result_no">您所輸入的查詢詞 : XXXXX(題名 ) ， 共查得<em>0</em>件，建議可更換查詢詞重新查詢</div>
+                                    <!-- 無結果end -->
+                                    <!-- 有結果start -->
+                                    <div class="result_yes">
+                                        <!-- 結果一 start -->
+                                        <div class="result1">
+                                            <!-- 表格 start-->
+                                            <div class="table_list">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>序號</th>
+                                                            <th>題名</th>
+                                                            <th>作者</th>
+                                                            <th>出版社</th>
+                                                            <th>出版年</th>
+                                                            <th>狀態</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td data-title="序號" class="aCenter">1</td>
+                                                            <td data-title="題名"><a href="#">深度學習力</a></td>
+                                                            <td data-title="作者">卡爾‧紐波特</td>
+                                                            <td data-title="出版社">時報出版</td>
+                                                            <td data-title="出版年">2018/04/03</td>
+                                                            <td data-title="狀態">&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="序號" class="aCenter">2</td>
+                                                            <td data-title="題名"><a href="#">深度學習力深度學習力</a></td>
+                                                            <td data-title="作者">卡爾‧紐波特</td>
+                                                            <td data-title="出版社">時報出版</td>
+                                                            <td data-title="出版年">2018/04/03</td>
+                                                            <td data-title="狀態">&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="序號" class="aCenter">3</td>
+                                                            <td data-title="題名"><a href="#">深度學習力</a></td>
+                                                            <td data-title="作者">卡爾‧紐波特</td>
+                                                            <td data-title="出版社">時報出版</td>
+                                                            <td data-title="出版年">2018/04/03</td>
+                                                            <td data-title="狀態">&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="序號" class="aCenter">4</td>
+                                                            <td data-title="題名"><a href="#">深度學習力深度學習力</a></td>
+                                                            <td data-title="作者">卡爾‧紐波特</td>
+                                                            <td data-title="出版社">時報出版</td>
+                                                            <td data-title="出版年">2018/04/03</td>
+                                                            <td data-title="狀態">&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="序號" class="aCenter">5</td>
+                                                            <td data-title="題名"><a href="#">深度學習力</a></td>
+                                                            <td data-title="作者">卡爾‧紐波特</td>
+                                                            <td data-title="出版社">時報出版</td>
+                                                            <td data-title="出版年">2018/04/03</td>
+                                                            <td data-title="狀態">&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="序號" class="aCenter">6</td>
+                                                            <td data-title="題名"><a href="#">深度學習力</a></td>
+                                                            <td data-title="作者">卡爾‧紐波特</td>
+                                                            <td data-title="出版社">時報出版</td>
+                                                            <td data-title="出版年">2018/04/03</td>
+                                                            <td data-title="狀態">&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="序號" class="aCenter">7</td>
+                                                            <td data-title="題名"><a href="#">深度學習力深度學習力</a></td>
+                                                            <td data-title="作者">卡爾‧紐波特</td>
+                                                            <td data-title="出版社">時報出版</td>
+                                                            <td data-title="出版年">2018/04/03</td>
+                                                            <td data-title="狀態">&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="序號" class="aCenter">8</td>
+                                                            <td data-title="題名"><a href="#">深度學習力</a></td>
+                                                            <td data-title="作者">卡爾‧紐波特</td>
+                                                            <td data-title="出版社">時報出版</td>
+                                                            <td data-title="出版年">2018/04/03</td>
+                                                            <td data-title="狀態">&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="序號" class="aCenter">9</td>
+                                                            <td data-title="題名"><a href="#">深度學習力深度學習力</a></td>
+                                                            <td data-title="作者">卡爾‧紐波特</td>
+                                                            <td data-title="出版社">時報出版</td>
+                                                            <td data-title="出版年">2018/04/03</td>
+                                                            <td data-title="狀態">&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="序號" class="aCenter">10</td>
+                                                            <td data-title="題名"><a href="#">深度學習力</a></td>
+                                                            <td data-title="作者">卡爾‧紐波特</td>
+                                                            <td data-title="出版社">時報出版</td>
+                                                            <td data-title="出版年">2018/04/03</td>
+                                                            <td data-title="狀態">&nbsp;</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- 表格 end-->
+                                            <div class="more"><a href="#" class="btnstyle brownbg">更多館藏</a></div>
+                                        </div>
+                                        <!-- 結果一 end -->
+                                        <!-- 結果二 start -->
+                                        <div class="result2">
+                                            <div class="backpage"><a href="#">回上一層</a></div>
+                                            <!-- 表格 start-->
+                                            <div class="table_list">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>館藏地/室</th>
+                                                            <th>索書號</th>
+                                                            <th>資料類型</th>
+                                                            <th>狀態/到期日</th>
+                                                            <th>條碼號</th>
+                                                            <th>備註</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">
+                                                                <!-- <input type="button" name="" value="申請" class="btn-orange"> -->
+                                                                <a href="#" class="btnstyle orangebg">申請</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">
+                                                                <a href="#" class="btnstyle orangebg">申請</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- 表格 end-->
+                                            <div class="more"><a href="#" class="btnstyle brownbg">更多館藏</a></div>
+                                            <!-- 表格 start-->
+                                            <div class="table_list">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>afdafdasgsdgegwweg</th>
+                                                            <th>agdsgdgfsdgg</th>
+                                                            <th>asdgdgadsgsdweggeagg</th>
+                                                            <th>asdgdsgsdgag</th>
+                                                            <th>ertwqeeteqt</th>
+                                                            <th>qwetewtwetqbaeggg</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">
+                                                                <a href="#" class="btnstyle orangebg">申請</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">
+                                                                <a href="#" class="btnstyle orangebg">申請</a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                            <td data-title="索書號">ABC 123 456 789</td>
+                                                            <td data-title="資料類型">一般圖書</td>
+                                                            <td data-title="狀態/到期日">仍在館內</td>
+                                                            <td data-title="條碼號">123456789</td>
+                                                            <td data-title="備註" class="aCenter">無可預約館藏</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- 表格 end-->
+                                        </div>
+                                        <!-- 結果二 end -->
+                                        <!-- 結果三 start -->
+                                        <div class="result3">
+                                            <p>請確認申請的資料是否正確，如果正確請按下「確定申請」。</p>
+                                            <form>
+                                                <!-- 線上協尋書查詢 start-->
+                                                <div class="onlinebooksearch">
+                                                    <div class="form_grid">
+                                                        <!--  -->
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title"><abbr title=“為必填(選)欄位, 不能為空白。“>*</abbr>書名</label>
+                                                            <div class="form_content">
+                                                                <input type="text" name="" value="" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title"><abbr title=“為必填(選)欄位, 不能為空白。“>*</abbr>作者</label>
+                                                            <div class="form_content">
+                                                                <input type="text" name="" value="" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title"><abbr title=“為必填(選)欄位, 不能為空白。“>*</abbr>出版社</label>
+                                                            <div class="form_content">
+                                                                <input type="text" name="" value="" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title"><abbr title=“為必填(選)欄位, 不能為空白。“>*</abbr>索書號</label>
+                                                            <div class="form_content">
+                                                                <input type="text" name="" value="" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title"><abbr title=“為必填(選)欄位, 不能為空白。“>*</abbr>條碼號</label>
+                                                            <div class="form_content">
+                                                                <input type="text" name="" value="" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                        <div class="form_grp">
+                                                            <label for="" class="form_title"><abbr title=“為必填(選)欄位, 不能為空白。“>*</abbr>尋書有效日期</label>
+                                                            <div class="form_content">
+                                                                <div class="select_date">
+                                                                    <input name="" type="text" placeholder="日期"><span class="image"><a href="#"><img src="images/form_calendar.png" alt=""></a></span></div>
+                                                            </div>
+                                                        </div>
+                                                        <!--  -->
+                                                    </div>
+                                                    <div class="btn_grp">
+                                                        <input name="Search" type="submit" value="確認" />
+                                                    </div>
+                                                </div>
+                                                <!-- 線上協尋書查詢 end -->
+                                            </form>
+                                        </div>
+                                        <!-- 結果三 end -->
+                                    </div>
+                                    <!-- 有結果end -->
+                                </div>
+                                <!-- 線上協尋書資料 end -->
+                                <!-- 註解 start -->
+                                <div class="annotation">
+                                    <span>申請線上協尋書有遇到困難嗎？</span> 洽本館諮詢電話 (04)22625100轉123 由專人為您服務；如有造成不便敬請見諒，謝謝！ </div>
+                                <!-- 註解 end -->
+                            </div>
+                            <!-- 線上協尋書 end-->
+                        </div>
+                        <!-- 右欄左線end -->
+                    </div>
+                    <!-- 右欄 end  -->
+                </div>
+            </div>
+            <!-- 分欄end -->
+        </div>
+        <!-- fatfooter Start -->
+        <section class="fatfooter">
+            <div class="container">
+                <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+                <nav>
+                    <ul>
+                        <li><a href="javascript:;">關於我們</a>
+                            <ul>
+                                <li><a href="javascript:;">個人資料蒐集告知聲明</a></li>
+                                <li><a href="javascript:;">網路隱私權政策</a></li>
+                                <li><a href="javascript:;">交通資訊導引</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">常用連結</a>
+                            <ul>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                                <li><a href="javascript:;">機構典藏</a></li>
+                                <li><a href="javascript:;">facebook粉絲團</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">其他連結</a>
+                            <ul>
+                                <li><a href="javascript:;">HELP</a></li>
+                                <li><a href="javascript:;">借閱政策</a></li>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- fatfooter end -->
+        <!-- footer start-->
+        <footer>
+            <div class="container">
+                <div class="footer_info">
+                    <ul>
+                        <li>屏東縣政府文化處</li>
+                        <li>90054 屏東市大連路69號</li>
+                        <li>08-7360330</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end-->
+    </div>
+    <!-- 燈箱區塊 start-->
+    <!-- 登入燈箱start -->
+    <div class="login_lightbox">
+        <div class="overlay"></div>
+        <div class="loginblock">
+            <div class="close"></div>
+            <h2>讀者登入</h2>
+            <p>登入說明文字：本校校職員生的帳號密碼與資訊服務相同，帳號為學號/員工編號，密碼若忘記，請洽圖書館暨資訊處系統開發組， (電話：07-78111151轉2830) </p>
+            <form>
+                <div class="form_grp form_inline">
+                    <label for="username">讀者帳號:</label>
+                    <input name="username" type="text" placeholder="請輸入文字">
+                </div>
+                <div class="form_grp form_inline">
+                    <label for="password">讀者密碼:</label>
+                    <input name="password" type="password" placeholder="請輸入密碼">
+                </div>
+                <div class="btn_grp">
+                    <input name="" type="submit" value="登入" />
+                </div>
+                <div class="unable_login">
+                    <h3><span>無法登入?</span></h3>
+                    <input name="" type="button" value="忘記密碼" />
+                    <input name="" type="button" value="網路辦證" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 登入燈箱end-->
+    <!-- 檢視閱讀權限燈箱start -->
+    <div class="lightboxstyle" id="read_permissionstyle">
+        <div class="overlay"></div>
+        <div class="lightboxstyle_block">
+            <div class="close"></div>
+            <h2>檢視閱讀權限</h2>
+            <form>
+                <div class="lightbox_data">
+                    <p>借閱件數：(本/件/間/張)</p>
+                    <div class="listdata">
+                        <ul>
+                            <li>教授指定參考資料：<em>2</em> 件</li>
+                            <li>教授指定參考資料：<em>2</em> 件</li>
+                            <li>教授指定參考資料：<em>2</em> 件</li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 檢視閱讀權限燈箱end -->
+    <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
+    <script type="text/javascript" src="vendor/slick/slick.js">
+    </script>
+    <!-- 出版年度js -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- 出版年度js -->
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

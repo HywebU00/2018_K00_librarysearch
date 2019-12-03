@@ -1,0 +1,2350 @@
+.lp {
+    table {
+        td {
+            &.date {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+            &.num {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .list {
+        ul,
+        ol {
+            list-style-type: none;
+            padding: 0;
+            border-top: 2px solid $primaryColor;
+            li {
+                padding: 1em 0;
+                border-bottom: 1px solid #DDD;
+                position: relative; // outline: 1px solid blue;
+                a {
+                    display: block;
+                    padding-left: 2em;
+                    position: relative;
+                    line-height: 1.45em;
+                    .num {
+                        width: 1.5em;
+                        text-align: right;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        &:after {
+                            content: ".";
+                            display: inline-block;
+                        }
+                    }
+                }
+                span.dept {
+                    display: inline-block;
+                    font-size: .938em;
+                    @include screen("mobile") {
+                        display: block;
+                    }
+                }
+                time {
+                    display: block;
+                    color: #AAA;
+                    font-size: .938em;
+                }
+            }
+        }
+    }
+    .album {
+        margin: 1em auto;
+        overflow: hidden;
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            li {
+                @include make-xs-column(12);
+                @include make-sm-column(4);
+                @include make-md-column(4);
+                @include make-lg-column(4);
+                @include gutter();
+                a {
+                    display: block;
+                    text-align: center;
+                }
+                .imgOuter {
+                    width: 100%;
+                    @include aspect-ratio(4, 3);
+                }
+            }
+        }
+    }
+}
+// 
+//條列頁 
+.data_all {
+    border-bottom: 1px solid $color-gray;
+    position: relative;
+    text-align: right;
+    padding: 6px 8px 3px;
+    min-height: 37px;
+    @include screen('mobile') {
+        text-align: left;
+    }
+}
+// 選擇btn
+.choosebtn {
+    margin: 0 0 0 5px;
+    display: inline-block;
+    text-align: left;
+    float: left;
+    vertical-align: top;
+    input[type="button"] {
+        float: left;
+        border: 1px solid $color-gray;
+        background-color: #fff;
+        height: 2em;
+        line-height: 1em;
+        color: #333;
+        box-shadow: none;
+        margin: 0 10px 0 0;
+    }
+    select {
+        width: auto;
+        height: 2.1em;
+        line-height: 2.1em;
+        padding: 0 24px 0 .5em;
+        border: 1px solid #d3d3d3 !important;
+        background: #fff url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+        background-size: 25px;
+        margin-right: 2px;
+        display: inline-block;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+//資料筆數
+.data_quantity2 {
+    color: #333;
+    padding: 0px;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+    .number_pens {
+        margin: 5px 0;
+        float: left;
+    }
+    span {
+        padding-top: 5px;
+        display: inline-block;
+        @media(max-width: 374px) {
+            padding-top: 0px;
+            padding-bottom: 5px;
+        }
+    }
+    em {
+        color: $color-orange;
+        font-style: normal;
+        padding: 0 5px;
+    }
+}
+.option {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+    form {
+        select {
+            width: auto;
+            height: 2em;
+            line-height: 2em;
+            @include screen('mobile') {
+                &.sortby {
+                    display: none;
+                }
+                &.view_mode {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.optionblock {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 8;
+    vertical-align: top;
+    .option_01 {
+        position: relative;
+        display: inline-block;
+        margin-left: 5px;
+        @media(max-width: 374px) {
+            margin: 0 5px 5px 0;
+        }
+        .name {
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            a {
+                display: block;
+                background: url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+                background-size: 25px;
+                padding: 3px 20px 3px 5px;
+                cursor: pointer;
+            }
+        }
+        .option_list {
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            width: 150px;
+            top: 40px;
+            -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2);
+            display: none;
+            @include screen('xs_mobile') {
+                width: 150px;
+            }
+            @media(max-width: 374px) {
+                right: auto;
+                left: 0;
+            }
+            &:before {
+                content: '';
+                border: 11px solid #ccc;
+                border-color: transparent transparent #ccc transparent;
+                position: absolute;
+                top: -22px;
+                right: 5px;
+                z-index: 12;
+                @include screen('xs_mobile') {
+                    border: none;
+                }
+            }
+            &:after {
+                content: '';
+                border: 9px solid #fff;
+                border-color: transparent transparent #fff transparent;
+                position: absolute;
+                top: -18px;
+                right: 7px;
+                z-index: 13;
+                @include screen('xs_mobile') {
+                    border: none;
+                }
+            }
+            ul {
+                margin: 0 5px;
+                padding: 0;
+                list-style: none;
+                li {
+                    a {
+                        display: block;
+                        padding: 5px 10px;
+                        border-bottom: 1px solid #eee;
+                        text-align: left;
+                        &.here {
+                            background-color: #f4573f;
+                            color: #fff;
+                        }
+                    }
+                    &:last-child {
+                        a {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//書本排序方式
+.sortbyblock {
+    display: none;
+    @include screen('mobile') {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid #ccc;
+        overflow: hidden;
+        &.linedel {
+            display: none;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            li {
+                float: left;
+                width: 25%;
+                list-style-type: none;
+                position: relative;
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: 30px;
+                    position: absolute;
+                    right: 0;
+                    top: 9px;
+                    background-color: #ccc;
+                }
+                &:last-child {
+                    &:after {
+                        content: '';
+                        width: 0;
+                    }
+                }
+                &:before {
+                    content: '';
+                    width: 1px;
+                    height: 30px;
+                    position: absolute;
+                    left: 0;
+                    top: 9px;
+                    background-color: #fff;
+                }
+                &:first-child {
+                    &:before {
+                        content: '';
+                        width: 0;
+                    }
+                }
+                a {
+                    display: block;
+                    text-align: center;
+                    padding: 12px 8px;
+                    font-size: 1.063em;
+                    color: #333;
+                    background-color: #eee;
+                    @include screen('xs_mobile') {
+                        padding: 12px 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+//showPage
+.showPage {
+    // margin: 10px 0 0 15px;
+    // font-weight: 700;
+    // display: inline-block;
+    // background-color: #eee;
+    // padding: 3px 15px;
+    // border-radius: 50px;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+//書本條列
+.booklist_block {
+    clear: both;
+    // @include screen('xs_mobile') {
+    //     position: relative;
+    //     &:before {
+    //         content: '';
+    //         width: 100%;
+    //         height: 1px;
+    //         position: absolute;
+    //         top: 0px;
+    //         background-color: #ccc;
+    //     }
+    // }
+    // 條列
+    .booklist {
+        border-bottom: 1px solid $color-gray;
+        padding: 18px 15px; 
+        clear: both;
+        position: relative;
+        &.special {
+            background-color: lighten(nth($lightColor, $style), 20);
+        }
+        //左
+        .bookleftblock {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 10px;
+            width: 120px;
+            padding-left:5px;
+            vertical-align: top;
+            @include box-sizing;
+            @include screen('mobile'){
+                width: 120px;
+                margin-right: 0;
+            }
+            @media(max-width: 480px){
+                padding-left: 0;
+            }
+            label {
+               display: block;
+                margin-right: 15px;
+                // width: 40px;
+                input {
+                    border-radius: 3px !important;
+                }
+                input[type="checkbox"] {
+                    margin-right: 5px;
+                    @include screen('mobile') {
+                        display: none;
+                    }
+                }
+            }
+            .book {
+                float: left;
+                width: 100px;
+                // outline: 1px solid red;
+                @media(max-width: 480px) {
+                    float: none;
+                    clear: both;
+                    margin: 0 auto;
+                    width: 80px;
+                }
+                .image {
+                    margin-bottom: 3px;
+                    text-align: center;
+                    height: 150px;
+                    >img {
+                        width: 100%;
+                        max-height: 200px;
+                        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+                    }
+                }
+                @media(max-width: 480px) {
+                    .score_star,
+                    .then {
+                        display: none;
+                    }
+                }
+                //我要評分
+                .score {
+                    display: block;
+                    clear: both;
+                    margin: 10px 0;
+                    overflow: hidden;
+                    a {
+                        display: block;
+                        padding: 3px 10px;
+                        color: #333;
+                        text-align: center;
+                        border: 1px solid $color-gray;
+                        border-radius: 4px;
+                        @include screen('xs_mobile'){
+                            padding: 3px 3px;
+                        }
+                        &:hover {
+                            background-color: #fadb5b;
+                        }
+                    }
+                }
+                //
+            }
+        }
+        //
+        // 中
+        .bookmidblock {
+            vertical-align: top;
+            position: relative;
+            width: calc(100% - 150px);
+            display: inline-block;
+            @include screen('mobile'){
+                width: calc(100% - 135px);
+            }
+            .bookdata {
+                float: left;
+                width: 72%;
+                
+                @include screen('tablet'){
+                    width: 80%;
+                }
+                @include screen('mobile') {
+                    width: 100%;
+                    float: none;
+                }
+                @media(max-width: 480px) {
+                    width: 100%;
+                }
+            }
+            h2 {
+                margin: 0 0 10px;
+                padding: 0;
+                font-weight: normal;
+                font-size: 1.25em;
+                line-height: 1.3em;
+                @include screen('mobile'){
+                    margin: 30px 0 10px;
+                }
+                a {
+                     color:nth($linkColor,$style);
+                    text-decoration: underline;
+                    transition: .5s;
+                    &:hover {
+                        color: $aHover;
+                    }
+                }
+            }
+            .booktype {
+                float: left;
+                margin-right: 15px;
+                background-color: $color-orange;
+                width: 35px;
+                height: 35px;
+                border-radius: 5px;
+                text-align: center;
+                position: relative;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    max-width: 100%;
+                    max-height: 100%;
+                    margin: auto;
+                }
+            }
+            .basic_data {
+                overflow: hidden;
+            }
+            ul {
+                margin: 0 0 6px 1px;
+                padding: 0;
+                // clear: both;
+                li {
+                    list-style-type: none;
+                    margin: 0 15px 0 0;
+                    padding: 0;
+                    display: block;
+                    position: relative;
+                    text-align: left;
+                    transition: .5s;
+                    display: inline-block;
+
+                    &.aRight {
+                        text-align: right;
+                        float: right;
+                        a {
+                            border: 1px solid #d3d3d3;
+                            padding: 0px 10px;
+                            border-radius: 5px;
+                            display: block;
+                            &:hover {
+                                color: #333;
+                                background-color: #e5e5e5;
+                            }
+                        }
+                    }
+                    a {
+                        color: $importantColor;
+                        text-decoration: underline;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        img {
+                            vertical-align: middle;
+                        }
+                    }
+                    &.more {
+                        margin-bottom: 5px!important;
+                        a {
+                            background-color: #fff !important;
+                            color: #333 !important;
+                            text-decoration: none !important;
+                            &:hover {
+                                color: #333 !important;
+                                background-color: #e5e5e5 !important;
+                            }
+                        }
+                    }
+                    &.commentblock {
+                        margin-bottom: 15px;
+                        height: 70px;
+                        overflow: hidden;
+                    }
+                    &.cancelrows {
+                        display: block;
+                    }
+                    &:before {
+                        content: '；';
+                        position: absolute;
+                        right: -17px;
+                        top: 0;
+                        font-weight: bolder;
+                        color: #333;
+                    }
+                    &:last-child, &:only-child {
+                        &:before {
+                            content: '';
+                        }
+                    }
+                    &.no_semicolon {
+                        margin: 0 2px 0 0px;
+                        &:before {
+                            content: '';
+                        }
+                    }
+                    input[type="button"] {
+                        border: 1px solid $color-gray;
+                        background-color: #fff;
+                        padding: 4px 20px 4px 33px;
+                        color: #313131;
+                        box-shadow: none;
+                        margin: 0.25em .2em;
+                        &:hover {
+                            background-color: #e5e5e5;
+                        }
+                    }
+                    input.download {
+                        background-image: url("../images/icon_download.png");
+                        background-repeat: no-repeat;
+                        background-position: 10px center;
+                    }
+                    input.borrow {
+                        background-image: url("../images/icon_borrowing.png");
+                        background-repeat: no-repeat;
+                        background-position: 10px center;
+                    }
+                    input.renew {
+                        background-image: url("../images/icon_renew.png");
+                        background-repeat: no-repeat;
+                        background-position: 10px center;
+                    }
+                    input.delreservation {
+                        background-image: url("../images/icon_delreservation.png");
+                        background-repeat: no-repeat;
+                        background-position: 10px center;
+                    }
+                    
+                    // 增加標籤
+                    &.addtag_block{
+                        display: none;
+                    }
+                    &.tagblock{
+                        margin:0;
+                    }
+                    .addtagbtn{
+                        display:inline-block;
+                        @media(max-width: 380px){
+                            display: block;
+                        }
+                    }
+                    .addtag {
+                        position: relative;
+                        float: left;
+                        z-index: 9;
+                        margin-right: 2px;
+
+                        input[type="text"] {
+                            width: 210px;
+                            padding:5px 8px;
+                            @include screen('xs_mobile'){
+                               width:170px;
+                            }
+                            @media(max-width: 480px){
+                                width: 100%;
+                            }
+                            
+                        }
+                        .addoption {
+                            position: absolute;
+                            top: 40px;
+                            left: 0;
+                            width: 210px;
+                            border-radius: 5px;
+                            border:1px solid #ccc;
+                            padding:4px 10px;
+                            background-color: #fff;
+                            @include box-sizing;
+                            display: none;
+
+                            @include screen('mobile'){
+                                width: 180px;
+                                top:auto;
+                                bottom:45px;
+                            }
+                            @media(max-width: 480px){
+                                width: 100%;
+                            }
+                            ul{
+                                margin:0;
+                                padding:0;
+                               
+                                list-style: none;
+                                li{
+                                    display: block;
+                                    margin:0;
+                                    a{
+                                        display: block;
+                                        padding:4px;
+                                        border-bottom: 1px solid #ccc;
+                                        text-decoration: none;
+                                        color: #666;
+                                        &:hover{
+                                            color:$aHover;
+
+                                        }
+                                    }
+                                    &:last-child{
+                                        a{
+                                            border:none;
+                                        }
+                                    }
+                                    &:before{
+                                        content: "";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .addtag+button{
+                        &.btn-xs{
+                            font-size: .938em!important;
+                        }
+                        &.btn{
+                            padding:.3em 1em .4em!important;
+                            margin:0 .1em!important;
+                        }
+                    }
+                }
+            }
+            ul.borrowdate_data {
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style-type: none;
+                    background-image: url('../images/icon_point.png');
+                    background-position: 0 center;
+                    background-repeat: no-repeat;
+                    background-size: 6px;
+                    padding-left: 15px;
+                    margin: 0 0 5px 0 !important;
+                    display: block !important;
+                    color: #000 !important;
+                    &:after {
+                        content: '';
+                    }
+                }
+            }
+            p {
+                padding: 0;
+                margin: 15px 0;
+                font-size: 1.125em;
+            }
+            .bookbtn {
+                clear: both;
+                span {
+                    margin-right: 10px;
+                }
+                input[type="button"] {
+                    border: 1px solid $color-gray;
+                    background-color: #fff;
+                    padding: 4px 20px 4px 33px;
+                    color: #313131;
+                    box-shadow: none;
+                    &:hover {
+                        background-color: #e5e5e5;
+                    }
+                }
+                input.download {
+                    background-image: url("../images/icon_download.png");
+                    background-repeat: no-repeat;
+                    background-position: 10px center;
+                }
+                input.borrow {
+                    background-image: url("../images/icon_borrowing.png");
+                    background-repeat: no-repeat;
+                    background-position: 10px center;
+                }
+                input.renew {
+                    background-image: url("../images/icon_renew.png");
+                    background-repeat: no-repeat;
+                    background-position: 10px center;
+                }
+                input.delreservation {
+                    background-image: url("../images/icon_delreservation.png");
+                    background-repeat: no-repeat;
+                    background-position: 10px center;
+                }
+                input.recommend {
+                    background-image: url("../images/icon_recommend.png");
+                    background-repeat: no-repeat;
+                    background-position: 10px center;
+                }
+            }
+            //分享
+            .bookshare {
+                position: relative;
+                text-align: right;
+                float: right;
+                width: 28%;
+                height: 100%;
+                @include screen('tablet'){
+                    width: 15%;
+                }
+
+                @include screen('mobile') {
+                    position: absolute;
+                    top: -15px;
+                    right: 15px;
+                    width: 40px;
+                }
+                
+                ul {
+                    margin: 0 0px 0 0;
+                    padding: 0;
+                    @include screen('mobile') {
+                        margin: 0;
+                    }
+                    li {
+                        display: inline-block;
+                        margin-left: 0px;
+                        list-style-type: none;
+                        padding: 0;
+                        background-image: none;
+                        margin: 0;
+                        &:before {
+                            content: "";
+                        }
+                        a {
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            line-height: 40px;
+                            text-align: center;
+                            &:hover {
+                                background-color: #e5e5e5;
+                            }
+                            @media(max-width: 480px) {
+                                background-color: transparent;
+                                line-height: 0;
+                                &:hover {
+                                    background-color: transparent;
+                                }
+                            }
+                            img {
+                                width: 22px;
+                                height: 22px;
+                            }
+                        }
+                    }
+                    @include screen('mobile') {
+                        li {
+                            display: none;
+                            &:first-child {
+                                display: block;
+                            }
+                            a {
+                                // width: auto;
+                            }
+                        }
+                    }
+                }
+                .moreshareblock {
+                    position: absolute;
+                    top: 50px;
+                    right: 10px;
+                    width: 430px;
+                    background-color: #e5e5e5;
+                    border-radius: 5px;
+                    padding: 20px 30px 15px;
+                    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+                    display: none;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        border: 10px #e5e5e5 solid;
+                        border-right-color: transparent;
+                        border-left-color: transparent;
+                        border-top-color: transparent;
+                        right: 10px;
+                        top: -18px;
+                    }
+                    @include screen('notebook') {
+                        position: relative;
+                        top: 10px;
+                        left: 10px;
+                        margin-bottom: 20px;
+                        &:after {
+                            left: 135px;
+                            right: auto;
+                        }
+                    }
+                    @include screen('tablet') {
+                        width: 90%;
+                    }
+                    div {
+                        text-align: center;
+                        a {
+                            text-align: center;
+                            font-size: .939em;
+                            img {
+                                width: 24px;
+                                margin: 0 auto 10px;
+                            }
+                        }
+                    }
+                    .slick-prev {
+                        background-image: url('../vendor/slick/icon_arrow_left2.png');
+                        left: 0;
+                        box-shadow: none;
+                    }
+                    .slick-next {
+                        background-image: url('../vendor/slick/icon_arrow_right2.png');
+                        right: 0;
+                        box-shadow: none;
+                    }
+                }
+            }
+            .moreshare {
+                position: absolute;
+                bottom: 0px;
+                right: 0;
+                margin-top: 5px;
+                
+                @include screen('tablet'){
+                    position: relative;
+                    right:0;
+                    bottom:auto;
+                    float: none;
+                    clear: both;
+                    text-align: right;
+                }
+                @include screen('mobile') {
+                    display: none;
+                }
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        display: inline-block;
+                        margin-left: 0px;
+                        list-style-type: none;
+                        padding: 0;
+                        background-image: none;
+                        margin: 0;
+                        &:before {
+                            content: "";
+                        }
+                        a {
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            line-height: 35px;
+                            text-align: center;
+                            &:hover {
+                                background-color: #e5e5e5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .booklist_type {
+            clear: both;
+            float: none;
+            position: relative;
+            margin-left: 0px;
+            padding-top: 15px;
+            border-top: 1px solid #ccc;
+            padding-left: 5px;
+            margin-top: 5px;
+            
+            &:before {
+                position: absolute;
+                content: '';
+                width: 5px;
+                height: 22px;
+                background-color: #666;
+                left: 0;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                    display: inline-block;
+                    padding: 0 10px;
+                    line-height: 1.5em;
+                    position: relative;
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        width: 1px;
+                        height: 15px;
+                        right: 0;
+                        top: 5px;
+                        background-color: #999;
+                    }
+                }
+            }
+        }
+        //星星評分
+        .score_star {
+            position: relative;
+            text-align: left;
+            width: 100px;
+            height: 29px;
+            float: left;
+            z-index: 0;
+            >img {
+                position: absolute;
+                z-index: 5;
+                width: 100px;
+                height: 29px;
+            }
+            .score_color {
+                position: absolute;
+                z-index: 4;
+                top: 0;
+                left: 0;
+                width: 100px;
+                height: 29px;
+                overflow: hidden;
+            }
+        }
+        .then {
+            color: #b4b4b4;
+            float: left;
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-bottom: 5px;
+        }
+    }
+    //
+    .booklist2 {
+        //左
+        .bookleftblock {
+            width: auto;
+            @include screen('mobile') {
+                width: 100%;
+            }
+        }
+        //中
+        .bookmidblock {
+            width: auto;
+            @include screen('mobile') {
+                width: 100%;
+            }
+        }
+    }
+    // 更多條例
+    .booklist_more {
+        margin: 0 auto;
+        position: relative;
+        @include screen('mobile') {
+            margin: 0 auto 55px;
+        }
+        a {
+            display: block;
+            text-align: center;
+            padding: 20px 8px 30px;
+            background-image: none;
+            background-color: #F3F3F3;
+            color: #333;
+            border-radius: 0;
+            @include screen('mobile') {
+                padding: 15px 8px;
+            }
+            &:hover {
+                color: $aHover;
+            }
+        }
+    }
+    //熱門排行
+    // 條列
+    .booklist_hot_block {
+        padding: 15px 10px;
+        @include box-sizing;
+        overflow: hidden;
+        .choosebtn {
+            margin-left: 7px;
+            clear: both;
+        }
+    }
+    // 條列
+    .booklist_hot {
+        border: 1px solid $color-gray;
+        border-radius: 5px;
+        padding: 0;
+        position: relative;
+        width: 19%;
+        float: left;
+        margin: 0 .4% 15px;
+        @media(max-width: 1400px) {
+            width: 24%;
+            margin: 0 .4% 15px;
+        }
+        @include screen('notebook') {
+            width: 32%;
+            margin: 0 0.55% 15px;
+        }
+        @media(max-width: 900px) {
+            width: 48%;
+            margin: 0 .8% 15px;
+        }
+        @include screen('mobile') {
+            width: 100%;
+            margin: 0 0 15px 0;
+            padding: 15px 0 0;
+        }
+        //點閱次數及評分
+        .clickblock {
+            overflow: hidden;
+            margin: 0 auto 20px;
+            background-color: #eee;
+            padding: 10px 10px;
+            text-align: center;
+            @include screen('mobile') {
+                text-align: left;
+                position: absolute;
+                left: 100px;
+                top: 10px;
+                background-color: transparent;
+            }
+            .ranking {
+                background-color: $color-brown;
+                color: #fff;
+                border-radius: 50%;
+                width: 35px;
+                height: 35px;
+                display: inline-block;
+                line-height: 35px;
+                font-size: 1em;
+                text-align: center;
+                @include box-sizing;
+                letter-spacing: .1em;
+                margin-right: 5px;
+                @include screen('mobile') {
+                    display: inline-block;
+                }
+                @media(max-width: 480px) {
+                    display: block;
+                }
+            }
+            .clicktimes {
+                display: inline-block;
+                font-size: 1.125em;
+                margin-top: 8px;
+            }
+        }
+        //上
+        .bookleftblock {
+            width: auto;
+            overflow: hidden;
+            text-align: center;
+            margin-bottom: 10px;
+            position: relative;
+            padding: 0 15px;
+            @include screen('mobile') {
+                float: left;
+            }
+            label {
+                display: inline-block;
+                position: absolute;
+                top: 2px;
+                margin-left: -45px;
+                @include screen('mobile') {
+                    display: none;
+                }
+                input {
+                    border-radius: 3px !important;
+                }
+                input[type="checkbox"] {
+                    margin-right: 5px;
+                }
+            }
+            .book {
+                display: inline-block;
+                width: 145px;
+                @include screen('mobile') {
+                    width: 80px;
+                }
+                .image {
+                    // border: 1px solid $color-gray;
+                    margin-bottom: 10px;
+                    text-align: center;
+                    height: 200px;
+                    @include screen('mobile') {
+                        height: 120px;
+                    }
+                    >img {
+                        width: 100%;
+                        max-height: 200px;
+                        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+                        @include screen('mobile') {
+                            max-height: 120px;
+                        }
+                    }
+                }
+                //我要評分
+                .score {
+                    display: block;
+                    clear: both;
+                    margin: 10px 0;
+                    overflow: hidden;
+                    a {
+                        display: block;
+                        padding: 3px 10px;
+                        color: #333;
+                        text-align: center;
+                        border: 1px solid $color-gray;
+                        border-radius: 4px;
+                        &:hover {
+                            background-color: #fadb5b;
+                        }
+                    }
+                }
+                //
+            }
+        }
+        //
+        // 中
+        .bookmidblock {
+            padding: 0 15px;
+            @include screen('mobile') {
+                float: left;
+                width: 80%;
+                padding: 0;
+            }
+            @media(max-width: 580px) {
+                width: 72%;
+            }
+            @media(max-width: 430px) {
+                width: 68%;
+            }
+            @media(max-width: 380px) {
+                width: 60%;
+            }
+            .bookdata {
+                @include screen('mobile') {
+                    margin: 60px 0 0px 0;
+                }
+                @media(max-width: 480px) {
+                    margin: 90px 0 0px 0;
+                }
+            }
+            h2 {
+                margin: 0 0 10px;
+                padding: 0;
+                font-weight: normal;
+                font-size: 1.25em;
+                line-height: 1.3em;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                text-align: center;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+                a {
+                    color: $color-brown2;
+                    text-decoration: underline;
+                    transition: .5s;
+                    &:hover {
+                        color: $aHover;
+                    }
+                }
+            }
+            //分享
+            .bookshare {
+                position: relative;
+                text-align: center;
+                margin-bottom: 10px;
+                @include screen('mobile') {
+                    position: absolute;
+                    top: 10px;
+                    right: 0px;
+                }
+                ul {
+                    margin: 0 10px 0 0;
+                    padding: 0;
+                    li {
+                        display: inline-block;
+                        margin-left: 0px;
+                        list-style-type: none;
+                        padding: 0;
+                        background-image: none;
+                        margin: 0;
+                        &:before {
+                            content: "";
+                        }
+                        a {
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background-color: transparent;
+                            line-height: 50px;
+                            text-align: center;
+                            &:hover {
+                                background-color: #e5e5e5;
+                            }
+                            img {
+                                width: 22px;
+                            }
+                        }
+                    }
+                    @include screen('mobile') {
+                        li {
+                            display: none;
+                            &:nth-child(2) {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .moreshareblock2 {
+                    position: absolute;
+                    top: -100px;
+                    left: 0;
+                    width: 100%;
+                    background-color: #e5e5e5;
+                    border-radius: 5px;
+                    padding: 20px 30px 15px;
+                    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+                    display: none;
+                    div {
+                        text-align: center;
+                        a {
+                            text-align: center;
+                            font-size: .939em;
+                            img {
+                                width: 25px;
+                                margin: 0 auto 10px;
+                            }
+                        }
+                    }
+                    .slick-prev {
+                        background-image: url('../vendor/slick/icon_arrow_left2.png');
+                        left: 0;
+                        box-shadow: none;
+                    }
+                    .slick-next {
+                        background-image: url('../vendor/slick/icon_arrow_right2.png');
+                        right: 0;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+        //
+    }
+    //手機版
+    .booklist_hot {
+        @media(max-width: 767px)and(min-width: 575px) {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                width: 32%;
+                float: left;
+                margin-right: 1.4%;
+                background-color: #eee;
+                border: none;
+                .clickblock {
+                    position: relative;
+                    left: auto;
+                    top: auto;
+                    margin: 0 auto 10px;
+                    padding: 0;
+                    .ranking {
+                        margin: 0 auto;
+                        display: block;
+                    }
+                    .clicktimes {
+                        font-size: 1.063em;
+                        text-align: center;
+                        display: block;
+                    }
+                }
+                .bookleftblock {
+                    float: none;
+                    .book {
+                        width: 145px;
+                        .image {
+                            height: 200px;
+                            margin: 0 auto;
+                            vertical-align: bottom;
+                            position: relative;
+                            >img {
+                                max-height: 200px;
+                                max-width: 100%;
+                                position: absolute;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+                .bookmidblock {
+                    width: auto;
+                    float: none;
+                    .bookdata {
+                        margin: 0;
+                        padding: 0 10px;
+                        @include box-sizing;
+                        h2 {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            &:nth-child(1) {
+                position: relative;
+                left: 33.7%;
+            }
+            &:nth-child(2) {
+                position: relative;
+                left: -33%;
+                .image {
+                    width: 85% !important;
+                }
+            }
+            &:nth-child(3) {
+                margin-right: 0%;
+                position: relative;
+                right: 0;
+                .image {
+                    width: 80% !important;
+                }
+            }
+        }
+    }
+}
+//熱門回答區塊
+.hotqa_block {
+    overflow: hidden;
+    padding: 30px;
+    margin-bottom: 30px;
+    .choosebtn {
+        margin-left: 0px;
+        clear: both;
+    }
+    // 熱門隔線
+    .hotqa_leftblock {
+        @include make-xs-column(12);
+        @include make-sm-column(8); //768px  width:66.6%
+        @include make-md-column(9); //992px  width:66.6%
+        @include make-lg-column(9); //1200px width:66.6%;
+        @include gutter(); //gutter 代表左右要留白
+    }
+    .hotqa_rightblock {
+        @include make-xs-column(12);
+        @include make-sm-column(4); //768px  width:66.6%
+        @include make-md-column(3); //992px  width:66.6%
+        @include make-lg-column(3); //1200px width:66.6%;
+        @include gutter(); //gutter 代表左右要留白
+    }
+    //問題列表
+    .hotqa_list {
+        border: 1px solid $color-gray;
+        border-radius: 5px;
+        padding: 0;
+        position: relative;
+        width: 19%;
+        float: left;
+        box-shadow: 0 0 10px 3px #eee inset;
+        margin: 0 .4% 15px;
+        @media(max-width: 1400px) {
+            width: 24%;
+            margin: 0 .4% 15px;
+        }
+        @include screen('notebook') {
+            width: 32%;
+            margin: 0 0.55% 15px;
+        }
+        @media(max-width: 900px) {
+            width: 48%;
+            margin: 0 .8% 15px;
+        }
+        @include screen('mobile') {
+            width: 100%;
+            margin: 0 0 15px 0;
+        }
+        h2 {
+            margin: 0;
+            padding: 12px 15px;
+            text-align: center;
+            background-color: $color-orange;
+            color: #fff;
+            font-size: 1.25em;
+            font-weight: 400;
+            // background-image: linear-gradient(0deg, darken($color-darkgreen, 5) 10%, $color-darkgreen 100%);
+        }
+        .more {
+            text-align: center;
+        }
+        ul {
+            margin: 10px 30px;
+            padding: 0;
+            li {
+                list-style: none;
+                a {
+                    display: block;
+                    padding: 5px 5px 5px 15px;
+                    border-bottom: 1px solid #eee;
+                    position: relative;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    color: #535353;
+                    &:hover {
+                        color: $importantColor;
+                    }
+                    &:before {
+                        content: '';
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0;
+                        top: 15px;
+                        background-color: #333;
+                    }
+                }
+            }
+        }
+    }
+    //熱門回答區塊
+    .hotqa {
+        border: 1px solid #d3d3d3;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px 3px #eee inset;
+        min-height: 280px;
+        margin-bottom: 15px;
+        @include screen('mobile') {
+            min-height: inherit;
+        }
+        .question {
+            margin-bottom: 15px;
+            font-size: 1.25em;
+            padding: 10px 15px 10px 60px;
+            background-color: $color-orange;
+            color: #fff;
+            border-radius: 5px;
+            position: relative;
+            &:before {
+                content: 'Q：';
+                font-size: 1.25em;
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                font-weight: 800;
+            }
+        }
+        .answer {
+            position: relative;
+            padding: 0 0 0 60px;
+            line-height: 1.7em;
+            &:before {
+                content: 'A：';
+                font-size: 1.5em;
+                position: absolute;
+                left: 10px;
+                top: 0px;
+                font-weight: 800;
+            }
+        }
+    }
+    //相關連結 下載附件
+    .related_linksblock {
+        border: 1px solid #d3d3d3;
+        padding: 0px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        box-shadow: 0 0 10px 3px #eee inset;
+        .linkstitle {
+            font-size: 1.25em;
+            text-align: center;
+            background-color: $color-green;
+            color: #fff;
+            padding: 10px 15px;
+        }
+        ul {
+            margin: 10px 30px 30px;
+            padding: 0;
+            li {
+                list-style: none;
+                a {
+                    display: block;
+                    padding: 5px 5px 5px 15px;
+                    border-bottom: 1px solid #eee;
+                    position: relative;
+                    &:before {
+                        content: '';
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0;
+                        top: 15px;
+                        background-color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+//設備預約區塊
+.devicereservation_block {
+    overflow: hidden;
+    padding: 30px 30px 30px;
+    margin-bottom: 30px;
+    h2 {
+        @extend .block01_h2;
+    }
+    .choosebtn {
+        clear: both !important;
+        display: block !important;
+        float: none !important;
+        margin: 0 1%;
+    }
+    .device_list {
+        position: relative;
+        width: 23%;
+        float: left;
+        margin: 0 1% 20px;
+        height: 240px;
+        @media(max-width: 1500px) {
+            width: 31%;
+            margin: 0 1.16% 20px;
+        }
+        @media(max-width: 1200px) {
+            width: 47%;
+            margin: 0 1.5% 20px;
+        }
+        @include screen('mobile') {
+            width: 100%;
+            margin: 0 0 15px;
+            float: none;
+            height: auto;
+        }
+        a {
+            display: block;
+            padding: 20px;
+            height: 230px;
+            background-color: lighten($color-yellow, 20);
+            border-radius: 5px;
+            @include box-sizing;
+            // box-shadow: 0 0 10px 3px lighten($color-darkgreen,15) inset;
+            overflow: hidden;
+            color: darken($color-darkgreen, 35);
+            margin-top: 10px;
+            transition: .2s;
+            @include screen('mobile') {
+                height: auto;
+            }
+            &:hover,
+            &:focus {
+                color: darken($color-darkgreen, 20);
+                background-color: lighten($color-green, 30);
+                box-shadow: none;
+                margin-top: 0;
+                box-shadow: 3px 2px 4px 3px #ccc;
+            }
+            h3 {
+                margin: 0 0 20px;
+                font-size: 1.5em;
+                padding: 0 0 10px;
+                border-bottom: 1px solid #fff;
+                color: darken($color-darkgreen, 35);
+            }
+            .images {
+                width: 100px;
+                height: 100px;
+                background-color: rgba(255, 255, 255, .8);
+                float: left;
+                margin: 0 20px 0 0;
+                position: relative;
+                border-radius: 50%;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    max-width: 65%;
+                    max-height: 65%;
+                    margin: auto;
+                    opacity: .9;
+                }
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                li {
+                    list-style: none;
+                    margin: 0 0 5px;
+                    font-size: 1.063em;
+                    position: relative;
+                    padding: 0 0 0 10px;
+                    &:before {
+                        content: '';
+                        border: 5px solid darken($color-darkgreen, 35);
+                        border-color: transparent transparent transparent darken($color-darkgreen, 35);
+                        position: absolute;
+                        left: 0;
+                        top: 6px;
+                    }
+                }
+            }
+            @media(max-width: 380px) {
+                height: auto;
+                .images {
+                    width: 60px;
+                    height: 60px;
+                    img {
+                        max-width: 70%;
+                        max-height: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+//設備預約表單
+.reservation_block {
+    width: 90%;
+    margin: 30px auto 50px;
+    @include screen('mobile') {
+        width: auto;
+        margin: 20px;
+    }
+    h2 {
+        @extend .block01_h2;
+    }
+    // 目前項目
+    .currently_item {
+        font-size: 1.25em;
+        margin-bottom: 10px;
+        padding: 0 0 0 20px;
+        position: relative;
+        &:before {
+            content: '';
+            border: 10px solid #666;
+            border-color: transparent transparent transparent #666;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        span {
+            color: $color-red;
+        }
+    }
+    // 預約說明
+    .reservation_explain {
+        text-align: center;
+        padding: 25px;
+        background-color: nth($lightColor, $style);
+        border-radius: 5px;
+        margin: 20px 0 0;
+        font-size: 1.25em;
+        line-height: 1.5em;
+    }
+    // 預約表單
+    .reservationform {
+        margin-bottom: 40px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 20px 50px 20px;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+        position: relative;
+        @include box-sizing;
+        background-color: #fff;
+        // border-top: 15px solid $color-green;
+        &:before {
+            content: '';
+            border: 30px solid $color-orange;
+            border-color: $color-orange transparent transparent $color-orange;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        @include screen('mobile') {
+            padding: 20px 20px 30px;
+        }
+        .form_title {
+            color: #000;
+            font-size: 1.125em;
+        }
+        .to {
+            float: left;
+            margin: 5px 5px 0;
+            @media(max-width: 615px) {
+                display: none;
+            }
+        }
+        .select_date {
+            width: 45%;
+            @include screen('mobile') {
+                width: 47%;
+            }
+            @media(max-width:615px) {
+                width: 98%;
+            }
+        }
+        .word_red {
+            font-size: 1.125em;
+        }
+    }
+    // 預約表單
+    .reservationform_time {
+        margin-bottom: 40px;
+        padding: 0px;
+        position: relative;
+        @include box-sizing;
+        .form_content {
+            width: 100%;
+            float: none;
+            padding: 0;
+        }
+        label {
+            width: auto;
+        }
+        .form_title {
+            color: #000;
+            font-size: 1.125em;
+            float: left;
+            @include screen('xs_mobile') {
+                float: none;
+            }
+        }
+        .to {
+            float: left;
+            margin: 5px 5px 0;
+            @include screen('xs_mobile') {
+                display: none;
+            }
+        }
+        .select_date {
+            width: 20%;
+            @include screen('tablet') {
+                width: 50%;
+            }
+            @include screen('xs_mobile') {
+                float: none;
+                width: 99%
+            }
+        }
+        .select_time {
+            width: 8%;
+            float: left;
+            @include screen('tablet') {
+                width: 15%;
+            }
+            @include screen('xs_mobile') {
+                float: none;
+                width: 100%
+            }
+        }
+        .content_block {
+            @include screen('tablet') {
+                display: block;
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+    // 
+    .btn_grp {
+        padding-bottom: 0;
+        margin-top: 10px;
+    }
+    //
+    .device_explain {
+        padding: 25px 35px;
+        background-color: nth($lightColor, $style);
+        border-radius: 5px;
+        margin: 20px 0 0;
+        h3 {
+            font-size: 1.5em;
+        }
+        p {
+            font-size: 1.125em;
+            line-height: 1.7em;
+        }
+    }
+}
+//符合項目
+.meetsblock {
+    width: 90%;
+    margin: 20px auto 60px;
+    overflow: hidden;
+    // border: 1px solid #ccc;
+    // box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    //  border-radius: 5px;
+    .meetstitle {
+        font-size: 1.25em;
+        margin-bottom: 10px;
+        padding: 0 0 0 20px;
+        position: relative;
+        &:before {
+            content: '';
+            border: 10px solid #666;
+            border-color: transparent transparent transparent #666;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+    .meets_box {
+        width: 32%;
+        // margin: auto;
+        line-height: 180px;
+        text-align: center;
+        float: left;
+        margin: 0px .66% 15px;
+        height: 180px;
+        position: relative;
+        @include box-sizing;
+        @include screen('notebook') {
+            width: 48%;
+            margin: 0px 1% 15px;
+        }
+        @include screen('mobile') {
+            width: 100%;
+            margin: 0px 0 15px;
+        }
+        a {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            height: 170px;
+            margin-top: 10px;
+            transition: .2s;
+            background-color: lighten($color-yellow, 20);
+            color: darken($color-darkgreen, 35);
+            font-weight: 500;
+            display: block;
+            &:hover {
+                margin-top: 0px;
+                box-shadow: 3px 2px 4px 3px #ccc;
+                color: darken($color-darkgreen, 35);
+                background-color: lighten($color-green, 20);
+                border-radius: 10px;
+            }
+            .box {
+                display: inline-block;
+                height: auto;
+                line-height: 1.5em;
+                font-size: 2em;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                max-width: 100%;
+                max-height: 100%;
+                margin: auto;
+                @include box-sizing;
+                .images {
+                    width: 100px;
+                    height: 100px;
+                    background-color: rgba(255, 255, 255, .8);
+                    display: inline-block;
+                    margin: 0px 20px 0 0;
+                    position: relative;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                    @include screen('xs_mobile') {
+                        margin: 0;
+                    }
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        max-width: 70%;
+                        max-height: 70%;
+                        margin: auto;
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+}
+//借閱區塊
+.device_borrow {
+    margin: 30px 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 20px 50px 20px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    @include box-sizing;
+    &:before {
+        content: '';
+        border: 30px solid $color-orange;
+        border-color: $color-orange transparent transparent $color-orange;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    h3 {
+        margin: 0 0 30px;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+    .title {
+        font-size: 2.125em;
+        float: left;
+        margin: 0px 30px 20px 0;
+        padding: 0;
+        color: $color-orange;
+        width: 25%;
+        line-height: 1.3em;
+        @include screen('mobile') {
+            width: auto;
+            float: none;
+        }
+    }
+    .content {
+        overflow: hidden;
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                list-style: none;
+                margin-bottom: 8px;
+                padding-left: 20px;
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: #999;
+                    left: 0;
+                    top: 8px;
+                }
+            }
+        }
+    }
+    // 
+    .remarks {
+        clear: both;
+        margin: 10px 0;
+    }
+}
+//固定借閱時間軸
+//借閱區塊
+.device_borrow_time {
+    margin: 30px 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 20px 50px 20px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    @include box-sizing;
+    @include screen('xs_mobile') {
+        padding: 20px 20px 20px;
+    }
+    &:before {
+        content: '';
+        border: 30px solid $color-orange;
+        border-color: $color-orange transparent transparent $color-orange;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    h3 {
+        margin: 0 0 30px;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+        @include screen('xs_mobile') {
+            padding: 10px 20px;
+        }
+    }
+    .title {
+        font-size: 2.125em;
+        margin: 0px 30px 20px 0;
+        padding: 0;
+        color: $color-orange;
+        line-height: 1.3em;
+    }
+    .content {
+        overflow: hidden;
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                list-style: none;
+                margin-bottom: 10px;
+                padding-left: 20px;
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: #999;
+                    left: 0;
+                    top: 8px;
+                }
+            }
+        }
+    }
+    // 
+    .remarks {
+        clear: both;
+        margin: 10px 0;
+    }
+}
+// 讀者建議start 
+.reader_advice {
+    margin: 0px 30px 70px;
+    .reaction,
+    .reply,
+    .supplement {
+        margin-top: 30px;
+        h2 {
+            margin: 0;
+            padding: 8px 20px;
+            font-size: 1.25em;
+            color: #fff;
+            background-color: #6ab6df;
+            float: left;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+            width: 20%;
+            @include box-sizing;
+            @include screen('notebook') {
+                width: 25%;
+            }
+            @include screen('xs_mobile') {
+                width: 100%;
+                float: none;
+            }
+        }
+        table {
+            clear: both;
+            border-top: 4px solid #6ab6df;
+            th {
+                width: 20%;
+                border: 1px solid #ccc
+            }
+            td {
+                border: 1px solid #ccc;
+            }
+            @include screen('xs_mobile') {
+                th,
+                td {
+                    display: block;
+                    width: auto;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .reply {
+        h2 {
+            background-color: #e56171;
+        }
+        table {
+            border-color: #e56171;
+        }
+    }
+    .supplement {
+        h2 {
+            background-color: #76ae73;
+        }
+        table {
+            border-color: #76ae73;
+        }
+    }
+    .btn_grp {
+        text-align: left;
+        margin-left: 0;
+    }
+}
+//時間軸
+.timelineblock {
+    display: block;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    .timeline {
+        opacity: 1;
+        max-width: 99%;
+        margin: 10px auto 30px;
+        background: #fff;
+        width: 100%;
+        height: 22px;
+        border-radius: 35px;
+        border: 1px solid #a9a9a9;
+    }
+    .availability {
+        position: relative;
+        float: left;
+        height: 22px;
+        transition: all 1s ease-in-out;
+        &:after {
+            content: '';
+            width: 1px;
+            height: 22px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: #d6d6d6;
+        }
+        &:first-child {
+            border-radius: 35px 0 0 35px;
+        }
+        &:last-child {
+            border-right: none;
+            border-radius: 0 35px 35px 0;
+            &:after {
+                width: 0;
+            }
+        }
+        &.disabled {
+            background-color: #d6d6d6;
+        }
+    }
+    .availability-hours-label {
+        margin-top: 25px;
+        position: absolute;
+        font-size: 10px;
+        color: #5a5a5a;
+        cursor: default;
+        padding: 0 0 0 6px;
+        &:first-child,
+        &:last-child {
+            padding: 0;
+        }
+    }
+    .selectedTime {
+        background-color: #41996d;
+    }
+    .selectedTimeLabel {
+        color: #41996d;
+        font-weight: 500;
+    }
+}
+//timelineTable
+.timelineTable {
+    table {
+        border-spacing: 5px;
+        border-collapse: inherit;
+        th,
+        td {}
+        td {
+            padding: 0;
+            height: 60px;
+            position: relative;
+            width: 14.28%;
+            a {
+                display: block;
+                text-decoration: none;
+                color: #000;
+                width: 100%;
+                position: relative;
+                text-align: center;
+                span {
+                    line-height: 60px;
+                }
+                &.disabled {
+                    color: #dedede;
+                }
+                &.selectedDate {
+                    background-color: #FFAD5C;
+                    height: 60px;
+                }
+                &.halfday_Am {
+                    height: 30px;
+                    position: absolute;
+                    top: 0;
+                    span {
+                        line-height: 30px;
+                    }
+                }
+                &.halfday_Pm {
+                    height: 30px;
+                    position: absolute;
+                    bottom: 0;
+                    span {
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+// 查無結果
+.no_result {
+    padding: 25px;
+    .explain {
+        padding: 20px 25px;
+        background-color: $color-red;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 1.125em;
+        span {
+            font-size: 1.25em;
+            color: nth($lightColor, $style);
+            padding: 0 20px;
+        }
+    }
+    // 
+    .related_words {
+        padding: 20px 0 30px;
+        border-bottom: 1px solid #d3d3d3;
+        margin-bottom: 30px;
+        h2 {
+            font-size: 1.25em;
+            margin: 20px 0 30px;
+            color: $color-brown2;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                margin: 0 7px 7px 0;
+                padding: 0;
+                list-style: none;
+                a {
+                    display: block;
+                    padding: 10px 20px;
+                    background-color: #eee;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    // 
+    .otherbtn {
+        clear: both;
+        float: none;
+        margin: 0 0 30px;
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                list-style: none;
+                display: inline-block;
+                margin: 0 5px 0 0;
+                a {
+                    padding: 10px 15px !important;
+                }
+            }
+        }
+    }
+}

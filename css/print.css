@@ -1,0 +1,20 @@
+header, .search_blockin, .mainleftblock, footer, .fatfooter, .breadcrumb, .function, .accesskey, .data_quantity2, .sortbyblock, .choosebtn, .page, .booklist_more{
+	display: none!important;
+}
+.mainrightblock{
+	width: 100%!important;
+	
+}
+.rightlineblock{
+	border: none;
+}
+@media(max-width: 767px) {
+	.main{
+		padding-top: 0px;
+	}
+}
+  .mainrightblock .book_detaildata .book_detail{
+        display: block!important;
+        border-bottom: none;
+        padding: 0;
+    }

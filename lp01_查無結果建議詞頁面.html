@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>凌網科技圖書館查詢系統</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 出版年度css -->
+    <link rel="stylesheet" href="vendor/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
+    <link rel="stylesheet" href="css/hyui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+    <!-- wrapper 最大寬度 -->
+   <div class="wrapper">
+        <!-- sidebar  start-->
+        <aside class="sidebar">
+            <div class="m_area">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <nav class="navigation">
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                </nav>
+                <button type="button" class="sidebarClose">關閉</button>
+            </div>
+            <div class="menu_overlay"></div>
+        </aside>
+        <!-- sidebar  end-->
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <button type="button" class="sidebarCtrl">側欄選單</button>
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <!-- navigation Start -->
+                <nav class="navigation">
+                    <!-- 一組ul預設靠右 -->
+                    <!-- 兩組ul已寫JQ靠左靠右 -->
+                    <ul>
+                        <li><a href="javascript:;">Help</a></li>
+                        <li><a href="javascript:;">圖書館首頁</a></li>
+                    </ul>
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                    <!-- login start -->
+                    <div class="login loginbtn">
+                        <button type="button" class="btn btn-sm">登入/線上辦證</button>
+                    </div>
+                    <!-- login end-->
+                    <!-- 登入燈箱start -->
+                    <div class="login_lightbox">
+                        <div class="overlay"></div>
+                        <div class="loginblock">
+                            <div class="close"></div>
+                            <h2>讀者登入</h2>
+                            <p>登入說明文字：本校校職員生的帳號密碼與資訊服務相同，帳號為學號/員工編號，密碼若忘記，請洽圖書館暨資訊處系統開發組， (電話：07-78111151轉2830) </p>
+                            <form>
+                                <div class="form_grp form_inline">
+                                    <label for="username">讀者帳號:</label>
+                                    <input name="username" type="text" placeholder="請輸入文字">
+                                </div>
+                                <div class="form_grp form_inline">
+                                    <label for="password">讀者密碼:</label>
+                                    <input name="password" type="password" placeholder="請輸入密碼">
+                                </div>
+                                <div class="btn_grp">
+                                    <input name="" type="submit" value="登入" />
+                                </div>
+                                <div class="unable_login">
+                                    <h3><span>無法登入?</span></h3>
+                                    <input name="" type="button" value="忘記密碼" />
+                                    <input name="" type="button" value="網路辦證" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 登入燈箱end-->
+                </nav>
+                <!-- 手機才出現的按鈕 start -->
+                <div class="login  loginbtn login_mobile_btn">
+                    <button type="button" class="btn btn-sm">登入</button>
+                </div>
+                <!-- 手機才出現的按鈕 end -->
+                <h1><a href="index.html"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="javascript:;">網站導覽</a>
+                </noscript>
+                <!-- 手機版才出現的menu start-->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <!-- 手機版才出現的menu end-->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <!-- 查詢系統start -->
+            <section class="section col-12 search_blockin">
+                <div class="container">
+                    <div class="col">
+                        <!-- 查詢內容start -->
+                        <div class="searchsystem searchblackbg">
+                            <form>
+                                <div class="select_left">
+                                    <select name="" id="selectSample">
+                                        <option value="">關鍵字六個字</option>
+                                        <option value="">書名</option>
+                                        <option value="">作者</option>
+                                        <option value="">出版社</option>
+                                        <option value="">條碼號條碼號</option>
+                                    </select>
+                                </div>
+                                <div class="form_search">
+                                    <input type="text" name="" value="" placeholder="請輸入關鍵文字" class="keyboardInput nobtn">
+                                    <span><a href="#"></a></span>  
+                                    <!--  <input type="submit" name="" value=""> -->
+                                </div>
+                                 <div class="onlysearch"><input type="checkbox" name="" value="">僅查詢目前可借閱館藏</div>
+                                <!-- 新增start -->
+                                <div class="form_advanced">
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <div class="select_left">
+                                                    <select name="" id="selectSample">
+                                                        <option value="">AND</option>
+                                                        <option value="">OR</option>
+                                                        <option value="">NOT</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="select_left">
+                                                    <select name="" id="selectSample">
+                                                        <option value="">關鍵字</option>
+                                                        <option value="">書名</option>
+                                                        <option value="">作者</option>
+                                                        <option value="">出版社</option>
+                                                        <option value="">條碼號</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="form_search">
+                                                    <input type="text" name="" value="" placeholder="請輸入關鍵文字" class="keyboardInput">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3" class="adddelbtn">
+                                                <div class="onlysearchin"><input type="checkbox" name="" value="">僅查詢目前可借閱館藏</div>
+                                                <ul>
+                                                    <li><a href="#"><img src="images/advanced_add.png" alt="增加"></a></li>
+                                                    <li><a href="#"><img src="images/advanced_del.png" alt="刪除"></a></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div class="btn_grp">
+                                        <input name="" type="reset" value="清除" />
+                                        <input name="" type="submit" value="查詢" />
+                                    </div>
+                                </div>
+                                <!-- 新增start -->
+                                <div class="btn_grp">
+                                    <a href="javascript:;" class="simplebtn">簡易查詢</a>
+                                    <a href="javascript:;" class="advancedbtn">進階查詢</a>
+                                    <a href="javascript:;" class="">分館查詢</a>
+                                    <a href="javascript:;" class="">縮小範圍查詢</a>
+                                    <a href="javascript:;" class="">教授指定參考書</a>
+                                </div>
+                                <div class="query_word hidden"><span>查詢詞：</span>關鍵詞 這裡是查詢詞，使用粗體字區分 AND 作者 這裡是查詢詞，使用粗體字區分 OR 出版社 這裡是查詢詞，使用粗體字區分，字數太多自動往下新增一行</div>
+                            </form>
+                        </div>
+                        <!-- 查詢內容end -->
+                        <!-- 進階查詢start -->
+                        <div class="advanced_search hidden">
+                            <div class="advanced_block">
+                                <form>
+                                    <!--  <div class="close"></div> -->
+                                    <h2>增加搜尋條件</h2>
+                                    <!-- 1 -->
+                                    <div class="searchsystem">
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="select_left">
+                                                        <select name="" id="selectSample">
+                                                            <option value="">AND</option>
+                                                            <option value="">OR</option>
+                                                            <option value="">NOT</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select_left">
+                                                        <select name="" id="selectSample">
+                                                            <option value="">關鍵字</option>
+                                                            <option value="">書名</option>
+                                                            <option value="">作者</option>
+                                                            <option value="">出版社</option>
+                                                            <option value="">條碼號</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form_search">
+                                                        <input type="text" name="" value="" placeholder="請輸入關鍵文字" class="keyboardInput">
+                                                    </div>
+                                                </td>
+                                                <td class="adddelbtn">
+                                                    <div class="onlysearchin"><input type="checkbox" name="" value="">僅查詢目前可借閱館藏</div>
+                                                    <ul>
+                                                        <li><a href="#"><img src="images/advanced_add.png" alt="增加"></a></li>
+                                                        <li><a href="#"><img src="images/advanced_del.png" alt="刪除"></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="select_left">
+                                                        <select name="" id="selectSample">
+                                                            <option value="">AND</option>
+                                                            <option value="">OR</option>
+                                                            <option value="">NOT</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select_left">
+                                                        <select name="" id="selectSample">
+                                                            <option value="">關鍵字</option>
+                                                            <option value="">書名</option>
+                                                            <option value="">作者</option>
+                                                            <option value="">出版社</option>
+                                                            <option value="">條碼號</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form_search">
+                                                        <input type="text" name="" value="" placeholder="請輸入關鍵文字" class="keyboardInput">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <ul>
+                                                        <li><a href="#"><img src="images/advanced_add.png" alt="增加"></a></li>
+                                                        <li><a href="#"><img src="images/advanced_del.png" alt="刪除"></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="select_left">
+                                                        <select name="" id="selectSample">
+                                                            <option value="">AND</option>
+                                                            <option value="">OR</option>
+                                                            <option value="">NOT</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select_left">
+                                                        <select name="" id="selectSample">
+                                                            <option value="">關鍵字</option>
+                                                            <option value="">書名</option>
+                                                            <option value="">作者</option>
+                                                            <option value="">出版社</option>
+                                                            <option value="">條碼號</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form_search">
+                                                        <input type="text" name="" value="" placeholder="請輸入關鍵文字" class="keyboardInput">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <ul>
+                                                        <li><a href="#"><img src="images/advanced_add.png" alt="增加"></a></li>
+                                                        <li><a href="#"><img src="images/advanced_del.png" alt="刪除"></a></li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div class="btn_grp">
+                                            <input name="" type="reset" value="清除" />
+                                            <input name="" type="submit" value="查詢" />
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-6">
+                                        <div class="col rightcol">
+                                            <!-- 3 -->
+                                            <div class="searchblockdata">
+                                                <h2>查詢方式</h2>
+                                                <div class="radio_grp">
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">精確</label>
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">模糊查詢</label>
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">自然語言</label>
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">相關度查詢</label>
+                                                </div>
+                                            </div>
+                                            <!-- 4 -->
+                                            <div class="searchblockdata">
+                                                <h2>出版年區間</h2>
+                                                <div class="form_grp">
+                                                    <div class="form_content form_contentinline">
+                                                        <div class="select_date">
+                                                            <input name="" type="text" placeholder="起日日期"><span class="image"><a href="#"><img src="images/form_calendar.png" alt=""></a></span></div>
+                                                        <span class="to">至</span>
+                                                        <div class="select_date">
+                                                            <input name="" type="text" placeholder="迄日日期"><span class="image"><a href="#"><img src="images/form_calendar.png" alt=""></a></span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 5 -->
+                                            <div class="searchblockdata">
+                                                <h2>特藏</h2>
+                                                <select name="" id="selectSample">
+                                                    <option value="">一般書</option>
+                                                    <option value="">DVD</option>
+                                                    <option value="">電子書</option>
+                                                    <option value="">期刊</option>
+                                                    <option value="">裝訂期刊</option>
+                                                </select>
+                                            </div>
+                                            <!-- 6 -->
+                                            <div class="searchblockdata">
+                                                <h2>分類法</h2>
+                                                <select name="" id="selectSample">
+                                                    <option value="">中國圖書分類法</option>
+                                                    <option value="">美國國會圖書分類法</option>
+                                                    <option value="">美國醫學圖書館分類法</option>
+                                                </select>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                        <div class="col leftcol">
+                                            <!-- 7 -->
+                                            <div class="searchblockdata">
+                                                <h2>中文拼音</h2>
+                                                <div class="radio_grp">
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">同音</label>
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">羅馬拼音</label>
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">漢語拼音</label>
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">通用拼音</label>
+                                                </div>
+                                            </div>
+                                            <!-- 8 -->
+                                            <div class="searchblockdata">
+                                                <h2>語文</h2>
+                                                <div class="radio_grp">
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">全部</label>
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">中文</label>
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">英文</label>
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">日文</label>
+                                                    <label>
+                                                        <input name="radioSample" type="radio" value="">其他語文</label>
+                                                </div>
+                                            </div>
+                                            <!-- 6 -->
+                                            <div class="searchblockdata">
+                                                <h2>館藏地/室</h2>
+                                                <select name="" id="selectSample">
+                                                    <option value="">館藏地1</option>
+                                                    <option value="">館藏地2</option>
+                                                    <option value="">館藏地3</option>
+                                                    <option value="">館藏地4</option>
+                                                    <option value="">館藏地5</option>
+                                                    <option value="">館藏地6</option>
+                                                </select>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                    <div class="btn_grp">
+                                        <input name="" type="reset" value="清除" />
+                                        <input name="" type="submit" value="查詢" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- 進階查詢end -->
+                    </div>
+                </div>
+            </section>
+            <!-- 查詢系統end -->
+            <!-- 分欄start -->
+            <div class="maincolumn">
+                <div class="container">
+                    <!-- 左欄 start  -->
+                    <!-- 縮限查詢範圍 start -->
+                    <div class="mainleftblock">
+                        <div class="mainleftcontent">
+                            <div class="close"></div>
+                            <!-- 目前縮限條件 start  -->
+                            <div class="limit">
+                                <h2>目前縮限條件</h2>
+                                <div class="condition_block">
+                                    <p>目前無縮限條件</p>
+                                </div>
+                            </div>
+                            <!-- 目前縮限條件 end  -->
+                        </div>
+                    </div>
+                    <!-- 縮限查詢範圍 end -->
+                    <!-- 左欄 end  -->
+                    <!-- 右欄 start  -->
+                    <div class="mainrightblock">
+                        <!-- 右欄左線start -->
+                        <div class="rightlineblock">
+                            <!-- 路徑start -->
+                            <div class="breadcrumb">
+                                <span>現在位置：</span>
+                                <ul>
+                                    <li><a href="#">首頁</a></li>
+                                    <li><a href="#">節點</a></li>
+                                    <li>節點</li>
+                                </ul>
+                            </div>
+                            <!-- 路徑end-->
+                            <!-- 查無結果 start-->
+                            <div class="no_result">
+                                <div class="explain ">抱歉，您所輸入的查詢<span>哈利波比(全文)</span>未找到相關資料，建議可更換關鍵字重新查詢，或參考以下資訊</div>
+                                <!-- 相關檢索詞 start -->
+                                <div class="related_words">
+                                    <h2>相關檢索詞</h2>
+                                    <ul><li><a href="#">哈利波特</a></li><li><a href="#">哈利波忑</a></li><li><a href="#">哈利警探</a></li><li><a href="#">哈利路亞</a></li><li><a href="#">哈利小狼</a></li><li><a href="#">哈哈大笑</a></li><li><a href="#">神奇小波比</a></li><li><a href="#">慢郎中拉波比</a></li><li><a href="#">哈利波特</a></li><li><a href="#">哈利波忑</a></li></ul>
+                                </div>
+                                <!-- 相關檢索詞 end -->
+                                <!-- 其他 -->
+                                <div class="otherbtn">
+                                    <ul><li><a href="#" class="btnstyle brownbg"><img src="images/btnstyle_icon03_hover.png">我想薦構本書</a></li><li><a href="#" class="btnstyle brownbg"><img src="images/btnstyle_icon09_hover.png">延伸查詢</a></li></ul>
+                                </div>
+                            </div>
+                            <!-- 查無結果 end-->
+                        </div>
+                        <!-- 右欄左線end -->
+                    </div>
+                    <!-- 右欄 end  -->
+                </div>
+            </div>
+            <!-- 分欄end <-->
+            </-->
+        </div>
+        <!-- fatfooter Start -->
+        <section class="fatfooter">
+            <div class="container">
+                <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+                <nav>
+                    <ul>
+                        <li><a href="javascript:;">關於我們</a>
+                            <ul>
+                                <li><a href="javascript:;">個人資料蒐集告知聲明</a></li>
+                                <li><a href="javascript:;">網路隱私權政策</a></li>
+                                <li><a href="javascript:;">交通資訊導引</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">常用連結</a>
+                            <ul>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                                <li><a href="javascript:;">機構典藏</a></li>
+                                <li><a href="javascript:;">facebook粉絲團</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">其他連結</a>
+                            <ul>
+                                <li><a href="javascript:;">HELP</a></li>
+                                <li><a href="javascript:;">借閱政策</a></li>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- fatfooter end -->
+        <!-- footer start-->
+        <footer>
+            <div class="container">
+                <div class="footer_info">
+                    <ul>
+                        <li>屏東縣政府文化處</li>
+                        <li>90054 屏東市大連路69號</li>
+                        <li>08-7360330</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end-->
+    </div>
+    <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
+    <script type="text/javascript" src="vendor/slick/slick.js">
+    </script>
+    <!-- 出版年度js -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- 出版年度js -->
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

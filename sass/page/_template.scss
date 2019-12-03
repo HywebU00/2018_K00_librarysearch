@@ -1,0 +1,634 @@
+body {
+    background-color: #eee;
+    &.noscroll {
+        // position: fixed!important;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden !important;
+    }
+    // scrollbar
+    /* Turn on custom 8px wide scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+        /* 1px wider than Lion. */
+        /* This is more usable for users trying to click it. */
+        background-color: rgba(0, 0, 0, 0);
+        -webkit-border-radius: 100px;
+    }
+    /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+    ::-webkit-scrollbar:hover {
+        background-color: rgba(0, 0, 0, 0.09);
+    }
+    /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+    ::-webkit-scrollbar-thumb:vertical {
+        /* This is the EXACT color of Mac OS scrollbars. 
+     Yes, I pulled out digital color meter */
+        background: rgba(0, 0, 0, 0.5);
+        -webkit-border-radius: 100px;
+        background-clip: padding-box;
+        border: 2px solid rgba(0, 0, 0, 0);
+        min-height: 10px;
+        /*Prevent it from getting too small */
+    }
+    ::-webkit-scrollbar-thumb:vertical:active {
+        background: rgba(0, 0, 0, 0.61);
+        /* Some darker color when you click it */
+        -webkit-border-radius: 100px;
+    }
+}
+// 最外圍預設為100%
+.wrapper {
+    max-width: $container-max;
+    margin: 0px auto;
+    padding: 55px 0 0 0;
+    position: relative;
+    background-color: #fff;
+}
+.loading {
+    @include box-sizing;
+    img {
+        width: 44px;
+        height: 44px;
+        z-index: 9999;
+        animation-name: loading01;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes loading01 {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    // 開始
+    @keyframes lds-ellipsis3 {
+        0%,
+        25% {
+            left: 32px;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        50% {
+            left: 32px;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        75% {
+            left: 100px;
+        }
+        100% {
+            left: 168px;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+    @-webkit-keyframes lds-ellipsis3 {
+        0%,
+        25% {
+            left: 32px;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        50% {
+            left: 32px;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        75% {
+            left: 100px;
+        }
+        100% {
+            left: 168px;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+    @keyframes lds-ellipsis2 {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        25%,
+        100% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+    }
+    @-webkit-keyframes lds-ellipsis2 {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        25%,
+        100% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+    }
+    @keyframes lds-ellipsis {
+        0% {
+            left: 32px;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        25% {
+            left: 32px;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        50% {
+            left: 100px;
+        }
+        75% {
+            left: 168px;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        100% {
+            left: 168px;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+    }
+    @-webkit-keyframes lds-ellipsis {
+        0% {
+            left: 32px;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        25% {
+            left: 32px;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        50% {
+            left: 100px;
+        }
+        75% {
+            left: 168px;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        100% {
+            left: 168px;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+    }
+    .lds-ellipsis {
+        position: relative;
+    }
+    .lds-ellipsis>div {
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+    }
+    .lds-ellipsis div>div {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #f00;
+        position: absolute;
+        top: 50px;
+        left: 32px;
+        -webkit-animation: lds-ellipsis 1.5s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards;
+        animation: lds-ellipsis 1.5s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards;
+    }
+    .lds-ellipsis div:nth-child(1) div {
+        -webkit-animation: lds-ellipsis2 1.5s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards;
+        animation: lds-ellipsis2 1.5s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards;
+        background: #58493f;
+    }
+    .lds-ellipsis div:nth-child(2) div {
+        -webkit-animation-delay: -0.75s;
+        animation-delay: -0.75s;
+        background: #7d6b5a;
+    }
+    .lds-ellipsis div:nth-child(3) div {
+        -webkit-animation-delay: -0.375s;
+        animation-delay: -0.375s;
+        background: #a4937d;
+    }
+    .lds-ellipsis div:nth-child(4) div {
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s;
+        background: #cfc1a6;
+    }
+    .lds-ellipsis div:nth-child(5) div {
+        -webkit-animation: lds-ellipsis3 1.5s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards;
+        animation: lds-ellipsis3 1.5s cubic-bezier(0, 0.5, 0.5, 1) infinite forwards;
+        background: #58493f;
+    }
+    .lds-ellipsis {
+        width: 200px !important;
+        height: 100px !important;
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+        margin: 0 auto;
+    }
+}
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: $container-max; //請看_variable.scss
+    // outline: 1px solid red;
+}
+.main_mp {
+    .container {
+        padding: 0;
+        margin: 0 auto;
+        max-width: $container-max; //請看_variable.scss
+        // outline: 1px solid red;
+        @media (min-width: 992px) and (max-width:1200px) {
+            width: 980px;
+        }
+    }
+}
+.main {
+    position: relative;
+    margin: 0 auto;
+    padding: 0; // max-width: $container-max; 
+    // 可先設定一個中央區塊最大寬，限制accesskey對齊
+    // @include screen('mobile') {
+    //     padding-top: 55px;
+    // }
+    // 內頁標題設定
+    // &:before {
+    //     content: '';
+    //     width: 100%;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     height: 300px;
+    //     z-index: 0;
+    //     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a4915f+40,ebe5c9+53 */
+    //     background: #a4915f;
+    //     /* Old browsers */
+    //     background: -moz-linear-gradient(-45deg, #a4915f 40%, #ebe5c9 53%);
+    //      FF3.6-15 
+    //     background: -webkit-linear-gradient(-45deg, #a4915f 40%, #ebe5c9 53%);
+    //     /* Chrome10-25,Safari5.1-6 */
+    //     background: linear-gradient(135deg, #a4915f 40%, #ebe5c9 53%);
+    //     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    //     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a4915f', endColorstr='#ebe5c9', GradientType=1);
+    //     /* IE6-9 fallback on horizontal gradient */
+    // }
+    h2 {
+        line-height: 1.25em;
+    }
+}
+.more {
+    a {
+        padding: 3px 10px;
+        border-radius: 4px;
+        text-align: center;
+        @include transition(all,
+        .3s,
+        ease-out);
+        &:hover,
+        &:focus {
+            // color: #fff;
+        }
+    }
+}
+.hidden {
+    display: none !important;
+}
+@media(min-width: 768px) {
+    .mobile_visible {
+        display: none !important;
+    }
+}
+@include screen('mobile') {
+    .mobile_hidden {
+        display: none !important;
+    }
+    .mobile_visible {
+        display: inline-block !important;
+    }
+}
+a:hover {
+    color: $aHover;
+}
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerpage ClassName
+.innerpage {
+    padding-top: 2em;
+    @include screen('mobile') {
+        padding-top: 5em;
+    }
+    >.container {
+        @include gutter(); //gutter 代表左右要留白
+    }
+}
+//word 粗細
+.word_bolder {
+    font-weight: bolder;
+}
+//word 大
+.word_big {
+    font-size: 1.125em;
+}
+// wordcolor
+.word_red {
+    color: $color-red !important;
+}
+.word_blue {
+    color: $color-blue !important;
+}
+.word_green {
+    color: $color-green !important;
+}
+.word_orange {
+    color: $color-orange !important;
+}
+.word_yellow {
+    color: $color-yellow !important;
+}
+.word_gray {
+    color: $color-gray !important;
+}
+code,
+kbd,
+pre,
+samp {
+    // font-family: $font-family;
+}
+pre {
+    font-family: Lato, "PingFang TC", "Helvetica Neue", Helvetica, 微軟正黑體, Arial, sans-serif !important;
+    line-height: 2em;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+}
+//RSS按鈕
+.RSS_button {
+    vertical-align: middle;
+    width: 80px;
+    margin: 0 auto;
+    .btn {
+        background-color: #f8941b;
+        background-image: none;
+        border: 1px solid #f8941b;
+        color: #fff;
+        padding: 0.2em .5em .2em 1em !important;
+        background-image: url('../images/icon_rss.png');
+        background-repeat: no-repeat;
+        background-position: 7px center;
+        background-size: 15px 14px;
+        img {
+            margin-right: 5px !important;
+        }
+        &:hover {
+            background-color: darken(#f8941b, 7);
+            border: 1px solid darken(#f8941b, 7);
+        }
+    }
+}
+//
+.ui-datepicker-trigger {
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+// .hasDatepicker {
+//     position: relative;
+//     z-index: 9999;
+// }
+select {
+    // -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2);
+    // border: none !important;
+    // -webkit-user-select: none;
+    // -moz-user-select: none;
+    // -ms-user-select: none;
+    // user-select: none;
+}
+//按鈕共用
+.btnstyle {
+    border: 2px solid #d3d3d3;
+    background-color: #fff;
+    padding: 2px 10px 2px !important;
+    color: #535353;
+    margin: 0 5px 5px 1px;
+    border-radius: 4px;
+    display: inline-block;
+    // text-decoration: none;
+    // background-repeat: no-repeat;
+    background-position: 8px center;
+    transition: .2s;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2)!important;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2)!important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff !important;
+    text-decoration: none !important;
+    position: relative;
+    &:hover {
+        background-color: #e5e5e5;
+        color: #000;
+        // box-shadow:none;
+        filter: brightness(110%);
+    }
+    &:active {
+        box-shadow: none;
+        // margin: 0px 5px 5px 1px;
+    }
+    &.label {
+        padding: 2px 25px 2px 10px !important;
+        .close {
+            background-image: url('../images/icon_close03.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 10px;
+            position: absolute;
+            top: -1px;
+            right: -3px;
+        }
+    }
+    img {
+        margin-right: 5px;
+        vertical-align: middle;
+        width: 16px;
+        margin-top: -2px;
+    }
+    &.renew {
+        background-image: url('../images/btnstyle_icon01.png');
+    }
+    &.borrowing {
+        background-image: url('../images/btnstyle_icon02.png');
+    }
+    &.recommend {
+        background-image: url('../images/btnstyle_icon03.png');
+    }
+    &.filelink {
+        background-image: url('../images/btnstyle_icon04.png');
+    }
+    &.filedownload {
+        background-image: url('../images/btnstyle_icon05.png');
+    }
+    &.ebookpreview {
+        background-image: url('../images/btnstyle_icon06.png');
+    }
+    &.ebookborrowing {
+        background-image: url('../images/btnstyle_icon07.png');
+    }
+    &.no_borrowing {
+        background-image: url('../images/btnstyle_icon08.png');
+    }
+    &.extend_search {
+        background-image: url('../images/btnstyle_icon09.png');
+    }
+    &.message {
+        background-image: url('../images/btnstyle_icon10.png');
+    }
+    &.cancel {
+        background-image: url('../images/btnstyle_icon11.png');
+    }
+    &.bluebg {
+        background-color: #0288c5;
+        border: 2px solid #0288c5;
+        color: #fff;
+        transition: .2s;
+        &:hover {
+            background-color: #2cb5ed;
+            border: 2px solid #2cb5ed;
+        }
+    }
+    &.bluebg2 {
+        background-color: #64b5f6;
+        border: 2px solid #64b5f6;
+        color: #fff;
+        transition: .2s;
+        &:hover {
+            filter: brightness(120%);
+        }
+    }
+    &.bluebg3 {
+        background-color: nth($primaryColor,$style);
+        border: 2px solid nth($primaryColor,$style);
+        color: #fff;
+        transition: .2s;
+        &:hover {
+            background-color: darken(nth($primaryColor,$style), 10);
+            border: 2px solid darken(nth($primaryColor,$style), 10);
+        }
+    }
+    &.greenbg {
+        background-color: #638e0c;
+        border: 2px solid #638e0c;
+        color: #fff;
+        filter: brightness(120%);
+        transition: .2s;
+        &:hover {
+            background-color: #82b41e;
+            border: 2px solid #82b41e;
+        }
+    }
+    &.greenbg2 {
+        background-color: #2bbbad;
+        border: 2px solid #2bbbad;
+        color: #fff;
+        transition: .2s;
+        &:hover {
+            filter: brightness(120%);
+        }
+    }
+    &.redbg {
+        background-color: darken(#c70321, 5);
+        border: 2px solid darken(#c70321, 5);
+        color: #fff;
+        transition: .2s;
+        &:hover {
+            background-color: lighten(#c70321, 10);
+            border: 2px solid lighten(#c70321, 10);
+        }
+    }
+    &.redbg2 {
+        background-color: darken(#E57373, 5);
+        border: 2px solid darken(#E57373, 5);
+        color: #fff;
+        transition: .2s;
+        &:hover {
+            filter: brightness(140%);
+        }
+    }
+    &.whitebg {
+        border: 2px solid #fff;
+        background-color: #fff;
+        color: #333 !important;
+        transition: .2s;
+        &:hover {
+            background-color: #d2d2d2;
+            border: 2px solid #d2d2d2;
+            ;
+            color: #333 !important;
+        }
+    }
+    &.brownbg {
+        background-color: #59493f;
+        border: 2px solid #59493f;
+        color: #fff;
+        transition: .2s;
+        &:hover {
+            background-color: lighten(#59493f, 10);
+            border: 2px solid lighten(#59493f, 10);
+        }
+    }
+    &.orangebg {
+        background-color: darken(#eb6000, 6);
+        border: 2px solid darken(#eb6000, 6);
+        color: #fff;
+        transition: .2s;
+        &:hover {
+            background-color: #eb6000;
+            border: 2px solid #eb6000;
+        }
+    }
+    &.graybg {
+        background-color: #828282;
+        border: 2px solid #828282;
+        color: #fff;
+        transition: .2s;
+        &:hover {
+            background-color: #a0a0a0;
+            border: 2px solid #a0a0a0;
+        }
+    }
+    // 較寬
+    &.morewidth {
+        padding: 5px 80px !important;
+        border-radius: 50px;
+        font-size: .938em;
+    }
+    &.btn-lg{
+        padding: 10px 50px !important;
+        font-size: 1em;
+    }
+    //more
+    &.morebg {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        color: $color-red !important;
+        position: relative;
+        font-weight: 600;
+        box-shadow: none !important;
+        transition: .2s;
+        &:hover {
+            background-color: transparent;
+            border: none;
+            color: $aHover !important;
+            text-decoration:underline !important;
+        }
+    }
+}
