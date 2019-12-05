@@ -360,7 +360,7 @@
     // 條列
     .booklist {
         border-bottom: 1px solid $color-gray;
-        padding: 18px 15px; 
+        padding: 18px 15px;
         clear: both;
         position: relative;
         &.special {
@@ -372,18 +372,18 @@
             margin-right: 20px;
             margin-bottom: 10px;
             width: 120px;
-            padding-left:5px;
+            padding-left: 5px;
             vertical-align: top;
             @include box-sizing;
-            @include screen('mobile'){
+            @include screen('mobile') {
                 width: 120px;
                 margin-right: 0;
             }
-            @media(max-width: 480px){
+            @media(max-width: 480px) {
                 padding-left: 0;
             }
             label {
-               display: block;
+                display: block;
                 margin-right: 15px;
                 // width: 40px;
                 input {
@@ -435,7 +435,7 @@
                         text-align: center;
                         border: 1px solid $color-gray;
                         border-radius: 4px;
-                        @include screen('xs_mobile'){
+                        @include screen('xs_mobile') {
                             padding: 3px 3px;
                         }
                         &:hover {
@@ -453,14 +453,13 @@
             position: relative;
             width: calc(100% - 150px);
             display: inline-block;
-            @include screen('mobile'){
+            @include screen('mobile') {
                 width: calc(100% - 135px);
             }
             .bookdata {
                 float: left;
                 width: 72%;
-                
-                @include screen('tablet'){
+                @include screen('tablet') {
                     width: 80%;
                 }
                 @include screen('mobile') {
@@ -477,11 +476,11 @@
                 font-weight: normal;
                 font-size: 1.25em;
                 line-height: 1.3em;
-                @include screen('mobile'){
+                @include screen('mobile') {
                     margin: 30px 0 10px;
                 }
                 a {
-                     color:nth($linkColor,$style);
+                    color: nth($linkColor, $style);
                     text-decoration: underline;
                     transition: .5s;
                     &:hover {
@@ -525,7 +524,6 @@
                     text-align: left;
                     transition: .5s;
                     display: inline-block;
-
                     &.aRight {
                         text-align: right;
                         float: right;
@@ -551,7 +549,7 @@
                         }
                     }
                     &.more {
-                        margin-bottom: 5px!important;
+                        margin-bottom: 5px !important;
                         a {
                             background-color: #fff !important;
                             color: #333 !important;
@@ -620,17 +618,16 @@
                         background-repeat: no-repeat;
                         background-position: 10px center;
                     }
-                    
                     // 增加標籤
-                    &.addtag_block{
+                    &.addtag_block {
                         display: none;
                     }
-                    &.tagblock{
-                        margin:0;
+                    &.tagblock {
+                        margin: 0;
                     }
-                    .addtagbtn{
-                        display:inline-block;
-                        @media(max-width: 380px){
+                    .addtagbtn {
+                        display: inline-block;
+                        @media(max-width: 380px) {
                             display: block;
                         }
                     }
@@ -639,17 +636,15 @@
                         float: left;
                         z-index: 9;
                         margin-right: 2px;
-
                         input[type="text"] {
                             width: 210px;
-                            padding:5px 8px;
-                            @include screen('xs_mobile'){
-                               width:170px;
+                            padding: 5px 8px;
+                            @include screen('xs_mobile') {
+                                width: 170px;
                             }
-                            @media(max-width: 480px){
+                            @media(max-width: 480px) {
                                 width: 100%;
                             }
-                            
                         }
                         .addoption {
                             position: absolute;
@@ -657,58 +652,55 @@
                             left: 0;
                             width: 210px;
                             border-radius: 5px;
-                            border:1px solid #ccc;
-                            padding:4px 10px;
+                            border: 1px solid #ccc;
+                            padding: 4px 10px;
                             background-color: #fff;
                             @include box-sizing;
                             display: none;
-
-                            @include screen('mobile'){
+                            @include screen('mobile') {
                                 width: 180px;
-                                top:auto;
-                                bottom:45px;
+                                top: auto;
+                                bottom: 45px;
                             }
-                            @media(max-width: 480px){
+                            @media(max-width: 480px) {
                                 width: 100%;
                             }
-                            ul{
-                                margin:0;
-                                padding:0;
-                               
+                            ul {
+                                margin: 0;
+                                padding: 0;
                                 list-style: none;
-                                li{
+                                li {
                                     display: block;
-                                    margin:0;
-                                    a{
+                                    margin: 0;
+                                    a {
                                         display: block;
-                                        padding:4px;
+                                        padding: 4px;
                                         border-bottom: 1px solid #ccc;
                                         text-decoration: none;
                                         color: #666;
-                                        &:hover{
-                                            color:$aHover;
-
+                                        &:hover {
+                                            color: $aHover;
                                         }
                                     }
-                                    &:last-child{
-                                        a{
-                                            border:none;
+                                    &:last-child {
+                                        a {
+                                            border: none;
                                         }
                                     }
-                                    &:before{
+                                    &:before {
                                         content: "";
                                     }
                                 }
                             }
                         }
                     }
-                    .addtag+button{
-                        &.btn-xs{
-                            font-size: .938em!important;
+                    .addtag+button {
+                        &.btn-xs {
+                            font-size: .938em !important;
                         }
-                        &.btn{
-                            padding:.3em 1em .4em!important;
-                            margin:0 .1em!important;
+                        &.btn {
+                            padding: .3em 1em .4em !important;
+                            margin: 0 .1em !important;
                         }
                     }
                 }
@@ -784,17 +776,15 @@
                 float: right;
                 width: 28%;
                 height: 100%;
-                @include screen('tablet'){
+                @include screen('tablet') {
                     width: 15%;
                 }
-
                 @include screen('mobile') {
                     position: absolute;
                     top: -15px;
                     right: 15px;
                     width: 40px;
                 }
-                
                 ul {
                     margin: 0 0px 0 0;
                     padding: 0;
@@ -908,11 +898,10 @@
                 bottom: 0px;
                 right: 0;
                 margin-top: 5px;
-                
-                @include screen('tablet'){
+                @include screen('tablet') {
                     position: relative;
-                    right:0;
-                    bottom:auto;
+                    right: 0;
+                    bottom: auto;
                     float: none;
                     clear: both;
                     text-align: right;
@@ -953,37 +942,110 @@
             clear: both;
             float: none;
             position: relative;
-            margin-left: 0px;
-            padding-top: 15px;
+            padding: 10px 0 0;
+            margin-top: 10px;
             border-top: 1px solid #ccc;
-            padding-left: 5px;
-            margin-top: 5px;
-            
-            &:before {
-                position: absolute;
-                content: '';
-                width: 5px;
-                height: 22px;
-                background-color: #666;
-                left: 0;
+            overflow: hidden;
+            .displaymore {
+                float: right;
+                width: 60px;
+                margin-bottom: 5px;
+                position: relative;
+                padding: 3px 5px 3px 25px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 0.875em;
+                @include screen('xs_mobile') {
+                    float: none;
+                    margin: 0 auto 5px;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 12px;
+                    left: 5px;
+                    border: 6px solid #666;
+                    border-color: #666 transparent transparent transparent;
+                }
+                a {
+                    display: block;
+                    color: #333;
+                }
+            }
+            .displayonly {
+                float: right;
+                width: 60px;
+                margin-bottom: 5px;
+                position: relative;
+                padding: 3px 5px 3px 25px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 0.875em;
+                display: none;
+                @include screen('xs_mobile') {
+                    float: none;
+                    margin: 0 auto 5px;
+                }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    border: 6px solid #666;
+                    border-color: transparent transparent #666 transparent;
+                }
+                a {
+                    display: block;
+                    color: #333;
+                }
             }
             ul {
                 margin: 0;
                 padding: 0;
+                float: left;
+                width: calc(100% - 100px);
+                @include screen('xs_mobile') {
+                    width: 100%;
+                    float: none;
+                    clear: both;
+                }
                 li {
                     list-style: none;
-                    display: inline-block;
-                    padding: 0 10px;
                     line-height: 1.5em;
                     position: relative;
-                    &:after {
+                    margin: 0 0 5px 0;
+                    padding: 0 0 0 15px;
+                    display: none;
+                    &:first-child {
+                        display: block;
+                    }
+                    &:before {
                         position: absolute;
                         content: '';
-                        width: 1px;
-                        height: 15px;
-                        right: 0;
-                        top: 5px;
-                        background-color: #999;
+                        width: 7px;
+                        height: 7px;
+                        background-color: #666;
+                        left: 0px;
+                        top: 9px;
+                    }
+                    span {
+                        padding: 0 15px 0 0;
+                        position: relative;
+                        display: inline-block;
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            width: 1px;
+                            height: 15px;
+                            right: 8px;
+                            top: 5px;
+                            background-color: #999;
+                        }
+                    }
+                }
+                &.morelist{
+                    li{
+                        display: block;
                     }
                 }
             }

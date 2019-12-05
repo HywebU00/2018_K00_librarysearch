@@ -1245,3 +1245,17 @@ $(function(){
     })
 })
 
+// 顯示資料多寡
+$(function(){
+    $('.displaymore').click(function(){
+        $('.booklist_type ul').addClass('morelist')
+        $(this).hide();
+        $('.displayonly').show()
+    })
+    $('.displayonly').click(function(){
+        $('.booklist_type ul').removeClass('morelist')
+        $(this).hide();
+        $('.displaymore').show()
+    })
+})
+
