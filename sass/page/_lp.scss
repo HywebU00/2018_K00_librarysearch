@@ -1048,6 +1048,10 @@
                         display: block;
                     }
                 }
+                &.onlylist{
+                    width:100%;
+                    float: none;
+                }
             }
         }
         //星星評分
