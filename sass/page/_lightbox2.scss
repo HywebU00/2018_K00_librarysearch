@@ -168,10 +168,12 @@ body.fix {
             width: 48%;
             float: left;
             list-style: none;
+            margin: 0 .2em!important;
             a {
                 display: block !important;
                 color: nth($primaryColor,$style) !important;
                 border: 2px solid nth($primaryColor,$style);
+                padding:.5em!important;
                 text-align: center;
                 &:hover, &.active {
                     background-color: nth($primaryColor,$style) !important;

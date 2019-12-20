@@ -646,7 +646,7 @@
         position: relative;
         padding-right: 0px;
         @include screen('tablet') {
-            width: 210px;
+            width: 230px;
         }
         &:before {
             content: '';
@@ -710,7 +710,7 @@
     .mainrightblock {
         width: calc(100% - 250px);
         @include screen('tablet') {
-            width: calc(100% - 210px);
+            width: calc(100% - 230px);
         }
         float: left;
         position: relative;
@@ -968,17 +968,19 @@
         border: 1px solid #d2d2d2;
         color: #666;
         font-weight: bold;
-        width: 19%;
+        width: 27%;
         display: inline-block;
         padding: 3px 5px;
+        text-align: center;
     }
     input[type="tel"] {
         border: 1px solid #d2d2d2;
         color: #666;
         font-weight: bold;
-        width: 20%;
+        width: 27%;
         display: inline-block;
         padding: 3px 5px;
+        text-align: center;
     }
 }
 .ui-widget.ui-widget-content {
