@@ -1236,9 +1236,14 @@ $(function(){
         $(this).hide();
     })
     $('.addinput').click(function(){
-       $('.addoption').show();
+       $('.addoption').slideDown();
     })
     $('.addbtn').click(function(){
+        $('.addtag_block').hide();
+        $('.addtagbtn').show();
+        $('.addoption').hide();
+    })
+    $('.closebtn').click(function(){
         $('.addtag_block').hide();
         $('.addtagbtn').show();
         $('.addoption').hide();
