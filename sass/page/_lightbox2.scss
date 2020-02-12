@@ -118,9 +118,10 @@ body.fix {
             h3 {
                 position: relative;
                 text-align: left;
-                margin: 10px 0;
-                padding: 0;
+                margin: 10px 0!important;
+                padding: 0!important;
                 font-size: 1.25em;
+                border:none!important;
                 span {
                     background-color: #fff;
                     padding: 5px 15px;
@@ -185,6 +186,9 @@ body.fix {
 }
 .account_content {
     clear: both;
+    p{
+       margin:10px 0!important;
+    }
 }
 .qrcode_content {
     text-align: center;

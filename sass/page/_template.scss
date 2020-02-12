@@ -451,8 +451,11 @@ select {
             background-position: center;
             background-size: 10px;
             position: absolute;
-            top: -1px;
-            right: -3px;
+            top: 3px;
+            right: 1px;
+            z-index: 9;
+            width: 20px!important;
+            height:20px!important;
         }
     }
     img {

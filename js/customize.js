@@ -1139,11 +1139,17 @@ $(function() {
     $('.bookplace_list .prompt').click(function() {
         $('.prompt_block').fadeToggle();
         $(this).toggleClass('arrow');
+        $(this).parent('th').siblings('th').children('.prompt_block').hide();
+        $(this).parent('th').siblings('th').children('.prompt').removeClass('arrow');
+        $(this).parent('th').siblings('th').children('.prompt_block2').hide();
+        $(this).parent('th').siblings('th').children('.prompt2').removeClass('arrow');
     })
     $('.prompt_block2').hide();
     $('.bookplace_list .prompt2').click(function() {
         $('.prompt_block2').fadeToggle();
         $(this).toggleClass('arrow');
+        $(this).parent('th').siblings('th').children('.prompt_block').hide();
+        $(this).parent('th').siblings('th').children('.prompt').removeClass('arrow');
     })
     $('.prompt_block3').hide();
     $('.prompt3').click(function() {
@@ -1230,37 +1236,35 @@ $(function() {
     })
 })
 //增加標籤
-$(function(){
-    $('.addtagbtn').click(function(){
-        $('.addtag_block').css('display','inline-block');
+$(function() {
+    $('.addtagbtn').click(function() {
+        $('.addtag_block').css('display', 'inline-block');
         $(this).hide();
     })
-    $('.addinput').click(function(){
-       $('.addoption').slideDown();
+    $('.addinput').click(function() {
+        $('.addoption').slideDown();
     })
-    $('.addbtn').click(function(){
+    $('.addbtn').click(function() {
         $('.addtag_block').hide();
         $('.addtagbtn').show();
         $('.addoption').hide();
     })
-    $('.closebtn').click(function(){
+    $('.closebtn').click(function() {
         $('.addtag_block').hide();
         $('.addtagbtn').show();
         $('.addoption').hide();
     })
 })
-
 // 顯示資料多寡
-$(function(){
-    $('.displaymore').click(function(){
+$(function() {
+    $('.displaymore').click(function() {
         $('.booklist_type ul').addClass('morelist')
         $(this).hide();
         $('.displayonly').show()
     })
-    $('.displayonly').click(function(){
+    $('.displayonly').click(function() {
         $('.booklist_type ul').removeClass('morelist')
         $(this).hide();
         $('.displaymore').show()
     })
 })
-
