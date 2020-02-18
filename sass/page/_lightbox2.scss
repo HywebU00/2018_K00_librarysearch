@@ -83,10 +83,10 @@ body.fix {
         h2 {
             font-size: 1.875em;
             text-align: center;
-            border-bottom: 2px solid nth($primaryColor,$style);
+            border-bottom: 2px solid nth($primaryColor, $style);
             margin: 0px auto 20px;
             padding: 0 0 20px;
-            color: nth($primaryColor,$style);
+            color: nth($primaryColor, $style);
         }
         .form_grp {
             label {
@@ -118,10 +118,10 @@ body.fix {
             h3 {
                 position: relative;
                 text-align: left;
-                margin: 10px 0!important;
-                padding: 0!important;
+                margin: 10px 0 !important;
+                padding: 0 !important;
                 font-size: 1.25em;
-                border:none!important;
+                border: none !important;
                 span {
                     background-color: #fff;
                     padding: 5px 15px;
@@ -169,15 +169,15 @@ body.fix {
             width: 48%;
             float: left;
             list-style: none;
-            margin: 0 .2em!important;
+            margin: 0 .2em !important;
             a {
                 display: block !important;
-                color: nth($primaryColor,$style) !important;
-                border: 2px solid nth($primaryColor,$style);
-                padding:.5em!important;
+                color: nth($primaryColor, $style) !important;
+                border: 2px solid nth($primaryColor, $style);
+                padding: .5em !important;
                 text-align: center;
                 &:hover, &.active {
-                    background-color: nth($primaryColor,$style) !important;
+                    background-color: nth($primaryColor, $style) !important;
                     color: #fff !important;
                 }
             }
@@ -186,8 +186,8 @@ body.fix {
 }
 .account_content {
     clear: both;
-    p{
-       margin:10px 0!important;
+    p {
+        margin: 10px 0 !important;
     }
 }
 .qrcode_content {
@@ -204,17 +204,16 @@ body.fix {
             display: block;
             width: 128px;
             height: 128px;
-            margin: 0 auto ;
+            margin: 0 auto;
         }
-        .reorganize{
+        .reorganize {
             background-image: url('../images/icon_reorganize.png');
             background-repeat: no-repeat;
             background-position: 10px center;
-            
             display: block;
-            padding:5px 5px 5px 30px;
+            padding: 5px 5px 5px 30px;
             width: 70px;
-            margin:0 auto;
+            margin: 0 auto;
             text-align: left;
         }
     }
@@ -238,15 +237,14 @@ body.fix {
     }
     .qrcode_btn {
         a {
-            background-color: nth($primaryColor,$style);
+            background-color: nth($primaryColor, $style);
             color: #fff;
             display: block;
             padding: 10px;
             border-radius: 4px;
             box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
-            
             &:hover {
-                background-color:lighten(nth($primaryColor, $style),10) ;
+                background-color: lighten(nth($primaryColor, $style), 10);
             }
         }
     }
@@ -280,10 +278,10 @@ body.fix {
         h2 {
             font-size: 1.875em;
             text-align: left;
-            border-bottom: 2px solid nth($primaryColor,$style);
+            border-bottom: 2px solid nth($primaryColor, $style);
             margin: 0px auto 20px;
             padding: 0 0 20px;
-            color: nth($primaryColor,$style);
+            color: nth($primaryColor, $style);
         }
         .relatedlist {
             margin: 25px 0 0 15px;
@@ -326,14 +324,14 @@ body.fix {
                             width: 6px;
                             height: 6px;
                             border-radius: 50%;
-                            background-color: nth($primaryColor,$style);
+                            background-color: nth($primaryColor, $style);
                             left: 15px;
                             top: 20px;
                             transition: .5s;
                         }
                         &:hover {
                             padding: 10px 15px 10px 45px;
-                            background-color:nth($lightColor,$style);
+                            background-color: nth($lightColor, $style);
                             color: #000;
                             &:before {
                                 left: 25px;
@@ -367,10 +365,10 @@ body.fix {
         h2 {
             font-size: 1.875em;
             text-align: left;
-            border-bottom: 2px solid nth($primaryColor,$style);
+            border-bottom: 2px solid nth($primaryColor, $style);
             margin: 0px auto 20px;
             padding: 0 0 20px;
-            color: nth($primaryColor,$style);
+            color: nth($primaryColor, $style);
         }
         .relatedlist {
             margin: 0;
@@ -434,7 +432,7 @@ body.fix {
                         &:hover {
                             padding: 10px 15px 10px 45px;
                             color: #000;
-                            background-color: nth($lightColor,$style);
+                            background-color: nth($lightColor, $style);
                             border-radius: 50px;
                             &:before {
                                 left: 25px;
@@ -450,15 +448,9 @@ body.fix {
 //// 燈箱總樣式
 .lightboxstyle {
     overflow-y: scroll;
-    // display: block;
     .lightboxstyle_block {
-        // max-width: 80vh;
-        // max-height: 60vh;
         width: 80vh;
         position: relative;
-        // top: 0%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
         padding: 20px 20px 25px 20px;
         margin: 20px auto;
         background-color: #fff;
@@ -476,6 +468,15 @@ body.fix {
             margin: 0;
             @include box-sizing;
         }
+        &.block_extend {
+            width: 90vh;
+            @include screen('mobile') {
+                width: 80vh;
+            }
+            @include screen('xs_mobile') {
+                width: 100%;
+            }
+        }
         .close {
             position: absolute;
             right: 15px;
@@ -484,25 +485,16 @@ body.fix {
         h2 {
             font-size: 1.375em;
             text-align: left;
-            border-bottom: 2px solid nth($primaryColor,$style);
+            border-bottom: 2px solid nth($primaryColor, $style);
             margin: 0px auto 20px;
             padding: 0 30px 10px 0;
-            color: nth($primaryColor,$style);
+            color: nth($primaryColor, $style);
             line-height: 1.3em;
         }
         //表格資料
         .lightbox_data {
-            // max-height: 70vh;
-            width: 75vh;
-            // overflow-y: auto;
+            width: 100% !important;
             overflow-x: hidden;
-            @include screen('mobile') {
-                width: 65vh;
-            }
-            @include screen('xs_mobile') {
-                width: 100% !important;
-                // max-height: 55vh;
-            }
             scrollbar-face-color: #eee; //（軸面顏色） 
             scrollbar-highlight-color: #ccc; //軸面左角邊顏色
             scrollbar-shadow-color: #ccc; //軸面右角邊顏色 
@@ -512,9 +504,9 @@ body.fix {
             scrollbar-track-color: #fff; //軸軌顏色
             //table
             table {
-                border: none;
+               border: 1px dotted $color-gray;
                 th {
-                    border: none;
+                   border: 1px dotted $color-gray;
                     text-align: left;
                     padding: 10px;
                     span {
@@ -524,7 +516,7 @@ body.fix {
                         }
                     }
                     a {
-                        color: nth($primaryColor,$style);
+                        color: nth($primaryColor, $style);
                         &:hover {
                             color: $color-blue;
                         }
@@ -533,7 +525,7 @@ body.fix {
                 td {
                     border: none;
                     padding: 10px 10px 4px;
-                    border-bottom: 1px dotted $color-gray;
+                    border: 1px dotted $color-gray;
                     vertical-align: top;
                 }
                 label {
@@ -566,20 +558,19 @@ body.fix {
                 label {
                     margin: 0 0 8px;
                     padding-left: 23px;
-                    padding-top:3px; 
+                    padding-top: 3px;
                     input {
                         margin-right: 6px;
                         margin-left: -20px;
-                        
                     }
                 }
             }
             //轉寄他人  引用
             .form_grid {
                 .form_title {
-                    white-space: nowrap;
+                    // white-space: nowrap;
                     // padding-left: 0;
-                    @include screen('mobile'){
+                    @include screen('mobile') {
                         padding-left: 0px;
                     }
                 }
@@ -600,6 +591,20 @@ body.fix {
                 }
                 .btn {
                     padding: 0.4em 1em !important;
+                }
+            }
+            .form_grid .form_title,
+            .form_grid .form_content {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            .select_date {
+                width: 45% !important;
+                @include screen('mobile') {
+                    width: 47% !important;
+                }
+                @media(max-width: 580px) {
+                    width: 99% !important;
                 }
             }
             //listdata
@@ -650,6 +655,35 @@ body.fix {
                 }
             }
             //
+            .form_contentinline {
+                padding: 0;
+                text-align: left;
+                margin: 10px 0;
+                select {
+                    width: auto;
+                    display: inline-block;
+                    margin-right: 5px;
+                    @include screen('mobile') {
+                        width: 49%;
+                        margin-right: 0px;
+                    }
+                    @include screen('xs_mobile') {
+                        width: 100%;
+                        margin-right: 0px;
+                    }
+                }
+            }
+            // 書名
+            .bookname {
+                margin: 30px 0 10px;
+                font-size: 1.5em;
+                color: nth($primaryColor, $style);
+                line-height: 1.2em;
+                background-image: url('../images/icon_book.png');
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                padding: 0 0 0 30px;
+            }
         }
     }
     //館藏位置燈箱
@@ -687,13 +721,13 @@ body.fix {
         h2 {
             font-size: 1.562em;
             text-align: left;
-            border-bottom: 2px solid nth($primaryColor,$style);
+            border-bottom: 2px solid nth($primaryColor, $style);
             margin: 0px auto 10px;
             padding: 0 0 10px;
-            color: nth($primaryColor,$style);
+            color: nth($primaryColor, $style);
         }
         //表格資料
-        .lightbox_data {        
+        .lightbox_data {
             max-height: 70vh;
             width: 90vh;
             overflow-y: auto;
@@ -741,6 +775,7 @@ body.fix {
                         border-radius: 3px !important;
                         margin-right: 6px;
                     }
+
                 }
             }
             .more {
@@ -796,7 +831,7 @@ body.fix {
             .bookname {
                 margin: 30px 0 10px;
                 font-size: 1.5em;
-                color: nth($primaryColor,$style);
+                color: nth($primaryColor, $style);
                 line-height: 1.2em;
                 background-image: url('../images/icon_book.png');
                 background-position: 0 0;

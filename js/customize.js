@@ -608,6 +608,7 @@ $(function() {
             }
         }
     });
+
 });
 $(function() {
     //選擇語言
@@ -732,7 +733,7 @@ $(function() {
         $('#exchangebookstyle').fadeIn();
         $('body').addClass('fix');
     })
-    $('.lightboxstyle_block2 .close').click(function() {
+    $('.lightboxstyle_block .close').click(function() {
         $('#exchangebookstyle').fadeOut();
         $('body').removeClass('fix');
     })
@@ -746,7 +747,7 @@ $(function() {
         // $('#exchangebookstyle').fadeOut();
         $('body').addClass('fix');
     })
-    $('.lightboxstyle_block2 .close').click(function() {
+    $('.lightboxstyle_block .close').click(function() {
         $('#exchangebookstyle2').fadeOut();
         $('body').removeClass('fix');
     })
@@ -759,7 +760,7 @@ $(function() {
         $('#bookreservationstyle').fadeIn();
         $('body').addClass('fix');
     })
-    $('.lightboxstyle_block2 .close').click(function() {
+    $('.lightboxstyle_block .close').click(function() {
         $('#bookreservationstyle').fadeOut();
         $('body').removeClass('fix');
     })
@@ -1266,5 +1267,17 @@ $(function() {
         $('.booklist_type ul').removeClass('morelist')
         $(this).hide();
         $('.displaymore').show()
+    })
+})
+
+//line通知時間
+$(function(){
+    // $(".linewrap .menber-list li").click(function(){
+    //     $(".linewrap .menber-list li").removeClass('active');
+    //     $(this).addClass('active');
+    // })
+    $(".linecontent .alert-list li").click(function(){
+        $(".alert-list li").removeClass('active');
+        $(this).addClass('active');
     })
 })

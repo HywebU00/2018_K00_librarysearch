@@ -306,6 +306,57 @@
             }
         }
     }
+    // line 
+    .linecontent {
+        &.mobile-card {
+            .main-title {
+                color: nth($primaryColor, $style);
+                span {
+                    color: nth($primaryColor, $style);
+                }
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+            .card-step {
+                span {
+                    background: nth($primaryColor, $style);
+                    &.active {
+                        color: #fff;
+                        background: $color-red;
+                    }
+                }
+                em {
+                    border: 8px solid nth($primaryColor, $style);
+                    border-left: none;
+                    border-bottom: none;
+                    @media screen and (max-device-width: 320px) {
+                        border: 5px solid nth($primaryColor, $style);
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+            .card-login {
+                .id {
+                    color: nth($primaryColor, $style);
+                }
+            }
+            .card-ok {
+                span {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+        &.library {
+            .main-title {
+                color: nth($primaryColor, $style);
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
 }
 // 客製版01花蓮
 .customization01 {
@@ -588,6 +639,57 @@
             &:hover {
                 background-color: lighten(#206061, 10);
                 border: 2px solid lighten(#206061, 10);
+            }
+        }
+    }
+    // line 
+    .linecontent {
+        &.mobile-card {
+            .main-title {
+                color: nth($primaryColor, $style);
+                span {
+                    color: nth($primaryColor, $style);
+                }
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+            .card-step {
+                span {
+                    background: nth($primaryColor, $style);
+                    &.active {
+                        color: #fff;
+                        background: $color-red;
+                    }
+                }
+                em {
+                    border: 8px solid nth($primaryColor, $style);
+                    border-left: none;
+                    border-bottom: none;
+                    @media screen and (max-device-width: 320px) {
+                        border: 5px solid nth($primaryColor, $style);
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+            .card-login {
+                .id {
+                    color: nth($primaryColor, $style);
+                }
+            }
+            .card-ok {
+                span {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+        &.library {
+            .main-title {
+                color: nth($primaryColor, $style);
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
             }
         }
     }
@@ -878,6 +980,57 @@
             }
         }
     }
+    // line 
+    .linecontent {
+        &.mobile-card {
+            .main-title {
+                color: nth($primaryColor, $style);
+                span {
+                    color: nth($primaryColor, $style);
+                }
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+            .card-step {
+                span {
+                    background: nth($primaryColor, $style);
+                    &.active {
+                        color: #fff;
+                        background: $color-red;
+                    }
+                }
+                em {
+                    border: 8px solid nth($primaryColor, $style);
+                    border-left: none;
+                    border-bottom: none;
+                    @media screen and (max-device-width: 320px) {
+                        border: 5px solid nth($primaryColor, $style);
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+            .card-login {
+                .id {
+                    color: nth($primaryColor, $style);
+                }
+            }
+            .card-ok {
+                span {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+        &.library {
+            .main-title {
+                color: nth($primaryColor, $style);
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
 }
 // 版型02
 .version02 {
@@ -1162,6 +1315,57 @@
             &:hover {
                 background-color: lighten(nth($primaryColor, $style), 5);
                 border: 2px solid lighten(nth($primaryColor, $style), 5);
+            }
+        }
+    }
+    // line 
+    .linecontent {
+        &.mobile-card {
+            .main-title {
+                color: nth($primaryColor, $style);
+                span {
+                    color: nth($primaryColor, $style);
+                }
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+            .card-step {
+                span {
+                    background: nth($primaryColor, $style);
+                    &.active {
+                        color: #fff;
+                        background: $color-red;
+                    }
+                }
+                em {
+                    border: 8px solid nth($primaryColor, $style);
+                    border-left: none;
+                    border-bottom: none;
+                    @media screen and (max-device-width: 320px) {
+                        border: 5px solid nth($primaryColor, $style);
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+            .card-login {
+                .id {
+                    color: nth($primaryColor, $style);
+                }
+            }
+            .card-ok {
+                span {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+        &.library {
+            .main-title {
+                color: nth($primaryColor, $style);
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
             }
         }
     }
@@ -1452,6 +1656,57 @@
             }
         }
     }
+    // line 
+    .linecontent {
+        &.mobile-card {
+            .main-title {
+                color: nth($primaryColor, $style);
+                span {
+                    color: nth($primaryColor, $style);
+                }
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+            .card-step {
+                span {
+                    background: nth($primaryColor, $style);
+                    &.active {
+                        color: #fff;
+                        background: $color-red;
+                    }
+                }
+                em {
+                    border: 8px solid nth($primaryColor, $style);
+                    border-left: none;
+                    border-bottom: none;
+                    @media screen and (max-device-width: 320px) {
+                        border: 5px solid nth($primaryColor, $style);
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+            .card-login {
+                .id {
+                    color: nth($primaryColor, $style);
+                }
+            }
+            .card-ok {
+                span {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+        &.library {
+            .main-title {
+                color: nth($primaryColor, $style);
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
 }
 // 版型04
 .version04 {
@@ -1736,6 +1991,57 @@
             &:hover {
                 background-color: nth($primaryColor, $style);
                 border: 2px solid nth($primaryColor, $style);
+            }
+        }
+    }
+    // line 
+    .linecontent {
+        &.mobile-card {
+            .main-title {
+                color: nth($primaryColor, $style);
+                span {
+                    color: nth($primaryColor, $style);
+                }
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+            .card-step {
+                span {
+                    background: nth($primaryColor, $style);
+                    &.active {
+                        color: #fff;
+                        background: $color-red;
+                    }
+                }
+                em {
+                    border: 8px solid nth($primaryColor, $style);
+                    border-left: none;
+                    border-bottom: none;
+                    @media screen and (max-device-width: 320px) {
+                        border: 5px solid nth($primaryColor, $style);
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+            .card-login {
+                .id {
+                    color: nth($primaryColor, $style);
+                }
+            }
+            .card-ok {
+                span {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+        &.library {
+            .main-title {
+                color: nth($primaryColor, $style);
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
             }
         }
     }
@@ -2027,6 +2333,57 @@
             }
         }
     }
+    // line 
+    .linecontent {
+        &.mobile-card {
+            .main-title {
+                color: nth($primaryColor, $style);
+                span {
+                    color: nth($primaryColor, $style);
+                }
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+            .card-step {
+                span {
+                    background: nth($primaryColor, $style);
+                    &.active {
+                        color: #fff;
+                        background: $color-red;
+                    }
+                }
+                em {
+                    border: 8px solid nth($primaryColor, $style);
+                    border-left: none;
+                    border-bottom: none;
+                    @media screen and (max-device-width: 320px) {
+                        border: 5px solid nth($primaryColor, $style);
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+            .card-login {
+                .id {
+                    color: nth($primaryColor, $style);
+                }
+            }
+            .card-ok {
+                span {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+        &.library {
+            .main-title {
+                color: nth($primaryColor, $style);
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
 }
 // 版型06
 .version06 {
@@ -2312,6 +2669,57 @@
             &:hover {
                 background-color: nth($primaryColor, $style);
                 border: 2px solid nth($primaryColor, $style);
+            }
+        }
+    }
+    // line 
+    .linecontent {
+        &.mobile-card {
+            .main-title {
+                color: nth($primaryColor, $style);
+                span {
+                    color: nth($primaryColor, $style);
+                }
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+            .card-step {
+                span {
+                    background: nth($primaryColor, $style);
+                    &.active {
+                        color: #fff;
+                        background: $color-red;
+                    }
+                }
+                em {
+                    border: 8px solid nth($primaryColor, $style);
+                    border-left: none;
+                    border-bottom: none;
+                    @media screen and (max-device-width: 320px) {
+                        border: 5px solid nth($primaryColor, $style);
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+            .card-login {
+                .id {
+                    color: nth($primaryColor, $style);
+                }
+            }
+            .card-ok {
+                span {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+        &.library {
+            .main-title {
+                color: nth($primaryColor, $style);
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
             }
         }
     }

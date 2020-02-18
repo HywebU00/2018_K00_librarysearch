@@ -491,7 +491,6 @@
                             <!-- 書本詳細評分 start-->
                             <div class="book_detail">
                                 <div class="image"><img src="images/bookcover.jpg"></div>
-                                
                                 <div class="book_qrcode">
                                     <ul>
                                         <li><a href="#">封面</a></li>
@@ -576,8 +575,8 @@
                                     <div class="then">168則評分</div> -->
                                     <!-- 評分end -->
                                     <!-- 書封來源start -->
-                                <div class="book_cover_source">書封來源：<a href="#">博客來網路書店</a></div>
-                                <!-- 書封來源end -->
+                                    <div class="book_cover_source">書封來源：<a href="#">博客來網路書店</a></div>
+                                    <!-- 書封來源end -->
                                 </div>
                                 <!-- 書本詳細評分 end 手機版才會出現-->
                                 <!-- bookdata start -->
@@ -593,6 +592,7 @@
                                             <li>譯者：朱崇旻</li>
                                             <li>出版社：時報出版</li>
                                             <li>出版日期：2018/04/03</li>
+                                            <li>內容註：1 one--一條蘿蔔 one radish--2 two--兩顆南瓜 two pumpkin--3 three--三條苦瓜 three balsam pear--4 four--四朵香菇 four mushroom--5 five--五顆洋蔥 five onion--6 six--六條小黃瓜 six cucumber--7 seven--七條玉米 seven corn--8 eight--八顆甜椒 eight sweet pepper--9 nine--九顆蒜頭 nine garlic--10 ten--十條豌豆 ten pea</li>
                                         </ul>
                                         <ul class="no_icon">
                                             <li>
@@ -793,7 +793,7 @@
                                     <!-- 跨館調閱1 燈箱start -->
                                     <div class="lightboxstyle" id="exchangebookstyle">
                                         <div class="overlay"></div>
-                                        <div class="lightboxstyle_block2">
+                                        <div class="lightboxstyle_block block_extend">
                                             <div class="close"></div>
                                             <h2>申請跨館通閱</h2>
                                             <form action="">
@@ -904,7 +904,7 @@
                                     <!-- 跨館調閱2 燈箱start -->
                                     <div class="lightboxstyle" id="exchangebookstyle2">
                                         <div class="overlay"></div>
-                                        <div class="lightboxstyle_block2">
+                                        <div class="lightboxstyle_block">
                                             <div class="close"></div>
                                             <h2>申請跨館通閱</h2>
                                             <form action="">
@@ -1003,7 +1003,7 @@
                                     <!-- 書目預約 燈箱start -->
                                     <div class="lightboxstyle" id="bookreservationstyle">
                                         <div class="overlay"></div>
-                                        <div class="lightboxstyle_block2">
+                                        <div class="lightboxstyle_block">
                                             <div class="close"></div>
                                             <h2>書目預約</h2>
                                             <form action="">
@@ -1070,6 +1070,24 @@
                                                             <option value="">Vol.18</option>
                                                             <option value="">Vol.17/option>
                                                         </select>
+                                                    </div>
+                                                    <div class="form_contentinline">
+                                                        <!-- 卷期 start -->
+                                                        <div class="volumesearch2"><input type="text" name="" placeholder="請輸入集數/刊期" class="volume"><a href="javascript:;"><img src="images/icon_search.png" alt="查詢"></a></div><!-- 卷期 end -->
+                                                        <div> <select id="selectSample" name="">
+                                                                <option value="">排序條件</option>
+                                                                <option value="">依索書號碼排序升冪</option>
+                                                                <option value="">依索書號碼排序降冪</option>
+                                                                <option value="">依條碼號碼排序升冪</option>
+                                                                <option value="">依條碼號碼排序降冪</option>
+                                                            </select>
+                                                            <select id="selectSample" name="">
+                                                                <option value="">館藏篩選位置</option>
+                                                                <option value="">屏東縣立圖書館</option>
+                                                                <option value="">恆春鎮立圖書館</option>
+                                                                <option value="">潮州鎮立圖書館</option>
+                                                                <option value="">東港鎮立圖書館</option>
+                                                            </select> </div>
                                                     </div>
                                                     <table class="table_list2">
                                                         <thead>
@@ -1229,7 +1247,8 @@
                                                                     <li><span><img src="images/cp_icon_searchbook.png" alt="尋書"></span>代表為尋書</li>
                                                                     <li><span><img src="images/cp_icon_map.png" alt="地圖或書架位置圖"></span>代表為地圖或書架位置圖</li>
                                                                 </ul>
-                                                            </div></th>
+                                                            </div>
+                                                        </th>
                                                         <th>索書號</th>
                                                         <th><span>特藏/用途</span><a href="javascript:;" class="prompt">i</a>
                                                             <div class="prompt_block">
@@ -1349,7 +1368,6 @@
                                             </table>
                                         </div>
                                         <!-- 表格 end-->
-                                        
                                         <!-- 期刊tab -->
                                         <div class="journal_tab">
                                             <ul>
