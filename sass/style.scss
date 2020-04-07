@@ -267,16 +267,17 @@
     // 兒童版首頁分類
     .childsort_block {
         .childsort {
-            margin: 0 30px;
+            margin: 0 10px;
             ul {
                 list-style: none;
                 text-align: center;
                 margin: 0;
                 padding: 0;
                 li {
-                    display: inline-block;
+                    // display: inline-block;
                     width: 18%;
-                    margin: 0 .5% 1%;
+                    margin: 0 1% 2%;
+                    float: left;
                     @include screen('tablet') {
                         width: 23%;
                     }
@@ -290,9 +291,10 @@
                         color: #fff;
                         @include box-sizing;
                         text-align: center;
-                        padding: 24px 12px;
+                        padding: 24px 12px 5px;
                         font-size: 1.313em;
                         transition: .5s;
+                        height: 180px;
                         img {
                             display: block;
                             width: 62px;

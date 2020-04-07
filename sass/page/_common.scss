@@ -146,7 +146,7 @@
             }
         }
         .onlysearch {
-            float:none;
+            float: none;
             clear: both;
             color: #fff;
             margin: 5px 0;
@@ -1479,6 +1479,53 @@ em {
                 float: none;
                 clear: both;
             }
+        }
+    }
+}
+// 登入後訊息通知框
+.member_message {
+    background-color:darken($color-red, 15);
+    color: #fff;
+    position: fixed;
+    z-index: 998;
+    width: 450px;
+    top: -50%;
+    left: 50%;
+    margin-left: -225px;
+    padding: 50px 30px 20px;
+    border-radius: 0 0 10px 10px;
+    transition: .5s;
+    box-shadow:1px 1px 4px #666;
+    @include box-sizing;
+    @media(max-width: 480px){
+        width:100%;
+        margin-left:0;
+        left: auto;
+    }
+    &.goin {
+        top: 0;
+    }
+    .close {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        background-color: #fff;
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        background-position: center;
+        border:3px solid #fff;
+        display: block;
+    }
+    .explain {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #fff;
+    }
+    ul {
+        margin: 20px 0 20px 20px;
+        padding: 0;
+        li {
+            margin-bottom: 8px;
         }
     }
 }

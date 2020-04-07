@@ -424,8 +424,8 @@ select {
     // background-repeat: no-repeat;
     background-position: 8px center;
     transition: .2s;
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2)!important;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2)!important;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2) !important;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -454,8 +454,8 @@ select {
             top: 3px;
             right: 1px;
             z-index: 9;
-            width: 20px!important;
-            height:20px!important;
+            width: 20px !important;
+            height: 20px !important;
         }
     }
     img {
@@ -517,13 +517,13 @@ select {
         }
     }
     &.bluebg3 {
-        background-color: nth($primaryColor,$style);
-        border: 2px solid nth($primaryColor,$style);
+        background-color: nth($primaryColor, $style);
+        border: 2px solid nth($primaryColor, $style);
         color: #fff;
         transition: .2s;
         &:hover {
-            background-color: darken(nth($primaryColor,$style), 10);
-            border: 2px solid darken(nth($primaryColor,$style), 10);
+            background-color: darken(nth($primaryColor, $style), 10);
+            border: 2px solid darken(nth($primaryColor, $style), 10);
         }
     }
     &.greenbg {
@@ -613,7 +613,7 @@ select {
         border-radius: 50px;
         font-size: .938em;
     }
-    &.btn-lg{
+    &.btn-lg {
         padding: 10px 50px !important;
         font-size: 1em;
     }
@@ -631,7 +631,15 @@ select {
             background-color: transparent;
             border: none;
             color: $aHover !important;
-            text-decoration:underline !important;
+            text-decoration: underline !important;
         }
     }
+}
+.disabled {
+    pointer-events: none;
+    opacity: .4;
+    box-shadow:
+        none;
+    cursor: not-allowed;
+    -webkit-filter: grayscale(1);
 }

@@ -685,6 +685,12 @@ body.fix {
                 padding: 0 0 0 30px;
             }
         }
+        .lightbox_image{
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
     }
     //館藏位置燈箱
     .lightboxstyle_block2 {

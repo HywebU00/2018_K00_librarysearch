@@ -26,7 +26,7 @@
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
     <!-- wrapper 最大寬度 -->
-   <div class="wrapper">
+    <div class="wrapper">
         <!-- sidebar  start-->
         <aside class="sidebar">
             <div class="m_area">
@@ -365,28 +365,15 @@
                             <!--我的書房查詢 end  -->
                             <!-- 資料全部 start-->
                             <div class="data_all">
-                                <div class="choosebtn mobile_hidden"><a class="btnstyle whitebg">全選</a><select id="" name="">
-                                        <option value="" selected>更多選項</option>
-                                        <option value="">加入收藏</option>
-                                        <option value="">匯出</option>
-                                        <option value="">轉寄他人</option>
-                                        <option value="">列印</option>
-                                    </select></div>
-                                <div class="data_quantity2"><span>總共<em>235</em>筆符合的資料</span>
-                                    <div class="optionblock">
-                                        <div class="option_01">
-                                            <div class="name"><a href="javascript:;">排序方式</a></div>
-                                            <div class="option_list">
+                                <div class="choosebtn"><a class="btnstyle whitebg">全選</a><a class="btnstyle whitebg mobile_visible">批次續借</a><select id="" name="" class="mobile_hidden"><option value="" selected>更多選項</option><option value="">加入收藏</option><option value="">匯出</option><option value="">轉寄他人</option><option value="">列印</option></select></div><div class="data_quantity2"><span>共<em>235</em>筆符合資料</span><span class="sorticon mobile_visible"><a href="#"><img src="images/sort.svg"></a></span><div class="optionblock">
+                                        <div class="option_01"><div class="name"><a href="javascript:;">排序方式</a></div><div class="option_list">
                                                 <ul>
                                                     <li><a href="#">熱門借閱</a></li>
                                                     <li><a href="#" class="here">熱門預約</a></li>
                                                     <li><a href="#">熱門點閱</a></li>
                                                     <li><a href="#">熱門評分/評論</a></li>
                                                 </ul>
-                                            </div>
-                                        </div>
-                                        <div class="option_01">
-                                            <div class="name"><a href="javascript:;">檢視方式</a></div>
+                                            </div></div><div class="option_01"><div class="name"><a href="javascript:;">檢視方式</a></div>
                                             <div class="option_list">
                                                 <ul>
                                                     <li><a href="#">熱門借閱</a></li>
@@ -418,7 +405,7 @@
                                             <!-- 左 start-->
                                             <div class="bookleftblock">
                                                 <label>
-                                                    <input type="checkbox" name="" value="">1. </label>
+                                                    <input type="checkbox" name="" value=""  class="hidden">1. </label>
                                                 <div class="book">
                                                     <div class="image"><img src="images/bookcover.jpg"></div>
                                                     <!-- 評分start -->
@@ -496,7 +483,20 @@
                                                         <li class="no_semicolon"><a class="btnstyle whitebg"><img src="images/btnstyle_icon10.png">查看館藏資訊</a></li>
                                                     </ul>
                                                     <ul>
-                                                        <li class="tagblock no_semicolon"><a href="#" class="btnstyle graybg label">心情<span class="close addtagdelbtn"></span></a><a href="#" class="btnstyle graybg label">兒童<span class="close addtagdelbtn"></span></a><a href="#" class="btnstyle graybg label">嚴肅議題<span class="close addtagdelbtn"></span></a><a href="javascript:;" class="addtagbtn"><img src="images/icon_add.png"></a></li><li class="no_semicolon addtag_block"><div class="addtag"><input type="text" name="" value="若有多個標籤，請用#隔開" placeholder="若有多個標籤，請用#隔開" class="addinput"><div class="addoption"><ul><li><a href="#">社會</a></li><li><a href="#">統計</a></li><li><a href="#">嚴肅議題</a></li><li><a href="#">食譜</a></li><li><a href="#">便當菜</a></li></ul></div></div><button type="button" class="btn btn-red btn-xs addbtn">加入</button><a href="javascript:;" class="closebtn"><img src="images/icon_close04.png"></a></li>
+                                                        <li class="tagblock no_semicolon"><a href="#" class="btnstyle graybg label">心情<span class="close addtagdelbtn"></span></a><a href="#" class="btnstyle graybg label">兒童<span class="close addtagdelbtn"></span></a><a href="#" class="btnstyle graybg label">嚴肅議題<span class="close addtagdelbtn"></span></a><a href="javascript:;" class="addtagbtn"><img src="images/icon_add.png"></a></li>
+                                                        <li class="no_semicolon addtag_block">
+                                                            <div class="addtag"><input type="text" name="" value="若有多個標籤，請用#隔開" placeholder="若有多個標籤，請用#隔開" class="addinput">
+                                                                <div class="addoption">
+                                                                    <ul>
+                                                                        <li><a href="#">社會</a></li>
+                                                                        <li><a href="#">統計</a></li>
+                                                                        <li><a href="#">嚴肅議題</a></li>
+                                                                        <li><a href="#">食譜</a></li>
+                                                                        <li><a href="#">便當菜</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div><button type="button" class="btn btn-red btn-xs addbtn">加入</button><a href="javascript:;" class="closebtn"><img src="images/icon_close04.png"></a>
+                                                        </li>
                                                     </ul>
                                                     <!-- 標籤刪除詢問燈箱start -->
                                                     <div class="lightboxstyle" id="addtagstyle">
@@ -507,7 +507,6 @@
                                                             <form>
                                                                 <div class="lightbox_data">
                                                                     <p>是否確認刪除此標籤</p>
-                                                                    
                                                                     <div class="btn_grp">
                                                                         <input name="" type="reset" value="取消">
                                                                         <input name="" type="submit" value="確認" />
@@ -760,7 +759,20 @@
                                                         <span>處理狀態：通閱申請中</span><input type="button" name="" value="取消申請" class="delreservation">
                                                     </div>
                                                     <ul>
-                                                        <li class="tagblock no_semicolon"><a href="#" class="btnstyle graybg label">心情<span class="close addtagdelbtn"></span></a><a href="#" class="btnstyle graybg label">兒童<span class="close addtagdelbtn"></span></a><a href="#" class="btnstyle graybg label">嚴肅議題<span class="close addtagdelbtn"></span></a><a href="javascript:;" class="addtagbtn"><img src="images/icon_add.png"></a></li><li class="no_semicolon addtag_block"><div class="addtag"><input type="text" name="" value="若有多個標籤，請用#隔開" placeholder="若有多個標籤，請用#隔開" class="addinput"><div class="addoption"><ul><li><a href="#">社會</a></li><li><a href="#">統計</a></li><li><a href="#">嚴肅議題</a></li><li><a href="#">食譜</a></li><li><a href="#">便當菜</a></li></ul></div></div><button type="button" class="btn btn-red btn-xs addbtn">加入</button><a href="javascript:;" class="closebtn"><img src="images/icon_close04.png"></a></li>
+                                                        <li class="tagblock no_semicolon"><a href="#" class="btnstyle graybg label">心情<span class="close addtagdelbtn"></span></a><a href="#" class="btnstyle graybg label">兒童<span class="close addtagdelbtn"></span></a><a href="#" class="btnstyle graybg label">嚴肅議題<span class="close addtagdelbtn"></span></a><a href="javascript:;" class="addtagbtn"><img src="images/icon_add.png"></a></li>
+                                                        <li class="no_semicolon addtag_block">
+                                                            <div class="addtag"><input type="text" name="" value="若有多個標籤，請用#隔開" placeholder="若有多個標籤，請用#隔開" class="addinput">
+                                                                <div class="addoption">
+                                                                    <ul>
+                                                                        <li><a href="#">社會</a></li>
+                                                                        <li><a href="#">統計</a></li>
+                                                                        <li><a href="#">嚴肅議題</a></li>
+                                                                        <li><a href="#">食譜</a></li>
+                                                                        <li><a href="#">便當菜</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div><button type="button" class="btn btn-red btn-xs addbtn">加入</button><a href="javascript:;" class="closebtn"><img src="images/icon_close04.png"></a>
+                                                        </li>
                                                     </ul>
                                                     <!-- 標籤刪除詢問燈箱start -->
                                                     <div class="lightboxstyle" id="addtagstyle">
@@ -771,7 +783,6 @@
                                                             <form>
                                                                 <div class="lightbox_data">
                                                                     <p>是否確認刪除此標籤</p>
-                                                                    
                                                                     <div class="btn_grp">
                                                                         <input name="" type="reset" value="取消">
                                                                         <input name="" type="submit" value="確認" />

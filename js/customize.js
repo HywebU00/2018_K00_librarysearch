@@ -846,6 +846,19 @@ $(function() {
         $('#addtagstyle').fadeOut();
         $('body').removeClass('fix');
     })
+    //我的書房排序按鈕
+    $('.map_location_btn').click(function() {
+        $('#map_location_style').fadeIn();
+        $('body').addClass('fix');
+    })
+    $('.lightboxstyle_block .close').click(function() {
+        $('#map_location_style').fadeOut();
+        $('body').removeClass('fix');
+    })
+    $('.overlay').click(function() {
+        $('#map_location_style').fadeOut();
+        $('body').removeClass('fix');
+    })
 })
 //詳目頁 匯出點選
 $(function() {
@@ -1121,6 +1134,13 @@ $(function() {
         $('.privacy_consent').stop().removeClass('goin');
     })
 })
+//登入後訊息通知框
+$(function() {
+    $('.member_message').addClass('goin');
+    $('.member_message .close').click(function() {
+        $('.member_message').stop().removeClass('goin');
+    })
+})
 //詳目頁館藏地
 $(function() {
     $('.collectionplace>.title').click(function() {
@@ -1279,5 +1299,18 @@ $(function(){
     $(".linecontent .alert-list li").click(function(){
         $(".alert-list li").removeClass('active');
         $(this).addClass('active');
+    })
+})
+// 我的書房 借閱紀錄 排序按鈕
+$(function(){
+    $('.data_quantity2 .sorticon').click(function(){
+        $('.optionblock').stop().slideToggle();
+    })
+})
+// 首頁最新消息箭頭
+$(function(){
+    $('.newsblcok .openclosebtn').click(function(){
+        $('.newsblcok').stop().toggleClass('openblock');
+        $(this).stop().toggleClass('open');
     })
 })
