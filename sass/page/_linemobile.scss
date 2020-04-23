@@ -377,7 +377,36 @@
                 margin-right: 8px;
             }
             &.active {
-                background: url(../images/check.png) right center no-repeat;
+                background: url('../images/check.png') right center no-repeat;
+            }
+        }
+    }
+    //06-3個人書房-借閱證管理.html
+    .id-list {
+        font-size: 1.2em;
+        line-height: 160%;
+        margin-bottom: 15px;
+        @media screen and (max-width: 320px) {
+            font-size: 1em;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            display: block;
+            padding: 8px 0;
+            border-bottom: 2px dotted #ccc;
+            span {
+                margin-right: 8px;
+            }
+            span.delete-id {
+                float: right;
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                background: url('../images/delete.png') 0 0 no-repeat;
+                background-size: cover;
             }
         }
     }
@@ -418,4 +447,234 @@
             color: #fff;
         }
     }
+}
+// ８-3
+.linecontent .chart-block {
+    margin: 10px 0 20px 0;
+    .switch {
+        margin-bottom: 15px;
+    }
+    .highcart-container {
+        background: #fff;
+    }
+}
+// ８-3
+.linecontent .year-slide {
+    padding: 20px 0;
+    .slick-prev, .slick-next {
+        opacity: .3;
+    }
+    .slick-prev {
+        left: 10px !important;
+        top: 32%;
+        height: 40px !important;
+    }
+    .slick-next {
+        right: 10px !important;
+        top: 32%;
+        height: 40px !important;
+    }
+    .year {
+        height: 330px;
+        position: relative;
+        .title {
+            font-size: 1.4em;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+            margin-top: 10px;
+            &:before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                position: absolute;
+                left: 50%;
+                bottom: -5px;
+                margin-left: -5px;
+                background: #ccc;
+            }
+            &:after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background: #ccc;
+                display: block;
+                position: absolute;
+                bottom: 0;
+            }
+        }
+        .book-bg {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -50px;
+            .book-number {
+                font-size: 1.3em;
+                color: $color-orange;
+                margin-bottom: 8px;
+            }
+            .over {
+                font-size: 1em;
+                margin-bottom: 10px;
+            }
+            .more {
+                width: 36px;
+                height: 36px;
+                display: block;
+                background: none !important;
+                float: none;
+                margin: -5px auto 5px auto;
+                a {
+                    display: block;
+                    width: 36px;
+                    height: 36px;
+                    background: url(../images/more.png) 0 0 no-repeat;
+                    background-size: 36px;
+                }
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                width: 100%;
+                height: 23px;
+                display: block;
+                background: url(../images/book.png) top center no-repeat;
+                text-align: center;
+                &:first-child {
+                    height: auto;
+                    background: none;
+                }
+                &:nth-child(even) {
+                    height: 21px;
+                    background: url(../images/book2.png) top center no-repeat;
+                }
+            }
+        }
+    }
+}
+// 8-4
+.linecontent .book-gallery{
+  margin-left: -10px;
+  margin-right: -10px;
+  @media only screen and (min-device-width:480px){
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  @media only screen and (min-device-width:568px){
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  @media only screen and (min-device-width:640px){
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  @media only screen and (min-device-width:667px){
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  @media only screen and (min-device-width:853px){
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  @media only screen and (min-device-width:966px){
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .book{
+    overflow: hidden;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: -5px;
+    vertical-align: top;
+    width: 50%;
+    padding: 0px 10px;
+    box-sizing:border-box;
+    @media only screen and (min-device-width:480px){
+      padding: 0px 15px;
+    }
+    @media only screen and (min-device-width:568px){
+      width: calc(100%/3);
+      padding: 0px 10px;
+    }
+    @media only screen and (min-device-width:640px){
+      padding: 0px 15px;
+    }
+    @media only screen and (min-device-width:768px){
+      width: 25%;
+      padding: 0px 10px;
+    }
+    @media only screen and (min-device-width:853px){
+      padding: 0px 15px;
+    }
+    @media only screen and (min-device-width:960px){
+      width: calc(100%/4);
+      padding: 0px 10px;
+    }
+    @media only screen and (min-device-width:1024px){
+      width: 20%;
+    }
+    @media only screen and (min-device-width:1200px){
+      width: calc(100%/6);
+    }
+    @media only screen and (min-device-width:1366px){
+      width: calc(100%/7);
+    }
+    @media only screen and (min-device-width:1700px){
+      width: calc(100%/8);
+    }
+    @media only screen and (min-device-width:1900px){
+      width: calc(100%/9);
+    }
+    @media only screen and (min-device-width:2250px){
+      width: 10%;
+    }
+    @media only screen and (min-device-width:2468px){
+      width: calc(100%/11);
+    }
+    .cover,.title{
+      width: 100%;
+    }
+    .cover{
+      height: auto;
+      overflow: hidden;
+      margin-bottom: 10px;
+      img{
+
+        width: 100%;
+        height: auto;
+      }
+    }
+    .title{
+      line-height: 140%;
+      max-height: 44px;
+      height: 44px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      word-break: break-word;
+      color: #000;
+      margin-bottom: 10px;
+      font-weight: bold;
+      a{
+      }
+    }
+    dl{
+      margin: 0 0 10px 0;
+      color: #333;
+      dt{
+        float: left;
+        margin-bottom: 6px;
+      }
+      dd{
+        margin-bottom: 6px;
+      }
+    }
+    .btn{
+    }
+  }
 }

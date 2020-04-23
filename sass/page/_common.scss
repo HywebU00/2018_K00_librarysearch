@@ -1484,7 +1484,7 @@ em {
 }
 // 登入後訊息通知框
 .member_message {
-    background-color:darken($color-red, 15);
+    background-color: darken($color-red, 15);
     color: #fff;
     position: fixed;
     z-index: 998;
@@ -1492,29 +1492,30 @@ em {
     top: -50%;
     left: 50%;
     margin-left: -225px;
-    padding: 50px 30px 20px;
+    padding: 20px 60px 0px 30px;
     border-radius: 0 0 10px 10px;
     transition: .5s;
-    box-shadow:1px 1px 4px #666;
+    box-shadow: 1px 1px 4px #666;
     @include box-sizing;
-    @media(max-width: 480px){
-        width:100%;
-        margin-left:0;
+    @media(max-width: 480px) {
+        width: 100%;
+        margin-left: 0;
         left: auto;
+        border-radius: 0;
     }
     &.goin {
         top: 0;
     }
     .close {
         position: absolute;
-        right: 20px;
-        top: 10px;
+        right: 15px;
+        top: 15px;
         background-color: #fff;
         width: 31px;
         height: 31px;
         border-radius: 50%;
         background-position: center;
-        border:3px solid #fff;
+        // border: 1px solid #fff;
         display: block;
     }
     .explain {
@@ -1522,7 +1523,7 @@ em {
         border-bottom: 1px solid #fff;
     }
     ul {
-        margin: 20px 0 20px 20px;
+        margin: 0px 0 20px 20px;
         padding: 0;
         li {
             margin-bottom: 8px;

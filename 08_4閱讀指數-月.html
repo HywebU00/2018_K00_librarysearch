@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>凌網科技圖書館查詢系統</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 出版年度css -->
+    <link rel="stylesheet" href="vendor/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
+    <link rel="stylesheet" href="css/hyui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+    <!-- wrapper 最大寬度 -->
+    <div class="wrapper">
+        <!-- sidebar  start-->
+        <aside class="sidebar">
+            <div class="m_area">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <nav class="navigation">
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                </nav>
+                <button type="button" class="sidebarClose">關閉</button>
+            </div>
+            <div class="menu_overlay"></div>
+        </aside>
+        <!-- sidebar  end-->
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <button type="button" class="sidebarCtrl">側欄選單</button>
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <!-- navigation Start -->
+                <nav class="navigation">
+                    <!-- 一組ul預設靠右 -->
+                    <!-- 兩組ul已寫JQ靠左靠右 -->
+                    <ul>
+                        <li><a href="javascript:;">Help</a></li>
+                        <li><a href="javascript:;">圖書館首頁</a></li>
+                    </ul>
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                    <!-- login start -->
+                    <div class="login loginbtn">
+                        <button type="button" class="btn btn-sm">登入/線上辦證</button>
+                    </div>
+                    <!-- login end-->
+                    <!-- 登入燈箱start -->
+                    <div class="login_lightbox">
+                        <div class="overlay"></div>
+                        <div class="loginblock">
+                            <div class="close"></div>
+                            <h2>讀者登入</h2>
+                            <p>登入說明文字：本校校職員生的帳號密碼與資訊服務相同，帳號為學號/員工編號，密碼若忘記，請洽圖書館暨資訊處系統開發組， (電話：07-78111151轉2830) </p>
+                            <form>
+                                <div class="form_grp form_inline">
+                                    <label for="username">讀者帳號:</label>
+                                    <input name="username" type="text" placeholder="請輸入文字">
+                                </div>
+                                <div class="form_grp form_inline">
+                                    <label for="password">讀者密碼:</label>
+                                    <input name="password" type="password" placeholder="請輸入密碼">
+                                </div>
+                                <div class="btn_grp">
+                                    <input name="" type="submit" value="登入" />
+                                </div>
+                                <div class="unable_login">
+                                    <h3><span>無法登入?</span></h3>
+                                    <input name="" type="button" value="忘記密碼" />
+                                    <input name="" type="button" value="網路辦證" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- 登入燈箱end-->
+                </nav>
+                <!-- 手機才出現的按鈕 start -->
+                <div class="login  loginbtn login_mobile_btn">
+                    <button type="button" class="btn btn-sm">登入</button>
+                </div>
+                <!-- 手機才出現的按鈕 end -->
+                <h1><a href="index.htm"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="javascript:;">網站導覽</a>
+                </noscript>
+                <!-- 手機版才出現的menu start-->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <!-- 手機版才出現的menu end-->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <!-- 中間圖start -->
+            <section class="section col-12 search_blockin2">
+                <div class="container">
+                    <div class="col">
+                    </div>
+                </div>
+            </section>
+            <!-- 中間圖end -->
+            <!-- 分欄start -->
+            <div class="maincolumn">
+                <div class="container">
+                    <!-- 右欄 start  -->
+                    <div class="mainrightblock2">
+                        <!-- 右欄左線start -->
+                        <div class="rightlineblock">
+                            <!-- 路徑start -->
+                            <div class="breadcrumb">
+                                <span>現在位置：</span>
+                                <ul>
+                                    <li><a href="javascript:;">首頁</a></li>
+                                    <li>網路辦證</li>
+                                </ul>
+                            </div>
+                            <!-- 路徑end-->
+                            <!--  行動借閱證 start-->
+                            <div class="linecontent library">
+                                <h2 class="main-title">閱讀指數</h2>
+                                <div class="chart-block">
+                                    <div class="switch">
+                                        <a href="06-4個人書房-閱讀指數-月.html" class="btn btn-orange">月</a>
+                                        <a href="06-4個人書房-閱讀指數-年.html" class="btn btn-gray">年</a>
+                                    </div>
+                                    <div id="highcart-container" class="highcart-container"></div>
+                                </div>
+                                <h2 class="main-title">2018年12月</h2>
+                                <div class="book-gallery">
+                                    <div class="book">
+                                        <div class="cover">
+                                            <a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+                                        </div>
+                                        <dl class="date">
+                                            <dt>借書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                            <dt>還書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="book">
+                                        <div class="cover">
+                                            <a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+                                        </div>
+                                        <dl class="date">
+                                            <dt>借書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                            <dt>還書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="book">
+                                        <div class="cover">
+                                            <a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+                                        </div>
+                                        <dl class="date">
+                                            <dt>借書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                            <dt>還書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="book">
+                                        <div class="cover">
+                                            <a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+                                        </div>
+                                        <dl class="date">
+                                            <dt>借書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                            <dt>還書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="book">
+                                        <div class="cover">
+                                            <a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+                                        </div>
+                                        <dl class="date">
+                                            <dt>借書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                            <dt>還書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="book">
+                                        <div class="cover">
+                                            <a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+                                        </div>
+                                        <dl class="date">
+                                            <dt>借書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                            <dt>還書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="book">
+                                        <div class="cover">
+                                            <a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+                                        </div>
+                                        <dl class="date">
+                                            <dt>借書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                            <dt>還書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="book">
+                                        <div class="cover">
+                                            <a href=""><img src="http://via.placeholder.com/150x200" alt=""></a>
+                                        </div>
+                                        <div class="title">
+                                            <a href="">哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令哈利波特(5)：鳳凰會的密令</a>
+                                        </div>
+                                        <dl class="date">
+                                            <dt>借書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                            <dt>還書日：</dt>
+                                            <dd>2018-12-31</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 行動借閱證 end-->
+                        </div>
+                        <!-- 右欄左線end -->
+                    </div>
+                    <!-- 右欄 end  -->
+                </div>
+            </div>
+            <!-- 分欄end -->
+        </div>
+        <!-- fatfooter Start -->
+        <section class="fatfooter">
+            <div class="container">
+                <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+                <nav>
+                    <ul>
+                        <li><a href="javascript:;">關於我們</a>
+                            <ul>
+                                <li><a href="javascript:;">個人資料蒐集告知聲明</a></li>
+                                <li><a href="javascript:;">網路隱私權政策</a></li>
+                                <li><a href="javascript:;">交通資訊導引</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">常用連結</a>
+                            <ul>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                                <li><a href="javascript:;">機構典藏</a></li>
+                                <li><a href="javascript:;">facebook粉絲團</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">其他連結</a>
+                            <ul>
+                                <li><a href="javascript:;">HELP</a></li>
+                                <li><a href="javascript:;">借閱政策</a></li>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- fatfooter end -->
+        <!-- footer start-->
+        <footer>
+            <div class="container">
+                <div class="footer_info">
+                    <ul>
+                        <li>屏東縣政府文化處</li>
+                        <li>90054 屏東市大連路69號</li>
+                        <li>08-7360330</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end-->
+    </div>
+    <!-- 燈箱區塊 start-->
+    <!-- 檢視閱讀權限燈箱start -->
+    <div class="lightboxstyle" id="read_permissionstyle">
+        <div class="overlay"></div>
+        <div class="lightboxstyle_block">
+            <div class="close"></div>
+            <h2>檢視閱讀權限</h2>
+            <form>
+                <div class="lightbox_data">
+                    <p>借閱件數：(本/件/間/張)</p>
+                    <div class="listdata">
+                        <ul>
+                            <li>教授指定參考資料：<em>2</em> 件</li>
+                            <li>教授指定參考資料：<em>2</em> 件</li>
+                            <li>教授指定參考資料：<em>2</em> 件</li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 檢視閱讀權限燈箱end -->
+    <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
+    <script type="text/javascript" src="vendor/slick/slick.js">
+    </script>
+    <!-- 出版年度js -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- 出版年度js -->
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script>
+        Highcharts.chart('highcart-container', {
+            chart: {
+                type: 'line'
+            },
+            title: {
+                text: null
+            },
+            xAxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+            },
+            yAxis: {
+                title: {
+                    text: null
+                }
+            },
+            exporting: {
+                enabled: false
+            },
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        enabled: true
+                    },
+                    enableMouseTracking: false
+                }
+            },
+            series: [{
+                name: '2018年',
+                data: [5, 6, 8, 6, 1, 8, 7, 4, 5, 7, 6, 10],
+                color: '#3d89bf',
+                stack: 'participants'
+            }, {
+                name: '2017年',
+                data: [5, 4, 3, 8, 5, 3, 1, 2, 4, 3, 6, 4],
+                color: '#999',
+                stack: 'participants'
+            }]
+        });
+    </script>
+</body>
+
+</html>
