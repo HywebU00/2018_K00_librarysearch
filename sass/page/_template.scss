@@ -634,6 +634,59 @@ select {
             text-decoration: underline !important;
         }
     }
+    // 框線按鈕
+    &.border_graybg {
+        background-color: #fff!important;
+        border: 1px solid #666!important;
+        color: #666!important;
+        transition: .2s;
+        min-width: 150px;
+        text-align: center;
+        &:hover {
+            background-color: #666!important;
+            border: 1px solid #666!important;
+            color: #fff!important;
+        }
+    }
+    &.border_redbg {
+        background-color: #fff!important;
+        border: 1px solid #900!important;
+        color: #900!important;
+        transition: .2s;
+         min-width: 150px;
+         text-align: center;
+        &:hover {
+            background-color: #900!important;
+            border: 1px solid #900!important;
+            color: #fff!important;
+        }
+    }
+    &.border_bluebg {
+        background-color: #fff!important;
+        border: 1px solid #0288c5!important;
+        color: #0288c5!important;
+        transition: .2s;
+         min-width: 150px;
+         text-align: center;
+        &:hover {
+            background-color: #0288c5!important;
+            border: 1px solid #0288c5!important;
+            color: #fff!important;
+        }
+    }
+    &.border_greenbg {
+        background-color: #fff!important;
+        border: 1px solid #638e0c!important;
+        color: #638e0c!important;
+        transition: .2s;
+         min-width: 150px;
+         text-align: center;
+        &:hover {
+            background-color: #638e0c!important;
+            border: 1px solid #638e0c!important;
+            color: #fff!important;
+        }
+    }
 }
 .disabled {
     pointer-events: none;

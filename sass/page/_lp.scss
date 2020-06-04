@@ -417,7 +417,7 @@
             }
             @media(max-width: 480px) {
                 padding-left: 0;
-                width:100px;
+                width: 100px;
             }
             label {
                 display: block;
@@ -494,7 +494,7 @@
                 width: calc(100% - 135px);
             }
             @media(max-width: 480px) {
-                 width: calc(100% - 110px);
+                width: calc(100% - 110px);
             }
             .bookdata {
                 float: left;
@@ -825,7 +825,6 @@
                     right: -20px;
                     width: 40px;
                 }
-
                 ul {
                     margin: 0 0px 0 0;
                     padding: 0;
@@ -1187,6 +1186,7 @@
         width: 19%;
         float: left;
         margin: 0 .4% 15px;
+        height: 390px;
         @media(max-width: 1400px) {
             width: 24%;
             margin: 0 .4% 15px;
@@ -1251,7 +1251,7 @@
             text-align: center;
             margin-bottom: 10px;
             position: relative;
-            padding: 0 15px;
+            padding: 0 15px 5px;
             @include screen('mobile') {
                 float: left;
             }
@@ -1292,6 +1292,12 @@
                             max-height: 120px;
                         }
                     }
+                }
+                // 書封設計
+                .image_titlepage, .image_titlepage2 {
+                    margin: 0 auto;
+                    height: 200px;
+                    width: 145px;
                 }
                 //我要評分
                 .score {
@@ -1449,6 +1455,7 @@
     //手機版
     .booklist_hot {
         @media(max-width: 767px)and(min-width: 575px) {
+            height: auto;
             &:nth-child(1),
             &:nth-child(2),
             &:nth-child(3) {
@@ -1510,11 +1517,19 @@
             &:nth-child(1) {
                 position: relative;
                 left: 33.7%;
+                height: 390px;
             }
             &:nth-child(2) {
                 position: relative;
                 left: -33%;
+                height: 390px;
                 .image {
+                    width: 85% !important;
+                }
+                // 書封設計
+                .image_titlepage, .image_titlepage2 {
+                    margin: 26px auto 0 !important;
+                    height: 180px !important;
                     width: 85% !important;
                 }
             }
@@ -1522,10 +1537,26 @@
                 margin-right: 0%;
                 position: relative;
                 right: 0;
+                height: 390px;
                 .image {
                     width: 80% !important;
                 }
+                // 書封設計
+                .image_titlepage, .image_titlepage2 {
+                    margin: 35px auto 0 !important;
+                    height: 170px !important;
+                    width: 80% !important;
+                }
             }
+        }
+        @media(max-width: 575px) {
+            height: auto;
+            // 書封設計
+                .image_titlepage, .image_titlepage2 {
+                    margin: 0 auto;
+                    height: 150px!important;
+                    width: 80px!important;
+                }
         }
     }
 }
@@ -2531,5 +2562,88 @@
                 }
             }
         }
+    }
+}
+// 封面設計
+.image_titlepage, .image_titlepage2 {
+    margin-bottom: 3px;
+    text-align: left;
+    height: 150px;
+    background-color: #f3d394;
+    color: #333;
+    padding: 5px;
+    position: relative;
+    @include box-sizing;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+    .booktitle {
+        font-size: 1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.5em;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        height: 4.5em;
+        &:before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background-color: #AA5AC5;
+            position: absolute;
+            right: 5px;
+            bottom: 50px;
+            z-index: 9;
+        }
+    }
+    .author {
+        font-size: .813em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.7em;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        background-color: #333;
+        color: #fff;
+        padding: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 4em;
+        @include box-sizing;
+    }
+}
+.image_titlepage2 {
+    background-color: #3a9490;
+    color: #fff;
+    overflow: hidden;
+    .booktitle {
+        &:before {
+            content: '';
+            width: 100%;
+            right: 0;
+            left: 0;
+            bottom: -20px;
+            height: 85px;
+            background-color: #6ec6c2;
+            transform: skewY(-10deg);
+            z-index: 1;
+        }
+        &:after {
+            content: '';
+            border: 10px solid red;
+            border-color: red transparent transparent transparent;
+            position: absolute;
+            top: 58%;
+            left: 45%;
+            z-index: 9;
+        }
+    }
+    .author {
+        color: #333;
+        background-color: transparent;
+        z-index: 2;
     }
 }

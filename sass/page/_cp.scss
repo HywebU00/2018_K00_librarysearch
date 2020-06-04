@@ -59,6 +59,14 @@
             outline: 1px solid $color-gray;
         }
     }
+   // 書封設計
+    .image_titlepage, .image_titlepage2 {
+        margin: 0 auto 10px;
+        width: 50%;
+        @include screen('mobile') {
+            width: 65%;
+        }
+    }
     .book_qrcode {
         margin: 5px 0 10px;
         text-align: center;
@@ -286,7 +294,7 @@
                     li {
                         list-style-type: none;
                         background-image: url('../images/icon_point.png');
-                        background-position: 0 8px  ;
+                        background-position: 0 8px;
                         background-repeat: no-repeat;
                         background-size: 6px;
                         padding-left: 15px;
@@ -983,14 +991,13 @@
                 padding: 4px 15px 4px 5px;
                 position: relative;
                 margin-bottom: 5px;
-                margin-right:5px;
+                margin-right: 5px;
                 line-height: 1.8em;
                 height: 1.8em;
                 vertical-align: middle;
-                
-                @include screen('xs_mobile'){
+                @include screen('xs_mobile') {
                     display: block;
-                    margin-right:0px;
+                    margin-right: 0px;
                 }
                 span {
                     display: none;
@@ -1008,17 +1015,17 @@
                     &.volume {
                         width: 145px;
                         @media(max-width: 830px) {
-                           width: 145px;
+                            width: 145px;
                             transition: .5s;
                             &.open {
                                 width: 100px;
                             }
                         }
-                        @include screen('mobile'){
-                            width:92%;
+                        @include screen('mobile') {
+                            width: 92%;
                         }
-                        @include screen('xs_mobile'){
-                            width:92%;
+                        @include screen('xs_mobile') {
+                            width: 92%;
                         }
                     }
                 }
@@ -1026,9 +1033,9 @@
                     display: inline-block;
                     padding-top: 2px;
                 }
-                +div{
+                +div {
                     float: right;
-                    @include screen('mobile'){
+                    @include screen('mobile') {
                         float: none;
                     }
                 }
@@ -1076,7 +1083,7 @@
                 @include screen('tablet') {
                     width: 100%;
                     // overflow: hidden;
-                    overflow-x:auto;
+                    overflow-x: auto;
                     display: block;
                 }
                 table {
@@ -1107,10 +1114,10 @@
                                     position: absolute;
                                     bottom: 15px;
                                     left: 0;
-                                    @include screen('tablet'){
+                                    @include screen('tablet') {
                                         bottom: auto;
-                                        top:15px;
-                                         border-color:transparent transparent #666transparent;
+                                        top: 15px;
+                                        border-color: transparent transparent #666transparent;
                                     }
                                 }
                             }
@@ -1126,10 +1133,10 @@
                             padding: 10px 15px;
                             border-radius: 5px;
                             z-index: 9;
-                            @include screen('tablet'){
-                                top:45px;
-                                bottom:auto;
-                            }  
+                            @include screen('tablet') {
+                                top: 45px;
+                                bottom: auto;
+                            }
                             ul {
                                 margin: 0;
                                 padding: 0;
@@ -1138,8 +1145,7 @@
                                     list-style: none;
                                     text-align: left;
                                     white-space: normal;
-                                    padding-left:40px;
-
+                                    padding-left: 40px;
                                     span {
                                         width: 36px;
                                         height: 36px;
@@ -1344,7 +1350,7 @@
                         padding: 0 0 0 15px;
                         margin-bottom: 10px;
                         display: block;
-                        word-wrap:break-word;
+                        word-wrap: break-word;
                         span {
                             display: block;
                             color: #999;
@@ -1795,8 +1801,39 @@
                         }
                     }
                 }
-                pre{
+                pre {
                     white-space: pre-wrap;
+                }
+            }
+            //電子書借閱/預約服務
+            .borrow_appointment{
+                >div{
+                    margin:0 0 5px;
+                    a{
+                        display: inline-block;
+                        margin:0 15px 8px 0;
+
+                        
+                    }
+                    span{
+                        display: inline-block;
+                        em{
+                            font-style: normal;
+                            padding:0 5px;
+                            color:$color-orange;
+                            font-weight: 600;
+                        }
+                    }
+                    @media(max-width: 480px){
+                        margin:0 0 10px;
+                        a{
+                           display: block;
+                            span{
+                                width:auto;
+                                text-align: center;
+                            }
+                        }
+                    }
                 }
             }
             //
@@ -1840,8 +1877,7 @@
     h3 {
         font-size: 1.375em;
         margin: 15px 0 15px;
-        color: nth($primaryColor, $style)
-        ;
+        color: nth($primaryColor, $style);
         line-height: 1.4em;
     }
     h4 {
@@ -1860,36 +1896,33 @@
             overflow-x: auto;
         }
     }
-    p{
-        margin:0 0 20px;
+    p {
+        margin: 0 0 20px;
         line-height: 1.8em;
-
     }
-
 }
-.publish_info{
-    margin:10px 0!important;
-    padding:0;
+.publish_info {
+    margin: 10px 0 !important;
+    padding: 0;
     text-align: right;
-    li{
+    li {
         display: inline-block;
         margin-left: 20px;
         position: relative;
-        &:before{
+        &:before {
             content: '';
-            width:1px;
+            width: 1px;
             height: 15px;
             background-color: #333;
             position: absolute;
-            left:-13px;
-            top:5px;
+            left: -13px;
+            top: 5px;
             transform: skewX(-30deg);
         }
-        &:first-child{
-            &:before{
+        &:first-child {
+            &:before {
                 display: none;
             }
-            
         }
     }
 }
