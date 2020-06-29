@@ -1552,11 +1552,11 @@
         @media(max-width: 575px) {
             height: auto;
             // 書封設計
-                .image_titlepage, .image_titlepage2 {
-                    margin: 0 auto;
-                    height: 150px!important;
-                    width: 80px!important;
-                }
+            .image_titlepage, .image_titlepage2 {
+                margin: 0 auto;
+                height: 150px !important;
+                width: 80px !important;
+            }
         }
     }
 }
@@ -2573,8 +2573,21 @@
     color: #333;
     padding: 5px;
     position: relative;
+    overflow: hidden;
     @include box-sizing;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+    &:before {
+        content: '';
+        width: 100%;
+        right: 0;
+        left: 0;
+        bottom: -20px;
+        height: 85px;
+        position: absolute;
+        background-color: #333;
+        transform: skewY(-10deg);
+        z-index: 1;
+    }
     .booktitle {
         font-size: 1em;
         overflow: hidden;
@@ -2584,16 +2597,8 @@
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         height: 4.5em;
-        &:before {
-            content: '';
-            width: 15px;
-            height: 15px;
-            background-color: #AA5AC5;
-            position: absolute;
-            right: 5px;
-            bottom: 50px;
-            z-index: 9;
-        }
+        position: relative;
+        z-index: 3;
     }
     .author {
         font-size: .813em;
@@ -2603,7 +2608,7 @@
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
-        background-color: #333;
+        // background-color: #333;
         color: #fff;
         padding: 5px;
         position: absolute;
@@ -2613,37 +2618,18 @@
         width: 100%;
         height: 4em;
         @include box-sizing;
+        z-index: 2;
     }
 }
 .image_titlepage2 {
     background-color: #3a9490;
     color: #fff;
     overflow: hidden;
-    .booktitle {
-        &:before {
-            content: '';
-            width: 100%;
-            right: 0;
-            left: 0;
-            bottom: -20px;
-            height: 85px;
-            background-color: #6ec6c2;
-            transform: skewY(-10deg);
-            z-index: 1;
-        }
-        &:after {
-            content: '';
-            border: 10px solid red;
-            border-color: red transparent transparent transparent;
-            position: absolute;
-            top: 58%;
-            left: 45%;
-            z-index: 9;
-        }
+    &:before {
+        
+        background-color: #6ec6c2;
+        
     }
-    .author {
-        color: #333;
-        background-color: transparent;
-        z-index: 2;
-    }
+    
+    
 }

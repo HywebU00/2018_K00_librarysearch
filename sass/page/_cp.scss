@@ -50,7 +50,7 @@
         box-shadow: none;
         text-align: center;
         margin: 0 auto 10px;
-        width: 50%;
+        width: 55%;
         @include screen('mobile') {
             width: 65%;
         }
@@ -62,7 +62,7 @@
    // 書封設計
     .image_titlepage, .image_titlepage2 {
         margin: 0 auto 10px;
-        width: 50%;
+        width: 55%;
         @include screen('mobile') {
             width: 65%;
         }
