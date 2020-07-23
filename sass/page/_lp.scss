@@ -90,7 +90,7 @@
     border-bottom: 1px solid $color-gray;
     position: relative;
     text-align: right;
-    padding: 6px 8px 3px;
+    padding: 6px 10px 3px;
     min-height: 37px;
     @include screen('mobile') {
         text-align: left;
@@ -141,11 +141,18 @@
     @include screen('mobile') {
         float: right;
         margin-right: 5px;
+        margin-top: 5px;
     }
-    @media(max-width: 370px) {
-        float: none;
-        width: 100%;
-        margin: 10px 0 0 0;
+    @media(max-width: 380px) {
+        margin: 8px 0px 0 0;
+        position: absolute;
+        right:8px;
+    }
+    @media(max-width: 345px){
+         position:relative;
+         width: 100%;
+         right:auto;
+         margin: 15px 0px 0 0;
     }
     .number_pens {
         margin: 5px 0;
@@ -209,23 +216,32 @@
     @include screen('mobile') {
         display: none;
         width: 100%;
-        padding: 10px;
+        padding: 10px 0 10px 0;
         @include box-sizing;
         text-align: center;
-        margin: 12px 0 0;
+        margin: 5px 0 0;
         // border:1px solid #ccc;
         // border-radius:0 0 3px 3px;
+    }
+    @media(max-width: 380px) {
+        margin: 10px 0 0 0;
+        padding: 0;
+        text-align: right;
+    }
+    @media(max-width: 345px){
+         margin: 0;
     }
     .option_01 {
         position: relative;
         display: inline-block;
         margin-left: 5px;
-        @media(max-width: 374px) {
-            margin: 0 5px 5px 0;
+        @media(max-width: 380px) {
+            margin: 0px 0px 5px 5px;
         }
         .name {
             border-radius: 5px;
             border: 1px solid #ccc;
+            background-color: #fff;
             a {
                 display: block;
                 background: url(../images/basic/icon_select_arrow.svg) no-repeat right center;
@@ -247,10 +263,10 @@
             @include screen('xs_mobile') {
                 width: 150px;
             }
-            @media(max-width: 374px) {
-                right: auto;
-                left: 0;
-            }
+            // @media(max-width: 374px) {
+            //     right: 0;
+            //     left:auto;
+            // }
             &:before {
                 content: '';
                 border: 11px solid #ccc;
@@ -259,9 +275,9 @@
                 top: -22px;
                 right: 5px;
                 z-index: 12;
-                @include screen('xs_mobile') {
-                    border: none;
-                }
+                // @include screen('xs_mobile') {
+                //     border: none;
+                // }
             }
             &:after {
                 content: '';
@@ -271,9 +287,9 @@
                 top: -18px;
                 right: 7px;
                 z-index: 13;
-                @include screen('xs_mobile') {
-                    border: none;
-                }
+                // @include screen('xs_mobile') {
+                //     border: none;
+                // }
             }
             ul {
                 margin: 0 5px;
@@ -2626,10 +2642,6 @@
     color: #fff;
     overflow: hidden;
     &:before {
-        
         background-color: #6ec6c2;
-        
     }
-    
-    
 }
