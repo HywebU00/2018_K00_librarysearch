@@ -313,7 +313,7 @@
 }
 //主題書展(更多展示書）
 .featured_blockin {
-    background-color:nth($lightColor,$style);
+    background-color: nth($lightColor, $style);
     position: relative;
     padding: 40px 0 70px;
     text-align: left;
@@ -558,10 +558,9 @@
             }
             .btnstyle {
                 padding: .5em 10px !important;
-               
             }
-            input[type="button"]{
-                 min-width: 4em  !important;
+            input[type="button"] {
+                min-width: 4em !important;
             }
         }
     }
@@ -584,7 +583,7 @@
 }
 //主題書展(展示書列表）
 .featured_blocklist {
-    background-color: nth($lightColor,$style);
+    background-color: nth($lightColor, $style);
     position: relative;
     padding: 20px 0px 25px;
     text-align: left;
@@ -1243,7 +1242,7 @@
     padding: 15px 20px;
     background-color: $color-orange;
     border-radius: 5px;
-    overflow:hidden;
+    overflow: hidden;
     position: relative;
     span {
         margin-right: 10px;
@@ -1253,17 +1252,16 @@
         line-height: 2.4em;
         height: 2.4em;
         padding: 0 24px 0 .5em;
-        border:none !important;
+        border: none !important;
         background: #fff url('../images/basic/icon_select_arrow.svg') no-repeat right center;
         background-size: 25px;
         margin-right: 2px;
         margin-bottom: 0;
         display: inline-block;
         width: auto;
-        color:#333;
+        color: #333;
         -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2);
-
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2);
     }
     .path {
         display: inline-block;
@@ -1303,22 +1301,21 @@
             }
         }
     }
-    .leftblock{
+    .leftblock {
         float: left;
-        color:#fff;
-        padding-top:6px;
+        color: #fff;
+        padding-top: 6px;
         font-size: 1.125em;
-        @include screen('xs_mobile'){
-            float:none;
+        @include screen('xs_mobile') {
+            float: none;
             margin-bottom: 10px;
         }
     }
-    .rightblock{
+    .rightblock {
         float: right;
         font-size: 1.125em;
-        @include screen('xs_mobile'){
-            float:none;
-            
+        @include screen('xs_mobile') {
+            float: none;
         }
     }
 }
@@ -1533,17 +1530,14 @@
             }
         }
     }
-
     // 
     .classification_list_all {
         width: 100%;
         padding-bottom: 20px;
-        overflow:hidden;
-        
+        overflow: hidden;
         .classification_list_box {
             width: 24%;
             // margin: auto;
-            
             text-align: left;
             float: left;
             margin: 0px 0.5% 0;
@@ -1552,22 +1546,22 @@
             @include box-sizing;
             @include screen('notebook') {
                 width: 24%;
-                margin: 0px 0.5% ;
+                margin: 0px 0.5%;
             }
             @include screen('tablet') {
                 width: 32%;
-                margin: 0px 0.66% ;
+                margin: 0px 0.66%;
             }
             @include screen('xs_mobile') {
                 width: 48%;
-                margin: 0px 1% ;
+                margin: 0px 1%;
                 &:nth-child(2n) {
                     margin-right: 0;
                 }
             }
-            @media(max-width: 380px){
+            @media(max-width: 380px) {
                 width: 100%;
-                margin: 0px 0% ;
+                margin: 0px 0%;
             }
             .content {
                 border: 1px solid #ccc;
@@ -1577,9 +1571,8 @@
                 transition: .2s;
                 text-align: center;
                 font-size: 1.25em;
-                padding:55px 10px 10px;
+                padding: 55px 10px 10px;
                 line-height: 1.7em;
-
                 &:before {
                     content: '';
                     width: 0;
@@ -1600,7 +1593,6 @@
                     }
                 }
             }
-            
         }
         //
         .classification_list_box:nth-child(2n) {
@@ -1763,5 +1755,179 @@
         background-repeat: no-repeat;
         background-position: 10px center;
         padding: 3px 10px 3px 30px;
+    }
+}
+// 行動借閱區塊
+.mobile_lending_block {
+    width: 90%;
+    margin: 40px auto 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 30px 30px 0px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    @include screen('xs_mobile') {
+        padding: 30px 15px 0px;
+    }
+    @include box-sizing;
+    .mobile_lending_tab {
+        text-align: center;
+    }
+    .tabItem {
+        float: left;
+        margin: 0 1% 40px;
+        width: 48%;
+        a {
+            display: block;
+            padding: 20px 30px;
+            @include gradient(#dcdcdc, #e5e5e5, vertical);
+            color: #333;
+            font-size: 1.25em;
+            text-align: center;
+            border-radius: 5px;
+            position: relative;
+            transition: .2s;
+            @media(max-width: 480px) {
+                font-size: 1.063em;
+                padding: 20px 10px;
+            }
+            &:hover {
+                background-image: none;
+                background-color: $color-yellow;
+                color: #fff;
+            }
+            &.here {
+                background: $color-yellow;
+                color: #fff;
+            }
+        }
+    }
+    .content {
+        margin: 10px;
+        float: none;
+        clear: both;
+        padding: 0px;
+        text-align: left;
+        @include box-sizing;
+    }
+    .explain {
+        position: relative;
+        color: #333;
+        padding-left: 20px;
+        margin-bottom: 20px;
+        font-size: 1.125em;
+        &:before {
+            content: '';
+            border: 10px solid $color-red;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        a{
+            color:$color-orange;
+            position: relative;
+            &.explain_btn{
+                &:before{
+                    content: 'i',;
+                    border:1px solid $color-orange;
+                    border-radius:50%;
+                    font-size: 1em;
+                    position: absolute;
+                    right:-25px;
+                    width:20px;
+                    height: 20px;
+                    text-align: center;
+                    line-height: 1.125em;
+
+                }
+            }
+            &:hover{
+                color:$color-red;
+                text-decoration: underline;
+            }
+        }
+    }
+    .bar_code_block {
+        padding: 20px;
+        display: block;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        text-align: center;
+        margin-bottom: 40px;
+        img {
+            width: 318px;
+            @media(max-width: 480px) {
+                width: 100%;
+            }
+        }
+    }
+    .bar_code_block2 {
+        padding: 0;
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+        img {
+            width: 100%;
+        }
+    }
+    .collection_data {
+        margin: 0px;
+        padding: 30px 40px 40px;
+        border-top: 1px solid #d3d3d3;
+        @include screen('mobile') {
+            padding: 30px 0px 40px;
+        }
+        .bookpic {
+            float: left;
+            width: 150px;
+            margin-right: 60px;
+            position: relative;
+            @include screen('xs_mobile') {
+                float: none;
+                margin: 0 auto 30px;
+            }
+            img {
+                outline: 1px solid #d3d3d3;
+                width: 100%;
+                box-shadow: 2px 2px 5px #999;
+            }
+            .success{
+                text-align: center;
+                background-color: rgba(0, 0, 0, .6);
+                border-radius: 50px;
+                padding:15px;
+                position: absolute;
+                top:40%;
+                left:-25px;
+                width: 180px;
+                color:#fff;
+                font-size: 1.125em;
+                img{
+                    width:40px;
+                    box-shadow: none;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                    outline:none;
+                }
+            }
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            font-size: 1.125em;
+            overflow: hidden;
+            li {
+                padding: 0 0 20px;
+                margin-bottom: 20px;
+                border-bottom: 1px dashed #ddd;
+                @include screen('xs_mobile') {
+                    padding: 0 0 15px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
     }
 }

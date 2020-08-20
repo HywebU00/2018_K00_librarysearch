@@ -1481,7 +1481,7 @@ em {
                 text-align: left;
             }
         }
-        .btnstyle {
+        .btn_grp {
             float: right;
             @include screen('xs_mobile') {
                 float: none;

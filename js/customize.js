@@ -608,7 +608,6 @@ $(function() {
             }
         }
     });
-
 });
 $(function() {
     //選擇語言
@@ -629,6 +628,22 @@ $(function() {
     })
     $('.overlay').click(function() {
         $('.login_lightbox').fadeOut();
+        $('body').removeClass('fix');
+    })
+})
+// login登入確認
+$(function() {
+    $('.okbtn').click(function() {
+        $('.login_lightbox').fadeOut();
+        $('.choose_librarycard_lightbox').fadeIn();
+        $('body').addClass('fix');
+    })
+    $('.loginblock .close').click(function() {
+        $('.choose_librarycard_lightbox').fadeOut();
+        $('body').removeClass('fix');
+    })
+    $('.overlay').click(function() {
+        $('.choose_librarycard_lightbox').fadeOut();
         $('body').removeClass('fix');
     })
 })
@@ -857,6 +872,21 @@ $(function() {
     })
     $('.overlay').click(function() {
         $('#map_location_style').fadeOut();
+        $('body').removeClass('fix');
+    })
+    // 異常畫面
+    // login登入確認
+    $('.explain_btn').click(function() {
+        
+        $('#explain_linghtbox').fadeIn();
+        $('body').addClass('fix');
+    })
+    $('.lightboxstyle_block .close').click(function() {
+        $('#explain_linghtbox').fadeOut();
+        $('body').removeClass('fix');
+    })
+    $('.overlay').click(function() {
+        $('#explain_linghtbox').fadeOut();
         $('body').removeClass('fix');
     })
 })
@@ -1289,69 +1319,63 @@ $(function() {
         $('.displaymore').show()
     })
 })
-
 //line通知時間
-$(function(){
+$(function() {
     // $(".linewrap .menber-list li").click(function(){
     //     $(".linewrap .menber-list li").removeClass('active');
     //     $(this).addClass('active');
     // })
-    $(".linecontent .alert-list li").click(function(){
+    $(".linecontent .alert-list li").click(function() {
         $(".alert-list li").removeClass('active');
         $(this).addClass('active');
     })
 })
 // 我的書房 借閱紀錄 排序按鈕
-$(function(){
-    $('.data_quantity2 .sorticon').click(function(){
+$(function() {
+    $('.data_quantity2 .sorticon').click(function() {
         $('.optionblock').stop().slideToggle();
     })
 })
 // 首頁最新消息箭頭
-$(function(){
-    $('.newsblcok .openclosebtn').click(function(){
+$(function() {
+    $('.newsblcok .openclosebtn').click(function() {
         $('.newsblcok').stop().toggleClass('openblock');
         $(this).stop().toggleClass('open');
     })
 })
 //閱讀指數－年
-$(function(){
+$(function() {
     $('.linecontent .year-slide').slick({
         dots: false,
         infinite: true,
         speed: 300,
         slidesToShow: 6,
         slidesToScroll: 6,
-        responsive: [
-        {
+        responsive: [{
             breakpoint: 1024,
             settings: {
                 slidesToShow: 5,
                 slidesToScroll: 5,
                 infinite: true,
             }
-        },
-        {
+        }, {
             breakpoint: 980,
             settings: {
                 slidesToShow: 4,
                 slidesToScroll: 4
             }
-        },
-        {
+        }, {
             breakpoint: 750,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3
             }
-        },
-        {
+        }, {
             breakpoint: 550,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3
             }
-        }
-        ]
+        }]
     });
 })

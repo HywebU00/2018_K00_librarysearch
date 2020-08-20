@@ -10,7 +10,7 @@ body.fix {
 .lightboxstyle,
 .exportstyle,
 .forwardstyle,
-.referencestyle, .mystudymenu_lightbox {
+.referencestyle, .mystudymenu_lightbox, .choose_librarycard_lightbox, .explain_linghtbox {
     position: fixed;
     top: 0;
     right: 0;
@@ -43,7 +43,7 @@ body.fix {
     }
 }
 // 登入
-.login_lightbox {
+.login_lightbox, .choose_librarycard_lightbox {
     .loginblock {
         max-width: 50vw;
         min-width: 450px;
@@ -245,6 +245,69 @@ body.fix {
             box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
             &:hover {
                 background-color: lighten(nth($primaryColor, $style), 10);
+            }
+        }
+    }
+}
+// 圖書館借閱卡
+ .choose_librarycard_lightbox .loginblock{
+     width: 100%;
+      @media(max-width: 767px){
+        width:auto;
+      }
+ }
+.librarycard_blcok {
+    text-align: center;
+   padding:10px 0;
+    // width: 70vw;
+    .librarycard {
+        display: inline-block;
+        margin: 0 1%;
+        width: 47%;
+        @include screen('notebook'){
+            width:100%;
+            margin-bottom: 10px;
+        }
+        a {
+            display: block;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            @include screen('xs_mobile'){
+                 padding: 15px 10px;
+            }
+            .picimg {
+                width: 56px;
+                background-color: #eee;
+                border: 3px solid #fff;
+                float: left;
+                margin-right: 20px;
+                padding: 8px;
+                img {
+                    width: 56px;
+                }
+                @include screen('xs_mobile'){
+                    margin-right: 10px;
+                }
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                overflow: hidden;
+                font-size: 0.938em;
+                li {
+                    margin-bottom: 8px;
+                    display: block;
+                    float: none;
+                    text-align: left;
+                    padding:0 0 8px; 
+                    border-bottom:1px dashed #ddd;
+                }
+            }
+            &:hover {
+                background-color: #ffc;
+                color: #333;
             }
         }
     }
@@ -504,9 +567,9 @@ body.fix {
             scrollbar-track-color: #fff; //軸軌顏色
             //table
             table {
-               border: 1px dotted $color-gray;
+                border: 1px dotted $color-gray;
                 th {
-                   border: 1px dotted $color-gray;
+                    border: 1px dotted $color-gray;
                     text-align: left;
                     padding: 10px;
                     span {
@@ -685,8 +748,8 @@ body.fix {
                 padding: 0 0 0 30px;
             }
         }
-        .lightbox_image{
-            img{
+        .lightbox_image {
+            img {
                 width: 100%;
                 height: auto;
             }
@@ -781,7 +844,6 @@ body.fix {
                         border-radius: 3px !important;
                         margin-right: 6px;
                     }
-
                 }
             }
             .more {

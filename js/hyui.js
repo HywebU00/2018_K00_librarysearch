@@ -23,7 +23,7 @@ $(function() {
     /*-----------------------------------*/
     //////////// line版////////////////
     /*-----------------------------------*/
-    if(location.href.indexOf("line")>-1){
+    if (location.href.indexOf("line") > -1) {
         $('.wrapper').addClass('line')
     };
     /*-----------------------------------*/
@@ -55,7 +55,7 @@ $(function() {
         _sidebarClose = $('.sidebarClose'),
         _sidebarCtrl = $('.sidebarCtrl'),
         _overlay = $('.menu_overlay');
-        _language = $('.language');
+    _language = $('.language');
     // _login=$('.login');
     _menu = $('.menu');
     _mArea = $('.m_area');
@@ -88,7 +88,6 @@ $(function() {
     _sidebarCtrl.click(function(e) {
         showSidebar();
         e.preventDefault();
-
     });
     // 關閉動作
     _overlay.add(_sidebarClose).off().click(function() {
@@ -96,13 +95,12 @@ $(function() {
     });
     _overlay.off("mouseenter");
     // 無障礙tab設定
-    liHasChild.keyup(
-        function() {
-            $(this).children('ul').fadeIn();
-            $(this).siblings().focus(function() {
-                $(this).hide();
-            });
+    liHasChild.keyup(function() {
+        $(this).children('ul').fadeIn();
+        $(this).siblings().focus(function() {
+            $(this).hide();
         });
+    });
     _menu.find('li').keyup(function() {
         $(this).siblings().children('ul').hide();
     });
@@ -151,7 +149,6 @@ $(function() {
             // 行動版查詢
             var _searchCtrl = $('.searchCtrl');
             $('.m_search').hide();
-
             _searchCtrl.off().on('click', function(e) {
                 if (!search_mode) {
                     $('.m_search').stop(true, false).slideDown('400', 'easeOutQuint');
@@ -160,14 +157,12 @@ $(function() {
                     $('.m_search').hide();
                     search_mode = false;
                 }
-
             });
             // 如果點在外面
             $('.main').off().on('click touchend', function(e) {
                 $('.m_search').hide();
                 search_mode = false;
             });
-
             //縮限查詢範圍
             $(window).on("load scroll resize", function(e) {
                 $('.mainleftcontent').removeClass('fixed');
@@ -175,8 +170,6 @@ $(function() {
             $('.mainleftcontent').removeClass('fixed');
             $('.mainleftblock').css('position', 'fixed');
             $('.mainleftblock').css('left', '-100%');
-
-
             $('.limit_range').click(function() {
                 $('.mainleftblock').css('display', 'block');
                 $('.mainleftblock').css('left', '0');
@@ -186,7 +179,6 @@ $(function() {
                 $('.mainleftblock').css('left', '-100%');
                 $('body').removeClass('fix');
             })
-
             //進階查詢
             // $('.advanced_search').css('position', 'fixed');
             // $('.advanced_search').css('display', 'none');
@@ -199,7 +191,6 @@ $(function() {
             //     $('.advanced_search').css('left', '-100%');
             //     $('body').removeClass('fix');
             // })
-
         } else {
             /*-----------------------------------*/
             /////////////// PC版設定 /////////////
@@ -211,7 +202,6 @@ $(function() {
             // _login.appendTo('.header .navigation');
             // _search.appendTo('.header .container');
             // _menu.appendTo('.header .container');
-
             _search.removeClass('m_search');
             _search.show();
             // 副選單滑出
@@ -235,7 +225,6 @@ $(function() {
             $('.mainleftblock').css('position', 'relative');
             $('.mainleftblock').css('left', '0');
             $('.mainleftblock').show();
-
             //進階查詢資料
             $('.advancedbtn').click(function() {
                 $('.form_advanced').stop().slideDown(700);
@@ -244,12 +233,11 @@ $(function() {
             })
             $('.simplebtn').click(function() {
                 $('.form_advanced').stop().slideUp(700);
-                 $('.search_blockin .onlysearch').show();
-                 $('.search_blockin .onlysearchin').hide();
+                $('.search_blockin .onlysearch').show();
+                $('.search_blockin .onlysearchin').hide();
             })
         }
     }
-
     //設定resize 計時器
     var resizeTimer;
     _window.bind("load resize", function(event) {
@@ -259,8 +247,6 @@ $(function() {
         }, 100);
     });
     mobileMenu();
-
-
     // 固定版頭
     // var hh = $('.header').outerHeight(true),
     //     menuH = _menu.outerHeight(),
@@ -276,9 +262,7 @@ $(function() {
     //         $('.header').css('margin-top', 0);
     //         $('.main').css('margin-top', 0);
     //     }
-
     // });
-
     /*-----------------------------------*/
     //////////// notice訊息區塊 ////////////
     /*-----------------------------------*/
@@ -303,7 +287,6 @@ $(function() {
     /////////////fatfooter開關/////////////
     /*-----------------------------------*/
     $('.btn-fatfooter').click(function(e) {
-
         $(this).parent('.container').find('nav>ul>li>ul').stop(true, true).slideToggle(function() {
             if ($(this).is(':visible')) {
                 $('.btn-fatfooter').html("收合");
@@ -325,7 +308,6 @@ $(function() {
                 cHeight = _imgContainer.height(),
                 ratioC = cWidth / cHeight,
                 _img = _imgContainer.find('img');
-
             var iWidth = $(this).find('img').width(),
                 iHeight = $(this).find('img').height(),
                 ratioImg = iWidth / iHeight,
@@ -340,7 +322,6 @@ $(function() {
             $(this).find('img').removeClass('img-responsive');
         });
     });
-
     /*-----------------------------------*/
     //////////////相簿縮圖+燈箱//////////////
     /*-----------------------------------*/
@@ -352,7 +333,6 @@ $(function() {
                 cHeight = _imgContainer.height(),
                 ratioC = cWidth / cHeight,
                 _img = _imgContainer.find('img');
-
             var iWidth = $(this).find('img').width(),
                 iHeight = $(this).find('img').height(),
                 ratioImg = iWidth / iHeight,
@@ -464,10 +444,7 @@ $(function() {
     /*-----------------------------------*/
     ////////////////多組Tab////////////////
     /*-----------------------------------*/
-
     $('html').removeClass('no-js');
-
-
     var resizeTimer1;
     _window.resize(function() {
         clearTimeout(resizeTimer1);
@@ -475,14 +452,11 @@ $(function() {
             ww = _window.outerWidth();
         }, 200);
     });
-
     $.fn.tabs = function(options) {
-
         var defaults = {
             tiGap: 10,
             selected: function() {}
         }
-
 
         function resize() {
             var _tab = $(this),
@@ -495,9 +469,7 @@ $(function() {
                 tiGap = defaults.tiGap,
                 tabItemLength = _tabItem.length,
                 tabItemWidth;
-
             _tab.find('.active').next('.tabContent').show();
-
             if (ww > wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
@@ -511,11 +483,8 @@ $(function() {
                 _tabItem.css('margin-left', 0).last().css('position', 'relative');
             }
         }
-
         return this.each(function() {
             var option = $.extend(defaults, options);
-
-
             var _tab = $(this),
                 _tabItem = _tab.find('.tabItem'),
                 _tabItemA = _tabItem.children('a'),
@@ -526,9 +495,7 @@ $(function() {
                 tiGap = defaults.tiGap,
                 tabItemLength = _tabItem.length,
                 tabItemWidth;
-
             _tab.find('.active').next('.tabContent').show();
-
             if (ww > wwSmall) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
@@ -541,16 +508,11 @@ $(function() {
                 _tabItem.width(tabwidth);
                 _tabItem.css('margin-left', 0).last().css('position', 'relative');
             }
-
             resize = $.proxy(resize, _tab);
-
             $(window).resize(resize);
-
             tabs = $.proxy(tabs, { tab: _tab, selected: option.selected });
-
             _tabItemA.focus(tabs);
             _tabItemA.click(tabs);
-
             _tabItemA.eq(0).click();
 
             function tabs(e) {
@@ -560,12 +522,9 @@ $(function() {
                     tabItemHeight = _tabItemNow.outerHeight()
                 tabIndex = _tabItemNow.index() / 2,
                     scollDistance = tvp + tabItemHeight * tabIndex - hh;
-
-
                 var _tabItem = _tab.find('.tabItem');
                 _tabItem.removeClass('active');
                 _tabItemNow.addClass('active');
-
                 if (ww <= wwSmall) {
                     _tabItem.not('.active').next().slideUp();
                     _tabItemNow.next().slideDown();
@@ -641,8 +600,4 @@ $(function() {
             $(this).closest('.upload_grp').find('.upload_file').attr("value", names);
         }
     });
-
-
-
-
 });
