@@ -457,6 +457,18 @@ select {
             width: 20px !important;
             height: 20px !important;
         }
+        .close_black {
+            background-image: url('../images/icon_close03_black.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 10px;
+            position: absolute;
+            top: 3px;
+            right: 1px;
+            z-index: 9;
+            width: 20px !important;
+            height: 20px !important;
+        }
     }
     img {
         margin-right: 5px;
@@ -607,6 +619,7 @@ select {
             border: 2px solid #a0a0a0;
         }
     }
+    
     // 較寬
     &.morewidth {
         padding: 5px 80px !important;

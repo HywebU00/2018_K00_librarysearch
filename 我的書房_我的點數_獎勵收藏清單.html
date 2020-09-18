@@ -1,0 +1,1617 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>凌網科技圖書館查詢系統</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 出版年度css -->
+    <link rel="stylesheet" href="vendor/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
+    <link rel="stylesheet" href="css/hyui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+    <!-- wrapper 最大寬度 -->
+    <div class="wrapper">
+        <!-- sidebar  start-->
+        <aside class="sidebar">
+            <div class="m_area">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <nav class="navigation">
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                </nav>
+                <button type="button" class="sidebarClose">關閉</button>
+            </div>
+            <div class="menu_overlay"></div>
+        </aside>
+        <!-- sidebar  end-->
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <button type="button" class="sidebarCtrl">側欄選單</button>
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <!-- navigation Start -->
+                <nav class="navigation">
+                    <!-- 一組ul預設靠右 -->
+                    <!-- 兩組ul已寫JQ靠左靠右 -->
+                    <ul>
+                        <li><a href="javascript:;">Help</a></li>
+                        <li><a href="javascript:;">圖書館首頁</a></li>
+                    </ul>
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                    <!-- 會員紀錄 start -->
+                    <div class="member_record">
+                        <!-- 收藏紀錄 start-->
+                        <div class="heart"><img src="images/icon_collect.png" alt="收藏紀錄"></div>
+                        <!-- 收藏紀錄 end-->
+                        <!-- 會員資料 start -->
+                        <div class="member_name">王小明</div>
+                        <div class="member_pic"><a href="#"><img src="images/member_pic.png" alt="照片"></a><span>555</span></div>
+                        <div class="member_data">
+                            <ul>
+                                <li><a href="#">我的帳戶</a>
+                                    <ul>
+                                        <li><a href="#">我的主頁</a></li>
+                                        <li><a href="#">修改個人資料</a></li>
+                                        <li><a href="#">待繳費用/罰則紀錄</a></li>
+                                        <li><a href="#">與圖書館對話</a></li>
+                                        <li><a href="#">借閱證線上掛失</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">我的閱讀紀錄</a>
+                                    <ul>
+                                        <li><a href="#">我的借閱紀錄</a></li>
+                                        <li><a href="#">我的預約記錄</a></li>
+                                        <li><a href="#">我的跨館通閱清單</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">我的書櫃</a>
+                                    <ul>
+                                        <li><a href="#">我的收藏</a></li>
+                                        <li><a href="#">我的標籤</a></li>
+                                        <li><a href="#">評分/評論紀錄</a></li>
+                                        <li><a href="#">我的推薦採購書籍</a></li>
+                                        <li><a href="#">我的興趣主題</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">其他紀錄</a>
+                                    <ul>
+                                        <li><a href="#">我的借閱歷史紀錄</a></li>
+                                        <li><a href="#">我的預約歷史紀錄</a></li>
+                                        <li><a href="#">我的跨館通閱歷史紀錄</a></li>
+                                        <li><a href="#">我的罰則歷史紀錄</a></li>
+                                        <li><a href="#">我的查詢歷史紀錄</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="signout">登出</a></li>
+                            </ul>
+                        </div>
+                        <!-- 會員資料 end -->
+                    </div>
+                    <!-- 會員紀錄 end-->
+                </nav>
+                <!-- 手機才出現的按鈕 start -->
+                <!-- 會員紀錄 start -->
+                <div class="member_record member_mobile_btn">
+                    <!-- 會員資料 start -->
+                    <div class="member_pic"><a href="#"><img src="images/member_pic.png" alt="照片"></a>
+                        <span>5</span></div>
+                    <div class="member_data">
+                        <ul>
+                            <li><a href="#">我的帳戶</a>
+                                <ul>
+                                    <li><a href="#">我的主頁</a></li>
+                                    <li><a href="#">修改個人資料</a></li>
+                                    <li><a href="#">待繳費用/罰則紀錄</a></li>
+                                    <li><a href="#">與圖書館對話</a></li>
+                                    <li><a href="#">借閱證線上掛失</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">我的閱讀紀錄</a>
+                                <ul>
+                                    <li><a href="#">我的借閱紀錄</a></li>
+                                    <li><a href="#">我的預約記錄</a></li>
+                                    <li><a href="#">我的跨館通閱清單</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">我的書櫃</a>
+                                <ul>
+                                    <li><a href="#">我的收藏</a></li>
+                                    <li><a href="#">我的標籤</a></li>
+                                    <li><a href="#">評分/評論紀錄</a></li>
+                                    <li><a href="#">我的推薦採購書籍</a></li>
+                                    <li><a href="#">我的興趣主題</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">其他紀錄</a>
+                                <ul>
+                                    <li><a href="#">我的借閱歷史紀錄</a></li>
+                                    <li><a href="#">我的預約歷史紀錄</a></li>
+                                    <li><a href="#">我的跨館通閱歷史紀錄</a></li>
+                                    <li><a href="#">我的罰則歷史紀錄</a></li>
+                                    <li><a href="#">我的查詢歷史紀錄</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="signout">登出</a></li>
+                        </ul>
+                    </div>
+                    <!-- 會員資料 end -->
+                </div>
+                <!-- 會員紀錄 end-->
+                <!-- 手機才出現的按鈕 end -->
+                <h1><a href="index.htm"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="javascript:;">網站導覽</a>
+                </noscript>
+                <!-- 手機版才出現的menu start-->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <!-- 手機版才出現的menu end-->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <!-- 我的書房start -->
+            <section class="section col-12 mystudyname">
+                <div class="container">
+                    <div class="col">
+                        <div class="member_pic"><a href="#"><img src="images/member_pic2.png" alt="照片"></a>
+                            <span>555</span>
+                        </div>
+                        <div class="nameblock">
+                            <h2>我的個人書房</h2>
+                            <div class="name"><em>HI ! 王小明您好，<span>A111222233</span></em>歡迎來到您的專屬書房</div>
+                            <div class="mystudybtn">
+                                <input type="button" name="" class="btnstyle whitebg" value="檢視閱讀權限" id="read_permissionbtn">
+                                <input type="button" name="" class="btnstyle whitebg" value="登出">
+                                <input type="button" name="" class="btnstyle whitebg linedel" value="借閱證切換" id="read_permissionbtn">
+                                <input type="button" name="" class="btnstyle whitebg linedel" value="通知時間" id="read_permissionbtn">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 我的書房end -->
+            <!-- 分欄start -->
+            <div class="maincolumn">
+                <div class="container">
+                    <!-- 左欄 start  -->
+                    <div class="mainleftblock">
+                        <div class="mainleftcontent">
+                            <!-- 我的書房menu start -->
+                            <div class="mystudymenu">
+                                <ul>
+                                    <li><a href="javascript:;">我的帳戶</a>
+                                        <ul>
+                                            <li><a href="javascript:;">我的主頁</a></li>
+                                            <li><a href="javascript:;">修改個人資料</a></li>
+                                            <li><a href="javascript:;">待繳費用/罰則紀錄</a></li>
+                                            <li><a href="javascript:;">與圖書館對話</a></li>
+                                            <li><a href="javascript:;">借閱證線上掛失</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">我的閱讀紀錄</a>
+                                        <ul>
+                                            <li><a href="javascript:;">我的借閱紀錄</a></li>
+                                            <li><a href="javascript:;">我的預約記錄</a></li>
+                                            <li><a href="javascript:;">我的跨館通閱清單</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">我的書櫃</a>
+                                        <ul>
+                                            <li><a href="javascript:;">我的收藏</a></li>
+                                            <li><a href="javascript:;">我的標籤</a></li>
+                                            <li><a href="javascript:;">評分/評論紀錄</a></li>
+                                            <li><a href="javascript:;">我的推薦採購書籍</a></li>
+                                            <li><a href="javascript:;">我的興趣主題</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">閱讀存摺</a>
+                                        <ul>
+                                            <li><a href="javascript:;">點數進度</a></li>
+                                            <li><a href="javascript:;">待換清單</a></li>
+                                            <li><a href="javascript:;">兌換歷史</a></li>
+                                            <li><a href="javascript:;">獎勵收藏清單</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;">其他紀錄</a>
+                                        <ul>
+                                            <li><a href="javascript:;">我的借閱歷史紀錄</a></li>
+                                            <li><a href="javascript:;">我的預約歷史紀錄</a></li>
+                                            <li><a href="javascript:;">我的跨館通閱歷史紀錄</a></li>
+                                            <li><a href="javascript:;">我的罰則歷史紀錄</a></li>
+                                            <li><a href="javascript:;">我的查詢歷史紀錄</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 我的書房menu end -->
+                        </div>
+                    </div>
+                    <!-- 左欄 end  -->
+                    <!-- 右欄 start  -->
+                    <div class="mainrightblock">
+                        <!-- 右欄左線start -->
+                        <div class="rightlineblock">
+                            <!-- 路徑start -->
+                            <div class="breadcrumb">
+                                <span>現在位置：</span>
+                                <ul>
+                                    <li><a href="javascript:;">首頁</a></li>
+                                    <li><a href="#">個人書房</a></li>
+                                    <li>兌換歷史</li>
+                                </ul>
+                            </div>
+                            <!-- 路徑end-->
+                            <!-- 排序方式start 手機版才會出現-->
+                            <div class="sortbyblock linedel">
+                                <ul>
+                                    <li><a href="#">相關排序</a></li>
+                                    <li><a href="#">最新</a></li>
+                                    <li><a href="#">最熱門</a></li>
+                                    <li><a href="#">其他</a></li>
+                                </ul>
+                            </div>
+                            <!-- 排序方式end -->
+                            <!-- 我的書房查詢 start -->
+                            <div class="mystudysearchbtn"><a href="#">清單查詢</a></div>
+                            <div class="mystudysearch">
+                                <form action="">
+                                    <div class="mystudysearch_data">
+                                        <div class="form_grid">
+                                            <div class="form_grp">
+                                                <label for="" class="form_title"> 書刊名：</label>
+                                                <div class="form_content ">
+                                                    <input name="username" type="text" placeholder="請輸入文字">
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for=" " class="form_title ">索書號：</label>
+                                                <div class="form_content">
+                                                    <input name="username" type="text" placeholder="請輸入文字">
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for=" " class="form_title ">借閱日期範圍：</label>
+                                                <div class="form_content">
+                                                    <div class="select_date">
+                                                        <input name="" type="text" placeholder="起日日期"><span class="image"><a href="#"><img src="images/form_calendar.png" alt=""></a></span></div>
+                                                    <span class="to">至</span>
+                                                    <div class="select_date">
+                                                        <input name="" type="text" placeholder="迄日日期"><span class="image"><a href="#"><img src="images/form_calendar.png" alt=""></a></span></div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp">
+                                                <label for=" " class="form_title ">狀態篩選：</label>
+                                                <div class="form_content check_grp form_inline">
+                                                    <label><input name="" type="checkbox" value="">顯示借閱中</label>
+                                                    <label><input name="" type="checkbox" value="">顯示逾期資料</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--  -->
+                                        <div class="btn_grp">
+                                            <input name="" type="submit" value="查詢">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!--我的書房查詢 end  -->
+                            <!-- 我的點數 start -->
+                            <div class="mystudy_mypoints">
+                                <div class="title"><span>我的點數</span></div>
+                                <div class="content">
+                                    <div class="data">
+                                        <div class="accumulation"><span class="subtitle bluebg">累積點數</span><em>332</em>點</div>
+                                        <div class="maturity"><span class="subtitle greenbg">即將到期</span><em>12</em>點<span class="date">2020/12/31 到期</span></div>
+                                    </div>
+                                    <div class="reward_btn"><a href="#"><img src="images/icon_gift.svg">我要進行<em>獎勵兌換 !</em> </a></div>
+                                </div>
+                            </div>
+                            <!-- 我的點數 end -->
+                            <!-- 資料全部 start-->
+                            <div class="data_all">
+                                <div class="data_quantity2"><span>總共<em>2</em>筆</span><span class="sorticon mobile_visible"><a href="#"><img src="images/sort.svg"></a></span>
+                                    <div class="optionblock">
+                                        <div class="option_01">
+                                            <div class="name"><a href="javascript:;">排序方式</a></div>
+                                            <div class="option_list">
+                                                <ul>
+                                                    <li><a href="#">熱門借閱</a></li>
+                                                    <li><a href="#" class="here">熱門預約</a></li>
+                                                    <li><a href="#">熱門點閱</a></li>
+                                                    <li><a href="#">熱門評分/評論</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 資料全部 end-->
+                            <div class="data_explain">以下為您帶兌換的獎勵，請於兌換時間內至兌換地點兌換</div>
+                            <!-- 書本條列 start -->
+                            <div class="booklist_block">
+                                <!-- 讀者建議start -->
+                                <div class="reader_advice">
+                                    <!-- 表格 start-->
+                                    <div class="table_list">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>編號</th>
+                                                    <th>兌換獎勵</th>
+                                                    <th>點數</th>
+                                                    <th>兌換日期</th>
+                                                    <th>兌換狀態</th>
+                                                    <th>收藏</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-title="編號" class="aCenter">1.</td>
+                                                    <td data-title="兌換獎勵">
+                                                        <a href="#">
+                                                            <div class="reward_block">
+                                                                <span class="reward_img"><img src="images/reward01.jpg">
+                                                                </span>
+                                                                <span class="gift_name">期刊贈品-HARUHA </span>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                    <td data-title="點數" class="aCenter"><span class="word_red">750</span></td>
+                                                    <td data-title="兌換日期" class="aCenter">2020/12/31</td>
+                                                    <td data-title="兌換狀態" class="aCenter">點數不足<span class="surplus">(目前尚餘數量：4)</span></td>
+                                                    <td data-title="收藏" class="aCenter">
+                                                        <!-- 收藏 start-->
+                                                        <div class="collection"><a href="#"><img src="images/book_share_icon01_2.png"></a></div>
+                                                        <!-- 收藏 end-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-title="編號" class="aCenter">2.</td>
+                                                    <td data-title="兌換獎勵">
+                                                        <a href="#">
+                                                            <div class="reward_block">
+                                                                <span class="reward_img"><img src="images/reward01.jpg">
+                                                                </span>
+                                                                <span class="gift_name">期刊贈品-HARUHA </span>
+                                                            </div>
+                                                        </a>
+                                                    </td>
+                                                    <td data-title="點數" class="aCenter"><span class="word_red">750</span></td>
+                                                    <td data-title="兌換日期" class="aCenter">2020/12/31</td>
+                                                    <td data-title="兌換狀態" class="aCenter">點數不足<span class="surplus">(目前尚餘數量：4)</span></td>
+                                                    <td data-title="收藏" class="aCenter">
+                                                        <!-- 收藏 start-->
+                                                        <div class="collection"><a href="#"><img src="images/book_share_icon01.png"></a></div>
+                                                        <!-- 收藏 end-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- 表格 end-->
+                                    <!--pagination start -->
+                                    <section class="pagination">
+                                        <form action="" class="form_inline">
+                                            <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                                                    <option value="">10</option>
+                                                    <option value="">20</option>
+                                                    <option value="">30</option>
+                                                    <option value="">40</option>
+                                                </select>筆 </div>
+                                        </form>
+                                        <ul class="page">
+                                            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                            <li class="active"><a href="#">12345</a></li>
+                                            <li><a href="#">12345</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">6</a></li>
+                                            <li><a href="#">7</a></li>
+                                            <li><a href="#">8</a></li>
+                                            <li><a href="#">9</a></li>
+                                            <li><a href="#">10</a></li>
+                                            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                            <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                        </ul>
+                                    </section>
+                                    <!--pagination  end -->
+                                </div>
+                                <!-- 讀者建議end -->
+                            </div>
+                            <!-- 書本條列 end -->
+                        </div>
+                        <!-- 右欄左線end -->
+                    </div>
+                    <!-- 右欄 end  -->
+                </div>
+            </div>
+            <!-- 分欄end -->
+        </div>
+        <!-- fatfooter Start -->
+        <section class="fatfooter">
+            <div class="container">
+                <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+                <nav>
+                    <ul>
+                        <li><a href="javascript:;">關於我們</a>
+                            <ul>
+                                <li><a href="javascript:;">個人資料蒐集告知聲明</a></li>
+                                <li><a href="javascript:;">網路隱私權政策</a></li>
+                                <li><a href="javascript:;">交通資訊導引</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">常用連結</a>
+                            <ul>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                                <li><a href="javascript:;">機構典藏</a></li>
+                                <li><a href="javascript:;">facebook粉絲團</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">其他連結</a>
+                            <ul>
+                                <li><a href="javascript:;">HELP</a></li>
+                                <li><a href="javascript:;">借閱政策</a></li>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- fatfooter end -->
+        <!-- footer start-->
+        <footer>
+            <div class="container">
+                <div class="footer_info">
+                    <ul>
+                        <li>屏東縣政府文化處</li>
+                        <li>90054 屏東市大連路69號</li>
+                        <li>08-7360330</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end-->
+    </div>
+    <!-- 燈箱區塊 start-->
+    <!-- 分類燈箱start -->
+    <div class="lightboxstyle" id="sortstyle">
+        <div class="overlay"></div>
+        <div class="lightboxstyle_block">
+            <div class="close"></div>
+            <h2>語文別</h2>
+            <form>
+                <div class="lightbox_data">
+                    <table>
+                        <tr>
+                            <th>條件<span><a href="#"><img src="images/arrow_all.png"></a></span><span><a href="#"><img src="images/arrow_up.png"></a></span><span><a href="#"><img src="images/arrow_down.png"></a></span></th>
+                            <th width="25%">筆數<span><a href="#"><img src="images/arrow_all.png"></a></span><span><a href="#"><img src="images/arrow_up.png"></a></span><span><a href="#"><img src="images/arrow_down.png"></a></span></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="checkbox" name="" value="">條件1 </label>
+                            </td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="checkbox" name="" value="">條件1 </label>
+                            </td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="checkbox" name="" value="">條件1 </label>
+                            </td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="checkbox" name="" value="">條件1 </label>
+                            </td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="checkbox" name="" value="">條件1 </label>
+                            </td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="checkbox" name="" value="">條件1 </label>
+                            </td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="checkbox" name="" value="">條件1 </label>
+                            </td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="checkbox" name="" value="">條件1 </label>
+                            </td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="checkbox" name="" value="">條件1 </label>
+                            </td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <input type="checkbox" name="" value="">條件1 </label>
+                            </td>
+                            <td>120</td>
+                        </tr>
+                    </table>
+                    <div class="more"><a href="javascript:;">載入更多...</a></div>
+                </div>
+                <div class="btn_grp">
+                    <input name="" type="reset" value="清除" />
+                    <input name="" type="submit" value="選取" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 分類燈箱end -->
+    <!-- 匯出格式燈箱start -->
+    <div class="lightboxstyle" id="exportstyle">
+        <div class="overlay"></div>
+        <div class="lightboxstyle_block">
+            <div class="close"></div>
+            <h2>匯出格式</h2>
+            <form>
+                <div class="lightbox_data">
+                    <div class="radio_grp">
+                        <label>
+                            <input name="radioSample" type="radio" value="">匯出HTML格式匯出HTML格式匯出HTML格式匯出HTML格式</label>
+                        <label>
+                            <input name="radioSample" type="radio" value="">匯出ISO格式</label>
+                        <label>
+                            <input name="radioSample" type="radio" value="">匯出至RefMan</label>
+                        <label>
+                            <input name="radioSample" type="radio" value="">匯出至EndNote</label>
+                        <label>
+                            <input name="radioSample" type="radio" value="">匯出至BibTex</label>
+                        <label>
+                            <input name="radioSample" type="radio" value="">匯出至RefWorks XML Format</label>
+                        <label>
+                            <input name="radioSample" type="radio" value="">匯出至RefWorks Tagged Format</label>
+                        <label>
+                            <input name="radioSample" type="radio" value="">匯出至RefWorks Tagged Format</label>
+                        <label>
+                            <input name="radioSample" type="radio" value="">匯出至RefWorks Tagged Format</label>
+                        <label>
+                            <input name="radioSample" type="radio" value="">匯出至RefWorks Tagged Format</label>
+                    </div>
+                </div>
+                <div class="btn_grp">
+                    <input name="" type="submit" value="匯出" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 匯出格式燈箱end -->
+    <!-- 轉寄他人燈箱start -->
+    <div class="lightboxstyle" id="forwardstyle">
+        <div class="overlay"></div>
+        <div class="lightboxstyle_block">
+            <div class="close"></div>
+            <h2>轉寄他人</h2>
+            <form action="">
+                <div class="lightbox_data">
+                    <div class="form_grid">
+                        <div class="form_grp">
+                            <label for="" class="form_title"> 寄件人Email：</label>
+                            <div class="form_content ">
+                                <input type="text " id=" " value=" ">
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for=" " class="form_title ">收件人Email：</label>
+                            <div class="form_content">
+                                <input name="" id="" type="text">
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for=" " class="form_title ">主旨：</label>
+                            <div class="form_content">
+                                <input name="" id="" type="text">
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for="" class="form_title"> 內容：</label>
+                            <div class="form_content ">
+                                <textarea name=" " id=" " cols="30 " rows="70 "></textarea>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label class="form_title ">驗證碼：</label>
+                            <div class="form_content">
+                                <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                <button type="button" class="btn btn-sm">語音驗證</button>
+                                <input type="text" name="" value="" placeholder="請輸入驗證碼">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_grp">
+                    <input name="" type="reset" value="清除">
+                    <input name="" type="submit" value="送出">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 轉寄他人燈箱end -->
+    <!-- 引用燈箱start -->
+    <div class="lightboxstyle" id="referencestyle">
+        <div class="overlay"></div>
+        <div class="lightboxstyle_block">
+            <div class="close"></div>
+            <h2>引用</h2>
+            <form action="">
+                <div class="lightbox_data">
+                    <div class="form_grid">
+                        <div class="form_grp">
+                            <label for=" " class="form_title ">選擇格式：</label>
+                            <div class="form_content">
+                                <select id="selectSample" name="">
+                                    <option value="">全部</option>
+                                    <option value="">哈佛：澳洲</option>
+                                    <option value="">哈佛</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for="" class="form_title"> 內容：</label>
+                            <div class="form_content ">
+                                <textarea name=" " id=" " cols="30 " rows="20 ">Godart, C., Benatallah, B., & Shan, M. (2004). WEC 2004 : First IEEE International Workshop on Electronic Contracting : proceedings : 6 July, 2004, San Diego, California. Place of publication not identified: IEEE Computer Society.
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_grp">
+                    <input name="" type="submit" value="複製到剪貼簿">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 引用他人燈箱end -->
+    <!-- 永久連結燈箱start -->
+    <div class="lightboxstyle" id="permanentstyle">
+        <div class="overlay"></div>
+        <div class="lightboxstyle_block">
+            <div class="close"></div>
+            <h2>永久連結</h2>
+            <form action="">
+                <div class="lightbox_data">
+                    <div class="form_grid">
+                        <input name="" id="" type="text">
+                    </div>
+                </div>
+                <div class="btn_grp">
+                    <input name="" type="submit" value="複製到剪貼簿">
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 永久連結燈箱end -->
+    <!-- 檢視閱讀權限燈箱start -->
+    <div class="lightboxstyle" id="read_permissionstyle">
+        <div class="overlay"></div>
+        <div class="lightboxstyle_block">
+            <div class="close"></div>
+            <h2>檢視閱讀權限</h2>
+            <form>
+                <div class="lightbox_data">
+                    <p>借閱件數：(本/件/間/張)</p>
+                    <div class="listdata">
+                        <ul>
+                            <li>教授指定參考資料：<em>2</em> 件</li>
+                            <li>教授指定參考資料：<em>2</em> 件</li>
+                            <li>教授指定參考資料：<em>2</em> 件</li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 檢視閱讀權限燈箱end -->
+    <!-- 燈箱區塊 end-->
+    <!-- 詳目頁燈箱start  -->
+    <div class="detailpage_lightbox" id="detail_lightbox">
+        <div class="close2"></div>
+        <div class="overlay"></div>
+        <div class="close3"><img src="images/icon_close.png"></div>
+        <!-- 分欄start -->
+        <div class="maincolumn_cp">
+            <div class="container">
+                <!-- 左欄 start  -->
+                <!-- 詳目頁左欄 start -->
+                <div class="mainleftblock">
+                    <!-- 書本詳細評分 start-->
+                    <div class="book_detail">
+                        <div class="image"><img src="images/bookcover.jpg"></div>
+                        <div class="book_qrcode">
+                            <ul>
+                                <li><a href="#">書籍封面</a></li>
+                                <li><a href="#">QR-CODE</a></li>
+                            </ul>
+                        </div>
+                        <!-- 評分start -->
+                        <div class="fraction">2.5</div>
+                        <div class="score_star">
+                            <img src="images/starall.png">
+                            <span class="score_color">
+                                <img src="images/star_color.gif" width="50px"></span>
+                        </div>
+                        <div class="then">168則評分</div>
+                        <!-- 評分end -->
+                    </div>
+                    <!-- 書本詳細評分 end-->
+                    <!-- 錨點menu設定 start -->
+                    <div class="anchor_menu">
+                        <ul>
+                            <li><a href="#" class="group00">回到頁面最上方</a></li>
+                            <li><a href="#" class="group01">匯出</a></li>
+                            <li><a href="#" class="group02">館藏位置</a></li>
+                            <li><a href="#" class="group03">線上連結/衍伸查詢</a></li>
+                            <li><a href="#" class="group04">詳細資料</a></li>
+                            <li><a href="#" class="group05">書籍簡介</a></li>
+                            <li><a href="#" class="group06">閱讀推薦</a></li>
+                            <li><a href="#" class="group07">標籤雲</a></li>
+                            <li><a href="#" class="group08">評分/評論</a></li>
+                            <li><a href="#" class="group09">MARC格式</a></li>
+                        </ul>
+                    </div>
+                    <!-- 內容錨點設定 start -->
+                </div>
+                <!-- 詳目頁左欄 end -->
+                <!-- 左欄 end  -->
+                <!-- 右欄 start  -->
+                <div class="mainrightblock">
+                    <!-- 右欄左線start -->
+                    <div class="rightlineblock">
+                        <!-- 路徑start -->
+                        <div class="breadcrumb">
+                            <span>現在位置：</span>
+                            <ul>
+                                <li><a href="#">首頁</a></li>
+                                <li><a href="#">節點</a></li>
+                                <li>節點</li>
+                            </ul>
+                        </div>
+                        <!-- 路徑end-->
+                        <div class="function">
+                            <ul>
+                                <li class="icon_back"><a href="#">回上一頁</a></li>
+                                <li class="icon_pre"><a href="#">上一筆</a></li>
+                                <li class="icon_next"><a href="#">下一筆</a></li>
+                            </ul>
+                        </div>
+                        <!-- function功能區塊 end-->
+                        <!-- 書本詳細資料 start -->
+                        <div class="book_detaildata">
+                            <!-- 書本詳細評分 start   手機版才會出現-->
+                            <div class="book_detail">
+                                <div class="image">
+                                    <img src="images/bookcover.jpg">
+                                </div>
+                                <!-- 評分start -->
+                                <div class="fraction">2.5</div>
+                                <div class="score_star">
+                                    <img src="images/starall.png"><span class="score_color"><img src="images/star_color.gif" width="50px"></span>
+                                </div>
+                                <div class="then">168則評分</div>
+                                <!-- 評分end -->
+                            </div>
+                            <!-- 書本詳細評分 end 手機版才會出現-->
+                            <!-- bookdata start -->
+                            <div class="bookdata">
+                                <h2><a href="#">深度學習力：學歷貶值時代，MIT博士教你從大學就脫穎而出的75個成功法則</a></h2>
+                                <!-- 收藏 start-->
+                                <div class="collection"><a href="#"><img src="images/book_share_icon01_2.png"></a></div>
+                                <!-- 收藏 end-->
+                                <div class="listdata">
+                                    <ul>
+                                        <li>作者：卡爾‧紐波特</li>
+                                        <li>譯者：朱崇旻</li>
+                                        <li>出版社：時報出版</li>
+                                        <li>出版日期：2018/04/03</li>
+                                    </ul>
+                                    <p>加值metadata欄位(如屬同儕評鑑或主題等)</p>
+                                    <div class="bookbtn">
+                                        <input type="button" name="" value="下載檔案" class="download">
+                                        <input type="button" name="" value="有可外借館藏" class="borrow">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- bookdata end -->
+                            <!-- bookdata2 start -->
+                            <div class="bookdata2" id="node01">
+                                <h3><span>匯出</span></h3>
+                                <!-- bookexport start -->
+                                <div class="bookexport">
+                                    <div><a href="javascript:;"><img src="images/bookexport_icon01.png" alt="" class="communitybtn">社群分享</a></div>
+                                    <div><a href="javascript:;" class=""><img src="images/bookexport_icon02.png" alt="">列印</a></div>
+                                    <div><a href="javascript:;" class="referencebtn2"><img src="images/bookexport_icon03.png" alt="">引文</a></div>
+                                    <div><a href="javascript:;" class="forwardbtn2"><img src="images/bookexport_icon04.png" alt="">轉寄他人</a></div>
+                                    <div><a href="javascript:;" class="permanentbtn2"><img src="images/bookexport_icon05.png" alt="">永久連結</a></div>
+                                    <div><a href="javascript:;" class="exportbth2"><img src="images/bookexport_icon06.png" alt="">匯出格式1</a></div>
+                                    <div><a href="javascript:;" class="exportbth2"><img src="images/bookexport_icon06.png" alt="">匯出格式1</a></div>
+                                </div>
+                                <!-- bookexport end -->
+                                <!-- 社群分享區塊start -->
+                                <div class="export_block" id="communitystyle">
+                                    <div class="close"></div>
+                                    <h2>社群分享</h2>
+                                    <div class="communitywebsite">
+                                        <div><a href="#"><img src="images/share_f.png"> Facebook</a></div>
+                                        <div><a href="#"><img src="images/share_t.png">Twitter</a></div>
+                                        <div><a href="#"><img src="images/share_g.png">Google</a></div>
+                                        <div><a href="#"><img src="images/share_github.png"> GitHub</a></div>
+                                        <div><a href="#"><img src="images/share_y.png"> Yahoo</a></div>
+                                        <div><a href="#"><img src="images/share_delious.png"> Delious</a></div>
+                                    </div>
+                                </div>
+                                <!-- 社群分享區塊end -->
+                                <!-- 引文區塊start -->
+                                <div class="export_block" id="referencestyle2">
+                                    <div class="close"></div>
+                                    <h2>引用</h2>
+                                    <form action="">
+                                        <div class="lightbox_data">
+                                            <div class="form_grid">
+                                                <div class="form_grp">
+                                                    <label for=" " class="form_title ">選擇格式：</label>
+                                                    <div class="form_content">
+                                                        <select id="selectSample" name="">
+                                                            <option value="">全部</option>
+                                                            <option value="">哈佛：澳洲</option>
+                                                            <option value="">哈佛</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label for="" class="form_title"> 內容：</label>
+                                                    <div class="form_content ">
+                                                        <textarea name=" " id=" " cols="30 " rows="20 ">Godart, C., Benatallah, B., & Shan, M. (2004). WEC 2004 : First IEEE International Workshop on Electronic Contracting : proceedings : 6 July, 2004, San Diego, California. Place of publication not identified: IEEE Computer Society.
+                                                            </textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <input name="" type="submit" value="複製到剪貼簿">
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- 引文區塊end -->
+                                <!-- 轉寄他人區塊start -->
+                                <div class="export_block" id="forwardstyle2">
+                                    <div class="close"></div>
+                                    <h2>轉寄他人</h2>
+                                    <form action="">
+                                        <div class="lightbox_data">
+                                            <div class="form_grid">
+                                                <div class="form_grp">
+                                                    <label for="" class="form_title"> 寄件人Email：</label>
+                                                    <div class="form_content ">
+                                                        <input type="text " id=" " value=" ">
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label for=" " class="form_title ">收件人Email：</label>
+                                                    <div class="form_content">
+                                                        <input name="" id="" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label for=" " class="form_title ">主旨：</label>
+                                                    <div class="form_content">
+                                                        <input name="" id="" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label for="" class="form_title"> 內容：</label>
+                                                    <div class="form_content ">
+                                                        <textarea name=" " id=" " cols="30 " rows="70 "></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form_grp">
+                                                    <label class="form_title ">驗證碼：</label>
+                                                    <div class="form_content">
+                                                        <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                                        <button type="button" class="btn btn-sm">語音驗證</button>
+                                                        <input type="text" name="" value="" placeholder="請輸入驗證碼">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <input name="" type="reset" value="清除">
+                                            <input name="" type="submit" value="送出">
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- 轉寄他人區塊end -->
+                                <!-- 永久連結區塊start -->
+                                <div class="export_block" id="permanentstyle2">
+                                    <div class="close"></div>
+                                    <h2>永久連結</h2>
+                                    <form action="">
+                                        <div class="lightbox_data">
+                                            <div class="form_grid">
+                                                <input name="" id="" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <input name="" type="submit" value="複製到剪貼簿">
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- 永久連結區塊end -->
+                                <!-- 匯出區塊start -->
+                                <div class="export_block" id="exportstyle2">
+                                    <div class="close"></div>
+                                    <h2>匯出</h2>
+                                    <form>
+                                        <div class="lightbox_data">
+                                            <div class="radio_grp">
+                                                <label>
+                                                    <input name="radioSample" type="radio" value="">匯出HTML格式匯出HTML格式匯出HTML格式匯出HTML格式</label>
+                                                <label>
+                                                    <input name="radioSample" type="radio" value="">匯出ISO格式</label>
+                                                <label>
+                                                    <input name="radioSample" type="radio" value="">匯出至RefMan</label>
+                                                <label>
+                                                    <input name="radioSample" type="radio" value="">匯出至EndNote</label>
+                                                <label>
+                                                    <input name="radioSample" type="radio" value="">匯出至BibTex</label>
+                                                <label>
+                                                    <input name="radioSample" type="radio" value="">匯出至RefWorks XML Format</label>
+                                                <label>
+                                                    <input name="radioSample" type="radio" value="">匯出至RefWorks Tagged Format</label>
+                                                <label>
+                                                    <input name="radioSample" type="radio" value="">匯出至RefWorks Tagged Format</label>
+                                                <label>
+                                                    <input name="radioSample" type="radio" value="">匯出至RefWorks Tagged Format</label>
+                                                <label>
+                                                    <input name="radioSample" type="radio" value="">匯出至RefWorks Tagged Format</label>
+                                            </div>
+                                        </div>
+                                        <div class="btn_grp">
+                                            <input name="" type="submit" value="匯出" />
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- 匯出區塊end -->
+                            </div>
+                            <!-- bookdata2 end -->
+                            <!-- bookdata2 start -->
+                            <div class="bookdata2" id="node02">
+                                <h3><span>館藏位置</span></h3>
+                                <div class="bookplace">
+                                    <form action="" class="form_inline">
+                                        <label>
+                                            <input name="" type="checkbox" value="">只顯示可外借館藏</label>
+                                        <select id="selectSample" name="">
+                                            <option value="">館藏位置篩選</option>
+                                            <option value="">屏東市立圖書館</option>
+                                            <option value="">潮州鎮立圖書館</option>
+                                            <option value="">東港鎮立圖書館</option>
+                                            <option value="">恆春鎮立圖書館</option>
+                                        </select>
+                                        <input type="button" name="" value="跨館調閱">
+                                        <input type="button" name="" value="書目預約">
+                                        <input type="button" name="" value="預約">
+                                    </form>
+                                </div>
+                                <!-- 表格 start-->
+                                <div class="bookplace_list">
+                                    <table id="tree-table" class="table table-hover table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>館藏地/室</th>
+                                                <th>索書號</th>
+                                                <th>資料類型</th>
+                                                <th>狀態/到期日</th>
+                                                <th>條碼號</th>
+                                                <th>備註</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-id="1" data-parent="0" data-level="1">
+                                                <td data-column="name" colspan="6" class="libraryname">屏東市立圖書館</td>
+                                            </tr>
+                                            <tr data-id="2" data-parent="1" data-level="2">
+                                                <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                <td data-title="索書號">ABC 123 456 789</td>
+                                                <td data-title="資料類型">一般圖書</td>
+                                                <td data-title="狀態/到期日">仍在館內</td>
+                                                <td data-title="條碼號">123456789</td>
+                                                <td data-title="備註">無可預約館藏</td>
+                                            </tr>
+                                            <tr data-id="3" data-parent="1" data-level="2">
+                                                <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                <td data-title="索書號">ABC 123 456 789</td>
+                                                <td data-title="資料類型">一般圖書</td>
+                                                <td data-title="狀態/到期日">仍在館內</td>
+                                                <td data-title="條碼號">123456789</td>
+                                                <td data-title="備註">
+                                                    <input type="button" name="" value="預約" class="btn_orange">
+                                                </td>
+                                            </tr>
+                                            <tr data-id="4" data-parent="1" data-level="2">
+                                                <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                <td data-title="索書號">ABC 123 456 789</td>
+                                                <td data-title="資料類型">一般圖書</td>
+                                                <td data-title="狀態/到期日">仍在館內</td>
+                                                <td data-title="條碼號">123456789</td>
+                                                <td data-title="備註">無可預約館藏</td>
+                                            </tr>
+                                            <tr data-id="5" data-parent="0" data-level="1">
+                                                <td data-column="name" colspan="6" class="libraryname">潮州鎮立圖書館</td>
+                                            </tr>
+                                            <tr data-id="6" data-parent="1" data-level="2">
+                                                <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                <td data-title="索書號">ABC 123 456 789</td>
+                                                <td data-title="資料類型">一般圖書</td>
+                                                <td data-title="狀態/到期日">仍在館內</td>
+                                                <td data-title="條碼號">123456789</td>
+                                                <td data-title="備註">無可預約館藏</td>
+                                            </tr>
+                                            <tr data-id="7" data-parent="1" data-level="2">
+                                                <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                <td data-title="索書號">ABC 123 456 789</td>
+                                                <td data-title="資料類型">一般圖書</td>
+                                                <td data-title="狀態/到期日">仍在館內</td>
+                                                <td data-title="條碼號">123456789</td>
+                                                <td data-title="備註">無可預約館藏</td>
+                                            </tr>
+                                            <tr data-id="8" data-parent="1" data-level="2">
+                                                <td data-title="館藏地/室" data-column="name" class="aLeft">屏東市立圖書館/一般書庫區</td>
+                                                <td data-title="索書號">ABC 123 456 789</td>
+                                                <td data-title="資料類型">一般圖書</td>
+                                                <td data-title="狀態/到期日">仍在館內</td>
+                                                <td data-title="條碼號">123456789</td>
+                                                <td data-title="備註">無可預約館藏</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- 表格 end-->
+                            </div>
+                            <!-- bookdata2 end -->
+                            <!-- bookdata2 start -->
+                            <div class="bookdata2" id="node03">
+                                <h3><span>線上連結</span></h3>
+                                <div class="listdata">
+                                    <ul>
+                                        <li><a href="#">超連結網址，名稱為856段分欄Z的文字名稱</a>
+                                            <span>使用期限：無期限</span></li>
+                                        <li><a href="#">超連結網址，名稱為JUMPER中電子期刊或電子書名稱</a>
+                                            <span>使用期限：2018-01-01~2021-12-31</span></li>
+                                        <li><a href="#">超連結網址，名稱為856段分欄Z的文字名稱</a>
+                                            <span>使用期限：無期限</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- bookdata2 end -->
+                            <!-- bookdata2 start -->
+                            <div class="bookdata2" id="node04">
+                                <h3><span>詳細資料</span></h3>
+                                <div class="listdata">
+                                    <ul>
+                                        <li>題名：甲骨文編</li>
+                                        <li>作者：中國科學院考古研究所編</li>
+                                        <li>作品語文：chi</li>
+                                        <li>稽核項：976,44面</li>
+                                        <li>ISBN/ISSN/ISRC： 7-101-00523-3</li>
+                                        <li>叢書名：考古學專刊;14 ； 考古學專刊.乙種;14</li>
+                                        <li>作者：中國科學院考古研究所</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- bookdata2 end -->
+                            <!-- bookdata2 start -->
+                            <div class="bookdata2" id="node05">
+                                <h3><span>書籍簡介</span></h3>
+                                <div class="listdata">
+                                    <p>除了自身擁有極具效率的時間管理方法與極富成效的學習成果， <br> 卡爾．紐波特也採訪了哈佛大學、史丹佛大學等名校裡最優秀的學生們， <br> 追問他們有關時間管理、讀書，以及平衡社交與用功的方法。 </p>
+                                    <p>在擁有足夠智慧與滿腔熱血的年紀，不該浪費你的才華與熱情。 善用校園的軟硬體資源，結識能給自己啟發與靈感的教授、同學，以豐沛的資源與支援為後盾，你可以更有野心、更有計畫地，讓大學4年不光是苦讀或玩樂，更是前途的跳板！在擁有足夠智慧與滿腔熱血的年紀，不該浪費你的才華與熱情。 善用校園的軟硬體資源，結識能給自己啟發與靈感的教授、同學，以豐沛的資源與支援為後盾，你可以更有野心、更有計畫地，讓大學4年不光是苦讀或玩樂，更是前途的跳板！在擁有足夠智慧與滿腔熱血的年紀，不該浪費你的才華與熱情。 善用校園的軟硬體資源，結識能給自己啟發與靈感的教授、同學，以豐沛的資源與支援為後盾，你可以更有野心、更有計畫地，讓大學4年不光是苦讀或玩樂，更是前途的跳板！ </p>
+                                    <ul>
+                                        <li>該怎麼準備考試和報告？</li>
+                                        <li>該參加哪些課外活動？</li>
+                                        <li>該怎麼和教授互動？</li>
+                                        <li>什麼才是刺激思維又維持樂觀的好方法？</li>
+                                        <li>該如何平衡愉快的社交生活與雄心勃勃的日程表？</li>
+                                        <li>怎麼樣才能量身訂製完美的活動，符合你的能力、興趣與喜好？</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- bookdata2 end -->
+                            <!-- bookdata2 start -->
+                            <div class="bookdata2" id="node06">
+                                <h3><span>閱讀推薦</span></h3>
+                                <!-- 輪播start -->
+                                <div class="read_recommend">
+                                    <div>
+                                        <div class="books01"><a href="#"><img src="images/book01.png" alt="">深度學習力：學歷貶值時代，MIT博士教你從大學...</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="books02">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook02.jpg" alt=""></div>劈你的雷正在路上：築設人生避雷針
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook03.jpg" alt=""></div>how fun 如何爽當youtuber
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook04.jpg" alt=""></div>影響孩子一生的曼思妙答
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook05.jpg" alt=""></div>大數據資本主義：金融資本主義退位，重新定義市場
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="books02">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook02.jpg" alt=""></div>劈你的雷正在路上：築設人生避雷針
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook03.jpg" alt=""></div>how fun 如何爽當youtuber
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook04.jpg" alt=""></div>影響孩子一生的曼思妙答
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook05.jpg" alt=""></div>大數據資本主義：金融資本主義退位，重新定義市場
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="books02">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook02.jpg" alt=""></div>劈你的雷正在路上：築設人生避雷針
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook03.jpg" alt=""></div>how fun 如何爽當youtuber
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook04.jpg" alt=""></div>影響孩子一生的曼思妙答
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook05.jpg" alt=""></div>大數據資本主義：金融資本主義退位，重新定義市場
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="books02">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook02.jpg" alt=""></div>劈你的雷正在路上：築設人生避雷針
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook03.jpg" alt=""></div>how fun 如何爽當youtuber
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook04.jpg" alt=""></div>影響孩子一生的曼思妙答
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook05.jpg" alt=""></div>大數據資本主義：金融資本主義退位，重新定義市場
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="books02">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook02.jpg" alt=""></div>劈你的雷正在路上：築設人生避雷針
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook03.jpg" alt=""></div>how fun 如何爽當youtuber
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook04.jpg" alt=""></div>影響孩子一生的曼思妙答
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="bookimg"><img src="images/newbook05.jpg" alt=""></div>大數據資本主義：金融資本主義退位，重新定義市場
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 輪播end -->
+                            </div>
+                            <!-- bookdata2 end -->
+                            <!-- bookdata2 start -->
+                            <div class="bookdata2" id="node07">
+                                <h3><span>標籤雲</span></h3>
+                                <div class="tag_cloud">
+                                    <ul>
+                                        <li><a href="#">讀者設定的標籤1</a></li>
+                                        <li><a href="#">這還是讀者設定的標籤</a></li>
+                                        <li><a href="#">標籤標標籤</a></li>
+                                        <li><a href="#">標</a></li>
+                                        <li><a href="#">標籤</a></li>
+                                        <li><a href="#">標籤標籤</a></li>
+                                        <li><a href="#">設定的標籤</a></li>
+                                        <li><a href="#">讀者設定的標籤1</a></li>
+                                        <li><a href="#">標籤長度要有限度，不然螢幕畫面裝不下的標籤，保守估計應該最多80個字元</a></li>
+                                        <li><a href="#">標籤標標籤</a></li>
+                                        <li><a href="#">標</a></li>
+                                        <li><a href="#">標籤</a></li>
+                                        <li><a href="#">標籤標籤</a></li>
+                                        <li><a href="#">設定的標籤</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- bookdata2 end -->
+                            <!-- bookdata2 start -->
+                            <div class="bookdata2" id="node08">
+                                <h3><span>評分/評論</span></h3>
+                                <div class="rating_review">
+                                    <div class="bookscore">
+                                        <div class="scoreleft">
+                                            <div class="fraction">5.0</div>
+                                            <div class="then">共168則評分</div>
+                                            <input type="button" name="" value="我要評分">
+                                        </div>
+                                        <div class="scoreright">
+                                            <div class="proportion">
+                                                <ul>
+                                                    <li><span>5</span><a href="#"><img src="images/proportion_bg.gif" width="60%;"></a></li>
+                                                    <li><span>4</span><a href="#"><img src="images/proportion_bg.gif" width="40%;"></a></li>
+                                                    <li><span>3</span><a href="#"><img src="images/proportion_bg.gif" width="30%;"></a></li>
+                                                    <li><span>2</span><a href="#"><img src="images/proportion_bg.gif" width="20%;"></a></li>
+                                                    <li><span>1</span><a href="#"><img src="images/proportion_bg.gif" width="10%;"></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 評論block start-->
+                                    <div class="bookcomment">
+                                        <!-- 1 -->
+                                        <div>
+                                            <div class="commentblock">
+                                                <h4>評論主題評論主題評論主題評論主題</h4>
+                                                <div class="score_star">
+                                                    <img src="images/starall.png">
+                                                    <span class="score_color">
+                                                        <img src="images/star_color.gif" width="50px"></span>
+                                                </div>
+                                                <div class="name">小米</div>
+                                                <p>這本書主要涵蓋如何過上不留遺憾的大學生活，以訣竅清單的方式分成章節，很流暢閱讀的一本書。這本書主要涵蓋如何過上不... </p>
+                                                <div class="more" id="commentcontent"><a href="#">顯示更多</a></div>
+                                            </div>
+                                        </div>
+                                        <!-- 2 -->
+                                        <div>
+                                            <div class="commentblock">
+                                                <h4>評論主題評論主題評論主題評論主題</h4>
+                                                <div class="score_star">
+                                                    <img src="images/starall.png">
+                                                    <span class="score_color">
+                                                        <img src="images/star_color.gif" width="50px"></span>
+                                                </div>
+                                                <div class="name">小米</div>
+                                                <p>這本書主要涵蓋如何過上不留遺憾的大學生活，以訣竅清單的方式分成章節，很流暢閱讀的一本書。這本書主要涵蓋如何過上不... </p>
+                                                <div class="more"><a href="#">顯示更多</a></div>
+                                            </div>
+                                        </div>
+                                        <!-- 3 -->
+                                        <div>
+                                            <div class="commentblock">
+                                                <h4>評論主題評論主題評論主題評論主題</h4>
+                                                <div class="score_star">
+                                                    <img src="images/starall.png">
+                                                    <span class="score_color">
+                                                        <img src="images/star_color.gif" width="50px"></span>
+                                                </div>
+                                                <div class="name">小米</div>
+                                                <p>這本書主要涵蓋如何過上不留遺憾的大學生活，以訣竅清單的方式分成章節，很流暢閱讀的一本書。這本書主要涵蓋如何過上不... </p>
+                                                <div class="more"><a href="#">顯示更多</a></div>
+                                            </div>
+                                        </div>
+                                        <!-- 4 -->
+                                        <div>
+                                            <div class="commentblock">
+                                                <h4>評論主題評論主題評論主題評論主題</h4>
+                                                <div class="score_star">
+                                                    <img src="images/starall.png">
+                                                    <span class="score_color">
+                                                        <img src="images/star_color.gif" width="50px"></span>
+                                                </div>
+                                                <div class="name">小米</div>
+                                                <p>這本書主要涵蓋如何過上不留遺憾的大學生活，以訣竅清單的方式分成章節，很流暢閱讀的一本書。這本書主要涵蓋如何過上不... </p>
+                                                <div class="more"><a href="#">顯示更多</a></div>
+                                            </div>
+                                        </div>
+                                        <!-- -->
+                                    </div><!-- 評論block end-->
+                                    <div class="more commentmore"><a href="cp02_評分評論.html">更多評分/評論</a></div>
+                                </div>
+                                <!-- 更多評論燈箱start -->
+                                <div class="commentcontent_lightbox" id="commentcontent_lightbox">
+                                    <div class="close3"><img src="images/icon_close.png"></div>
+                                    <div class="overlay"></div>
+                                    <div class="bookcomment2">
+                                        <div class="commentblock">
+                                            <h4>評論主題評論主題評論主題評論主題</h4>
+                                            <div class="score_star">
+                                                <img src="images/starall.png">
+                                                <span class="score_color"><img src="images/star_color.gif" width="50px"></span>
+                                            </div>
+                                            <div class="name">小米</div>
+                                            <p>大學，你花了好幾年準備，聽過無數關於它的傳聞，現在，你終於來到這一刻。學力測驗考完了，你申請的大學錄取你了，過不久，高中將成為逐漸淡去的回憶，你即將踏上壯闊的旅程、一場永生難忘的大冒險。 </p>
+                                            <p>大學將會是自由又刺激的四年，你將在玩樂中成長，這一點無庸置疑，在外面開趴玩到半夜兩點、和朋友聊天聊到天明、享受期中考前臨時抱佛腳的混亂、找到鑑賞校內餐飲的竅門、學會寫有說服力的文章，還有想辦法把床單弄成羅馬樣式的托加長袍……相信我，你將迎來精采的大學人生。</p>
+                                            <p>然而，大學四年不只是玩樂休閒，還是你前途的跳板。嚴厲的現實是，這年頭找份好工作談何容易，錄取優秀學院的研究所同樣難如登天，你只有短短四年時間，你必須在這四年內準備好面對校園以外的世界。現在採取正確的行動，將來就有能力從事任何賦予你靈感的行業；如果不善加利用這四年，要踏上充實有趣的人生道路將更加困難重重。</p>
+                                            <p>但一個人真的有可能成為成功的大學生，同時享受歡樂的四年嗎？我最初踏入大學校園時也覺得沒辦法，你不可能又要玩樂，又要當優良學生。在當時的我看來，你只有兩種選擇：你可以當歡樂學生，把所有精力花在社交、認識新朋友與製造愉快回憶，否則就勤苦學習，每週末躲在圖書館深處念書。我真的以為魚與熊掌不可兼得，直到我認識了海蒂。</p>
+                                            <p>大學，你花了好幾年準備，聽過無數關於它的傳聞，現在，你終於來到這一刻。學力測驗考完了，你申請的大學錄取你了，過不久，高中將成為逐漸淡去的回憶，你即將踏上壯闊的旅程、一場永生難忘的大冒險。 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 更多評論燈箱end -->
+                            </div>
+                            <!-- bookdata2 end -->
+                            <!-- bookdata2 start -->
+                            <div class="bookdata2" id="node09">
+                                <h3><span>MARC格式</span></h3>
+                                <div class="MARC">
+                                    <table>
+                                        <tr>
+                                            <td>001</td>
+                                            <td></td>
+                                            <td>00087463</td>
+                                        </tr>
+                                        <tr>
+                                            <td>010</td>
+                                            <td>0&nbsp; </td>
+                                            <td> |a7-101-00523-3|b 精裝 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>100</td>
+                                            <td>&nbsp;&nbsp; </td>
+                                            <td> |a19920512d1955 y0chib09 e </td>
+                                        </tr>
+                                        <tr>
+                                            <td>101</td>
+                                            <td>0&nbsp; </td>
+                                            <td> |achi </td>
+                                        </tr>
+                                        <tr>
+                                            <td>102</td>
+                                            <td>&nbsp;&nbsp; </td>
+                                            <td> |acn </td>
+                                        </tr>
+                                        <tr>
+                                            <td>105</td>
+                                            <td>&nbsp;&nbsp; </td>
+                                            <td> |ay z 000yy </td>
+                                        </tr>
+                                        <tr>
+                                            <td>200</td>
+                                            <td>1&nbsp; </td>
+                                            <td> |a甲骨文編|f中國科學院考古研究所編 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>210</td>
+                                            <td>&nbsp;&nbsp; </td>
+                                            <td> |a北京|c中華書局印行|d民44 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>215</td>
+                                            <td>0&nbsp; </td>
+                                            <td> |a976,44面|d27公分 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>225</td>
+                                            <td>2&nbsp; </td>
+                                            <td> |a考古學專刊|i乙種|v14 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>461</td>
+                                            <td>&nbsp;0 </td>
+                                            <td> |12001 |a 考古學專刊|i乙種|v14 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>710</td>
+                                            <td>02 </td>
+                                            <td> |a中國科學院考古研究所 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>801</td>
+                                            <td>&nbsp;0 </td>
+                                            <td> |acw|b東海|c19920512 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>801</td>
+                                            <td>&nbsp;1 </td>
+                                            <td> |acw|b東海|c19920512 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>805</td>
+                                            <td>&nbsp;&nbsp; </td>
+                                            <td> |a東海|bLBSP|cC099768|d792.1|e5062|pMA|fDL|zRB|m0|tCCL </td>
+                                        </tr>
+                                        <tr>
+                                            <td>805</td>
+                                            <td>&nbsp;&nbsp; </td>
+                                            <td> |a東海|bAC|cC218068|d792.1|e5062|pMA|ly.1992|fDL|zRB|m0|tCCL </td>
+                                        </tr>
+                                        <tr>
+                                            <td>805</td>
+                                            <td>&nbsp;&nbsp; </td>
+                                            <td> |a東海|bLBSP|cC402377|d792.1|e5062|pMA|l2004六刷|fIMARCHEN|zRB|m814|tCCL </td>
+                                        </tr>
+                                        <tr>
+                                            <td>805</td>
+                                            <td>&nbsp;&nbsp; </td>
+                                            <td> |a東海|bLBSP|cC402378|d792.1|e5062|pMA|l2004六刷|fIMARCHEN|zRB|m814|tCCL </td>
+                                        </tr>
+                                        <tr>
+                                            <td>805</td>
+                                            <td>&nbsp;&nbsp; </td>
+                                            <td> |a東海|bLBSP|cC402379|d792.1|e5062|pMA|l2004六刷|fIMARCHEN|zRB|m814|tCCL </td>
+                                        </tr>
+                                        <tr>
+                                            <td>805</td>
+                                            <td>&nbsp;&nbsp; </td>
+                                            <td> |a東海|bLBSP|cC402380|d792.1|e5062|pMA|l2004六刷|fIMARCHEN|zCIR|m814|tCCL </td>
+                                        </tr>
+                                        <tr>
+                                            <td>809</td>
+                                            <td>&nbsp;&nbsp; </td>
+                                            <td> |pMA|d792.1|e5062 </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- bookdata2 end -->
+                        </div>
+                        <!-- 書本詳細資料 end -->
+                    </div>
+                    <!-- 右欄左線end -->
+                </div>
+                <!-- 右欄 end  -->
+            </div>
+        </div>
+        <!-- 分欄end -->
+    </div>
+    <!-- 詳目頁燈箱end  -->
+    <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
+    <script type="text/javascript" src="vendor/slick/slick.js">
+    </script>
+    <!-- 出版年度js -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- 出版年度js -->
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

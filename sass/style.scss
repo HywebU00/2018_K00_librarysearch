@@ -359,6 +359,14 @@
             }
         }
     }
+    // 掃描條碼
+    .scanning_button {
+        background-color: nth($primaryColor, $style);
+        &:hover {
+            background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // 
 }
 // 客製版01花蓮
 .customization01 {
@@ -695,6 +703,14 @@
             }
         }
     }
+    // 掃描條碼
+    .scanning_button {
+        background-color: nth($primaryColor, $style);
+        &:hover {
+            background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // 
 }
 // 版型01
 .version01 {
@@ -1033,6 +1049,14 @@
             }
         }
     }
+    // 掃描條碼
+    .scanning_button {
+        background-color: nth($primaryColor, $style);
+        &:hover {
+            background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // 
 }
 // 版型02
 .version02 {
@@ -1371,6 +1395,14 @@
             }
         }
     }
+    // 掃描條碼
+    .scanning_button {
+        background-color: nth($primaryColor, $style);
+        &:hover {
+            background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // 
 }
 // 版型03
 .version03 {
@@ -1709,6 +1741,14 @@
             }
         }
     }
+    // 掃描條碼
+    .scanning_button {
+        background-color: nth($primaryColor, $style);
+        &:hover {
+            background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // 
 }
 // 版型04
 .version04 {
@@ -1937,7 +1977,7 @@
     }
     .device_explain {
         background-color: nth($lightColor, $style);
-        color: #fff;
+        color: #333;
         h3 {
             font-weight: 400;
         }
@@ -2047,6 +2087,14 @@
             }
         }
     }
+    // 掃描條碼
+    .scanning_button {
+        background-color: nth($primaryColor, $style);
+        &:hover {
+            background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // 
 }
 // 版型05
 .version05 {
@@ -2386,6 +2434,14 @@
             }
         }
     }
+    // 掃描條碼
+    .scanning_button {
+        background-color: nth($primaryColor, $style);
+        &:hover {
+            background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // 
 }
 // 版型06
 .version06 {
@@ -2725,4 +2781,12 @@
             }
         }
     }
+    // 掃描條碼
+    .scanning_button {
+        background-color: nth($primaryColor, $style);
+        &:hover {
+            background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // 
 }

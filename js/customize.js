@@ -559,6 +559,46 @@ $(function() {
             // instead of a settings object
         ]
     });
+    //閱讀存摺
+    $('.read_passbook_tab').slick({
+        infinite: false,
+        speed: 2000,
+        autoplay: false,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        dots: false,
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                }
+            }, {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            }, {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: false,
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
     //tabs
     $(".tabs").tabs({
         tiGap: 10,
@@ -887,6 +927,20 @@ $(function() {
     })
     $('.overlay').click(function() {
         $('#explain_linghtbox').fadeOut();
+        $('body').removeClass('fix');
+    })
+    // 獎勵兌換條碼
+    $('#reward_barcodebtn').click(function() {
+        
+        $('#reward_barcodestyle').fadeIn();
+        $('body').addClass('fix');
+    })
+    $('.lightboxstyle_block .close').click(function() {
+        $('#reward_barcodestyle').fadeOut();
+        $('body').removeClass('fix');
+    })
+    $('.overlay').click(function() {
+        $('#reward_barcodestyle').fadeOut();
         $('body').removeClass('fix');
     })
 })

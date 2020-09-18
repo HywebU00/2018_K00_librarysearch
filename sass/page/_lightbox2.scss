@@ -747,6 +747,67 @@ body.fix {
                 background-repeat: no-repeat;
                 padding: 0 0 0 30px;
             }
+            // 兌換條碼
+            .timedata{
+                display: flex;
+                font-size: 1.125em;
+                align-items: center;
+                margin:0 0 20px;
+                .reciprocal{
+                    flex:none;
+                    flex-basis: 50%;
+                    text-align: center;
+                    font-size: 1.125em;
+                     @media(max-width: 400px){
+                        flex-basis: 40%
+                     }
+                }
+                .retime{
+                    flex:none;
+                    flex-basis: 50%;
+                    @media(max-width: 400px){
+                        flex-basis: 60%
+                     }
+                    a{
+                        display: inline-block;
+                        border-radius:50px;
+                        background-color:#E57373;
+                        color:#fff;
+                        padding:10px 25px;
+                        text-align: center;
+                        white-space: nowrap;
+                        img{
+                            width:20px;
+                            margin-right: 10px;
+                            vertical-align: middle
+                        }
+
+                    }
+                }
+            }
+            .barcode_block{
+                text-align: center;
+                padding:20px 10px 0;
+                border:1px solid #ccc;
+                border-radius: 10px;
+                .num{
+                    margin-bottom: 5px;
+                    display: block;
+                }
+                img{
+                    width:300px;
+                    margin-bottom: 10px;
+                    display: block;
+                    margin:0 auto;
+                    @media(max-width: 400px){
+                        width:90%;
+                    }
+                }
+                p{
+                    font-size: 0.813em;
+                }
+
+            }
         }
         .lightbox_image {
             img {

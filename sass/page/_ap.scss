@@ -1319,6 +1319,38 @@
         }
     }
 }
+// 篩選
+.filter_block {
+    clear: both;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding: 5px 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 3px #eee inset;
+    .form_grid {
+        .form_grp {
+            border-bottom: none;
+            padding-bottom: 0;
+            &.form_inline {
+                display: inline-block;
+                width: 48%;
+                margin-right: 2%;
+                @include screen('tablet') {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+            &.rightcol {
+                margin-right: 0;
+            }
+            .form_title {
+                font-size: 1.125em;
+                margin: 0;
+            }
+        }
+    }
+}
 // 分類項目
 .classification_projectblock {
     clear: both;
@@ -1825,26 +1857,27 @@
             left: 0;
             top: 2px;
         }
-        a{
-            color:$color-orange;
+        a {
+            color: $color-orange;
             position: relative;
-            &.explain_btn{
-                &:before{
-                    content: 'i',;
-                    border:1px solid $color-orange;
-                    border-radius:50%;
+            &.explain_btn {
+                padding-right: 30px;
+                display: inline-block;
+                &:after {
+                    content: 'i', ;
+                    border: 1px solid $color-orange;
+                    border-radius: 50%;
                     font-size: 1em;
                     position: absolute;
-                    right:-25px;
-                    width:20px;
+                    right: 0;
+                    width: 20px;
                     height: 20px;
                     text-align: center;
                     line-height: 1.125em;
-
                 }
             }
-            &:hover{
-                color:$color-red;
+            &:hover {
+                color: $color-red;
                 text-decoration: underline;
             }
         }
@@ -1872,6 +1905,22 @@
             width: 100%;
         }
     }
+    .scanning_button {
+        display: inline-block;
+        text-align: center;
+        padding: 15px 30px;
+        font-size: 1.125em;
+        color: #fff;
+        border-radius: 4px;
+        width: 250px;
+        background-color: nth($primaryColor, $style);
+        @media(max-width: 400px) {
+            width: 70%;
+        }
+        &:hover {
+            background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
     .collection_data {
         margin: 0px;
         padding: 30px 40px 40px;
@@ -1893,24 +1942,28 @@
                 width: 100%;
                 box-shadow: 2px 2px 5px #999;
             }
-            .success{
+            .success {
                 text-align: center;
                 background-color: rgba(0, 0, 0, .6);
                 border-radius: 50px;
-                padding:15px;
+                padding: 15px;
                 position: absolute;
-                top:40%;
-                left:-25px;
+                top: 40%;
+                left: -25px;
                 width: 180px;
-                color:#fff;
+                color: #fff;
                 font-size: 1.125em;
-                img{
-                    width:40px;
+                z-index: 3;
+                img {
+                    width: 40px;
                     box-shadow: none;
                     margin-right: 10px;
                     vertical-align: middle;
-                    outline:none;
+                    outline: none;
                 }
+            }
+            .image_titlepage, .image_titlepage2{
+                height: 200px;
             }
         }
         ul {
@@ -1926,6 +1979,378 @@
                 @include screen('xs_mobile') {
                     padding: 0 0 15px;
                     margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+// 閱讀存摺
+.read_passbook_block {
+    overflow: hidden;
+    padding: 30px 30px 30px;
+    margin-bottom: 30px;
+    // 
+    .read_passbook_tab {
+        margin: 30px 10px 20px;
+        @include box-sizing;
+        @include screen('tablet') {
+            width: 90%;
+            margin: 30px auto;
+        }
+        @media(max-width: 480px) {
+            width: 75%;
+        }
+        .sort {
+            padding: 0 5px;
+            a {
+                display: block;
+                padding: 20px 30px;
+                @include gradient(#dcdcdc, #e5e5e5, vertical);
+                color: #333;
+                font-size: 1.25em;
+                text-align: center;
+                border-radius: 5px;
+                position: relative;
+                transition: .2s;
+                &:hover {
+                    background-image: none;
+                    background-color: $color-yellow;
+                    color: #fff;
+                }
+                &.here {
+                    background: $color-yellow;
+                    color: #fff;
+                }
+            }
+        }
+        .slick-next {
+            right: -45px;
+        }
+        .slick-prev {
+            left: -45px;
+        }
+        @media(max-width: 400px) {
+            .slick-next {
+                right: -36px;
+            }
+            .slick-prev {
+                left: -36px;
+            }
+        }
+    }
+    .read_passbook_content {
+        margin: 10px 12px;
+        border-radius: 5px;
+        float: none;
+        clear: both;
+        padding: 20px;
+        text-align: left;
+        background-color: #e5e5e5;
+        @include box-sizing;
+        @include screen('xs_mobile') {
+            padding: 20px 10px;
+        }
+    }
+    .form_grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .form_grp {
+        display: flex;
+        flex: none;
+        flex-basis: 48%;
+        margin-right: 1.5%;
+        @include screen('tablet') {
+            flex-basis: 100%;
+            margin-right: 0;
+        }
+        @include screen('xs_mobile') {
+            display: block;
+        }
+        .form_title {
+            flex: none;
+            flex-basis: 140px;
+            width: 140px !important;
+            @include screen('xs_mobile') {
+                flex-basis: 100%;
+                width: 100% !important;
+            }
+        }
+        .form_content {
+            flex: auto;
+            display: flex;
+            width: calc(100% - 150px) !important;
+            @include screen('xs_mobile') {
+                width: 100% !important;
+            }
+            select {
+                width: 100%;
+            }
+            .select_date {
+                width: 47%;
+                display: flex;
+                position: relative;
+                input[type="text"] {
+                    width: 60%;
+                }
+                .image {
+                    position: absolute;
+                    right: 5px;
+                }
+            }
+            .points {
+                width: 47%;
+                input[type="text"] {
+                    width: 100%;
+                }
+            }
+            .to {
+                padding: 5px 10px;
+                width: 6%;
+                text-align: center;
+            }
+        }
+    }
+}
+// 我的點數
+.mypoints {
+    margin: 20px 10px;
+    padding: 0;
+    display: flex;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    align-items: center;
+    @include screen('tablet') {
+        display: block;
+    }
+    .title {
+        font-size: 1.5em;
+        background-color: $color-orange;
+        margin-right: 50px;
+        margin-left: -30px;
+        font-weight: 800;
+        transform: skewX(-25deg);
+        padding: 20px 30px 20px 50px;
+        span {
+            color: #fff;
+            transform: skewX(25deg);
+            display: block;
+        }
+        @include screen('tablet') {
+            margin: 0 0 20px;
+            transform: skewX(0);
+            padding: 15px 30px;
+            span {
+                transform: skewX(0);
+            }
+        }
+    }
+    .accumulation, .maturity {
+        margin-right: 50px;
+        padding-left:90px;
+        em {
+            color: $color-red;
+            font-size: 1.25em;
+            margin-right: 5px;
+            font-weight: 600;
+        }
+        @include screen('tablet') {
+            margin: 0 30px 20px;
+        }
+    }
+    .subtitle {
+        font-size: 0.938em;
+        color: #fff;
+        background-color: #ddd;
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin-right: 15px;
+        position: relative;
+        margin-left: -98px;
+        &:before {
+            content: '';
+            border: 8px solid #ddd;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            position: absolute;
+            right: -15px;
+            top: 8px;
+        }
+        &.bluebg {
+            background-color: $color-blue;
+            &:before {
+                border-color: $color-blue;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+            }
+        }
+        &.greenbg {
+            background-color: $color-green;
+            &:before {
+                border-color: $color-green;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+            }
+        }
+    }
+    .date {
+        margin-left: 10px;
+        font-weight: bolder;
+        font-size: 1.125em;
+        color: $color-green;
+        @media(max-width: 480px){
+            display: block;
+            margin-left:0;
+        }
+    }
+}
+
+// 閱讀存摺清單
+.data_all {
+    margin:0;
+    .choosebtn {
+        position: relative;
+        a {
+            position: relative;
+            &.prompt3 {
+                width: 25px;
+                height: 25px;
+                background-color: #666;
+                color: #fff;
+                border-radius: 50%;
+                display: block;
+                line-height: 25px;
+                display: inline-block;
+                text-align: center;
+                margin-right: 5px;
+            }
+            &.arrow {
+                position: relative;
+                &:before {
+                    content: '';
+                    border: 12px solid #666;
+                    border-color: #666 transparent transparent transparent;
+                    position: absolute;
+                    bottom: 15px;
+                    left: 0;
+                }
+            }
+        }
+        .prompt_block3 {
+            background-color: #666;
+            color: #fff;
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            width: 200px;
+            border-radius: 5px;
+            display: none;
+            @include box-sizing;
+            padding: 10px 15px;
+        }
+    }
+}
+// 獎勵清單
+.read_passbook_list {
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media(max-width: 900px){
+        display: block;
+    }
+    .reward_list {
+        flex: auto;
+        flex-basis: 49%;
+        max-width: 49%;
+        position: relative;
+        margin-bottom: 20px;
+        @media(max-width: 900px) {
+            flex-basis: 100%;
+            max-width: 100%;
+
+        }
+        >a {
+            display: block;
+            background-color: #fff;
+            // border: 1px solid #ddd;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            overflow: hidden;
+            padding: 15px;
+            border-radius: 5px;
+            color: #333;
+            &:hover {
+                background-color: #ffc;
+                color: #333;
+            }
+            .image {
+                width: 150px;
+                float: left;
+                margin-right: 30px;
+                overflow: hidden;
+                img {
+                    width: 150px;
+                }
+                @media(max-width:480px) {
+                    float: none;
+                    margin: 0 auto 20px;
+                }
+            }
+            .content {
+                overflow: hidden;
+                .title {
+                    font-size: 1.25em;
+                    margin-bottom: 10px;
+                    color:#333;
+                    border-bottom: 1px dashed #ccc;
+                    padding-bottom: 10px;
+                    font-weight: 800;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    margin-right: 40px;
+                }
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    li {
+                        margin: 0 0 5px;
+                        em {
+                            font-style: normal;
+                            color: $color-orange;
+                            margin-right: 5px;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+        .collection {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #fff;
+                line-height: 40px;
+                text-align: center;
+                &:hover {
+                    background-color: #e5e5e5;
+                }
+                img {
+                    width: 22px;
+                    height: 22px;
+                    vertical-align: middle;
                 }
             }
         }

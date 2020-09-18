@@ -28,8 +28,9 @@
         @include make-md-column(3);
         @include make-lg-column(3);
         @include gutter();
-        padding-top: 5px;
+        padding-top: 12px;
         padding-left: 20px;
+        margin-top: 0;
     }
 
     .form_content {
@@ -453,3 +454,11 @@ input,
         /*IE*/
     }
 
+.any_width{
+    width: auto !important;
+    margin-right: 10px;
+  @media(max-width: 400px){
+        width: 100% !important;
+        margin-right: 0;
+    }
+}
