@@ -42,6 +42,7 @@
                 @include background-image(linear-gradient(top, rgba(247, 247, 247, 1) 0%, rgba(234, 234, 234, 1) 100%));
                 border: #ccc solid 1px;
                 text-align: center;
+                transition: .5s;
 
                 &:hover,
                 &:focus {

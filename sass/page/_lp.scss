@@ -92,6 +92,20 @@
     text-align: right;
     padding: 6px 10px 3px;
     min-height: 37px;
+    &.no_bottomline {
+        border-bottom: none;
+    }
+    &.no_bottomline_s {
+        border-bottom: none;
+        padding: 6px 30px 3px;
+        margin-bottom: 0px;
+        .data_quantity2 {
+            @media(max-width: 380px) {
+                position: relative;
+                right: 5px;
+            }
+        }
+    }
     @include screen('mobile') {
         text-align: left;
     }
@@ -131,18 +145,18 @@
     }
 }
 .data_explain {
-    margin: 10px 30px;
+    margin: 5px 0 0 0;
     display: inline-block;
     text-align: left;
     float: left;
     vertical-align: top;
-    font-size: 1.125em;
+    font-size: 1.063em;
     position: relative;
     color: #333;
-    padding-left: 20px; 
+    padding-left: 20px;
     &:before {
         content: '';
-        border: 10px solid #eb574b;
+        border: 8px solid #eb574b;
         border-top-color: transparent;
         border-right-color: transparent;
         border-bottom-color: transparent;
@@ -163,9 +177,10 @@
         float: right;
         margin-right: 5px;
         margin-top: 5px;
+        margin-bottom: 10px;
     }
     @media(max-width: 380px) {
-        margin: 8px 0px 0 0;
+        margin: 8px 0px 10px 0;
         position: absolute;
         right: 8px;
     }
@@ -173,7 +188,7 @@
         position: relative;
         width: 100%;
         right: auto;
-        margin: 15px 0px 0 0;
+        margin: 15px 0px 10px 0;
     }
     .number_pens {
         margin: 5px 0;
