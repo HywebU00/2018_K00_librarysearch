@@ -262,7 +262,7 @@ body.fix {
     // width: 70vw;
     .librarycard {
         display: inline-block;
-        margin: 0 1%;
+        margin: 0 1% 10px;
         width: 47%;
         @include screen('notebook'){
             width:100%;

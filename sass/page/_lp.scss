@@ -86,6 +86,9 @@
 }
 // 
 //條列頁 
+.no_bottomline .data_all{
+    border-bottom: none;
+}
 .data_all {
     border-bottom: 1px solid $color-gray;
     position: relative;
