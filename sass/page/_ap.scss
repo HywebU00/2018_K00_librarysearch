@@ -2380,6 +2380,7 @@
                 overflow: hidden;
                 img {
                     width: 150px;
+                    max-height: 170px;
                 }
                 @media(max-width:480px) {
                     float: none;
