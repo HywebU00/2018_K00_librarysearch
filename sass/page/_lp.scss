@@ -86,8 +86,19 @@
 }
 // 
 //條列頁 
-.no_bottomline .data_all{
+.no_bottomline .data_all {
     border-bottom: none;
+}
+.no_bottomline_s .data_all {
+    border-bottom: none;
+    padding: 6px 30px 3px;
+    margin-bottom: 0px;
+}
+.disabledCard {
+    pointer-events: none;
+    opacity: .4;
+    box-shadow: none;
+    cursor: not-allowed;
 }
 .data_all {
     border-bottom: 1px solid $color-gray;
