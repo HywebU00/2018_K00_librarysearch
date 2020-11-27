@@ -2115,7 +2115,7 @@
 // 我的點數
 .mypoints {
     margin: 20px 10px;
-    padding: 0px 0 0px 210px;
+    padding:8px 0 0;
     display: flex;
     border-radius: 5px;
     background-color: #fff;
@@ -2146,10 +2146,9 @@
         margin: 20px 30px;
     }
     &.bluetitle {
-        &:before{
+        &:before {
             background-color: #005d98;
         }
-        
     }
     @include screen('tablet') {
         display: block;
@@ -2158,11 +2157,12 @@
         font-size: 1.25em;
         font-weight: 700;
         margin-right: 50px;
-        margin-left: -230px;
-        padding: 15px 30px 15px 50px;
+        
+        padding: 15px 30px ;
         flex: none;
         flex-basis: 100px;
         position: relative;
+        @include box-sizing;
         span {
             color: #fff;
             white-space: nowrap;
@@ -2183,84 +2183,88 @@
             padding: 10px 15px;
         }
     }
-    .accumulation, .maturity {
-        padding: 5px 0 0 90px;
-        margin: 0px 40px 0px 0;
-        min-width: 50px;
-        height: 30px;
+    .content {
+        flex: auto;
+        flex-basis: calc( 100% - 230px);
         display: flex;
-        em {
-            color: $color-red;
-            font-size: 1.5em;
-            margin-right: 5px;
-            font-weight: 600;
-            display: inline-block;
+        flex-wrap: wrap;
+        .accumulation, .maturity {
+            padding: 5px 0 0 90px;
+            margin: 0px 40px 8px 0;
+            min-width: 50px;
+            height: 30px;
+            display: flex;
+            em {
+                color: $color-red;
+                font-size: 1.5em;
+                margin-right: 5px;
+                font-weight: 600;
+                display: inline-block;
+            }
+            @include screen('tablet') {
+                margin: 0 0px 8px 25px;
+            }
+             @media(max-width: 480px){
+                margin: 0 0px 8px 10px;
+             }
+           
         }
-        @include screen('tablet') {
-            margin: 0 0px 10px 40px;
-        }
-        @media(max-width: 480px) {
-            display: block;
-            height: auto;
-            margin: 0 20px 10px 20px;
-        }
-    }
-    .maturity {
-        margin: 5px 40px 8px 0;
-        @include screen('tablet') {
-            margin: 0 0px 10px 40px;
-        }
-        @media(max-width: 480px) {
-            margin: 0 20px 10px 20px;
-        }
-    }
-    .subtitle {
-        font-size: 0.938em;
-        color: #fff;
-        background-color: #ddd;
-        padding: 5px 10px;
-        border-radius: 4px;
-        margin: -5px 15px 0 -98px;
-        position: relative;
-        white-space: nowrap;
-        &:before {
-            content: '';
-            border: 8px solid #ddd;
-            border-top-color: transparent;
-            border-right-color: transparent;
-            border-bottom-color: transparent;
-            position: absolute;
-            right: -15px;
-            top: 8px;
-        }
-        &.bluebg {
-            background-color: $color-blue;
+        // .maturity {
+        //     @include screen('tablet') {
+        //         margin: 0 0px 10px 40px;
+        //     }
+        //     @media(max-width: 480px) {
+        //         margin: 0 20px 10px 20px;
+        //     }
+        // }
+        .subtitle {
+            font-size: 0.938em;
+            color: #fff;
+            background-color: #ddd;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin: -5px 15px 0 -85px;
+            position: relative;
+            white-space: nowrap;
             &:before {
-                border-color: $color-blue;
+                content: '';
+                border: 8px solid #ddd;
                 border-top-color: transparent;
                 border-right-color: transparent;
                 border-bottom-color: transparent;
+                position: absolute;
+                right: -15px;
+                top: 8px;
+            }
+            &.bluebg {
+                background-color: $color-blue;
+                &:before {
+                    border-color: $color-blue;
+                    border-top-color: transparent;
+                    border-right-color: transparent;
+                    border-bottom-color: transparent;
+                }
+            }
+            &.greenbg {
+                background-color: $color-green;
+                &:before {
+                    border-color: $color-green;
+                    border-top-color: transparent;
+                    border-right-color: transparent;
+                    border-bottom-color: transparent;
+                }
             }
         }
-        &.greenbg {
-            background-color: $color-green;
-            &:before {
-                border-color: $color-green;
-                border-top-color: transparent;
-                border-right-color: transparent;
-                border-bottom-color: transparent;
+        .date {
+            margin-left: 10px;
+            font-weight: bolder;
+            font-size: 1.125em;
+            color: $color-green;
+            white-space: nowrap;
+            @media(max-width: 480px) {
+                display: block;
+                margin-left: 0px;
             }
-        }
-    }
-    .date {
-        margin-left: 10px;
-        font-weight: bolder;
-        font-size: 1.125em;
-        color: $color-green;
-        white-space: nowrap;
-        @media(max-width: 480px) {
-            display: block;
-            margin-left: 0px;
         }
     }
 }
