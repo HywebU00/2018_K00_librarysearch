@@ -379,16 +379,23 @@ pre {
         border: 1px solid #f8941b;
         color: #fff;
         padding: 0.2em .5em .2em 1em !important;
-        background-image: url('../images/icon_rss.png');
+        background-image: url('../images/icon_rss.png')!important;
         background-repeat: no-repeat;
         background-position: 7px center;
         background-size: 15px 14px;
         img {
             margin-right: 5px !important;
         }
-        &:hover {
-            background-color: darken(#f8941b, 7);
-            border: 1px solid darken(#f8941b, 7);
+        &:hover, &:focus {
+            color: #fff;
+            background-color: darken(#f8941b, 7)!important
+            ;
+            border: 1px solid darken(#f8941b, 7)!important;
+             background-image: url('../images/icon_rss.png')!important;
+              background-repeat: no-repeat;
+              background-position: 7px center;
+             background-size: 15px 14px!important;
+
         }
     }
 }
@@ -420,8 +427,6 @@ select {
     margin: 0 5px 5px 1px;
     border-radius: 4px;
     display: inline-block;
-    // text-decoration: none;
-    // background-repeat: no-repeat;
     background-position: 8px center;
     transition: .2s;
     -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.2) !important;
@@ -433,7 +438,7 @@ select {
     color: #fff !important;
     text-decoration: none !important;
     position: relative;
-    &:hover {
+    &:hover, &:focus {
         background-color: #e5e5e5;
         color: #000;
         // box-shadow:none;

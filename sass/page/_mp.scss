@@ -451,6 +451,24 @@
                 float: left;
                 @include screen('xs_mobile') {
                     float: none;
+                    display: inline-block;
+                }
+            }
+            .RSS_button {
+                position: absolute;
+                left: 0;
+                top: 20px;
+                font-size: 0.938em;
+                .btn {
+                    padding: 0em .2em 0em 1.5em !important;
+                    min-width: 4em;
+                    margin: .5em .1em;
+                    background-size: 13px;
+                }
+                @include screen('xs_mobile') {
+                    position: relative;
+                    top: -3px;
+                    display: inline-block;
                 }
             }
             ul {
@@ -516,7 +534,7 @@
                     display: inline-block;
                     background-color: $importantColor;
                     color: #fff;
-                    padding: 3px 5px 3px 40px;
+                    padding: 3px 15px 3px 40px;
                     border-radius: 3px;
                     display: inline-block;
                     margin-right: 10px;
@@ -525,7 +543,7 @@
                     background-repeat: no-repeat;
                     background-size: 18px;
                     background-position: 8px 5px;
-                    width: 120px;
+                    width: auto;
                     line-height: 1.3em;
                     vertical-align: top;
                     @include box-sizing;
@@ -790,24 +808,20 @@
                     margin: 0 auto 10px;
                     width: 148px;
                     height: 200px;
-                     &:before {
-                             height: 100px;
-                        }
-                    
-                    .booktitle  {
+                    &:before {
+                        height: 100px;
+                    }
+                    .booktitle {
                         text-align: left !important;
                         white-space: normal !important;
-                        
                     }
                     .author {
-                         text-align: left !important;
+                        text-align: left !important;
                         white-space: normal !important;
                         -webkit-line-clamp: 2 !important;
                     }
                 }
-                .image_titlepage2{
-                   
-                }
+                .image_titlepage2 {}
                 &:hover {
                     color: $aHover;
                 }
@@ -1284,32 +1298,53 @@
                 @include screen('tablet') {
                     width: 45%;
                 }
-                img {
-                    width: 100%;
+                a {
+                    color: #000;
+                    &:hover {
+                        color: $importantColor;
+                    }
+                }
+                .image {
+                    height: 268px;
+                    background-color: #fff;
+                    position: relative;
                     margin-bottom: 15px;
-                    max-height: 380px;
-                    display: block;
-                    @media(max-width: 1900px) {
-                        max-height: 370px;
-                    }
-                    @media(max-width: 1800px) {
-                        max-height: 350px;
-                    }
-                    @media(max-width: 1700px) {
-                        max-height: 330px;
-                    }
-                    @media(max-width: 1600px) {
-                        max-height: 310px;
-                    }
-                    @media(max-width: 1500px) {
-                        max-height: 280px;
-                    }
-                    @media(max-width: 1300px) {
-                        max-height: 240px;
-                    }
                     @include screen('notebook') {
                         width: 170px;
                         height: 220px;
+                    }
+                    img {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        width: 100%;
+                        max-height: 100%;
+                        margin: auto;
+                        display: block;
+                        // @media(max-width: 1900px) {
+                        //     max-height: 370px;
+                        // }
+                        // @media(max-width: 1800px) {
+                        //     max-height: 350px;
+                        // }
+                        // @media(max-width: 1700px) {
+                        //     max-height: 330px;
+                        // }
+                        // @media(max-width: 1600px) {
+                        //     max-height: 310px;
+                        // }
+                        // @media(max-width: 1500px) {
+                        //     max-height: 280px;
+                        // }
+                        // @media(max-width: 1300px) {
+                        //     max-height: 240px;
+                        // }
+                        // @include screen('notebook') {
+                        //     width: 170px;
+                        //     height: 220px;
+                        // }
                     }
                 }
                 // 書封設計
@@ -1327,18 +1362,10 @@
                         margin: 0 0 15px;
                     }
                     &:before {
-                             height: 120px;
-                        }
-                }
-                .image_titlepage2{
-                    
-                }
-                a {
-                    color: #000;
-                    &:hover {
-                        color: $importantColor;
+                        height: 120px;
                     }
                 }
+                .image_titlepage2 {}
                 span {
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -1726,7 +1753,7 @@
                 width: 140px;
                 height: 200px;
                 &:before {
-                     height: 90px;
+                    height: 90px;
                 }
             }
         }
