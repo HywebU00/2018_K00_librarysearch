@@ -545,14 +545,12 @@
             float: right;
             clear: none;
             margin-top: 8px;
-            position:relative;
-          
+            position: relative;
             .btn {
                 min-width: 4em;
                 padding: .5em 0 !important;
                 border: 1px solid #959595;
                 color: #333;
-               
                 &:hover, &:focus {
                     background: #F77810;
                     border: 1px solid #cd6007;
@@ -564,7 +562,6 @@
             }
             input[type="button"] {
                 min-width: 4em !important;
-                
             }
         }
     }
@@ -2119,117 +2116,86 @@
 // 我的點數
 .mypoints {
     margin: 20px 10px;
-    padding:8px 0 0;
-    display: flex;
+    padding: 0;
     border-radius: 5px;
     background-color: #fff;
     font-size: 1em;
     border: 1px solid #ddd;
-    align-items: center;
-    flex-wrap: wrap;
     position: relative;
     overflow: hidden;
-    @include screen('tablet') {
-        padding: 0;
-    }
-    &:before {
-        content: '';
-        background-color: #e47c26;
-        transform: skewX(-25deg);
-        width: 200px;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: -50px;
-        bottom: 0;
-        @include screen('tablet') {
-            display: none;
-        }
-    }
     &.mystudyblock {
         margin: 20px 30px;
-    }
-    &.bluetitle {
-        &:before {
-            background-color: #005d98;
-        }
-    }
-    @include screen('tablet') {
-        display: block;
     }
     .title {
         font-size: 1.25em;
         font-weight: 700;
-        margin-right: 50px;
-        
-        padding: 15px 30px ;
-        flex: none;
-        flex-basis: 100px;
+        margin-bottom: 15px;
+        background-color: #ddd;
         position: relative;
         @include box-sizing;
         span {
+            display: inline-block;
             color: #fff;
-            white-space: nowrap;
-        }
-        @include screen('tablet') {
-            margin: 0 0 10px;
-            transform: skewX(0);
-            padding: 10px 30px;
+            // white-space: nowrap;
             background-color: #e47c26;
-            &.bluebg {
-                background-color: #005d98;
+            padding: 10px 30px;
+            position: relative;
+            min-width: 150px;
+            @include screen('xs_mobile') {
+                padding: 10px 15px;
             }
-            span {
-                transform: skewX(0);
+            &:before {
+                content: '';
+                border: 21.5px solid #e47c26;
+                border-color: transparent transparent transparent #e47c26;
+                position: absolute;
+                right: -43px;
+                top: 0;
             }
         }
-        @media(max-width: 480px) {
-            padding: 10px 15px;
+        &.bluebg {
+            span {
+                background-color: #005d98;
+                &:before {
+                    content: '';
+                    border: 21.5px solid #005d98;
+                    border-color: transparent transparent transparent #005d98;
+                    position: absolute;
+                }
+            }
         }
     }
     .content {
-        flex: auto;
-        flex-basis: calc( 100% - 230px);
         display: flex;
         flex-wrap: wrap;
+        padding: 0 25px 5px;
+        @include screen('xs_mobile') {
+            padding: 0 15px 5px;
+        }
         .accumulation, .maturity {
-            padding: 5px 0 0 90px;
+            padding: 0;
             margin: 0px 40px 8px 0;
             min-width: 50px;
-            height: 30px;
+            // height: 30px;
             display: flex;
-            em {
-                color: $color-red;
-                font-size: 1.5em;
-                margin-right: 5px;
-                font-weight: 600;
-                display: inline-block;
+            align-items: center;
+            @include screen('xs_mobile') {
+                flex-wrap: wrap;
             }
-            @include screen('tablet') {
-                margin: 0 0px 8px 25px;
-            }
-             @media(max-width: 480px){
-                margin: 0 0px 8px 10px;
-             }
-           
         }
-        // .maturity {
-        //     @include screen('tablet') {
-        //         margin: 0 0px 10px 40px;
-        //     }
-        //     @media(max-width: 480px) {
-        //         margin: 0 20px 10px 20px;
-        //     }
-        // }
         .subtitle {
             font-size: 0.938em;
             color: #fff;
             background-color: #ddd;
             padding: 5px 10px;
             border-radius: 4px;
-            margin: -5px 15px 0 -85px;
+            margin: 0 15px 0 0;
             position: relative;
             white-space: nowrap;
+            display: inline-block;
+            @include screen('xs_mobile') {
+                margin-bottom: 5px;
+            }
             &:before {
                 content: '';
                 border: 8px solid #ddd;
@@ -2238,7 +2204,7 @@
                 border-bottom-color: transparent;
                 position: absolute;
                 right: -15px;
-                top: 8px;
+                top: 10px;
             }
             &.bluebg {
                 background-color: $color-blue;
@@ -2259,15 +2225,32 @@
                 }
             }
         }
-        .date {
-            margin-left: 10px;
-            font-weight: bolder;
-            font-size: 1.125em;
-            color: $color-green;
-            white-space: nowrap;
-            @media(max-width: 480px) {
-                display: block;
-                margin-left: 0px;
+        .data {
+            display: flex;
+            @media(max-width: 420px) {
+                flex-wrap: wrap;
+            }
+            span {
+                display: inline-block;
+            }
+            .points {
+                display: flex;
+                margin-right: 10px;
+                em {
+                    color: $color-red;
+                    font-size: 1.5em;
+                    margin-right: 5px;
+                    font-weight: 600;
+                }
+            }
+            .date {
+                font-weight: bolder;
+                font-size: 1.125em;
+                color: $color-green;
+                white-space: nowrap;
+                @media(max-width: 480px) {
+                    display: block;
+                }
             }
         }
     }
