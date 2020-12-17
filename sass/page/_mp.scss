@@ -464,7 +464,7 @@
                     min-width: 4em;
                     margin: .5em .1em;
                     background-size: 13px;
-                    &:hover{
+                    &:hover, &:focus{
                         background-size: 13px!important;
                     }
                 }
