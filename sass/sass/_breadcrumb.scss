@@ -6,9 +6,9 @@
     font-size: 1em;
     margin: 0px;
     overflow:hidden;
-    @include screen('mobile') {
-        display: none;
-    }
+    // @include screen('mobile') {
+    //     display: none;
+    // }
     span{
         float: left;
         color:#666;
