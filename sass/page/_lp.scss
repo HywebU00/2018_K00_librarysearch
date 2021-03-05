@@ -448,42 +448,45 @@
 //書本條列
 .booklist_block {
     clear: both;
-    // @include screen('xs_mobile') {
-    //     position: relative;
-    //     &:before {
-    //         content: '';
-    //         width: 100%;
-    //         height: 1px;
-    //         position: absolute;
-    //         top: 0px;
-    //         background-color: #ccc;
-    //     }
-    // }
+    &.mystudyooklist {
+        .booklist2 {
+            .bookmidblock {
+                .bookdata {
+                    @media(max-width: 380px) {
+                        flex: auto !important;
+                    }
+                }
+            }
+        }
+    }
     // 條列
     .booklist {
         border-bottom: 1px solid $color-gray;
         padding: 18px 15px;
         clear: both;
         position: relative;
+        display: flex;
+        flex-wrap: wrap;
         &.special {
             background-color: lighten(nth($lightColor, $style), 20);
         }
         //左
         .bookleftblock {
-            display: inline-block;
+            // display: inline-block;
             margin-right: 20px;
             margin-bottom: 10px;
-            width: 120px;
+            flex: none;
+            flex-basis: 120px;
+            // width: 120px;
             padding-left: 5px;
             vertical-align: top;
             @include box-sizing;
             @include screen('mobile') {
-                width: 120px;
                 margin-right: 0;
             }
             @media(max-width: 480px) {
                 padding-left: 0;
-                width: 100px;
+                flex-basis: 100px;
             }
             label {
                 display: block;
@@ -554,26 +557,25 @@
         .bookmidblock {
             vertical-align: top;
             position: relative;
-            width: calc(100% - 150px);
-            display: inline-block;
+            flex: auto;
+            flex-basis: calc(100% - 150px);
+            display: flex;
+            flex-wrap: wrap;
             @include screen('mobile') {
-                width: calc(100% - 135px);
+                flex-basis: calc(100% - 135px);
             }
             @media(max-width: 480px) {
-                width: calc(100% - 110px);
+                flex-basis: calc(100% - 110px);
             }
             .bookdata {
-                float: left;
-                width: 72%;
+                // float: left;
+                flex: none;
+                flex-basis: calc(100% - 28%);
                 @include screen('tablet') {
-                    width: 80%;
+                    flex-basis: calc(100% - 18%);
                 }
-                @include screen('mobile') {
-                    width: 100%;
-                    float: none;
-                }
-                @media(max-width: 480px) {
-                    width: 100%;
+                @media(max-width: 380px) {
+                    flex-basis: calc(100% - 20%);
                 }
             }
             h2 {
@@ -583,7 +585,7 @@
                 font-size: 1.25em;
                 line-height: 1.3em;
                 @include screen('mobile') {
-                    margin: 30px 0 10px;
+                    margin: 0px 0 10px;
                 }
                 a {
                     color: nth($linkColor, $style);
@@ -691,6 +693,22 @@
                         margin: 0 2px 0 0px;
                         &:before {
                             content: '';
+                        }
+                    }
+                    &.word_title {
+                        font-size: 1.125em;
+                        position: relative;
+                        &:before {
+                            display: none;
+                        }
+                        a {
+                            font-weight: bolder;
+                            color: nth($linkColor, $style);
+                            text-decoration: underline;
+                            transition: .5s;
+                            &:hover {
+                                color: $aHover;
+                            }
                         }
                     }
                     input[type="button"] {
@@ -878,25 +896,21 @@
             //分享
             .bookshare {
                 position: relative;
-                text-align: right;
-                float: right;
-                width: 28%;
-                height: 100%;
+                flex: none;
+                flex-basis: 28%;
+                display: flex;
+                justify-content: flex-end;
                 @include screen('tablet') {
-                    width: 15%;
+                    flex-basis: 15%;
                 }
-                @include screen('mobile') {
+                @media(max-width: 380px) {
+                    flex-basis: 20%;
                     position: absolute;
-                    top: 0px;
-                    right: -20px;
-                    width: 40px;
+                    right: -5px;
                 }
                 ul {
-                    margin: 0 0px 0 0;
+                    margin: 0;
                     padding: 0;
-                    @include screen('mobile') {
-                        margin: 0;
-                    }
                     li {
                         display: inline-block;
                         margin-left: 0px;
@@ -1000,6 +1014,7 @@
                 }
             }
             .moreshare {
+                flex-basis: 100%;
                 position: absolute;
                 bottom: 0px;
                 right: 0;
@@ -1018,6 +1033,7 @@
                 ul {
                     margin: 0;
                     padding: 0;
+                    text-align: right;
                     li {
                         display: inline-block;
                         margin-left: 0px;
@@ -1044,9 +1060,12 @@
                 }
             }
         }
+        // 下
         .booklist_type {
             clear: both;
             float: none;
+            flex: auto;
+            flex-basis: 100%;
             position: relative;
             padding: 10px 0 0;
             margin-top: 10px;
@@ -1194,18 +1213,37 @@
     }
     //
     .booklist2 {
+        display: flex;
         //左
         .bookleftblock {
             width: auto;
-            @include screen('mobile') {
-                width: 100%;
-            }
+            flex-basis: auto;
+            margin-right: 0;
         }
         //中
         .bookmidblock {
+            flex: 1;
             width: auto;
-            @include screen('mobile') {
-                width: 100%;
+            float: none;
+            .bookdata {
+                flex: auto;
+                // width: auto;
+                // flex-basis: 100%;
+                @include screen('mobile') {
+                    flex-basis: calc(100% - 18%);
+                }
+                @media(max-width: 380px) {
+                    flex: none;
+                    flex-basis: calc(100% - 18%);
+                }
+            }
+            .bookshare {
+                display: none;
+                @include screen('mobile') {
+                    display: block;
+                    display: flex;
+                    flex-basis: 15%;
+                }
             }
         }
     }

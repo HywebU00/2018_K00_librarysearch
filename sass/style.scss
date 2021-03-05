@@ -231,6 +231,17 @@
                 }
             }
         }
+        .bookmidblock {
+            ul {
+                li {
+                    &.word_title {
+                        a {
+                            color: nth($linkColor, $style);
+                        }
+                    }
+                }
+            }
+        }
     }
     // _cp.scss
     .mainrightblock,
@@ -606,6 +617,17 @@
                 }
             }
         }
+        .bookmidblock {
+            ul {
+                li {
+                    &.word_title {
+                        a {
+                            color: nth($linkColor, $style);
+                        }
+                    }
+                }
+            }
+        }
     }
     // _cp.scss
     .mainrightblock,
@@ -949,6 +971,17 @@
             h2 {
                 a {
                     color: nth($linkColor, $style);
+                }
+            }
+        }
+        .bookmidblock {
+            ul {
+                li {
+                    &.word_title {
+                        a {
+                            color: nth($linkColor, $style);
+                        }
+                    }
                 }
             }
         }
@@ -1298,6 +1331,17 @@
                 }
             }
         }
+        .bookmidblock {
+            ul {
+                li {
+                    &.word_title {
+                        a {
+                            color: nth($linkColor, $style);
+                        }
+                    }
+                }
+            }
+        }
     }
     // _cp.scss
     .mainrightblock,
@@ -1644,6 +1688,17 @@
                 }
             }
         }
+        .bookmidblock {
+            ul {
+                li {
+                    &.word_title {
+                        a {
+                            color: nth($linkColor, $style);
+                        }
+                    }
+                }
+            }
+        }
     }
     // _cp.scss
     .mainrightblock,
@@ -1987,6 +2042,17 @@
             h2 {
                 a {
                     color: nth($linkColor, $style);
+                }
+            }
+        }
+        .bookmidblock {
+            ul {
+                li {
+                    &.word_title {
+                        a {
+                            color: nth($linkColor, $style);
+                        }
+                    }
                 }
             }
         }
@@ -2337,6 +2403,17 @@
                 }
             }
         }
+        .bookmidblock {
+            ul {
+                li {
+                    &.word_title {
+                        a {
+                            color: nth($linkColor, $style);
+                        }
+                    }
+                }
+            }
+        }
     }
     // _cp.scss
     .mainrightblock,
@@ -2681,6 +2758,17 @@
             h2 {
                 a {
                     color: nth($linkColor, $style);
+                }
+            }
+        }
+        .bookmidblock {
+            ul {
+                li {
+                    &.word_title {
+                        a {
+                            color: nth($linkColor, $style);
+                        }
+                    }
                 }
             }
         }
