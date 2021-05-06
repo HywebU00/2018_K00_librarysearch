@@ -652,25 +652,25 @@
                     padding: 0px 15px 0 5px;
                     position: relative;
                     margin-bottom: 5px;
-                    margin-left: 20px;
+                    margin-left: 10px;
                     line-height: 1.8em;
                     height: 1.8em;
                     vertical-align: middle;
                     @media(max-width: 380px){
                         margin-left: 15px;
                     }
-                    &:before{
-                        content: '';
-                        width: 1px;
-                        height: 31px;
-                        position: absolute;
-                        left: -15px;
-                        top: 0px;
-                        background-color: #ccc;
-                        @media(max-width: 380px){
-                            left: -10px;
-                        }
-                    }
+                    // &:before{
+                    //     content: '';
+                    //     width: 1px;
+                    //     height: 31px;
+                    //     position: absolute;
+                    //     left: -15px;
+                    //     top: 0px;
+                    //     background-color: #ccc;
+                    //     @media(max-width: 380px){
+                    //         left: -10px;
+                    //     }
+                    // }
                     span {
                         display: none;
                         @include screen('mobile') {
