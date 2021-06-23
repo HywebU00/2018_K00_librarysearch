@@ -264,6 +264,18 @@
             color: darken(nth($primaryColor, $style), 10);
         }
     }
+    // _ap.css
+    // 內容主題分析
+    .bookselection_group{
+        .rightblock{
+            .content_analysis{
+                .title{
+                   background-color: nth($primaryColor, $style); 
+                }
+            }
+        }
+    }
+    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(#f8b551, 20);
@@ -650,6 +662,17 @@
             color: darken(nth($primaryColor, $style), 10);
         }
     }
+    // _ap.css
+    // 內容主題分析
+    .bookselection_group{
+        .rightblock{
+            .content_analysis{
+                .title{
+                   background-color: nth($primaryColor, $style); 
+                }
+            }
+        }
+    }
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 20);
@@ -1005,6 +1028,17 @@
     .cp_content {
         h3 {
             color: darken(nth($primaryColor, $style), 10);
+        }
+    }
+    // _ap.css
+    // 內容主題分析
+    .bookselection_group{
+        .rightblock{
+            .content_analysis{
+                .title{
+                   background-color: nth($primaryColor, $style); 
+                }
+            }
         }
     }
     // _fatfooter.scss
@@ -1364,6 +1398,17 @@
             color: darken(nth($primaryColor, $style), 10);
         }
     }
+    // _ap.css
+    // 內容主題分析
+    .bookselection_group{
+        .rightblock{
+            .content_analysis{
+                .title{
+                   background-color: nth($primaryColor, $style); 
+                }
+            }
+        }
+    }
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 5);
@@ -1721,6 +1766,17 @@
             color: darken(nth($primaryColor, $style), 10);
         }
     }
+    // _ap.css
+    // 內容主題分析
+    .bookselection_group{
+        .rightblock{
+            .content_analysis{
+                .title{
+                   background-color: nth($primaryColor, $style); 
+                }
+            }
+        }
+    }
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 10);
@@ -1728,6 +1784,7 @@
             background: darken(nth($primaryColor, $style), 10);
         }
     }
+    
     //_footer.scss
     footer {
         background-color: darken(nth($primaryColor, $style), 10);
@@ -2076,6 +2133,17 @@
     .cp_content {
         h3 {
             color: darken(nth($primaryColor, $style), 10);
+        }
+    }
+    // _ap.css
+    // 內容主題分析
+    .bookselection_group{
+        .rightblock{
+            .content_analysis{
+                .title{
+                   background-color: nth($primaryColor, $style); 
+                }
+            }
         }
     }
     // _fatfooter.scss
@@ -2436,6 +2504,17 @@
             color: darken(nth($primaryColor, $style), 10);
         }
     }
+    // _ap.css
+    // 內容主題分析
+    .bookselection_group{
+        .rightblock{
+            .content_analysis{
+                .title{
+                   background-color: nth($primaryColor, $style); 
+                }
+            }
+        }
+    }
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 10);
@@ -2792,6 +2871,17 @@
     .cp_content {
         h3 {
             color: darken(nth($primaryColor, $style), 10);
+        }
+    }
+   // _ap.css
+    // 內容主題分析
+    .bookselection_group{
+        .rightblock{
+            .content_analysis{
+                .title{
+                   background-color: nth($primaryColor, $style); 
+                }
+            }
         }
     }
     // _fatfooter.scss

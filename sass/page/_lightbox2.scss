@@ -10,7 +10,7 @@ body.fix {
 .lightboxstyle,
 .exportstyle,
 .forwardstyle,
-.referencestyle, .mystudymenu_lightbox, .choose_librarycard_lightbox, .explain_linghtbox {
+.referencestyle, .mystudymenu_lightbox, .choose_librarycard_lightbox, .explain_linghtbox, .qrcode_lightbox, .recommendbook_lightbox {
     position: fixed;
     top: 0;
     right: 0;
@@ -43,7 +43,7 @@ body.fix {
     }
 }
 // 登入
-.login_lightbox, .choose_librarycard_lightbox {
+.login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox {
     .loginblock {
         max-width: 50vw;
         min-width: 450px;
@@ -87,6 +87,7 @@ body.fix {
             margin: 0px auto 20px;
             padding: 0 0 20px;
             color: nth($primaryColor, $style);
+            line-height: 1.35em;
         }
         .form_grp {
             label {
@@ -160,112 +161,66 @@ body.fix {
         }
     }
 }
-.logintab {
-    ul {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        li {
-            width: 48%;
-            float: left;
-            list-style: none;
-            margin: 0 .2em !important;
-            a {
-                display: block !important;
-                color: nth($primaryColor, $style) !important;
-                border: 2px solid nth($primaryColor, $style);
-                padding: .5em !important;
-                text-align: center;
-                &:hover, &.active {
-                    background-color: nth($primaryColor, $style) !important;
-                    color: #fff !important;
-                }
-            }
+.recommendbook_lightbox {
+    .loginblock {
+        max-width: 50vw;
+        min-width: 900px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 45px 25px 35px 25px;
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: auto;
+        text-align: left;
+        @include screen('tablet'){
+            min-width: 700px;
         }
-    }
-}
-.account_content {
-    clear: both;
-    p {
-        margin: 10px 0 !important;
-    }
-}
-.qrcode_content {
-    text-align: center;
-    display: none;
-    padding-top: 30px;
-    .qrcode {
-        border: 1px solid #ccc;
-        text-align: center;
-        padding: 15px;
-        width: 60%;
-        margin: 0 auto 10px;
-        img {
-            display: block;
-            width: 128px;
-            height: 128px;
-            margin: 0 auto;
+        @media(max-width: 767px) {
+             min-width: 500px;
+            top: 50%;
+        left: 50%;
+           
+            padding: 35px 20px 35px 20px;
         }
-        .reorganize {
-            background-image: url('../images/icon_reorganize.png');
-            background-repeat: no-repeat;
-            background-position: 10px center;
-            display: block;
-            padding: 5px 5px 5px 30px;
-            width: 70px;
-            margin: 0 auto;
-            text-align: left;
+        @include screen('xs_mobile') {
+            max-width: 100vh;
+            transform: translate(0, 0);
+            padding: 50px 20px 35px 20px;
+            left: 0;
+            top: 0;
+            border-radius: 0;
+            height: 100%;
+            width: 100%;
+            max-width: auto;
+            min-width: auto;
+            @include box-sizing;
         }
-    }
-    .means {
-        margin: 10px 10px 20px;
-        position: relative;
-        display: inline-block;
-        padding: 0;
-        &:before {
-            content: 'i';
-            width: 25px;
-            height: 25px;
-            background-color: #666;
-            color: #fff;
-            border-radius: 50%;
-            display: inline-block;
-            line-height: 25px;
-            position: absolute;
-            left: -30px;
-        }
-    }
-    .qrcode_btn {
-        a {
-            background-color: nth($primaryColor, $style);
-            color: #fff;
-            display: block;
-            padding: 10px;
-            border-radius: 4px;
-            box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
-            &:hover {
-                background-color: lighten(nth($primaryColor, $style), 10);
-            }
-        }
+        
+        
+        
+        
+        
     }
 }
 // 圖書館借閱卡
- .choose_librarycard_lightbox .loginblock{
-     width: 100%;
-      @media(max-width: 767px){
-        width:auto;
-      }
- }
+.choose_librarycard_lightbox .loginblock {
+    width: 100%;
+    @media(max-width: 767px) {
+        width: auto;
+    }
+}
 .librarycard_blcok {
     text-align: center;
-   padding:10px 0;
+    padding: 10px 0;
     // width: 70vw;
     .librarycard {
         display: inline-block;
         margin: 0 1% 10px;
         width: 47%;
-        @include screen('notebook'){
-            width:100%;
+        @include screen('notebook') {
+            width: 100%;
             margin-bottom: 10px;
         }
         a {
@@ -273,8 +228,8 @@ body.fix {
             padding: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            @include screen('xs_mobile'){
-                 padding: 15px 10px;
+            @include screen('xs_mobile') {
+                padding: 15px 10px;
             }
             .picimg {
                 width: 56px;
@@ -286,7 +241,7 @@ body.fix {
                 img {
                     width: 56px;
                 }
-                @include screen('xs_mobile'){
+                @include screen('xs_mobile') {
                     margin-right: 10px;
                 }
             }
@@ -301,8 +256,8 @@ body.fix {
                     display: block;
                     float: none;
                     text-align: left;
-                    padding:0 0 8px; 
-                    border-bottom:1px dashed #ddd;
+                    padding: 0 0 8px;
+                    border-bottom: 1px dashed #ddd;
                 }
             }
             &:hover {
@@ -748,65 +703,63 @@ body.fix {
                 padding: 0 0 0 30px;
             }
             // 兌換條碼
-            .timedata{
+            .timedata {
                 display: flex;
                 font-size: 1.125em;
                 align-items: center;
-                margin:0 0 20px;
-                .reciprocal{
-                    flex:none;
+                margin: 0 0 20px;
+                .reciprocal {
+                    flex: none;
                     flex-basis: 50%;
                     text-align: center;
                     font-size: 1.125em;
-                     @media(max-width: 400px){
+                    @media(max-width: 400px) {
                         flex-basis: 40%
-                     }
+                    }
                 }
-                .retime{
-                    flex:none;
+                .retime {
+                    flex: none;
                     flex-basis: 50%;
-                    @media(max-width: 400px){
+                    @media(max-width: 400px) {
                         flex-basis: 60%
-                     }
-                    a{
+                    }
+                    a {
                         display: inline-block;
-                        border-radius:50px;
-                        background-color:#E57373;
-                        color:#fff;
-                        padding:10px 25px;
+                        border-radius: 50px;
+                        background-color: #E57373;
+                        color: #fff;
+                        padding: 10px 25px;
                         text-align: center;
                         white-space: nowrap;
-                        img{
-                            width:20px;
+                        img {
+                            width: 20px;
                             margin-right: 10px;
                             vertical-align: middle
                         }
-
                     }
                 }
             }
-            .barcode_block{
+            .barcode_block {
                 text-align: center;
-                padding:20px 10px 0;
-                border:1px solid #ccc;
+                padding: 20px 10px 0;
+                border: 1px solid #ccc;
                 border-radius: 10px;
-                .num{
+                .num {
                     margin-bottom: 5px;
                     display: block;
                 }
-                img{
-                    width:300px;
+                img {
+                    width: 300px;
                     margin-bottom: 10px;
                     display: block;
-                    margin:0 auto;
-                    @media(max-width: 400px){
-                        width:90%;
+                    margin: 0 auto;
+                    @media(max-width: 400px) {
+                        width: 90%;
                     }
                 }
-                p{
+                p {
                     font-size: 0.813em;
                 }
-
             }
         }
         .lightbox_image {
@@ -1148,5 +1101,103 @@ body.fix {
             }
         }
         // 
+    }
+}
+.qrcode_lightbox {
+    .qrcode_block {
+        text-align: center;
+    }
+}
+.recommendbook_lightbox {
+    .bookselection_list {
+        padding-right: 30px;
+        height: 520px;
+        overflow-y: scroll;
+        @include screen('notebook') {
+            padding-right: 0;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            li {
+                flex: none;
+                flex-basis: 18%;
+                width: 18%;
+                margin: 0 3.5% 25px;
+                position: relative;
+                @include screen('tablet')
+                {
+                    flex-basis: 23%;
+                    width: 23%;
+                    margin: 0 5.16% 25px;
+                }
+                
+                @include screen('mobile') {
+                    flex-basis: 40%;
+                    width: 40%;
+                    margin: 0 5% 25px;
+                }
+                @media(max-width: 400px) {
+                    flex-basis: 220px;
+                    width: 220px;
+                    margin: 0 auto 25px;
+                }
+                a {
+                    color: #000;
+                    display: block;
+                    &:hover {
+                        color: $importantColor;
+                    }
+                    .image {
+                        height: 210px;
+                        background-color: #fff;
+                        position: relative;
+                        margin-bottom: 10px;
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                        img {
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            left: 0;
+                            width: 100%;
+                            max-height: 100%;
+                            margin: auto;
+                            z-index: 8;
+                            display: block;
+                        }
+                    }
+                    span {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        font-size: 1.125em;
+                        display: block;
+                    }
+                }
+                // 書封設計
+                .image_titlepage, .image_titlepage2 {
+                    margin: 0 auto 15px;
+                    // width: 100%;
+                    height: 210px;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    // @media(max-width: 1400px) {
+                    //     height: 370px;
+                    // }
+                    // @include screen('notebook') {
+                    //     width: 170px;
+                    //     height: 220px;
+                    //     margin: 0 0 15px;
+                    // }
+                    &:before {
+                        height: 120px;
+                    }
+                }
+                // .image_titlepage2 {}
+            }
+        }
     }
 }

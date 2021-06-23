@@ -519,6 +519,46 @@ $(function() {
             // instead of a settings object
         ]
     });
+    //為您選書tab
+    $('.bookselection_tab').slick({
+        infinite: false,
+        speed: 2000,
+        autoplay: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        responsive: [{
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            }, {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            }, {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: false,
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: false,
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
     //熱門排行
     $('.hotrankings').slick({
         infinite: false,
@@ -684,6 +724,21 @@ $(function() {
     })
     $('.overlay').click(function() {
         $('.choose_librarycard_lightbox').fadeOut();
+        $('body').removeClass('fix');
+    })
+})
+// qrcode
+$(function() {
+    $('.qrcode_mpbtn').click(function() {
+        $('.qrcode_lightbox').fadeIn();
+        $('body').addClass('fix');
+    })
+    $('.loginblock .close').click(function() {
+        $('.qrcode_lightbox').fadeOut();
+        $('body').removeClass('fix');
+    })
+    $('.overlay').click(function() {
+        $('.qrcode_lightbox').fadeOut();
         $('body').removeClass('fix');
     })
 })
@@ -917,7 +972,6 @@ $(function() {
     // 異常畫面
     // login登入確認
     $('.explain_btn').click(function() {
-        
         $('#explain_linghtbox').fadeIn();
         $('body').addClass('fix');
     })
@@ -931,7 +985,6 @@ $(function() {
     })
     // 獎勵兌換條碼
     $('#reward_barcodebtn').click(function() {
-        
         $('#reward_barcodestyle').fadeIn();
         $('body').addClass('fix');
     })
@@ -941,6 +994,19 @@ $(function() {
     })
     $('.overlay').click(function() {
         $('#reward_barcodestyle').fadeOut();
+        $('body').removeClass('fix');
+    })
+    // 推薦書單
+    $('.recommendbook_btn').click(function() {
+        $('.recommendbook_lightbox').fadeIn();
+        $('body').addClass('fix');
+    })
+    $('.loginblock .close').click(function() {
+        $('.recommendbook_lightbox').fadeOut();
+        $('body').removeClass('fix');
+    })
+    $('.overlay').click(function() {
+        $('.recommendbook_lightbox').fadeOut();
         $('body').removeClass('fix');
     })
 })
@@ -1261,6 +1327,11 @@ $(function() {
         $('.prompt_block3').fadeToggle();
         $(this).toggleClass('arrow');
     })
+    $('.promptblock').hide();
+    $('.analysis_prompt .prompt_btn').click(function() {
+        $('.promptblock').fadeToggle();
+        $(this).toggleClass('arrow');
+    })
 })
 //詳目頁 表格收合
 $(function() {
@@ -1431,5 +1502,18 @@ $(function() {
                 slidesToScroll: 3
             }
         }]
+    });
+})
+// 為您選書 
+$(function() {
+    $('.bookselection_group').children('.rightblock').find('.close').click(function() {
+        $('.bookselection_group').children('.rightblock').hide();
+        $('.bookselection_group').children('.leftblock').addClass('expand ')
+    })
+    var _switchOnOff = $(".switchOnOff");
+    $('.recommendedform').find('.being_switched').addClass('off');
+    _switchOnOff.click(function() {
+        $(this).toggleClass("on");
+        $(this).parents('.form_grp').siblings('.being_switched').toggleClass('off');
     });
 })

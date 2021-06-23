@@ -1389,8 +1389,8 @@ html .ui-button.ui-state-disabled:active {
     }
 }
 //分類推薦
-.sortrecommend {
-    margin: 30px 10px 20px;
+.sortrecommend, .bookselection_tab {
+    margin: 30px 30px 20px;
     @include box-sizing;
     @include screen('mobile') {
         width: 80%;
@@ -1403,10 +1403,10 @@ html .ui-button.ui-state-disabled:active {
         padding: 0 5px;
         a {
             display: block;
-            padding: 20px 30px;
+            padding: 20px 10px;
             @include gradient(#dcdcdc, #e5e5e5, vertical);
             color: #333;
-            font-size: 1.25em;
+            font-size: 1.313em;
             text-align: center;
             border-radius: 5px;
             position: relative;

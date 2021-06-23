@@ -179,7 +179,7 @@
     color: black;
     background: black;
 }
-.sortrecommend  .slick-prev, .hotrankings  .slick-prev,.read_passbook_tab .slick-prev, .sortrecommend  .slick-next, .hotrankings  .slick-next, .read_passbook_tab .slick-next{
+.bookselection_tab  .slick-prev, .sortrecommend  .slick-prev, .hotrankings  .slick-prev,.read_passbook_tab .slick-prev, .bookselection_tab  .slick-next, .sortrecommend  .slick-next, .hotrankings  .slick-next, .read_passbook_tab .slick-next{
      opacity: .2;
 }
 
