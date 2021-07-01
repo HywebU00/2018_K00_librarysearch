@@ -143,9 +143,9 @@
             }
             .btnstyle {
                 padding: 0.5em 2em !important;
-                &:focus{
-                background-color:$color-gray!important;
-               }
+                &:focus {
+                    background-color: $color-gray !important;
+                }
             }
         }
     }
@@ -312,7 +312,7 @@
 .mystudycontent {
     margin: 20px 30px;
     display: flex;
-    flex-flow:column nowrap;
+    flex-flow: column nowrap;
     h2 {
         font-style: 1.313em;
         margin: 0 0 20px;
@@ -1106,7 +1106,7 @@
 // 兌換獎勵
 .reward_block {
     display: flex;
-    align-items:center;
+    align-items: center;
     flex-wrap: wrap;
     .reward_img {
         width: 80px;
@@ -1115,10 +1115,8 @@
             width: 80px;
         }
     }
-    .gift_name {
-
-    }
-    .serial_number{
+    .gift_name {}
+    .serial_number {
         display: block;
         margin-top: 5px;
     }
