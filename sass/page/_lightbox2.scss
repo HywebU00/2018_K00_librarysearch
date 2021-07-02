@@ -159,6 +159,98 @@ body.fix {
                 margin: 0 0 10px;
             }
         }
+        .logintab {
+            ul {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                li {
+                    width: 48%;
+                    float: left;
+                    list-style: none;
+                    margin: 0 .2em !important;
+                    a {
+                        display: block !important;
+                        color: nth($primaryColor, $style);
+                        border: 2px solid nth($primaryColor, $style);
+                        padding: .5em !important;
+                        text-align: center;
+                        &:hover, &.active {
+                            background-color: nth($primaryColor, $style);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        // 
+        .account_content {
+            clear: both;
+            p {
+                margin: 10px 0 !important;
+            }
+        }
+        //
+        .qrcode_content {
+            text-align: center;
+            display: none;
+            padding-top: 30px;
+            .qrcode {
+                border: 1px solid #ccc;
+                text-align: center;
+                padding: 15px;
+                width: 60%;
+                margin: 0 auto 10px;
+                img {
+                    display: block;
+                    width: 128px;
+                    height: 128px;
+                    margin: 0 auto;
+                }
+                .reorganize {
+                    background-image: url('../images/icon_reorganize.png');
+                    background-repeat: no-repeat;
+                    background-position: 10px center;
+                    display: block;
+                    padding: 5px 5px 5px 30px;
+                    width: 70px;
+                    margin: 0 auto;
+                    text-align: left;
+                }
+            }
+            .means {
+                margin: 10px 10px 20px;
+                position: relative;
+                display: inline-block;
+                padding: 0;
+                &:before {
+                    content: 'i';
+                    width: 25px;
+                    height: 25px;
+                    background-color: #666;
+                    color: #fff;
+                    border-radius: 50%;
+                    display: inline-block;
+                    line-height: 25px;
+                    position: absolute;
+                    left: -30px;
+                }
+            }
+            .qrcode_btn {
+                a {
+                    background-color: nth($primaryColor, $style);
+                    color: #fff;
+                    display: block;
+                    padding: 10px;
+                    border-radius: 4px;
+                    box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+                    &:hover {
+                        background-color: lighten(nth($primaryColor, $style), 10);
+                    }
+                }
+            }
+        }
+        // 
     }
 }
 .recommendbook_lightbox {
@@ -174,14 +266,13 @@ body.fix {
         border-radius: 5px;
         overflow: auto;
         text-align: left;
-        @include screen('tablet'){
+        @include screen('tablet') {
             min-width: 700px;
         }
         @media(max-width: 767px) {
-             min-width: 500px;
+            min-width: 500px;
             top: 50%;
-        left: 50%;
-           
+            left: 50%;
             padding: 35px 20px 35px 20px;
         }
         @include screen('xs_mobile') {
@@ -197,11 +288,6 @@ body.fix {
             min-width: auto;
             @include box-sizing;
         }
-        
-        
-        
-        
-        
     }
 }
 // 圖書館借閱卡
@@ -1128,13 +1214,11 @@ body.fix {
                 width: 18%;
                 margin: 0 3.5% 25px;
                 position: relative;
-                @include screen('tablet')
-                {
+                @include screen('tablet') {
                     flex-basis: 23%;
                     width: 23%;
                     margin: 0 5.16% 25px;
                 }
-                
                 @include screen('mobile') {
                     flex-basis: 40%;
                     width: 40%;
