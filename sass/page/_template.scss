@@ -242,7 +242,7 @@ body {
 }
 .main_mp {
     .container {
-        padding: 0;
+        padding: 0 25px;
         margin: 0 auto;
         max-width: $container-max; //請看_variable.scss
         // outline: 1px solid red;
@@ -378,10 +378,10 @@ pre {
         background-image: none;
         border: 1px solid #f8941b;
         color: #fff;
-        padding: 0.2em .5em .2em 1em !important;
+        padding: 0em .3em 0em 1.3em !important;
         background-image: url('../images/icon_rss.png')!important;
         background-repeat: no-repeat;
-        background-position: 7px center;
+        background-position: 4px center;
         background-size: 15px 14px;
         img {
             margin-right: 5px !important;

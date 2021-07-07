@@ -194,9 +194,13 @@
             padding: 50px 55px 40px;
             width: 85%;
         }
-        @media(max-width: 520px) {
-            padding: 50px 45px 40px;
+        @media(max-width: 767px) {
+            padding: 50px 40px 40px;
             width: 90%;
+        }
+        @media(max-width: 520px) {
+            padding: 50px 40px 40px;
+            width: 95%;
             margin: 50px auto 0;
         }
         @media(max-width: 470px) {
@@ -204,7 +208,8 @@
             width: 95%
         }
         @media(max-width: 400px) {
-            padding: 30px 20px 30px;
+            padding: 30px;
+            width: 100%
         }
         h2 {
             color: #fff;
@@ -461,11 +466,12 @@
                 font-size: 0.938em;
                 .btn {
                     padding: 0em .2em 0em 1.5em !important;
-                    min-width: 4em;
+                    min-width: 3.5em;
                     margin: .5em .1em;
-                    background-size: 13px;
-                    &:hover, &:focus{
-                        background-size: 13px!important;
+                    background-size: 12px;
+                    font-size: 0.938em;
+                    &:hover, &:focus {
+                        background-size: 13px !important;
                     }
                 }
                 @include screen('xs_mobile') {
@@ -537,17 +543,18 @@
                     display: inline-block;
                     background-color: $importantColor;
                     color: #fff;
-                    padding: 3px 15px 3px 40px;
+                    padding: 3px 7px 3px 27px;
                     border-radius: 3px;
                     display: inline-block;
                     margin-right: 10px;
                     margin-top: 5px;
                     background-image: url('../images/news2.svg');
                     background-repeat: no-repeat;
-                    background-size: 18px;
-                    background-position: 8px 5px;
+                    background-size: 13px;
+                    background-position: 6px 8px;
                     width: auto;
                     line-height: 1.3em;
+                    font-size: 0.938em;
                     vertical-align: top;
                     @include box-sizing;
                     span {
