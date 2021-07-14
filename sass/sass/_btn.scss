@@ -106,7 +106,14 @@ $btn-radius:4px;
     font-size: $font-size * .75; //12px
 }
 .disabled {
+    // pointer-events: none;
     opacity: 0.4;
+    box-shadow:none;
+    cursor: not-allowed;
+    display: inline-block;
+    -webkit-filter:grayscale(1); 
+}
+a.disabled:hover{
     cursor: not-allowed;
     display: inline-block;
     -webkit-filter:grayscale(1); 

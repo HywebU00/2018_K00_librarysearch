@@ -1517,3 +1517,10 @@ $(function() {
         $(this).parents('.form_grp').siblings('.being_switched').toggleClass('off');
     });
 })
+
+//按鈕隱藏說明
+$(function() {
+    $('.hide_btn').hover(function() {
+        $('.hide_description').fadeToggle();
+    })
+})

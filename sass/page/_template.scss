@@ -379,7 +379,7 @@ pre {
         border: 1px solid #f8941b;
         color: #fff;
         padding: 0em .3em 0em 1.3em !important;
-        background-image: url('../images/icon_rss.png')!important;
+        background-image: url('../images/icon_rss.png') !important;
         background-repeat: no-repeat;
         background-position: 4px center;
         background-size: 15px 14px;
@@ -388,14 +388,12 @@ pre {
         }
         &:hover, &:focus {
             color: #fff;
-            background-color: darken(#f8941b, 7)!important
-            ;
-            border: 1px solid darken(#f8941b, 7)!important;
-             background-image: url('../images/icon_rss.png')!important;
-              background-repeat: no-repeat;
-              background-position: 7px center;
-             background-size: 15px 14px!important;
-
+            background-color: darken(#f8941b, 7) !important;
+            border: 1px solid darken(#f8941b, 7) !important;
+            background-image: url('../images/icon_rss.png') !important;
+            background-repeat: no-repeat;
+            background-position: 7px center;
+            background-size: 15px 14px !important;
         }
     }
 }
@@ -624,7 +622,6 @@ select {
             border: 2px solid #a0a0a0;
         }
     }
-    
     // 較寬
     &.morewidth {
         padding: 5px 80px !important;
@@ -654,63 +651,64 @@ select {
     }
     // 框線按鈕
     &.border_graybg {
-        background-color: #fff!important;
-        border: 1px solid #666!important;
-        color: #666!important;
+        background-color: #fff !important;
+        border: 1px solid #666 !important;
+        color: #666 !important;
         transition: .2s;
         min-width: 150px;
         text-align: center;
         &:hover {
-            background-color: #666!important;
-            border: 1px solid #666!important;
-            color: #fff!important;
+            background-color: #666 !important;
+            border: 1px solid #666 !important;
+            color: #fff !important;
         }
     }
     &.border_redbg {
-        background-color: #fff!important;
-        border: 1px solid #900!important;
-        color: #900!important;
+        background-color: #fff !important;
+        border: 1px solid #900 !important;
+        color: #900 !important;
         transition: .2s;
-         min-width: 150px;
-         text-align: center;
+        min-width: 150px;
+        text-align: center;
         &:hover {
-            background-color: #900!important;
-            border: 1px solid #900!important;
-            color: #fff!important;
+            background-color: #900 !important;
+            border: 1px solid #900 !important;
+            color: #fff !important;
         }
     }
     &.border_bluebg {
-        background-color: #fff!important;
-        border: 1px solid #0288c5!important;
-        color: #0288c5!important;
+        background-color: #fff !important;
+        border: 1px solid #0288c5 !important;
+        color: #0288c5 !important;
         transition: .2s;
-         min-width: 150px;
-         text-align: center;
+        min-width: 150px;
+        text-align: center;
         &:hover {
-            background-color: #0288c5!important;
-            border: 1px solid #0288c5!important;
-            color: #fff!important;
+            background-color: #0288c5 !important;
+            border: 1px solid #0288c5 !important;
+            color: #fff !important;
         }
     }
     &.border_greenbg {
-        background-color: #fff!important;
-        border: 1px solid #638e0c!important;
-        color: #638e0c!important;
+        background-color: #fff !important;
+        border: 1px solid #638e0c !important;
+        color: #638e0c !important;
         transition: .2s;
-         min-width: 150px;
-         text-align: center;
+        min-width: 150px;
+        text-align: center;
         &:hover {
-            background-color: #638e0c!important;
-            border: 1px solid #638e0c!important;
-            color: #fff!important;
+            background-color: #638e0c !important;
+            border: 1px solid #638e0c !important;
+            color: #fff !important;
         }
     }
 }
-.disabled {
-    pointer-events: none;
-    opacity: .4;
-    box-shadow:
-        none;
-    cursor: not-allowed;
-    -webkit-filter: grayscale(1);
+.hide_description {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: .938em;
+    display: none;
 }
