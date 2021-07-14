@@ -1520,7 +1520,7 @@ $(function() {
 
 //按鈕隱藏說明
 $(function() {
-    $('.hide_btn').hover(function() {
+    $('.disabled_hidebtn').hover(function() {
         $('.hide_description').fadeToggle();
     })
 })
