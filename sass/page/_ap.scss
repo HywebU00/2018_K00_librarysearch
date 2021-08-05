@@ -2964,7 +2964,10 @@
             display: block;
             padding: 0 30px;
             @include screen('tablet') {
-                min-height: auto;
+               height: 500px;
+            }
+            @include screen('mobile'){
+                height: 200px;
             }
             img {
                 width: 100%;
