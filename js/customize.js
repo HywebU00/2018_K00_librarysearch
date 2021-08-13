@@ -742,6 +742,21 @@ $(function() {
         $('body').removeClass('fix');
     })
 })
+// 查詢欄位
+$(function() {
+    $('.searchfield_btn').click(function() {
+        $('.search_field_lightbox').fadeIn();
+        $('body').addClass('fix');
+    })
+    $('.loginblock .close').click(function() {
+        $('.search_field_lightbox').fadeOut();
+        $('body').removeClass('fix');
+    })
+    $('.overlay').click(function() {
+        $('.search_field_lightbox').fadeOut();
+        $('body').removeClass('fix');
+    })
+})
 //相關連結燈箱
 // $(function() {
 //     $('.ralated_all').click(function() {

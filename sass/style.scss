@@ -59,6 +59,14 @@
                     color: nth($primaryColor, $style);
                 }
             }
+            .searchall {
+                .advancedsearch,
+                .branchsearch {
+                    &.addfield {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
         }
     }
     //_common.scss
@@ -96,7 +104,7 @@
             li {
                 a {
                     color: nth($primaryColor, $style) !important;
-                    border: 2px solid nth($primaryColor, $style)!important;
+                    border: 2px solid nth($primaryColor, $style) !important;
                     &:hover, &.active {
                         background-color: nth($primaryColor, $style) !important;
                         color: #fff !important;
@@ -107,9 +115,9 @@
     }
     .qrcode_btn {
         a {
-            background-color: nth($primaryColor, $style)!important;
+            background-color: nth($primaryColor, $style) !important;
             &:hover {
-                background-color: lighten(nth($primaryColor, $style), 10)!important;
+                background-color: lighten(nth($primaryColor, $style), 10) !important;
             }
         }
     }
@@ -425,6 +433,14 @@
                     color: nth($primaryColor, $style);
                 }
             }
+            .searchall {
+                .advancedsearch,
+                .branchsearch {
+                    &.addfield {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
         }
     }
     .related_links {
@@ -480,7 +496,7 @@
             li {
                 a {
                     color: nth($primaryColor, $style) !important;
-                    border: 2px solid nth($primaryColor, $style)!important;
+                    border: 2px solid nth($primaryColor, $style) !important;
                     &:hover, &.active {
                         background-color: nth($primaryColor, $style) !important;
                         color: #fff !important;
@@ -491,9 +507,9 @@
     }
     .qrcode_btn {
         a {
-            background-color: nth($primaryColor, $style)!important;
+            background-color: nth($primaryColor, $style) !important;
             &:hover {
-                background-color: lighten(nth($primaryColor, $style), 10)!important;
+                background-color: lighten(nth($primaryColor, $style), 10) !important;
             }
         }
     }
@@ -794,6 +810,14 @@
                     color: nth($primaryColor, $style);
                 }
             }
+            .searchall {
+                .advancedsearch,
+                .branchsearch {
+                    &.addfield {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
         }
     }
     .related_links {
@@ -849,7 +873,7 @@
             li {
                 a {
                     color: nth($primaryColor, $style) !important;
-                    border: 2px solid nth($primaryColor, $style)!important;
+                    border: 2px solid nth($primaryColor, $style) !important;
                     &:hover, &.active {
                         background-color: nth($primaryColor, $style) !important;
                         color: #fff !important;
@@ -860,9 +884,9 @@
     }
     .qrcode_btn {
         a {
-            background-color: nth($primaryColor, $style)!important;
+            background-color: nth($primaryColor, $style) !important;
             &:hover {
-                background-color: lighten(nth($primaryColor, $style), 10)!important;
+                background-color: lighten(nth($primaryColor, $style), 10) !important;
             }
         }
     }
@@ -1162,6 +1186,14 @@
                     color: nth($primaryColor, $style);
                 }
             }
+            .searchall {
+                .advancedsearch,
+                .branchsearch {
+                    &.addfield {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
         }
     }
     .related_links {
@@ -1217,7 +1249,7 @@
             li {
                 a {
                     color: nth($primaryColor, $style) !important;
-                    border: 2px solid nth($primaryColor, $style)!important;
+                    border: 2px solid nth($primaryColor, $style) !important;
                     &:hover, &.active {
                         background-color: nth($primaryColor, $style) !important;
                         color: #fff !important;
@@ -1228,9 +1260,9 @@
     }
     .qrcode_btn {
         a {
-            background-color: nth($primaryColor, $style)!important;
+            background-color: nth($primaryColor, $style) !important;
             &:hover {
-                background-color: lighten(nth($primaryColor, $style), 10)!important;
+                background-color: lighten(nth($primaryColor, $style), 10) !important;
             }
         }
     }
@@ -1530,6 +1562,14 @@
                     color: nth($primaryColor, $style);
                 }
             }
+            .searchall {
+                .advancedsearch,
+                .branchsearch {
+                    &.addfield {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
         }
     }
     .related_links {
@@ -1585,7 +1625,7 @@
             li {
                 a {
                     color: nth($primaryColor, $style) !important;
-                    border: 2px solid nth($primaryColor, $style)!important;
+                    border: 2px solid nth($primaryColor, $style) !important;
                     &:hover, &.active {
                         background-color: nth($primaryColor, $style) !important;
                         color: #fff !important;
@@ -1596,9 +1636,9 @@
     }
     .qrcode_btn {
         a {
-            background-color: nth($primaryColor, $style)!important;
+            background-color: nth($primaryColor, $style) !important;
             &:hover {
-                background-color: lighten(nth($primaryColor, $style), 10)!important;
+                background-color: lighten(nth($primaryColor, $style), 10) !important;
             }
         }
     }
@@ -1898,6 +1938,14 @@
                     color: nth($primaryColor, $style);
                 }
             }
+            .searchall {
+                .advancedsearch,
+                .branchsearch {
+                    &.addfield {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
         }
     }
     .related_links {
@@ -1953,7 +2001,7 @@
             li {
                 a {
                     color: nth($primaryColor, $style) !important;
-                    border: 2px solid nth($primaryColor, $style)!important;
+                    border: 2px solid nth($primaryColor, $style) !important;
                     &:hover, &.active {
                         background-color: nth($primaryColor, $style) !important;
                         color: #fff !important;
@@ -1964,9 +2012,9 @@
     }
     .qrcode_btn {
         a {
-            background-color: nth($primaryColor, $style)!important;
+            background-color: nth($primaryColor, $style) !important;
             &:hover {
-                background-color: lighten(nth($primaryColor, $style), 10)!important;
+                background-color: lighten(nth($primaryColor, $style), 10) !important;
             }
         }
     }
@@ -2266,6 +2314,14 @@
                     color: nth($primaryColor, $style);
                 }
             }
+            .searchall {
+                .advancedsearch,
+                .branchsearch {
+                    &.addfield {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
         }
     }
     .related_links {
@@ -2321,7 +2377,7 @@
             li {
                 a {
                     color: nth($primaryColor, $style) !important;
-                    border: 2px solid nth($primaryColor, $style)!important;
+                    border: 2px solid nth($primaryColor, $style) !important;
                     &:hover, &.active {
                         background-color: nth($primaryColor, $style) !important;
                         color: #fff !important;
@@ -2332,9 +2388,9 @@
     }
     .qrcode_btn {
         a {
-            background-color: nth($primaryColor, $style)!important;
+            background-color: nth($primaryColor, $style) !important;
             &:hover {
-                background-color: lighten(nth($primaryColor, $style), 10)!important;
+                background-color: lighten(nth($primaryColor, $style), 10) !important;
             }
         }
     }
@@ -2636,6 +2692,14 @@
                     color: nth($primaryColor, $style);
                 }
             }
+            .searchall {
+                .advancedsearch,
+                .branchsearch {
+                    &.addfield {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
         }
     }
     .related_links {
@@ -2691,7 +2755,7 @@
             li {
                 a {
                     color: nth($primaryColor, $style) !important;
-                    border: 2px solid nth($primaryColor, $style)!important;
+                    border: 2px solid nth($primaryColor, $style) !important;
                     &:hover, &.active {
                         background-color: nth($primaryColor, $style) !important;
                         color: #fff !important;
@@ -2702,9 +2766,9 @@
     }
     .qrcode_btn {
         a {
-            background-color: nth($primaryColor, $style)!important;
+            background-color: nth($primaryColor, $style) !important;
             &:hover {
-                background-color: lighten(nth($primaryColor, $style), 10)!important;
+                background-color: lighten(nth($primaryColor, $style), 10) !important;
             }
         }
     }
