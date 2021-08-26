@@ -81,12 +81,12 @@ body.fix {
             top: 10px;
         }
         h2 {
-            font-size: 1.875em;
+            font-size: 1.875em !important;
             text-align: center;
             border-bottom: 2px solid nth($primaryColor, $style);
             margin: 0px auto 20px;
             padding: 0 0 20px;
-            color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style) !important;
             line-height: 1.35em;
         }
         .form_grp {
@@ -1322,9 +1322,14 @@ body.fix {
                 border-bottom: 1px solid #ccc;
                 font-size: 1.125em;
                 a {
-                    padding: 10px;
-                    display: block;
+                    padding: 10px !important;
+                    display: block !important;
                     text-align: center;
+                    color: #666 !important;
+                    &:hover {
+                        color: #f4573f;
+                        cursor: pointer;
+                    }
                 }
             }
         }
