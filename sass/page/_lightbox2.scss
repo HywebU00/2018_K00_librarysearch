@@ -1330,6 +1330,10 @@ body.fix {
                         color: #f4573f;
                         cursor: pointer;
                     }
+                    &.active{
+                        background-color:#eee;
+                        color: #f4573f!important;
+                    }
                 }
             }
         }
