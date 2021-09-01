@@ -295,11 +295,12 @@ body.fix {
     .loginblock {
         max-width: 50vw;
         min-width: 250px;
+        max-height: 80vh;
         @media(max-width: 767px) {
             max-width: 100vh;
-            top: 45%;
-            left: 35%;
-            transform: translate(-15%, -50%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             padding: 35px 20px 35px 20px;
         }
         @include screen('xs_mobile') {
@@ -310,6 +311,7 @@ body.fix {
             border-radius: 0;
             height: 100%;
             width: 100%;
+            max-height: 100vh;
             max-width: auto;
             min-width: auto;
             @include box-sizing;
