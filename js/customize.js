@@ -1563,22 +1563,26 @@ $(function() {
 // 為您選書
 $(function() {
     $(window).on("scroll resize", function() {
+        let ww = $(window).outerWidth();
+        let isMobile = ww > 764
         var bookselectionrightblock = $(".bookselection_block .bookselection_group .rightblock");
         let bookselectionrightcontent = $(".bookselection_block .bookselection_group .rightblock .analysis_group");
         if (bookselectionrightblock.length > 0 && bookselectionrightcontent.length > 0) {
             let myWidth = bookselectionrightblock.width();
             if ($(window).scrollTop() > bookselectionrightblock.offset().top - 90) {
-                bookselectionrightcontent.addClass('fixed');
-                bookselectionrightcontent.css('width', myWidth);
+                bookselectionrightcontent.addClass("fixed");
+                bookselectionrightcontent.css("width", myWidth);
             } else {
-                bookselectionrightcontent.removeClass('fixed');
-                bookselectionrightcontent.removeAttr('style');
+                bookselectionrightcontent.removeClass("fixed");
+                bookselectionrightcontent.removeAttr("style");
             }
         }
-        if ($(window).scrollTop() + document.documentElement.clientHeight > $(".fatfooter").offset().top) {
-            bookselectionrightcontent.height($(".fatfooter").offset().top - $(window).scrollTop() - 210);
-        } else {
-            bookselectionrightcontent.height(document.documentElement.clientHeight - 210);
+        if (isMobile) {
+            if ($(window).scrollTop() + document.documentElement.clientHeight > $(".fatfooter").offset().top) {
+                bookselectionrightcontent.height($(".fatfooter").offset().top - $(window).scrollTop() - 210);
+            } else {
+                bookselectionrightcontent.height(document.documentElement.clientHeight - 210);
+            }
         }
-    })
-})
+    });
+});
