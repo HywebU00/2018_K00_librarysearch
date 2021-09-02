@@ -1532,10 +1532,31 @@ $(function() {
         $(this).parents('.form_grp').siblings('.being_switched').toggleClass('off');
     });
 })
-
 //按鈕隱藏說明
 $(function() {
     $('.disabled_hidebtn').hover(function() {
         $('.hide_description').fadeToggle();
+    })
+})
+// 為您選書
+$(function() {
+    $(window).on("scroll resize", function() {
+        var bookselectionrightblock = $(".bookselection_block .bookselection_group .rightblock");
+        let bookselectionrightcontent = $(".bookselection_block .bookselection_group .rightblock .analysis_block");
+        if (bookselectionrightblock.length > 0 && bookselectionrightcontent.length > 0) {
+            let myWidth = bookselectionrightblock.width();
+            if ($(window).scrollTop() > bookselectionrightblock.offset().top - 90) {
+                bookselectionrightcontent.addClass('fixed');
+                bookselectionrightcontent.css('width', myWidth);
+            } else {
+                bookselectionrightcontent.removeClass('fixed');
+                bookselectionrightcontent.removeAttr('style');
+            }
+        }
+        if ($(window).scrollTop() + document.documentElement.clientHeight > $(".fatfooter").offset().top) {
+            bookselectionrightcontent.height($(".fatfooter").offset().top - $(window).scrollTop() - 240);
+        } else {
+            bookselectionrightcontent.height(document.documentElement.clientHeight - 240);
+        }
     })
 })

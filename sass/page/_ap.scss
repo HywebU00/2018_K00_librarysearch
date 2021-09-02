@@ -2591,8 +2591,9 @@
             box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
             border-radius: 5px;
             margin-right: 20px;
-            padding: 0 20px 30px;
+            padding: 0 0 30px;
             box-sizing: border-box;
+            overflow: hidden;
             @include screen('tablet') {
                 flex-basis: 100%;
                 width: 100%;
@@ -2600,6 +2601,23 @@
             }
             .analysis_block {
                 margin: 10px auto;
+                padding: 0 20px;
+                &.fixed {
+                    position: fixed;
+                    top: 55px;
+                    overflow-y: scroll;
+                    height: 100%;
+                    @include box-sizing;
+                    padding-bottom: 70px;
+                    z-index: 9;
+                    scrollbar-face-color: #eee; //（軸面顏色） 
+                    scrollbar-highlight-color: #fff; //軸面左角邊顏色
+                    scrollbar-shadow-color: #fff; //軸面右角邊顏色 
+                    scrollbar-3dlight-color: #fff; //左立體邊顏色
+                    scrollbar-darkshadow-color: #fff; //右立體邊顏色
+                    scrollbar-arrow-color: #666; //箭頭顏色
+                    scrollbar-track-color: #fff; //軸軌顏色
+                }
                 @include screen('tablet') {
                     display: flex;
                     flex-wrap: wrap;
@@ -2959,14 +2977,14 @@
         }
         .analysis_chart {
             height: 500px;
-            width:auto;
+            width: auto;
             overflow: hidden;
             display: block;
             padding: 0 30px;
             @include screen('tablet') {
-               height: 500px;
+                height: 500px;
             }
-            @include screen('mobile'){
+            @include screen('mobile') {
                 height: 200px;
             }
             img {
@@ -3127,11 +3145,10 @@
             }
         }
     }
-    .btn_grp{
-        input[type="submit"]{
-             min-width: 10em;
+    .btn_grp {
+        input[type="submit"] {
+            min-width: 10em;
         }
-       
     }
 }
 // 開關
