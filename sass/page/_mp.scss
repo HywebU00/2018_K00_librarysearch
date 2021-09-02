@@ -407,34 +407,31 @@
             margin-bottom: 10px;
             text-align: left;
             padding-left: 0;
-            .advancedsearch,
-            .branchsearch {
-                text-align: left;
+            a {
+                padding: 5px 10px 5px 25px;
                 margin-bottom: 7px;
                 margin-left: 0;
                 margin-right: 0;
                 display: inline-block;
-                a {
-                    padding: 5px 10px 5px 25px;
+                color: #fff;
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    border: 7px solid #fff;
+                    border-right-color: transparent;
+                    border-top-color: transparent;
+                    border-bottom-color: transparent;
+                    top: 10px;
+                    left: 8px;
                     display: block;
-                    color: #fff;
-                    position: relative;
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        border: 7px solid #fff;
-                        border-right-color: transparent;
-                        border-top-color: transparent;
-                        border-bottom-color: transparent;
-                        top: 10px;
-                        left: 8px;
-                        display: block;
-                    }
-                    &:hover {
-                        color: nth($lightColor, $style);
-                        text-decoration: underline;
-                    }
                 }
+                &:hover {
+                    color: nth($lightColor, $style);
+                    text-decoration: underline;
+                }
+                // &.advancedsearch, &.branchsearch {
+                // }
                 &.addfield {
                     background-color: nth($primaryColor, $style);
                     border-radius: 5px;

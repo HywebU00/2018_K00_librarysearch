@@ -1538,11 +1538,33 @@ $(function() {
         $('.hide_description').fadeToggle();
     })
 })
+//左欄 資料fixed
+$(function() {
+    $(window).on("scroll resize", function() {
+        var mainleftblock = $(".mainleftblock");
+        let mainleftcontent = $(".mainleftcontent");
+        if (mainleftblock.length > 0 && mainleftcontent.length > 0) {
+            let myWidth = mainleftblock.width();
+            if ($(window).scrollTop() > mainleftblock.offset().top - 70) {
+                mainleftcontent.addClass('fixed');
+                mainleftcontent.css('width', myWidth);
+            } else {
+                mainleftcontent.removeClass('fixed');
+                mainleftcontent.removeAttr('style');
+            }
+        }
+        if ($(window).scrollTop() + document.documentElement.clientHeight > $(".fatfooter").offset().top) {
+            mainleftcontent.height($(".fatfooter").offset().top - $(window).scrollTop() - 140);
+        } else {
+            mainleftcontent.height(document.documentElement.clientHeight - 140);
+        }
+    })
+})
 // 為您選書
 $(function() {
     $(window).on("scroll resize", function() {
         var bookselectionrightblock = $(".bookselection_block .bookselection_group .rightblock");
-        let bookselectionrightcontent = $(".bookselection_block .bookselection_group .rightblock .analysis_block");
+        let bookselectionrightcontent = $(".bookselection_block .bookselection_group .rightblock .analysis_group");
         if (bookselectionrightblock.length > 0 && bookselectionrightcontent.length > 0) {
             let myWidth = bookselectionrightblock.width();
             if ($(window).scrollTop() > bookselectionrightblock.offset().top - 90) {
@@ -1554,9 +1576,9 @@ $(function() {
             }
         }
         if ($(window).scrollTop() + document.documentElement.clientHeight > $(".fatfooter").offset().top) {
-            bookselectionrightcontent.height($(".fatfooter").offset().top - $(window).scrollTop() - 240);
+            bookselectionrightcontent.height($(".fatfooter").offset().top - $(window).scrollTop() - 210);
         } else {
-            bookselectionrightcontent.height(document.documentElement.clientHeight - 240);
+            bookselectionrightcontent.height(document.documentElement.clientHeight - 210);
         }
     })
 })

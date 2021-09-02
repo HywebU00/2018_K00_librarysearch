@@ -238,6 +238,8 @@ $(function() {
             })
         }
     }
+   
+
     //設定resize 計時器
     var resizeTimer;
     _window.bind("load resize", function(event) {
