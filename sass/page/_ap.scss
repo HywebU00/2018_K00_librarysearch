@@ -2606,7 +2606,6 @@
                 box-sizing: border-box;
                 background-color: #fff;
                 overflow: hidden;
-               
                 &.fixed {
                     position: fixed;
                     top: 55px;
@@ -2836,6 +2835,9 @@
                                 margin-left: 10px;
                                 vertical-align: middle;
                             }
+                            &.active {
+                                background-color: $color-orange;
+                            }
                         }
                     }
                 }
@@ -2918,6 +2920,35 @@
                     right: auto;
                     width: 200px;
                     margin: 0 auto;
+                }
+            }
+        }
+        .explain {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.125em;
+        }
+        .bookmark {
+            display: flex;
+            flex-wrap: nowrap;
+            .tabs {
+                flex:auto;
+                flex-basis: auto;
+                margin-right: 2px;
+                &.active{
+                    a{
+                        background-color:$color-yellow;
+                        color:#fff;
+                    }
+                }
+                a{
+                    display: block;
+                    background-color: #ddd;
+                    padding:15px 25px;
+                    box-sizing: border-box;
+                    font-size: 1.125em;
+                    border-radius: 5px 5px 0 0 ;
+
                 }
             }
         }
