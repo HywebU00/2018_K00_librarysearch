@@ -2596,7 +2596,7 @@
                 bottom: 0;
                 left: 0;
                 z-index: 99;
-                 width:100%;
+                width: 100%;
             }
             .analysis_group {
                 box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -2605,7 +2605,7 @@
                 padding: 10px 0 30px;
                 box-sizing: border-box;
                 background-color: #fff;
-                overflow:hidden;
+                overflow: hidden;
                 &.fixed {
                     position: fixed;
                     top: 55px;
@@ -2621,9 +2621,16 @@
                     scrollbar-darkshadow-color: #fff; //右立體邊顏色
                     scrollbar-arrow-color: #666; //箭頭顏色
                     scrollbar-track-color: #fff; //軸軌顏色
-                    @include screen('tablet'){
-                         top: 0;
-                         overflow-y: inherit;
+                    @include screen('tablet') {
+                        top: 0;
+                        overflow-y: inherit;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        max-width: 100%;
+                        max-height: 100%;
+                        width: 100% !important;
+                        height: 100% !important;
                     }
                 }
                 @include screen('tablet') {
@@ -2677,7 +2684,7 @@
                         overflow: auto;
                         text-align: left;
                         @include box-sizing;
-                        margin:0;
+                        margin: 0;
                     }
                 }
                 .close {
