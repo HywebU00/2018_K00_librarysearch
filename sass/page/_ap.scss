@@ -2932,22 +2932,24 @@
             display: flex;
             flex-wrap: nowrap;
             .tabs {
-                flex:auto;
+                flex: auto;
                 flex-basis: auto;
-                margin-right: 2px;
-                &.active{
-                    a{
-                        background-color:$color-yellow;
-                        color:#fff;
+                // margin-right: 5px;
+                &.active {
+                    a {
+                        background-color: $color-yellow;
+                        color: #fff;
                     }
                 }
-                a{
+                a {
                     display: block;
                     background-color: #ddd;
-                    padding:15px 25px;
+                    padding: 13px 25px;
                     box-sizing: border-box;
-                    font-size: 1.125em;
-                    border-radius: 5px 5px 0 0 ;
+                    font-size: 1.188em;
+                    border-radius: 5px 5px 0 0;
+                    line-height: 1.5em;
+                    margin:0 2px;
 
                 }
             }
