@@ -1579,9 +1579,9 @@ $(function() {
         }
         if (isMobile) {
             if ($(window).scrollTop() + document.documentElement.clientHeight > $(".fatfooter").offset().top) {
-                bookselectionrightcontent.height($(".fatfooter").offset().top - $(window).scrollTop() - 210);
+                bookselectionrightcontent.height($(".fatfooter").offset().top - $(window).scrollTop() - 100);
             } else {
-                bookselectionrightcontent.height(document.documentElement.clientHeight - 210);
+                bookselectionrightcontent.height(document.documentElement.clientHeight - 100);
             }
         }
     });
