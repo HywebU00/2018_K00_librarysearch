@@ -2605,6 +2605,7 @@
                 padding: 10px 0 30px;
                 box-sizing: border-box;
                 background-color: #fff;
+                overflow:hidden;
                 &.fixed {
                     position: fixed;
                     top: 55px;
@@ -2620,6 +2621,10 @@
                     scrollbar-darkshadow-color: #fff; //右立體邊顏色
                     scrollbar-arrow-color: #666; //箭頭顏色
                     scrollbar-track-color: #fff; //軸軌顏色
+                    @include screen('tablet'){
+                         top: 0;
+                         overflow-y: inherit;
+                    }
                 }
                 @include screen('tablet') {
                     position: fixed;
