@@ -169,7 +169,7 @@
             float: none;
             clear: both;
             a {
-                padding: 5px 5px 5px 15px;
+               padding: 5px 15px 5px 10px;
                 margin-bottom: 7px;
                 margin-left: 0;
                 margin-right: 0;
@@ -194,13 +194,13 @@
                 &.addfield {
                     background-color: nth($primaryColor, $style);
                     border-radius: 5px;
-                    margin: 0 5px 7px 0;
-                    padding: 5px 10px 5px 25px;
+                    margin: 0 10px 7px 0;
+                    padding: 5px 10px 5px 20px;
                     &:before {
                         content: '';
                         position: absolute;
                         top: 10px;
-                        left: 8px;
+                        left: 10px;
                         display: block;
                     }
                 }
