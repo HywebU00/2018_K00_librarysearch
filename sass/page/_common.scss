@@ -1559,3 +1559,21 @@ em {
         }
     }
 }
+// 說明區塊
+.bookselection_explain{
+    margin: 30px 30px 0px;
+    text-align: center;
+    padding: 25px;
+    background-color: #fed857;
+    border-radius: 5px;
+    font-size: 1.25em;
+    line-height: 1.5em;
+    @include box-sizing;
+    @include screen('mobile') {
+        width: 80%;
+        margin: 30px auto 0;
+    }
+    @media(max-width: 480px) {
+        width: 75%;
+    }
+}

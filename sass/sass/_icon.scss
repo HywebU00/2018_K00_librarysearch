@@ -8,7 +8,6 @@
         speak: none;
     }
 }
-
 @mixin hyui_icon($icon_img) {
     &:before {
         background-image: url(../images/icon/#{$icon_img}.svg);
@@ -24,7 +23,6 @@
         filter: invert(100%);
     }
 }
-
 .i_apple {
     @include hyui_icon('icon_apple');
 }
@@ -67,6 +65,9 @@
 .i_home {
     @include hyui_icon('icon_home');
 }
+.i_hide {
+    @include hyui_icon('icon_hide');
+}
 .i_info {
     @include hyui_icon('icon_info');
 }
@@ -91,6 +92,9 @@
 .i_star {
     @include hyui_icon('icon_star');
 }
+.i_show {
+    @include hyui_icon('icon_show');
+}
 .i_twitter {
     @include hyui_icon('icon_twitter');
 }
@@ -103,53 +107,3 @@
 .i_youtube {
     @include hyui_icon('icon_youtube');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
