@@ -76,6 +76,29 @@
         @include screen('mobile') {
             padding: 30px 20px;
         }
+        .form_grp {
+            .password_toggle {
+                display: flex;
+                position: relative;
+                button.btn-icon {
+                    font-size: 1.25em;
+                    right: .5em;
+                    top: 0em;
+                    height: 30px;
+                    background: none;
+                    border: transparent;
+                    position: absolute;
+                    padding: 0 !important;
+                    min-width: 3em;
+                    box-shadow: none;
+                   
+                    &:hover, &:focus {
+                        background: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
     }
     label {
         margin-right: 10px;
@@ -2949,8 +2972,7 @@
                     font-size: 1.188em;
                     border-radius: 5px 5px 0 0;
                     line-height: 1.5em;
-                    margin:0 2px;
-
+                    margin: 0 2px;
                 }
             }
         }

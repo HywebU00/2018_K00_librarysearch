@@ -406,6 +406,10 @@ select::-ms-expand {
         position: absolute;
         padding: 0 !important;
         min-width: 3em;
+        box-shadow: none;
+        @include screen('tablet') {
+            top: 1.7em;
+        }
         &:hover, &:focus {
             background: none;
             box-shadow: none;
