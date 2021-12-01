@@ -1,10 +1,9 @@
 body {
     -webkit-text-size-adjust: none;
 }
-:focus{
-    // border: 1px solid lighten($form-focus, 20);
-        @include box-shadow(0px 0px 0px 2px lighten($form-focus, 20));
-        outline: none;
+a:focus{
+    outline: none;
+    box-shadow: 0 0px 0px 2px $form-focus inset;
 }
 // tab的外框線
 // a:focus {
@@ -111,8 +110,9 @@ a.more {
     display: none;
     z-index: 9;
     // text-indent: -999999px;
-    &:hover {
-       background-color:rgba(0, 0, 0, 0.8); 
+    &:hover, &:focus {
+       background-color:rgba(0, 0, 0, 0.8);
+       color: $color-yellow; 
     }
     &:before{
         content: '';

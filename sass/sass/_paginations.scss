@@ -1,5 +1,4 @@
 /*pagination*/
-
 .pagination {
     margin: 10px auto 60px;
     padding: 0px;
@@ -8,28 +7,23 @@
     clear: both;
     font-size: .938em;
     @include clearfix();
-
     span {
         color: $color-orange;
         margin: 0px .5em;
     }
-    @include screen('xs_mobile'){
+    @include screen('xs_mobile') {
         display: none;
     }
-
     .page {
         margin: 0px 0;
         padding: 0;
-
         li {
             display: inline-block;
-            min-width:40px;
+            min-width: 40px;
             height: 40px;
-            margin:0 2px 5px;
-
+            margin: 0 2px 5px;
             list-style: none;
             @include box-sizing(border-box);
-
             a {
                 border-radius: 5px;
                 padding: 6px 6px;
@@ -43,7 +37,6 @@
                 border: #ccc solid 1px;
                 text-align: center;
                 transition: .5s;
-
                 &:hover,
                 &:focus {
                     background: $hrColor;
@@ -51,12 +44,11 @@
                     border: $hrColor solid 1px;
                 }
             }
-
             &.active {
                 a {
                     color: #fff !important;
-                    background: nth($primaryColor,$style);
-                    border:nth($primaryColor,$style) solid 1px;
+                    background: nth($primaryColor, $style);
+                    border: nth($primaryColor, $style) solid 1px;
                     text-align: center;
                 }
             }
@@ -129,35 +121,31 @@
         }
     }
 }
-
 .pagination .total {
     padding: 5px;
-
     select {
         margin-right: 5px;
         width: auto;
     }
+    .btn {
+        min-width: auto;
+        padding: 0.4em 1em !important;
+    }
 }
-
 @media (max-width: 767px) {
     .pagination .total select.form-control {
         margin: 0px 0px;
         text-align: center;
     }
-
     .pagination .form_inline {
         display: none;
     }
 }
-
-
 /*----------------------------------------------------條件查詢 */
-
 .condition {
     float: right;
     margin: 0px 0 1em;
     background-color: #fff;
-
     a {
         display: inline-block;
         padding: 8px 6px 8px 30px;
@@ -166,7 +154,6 @@
         border: 1px solid #fff !important;
         text-decoration: none;
         color: #666;
-
         &:hover {
             border-color: #bbb !important;
             box-shadow: rgba(0, 0, 0, 0.35) 0 0 4px;

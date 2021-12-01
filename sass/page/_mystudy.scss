@@ -399,6 +399,15 @@
                 margin-right: 0;
                 // height: auto;
             }
+            a {
+                display: block;
+                &:focus {
+                    box-shadow: 0 0px 0px 2px $form-focus inset;
+                    .cardblock {
+                        box-shadow: 3px 2px 4px 3px #ccc;
+                    }
+                }
+            }
             .cardblock {
                 display: block;
                 border: 1px solid #ccc;
@@ -684,6 +693,9 @@
                     a {
                         display: block;
                         text-align: center;
+                        &:focus{
+                            box-shadow: 0 0px 0px 2px $form-focus;
+                        }
                     }
                 }
             }
@@ -719,7 +731,8 @@
                 width: 100%;
             }
             input[type="radio"] {
-                width: 1.3em;
+                width: 1em;
+                height: 1em;
             }
             label {
                 margin: 0;
@@ -786,7 +799,7 @@
         }
     }
     .form_content {
-        overflow: hidden;
+        // overflow: hidden;
         .select_date {
             padding: .2em 0;
             input {
@@ -795,6 +808,9 @@
             }
             .image {
                 margin-top: 0 !important;
+                a {
+                    display: block;
+                }
                 img {
                     vertical-align: middle;
                     width: 24px;
@@ -1045,7 +1061,6 @@
                 border-radius: 5px;
                 border: 1px solid $color-gray;
                 font-size: 1em;
-                box-shadow: none;
                 padding: 0 24px 0 .5em;
                 height: 2.4em;
                 line-height: 2.4em;
@@ -1093,6 +1108,12 @@
             li {
                 display: inline-block;
                 margin-right: 3px;
+                a {
+                    display: block;
+                    &:focus {
+                        box-shadow: 0 0px 0px 2px $form-focus;
+                    }
+                }
             }
         }
         .btn_grp {

@@ -16,14 +16,20 @@ $btn-radius:4px;
     color: $btn-font-color;
     box-shadow:0px 2px 2px RGBA(0, 0, 0, .08);
     border-radius:$btn-radius;
-    &:hover,
-    &:focus {
-        background: lighten($btn-bg, 10);
-        @include box-shadow(0px 2px 2px RGBA(0, 0, 0, .15));
+    &:hover
+    {
+        background: lighten($btn-bg, 5);
+        box-shadow:none;
         cursor: pointer;
         color: #FFF;
     }
-
+  
+    &:focus {
+        background: lighten($btn-bg, 5);
+        box-shadow: 0 0px 0px 2px $form-focus ;
+        cursor: pointer;
+        color: #FFF;
+    }
 
     &.active {
         background: lighten($btn-bg, 5);

@@ -164,9 +164,12 @@ select::-ms-expand {
     /*IE*/
 }
 //---------------------------------------------文字輸入表單--------//
-input[type="text"],
-input[type="password"],
-input[type="file"] {
+input[type='text'],
+input[type='password'],
+input[type='file'],
+input[type='tel'],
+input[type='mail'],
+input[type='number'] {
     &::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
         color: #666;
@@ -188,7 +191,7 @@ button,
 input[type="button"],
     {
     @extend %btn;
-    @include btn_setting(darken($color-gray, 20), #FFF);
+    @include btn_setting($color-darkgray, #FFF);
 }
 input[type="submit"] {
     @extend %btn;
@@ -202,18 +205,21 @@ textarea {
         width: 100%;
     }
 }
-input[type="text"]:focus,
-input[type="reset"]:focus,
-input[type="file"]:focus,
-input[type="password"]:focus,
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+input[type='text']:focus,
+input[type='reset']:focus,
+input[type='file']:focus,
+input[type='tel']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
 textarea:focus,
 select:focus {
-    border: 1px solid lighten($form-focus, 20);
-    @include box-shadow(0px 0px 0px 2px lighten($form-focus, 20));
+    box-shadow: 0 0px 0px 2px $form-focus;
     outline: none;
 }
 //
-input[type="file"] {}
 //---------------------------------------------下拉選單--------//
 select {
     line-height: 2.4em;
@@ -237,7 +243,7 @@ select {
 //---------------------------------------------reset--------//
 input[type="reset"] {
     @extend %btn;
-    @include btn_setting(darken($color-gray, 20), #FFF);
+    @include btn_setting($color-darkgray, #FFF);
     text-shadow: none;
 }
 //---------------------------------------------checkbox & radio--------//
@@ -245,18 +251,20 @@ input[type="checkbox"],
 input[type="radio"] {
     font-size: 1em;
     margin: -4px .2em 0 0;
-    width: 1.3em;
-    height: 1.3em;
+    width: 1em;
+    height: 1em;
     background-color: #f7f6ee;
-    border: 1px solid $color-gray;
+    border: 1px solid #999;
 }
 input[type="radio"] {
     border-radius: 50%;
 }
-input[type="checkbox"]:checked,
-input[type="radio"]:checked {
-    border-color: $color-orange;
-    background-color: $color-orange;
+input[type='checkbox']:checked,
+input[type='checkbox']:focus,
+input[type='radio']:checked,
+input[type='radio']:focus {
+    border-color: $form-focus;
+    background-color: $form-focus;
     outline: none;
 }
 input[type="checkbox"]:checked {
@@ -268,7 +276,17 @@ input[type="checkbox"]:checked {
     @include border-radius(3px);
 }
 input[type="radio"]:checked {
-    box-shadow: #fff 0 0 0 3px inset, $color-orange 0 0 0 1px;
+    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 2px;
+}
+input[type='radio']:focus {
+    border-color: $form-focus;
+    background-color: $form-focus;
+    box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 2px;
+}
+input[type='checkbox']:focus {
+    border-color: $form-focus;
+    background-color: $form-focus;
+    box-shadow: $form-focus 0 0 0 2px;
 }
 //---------------------------------------------readonly disable -------//
 input[readonly],
@@ -300,12 +318,16 @@ input[disable] {
         top: 1px;
         right: 3px;
         @extend %btn;
-        @include btn_setting($hrColor, #FFF);
+        @include btn_setting($color-darkgray, #FFF);
         padding: .2em 1em !important;
         @include border-radius(4px);
         &:hover,
         &:focus {
             cursor: pointer !important;
+        }
+        &:focus{
+            box-shadow: 0 0px 0px 2px $form-focus;
+            background-color:#000;
         }
     }
 }
@@ -319,6 +341,7 @@ input[type="file"] {
     cursor: pointer;
     opacity: 0;
     filter: alpha(opacity=0);
+
 }
 //---------------------------------------------captcha--------//
 img.captcha {
@@ -396,23 +419,40 @@ select::-ms-expand {
     }
 }
 .password_toggle {
-    button.btn-icon {
-        font-size: 1.25em;
-        right: .5em;
-        top: 0em;
-        height: 30px;
-        background: none;
-        border: transparent;
-        position: absolute;
-        padding: 0 !important;
-        min-width: 3em;
-        box-shadow: none;
+    position: relative;
+    button {
+        &.btn-icon {
+            font-size: 0;
+            right: .5em;
+            top: 3px;
+            height: 30px;
+            background: none;
+            border: transparent;
+            position: absolute;
+            padding: 0 !important;
+            min-width: 3em;
+            box-shadow: none;
+            margin-right: 22px;
+            &:focus {
+                box-shadow: 0 0px 0px 2px #f1ad00;
+            }
+        }
+        &.btn_icon_hide {
+            background-image: url('../images/icon/icon_hide.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20px;
+            width: 20px;
+        }
+        &.btn_icon_show {
+            background-image: url('../images/icon/icon_show.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 20px;
+            width: 20px;
+        }
         @include screen('tablet') {
             top: 1.7em;
-        }
-        &:hover, &:focus {
-            background: none;
-            box-shadow: none;
         }
     }
 }

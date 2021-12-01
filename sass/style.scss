@@ -553,7 +553,7 @@
     .classification {
         background-color: darken(nth($lightColor, $style), 10);
         span {
-            color: #000;
+            color: #fff;
         }
     }
     // _mystudy.scss
@@ -729,6 +729,811 @@
             &:hover {
                 background-color: lighten(#206061, 10);
                 border: 2px solid lighten(#206061, 10);
+            }
+        }
+    }
+    // line 
+    .linecontent {
+        &.mobile-card {
+            .main-title {
+                color: nth($primaryColor, $style);
+                span {
+                    color: nth($primaryColor, $style);
+                }
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+            .card-step {
+                span {
+                    background: nth($primaryColor, $style);
+                    &.active {
+                        color: #fff;
+                        background: $color-red;
+                    }
+                }
+                em {
+                    border: 8px solid nth($primaryColor, $style);
+                    border-left: none;
+                    border-bottom: none;
+                    @media screen and (max-device-width: 320px) {
+                        border: 5px solid nth($primaryColor, $style);
+                        border-left: none;
+                        border-bottom: none;
+                    }
+                }
+            }
+            .card-login {
+                .id {
+                    color: nth($primaryColor, $style);
+                }
+            }
+            .card-ok {
+                span {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+        &.library {
+            .main-title {
+                color: nth($primaryColor, $style);
+                &:before {
+                    background: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+    // 掃描條碼
+    .scanning_button {
+        background-color: nth($primaryColor, $style);
+        &:hover {
+            background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // 
+}
+// 客製版02北市圖書館
+.customization02 {
+    $style: index($sites, customization02);
+    // _header.scss
+    .header {
+        @include gradient(#7ee2e3, #54c5c6, vertical);
+        >.container {
+            .sidebarCtrl {
+                background-image: url('../images/sidebarCtrl_white.png');
+            }
+            .accesskey {
+                color: #7ee2e3;
+            }
+        }
+    }
+    // _table.scss
+    table {
+        td {
+            a {
+                color: nth($linkColor, $style);
+                &:hover {
+                    color: $aHover;
+                }
+            }
+        }
+    }
+    // _mp.scss
+    .search_block {
+        background-image: url('../images/search_blockbg02_customization01.jpg');
+        .searchsystem {
+            .recent_searches {
+                .title {
+                    color: nth($primaryColor, $style);
+                }
+            }
+            .searchall {
+                a {
+                    &.addfield {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .related_links {
+        div {
+            a {
+                span {
+                    background-color: nth($primaryColor, $style);
+                }
+                &:hover {
+                    color: darken(nth($primaryColor, $style), 10);
+                    span {
+                        background-color: lighten(nth($primaryColor, $style), 8);
+                    }
+                }
+            }
+        }
+    }
+    .featured_block {
+        background-color: nth($lightColor, $style);
+    }
+    //_common.scss
+    .privacy_consent {
+        background-color: nth($primaryColor, $style);
+    }
+    .limit {
+        h2 {
+            color: nth($linkColor, $style);
+        }
+    }
+    .sort_block {
+        .sortlist_block {
+            h2 {
+                a {
+                    color: darken(nth($linkColor, $style), 10);
+                }
+            }
+        }
+    }
+    .search_blockin {
+        .searchsystem {
+            .btn_grp {
+                a {
+                    &.addfield {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    // 內頁標頭圖
+    .search_blockin2, .search_blockin, .mystudyname, .general_block {
+        background-image: url('../images/search_blockbg02_customization01.jpg');
+        background-position: center -140px;
+    }
+    // _lighitbox2.scss
+    .login_lightbox, .related_lightbox, .related_lightbox, .lightboxstyle {
+        h2 {
+            border-bottom: 2px solid nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
+        }
+    }
+    .logintab {
+        ul {
+            li {
+                a {
+                    color: nth($primaryColor, $style) !important;
+                    border: 2px solid nth($primaryColor, $style) !important;
+                    &:hover, &.active {
+                        background-color: nth($primaryColor, $style) !important;
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+    }
+    .qrcode_btn {
+        a {
+            background-color: nth($primaryColor, $style) !important;
+            &:hover {
+                background-color: lighten(nth($primaryColor, $style), 10) !important;
+            }
+        }
+    }
+    // _form.scss
+    input[type="submit"] {
+        @include btn_setting(nth($primaryColor, $style), #FFF);
+    }
+    // _ap.scss
+    .featured_blockin {
+        background-color: nth($lightColor, $style);
+        h2 {
+            color: #333;
+        }
+    }
+    .featured_blocklist {
+        background-color: nth($lightColor, $style);
+        h3, .datalist, .explain {
+            color: #333;
+        }
+    }
+    .classification {
+        background-color: darken(nth($lightColor, $style), 10);
+        span {
+            color: #000;
+        }
+    }
+    //線上協尋書
+    .onlinesearch_block {
+        .onlinesearch {
+            // 無結果
+            .result_no {
+                color: #666;
+            }
+        }
+    }
+    // _mystudy.scss
+    .modify_data,
+    .write_data,
+    .forget_password, .mystudysearch_data {
+        .title {
+            color: nth($primaryColor, $style);
+        }
+        p {
+            a {
+                color: nth($linkColor, $style);
+                &:hover {
+                    color: $aHover;
+                }
+            }
+        }
+        .form_title {
+            span {
+                color: #666;
+            }
+        }
+    }
+    .mystudyname {
+        .nameblock {
+            h2 {
+                text-shadow: rgb(71, 71, 71) 2px 2px 6px;
+            }
+        }
+    }
+    .mystudymenu {
+        >ul {
+            >li {
+                >a {
+                    color: darken(nth($linkColor, $style), 10);
+                }
+            }
+        }
+    }
+    .mystudycontent {
+        .booknotice {
+            li {
+                em {
+                    background-color: darken(#5bb7e0, 23);
+                    &.redbg {
+                        background-color: darken(#ec636e, 14);
+                    }
+                    &.orangebg {
+                        background-color: darken(#e47c26, 12);
+                    }
+                    &.greenbg {
+                        background-color: darken(#73ac73, 16);
+                    }
+                }
+            }
+        }
+    }
+    .mycardlist {
+        li {
+            .cardblock {
+                &.redblock {
+                    &:after {
+                        border-color: transparent darken(#ec636e, 14) transparent transparent;
+                    }
+                }
+                &.blueblock {
+                    &:after {
+                        border-color: transparent darken(#5bb7e0, 23) transparent transparent;
+                    }
+                }
+                &.greenblock {
+                    &:after {
+                        border-color: transparent darken(#73ac73, 16) transparent transparent;
+                    }
+                }
+                &.yellowblock {
+                    &:after {
+                        border-color: transparent #ebb100 transparent transparent;
+                    }
+                }
+                &.orangeblock {
+                    &:after {
+                        border-color: transparent darken(#e47c26, 12) transparent transparent;
+                    }
+                }
+                &.purpleblock {
+                    &:after {
+                        border-color: transparent #a063b5 transparent transparent;
+                    }
+                }
+            }
+        }
+    }
+    // _paginations.scss
+    .pagination {
+        .page {
+            li {
+                &.active {
+                    a {
+                        background: nth($primaryColor, $style);
+                        border: nth($primaryColor, $style) solid 1px;
+                    }
+                }
+            }
+        }
+    }
+    // _lp.scss
+    .hotqa_list {
+        h2 {
+            background-color: darken(nth($lightColor, $style), 10);
+            color: darken(nth($primaryColor, $style), 40);
+        }
+    }
+    .devicereservation_block {
+        .device_list {
+            a {
+                background-color: nth($lightColor, $style);
+                &:hover,
+                &:focus {
+                    color: #000;
+                    background-color: darken(nth($lightColor, $style), 10);
+                }
+                h3 {
+                    color: #000;
+                    font-weight: 400;
+                }
+                ul {
+                    li {
+                        color: #000;
+                        &:before {
+                            border: 5px solid #000;
+                            border-color: transparent transparent transparent #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .meets_box {
+        a {
+            background-color: nth($primaryColor, $style);
+            color: #fff;
+            font-weight: 400;
+            &:hover,
+            &:focus {
+                color: #fff;
+                background-color: darken(nth($primaryColor, $style), 10);
+            }
+        }
+    }
+    .reservation_explain {
+        background-color: darken(nth($lightColor, $style), 10);
+        color: #000;
+    }
+    .device_explain {
+        background-color: darken(nth($lightColor, $style), 10);
+        color: #000;
+        h3 {
+            font-weight: 400;
+        }
+    }
+    .booklist {
+        .bookmidblock {
+            h2 {
+                a {
+                    color: nth($linkColor, $style);
+                }
+            }
+        }
+        .bookmidblock {
+            ul {
+                li {
+                    &.word_title {
+                        a {
+                            color: nth($linkColor, $style);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .reader_advice {
+        .reaction,
+        .reply,
+        .supplement {
+            h2 {
+                background-color: #257BAA;
+            }
+            table {
+                border-top: 4px solid #257BAA;
+            }
+        }
+        .reply {
+            h2 {
+                background-color: #DD3146;
+            }
+            table {
+                border-top: 4px solid #DD3146;
+            }
+        }
+        .supplement {
+            h2 {
+                background-color: #4D804A;
+            }
+            table {
+                border-top: 4px solid #4D804A;
+            }
+        }
+    }
+    //熱門回答區塊
+    .hotqa_block {
+        //熱門回答區塊
+        .hotqa {
+            .question {
+                background-color: darken($color-orange, 12);
+            }
+        }
+        //相關連結 下載附件
+        .related_linksblock {
+            .linkstitle {
+                background-color: darken($color-green, 16);
+            }
+        }
+    }
+    //借閱區塊
+    .device_borrow {
+        .title {
+            color: darken($color-orange, 12);
+        }
+    }
+    //借閱區塊
+    .device_borrow_time {
+        .title {
+            color: darken($color-orange, 12);
+        }
+    }
+    // _cp.scss
+    .mainrightblock,
+    .mainrightblock2 {
+        .book_detaildata {
+            .bookdata {
+                h2 {
+                    a {
+                        color: nth($linkColor, $style);
+                    }
+                }
+            }
+            .bookdata2 {
+                h3 {
+                    color: darken(nth($primaryColor, $style), 20);
+                }
+                //各個圖書館
+                .librarylist {
+                    ul {
+                        li {
+                            h4 {
+                                color: darken($color-orange, 12);
+                            }
+                        }
+                    }
+                }
+                //圖書館資料
+                .library_materials {
+                    h4 {
+                        color: darken($color-orange, 12);
+                    }
+                }
+                //館藏地
+                .collectionplace {
+                    .number {
+                        background-color: darken($color-orange, 12);
+                    }
+                }
+                // 出版年
+                .publishing_year_block {
+                    .title {
+                        &.addyear {
+                            color: darken($color-orange, 12);
+                            span {
+                                background-color: darken($color-orange, 12);
+                            }
+                        }
+                    }
+                }
+                // 期刊tab
+                .journal_tab {
+                    ul {
+                        li {
+                            a {
+                                &:hover, &.here {
+                                    background-color: darken($color-green, 16);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .switch_btn {
+        a {
+            background-color: nth($primaryColor, $style) !important;
+        }
+    }
+    .cp_content {
+        h3 {
+            color: darken(nth($primaryColor, $style), 10);
+        }
+    }
+    // _ap.css
+    // 內容主題分析
+    .bookselection_group {
+        .rightblock {
+            .content_analysis {
+                .title {
+                    background-color: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+    //分類瀏覽
+    .classification {
+        .path {
+            li {
+                color: #000;
+                &:before {
+                    color: #333;
+                }
+                a {
+                    color: #000;
+                    text-decoration: underline;
+                    &:hover {
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+    // 我的點數
+    .mypoints {
+        .title {
+            span {
+                background-color: #be5702;
+                &:before {
+                    content: '';
+                    border: 21.5px solid #be5702;
+                    border-color: transparent transparent transparent #be5702;
+                    position: absolute;
+                    right: -43px;
+                    top: 0;
+                }
+            }
+        }
+        .content {
+            .subtitle {
+                &.bluebg {
+                    background-color: darken($color-blue, 21);
+                    &:before {
+                        border-color: darken($color-blue, 21);
+                        border-top-color: transparent;
+                        border-right-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                }
+                &.greenbg {
+                    background-color: darken($color-green, 16);
+                    &:before {
+                        border-color: darken($color-green, 16);
+                        border-top-color: transparent;
+                        border-right-color: transparent;
+                        border-bottom-color: transparent;
+                    }
+                }
+            }
+            .data {
+                .date {
+                    color: darken($color-green, 16);
+                }
+            }
+        }
+    }
+    // 獎勵按鈕
+    .reward_btn {
+        a {
+            &:hover, &:focus {
+                background-color: #be5702;
+            }
+        }
+    }
+    // 分類項目
+    .classification_projectblock {
+        .classification_list_right {
+            .classification_list_box {
+                .content {
+                    &:before {
+                        border-color: darken(#ec636e, 14) transparent transparent darken(#ec636e, 14);
+                    }
+                }
+            }
+            //
+            .classification_list_box:nth-child(2n) {
+                .content {
+                    &:before {
+                        border-color: #ebb100 transparent transparent #ebb100;
+                    }
+                }
+            }
+            //
+            .classification_list_box:nth-child(3n) {
+                .content {
+                    &:before {
+                        border-color: $color-green transparent transparent $color-green;
+                    }
+                }
+            }
+            //
+            .classification_list_box:nth-child(5n) {
+                .content {
+                    &:before {
+                        border-color: darken(#5bb7e0, 23) transparent transparent darken(#5bb7e0, 23);
+                    }
+                }
+            }
+        }
+    }
+    // _fatfooter.scss
+    .fatfooter {
+        background-color: darken(nth($primaryColor, $style), 20);
+        .btn-fatfooter {
+            background: darken(nth($primaryColor, $style), 20);
+            &:hover,
+            &:focus {
+                background: darken(nth($primaryColor, $style), 30);
+            }
+        }
+    }
+    //_footer.scss
+    footer {
+        background-color: darken(nth($primaryColor, $style), 20);
+    }
+    // _template.scss
+    // wordcolor
+    .word_blue {
+        color: darken($color-blue, 21) !important;
+    }
+    .word_green {
+        color: darken($color-green, 16) !important;
+    }
+    .word_orange {
+        color: darken($color-orange, 12) !important;
+    }
+    .word_yellow {
+        color: darken($color-yellow, 17) !important;
+    }
+    .word_gray {
+        color: $color-darkgray !important;
+    }
+    //按鈕共用
+    .btnstyle {
+        &.bluebg {
+            background-color: #016593;
+            border: 2px solid #016593;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #027EB6;
+                border: 2px solid #027EB6;
+            }
+        }
+        &.bluebg2 {
+            background-color: #0d5cbe;
+            border: 2px solid #0d5cbe;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #3e78c0;
+                border: 2px solid #3e78c0;
+            }
+        }
+        &.bluebg3 {
+            background-color: nth($primaryColor, $style);
+            border: 2px solid nth($primaryColor, $style);
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: darken(nth($primaryColor, $style), 10);
+                border: 2px solid darken(nth($primaryColor, $style), 10);
+            }
+        }
+        &.greenbg {
+            background-color: #496809;
+            border: 2px solid #496809;
+            color: #fff;
+            filter: brightness(120%);
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #59800B;
+                border: 2px solid #59800B;
+            }
+        }
+        &.greenbg2 {
+            background-color: #00807b;
+            border: 2px solid #00807b;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #15827e;
+                border: 2px solid #15827e;
+            }
+        }
+        &.redbg {
+            background-color: #ae031d;
+            border: 2px solid #ae031d;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #e20022;
+                border: 2px solid #e20022;
+            }
+        }
+        &.redbg2 {
+            background-color: #b0582d;
+            border: 2px solid #b0582d;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #b05f46;
+                border: 2px solid #b05f46;
+            }
+        }
+        &.whitebg {
+            border: 2px solid #fff;
+            background-color: #fff;
+            color: #333 !important;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #d2d2d2;
+                border: 2px solid #d2d2d2;
+                ;
+                color: #333 !important;
+            }
+        }
+        &.brownbg {
+            background-color: #59493f;
+            border: 2px solid #59493f;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: lighten(#59493f, 10);
+                border: 2px solid lighten(#59493f, 10);
+            }
+        }
+        &.orangebg {
+            background-color: darken(#C75100, 3);
+            border: 2px solid darken(#C75100, 3);
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #C75100;
+                border: 2px solid #C75100;
+            }
+        }
+        &.graybg {
+            background-color: #666666;
+            border: 2px solid #666666;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #757575;
+                border: 2px solid #757575;
+            }
+        }
+        // 框線按鈕
+        &.border_bluebg {
+            border: 1px solid #0d5cbe !important;
+            color: #0d5cbe !important;
+            &:hover {
+                background-color: #3e78c0 !important;
+                border: 1px solid #3e78c0 !important;
+            }
+        }
+        &.border_greenbg {
+            border: 1px solid #496809 !important;
+            color: #496809 !important;
+            &:hover {
+                background-color: #59800B !important;
+                border: 1px solid #59800B !important;
             }
         }
     }

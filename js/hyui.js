@@ -221,6 +221,14 @@ $(function() {
                     $('.menu').find('li ul').hide();
                 }
             });
+            // 點外面關閉
+            $(document).on('touchend click', function(e) {
+                var container = $(".language >a, .language ul li a, .form_search, .prompt3, .prompt_btn, .member_pic, .optionblock .option_01 .name, .bookplace_list, .prompt, .prompt2 ");
+                if (!container.is(e.target) && container.has(e.target).length === 0) {
+                    $('.language ul, .recent_searches, .prompt_block3, .promptblock, .member_data, .optionblock .option_01 .option_list, .prompt_block, .prompt_block2').slideUp();
+                    $('.prompt, .prompt2').removeClass('arrow')
+                }
+            });
             //縮限查詢範圍
             $('.mainleftblock').css('position', 'relative');
             $('.mainleftblock').css('left', '0');
@@ -238,8 +246,6 @@ $(function() {
             })
         }
     }
-   
-
     //設定resize 計時器
     var resizeTimer;
     _window.bind("load resize", function(event) {
@@ -556,8 +562,9 @@ $(function() {
     /*-----------------------------------*/
     /////click event to scroll to top//////
     /*-----------------------------------*/
-    $('.scrollToTop').click(function(e) {
-        $('html, body').animate({ scrollTop: 0 }, 400, 'easeOutQuint');
+    $('.scrollToTop').keydown(function(e) {
+        $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
+        _body.find('a.goCenter').focus();
         e.preventDefault();
     });
     /*--------------------------------------------------------*/
@@ -600,6 +607,15 @@ $(function() {
             $(this).closest('.upload_grp').find('.upload_file').attr("value", length + " files selected");
         } else {
             $(this).closest('.upload_grp').find('.upload_file').attr("value", names);
+        }
+    });
+    /*------------------------------------*/
+    /////gotoCenter on focus跳到 content/////
+    /*------------------------------------*/
+    $('a.goCenter').keydown(function(e) {
+        if (e.which == 13) {
+            $('#aC').focus();
+            $('html, body').stop(true, true).animate({ scrollTop: $('.main').find('.accesskey').offset().top - 70 }, 800, 'easeOutExpo');
         }
     });
 });

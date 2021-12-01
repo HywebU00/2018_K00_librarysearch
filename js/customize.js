@@ -695,6 +695,9 @@ $(function() {
         $(".language ul").slideToggle(500);
         return false;
     });
+    $('.language').find('ul li:last>a').focusout(function() {
+        $('.language').find('ul').slideUp();
+    });
 })
 // login登入
 $(function() {
@@ -1066,6 +1069,9 @@ $(function() {
     $('.header .member_pic').click(function() {
         $('.member_data').slideToggle();
     })
+    $('.member_record .member_data').find('ul li:last-child>a').focusout(function() {
+        $('.member_record').find('.member_data').hide();
+    });
 })
 //個人書房選單右上角
 $(function() {
@@ -1291,6 +1297,9 @@ $(function() {
         $(this).siblings('.option_list').stop().slideToggle();
         $(this).parent().siblings().find('.option_list').stop().slideUp();
     })
+    $('.optionblock').find('.option_01 .option_list li:last-child>a').focusout(function() {
+        $('.optionblock').find('.option_list').hide();
+    });
 })
 //隱私權同意
 $(function() {
@@ -1329,6 +1338,11 @@ $(function() {
         $(this).parent('th').siblings('th').children('.prompt').removeClass('arrow');
         $(this).parent('th').siblings('th').children('.prompt_block2').hide();
         $(this).parent('th').siblings('th').children('.prompt2').removeClass('arrow');
+
+    })
+    $('.bookplace_list .prompt').focusout(function(){
+        $('.prompt_block').hide();
+        $(this).removeClass('arrow');
     })
     $('.prompt_block2').hide();
     $('.bookplace_list .prompt2').click(function() {
@@ -1337,17 +1351,29 @@ $(function() {
         $(this).parent('th').siblings('th').children('.prompt_block').hide();
         $(this).parent('th').siblings('th').children('.prompt').removeClass('arrow');
     })
+     $('.bookplace_list .prompt2').focusout(function(){
+        $('.prompt_block2').hide();
+        $(this).removeClass('arrow');
+    })
     $('.prompt_block3').hide();
     $('.prompt3').click(function() {
         $('.prompt_block3').fadeToggle();
-        $(this).toggleClass('arrow');
+        // $(this).toggleClass('arrow');
+    })
+     $('.choosebtn .prompt3').focusout(function(){
+        $('.prompt_block3').hide();
     })
     $('.promptblock').hide();
     $('.analysis_prompt .prompt_btn').click(function() {
         $('.promptblock').fadeToggle();
         $(this).toggleClass('arrow');
     })
+    $('.analysis_prompt .prompt_btn').focusout(function(){
+        $('.promptblock').hide();
+        
+    })
 })
+
 //詳目頁 表格收合
 $(function() {
     $('.bookplace_list td.tdswitch .switch_btn>a').click(function() {
@@ -1397,11 +1423,12 @@ $(function() {
     $('.form_search>input[type="text"]').click(function() {
         $('.recent_searches').stop().slideDown();
     })
-    $(document).on('touchend click', function(e) {
-        var target = e.target;
-        if (!$(target).is('.form_search>input[type="text"]')) {
-            $('.recent_searches').hide();
-        }
+    $('.form_search>input[type="text"]').focus(function() {
+        $('.recent_searches').stop().slideDown();
+    })
+    // 
+    $('.form_search').find('.recent_searches .record_list li:last-child a:last-child').focusout(function() {
+        $('.form_search').find('.recent_searches').hide();
     });
 })
 //登入tab
@@ -1479,8 +1506,15 @@ $(function() {
 // 首頁最新消息箭頭
 $(function() {
     $('.newsblcok .openclosebtn').click(function() {
-        $('.newsblcok').stop().toggleClass('openblock');
-        $(this).stop().toggleClass('open');
+        if (!$('.newsblcok').hasClass('openblock')) {
+            $('.newsblcok').stop().addClass('openblock');
+            $(this).stop().addClass('open');
+            $(this).children('a').html('收合');
+        } else {
+            $('.newsblcok').stop().removeClass('openblock');
+            $(this).stop().removeClass('open');
+            $(this).children('a').html('展開');
+        }
     })
 })
 //閱讀指數－年
@@ -1586,18 +1620,18 @@ $(function() {
         }
     });
 });
-$(function(){
+$(function() {
     // password_toggle
     var passShow = false;
     $('.password_toggle').each(function(index, el) {
         $(this).find('.btn-icon').off().click(function(e) {
             if (!passShow) {
-                $(this).children('i').removeClass().addClass('i_show');
+                $(this).removeClass('btn_icon_hide').addClass('btn_icon_show').html('打開');
                 $(this).parents('.password_toggle').find('input[type="password"]').attr('type', 'text');
                 passShow = true;
                 // console.log(passShow);
             } else {
-                $(this).children('i').removeClass().addClass('i_hide');
+                $(this).removeClass('btn_icon_show').addClass('btn_icon_hide').html('關閉');
                 $(this).parents('.password_toggle').find('input[type="text"]').attr('type', 'password');
                 passShow = false;
                 // console.log(passShow);
@@ -1606,3 +1640,8 @@ $(function(){
         });
     });
 })
+// close內加html
+$(".close").append("<a href='#'>關閉</a>");
+$(".close_black").append("<a href='#'>關閉</a>");
+
+//

@@ -182,7 +182,7 @@
     }
     .searchsystem {
         width: 80%;
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 0, 0, .6);
         margin: 45px auto;
         padding: 50px 60px 40px;
         text-align: center;
@@ -275,11 +275,9 @@
                 width: 52px;
                 min-width: auto;
                 height: 54px;
-                // @media(max-width: 400px) {
-                //     display: block;
-                //     float: none;
-                //     width: 100%;
-                // }
+                &:focus{
+                    background-color: darken(#f4573f, 20);
+                }
             }
             // placeholder
             ::-webkit-input-placeholder {
@@ -536,6 +534,7 @@
             height: 40px;
             overflow: hidden;
             position: relative;
+            display: flex;
             &.openblock {
                 height: auto;
                 overflow: visible;
@@ -544,7 +543,9 @@
                 height: 70px;
             }
             .newslist {
-                width: calc(100% - 120px);
+                flex: auto;
+                flex-basis: calc(100% - 120px);
+                max-width: calc(100% - 120px);
                 @include screen('mobile') {
                     width: 100%;
                 }
@@ -603,11 +604,10 @@
                 }
             }
             .rightblock {
-                width: 110px;
+                flex: none;
+                flex-basis: 110px;
+                max-width: 110px;
                 overflow: hidden;
-                position: absolute;
-                top: 15px;
-                right: 0;
                 @media(max-width: 380px) {
                     width: 110px;
                 }
@@ -620,6 +620,10 @@
                     vertical-align: middle;
                     cursor: pointer;
                     margin-right: 10px;
+                    font-size: 0;
+                    a{
+                        display: block;
+                    }
                     @media(max-width: 380px) {
                         margin-right: 5px;
                     }
@@ -809,12 +813,14 @@
             a {
                 display: block;
                 @include text-overflow;
-                width: 150px;
+                width: 156px;
                 height: 237px;
                 color: #000;
                 text-align: center;
                 vertical-align: bottom;
                 margin: 0 auto;
+                padding:3px;
+                box-sizing:border-box;
                 img {
                     width: 148px;
                     height: 200px;
@@ -907,6 +913,7 @@
             width: 100%;
         }
     }
+    
 }
 .recommendbooks_block {
     border-bottom: 1px solid #ccc;
@@ -1319,8 +1326,13 @@
                 }
                 a {
                     color: #000;
+                    display: block;
                     &:hover {
-                        color: $importantColor;
+                        color:darken($importantColor, 10);
+                        
+                    }
+                    &:focus{
+                         box-shadow: 0 0px 0px 3px #fff ;
                     }
                 }
                 .image {
@@ -1473,7 +1485,7 @@
         padding: 0 5px;
         a {
             display: block;
-            padding: 20px 30px;
+            padding: 20px ;
             @include gradient(#dcdcdc, #e5e5e5, vertical);
             color: #333;
             font-size: 1.25em;
@@ -1484,19 +1496,21 @@
             &:hover {
                 background-image: none;
                 background-color: $color-yellow;
-                color: #fff;
+                color: #333;
             }
             &.here {
                 background: $color-yellow;
-                color: #fff;
+                color: #333;
             }
         }
     }
     .slick-next {
         right: -45px;
+        top:0;
     }
     .slick-prev {
         left: -45px;
+        top:0;
     }
 }
 // 熱門借閱分隔線
@@ -1613,8 +1627,11 @@
         a {
             color: #81511b;
             text-decoration: underline;
-            &:hover {
-                color: #f4573f;
+            &:hover, &:focus {
+                color: $aHover;
+            }
+            &:focus{
+                box-shadow: 0 0px 0px 3px $form-focus inset;
             }
         }
     }

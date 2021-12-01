@@ -28,13 +28,16 @@ body.fix {
     }
 }
 .close {
-    background-image: url('../images/icon_close.png');
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    width: 31px;
-    height: 31px;
-    display: block;
-    cursor: pointer;
+    a {
+        background-image: url('../images/icon_close.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        width: 31px;
+        height: 31px;
+        display: block;
+        cursor: pointer;
+        font-size: 0;
+    }
 }
 .mainleftblock .lightboxstyle {
     .close {
@@ -189,7 +192,6 @@ body.fix {
             p {
                 margin: 10px 0 !important;
             }
-            
         }
         //
         .qrcode_content {
@@ -487,13 +489,19 @@ body.fix {
             position: absolute;
             right: 25px;
             top: 20px;
-            background-image: url('../images/icon_close03.png');
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            width: 46px;
-            height: 48px;
-            display: block;
+            background-color: #fff;
+            border-radius: 50%;
             cursor: pointer;
+            a {
+                width: 41px;
+                height: 41px;
+                display: block;
+            }
+            img {
+                margin: 4px;
+                width: 31px;
+                height: 31px;
+            }
         }
         h2 {
             font-size: 1.875em;
@@ -1333,9 +1341,9 @@ body.fix {
                         color: #f4573f;
                         cursor: pointer;
                     }
-                    &.active{
-                        background-color:#eee;
-                        color: #f4573f!important;
+                    &.active {
+                        background-color: #eee;
+                        color: #f4573f !important;
                     }
                 }
             }

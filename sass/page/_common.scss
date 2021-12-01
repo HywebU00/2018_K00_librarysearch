@@ -64,10 +64,12 @@
                 border: none;
                 font-size: 1em;
                 height: 40px;
-                box-shadow: none;
                 line-height: 2.2em;
                 border: none !important;
                 border-right: 1px solid #d3d3d3 !important;
+                &:focus {
+                    box-shadow: 0 0px 0px 2px $form-focus inset;
+                }
             }
         }
         .form_search {
@@ -126,10 +128,9 @@
                 background-size: 25px;
                 width: 52px;
                 min-width: auto; // @media(max-width: 400px) {
-                //     display: block;
-                //     float: none;
-                //     width: 100%;
-                // }
+                &:focus {
+                    background-color: darken(#f4573f, 20);
+                }
             }
             // placeholder
             ::-webkit-input-placeholder {
@@ -169,7 +170,7 @@
             float: none;
             clear: both;
             a {
-               padding: 5px 15px 5px 10px;
+                padding: 5px 15px 5px 10px;
                 margin-bottom: 7px;
                 margin-left: 0;
                 margin-right: 0;
@@ -281,8 +282,10 @@
                     box-shadow: none;
                     padding: 0 24px 0 .5em;
                     height: 40px;
-                    box-shadow: none;
                     line-height: 2.2em;
+                    &:focus {
+                        box-shadow: 0 0px 0px 2px $form-focus inset;
+                    }
                 }
             }
             .form_search {
@@ -318,6 +321,12 @@
                 li {
                     display: inline-block;
                     margin: 0 3px;
+                    a {
+                        display: block;
+                        &:focus {
+                            box-shadow: 0 0px 0px 2px $form-focus;
+                        }
+                    }
                 }
             }
             .onlysearchin {
@@ -429,10 +438,12 @@
                     border-radius: 5px;
                     border: 1px solid $color-gray;
                     font-size: 1em;
-                    box-shadow: none;
                     padding: 0 24px 0 .5em;
                     height: 2.4em;
                     line-height: 2.4em;
+                    &:focus {
+                        box-shadow: 0 0px 0px 2px $form-focus inset;
+                    }
                 }
             }
             .form_search {
@@ -465,6 +476,13 @@
                     margin: 0 3px;
                     @include screen('mobile') {
                         margin: 0 3px 5px;
+                    }
+                    a {
+                        display: block;
+                        &:hover {}
+                        &:focus {
+                            box-shadow: 0 0px 0px 2px $form-focus;
+                        }
                     }
                 }
             }
@@ -522,6 +540,9 @@
                     @include screen('mobile') {
                         width: 100%;
                     }
+                    &:focus {
+                        box-shadow: 0 0px 0px 2px $form-focus inset;
+                    }
                 }
             }
             .form_content {
@@ -567,11 +588,20 @@
                         padding: 0.4em;
                         width: 70% !important;
                     }
-                    img {
+                    .image {
                         vertical-align: middle;
                         width: 24px;
                         float: right;
                         margin: 5px 5px 0 0;
+                        a {
+                            display: block;
+                            img {
+                                width: 24px;
+                            }
+                            &:focus {
+                                box-shadow: 0 0px 0px 2px $form-focus inset;
+                            }
+                        }
                     }
                 }
                 .ui-datepicker {
@@ -595,7 +625,6 @@
                 margin-right: 2px;
                 margin-bottom: 0;
                 display: inline-block;
-                box-shadow: none;
                 border-radius: 5px;
                 width: 100%;
                 @include box-sizing;
@@ -631,10 +660,14 @@
         .btn_grp {
             clear: both;
             input[type="submit"] {
-                background-color: $importantColor;
+                background: $importantColor;
                 border: 1px solid darken($importantColor, 25);
                 &:hover {
-                    background-color: lighten(#f4573f, 8);
+                    background: darken($importantColor, 8);
+                }
+                &:focus {
+                    border: 1px solid $importantColor;
+                    box-shadow: 0 0px 0px 2px $form-focus;
                 }
             }
         }
@@ -1435,19 +1468,24 @@ html .ui-button.ui-state-disabled:active {
             &:hover {
                 background-image: none;
                 background-color: $color-yellow;
-                color: #fff;
+                color: #000;
             }
             &.here {
                 background: $color-yellow;
-                color: #fff;
+                color: #000;
+                &:focus {
+                    box-shadow: 0 0px 0px 2px $form-focus ;
+                }
             }
         }
     }
     .slick-next {
         right: -45px;
+        top: 0;
     }
     .slick-prev {
         left: -45px;
+        top: 0;
     }
     @media(max-width: 400px) {
         .slick-next {
@@ -1560,7 +1598,7 @@ em {
     }
 }
 // 說明區塊
-.bookselection_explain{
+.bookselection_explain {
     margin: 30px 30px 0px;
     text-align: center;
     padding: 25px;

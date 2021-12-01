@@ -352,7 +352,7 @@
                         border-bottom: 1px solid #eee;
                         text-align: left;
                         &.here {
-                            background-color: #f4573f;
+                            background-color: $color-red;
                             color: #fff;
                         }
                     }
@@ -716,7 +716,7 @@
                         background-color: #fff;
                         padding: 4px 20px 4px 33px;
                         color: #313131;
-                        box-shadow: none;
+                       
                         margin: 0.25em .2em;
                         &:hover {
                             background-color: #e5e5e5;
@@ -753,6 +753,9 @@
                         display: inline-block;
                         @media(max-width: 380px) {
                             display: block;
+                        }
+                        &:focus{
+                            box-shadow: 0 0px 0px 2px $form-focus;
                         }
                     }
                     .addtag {
@@ -827,6 +830,12 @@
                             margin: 0 .3em 0 .1em !important;
                         }
                     }
+                    .closebtn{
+                        display:inline-block; 
+                        &:focus{
+                            box-shadow: 0 0px 0px 2px $form-focus ;
+                        }
+                    }
                 }
             }
             ul.borrowdate_data {
@@ -862,7 +871,7 @@
                     background-color: #fff;
                     padding: 4px 20px 4px 33px;
                     color: #313131;
-                    box-shadow: none;
+                   
                     &:hover {
                         background-color: #e5e5e5;
                     }
@@ -1444,6 +1453,7 @@
                     color: $color-brown2;
                     text-decoration: underline;
                     transition: .5s;
+                    display: block;
                     &:hover {
                         color: $aHover;
                     }
@@ -2170,7 +2180,7 @@
             color: darken($color-darkgreen, 35);
             font-weight: 500;
             display: block;
-            &:hover {
+            &:hover, &:focus {
                 margin-top: 0px;
                 box-shadow: 3px 2px 4px 3px #ccc;
                 color: darken($color-darkgreen, 35);
@@ -2633,7 +2643,7 @@
                 font-size: 1.25em;
                 color: #333;
                 font-weight: 600;
-                &:hover {
+                &:hover, &:focus {
                     color: $color-red;
                     text-decoration: underline;
                 }
@@ -2729,10 +2739,10 @@
     }
 }
 .image_titlepage2 {
-    background-color: #3a9490;
+    background-color: #296360;
     color: #fff;
     overflow: hidden;
     &:before {
-        background-color: #6ec6c2;
+        background-color: #367e7b;
     }
 }

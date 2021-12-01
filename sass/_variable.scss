@@ -3,19 +3,19 @@
 
 //-------------------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$sites:initial, child01, customization01, version01, version02, version03, version04, version05, version06;
-$primaryColor:	#005d98, #5c9588, #54c5c6, #1c4b82, #ff8b00, #00a79d, #774181, #088c6f, #00b7ee;	//主色 
+$sites:initial, child01, customization01, customization02, version01, version02, version03, version04, version05, version06;
+$primaryColor:	#005d98, #5c9588, #5c9588, #54c5c6, #1c4b82, #ff8b00, #00a79d, #774181, #088c6f, #00b7ee;	//主色 
 $secondaryColor:#781F79;//輔色
-$lightColor:	#fed857 ,#5c9588, #fed857, #e9846a, #a7c077, #f49a6e, #e6b2c6, #f3d394, #fbe8d3;//點綴
-$linkColor:     #774e2b ,#774e2b, #2D8687, #1c4b82, #774e2b, #00988d, #774181, #07785f, #44b1e2;//連結
-$importantColor:#f4573f;//重要
+$lightColor:	#fed857 ,#5c9588, #5c9588, #fed857, #e9846a, #a7c077, #f49a6e, #e6b2c6, #f3d394, #fbe8d3;//點綴
+$linkColor:     #774e2b ,#774e2b, #774e2b, #2D8687, #1c4b82, #774e2b, #00988d, #774181, #07785f, #44b1e2;//連結
+$importantColor:#e52104;//重要
 $style: index($sites,initial) ; //選擇initial後 = $style:1
 // 但注意真實顏色與語意的關聯必須易於辨識
 
 $color-blue: 				#21BAFF;
 $color-green:				#73ac73;
 $color-orange: 				#e47c26;
-$color-red: 				#eb574b;
+$color-red: 				#e52104;
 $color-yellow: 				#f1ad00;
 $color-purple: 				#AA5AC5;
 $color-gray: 				#d3d3d3;
