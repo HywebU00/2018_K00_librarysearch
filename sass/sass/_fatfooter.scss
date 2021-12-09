@@ -46,17 +46,17 @@ $fatTextColor: $color-word; //fatFooter 連結顏色
             height: 17px;
             content: ""; // 
             transform: rotate(0deg);
-            top: 13px;
+            top: 18px;
             left: 50%;
             background-image: url('../images/fatfooter_icon01.png');
             background-repeat: no-repeat;
             background-position: 0 0;
-            margin-left: -8px;
+            margin-left: -9px;
             transition: .3s ease-out;
         }
         &.close {
             &:before {
-                top: 13px;
+                top: 18px;
                 transform: rotate(180deg);
             }
         }

@@ -8,8 +8,7 @@
         border: 1px solid #ccc;
         padding: 40px 30px;
         box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-        border-radius:5px;
-
+        border-radius: 5px;
         @include box-sizing;
         @media screen and (max-device-width: 320px) {
             padding: 20px 10px;
@@ -321,11 +320,10 @@
 }
 //白底
 .linecontent.library {
-    
     margin: 30px auto 60px;
     width: 90%;
     border: 1px solid #ccc;
-   padding: 40px 30px;
+    padding: 40px 30px;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     @include box-sizing;
@@ -408,8 +406,15 @@
                 width: 30px;
                 height: 30px;
                 display: inline-block;
-                background: url('../images/delete.png') 0 0 no-repeat;
-                background-size: cover;
+                // background: url('../images/delete.png') 0 0 no-repeat;
+                // background-size: cover;
+                a {
+                    display: block;
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
             }
         }
     }
@@ -559,125 +564,122 @@
     }
 }
 // 8-4
-.linecontent .book-gallery{
-  margin-left: -10px;
-  margin-right: -10px;
-  @media only screen and (min-device-width:480px){
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-  @media only screen and (min-device-width:568px){
+.linecontent .book-gallery {
     margin-left: -10px;
     margin-right: -10px;
-  }
-  @media only screen and (min-device-width:640px){
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-  @media only screen and (min-device-width:667px){
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-  @media only screen and (min-device-width:853px){
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-  @media only screen and (min-device-width:966px){
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-  .book{
-    overflow: hidden;
-    display: inline-block;
-    margin-bottom: 20px;
-    margin-right: -5px;
-    vertical-align: top;
-    width: 50%;
-    padding: 0px 10px;
-    box-sizing:border-box;
-    @media only screen and (min-device-width:480px){
-      padding: 0px 15px;
+    @media only screen and (min-device-width: 480px) {
+        margin-left: -15px;
+        margin-right: -15px;
     }
-    @media only screen and (min-device-width:568px){
-      width: calc(100%/3);
-      padding: 0px 10px;
+    @media only screen and (min-device-width:568px) {
+        margin-left: -10px;
+        margin-right: -10px;
     }
-    @media only screen and (min-device-width:640px){
-      padding: 0px 15px;
+    @media only screen and (min-device-width:640px) {
+        margin-left: -15px;
+        margin-right: -15px;
     }
-    @media only screen and (min-device-width:768px){
-      width: 25%;
-      padding: 0px 10px;
+    @media only screen and (min-device-width:667px) {
+        margin-left: -10px;
+        margin-right: -10px;
     }
-    @media only screen and (min-device-width:853px){
-      padding: 0px 15px;
+    @media only screen and (min-device-width:853px) {
+        margin-left: -15px;
+        margin-right: -15px;
     }
-    @media only screen and (min-device-width:960px){
-      width: calc(100%/4);
-      padding: 0px 10px;
+    @media only screen and (min-device-width:966px) {
+        margin-left: -10px;
+        margin-right: -10px;
     }
-    @media only screen and (min-device-width:1024px){
-      width: 20%;
+    .book {
+        overflow: hidden;
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-right: -5px;
+        vertical-align: top;
+        width: 50%;
+        padding: 0px 10px;
+        box-sizing: border-box;
+        @media only screen and (min-device-width: 480px) {
+            padding: 0px 15px;
+        }
+        @media only screen and (min-device-width:568px) {
+            width: calc(100%/3);
+            padding: 0px 10px;
+        }
+        @media only screen and (min-device-width:640px) {
+            padding: 0px 15px;
+        }
+        @media only screen and (min-device-width:768px) {
+            width: 25%;
+            padding: 0px 10px;
+        }
+        @media only screen and (min-device-width:853px) {
+            padding: 0px 15px;
+        }
+        @media only screen and (min-device-width:960px) {
+            width: calc(100%/4);
+            padding: 0px 10px;
+        }
+        @media only screen and (min-device-width:1024px) {
+            width: 20%;
+        }
+        @media only screen and (min-device-width:1200px) {
+            width: calc(100%/6);
+        }
+        @media only screen and (min-device-width:1366px) {
+            width: calc(100%/7);
+        }
+        @media only screen and (min-device-width:1700px) {
+            width: calc(100%/8);
+        }
+        @media only screen and (min-device-width:1900px) {
+            width: calc(100%/9);
+        }
+        @media only screen and (min-device-width:2250px) {
+            width: 10%;
+        }
+        @media only screen and (min-device-width:2468px) {
+            width: calc(100%/11);
+        }
+        .cover, .title {
+            width: 100%;
+        }
+        .cover {
+            height: auto;
+            overflow: hidden;
+            margin-bottom: 10px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .title {
+            line-height: 140%;
+            max-height: 44px;
+            height: 44px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            word-break: break-word;
+            color: #000;
+            margin-bottom: 10px;
+            font-weight: bold;
+            a {}
+        }
+        dl {
+            margin: 0 0 10px 0;
+            color: #333;
+            dt {
+                float: left;
+                margin-bottom: 6px;
+            }
+            dd {
+                margin-bottom: 6px;
+            }
+        }
+        .btn {}
     }
-    @media only screen and (min-device-width:1200px){
-      width: calc(100%/6);
-    }
-    @media only screen and (min-device-width:1366px){
-      width: calc(100%/7);
-    }
-    @media only screen and (min-device-width:1700px){
-      width: calc(100%/8);
-    }
-    @media only screen and (min-device-width:1900px){
-      width: calc(100%/9);
-    }
-    @media only screen and (min-device-width:2250px){
-      width: 10%;
-    }
-    @media only screen and (min-device-width:2468px){
-      width: calc(100%/11);
-    }
-    .cover,.title{
-      width: 100%;
-    }
-    .cover{
-      height: auto;
-      overflow: hidden;
-      margin-bottom: 10px;
-      img{
-
-        width: 100%;
-        height: auto;
-      }
-    }
-    .title{
-      line-height: 140%;
-      max-height: 44px;
-      height: 44px;
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      text-overflow: ellipsis;
-      word-break: break-word;
-      color: #000;
-      margin-bottom: 10px;
-      font-weight: bold;
-      a{
-      }
-    }
-    dl{
-      margin: 0 0 10px 0;
-      color: #333;
-      dt{
-        float: left;
-        margin-bottom: 6px;
-      }
-      dd{
-        margin-bottom: 6px;
-      }
-    }
-    .btn{
-    }
-  }
 }

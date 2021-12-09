@@ -1,13 +1,15 @@
  /* sitemap */
  .sitemap {
-     margin: 0px auto 1em;
+     margin: 20px 30px;
      color: #666;
-     @include border-radius(8px);
      @include clearfix;
      .accesskeyDefine {
          padding: 1em 2em;
-           background: #EEE;
+         background: #EEE;
          @include border-radius(6px);
+     }
+     h2 {
+         @extend .block01_h2;
      }
  }
  .cascading {
@@ -30,10 +32,10 @@
              display: block;
              font-size: 1.25em;
              font-weight: bold;
-             border-bottom: 2px solid nth($primaryColor,$style);
+             border-bottom: 2px solid nth($primaryColor, $style);
              &:hover,
              &:focus {
-                 color: nth($primaryColor,$style)!important;
+                 color: nth($primaryColor, $style) !important;
                  text-decoration: none;
              }
          }

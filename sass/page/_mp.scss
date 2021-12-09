@@ -704,6 +704,7 @@
                 font-size: 1.483em;
                 color: #333;
                 padding-top: 20px;
+                line-height:1.3em;
                 span {
                     width: 140px;
                     height: 140px;
@@ -1539,6 +1540,7 @@
             @include make-md-column(6);
             @include make-lg-column(6);
             @include gutter(0);
+            background-color: #fff;
         }
         .bookno01 {
             @include make-xs-column(12);
@@ -1546,6 +1548,7 @@
             @include make-md-column(6);
             @include make-lg-column(6);
             @include gutter(0);
+            background-color: #fff;
         }
     }
     .hotbook_block02 {
@@ -1554,9 +1557,11 @@
         @include make-md-column(6);
         @include make-lg-column(4);
         @include gutter(0);
+       
         @include screen('mobile') {
             display: none;
         }
+       
     }
     .hotbook_block03 {
         @include make-xs-column(12);
@@ -1564,9 +1569,11 @@
         @include make-md-column(6);
         @include make-lg-column(4);
         @include gutter(0);
+       
         @include screen('mobile') {
             display: none;
         }
+       
     }
     .hotbook_block04 {
         @include make-xs-column(4);
@@ -1575,6 +1582,7 @@
         @include make-lg-column(4);
         @include gutter(0);
         display: none;
+        
         @include screen('mobile') {
             display: block;
             left: 32.5%;
@@ -1583,6 +1591,7 @@
             width: 100%;
             left: 0%;
         }
+       
     }
     .hotbook_block05 {
         @include make-xs-column(4);
@@ -1591,6 +1600,7 @@
         @include make-lg-column(4);
         @include gutter(0);
         display: none;
+        
         @include screen('mobile') {
             display: block;
             left: -35%;
@@ -1608,6 +1618,7 @@
         @include make-lg-column(4);
         @include gutter(0);
         display: none;
+
         @include screen('mobile') {
             display: block;
         }
@@ -1955,6 +1966,7 @@
             padding: 10px 15px;
             border: 1px solid #dcdcdc;
             border-radius: 5px;
+            background-color: #fff;
             @include box-sizing;
             text-align: left;
             overflow: hidden;

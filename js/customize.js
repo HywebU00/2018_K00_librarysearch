@@ -1027,6 +1027,32 @@ $(function() {
         $('.recommendbook_lightbox').fadeOut();
         $('body').removeClass('fix');
     })
+    // 選擇超商門市
+    $('.order_btn').click(function() {
+        $('#order_lightbox').fadeIn();
+        $('body').addClass('fix');
+    })
+    $('.lightboxstyle_block .close').click(function() {
+        $('#order_lightbox').fadeOut();
+        $('body').removeClass('fix');
+    })
+    $('.overlay').click(function() {
+        $('#order_lightbox').fadeOut();
+        $('body').removeClass('fix');
+    })
+    // 選擇銀行
+    $('.bank_btn').click(function() {
+        $('#bank_codestyle').fadeIn();
+        $('body').addClass('fix');
+    })
+    $('.lightboxbank_style_block .close').click(function() {
+        $('#bank_codestyle').fadeOut();
+        $('body').removeClass('fix');
+    })
+    $('.overlay').click(function() {
+        $('#bank_codestyle').fadeOut();
+        $('body').removeClass('fix');
+    })
 })
 //詳目頁 匯出點選
 $(function() {

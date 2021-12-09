@@ -103,7 +103,7 @@
         background-position: center -80px;
     }
     // _lighitbox2.scss
-    .login_lightbox, .related_lightbox, .related_lightbox, .lightboxstyle {
+    .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
             color: nth($primaryColor, $style);
@@ -128,6 +128,39 @@
             background-color: nth($primaryColor, $style) !important;
             &:hover {
                 background-color: lighten(nth($primaryColor, $style), 10) !important;
+            }
+        }
+    }
+    .relatedlist {
+        ul {
+            li {
+                a {
+                    &:before {
+                        background-color: nth($primaryColor, $style);
+                    }
+                    &:hover {
+                        background-color: nth($lightColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .lightbox_data {
+        table {
+            th {
+                a {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+    .bookname {
+        color: nth($primaryColor, $style);
+    }
+    .super_business_data {
+        .data_content {
+            .title {
+                color: nth($linkColor, $style);
             }
         }
     }
@@ -172,6 +205,11 @@
             h2 {
                 text-shadow: rgb(71, 71, 71) 2px 2px 6px;
             }
+        }
+    }
+    .security_deposit_block {
+        .title {
+            color: nth($primaryColor, $style);
         }
     }
     // _paginations.scss
@@ -298,6 +336,10 @@
         background-color: darken(#f8b551, 20);
         .btn-fatfooter {
             background: darken(#f8b551, 20);
+            &:hover,
+            &:focus {
+                background: darken(#f8b551, 25);
+            }
         }
     }
     //_footer.scss
@@ -406,6 +448,25 @@
             background-color: lighten(nth($primaryColor, $style), 5);
         }
     }
+    // sitemap
+    .cascading {
+        li {
+            a {
+                border-bottom: 2px solid nth($primaryColor, $style);
+                &:hover,
+                &:focus {
+                    color: nth($primaryColor, $style) !important;
+                }
+            }
+            ul {
+                li {
+                    a {
+                        border-bottom: 1px dotted #ccc;
+                    }
+                }
+            }
+        }
+    }
     // 
 }
 // 客製版01花蓮
@@ -505,7 +566,7 @@
         background-position: center -140px;
     }
     // _lighitbox2.scss
-    .login_lightbox, .related_lightbox, .related_lightbox, .lightboxstyle {
+    .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
             color: nth($primaryColor, $style);
@@ -530,6 +591,39 @@
             background-color: nth($primaryColor, $style) !important;
             &:hover {
                 background-color: lighten(nth($primaryColor, $style), 10) !important;
+            }
+        }
+    }
+    .relatedlist {
+        ul {
+            li {
+                a {
+                    &:before {
+                        background-color: nth($primaryColor, $style);
+                    }
+                    &:hover {
+                        background-color: nth($lightColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .lightbox_data {
+        table {
+            th {
+                a {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+    .bookname {
+        color: nth($primaryColor, $style);
+    }
+    .super_business_data {
+        .data_content {
+            .title {
+                color: nth($linkColor, $style);
             }
         }
     }
@@ -586,6 +680,11 @@
                     color: darken(nth($linkColor, $style), 10);
                 }
             }
+        }
+    }
+    .security_deposit_block {
+        .title {
+            color: nth($primaryColor, $style);
         }
     }
     // _paginations.scss
@@ -713,6 +812,10 @@
         background-color: darken(nth($primaryColor, $style), 20);
         .btn-fatfooter {
             background: darken(nth($primaryColor, $style), 20);
+            &:hover,
+            &:focus {
+                background: darken(nth($primaryColor, $style), 25);
+            }
         }
     }
     //_footer.scss
@@ -790,20 +893,87 @@
             background-color: lighten(nth($primaryColor, $style), 5);
         }
     }
+    // sitemap
+    .cascading {
+        li {
+            a {
+                border-bottom: 2px solid nth($primaryColor, $style);
+                &:hover,
+                &:focus {
+                    color: nth($primaryColor, $style) !important;
+                }
+            }
+            ul {
+                li {
+                    a {
+                        border-bottom: 1px dotted #ccc;
+                    }
+                }
+            }
+        }
+    }
     // 
 }
 // 客製版02北市圖書館
 .customization02 {
     $style: index($sites, customization02);
+    $color-blue: #3e78c0;
+    $color-green: #107859;
+    $color-orange: #C75100;
+    $color-red: #e20022;
     // _header.scss
     .header {
-        @include gradient(#7ee2e3, #54c5c6, vertical);
+        background: #1b1b1b;
         >.container {
             .sidebarCtrl {
                 background-image: url('../images/sidebarCtrl_white.png');
             }
             .accesskey {
-                color: #7ee2e3;
+                color: #1b1b1b;
+                &:hover, &:focus {
+                    color: #e52104;
+                }
+            }
+        }
+        h1 {
+            flex-basis: 213px;
+            width: 213px;
+            height: 42px;
+            img {
+                display: block;
+                max-width: 213px;
+                max-height: 42px;
+            }
+        }
+        .language {
+            >a {
+                background-color: nth($primaryColor, $style);
+                color: #fff;
+                background-image: none;
+                position: relative;
+                &:after {
+                    content: '';
+                    border: 5px solid #fff;
+                    border-color: #fff transparent transparent transparent;
+                    position: absolute;
+                    right: 12px;
+                    top: 14px;
+                }
+                &:hover {
+                    color: #fff !important;
+                }
+            }
+            ul {
+                li {
+                    a {
+                        background-color: nth($primaryColor, $style);
+                        color: #fff;
+                        &:hover {
+                            background-color: #ddd;
+                            color: #000 !important;
+                        }
+                    }
+                }
             }
         }
     }
@@ -820,7 +990,7 @@
     }
     // _mp.scss
     .search_block {
-        background-image: url('../images/search_blockbg02_customization01.jpg');
+        background-image: url('../images/search_blockbg02_customization02.png');
         .searchsystem {
             .recent_searches {
                 .title {
@@ -834,18 +1004,27 @@
                     }
                 }
             }
+            .form_search {
+                input[type="submit"] {
+                    background-color: #f0b209;
+                    &:focus {
+                        background-color: darken(#f0b209, 10);
+                    }
+                }
+            }
         }
     }
     .related_links {
         div {
             a {
                 span {
-                    background-color: nth($primaryColor, $style);
+                    background-color: #7fbe25;
+                    border-radius: 5px;
                 }
                 &:hover {
-                    color: darken(nth($primaryColor, $style), 10);
+                    color: nth($primaryColor, $style);
                     span {
-                        background-color: lighten(nth($primaryColor, $style), 8);
+                        background-color: #7fbe25;
                     }
                 }
             }
@@ -853,6 +1032,29 @@
     }
     .featured_block {
         background-color: nth($lightColor, $style);
+    }
+    .hotrankings_block {
+        background-color: nth($lightColor, $style);
+    }
+    .hotrankings {
+        .sort {
+            a {
+                background: #fff;
+                &:hover {
+                    background-color: #f18700;
+                    color: #333;
+                }
+                &.here {
+                    background: #f18700;
+                    color: #333;
+                }
+            }
+        }
+    }
+    .hotbook_column {
+        .hotbook_title, .bookno01, .hotbooklist {
+            border: none;
+        }
     }
     //_common.scss
     .privacy_consent {
@@ -870,6 +1072,13 @@
                     color: darken(nth($linkColor, $style), 10);
                 }
             }
+            .sortlist {
+                label {
+                    span {
+                        color: $color-orange;
+                    }
+                }
+            }
         }
     }
     .search_blockin {
@@ -882,17 +1091,25 @@
                 }
             }
         }
+        .form_search {
+            input[type="submit"] {
+                background-color: #f0b209;
+                &:focus {
+                    background-color: darken(#f0b209, 10);
+                }
+            }
+        }
     }
     // 內頁標頭圖
     .search_blockin2, .search_blockin, .mystudyname, .general_block {
-        background-image: url('../images/search_blockbg02_customization01.jpg');
+        background-image: url('../images/search_blockbg02_customization02.png');
         background-position: center -140px;
     }
     // _lighitbox2.scss
-    .login_lightbox, .related_lightbox, .related_lightbox, .lightboxstyle {
+    .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
-            color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style) !important;
         }
     }
     .logintab {
@@ -913,7 +1130,40 @@
         a {
             background-color: nth($primaryColor, $style) !important;
             &:hover {
-                background-color: lighten(nth($primaryColor, $style), 10) !important;
+                background-color: lighten(nth($primaryColor, $style), 5) !important;
+            }
+        }
+    }
+    .relatedlist {
+        ul {
+            li {
+                a {
+                    &:before {
+                        background-color: nth($primaryColor, $style);
+                    }
+                    &:hover {
+                        background-color: nth($lightColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .lightbox_data {
+        table {
+            th {
+                a {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+    .bookname {
+        color: nth($primaryColor, $style);
+    }
+    .super_business_data {
+        .data_content {
+            .title {
+                color: nth($linkColor, $style);
             }
         }
     }
@@ -935,9 +1185,15 @@
         }
     }
     .classification {
-        background-color: darken(nth($lightColor, $style), 10);
+        background-color: nth($primaryColor, $style);
         span {
-            color: #000;
+            color: #fff;
+        }
+    }
+    input[readonly],
+    input[disable] {
+        &~label {
+            color: $color-darkgray;
         }
     }
     //線上協尋書
@@ -976,6 +1232,11 @@
                 text-shadow: rgb(71, 71, 71) 2px 2px 6px;
             }
         }
+        .member_pic {
+            >span {
+                background-color: $color-red;
+            }
+        }
     }
     .mystudymenu {
         >ul {
@@ -990,15 +1251,15 @@
         .booknotice {
             li {
                 em {
-                    background-color: darken(#5bb7e0, 23);
+                    background-color: $color-blue;
                     &.redbg {
                         background-color: darken(#ec636e, 14);
                     }
                     &.orangebg {
-                        background-color: darken(#e47c26, 12);
+                        background-color: $color-orange;
                     }
                     &.greenbg {
-                        background-color: darken(#73ac73, 16);
+                        background-color: $color-green;
                     }
                 }
             }
@@ -1014,12 +1275,12 @@
                 }
                 &.blueblock {
                     &:after {
-                        border-color: transparent darken(#5bb7e0, 23) transparent transparent;
+                        border-color: transparent $color-blue transparent transparent;
                     }
                 }
                 &.greenblock {
                     &:after {
-                        border-color: transparent darken(#73ac73, 16) transparent transparent;
+                        border-color: transparent $color-green transparent transparent;
                     }
                 }
                 &.yellowblock {
@@ -1029,7 +1290,7 @@
                 }
                 &.orangeblock {
                     &:after {
-                        border-color: transparent darken(#e47c26, 12) transparent transparent;
+                        border-color: transparent $color-orange transparent transparent;
                     }
                 }
                 &.purpleblock {
@@ -1040,8 +1301,46 @@
             }
         }
     }
+    .security_deposit_block {
+        .title {
+            color: nth($primaryColor, $style);
+        }
+    }
+    .security_deposit_group {
+        .content {
+            .money {
+                span {
+                    em {
+                        color: $color-orange;
+                    }
+                }
+            }
+        }
+    }
+    .authority_group {
+        .content {
+            .state {
+                color: $color-orange;
+            }
+        }
+    }
+    // 超商資料
+    .super_business_block {
+        .super_business_group {
+            ul {
+                li {
+                    span {
+                        background-color: $color-orange;
+                    }
+                }
+            }
+        }
+    }
     // _paginations.scss
     .pagination {
+        span {
+            color: $color-orange;
+        }
         .page {
             li {
                 &.active {
@@ -1056,8 +1355,8 @@
     // _lp.scss
     .hotqa_list {
         h2 {
-            background-color: darken(nth($lightColor, $style), 10);
-            color: darken(nth($primaryColor, $style), 40);
+            background-color: nth($lightColor, $style);
+            color: #333;
         }
     }
     .devicereservation_block {
@@ -1067,7 +1366,7 @@
                 &:hover,
                 &:focus {
                     color: #000;
-                    background-color: darken(nth($lightColor, $style), 10);
+                    background-color: darken(nth($lightColor, $style), 5);
                 }
                 h3 {
                     color: #000;
@@ -1093,16 +1392,16 @@
             &:hover,
             &:focus {
                 color: #fff;
-                background-color: darken(nth($primaryColor, $style), 10);
+                background-color: darken(nth($primaryColor, $style), 5);
             }
         }
     }
     .reservation_explain {
-        background-color: darken(nth($lightColor, $style), 10);
+        background-color: nth($lightColor, $style);
         color: #000;
     }
     .device_explain {
-        background-color: darken(nth($lightColor, $style), 10);
+        background-color: nth($lightColor, $style);
         color: #000;
         h3 {
             font-weight: 400;
@@ -1127,32 +1426,55 @@
                 }
             }
         }
+        .then {
+            color: #666;
+        }
     }
     .reader_advice {
         .reaction,
         .reply,
         .supplement {
             h2 {
-                background-color: #257BAA;
+                background-color: $color-blue;
             }
             table {
-                border-top: 4px solid #257BAA;
+                border-top: 4px solid $color-blue;
             }
         }
         .reply {
             h2 {
-                background-color: #DD3146;
+                background-color: $color-red;
             }
             table {
-                border-top: 4px solid #DD3146;
+                border-top: 4px solid $color-red;
             }
         }
         .supplement {
             h2 {
-                background-color: #4D804A;
+                background-color: $color-green;
             }
             table {
-                border-top: 4px solid #4D804A;
+                border-top: 4px solid $color-green;
+            }
+        }
+    }
+    .data_quantity2 {
+        em {
+            color: $color-orange;
+        }
+    }
+    // 查無結果
+    .no_result {
+        .explain {
+            background-color: $color-orange;
+            line-height: 1.7em;
+            span {
+                color: lighten(nth($lightColor, $style), 5);
+                background-color: #333;
+                padding: 5px 10px;
+                margin: 0 10px;
+                font-size: 1em;
+                border-radius: 5px;
             }
         }
     }
@@ -1161,26 +1483,26 @@
         //熱門回答區塊
         .hotqa {
             .question {
-                background-color: darken($color-orange, 12);
+                background-color: $color-orange;
             }
         }
         //相關連結 下載附件
         .related_linksblock {
             .linkstitle {
-                background-color: darken($color-green, 16);
+                background-color: $color-green;
             }
         }
     }
     //借閱區塊
     .device_borrow {
         .title {
-            color: darken($color-orange, 12);
+            color: $color-orange;
         }
     }
     //借閱區塊
     .device_borrow_time {
         .title {
-            color: darken($color-orange, 12);
+            color: $color-orange;
         }
     }
     // _cp.scss
@@ -1203,7 +1525,7 @@
                     ul {
                         li {
                             h4 {
-                                color: darken($color-orange, 12);
+                                color: $color-orange;
                             }
                         }
                     }
@@ -1211,22 +1533,22 @@
                 //圖書館資料
                 .library_materials {
                     h4 {
-                        color: darken($color-orange, 12);
+                        color: $color-orange;
                     }
                 }
                 //館藏地
                 .collectionplace {
                     .number {
-                        background-color: darken($color-orange, 12);
+                        background-color: $color-orange;
                     }
                 }
                 // 出版年
                 .publishing_year_block {
                     .title {
                         &.addyear {
-                            color: darken($color-orange, 12);
+                            color: $color-orange;
                             span {
-                                background-color: darken($color-orange, 12);
+                                background-color: $color-orange;
                             }
                         }
                     }
@@ -1237,9 +1559,17 @@
                         li {
                             a {
                                 &:hover, &.here {
-                                    background-color: darken($color-green, 16);
+                                    background-color: $color-green;
                                 }
                             }
+                        }
+                    }
+                }
+                //電子書借閱/預約服務
+                .borrow_appointment {
+                    span {
+                        em {
+                            color: $color-orange;
                         }
                     }
                 }
@@ -1253,7 +1583,7 @@
     }
     .cp_content {
         h3 {
-            color: darken(nth($primaryColor, $style), 10);
+            color: nth($primaryColor, $style);
         }
     }
     // _ap.css
@@ -1289,11 +1619,11 @@
     .mypoints {
         .title {
             span {
-                background-color: #be5702;
+                background-color: $color-orange;
                 &:before {
                     content: '';
-                    border: 21.5px solid #be5702;
-                    border-color: transparent transparent transparent #be5702;
+                    border: 21.5px solid $color-orange;
+                    border-color: transparent transparent transparent $color-orange;
                     position: absolute;
                     right: -43px;
                     top: 0;
@@ -1303,18 +1633,18 @@
         .content {
             .subtitle {
                 &.bluebg {
-                    background-color: darken($color-blue, 21);
+                    background-color: $color-blue;
                     &:before {
-                        border-color: darken($color-blue, 21);
+                        border-color: $color-blue;
                         border-top-color: transparent;
                         border-right-color: transparent;
                         border-bottom-color: transparent;
                     }
                 }
                 &.greenbg {
-                    background-color: darken($color-green, 16);
+                    background-color: $color-green;
                     &:before {
-                        border-color: darken($color-green, 16);
+                        border-color: $color-green;
                         border-top-color: transparent;
                         border-right-color: transparent;
                         border-bottom-color: transparent;
@@ -1323,7 +1653,7 @@
             }
             .data {
                 .date {
-                    color: darken($color-green, 16);
+                    color: $color-green;
                 }
             }
         }
@@ -1332,7 +1662,7 @@
     .reward_btn {
         a {
             &:hover, &:focus {
-                background-color: #be5702;
+                background-color: $color-orange;
             }
         }
     }
@@ -1372,31 +1702,87 @@
             }
         }
     }
+    //主題推薦列表
+    .theme_recommend2 {
+        .themerecommend_box {
+            a {
+                .content {
+                    &:before {
+                        border-color: nth($primaryColor, $style) transparent transparent nth($primaryColor, $style);
+                    }
+                    &:hover {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    //主題導覽
+    .themetour_block {
+        .themetour:nth-child(2n-1) {
+            .content {
+                &:before {
+                    border-color: nth($primaryColor, $style) transparent transparent nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+    //主題推薦
+    .theme_recommend {
+        .themerecommend_box {
+            a {
+                .content {
+                    &:before {
+                        border-color: nth($primaryColor, $style) transparent transparent nth($primaryColor, $style);
+                    }
+                    &:hover {
+                        background-color: nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    //圖書推薦 
+    .bookrecommend_block {
+        .bookrecommend_search {
+            .form_search {
+                input[type="submit"] {
+                    background-color: #f0b209;
+                    &:focus {
+                        background-color: darken(#f0b209, 10);
+                    }
+                }
+            }
+        }
+    }
     // _fatfooter.scss
     .fatfooter {
-        background-color: darken(nth($primaryColor, $style), 20);
+        background-color: #313131;
         .btn-fatfooter {
-            background: darken(nth($primaryColor, $style), 20);
+            background: #fff;
+            &:before {
+                background-image: url('../images/fatfooter_icon02.png');
+            }
             &:hover,
             &:focus {
-                background: darken(nth($primaryColor, $style), 30);
+                background: #000;
             }
         }
     }
     //_footer.scss
     footer {
-        background-color: darken(nth($primaryColor, $style), 20);
+        background-color: #313131;
     }
     // _template.scss
     // wordcolor
     .word_blue {
-        color: darken($color-blue, 21) !important;
+        color: $color-blue !important;
     }
     .word_green {
-        color: darken($color-green, 16) !important;
+        color: $color-green !important;
     }
     .word_orange {
-        color: darken($color-orange, 12) !important;
+        color: $color-orange !important;
     }
     .word_yellow {
         color: darken($color-yellow, 17) !important;
@@ -1596,6 +1982,49 @@
         }
     }
     // 
+    // slick-theme.css
+    .slick-prev {
+        background: url('../vendor/slick/icon_arrow_left2.png') center center no-repeat RGBA(255, 255, 255, .5);
+        background-size: 30px 44px;
+    }
+    .slick-next {
+        background: url('../vendor/slick/icon_arrow_right2.png') center center no-repeat RGBA(255, 255, 255, .5);
+        background-size: 30px 44px;
+    }
+    // btn.scss
+    .btn-orange {
+        @include btn_setting($color-orange, #FFF);
+    }
+    // _linemobile.scss
+    .linecontent .year-slide {
+        .year {
+            .book-bg {
+                .book-number {
+                    color: $color-orange;
+                }
+            }
+        }
+    }
+    // sitemap
+    .cascading {
+        li {
+            a {
+                border-bottom: 2px solid nth($primaryColor, $style);
+                &:hover,
+                &:focus {
+                    color: nth($primaryColor, $style) !important;
+                }
+            }
+            ul {
+                li {
+                    a {
+                        border-bottom: 1px dotted #ccc;
+                    }
+                }
+            }
+        }
+    }
+    // 
 }
 // 版型01
 .version01 {
@@ -1697,7 +2126,7 @@
         background-position: center -260px;
     }
     // _lighitbox2.scss
-    .login_lightbox, .related_lightbox, .related_lightbox, .lightboxstyle {
+    .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
             color: nth($primaryColor, $style);
@@ -1722,6 +2151,39 @@
             background-color: nth($primaryColor, $style) !important;
             &:hover {
                 background-color: lighten(nth($primaryColor, $style), 10) !important;
+            }
+        }
+    }
+    .relatedlist {
+        ul {
+            li {
+                a {
+                    &:before {
+                        background-color: nth($primaryColor, $style);
+                    }
+                    &:hover {
+                        background-color: nth($lightColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .lightbox_data {
+        table {
+            th {
+                a {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+    .bookname {
+        color: nth($primaryColor, $style);
+    }
+    .super_business_data {
+        .data_content {
+            .title {
+                color: nth($linkColor, $style);
             }
         }
     }
@@ -1778,6 +2240,11 @@
                     color: darken(nth($linkColor, $style), 10);
                 }
             }
+        }
+    }
+    .security_deposit_block {
+        .title {
+            color: nth($primaryColor, $style);
         }
     }
     // _paginations.scss
@@ -1904,6 +2371,10 @@
         background-color: darken(nth($primaryColor, $style), 10);
         .btn-fatfooter {
             background: darken(nth($primaryColor, $style), 10);
+            &:hover,
+            &:focus {
+                background: darken(nth($primaryColor, $style), 20);
+            }
         }
     }
     //_footer.scss
@@ -1979,6 +2450,25 @@
         background-color: nth($primaryColor, $style);
         &:hover {
             background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // sitemap
+    .cascading {
+        li {
+            a {
+                border-bottom: 2px solid nth($primaryColor, $style);
+                &:hover,
+                &:focus {
+                    color: nth($primaryColor, $style) !important;
+                }
+            }
+            ul {
+                li {
+                    a {
+                        border-bottom: 1px dotted #ccc;
+                    }
+                }
+            }
         }
     }
     // 
@@ -2083,7 +2573,7 @@
         background-position: center -160px;
     }
     // _lighitbox2.scss
-    .login_lightbox, .related_lightbox, .related_lightbox, .lightboxstyle {
+    .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
             color: nth($primaryColor, $style);
@@ -2108,6 +2598,39 @@
             background-color: nth($primaryColor, $style) !important;
             &:hover {
                 background-color: lighten(nth($primaryColor, $style), 10) !important;
+            }
+        }
+    }
+    .relatedlist {
+        ul {
+            li {
+                a {
+                    &:before {
+                        background-color: nth($primaryColor, $style);
+                    }
+                    &:hover {
+                        background-color: nth($lightColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .lightbox_data {
+        table {
+            th {
+                a {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+    .bookname {
+        color: nth($primaryColor, $style);
+    }
+    .super_business_data {
+        .data_content {
+            .title {
+                color: nth($linkColor, $style);
             }
         }
     }
@@ -2164,6 +2687,11 @@
                     color: darken(nth($linkColor, $style), 10);
                 }
             }
+        }
+    }
+    .security_deposit_block {
+        .title {
+            color: nth($primaryColor, $style);
         }
     }
     // _paginations.scss
@@ -2290,6 +2818,10 @@
         background-color: darken(nth($primaryColor, $style), 5);
         .btn-fatfooter {
             background: darken(nth($primaryColor, $style), 5);
+            &:hover,
+            &:focus {
+                background: darken(nth($primaryColor, $style), 15);
+            }
         }
     }
     //_footer.scss
@@ -2365,6 +2897,25 @@
         background-color: nth($primaryColor, $style);
         &:hover {
             background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // sitemap
+    .cascading {
+        li {
+            a {
+                border-bottom: 2px solid nth($primaryColor, $style);
+                &:hover,
+                &:focus {
+                    color: nth($primaryColor, $style) !important;
+                }
+            }
+            ul {
+                li {
+                    a {
+                        border-bottom: 1px dotted #ccc;
+                    }
+                }
+            }
         }
     }
     // 
@@ -2469,7 +3020,7 @@
         background-position: center -220px;
     }
     // _lighitbox2.scss
-    .login_lightbox, .related_lightbox, .related_lightbox, .lightboxstyle {
+    .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
             color: nth($primaryColor, $style);
@@ -2494,6 +3045,39 @@
             background-color: nth($primaryColor, $style) !important;
             &:hover {
                 background-color: lighten(nth($primaryColor, $style), 10) !important;
+            }
+        }
+    }
+    .relatedlist {
+        ul {
+            li {
+                a {
+                    &:before {
+                        background-color: nth($primaryColor, $style);
+                    }
+                    &:hover {
+                        background-color: nth($lightColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .lightbox_data {
+        table {
+            th {
+                a {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+    .bookname {
+        color: nth($primaryColor, $style);
+    }
+    .super_business_data {
+        .data_content {
+            .title {
+                color: nth($linkColor, $style);
             }
         }
     }
@@ -2550,6 +3134,11 @@
                     color: darken(nth($linkColor, $style), 10);
                 }
             }
+        }
+    }
+    .security_deposit_block {
+        .title {
+            color: nth($primaryColor, $style);
         }
     }
     // _paginations.scss
@@ -2676,6 +3265,10 @@
         background-color: darken(nth($primaryColor, $style), 10);
         .btn-fatfooter {
             background: darken(nth($primaryColor, $style), 10);
+            &:hover,
+            &:focus {
+                background: darken(nth($primaryColor, $style), 20);
+            }
         }
     }
     //_footer.scss
@@ -2751,6 +3344,25 @@
         background-color: nth($primaryColor, $style);
         &:hover {
             background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // sitemap
+    .cascading {
+        li {
+            a {
+                border-bottom: 2px solid nth($primaryColor, $style);
+                &:hover,
+                &:focus {
+                    color: nth($primaryColor, $style) !important;
+                }
+            }
+            ul {
+                li {
+                    a {
+                        border-bottom: 1px dotted #ccc;
+                    }
+                }
+            }
         }
     }
     // 
@@ -2855,7 +3467,7 @@
         background-position: center -80px;
     }
     // _lighitbox2.scss
-    .login_lightbox, .related_lightbox, .related_lightbox, .lightboxstyle {
+    .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
             color: nth($primaryColor, $style);
@@ -2880,6 +3492,39 @@
             background-color: nth($primaryColor, $style) !important;
             &:hover {
                 background-color: lighten(nth($primaryColor, $style), 10) !important;
+            }
+        }
+    }
+    .relatedlist {
+        ul {
+            li {
+                a {
+                    &:before {
+                        background-color: nth($primaryColor, $style);
+                    }
+                    &:hover {
+                        background-color: nth($lightColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .lightbox_data {
+        table {
+            th {
+                a {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+    .bookname {
+        color: nth($primaryColor, $style);
+    }
+    .super_business_data {
+        .data_content {
+            .title {
+                color: nth($linkColor, $style);
             }
         }
     }
@@ -2936,6 +3581,11 @@
                     color: darken(nth($linkColor, $style), 10);
                 }
             }
+        }
+    }
+    .security_deposit_block {
+        .title {
+            color: nth($primaryColor, $style);
         }
     }
     // _paginations.scss
@@ -3062,6 +3712,10 @@
         background-color: darken(nth($primaryColor, $style), 10);
         .btn-fatfooter {
             background: darken(nth($primaryColor, $style), 10);
+            &:hover,
+            &:focus {
+                background: darken(nth($primaryColor, $style), 20);
+            }
         }
     }
     //_footer.scss
@@ -3137,6 +3791,25 @@
         background-color: nth($primaryColor, $style);
         &:hover {
             background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // sitemap
+    .cascading {
+        li {
+            a {
+                border-bottom: 2px solid nth($primaryColor, $style);
+                &:hover,
+                &:focus {
+                    color: nth($primaryColor, $style) !important;
+                }
+            }
+            ul {
+                li {
+                    a {
+                        border-bottom: 1px dotted #ccc;
+                    }
+                }
+            }
         }
     }
     // 
@@ -3241,7 +3914,7 @@
         background-position: center -150px;
     }
     // _lighitbox2.scss
-    .login_lightbox, .related_lightbox, .related_lightbox, .lightboxstyle {
+    .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
             color: nth($primaryColor, $style);
@@ -3266,6 +3939,39 @@
             background-color: nth($primaryColor, $style) !important;
             &:hover {
                 background-color: lighten(nth($primaryColor, $style), 10) !important;
+            }
+        }
+    }
+    .relatedlist {
+        ul {
+            li {
+                a {
+                    &:before {
+                        background-color: nth($primaryColor, $style);
+                    }
+                    &:hover {
+                        background-color: nth($lightColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .lightbox_data {
+        table {
+            th {
+                a {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+    .bookname {
+        color: nth($primaryColor, $style);
+    }
+    .super_business_data {
+        .data_content {
+            .title {
+                color: nth($linkColor, $style);
             }
         }
     }
@@ -3322,6 +4028,11 @@
                     color: darken(nth($linkColor, $style), 10);
                 }
             }
+        }
+    }
+    .security_deposit_block {
+        .title {
+            color: nth($primaryColor, $style);
         }
     }
     // _paginations.scss
@@ -3449,6 +4160,10 @@
         background-color: darken(nth($primaryColor, $style), 10);
         .btn-fatfooter {
             background: darken(nth($primaryColor, $style), 10);
+            &:hover,
+            &:focus {
+                background: darken(nth($primaryColor, $style), 20);
+            }
         }
     }
     //_footer.scss
@@ -3524,6 +4239,25 @@
         background-color: nth($primaryColor, $style);
         &:hover {
             background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // sitemap
+    .cascading {
+        li {
+            a {
+                border-bottom: 2px solid nth($primaryColor, $style);
+                &:hover,
+                &:focus {
+                    color: nth($primaryColor, $style) !important;
+                }
+            }
+            ul {
+                li {
+                    a {
+                        border-bottom: 1px dotted #ccc;
+                    }
+                }
+            }
         }
     }
     // 
@@ -3629,7 +4363,7 @@
         background-position: center -210px;
     }
     // _lighitbox2.scss
-    .login_lightbox, .related_lightbox, .related_lightbox, .lightboxstyle {
+    .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
             color: nth($primaryColor, $style);
@@ -3654,6 +4388,39 @@
             background-color: nth($primaryColor, $style) !important;
             &:hover {
                 background-color: lighten(nth($primaryColor, $style), 10) !important;
+            }
+        }
+    }
+    .relatedlist {
+        ul {
+            li {
+                a {
+                    &:before {
+                        background-color: nth($primaryColor, $style);
+                    }
+                    &:hover {
+                        background-color: nth($lightColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .lightbox_data {
+        table {
+            th {
+                a {
+                    color: nth($primaryColor, $style);
+                }
+            }
+        }
+    }
+    .bookname {
+        color: nth($primaryColor, $style);
+    }
+    .super_business_data {
+        .data_content {
+            .title {
+                color: nth($linkColor, $style);
             }
         }
     }
@@ -3710,6 +4477,11 @@
                     color: darken(nth($linkColor, $style), 10);
                 }
             }
+        }
+    }
+    .security_deposit_block {
+        .title {
+            color: nth($primaryColor, $style);
         }
     }
     // _paginations.scss
@@ -3836,6 +4608,10 @@
         background-color: darken(nth($primaryColor, $style), 10);
         .btn-fatfooter {
             background: darken(nth($primaryColor, $style), 10);
+            &:hover,
+            &:focus {
+                background: darken(nth($primaryColor, $style), 20);
+            }
         }
     }
     //_footer.scss
@@ -3911,6 +4687,25 @@
         background-color: nth($primaryColor, $style);
         &:hover {
             background-color: lighten(nth($primaryColor, $style), 5);
+        }
+    }
+    // sitemap
+    .cascading {
+        li {
+            a {
+                border-bottom: 2px solid nth($primaryColor, $style);
+                &:hover,
+                &:focus {
+                    color: nth($primaryColor, $style) !important;
+                }
+            }
+            ul {
+                li {
+                    a {
+                        border-bottom: 1px dotted #ccc;
+                    }
+                }
+            }
         }
     }
     // 

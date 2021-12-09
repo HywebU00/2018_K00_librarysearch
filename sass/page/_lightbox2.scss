@@ -489,9 +489,18 @@ body.fix {
             position: absolute;
             right: 25px;
             top: 20px;
-            background-color: #fff;
-            border-radius: 50%;
             cursor: pointer;
+            &:before {
+                content: '';
+                background-color: #fff;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                position: absolute;
+                z-index: -1;
+                right: 5px;
+                top: -4px;
+            }
             a {
                 width: 41px;
                 height: 41px;
@@ -891,6 +900,65 @@ body.fix {
                 height: auto;
             }
         }
+        // 超商訂購
+        .super_business_data {
+            .data_content {
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+                padding: 20px;
+                box-sizing: border-box;
+                .title {
+                    color: nth($linkColor, $style);
+                    font-weight: bolder;
+                    font-size: 1.25em;
+                    margin-bottom: 15px;
+                }
+                ul {
+                    margin: 0 0 10px;
+                    padding: 0;
+                    list-style-type: none;
+                    li {
+                        margin-bottom: 5px;
+                        span {
+                            font-weight: bolder;
+                        }
+                    }
+                }
+                .btn_group {
+                    button {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        // 銀行代碼
+        .bank_code_data {
+            .banklist {
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    li {
+                        flex: none;
+                        flex-basis: 23%;
+                        margin: 0 1%;
+                        em {
+                            font-style: normal;
+                            margin-right: 3px;
+                            font-weight: bolder;
+                        }
+                        a {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        // 
     }
     //館藏位置燈箱
     .lightboxstyle_block2 {
@@ -1045,6 +1113,80 @@ body.fix {
             }
             //
         }
+    }
+    // 銀行代碼燈箱
+    .lightboxbank_style_block {
+        width: 60vw;
+        position: relative;
+        padding: 20px 20px 25px 20px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 5px;
+        @include box-sizing();
+        @media(max-width: 1200px) {
+            width: 80vw;
+        }
+        @include screen('xs_mobile') {
+            padding: 50px 20px 0px 20px;
+            width: 100%;
+            min-height: 100%;
+            overflow: hidden;
+            border-radius: 0;
+            margin: 0;
+            @include box-sizing;
+        }
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+        }
+        h2 {
+            font-size: 1.375em;
+            text-align: left;
+            border-bottom: 2px solid nth($primaryColor, $style);
+            margin: 0px auto 20px;
+            padding: 0 30px 10px 0;
+            color: nth($primaryColor, $style);
+            line-height: 1.3em;
+        }
+        // 銀行代碼
+        .bank_code_data {
+            .banklist {
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0;
+                    padding: 0;
+                    list-style-type: none;
+                    li {
+                        flex: none;
+                        flex-basis: 23%;
+                        margin: 0 1% 5px;
+                        @include screen('tablet') {
+                            flex-basis: 32%;
+                            margin: 0 0.66% 5px;
+                        }
+                        @include screen('mobile') {
+                            flex-basis: 48%;
+                            margin: 0 1% 5px;
+                        }
+                        @media(max-width: 400px) {
+                            flex-basis: 100%;
+                            margin: 0 0% 5px;
+                        }
+                        em {
+                            font-style: normal;
+                            margin-right: 3px;
+                            font-weight: bolder;
+                        }
+                        a {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        // 
     }
 }
 // 更多評論燈箱start

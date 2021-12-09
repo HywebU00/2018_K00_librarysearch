@@ -1902,7 +1902,7 @@
             &.here {
                 background: $color-yellow;
                 color: #000;
-                &:focus{
+                &:focus {
                     box-shadow: 0 0px 0px 2px $form-focus;
                 }
             }
@@ -2606,13 +2606,13 @@
                         a {
                             color: #000;
                             display: block;
-                            padding:3px;
-                            box-sizing:border-box;
+                            padding: 3px;
+                            box-sizing: border-box;
                             &:hover {
                                 color: $importantColor;
                             }
-                            &:focus{
-                                box-shadow: 0 0px 0px 2px $form-focus ;
+                            &:focus {
+                                box-shadow: 0 0px 0px 2px $form-focus;
                             }
                             .image {
                                 height: 210px;
