@@ -51,19 +51,19 @@
 }
 #keyboardInputMaster.keyboardInputSize1,
 #keyboardInputMaster.keyboardInputSize1 * {
-  font-size:9px;
+  font-size:67%;
 }
 #keyboardInputMaster.keyboardInputSize3,
 #keyboardInputMaster.keyboardInputSize3 * {
-  font-size:13px;
+  font-size:97%;
 }
 #keyboardInputMaster.keyboardInputSize4,
 #keyboardInputMaster.keyboardInputSize4 * {
-  font-size:16px;
+  font-size:120%;
 }
 #keyboardInputMaster.keyboardInputSize5,
 #keyboardInputMaster.keyboardInputSize5 * {
-  font-size:20px;
+  font-size:150%;
 }
 
 
