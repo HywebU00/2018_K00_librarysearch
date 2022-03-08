@@ -1155,19 +1155,19 @@ html .ui-button.ui-state-disabled:active {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 99999;
-    padding-left: 15%;
+    z-index: 99;
+    // padding-left: %;
     display: none;
-    @include screen('mobile') {
-        padding-left: 0;
-    }
+    // @include screen('mobile') {
+    //     padding-left: 0;
+    // }
     .overlay {
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: 9999;
+        z-index: 99;
         background-color: rgba(0, 0, 0, .8);
     }
     .close2 {
@@ -1179,27 +1179,104 @@ html .ui-button.ui-state-disabled:active {
         display: block;
         cursor: pointer;
         position: absolute;
-        left: 7%;
-        top: 50px;
-        z-index: 99999;
+        right: 7%;
+        top: 30px;
+        z-index: 9999;
         margin-left: -23px;
-        @include screen('mobile') {
-            display: none;
+        @include screen('xs_mobile') {
+            background-size: 60%;
+            right: 3%;
+            top: 10px;
+            background-position: center;
         }
     }
-    .close3 {
-        display: none;
-        @include screen('mobile') {
-            padding: 10px 10px 5px;
-            display: block;
-            cursor: pointer;
-            background-color: #f3f3f3;
-            position: relative;
-            z-index: 99999;
+    // .close3 {
+    //     display: none;
+    //     @include screen('mobile') {
+    //         padding: 10px 10px 5px;
+    //         display: block;
+    //         cursor: pointer;
+    //         background-color: #f3f3f3;
+    //         position: relative;
+    //         z-index: 99999;
+    //     }
+    // }
+    .detailpage_block {
+        max-height: 150px;
+        color: #fff;
+        z-index: 999;
+        position: relative;
+        ul {
+            margin: 1em 2em;
+            padding: 0;
+            list-style-type: none;
+            font-size: 2em;
+            @include screen('xs_mobile') {
+                margin: 1em;
+                font-size: 1.25em;
+            }
+            li {
+                display: inline-block;
+                position: relative;
+                a {
+                    color: #fff;
+                    display: block;
+                    font-weight: bolder;
+                    padding: 10px 0;
+                    @include screen('xs_mobile') {
+                        padding: 2px 0;
+                    }
+                }
+                &.icon_pre {
+                    margin-right: 60px;
+                    @include screen('xs_mobile') {
+                        margin-right: 30px;
+                    }
+                    a {
+                        padding-left: 45px;
+                        @include screen('xs_mobile') {
+                            padding-left: 25px;
+                        }
+                        &:before {
+                            content: '';
+                            border: 15px solid #fff;
+                            border-color: transparent #fff transparent transparent;
+                            position: absolute;
+                            left: 0;
+                            top: 5px;
+                            @include screen('xs_mobile') {
+                                border: 8px solid #fff;
+                                border-color: transparent #fff transparent transparent;
+                            }
+                        }
+                    }
+                }
+                &.icon_next {
+                    a {
+                        padding-right: 45px;
+                        @include screen('xs_mobile') {
+                            padding-right: 25px;
+                        }
+                        &:before {
+                            content: '';
+                            border: 15px solid #fff;
+                            border-color: transparent transparent transparent #fff;
+                            position: absolute;
+                            right: 0;
+                            top: 5px;
+                            @include screen('xs_mobile') {
+                                border: 8px solid #fff;
+                                border-color: transparent transparent transparent #fff;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     .maincolumn_cp {
         z-index: 999999;
+        position: relative;
         @include screen('mobile') {
             .rightlineblock {
                 border: none;
@@ -1474,7 +1551,7 @@ html .ui-button.ui-state-disabled:active {
                 background: $color-yellow;
                 color: #000;
                 &:focus {
-                    box-shadow: 0 0px 0px 2px $form-focus ;
+                    box-shadow: 0 0px 0px 2px $form-focus;
                 }
             }
         }
