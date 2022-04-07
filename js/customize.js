@@ -1364,9 +1364,8 @@ $(function() {
         $(this).parent('th').siblings('th').children('.prompt').removeClass('arrow');
         $(this).parent('th').siblings('th').children('.prompt_block2').hide();
         $(this).parent('th').siblings('th').children('.prompt2').removeClass('arrow');
-
     })
-    $('.bookplace_list .prompt').focusout(function(){
+    $('.bookplace_list .prompt').focusout(function() {
         $('.prompt_block').hide();
         $(this).removeClass('arrow');
     })
@@ -1377,7 +1376,7 @@ $(function() {
         $(this).parent('th').siblings('th').children('.prompt_block').hide();
         $(this).parent('th').siblings('th').children('.prompt').removeClass('arrow');
     })
-     $('.bookplace_list .prompt2').focusout(function(){
+    $('.bookplace_list .prompt2').focusout(function() {
         $('.prompt_block2').hide();
         $(this).removeClass('arrow');
     })
@@ -1386,7 +1385,7 @@ $(function() {
         $('.prompt_block3').fadeToggle();
         // $(this).toggleClass('arrow');
     })
-     $('.choosebtn .prompt3').focusout(function(){
+    $('.choosebtn .prompt3').focusout(function() {
         $('.prompt_block3').hide();
     })
     $('.promptblock').hide();
@@ -1394,12 +1393,10 @@ $(function() {
         $('.promptblock').fadeToggle();
         $(this).toggleClass('arrow');
     })
-    $('.analysis_prompt .prompt_btn').focusout(function(){
+    $('.analysis_prompt .prompt_btn').focusout(function() {
         $('.promptblock').hide();
-        
     })
 })
-
 //詳目頁 表格收合
 $(function() {
     $('.bookplace_list td.tdswitch .switch_btn>a').click(function() {
@@ -1669,5 +1666,10 @@ $(function() {
 // close內加html
 $(".close").append("<a href='#'>關閉</a>");
 $(".close_black").append("<a href='#'>關閉</a>");
-
-//
+//詳目頁table包table
+$(function() {
+    $('.bookplace_list .open_innertable').click(function() {
+        $(this).parent().parent('tr').siblings('tr').children('.innertable').slideUp(0);
+        $(this).parent().parent('tr').next('tr').children('.innertable').slideDown(0);
+    })
+})
