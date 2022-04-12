@@ -5,6 +5,7 @@
     text-align: center;
     color: $color-red;
     font-size: 1.75em;
+    line-height: 1.25em;
 }
 .network_certificate {
     width: 90%;
@@ -3493,6 +3494,7 @@
     @include box-sizing;
     h2 {
         @extend .block01_h2;
+        margin-bottom: 30px;
     }
     .SDG_explain {
         margin-bottom: 30px;
@@ -3515,7 +3517,7 @@
             justify-content: center;
             li {
                 flex: none;
-                flex-basis: 120px;
+                flex-basis: 170px;
                 margin: 0 5px 5px;
             }
         }
