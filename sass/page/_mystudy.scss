@@ -1417,11 +1417,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    @include screen('xs_mobile'){
+    @include screen('xs_mobile') {
         display: block;
     }
     div {
-        @include screen('xs_mobile'){
+        @include screen('xs_mobile') {
             margin-bottom: 5px;
         }
         em {
@@ -1627,4 +1627,48 @@
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
     padding: 20px;
     box-sizing: border-box;
+}
+// 我的SDG閱讀紀錄
+.mystudy_sdg_reading {
+    margin: 40px 30px;
+    .title {
+        @extend .block01_h2;
+        margin-bottom: 40px !important;
+    }
+    .SDG_explain {
+        margin-bottom: 30px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+        line-height: 1.55em;
+        @include box-sizing;
+    }
+    .SDG_banner {
+        overflow: hidden;
+        margin: 0 0 20px;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            li {
+                flex: none;
+                flex-basis: 120px;
+                margin: 0 5px 5px;
+                a {
+                    &.unread {
+                        // pointer-events: none;
+                        opacity: 0.4;
+                        box-shadow: none;
+                        // cursor: not-allowed;
+                        display: inline-block;
+                        -webkit-filter: grayscale(1);
+                    }
+                }
+            }
+        }
+    }
 }

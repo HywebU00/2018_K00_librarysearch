@@ -106,7 +106,7 @@
     .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
-            color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style)!important;
         }
     }
     .logintab {
@@ -179,6 +179,13 @@
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
             color: #FFF;
+        }
+        .keywords {
+            ul {
+                li {
+                    background: nth($linkColor, $style);
+                }
+            }
         }
     }
     .classification {
@@ -569,7 +576,7 @@
     .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
-            color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style)!important;
         }
     }
     .logintab {
@@ -641,7 +648,14 @@
     .featured_blocklist {
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
-            color: #333;
+            color: #fff;
+        }
+        .keywords {
+            ul {
+                li {
+                    background: nth($linkColor, $style);
+                }
+            }
         }
     }
     .classification {
@@ -1182,6 +1196,13 @@
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
             color: #333;
+        }
+        .keywords {
+            ul {
+                li {
+                    background: nth($linkColor, $style);
+                }
+            }
         }
     }
     .classification {
@@ -2129,7 +2150,7 @@
     .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
-            color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style)!important;
         }
     }
     .logintab {
@@ -2202,6 +2223,13 @@
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
             color: #fff;
+        }
+        .keywords {
+            ul {
+                li {
+                    background: nth($linkColor, $style);
+                }
+            }
         }
     }
     .classification {
@@ -2576,7 +2604,7 @@
     .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
-            color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style)!important;
         }
     }
     .logintab {
@@ -2649,6 +2677,13 @@
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
             color: #fff;
+        }
+        .keywords {
+            ul {
+                li {
+                    background: nth($linkColor, $style);
+                }
+            }
         }
     }
     .classification {
@@ -3023,7 +3058,7 @@
     .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
-            color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style)!important;
         }
     }
     .logintab {
@@ -3096,6 +3131,13 @@
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
             color: #fff;
+        }
+        .keywords {
+            ul {
+                li {
+                    background: nth($linkColor, $style);
+                }
+            }
         }
     }
     .classification {
@@ -3470,7 +3512,7 @@
     .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
-            color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style)!important;
         }
     }
     .logintab {
@@ -3543,6 +3585,13 @@
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
             color: #fff;
+        }
+        .keywords {
+            ul {
+                li {
+                    background: nth($linkColor, $style);
+                }
+            }
         }
     }
     .classification {
@@ -3917,7 +3966,7 @@
     .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
-            color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style)!important;
         }
     }
     .logintab {
@@ -3990,6 +4039,13 @@
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
             color: #000;
+        }
+        .keywords {
+            ul {
+                li {
+                    background: nth($linkColor, $style);
+                }
+            }
         }
     }
     .classification {
@@ -4366,7 +4422,7 @@
     .login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox, .related_lightbox, .lightboxstyle, .lightboxstyle_block2 {
         h2 {
             border-bottom: 2px solid nth($primaryColor, $style);
-            color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style)!important;
         }
     }
     .logintab {
@@ -4439,6 +4495,13 @@
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
             color: #000f;
+        }
+        .keywords {
+            ul {
+                li {
+                    background: nth($linkColor, $style);
+                }
+            }
         }
     }
     .classification {

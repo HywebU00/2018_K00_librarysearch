@@ -8,7 +8,7 @@
 }
 .network_certificate {
     width: 90%;
-    margin: 30px auto 60px;
+    margin: 40px auto 60px;
     @include box-sizing;
     h2 {
         @extend .block01_h2;
@@ -58,7 +58,7 @@
 //忘記密碼
 .forgetpassword_block {
     width: 700px;
-    margin: 30px auto 60px;
+    margin: 40px auto 60px;
     @include screen('mobile') {
         width: auto;
         margin: 20px;
@@ -635,16 +635,21 @@
         max-width: 100% !important;
     }
     .featured_data {
+        margin:0 20px;
+        @include screen('mobile'){
+            margin:0 ;
+        }
         .images {
             width: 300px;
             @include aspect-ratio(4, 3);
-            background-color: #fff;
-            outline: 1px solid #eee;
+            background-color: transparent;
+            // outline: 1px solid #eee;
             float: left;
             margin-right: 30px;
-            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 7px 25px 0 rgba(0, 0, 0, 0.03), 0 4px 12px 0 rgba(0, 0, 0, 0.03);
+            // box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 7px 25px 0 rgba(0, 0, 0, 0.03), 0 4px 12px 0 rgba(0, 0, 0, 0.03);
             img {
                 width: 100%;
+                bottom:auto;
             }
             @media(max-width: 620px) {
                 width: 100%;
@@ -813,6 +818,26 @@
                     background: #F77810;
                     border: 1px solid #cd6007;
                     color: #fff;
+                }
+            }
+        }
+        // 關鍵字
+        .keywords {
+            margin: 30px 0;
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    background: nth($linkColor, $style);
+                    padding: 2px 10px 2px !important;
+                    color: #fff;
+                    margin: 0 2px 5px;
+                    border-radius: 4px;
+                    display: inline-block;
+                    color: #fff !important;
+                    text-decoration: none !important;
+                    position: relative;
+                    font-size: 0.938em;
                 }
             }
         }
@@ -3392,6 +3417,120 @@
             content: "On";
             left: 9px;
             right: auto;
+        }
+    }
+}
+// SDG
+.SDG_block {
+    width: 90%;
+    margin: 40px auto 60px;
+    @include box-sizing;
+    h2 {
+        @extend .block01_h2;
+    }
+    .SDG_explain {
+        margin-bottom: 30px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+        line-height: 1.55em;
+        @include box-sizing;
+    }
+    .SDG_banner {
+        overflow: hidden;
+        margin: 0 0 20px;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            li {
+                flex: none;
+                flex-basis: 120px;
+                margin: 0 5px 5px;
+            }
+        }
+    }
+}
+//目標資料SDG_targetdata
+.SDG_targetdata {
+    margin: 0 40px 40px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    
+    border-radius: 5px;
+    @include screen('xs_mobile'){
+        margin: 0 20px 40px;
+        padding: 30px 20px;
+    }
+    .title {
+        @extend .block01_h2;
+        margin-bottom: 40px;
+    }
+    .SDG_targetdata_group {
+        display: flex;
+        flex-wrap: wrap;
+        // padding: 30px;
+        .targetdata_box {
+            flex: none;
+            flex-basis: 48%;
+            margin: 0 1% 20px;
+            display: flex;
+            background-color: #fff;
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+            padding:10px 20px 10px 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            align-items: center;
+            @include screen('tablet'){
+                flex-basis: 100%;
+                margin: 0 0 20px;
+            }
+            .images {
+                flex:none;
+                flex-basis: 100px;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0, 0, 0, .1);
+               
+                margin: 0px 20px ;
+                position: relative;
+                border-radius: 50%;
+                vertical-align: middle;
+                @include screen('xs_mobile') {
+                    margin: 0 10px 0 0; 
+               
+                 }
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    max-width: 70%;
+                    max-height: 70%;
+                    margin: auto;
+                    opacity: .7;
+                }
+            }
+            p{
+                flex:auto;
+                font-size: 1.125em;
+                text-align: left;
+            }
+        }
+    }
+    .more{
+        a{
+            padding: 10px 20px 10px 45px  !important;
+            background-image: url('../images/more_icon01.png');
+            background-position: 20px center;
+            background-repeat: no-repeat;
+
         }
     }
 }

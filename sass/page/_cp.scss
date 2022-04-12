@@ -1343,12 +1343,11 @@
                                     transform: rotate(45deg);
                                     transition: .5s;
                                 }
-                                &.active{
-                                    &:after{
+                                &.active {
+                                    &:after {
                                         transform: rotate(-135deg);
                                         top: 8px;
                                     }
-                                    
                                 }
                             }
                         }
@@ -1472,6 +1471,49 @@
                         }
                         a {
                             text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            // 永續發展目標
+            .listdata_sdg {
+                ul {
+                    margin: 0 30px;
+                    padding: 0;
+                    list-style-type: none;
+                    @include screen('xs_mobile'){
+                        margin: 0;
+                    }
+                    li {
+                        margin-bottom: 10px;
+                        padding: 0 0 15px;
+                        border-bottom: 1px dotted #ccc;
+                        span {
+                            color: #C75100;
+                            display: block;
+                            font-weight: bolder;
+                            font-size: 1.125em;
+                            margin-bottom: 5px;
+                            position: relative;
+                            float:left;
+                            &:after {
+                                content: '';
+                                position: absolute;
+                                right: -20px;
+                                top: 5px;
+                                border: 1px solid #666;
+                                width: 10px;
+                                height: 10px;
+                                border-color: #666 #666 transparent transparent;
+                                transform: rotate(45deg);
+                            }
+                        }
+                        p {
+                            line-height: 1.5em;
+                            clear: both;
+                            float:none;
+                            padding:0;
+                            margin:0;
                         }
                     }
                 }

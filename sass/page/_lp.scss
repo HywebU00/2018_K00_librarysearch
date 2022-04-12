@@ -711,6 +711,9 @@
                             }
                         }
                     }
+                    &.keyword{
+                        
+                    }
                     input[type="button"] {
                         border: 1px solid $color-gray;
                         background-color: #fff;
@@ -1970,7 +1973,7 @@
 //設備預約表單
 .reservation_block {
     width: 90%;
-    margin: 30px auto 50px;
+    margin: 40px auto 50px;
     @include screen('mobile') {
         width: auto;
         margin: 20px;

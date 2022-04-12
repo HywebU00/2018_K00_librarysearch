@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>凌網科技圖書館查詢系統</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 出版年度css -->
+    <link rel="stylesheet" href="vendor/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
+    <link rel="stylesheet" href="css/hyui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+    <!-- wrapper 最大寬度 -->
+    <div class="wrapper ">
+        <!-- sidebar  start-->
+        <aside class="sidebar">
+            <div class="m_area">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <nav class="navigation">
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                </nav>
+                <button type="button" class="sidebarClose">關閉</button>
+            </div>
+            <div class="menu_overlay"></div>
+        </aside>
+        <!-- sidebar  end-->
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <button type="button" class="sidebarCtrl">側欄選單</button>
+                <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+                <h1><a href="index.htm"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+                <!-- navigation Start -->
+                <nav class="navigation">
+                    <!-- 一組ul預設靠右 -->
+                    <!-- 兩組ul已寫JQ靠左靠右 -->
+                    <ul>
+                        <li><a href="javascript:;">Help</a></li>
+                        <li><a href="javascript:;">圖書館首頁</a></li>
+                    </ul>
+                    <!-- 語言設定 start-->
+                    <div class="language">
+                        <a href="javascript:;">Language</a>
+                        <ul>
+                            <li><a href="javascript:;">中文版</a></li>
+                            <li><a href="javascript:;">英文版</a></li>
+                        </ul>
+                    </div>
+                    <!-- 語言設定 end-->
+                    <!-- 會員紀錄 start -->
+                    <div class="member_record">
+                        <!-- 收藏紀錄 start-->
+                        <div class="heart"><img src="images/icon_collect_no.png" alt="您無收藏紀錄">
+                            <div class="comment">您無收藏紀錄</div>
+                        </div>
+                        <!-- 收藏紀錄 end-->
+                        <!-- 會員資料 start -->
+                        <div class="member_name">王小明</div>
+                        <div class="member_pic"><a href="#"><img src="images/featured_people02.jpg" alt="照片"></a><span>5</span></div>
+                        <div class="member_data">
+                            <ul>
+                                <li><a href="#">我的帳戶</a>
+                                    <ul>
+                                        <li><a href="#">我的主頁</a></li>
+                                        <li><a href="#">修改個人資料</a></li>
+                                        <li><a href="#">待繳費用/罰則紀錄</a></li>
+                                        <li><a href="#">與圖書館對話</a></li>
+                                        <li><a href="#">借閱證線上掛失</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">我的閱讀紀錄</a>
+                                    <ul>
+                                        <li><a href="#">我的借閱紀錄</a></li>
+                                        <li><a href="#">我的預約記錄</a></li>
+                                        <li><a href="#">我的跨館通閱清單</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">我的書櫃</a>
+                                    <ul>
+                                        <li><a href="#">我的收藏</a></li>
+                                        <li><a href="#">我的標籤</a></li>
+                                        <li><a href="#">評分/評論紀錄</a></li>
+                                        <li><a href="#">我的推薦採購書籍</a></li>
+                                        <li><a href="#">我的興趣主題</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">其他紀錄</a>
+                                    <ul>
+                                        <li><a href="#">我的借閱歷史紀錄</a></li>
+                                        <li><a href="#">我的預約歷史紀錄</a></li>
+                                        <li><a href="#">我的跨館通閱歷史紀錄</a></li>
+                                        <li><a href="#">我的罰則歷史紀錄</a></li>
+                                        <li><a href="#">我的查詢歷史紀錄</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="signout">登出</a></li>
+                            </ul>
+                        </div>
+                        <!-- 會員資料 end -->
+                    </div>
+                    <!-- 會員紀錄 end-->
+                </nav>
+                <!-- 手機才出現的按鈕 start -->
+                <!-- 會員紀錄 start -->
+                <div class="member_record member_mobile_btn">
+                    <!-- 會員資料 start -->
+                    <div class="member_pic"><a href="#"><img src="images/member_pic.png" alt="照片"></a><span>5</span></div>
+                    <div class="member_data">
+                        <ul>
+                            <li><a href="#">我的帳戶</a>
+                                <ul>
+                                    <li><a href="#">我的主頁</a></li>
+                                    <li><a href="#">修改個人資料</a></li>
+                                    <li><a href="#">待繳費用/罰則紀錄</a></li>
+                                    <li><a href="#">與圖書館對話</a></li>
+                                    <li><a href="#">借閱證線上掛失</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">我的閱讀紀錄</a>
+                                <ul>
+                                    <li><a href="#">我的借閱紀錄</a></li>
+                                    <li><a href="#">我的預約記錄</a></li>
+                                    <li><a href="#">我的跨館通閱清單</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">我的書櫃</a>
+                                <ul>
+                                    <li><a href="#">我的收藏</a></li>
+                                    <li><a href="#">我的標籤</a></li>
+                                    <li><a href="#">評分/評論紀錄</a></li>
+                                    <li><a href="#">我的推薦採購書籍</a></li>
+                                    <li><a href="#">我的興趣主題</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">其他紀錄</a>
+                                <ul>
+                                    <li><a href="#">我的借閱歷史紀錄</a></li>
+                                    <li><a href="#">我的預約歷史紀錄</a></li>
+                                    <li><a href="#">我的跨館通閱歷史紀錄</a></li>
+                                    <li><a href="#">我的罰則歷史紀錄</a></li>
+                                    <li><a href="#">我的查詢歷史紀錄</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="signout">登出</a></li>
+                        </ul>
+                    </div>
+                    <!-- 會員資料 end -->
+                </div>
+                <!-- 會員紀錄 end-->
+                <!-- 手機才出現的按鈕 end -->
+                <!-- noscript -->
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="javascript:;">網站導覽</a>
+                </noscript>
+                <!-- 手機版才出現的menu start-->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">主頁</a></li>
+                        <li><a href="#">新進圖書</a></li>
+                        <li><a href="#">展示書</a></li>
+                        <li><a href="#">網路辦證</a></li>
+                        <li><a href="#">線上協尋書</a></li>
+                        <li><a href="#">設備預約</a></li>
+                        <li><a href="#">圖書推薦</a></li>
+                        <li><a href="#">其他功能</a></li>
+                    </ul>
+                </div>
+                <!-- 手機版才出現的menu end-->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main">
+            <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+            <!-- 展示書列表 start-->
+            <section class="section col-12 featured_blocklist">
+                <div class="container">
+                    <div class="col">
+                        <!-- 精選書本資料1 start-->
+                        <div class="featured_data">
+                            <div class="images"><img src="images/SDG_banner01.svg" alt="圖片名稱" class="svg"></div>
+                            <h3>目標 11 永續城市和社區</h3>
+                            <div class="explain">建設具有包容性、安全性、可抵禦災害和永續性的城市與社區。.</div>
+                            <div class="keywords">
+                                <ul><li>#平等</li><li>#歧視</li><li>#移民</li><li>#社會凝聚力</li><li>#文化</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 精選書本資料1 end-->
+                    </div>
+                </div>
+            </section>
+            <!-- 展示書列表 start-->
+            <!-- 分欄start -->
+            <div class="maincolumn">
+                <div class="container">
+                    <!-- 左欄 start  -->
+                    <!-- 右欄 start  -->
+                    <div class="mainrightblock2">
+                        <!-- 右欄左線start -->
+                        <div class="rightlineblock">
+                            <!-- 路徑start -->
+                            <div class="breadcrumb">
+                                <span>現在位置：</span>
+                                <ul>
+                                    <li><a href="#">首頁</a></li>
+                                    <li><a href="#">節點</a></li>
+                                    <li>節點</li>
+                                </ul>
+                            </div>
+                            <!-- 路徑end-->
+                            <!-- 分類推薦start -->
+                            <div class="sortrecommend">
+                                <div class="sort"><a href="#" class="here">如何參與目標</a></div>
+                                <div class="sort"><a href="#">目標書單</a></div>
+                                <div class="sort"><a href="#">親子共讀</a></div>
+                            </div>
+                            <!-- 分類推薦end -->
+                            <!-- 目標資料 start -->
+                            <div class="SDG_targetdata">
+                                <div class="title">一起討論</div>
+                                <div class="SDG_targetdata_group">
+                                    <!-- 1 -->
+                                    <div class="targetdata_box">
+                                        <div class="images"><img src="images/device_icon02.png"></div>
+                                        <p>行動不便的人除了輪椅使用者外，還有哪些族群呢?</p>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div class="targetdata_box">
+                                        <div class="images"><img src="images/device_icon02.png"></div>
+                                        <p>行動不便的人除了輪椅使用者外，還有哪些族群呢?</p>
+                                    </div>
+                                    <!-- 3 -->
+                                    <div class="targetdata_box">
+                                        <div class="images"><img src="images/device_icon02.png"></div>
+                                        <p>行動不便的人除了輪椅使用者外，還有哪些族群呢?</p>
+                                    </div>
+                                    <!-- 4 -->
+                                    <div class="targetdata_box">
+                                        <div class="images"><img src="images/device_icon02.png"></div>
+                                        <p>行動不便的人除了輪椅使用者外，還有哪些族群呢?</p>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                                <div class="more"><a href="javascript:;" class="btnstyle brownbg">更多討論</a></div>
+                            </div>
+                            <!-- 目標資料 end -->
+
+                             <!-- 目標資料 start -->
+                            <div class="SDG_targetdata">
+                                <div class="title">一起行動</div>
+                                <div class="SDG_targetdata_group">
+                                    <!-- 1 -->
+                                    <div class="targetdata_box">
+                                        <div class="images"><img src="images/device_icon07.png"></div>
+                                        <p>行動不便的人除了輪椅使用者外，還有哪些族群呢?</p>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div class="targetdata_box">
+                                        <div class="images"><img src="images/device_icon07.png"></div>
+                                        <p>行動不便的人除了輪椅使用者外，還有哪些族群呢?</p>
+                                    </div>
+                                    <!-- 3 -->
+                                    <div class="targetdata_box">
+                                        <div class="images"><img src="images/device_icon07.png"></div>
+                                        <p>行動不便的人除了輪椅使用者外，還有哪些族群呢?</p>
+                                    </div>
+                                    <!-- 4 -->
+                                    <div class="targetdata_box">
+                                        <div class="images"><img src="images/device_icon07.png"></div>
+                                        <p>行動不便的人除了輪椅使用者外，還有哪些族群呢?</p>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                                <div class="more"><a href="javascript:;" class="btnstyle brownbg">更多行動</a></div>
+                            </div>
+                            <!-- 目標資料 end -->
+                        </div>
+                        <!-- 右欄左線end -->
+                    </div>
+                    <!-- 右欄 end  -->
+                </div>
+            </div>
+            <!-- 分欄end -->
+        </div>
+        <!-- fatfooter Start -->
+        <section class="fatfooter">
+            <div class="container">
+                <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+                <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+                <nav>
+                    <ul>
+                        <li><a href="javascript:;">關於我們</a>
+                            <ul>
+                                <li><a href="javascript:;">個人資料蒐集告知聲明</a></li>
+                                <li><a href="javascript:;">網路隱私權政策</a></li>
+                                <li><a href="javascript:;">交通資訊導引</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">常用連結</a>
+                            <ul>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                                <li><a href="javascript:;">機構典藏</a></li>
+                                <li><a href="javascript:;">facebook粉絲團</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="javascript:;">其他連結</a>
+                            <ul>
+                                <li><a href="javascript:;">HELP</a></li>
+                                <li><a href="javascript:;">借閱政策</a></li>
+                                <li><a href="javascript:;">圖書館首頁</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- fatfooter end -->
+        <!-- footer start-->
+        <footer>
+            <div class="container">
+                <div class="footer_info">
+                    <ul>
+                        <li>屏東縣政府文化處</li>
+                        <li>90054 屏東市大連路69號</li>
+                        <li>08-7360330</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end-->
+    </div>
+    <!-- 燈箱區塊 start-->
+    <!-- 燈箱區塊 end-->
+    <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
+    <script type="text/javascript" src="vendor/slick/slick.js">
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <!-- 出版年度js -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- 出版年度js -->
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+</body>
+
+</html>
