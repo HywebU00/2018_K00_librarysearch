@@ -3,11 +3,11 @@
 <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 170 120" style="enable-background:new 0 0 170 120;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FEB614;}
+	.st07{fill:#FEB614;}
 	.st1{fill:#FFFFFF;}
 </style>
 <g>
-	<rect class="st0" width="170" height="120"/>
+	<rect class="st07" width="170" height="120"/>
 </g>
 <g>
 	<path class="st1" d="M19.9,16.1H8.5v-2.1h14.6v2c-3.2,6.8-6.7,14.6-10,21.4H9.7c3.4-6.7,6.9-14.4,10.2-21.2V16.1z"/>
