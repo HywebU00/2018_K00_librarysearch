@@ -193,6 +193,10 @@ $(function() {
             //     $('.advanced_search').css('left', '-100%');
             //     $('body').removeClass('fix');
             // })
+            //詳目頁table包table
+            $('.bookplace_list .open_innertable').click(function() {
+                $(this).parent().parent('tr').next('tr').children('.innertable').css('display', 'block');
+            })
         } else {
             /*-----------------------------------*/
             /////////////// PC版設定 /////////////
@@ -225,10 +229,13 @@ $(function() {
             });
             // 點外面關閉
             $(document).on('touchend click', function(e) {
-                var container = $(".language >a, .language ul li a, .form_search, .prompt3, .prompt_btn, .member_pic, .optionblock .option_01 .name, .bookplace_list, .prompt, .prompt2 ");
+                var container = $(".language >a, .language ul li a, .form_search, .prompt3, .prompt_btn, .member_pic, .optionblock .option_01 .name, .bookplace_list, .prompt, .prompt2, .open_innertable ");
                 if (!container.is(e.target) && container.has(e.target).length === 0) {
                     $('.language ul, .recent_searches, .prompt_block3, .promptblock, .member_data, .optionblock .option_01 .option_list, .prompt_block, .prompt_block2').slideUp();
-                    $('.prompt, .prompt2').removeClass('arrow')
+                    $('.bookplace_list .innertable').slideUp(0);
+                    $('.prompt, .prompt2').removeClass('arrow');
+                    $('.bookplace_list td').removeClass('active');
+                    $('.open_innertable').removeClass('active');
                 }
             });
             //縮限查詢範圍
@@ -245,6 +252,9 @@ $(function() {
                 $('.form_advanced').stop().slideUp(700);
                 $('.search_blockin .onlysearch').show();
                 $('.search_blockin .onlysearchin').hide();
+            })
+            $('.bookplace_list .open_innertable').click(function() {
+                $(this).parent().parent('tr').next('tr').children('.innertable').css('display', 'table-cell');
             })
         }
     }
@@ -669,4 +679,74 @@ $(function() {
             $('html, body').stop(true, true).animate({ scrollTop: $('.main').find('.accesskey').offset().top - 70 }, 800, 'easeOutExpo');
         }
     });
+    /*------------------------------------*/
+    /////////////字型大小 font-size//////////
+    /*------------------------------------*/
+    $('.font_size').find('.small').click(function(e) {
+        $(this).parent('li').siblings('li').find('a').removeClass('active');
+        $('body').removeClass('large_size').addClass('small_size');
+        $(this).blur().addClass('active');
+        e.preventDefault();
+        createCookie('FontSize', 'small', 356);
+    });
+    $('.font_size').find('.medium').click(function(e) {
+        $(this).parent('li').siblings('li').find('a').removeClass('active');
+        $('body').removeClass('large_size small_size');
+        $(this).blur().addClass('active');
+        e.preventDefault();
+        createCookie('FontSize', 'medium', 356);
+    });
+    $('.font_size').find('.large').click(function(e) {
+        $(this).parent('li').siblings('li').find('a').removeClass('active');
+        $('body').removeClass('small_size').addClass('large_size');
+        $(this).blur().addClass('active');
+        e.preventDefault();
+        createCookie('FontSize', 'large', 356);
+    });
+
+    function createCookie(name, value, days) {
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+            var expires = '; expires=' + date.toGMTString();
+        } else expires = '';
+        document.cookie = name + '=' + value + expires + '; path=/';
+    }
+
+    function readCookie(name) {
+        var nameEQ = name + '=';
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+    window.onload = function(e) {
+        var cookie = readCookie('FontSize');
+        //alert('cookie='+cookie);
+        if (cookie == 'small') {
+            //$('.font_size').find('.small').click();
+            $('.font_size').find('.small').parent('li').siblings('li').find('a').removeClass('active');
+            $('body').removeClass('large_size medium_size').addClass('small_size');
+            $('.font_size').find('.small').addClass('active');
+            e.preventDefault();
+        } else {
+            if (cookie == 'large') {
+                //$('.font_size').find('.large').click();
+                $('.font_size').find('.large').parent('li').siblings('li').find('a').removeClass('active');
+                $('body').removeClass('small_size medium_size').addClass('large_size');
+                $('.font_size').find('.large').addClass('active');
+                e.preventDefault();
+            } else {
+                //這裡是預設宣告
+                //$('.font_size').find('.medium').click();
+                $('.font_size').find('.medium').parent('li').siblings('li').find('a').removeClass('active');
+                $('body').removeClass('large_size small_size');
+                $('.font_size').find('.medium').addClass('active');
+                e.preventDefault();
+            }
+        }
+    };
 });

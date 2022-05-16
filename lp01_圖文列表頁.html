@@ -26,7 +26,7 @@
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
     <!-- wrapper 最大寬度 -->
-    <div class="wrapper">
+    <div class="wrapper customization02">
         <!-- sidebar  start-->
         <aside class="sidebar">
             <div class="m_area">
@@ -81,6 +81,16 @@
                         </ul>
                     </div>
                     <!-- 語言設定 end-->
+                    <!-- font_size -->
+                    <div class="font_size">
+                        <span>字型大小：</span>
+                        <!-- 英文用<span>font-size：</span> -->
+                        <ul>
+                            <li><a href="#" class="small">小</a></li>
+                            <li><a href="#" class="medium">中</a></li>
+                            <li><a href="#" class="large">大</a></li>
+                        </ul>
+                    </div>
                     <!-- login start -->
                     <div class="login loginbtn">
                         <button type="button" class="btn btn-sm">登入/線上辦證</button>
@@ -997,7 +1007,7 @@
                             </div>
                             <!-- 資料全部 end-->
                             <!-- loading start -->
-                            <div class="loading">
+                            <div class="loading hidden">
                                 <div class="lds-ellipsis">
                                     <div>
                                         <div></div>
@@ -1017,13 +1027,25 @@
                                 </div>
                             </div>
                             <!-- loading end -->
+                            <!-- 篩選資料類型 start-->
+                            <div class="filter_data_block">
+                                <div class="title">篩選資料類型：</div>
+                                <ul>
+                                    <li><a href="#" class="all"><span>全部</span><em>3462</em></a></li>
+                                    <li><a href="#" class="book"><span>圖書</span><em>352</em></a></li>
+                                    <li><a href="#" class="periodicals"><span>期刊</span><em>25</em></a></li>
+                                    <li><a href="#" class="media"><span>多媒體</span><em>128</em></a></li>
+                                    <li><a href="#" class="ebook"><span>電子書</span><em>2645</em></a></li>
+                                </ul>
+                            </div>
+                            <!-- 篩選資料類型 end-->
                             <!-- 書本條列 start -->
                             <div class="booklist_block">
                                 <form>
                                     <!-- booklist_area start booklist 範圍 -->
                                     <div class="booklist_area">
                                         <!-- 選擇示意btn start  記得拿掉 -->
-                                        <div>
+                                        <div class="hidden">
                                             <!-- 下面匯出和轉寄他人的燈箱連結，要做到select 裡面，點選後燈箱出現，此連結只是示意 -->
                                             <span><a href="#" class="exportbth">匯出</a></span>
                                             <span><a href="#" class="forwardbtn">轉寄他人</a></span>

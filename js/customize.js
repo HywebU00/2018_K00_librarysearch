@@ -1230,6 +1230,19 @@ $(function() {
         }
     })
 })
+// reserve_block
+// $(function() {
+//     $(window).on("scroll resize", function() {
+//         var reserveblock = $(".reserve_block");
+//         if (reserveblock.length > 0) {
+//             if ($(window).scrollTop() > reserveblock.offset().top - 70) {
+//                 reserveblock.addClass('fixed');
+//             } else {
+//                 reserveblock.removeClass('fixed');
+//             }
+//         }
+//     })
+// })
 //列表頁連結詳目頁
 $(function() {
     $('#linkdetailpage').click(function() {
@@ -1683,10 +1696,13 @@ $(".close_black").append("<a href='#'>關閉</a>");
 //詳目頁table包table
 $(function() {
     $('.bookplace_list .open_innertable').click(function() {
+        $(this).parent('td').addClass('active');
         $(this).parent().parent('tr').siblings('tr').children('.innertable').slideUp(0);
         $(this).parent().parent('tr').next('tr').children('.innertable').slideDown(0);
+        // $(this).parent().parent('tr').next('tr').children('.innertable').css('display','block');
         $(this).addClass('active');
         $(this).parent().parent('tr').siblings('tr').find('.open_innertable').removeClass('active');
+        $(this).parent().parent('tr').siblings('tr').children('td').removeClass('active');
     })
 })
 // svg

@@ -711,15 +711,12 @@
                             }
                         }
                     }
-                    &.keyword{
-                        
-                    }
+                    &.keyword {}
                     input[type="button"] {
                         border: 1px solid $color-gray;
                         background-color: #fff;
                         padding: 4px 20px 4px 33px;
                         color: #313131;
-                       
                         margin: 0.25em .2em;
                         &:hover {
                             background-color: #e5e5e5;
@@ -757,7 +754,7 @@
                         @media(max-width: 380px) {
                             display: block;
                         }
-                        &:focus{
+                        &:focus {
                             box-shadow: 0 0px 0px 2px $form-focus;
                         }
                     }
@@ -833,10 +830,10 @@
                             margin: 0 .3em 0 .1em !important;
                         }
                     }
-                    .closebtn{
-                        display:inline-block; 
-                        &:focus{
-                            box-shadow: 0 0px 0px 2px $form-focus ;
+                    .closebtn {
+                        display: inline-block;
+                        &:focus {
+                            box-shadow: 0 0px 0px 2px $form-focus;
                         }
                     }
                 }
@@ -874,7 +871,6 @@
                     background-color: #fff;
                     padding: 4px 20px 4px 33px;
                     color: #313131;
-                   
                     &:hover {
                         background-color: #e5e5e5;
                     }
@@ -2365,8 +2361,8 @@
 // 讀者建議start 
 .reader_advice {
     margin: 0px 30px 70px;
-    .choosebtn{
-        margin:0 0 10px; 
+    .choosebtn {
+        margin: 0 0 10px;
     }
     .reaction,
     .reply,
@@ -2750,5 +2746,102 @@
     overflow: hidden;
     &:before {
         background-color: #367e7b;
+    }
+}
+// 篩選資料類型
+.filter_data_block {
+    padding: 6px 10px 3px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    @media(max-width: 480px) {
+        flex-wrap: wrap;
+    }
+    .title {
+        flex: none;
+        font-weight: bolder;
+        color: nth($primaryColor, $style);
+        @media(max-width: 480px) {
+            flex-basis: 100%;
+            margin-bottom: 5px;
+        }
+    }
+    ul {
+        flex: auto;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        @media(max-width: 480px) {
+            flex-basis: 100%;
+        }
+        li {
+            display: inline-block;
+            margin-right: 5px;
+            min-width: 50px;
+            @media(max-width: 480px) {
+                margin-bottom: 5px;
+            }
+            a {
+                display: block;
+                padding: 25px 5px 3px 5px;
+                background-color: #eee;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                line-height: 1em;
+                transition: .5s;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                &:hover {
+                    background-color: #fff;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                }
+                span {
+                    font-size: 0;
+                    line-height: 1em;
+                }
+                em {
+                    font-style: normal;
+                    font-size: 0.75em;
+                    color: #333;
+                    padding: 0 5px;
+                    border-radius: 4px;
+                    width: auto;
+                    background-color: #fff;
+                    margin-top: -12px;
+                    display: block;
+                    text-align: center;
+                }
+                &.all {
+                    background-image: url('../images/filter_icon01.svg');
+                    background-repeat: no-repeat;
+                    background-position: center 5px;
+                    background-size: 18px;
+                }
+                &.book {
+                    background-image: url('../images/filter_icon02.svg');
+                    background-repeat: no-repeat;
+                    background-position: center 6px;
+                    background-size: 20px;
+                }
+                &.periodicals {
+                    background-image: url('../images/filter_icon03.svg');
+                    background-repeat: no-repeat;
+                    background-position: center 5px;
+                    background-size: 17px;
+                }
+                &.media {
+                    background-image: url('../images/filter_icon04.svg');
+                    background-repeat: no-repeat;
+                    background-position: center 5px;
+                    background-size: 20px;
+                }
+                &.ebook {
+                    background-image: url('../images/filter_icon05.svg');
+                    background-repeat: no-repeat;
+                    background-position: center 5px;
+                    background-size: 20px;
+                }
+            }
+        }
     }
 }

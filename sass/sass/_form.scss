@@ -25,7 +25,7 @@
         @include make-md-column(3);
         @include make-lg-column(3);
         @include gutter();
-        padding-top: 12px;
+        padding-top: 0.5em;
         padding-left: 20px;
         margin-top: 0;
     }
@@ -35,7 +35,7 @@
         @include make-md-column(9);
         @include make-lg-column(9);
         @include gutter();
-        padding-top: 5px;
+        padding-top: 0.5em;
     }
 }
 //---------------------------------------------form setting--------//
