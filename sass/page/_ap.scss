@@ -473,7 +473,7 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     // height: calc(205px + 205px);
-                    line-height: 30px;
+                    line-height: 30.5px;
                     display: -webkit-box;
                     -webkit-line-clamp: 9;
                     -webkit-box-orient: vertical;
@@ -1909,7 +1909,7 @@
                             width: 44% !important;
                         }
                         @include screen('tablet') {
-                            width: 47% !important;
+                            width: 46% !important;
                         }
                         @media(max-width: 580px) {
                             width: 99% !important;

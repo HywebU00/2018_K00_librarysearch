@@ -609,7 +609,6 @@ select {
             color: #333 !important;
         }
     }
-    
     &.brownbg {
         background-color: #59493f;
         border: 2px solid #59493f;
@@ -640,7 +639,6 @@ select {
             border: 2px solid #a0a0a0;
         }
     }
-    
     // 較寬
     &.morewidth {
         padding: 5px 80px !important;
@@ -650,7 +648,7 @@ select {
     &.btn-lg {
         padding: 10px 50px !important;
         font-size: 1em;
-        box-sizing:border-box;
+        box-sizing: border-box;
     }
     //more
     &.morebg {
@@ -743,4 +741,58 @@ select {
 .large_size {
     font-size: 1.125em;
     transition: .5s;
+    .mystudycontent .mycardlist li .data>span em {
+        margin-right: 0px;
+    }
+    .mystudycontent .mycardlist li .data>span:nth-child(2) em {
+        margin-right: 0px;
+    }
+    .devicereservation_block .device_list a {
+        height: 240px;
+        @include screen('mobile') {
+            height: auto;
+        }
+    }
+    .linecontent .book-gallery .book .title {
+        max-height: 48px;
+        height: 48px;
+    }
+    .linecontent .book-gallery {
+        .book {
+            @media only screen and (min-device-width: 480px) {
+                padding: 0px 15px;
+            }
+            @media only screen and (min-device-width:568px) {
+                width: calc(100%/3);
+                padding: 0px 10px;
+            }
+            @media only screen and (min-device-width:640px) {
+                padding: 0px 15px;
+                width: calc(100%/3);
+            }
+            @media only screen and (min-device-width:768px) {
+                width: 25%;
+                padding: 0px 10px;
+            }
+            @media only screen and (min-device-width:853px) {
+                padding: 0px 15px;
+            }
+            @media only screen and (min-device-width:960px) {
+                width: calc(100%/4);
+                padding: 0px 10px;
+            }
+            @media only screen and (min-device-width:1024px) {
+                width: 20%;
+            }
+            @media only screen and (min-device-width:1200px) {
+                width: 20%;
+            }
+            @media only screen and (min-device-width:1366px) {
+                width: calc(100%/6);
+            }
+            @media only screen and (min-device-width:1700px) {
+                width: calc(100%/7);
+            }
+        }
+    }
 }

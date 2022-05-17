@@ -194,11 +194,6 @@
         margin-bottom: 10px;
     }
     @media(max-width: 380px) {
-        margin: 8px 0px 10px 0;
-        position: absolute;
-        right: 8px;
-    }
-    @media(max-width: 345px) {
         position: relative;
         width: 100%;
         right: auto;
@@ -1441,9 +1436,6 @@
                 font-weight: normal;
                 font-size: 1.25em;
                 line-height: 1.3em;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
                 text-align: center;
                 @include screen('mobile') {
                     text-align: left;
@@ -1453,6 +1445,9 @@
                     text-decoration: underline;
                     transition: .5s;
                     display: block;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                     &:hover {
                         color: $aHover;
                     }
@@ -2041,7 +2036,7 @@
         .select_date {
             width: 45%;
             @include screen('mobile') {
-                width: 47%;
+                width: 46%;
             }
             @media(max-width:615px) {
                 width: 98%;
@@ -2985,6 +2980,11 @@
                 color: #898989;
                 display: block;
                 margin-top: 50px;
+                display: flex;
+                justify-content: center;
+                @media(max-width: 480px) {
+                    display: block;
+                }
                 >span {
                     display: inline-block;
                     vertical-align: top;
@@ -2994,8 +2994,8 @@
                         margin-bottom: 30px
                     }
                     em {
-                        font-size: 3.7em;
-                        margin-right: 10px;
+                        font-size: 3.6em;
+                        margin-right: 5px;
                     }
                 }
                 >span:nth-child(2) {
@@ -3014,7 +3014,7 @@
                     }
                     em {
                         font-size: 2.5em;
-                        margin-right: 10px;
+                        margin-right: 5px;
                     }
                     @media(max-width: 480px) {
                         padding-top: 0;
@@ -3027,18 +3027,6 @@
                         }
                     }
                 }
-            }
-            .remark {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                padding: 5px;
-                background-color: #999;
-                color: #fff;
-                border-radius: 0 0 10px 10px;
-                text-align: center;
-                font-size: 0.938em;
             }
             //
             .badrecord {
@@ -3074,19 +3062,39 @@
                         height: auto;
                         padding: 0 0 5px 15px;
                         margin: 0 0 5px;
-                        list-style-type: disc;
-                        background-image: url('../images/icon_point.png');
-                        background-position: 0 8px;
-                        background-repeat: no-repeat;
+                        list-style-type: none;
+                        position: relative;
                         text-align: left;
                         &:after {
                             content: '';
                             border: none;
                         }
+                        &:before {
+                            content: '';
+                            width: 8px;
+                            height: 8px;
+                            background-color: #777;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: 0;
+                            top: 7px;
+                        }
                     }
                 }
             }
-            // 
+            .remark {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                padding: 5px;
+                background-color: #999;
+                color: #fff;
+                border-radius: 0 0 10px 10px;
+                text-align: center;
+                font-size: 0.938em;
+            }
+            //
         }
     }
     // 聯絡人
