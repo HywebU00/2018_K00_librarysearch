@@ -98,6 +98,10 @@ $btn-radius:4px;
     @extend %btn;
     @include btn_setting($color-darkgray, #FFF);
 }
+.btn-white {
+    @extend %btn;
+    @include btn_setting($color-white, #333);
+}
 // 按鈕大小
 .btn-xl {
     font-size: $font-size * 1.5; //24px

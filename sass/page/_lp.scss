@@ -2845,3 +2845,359 @@
         }
     }
 }
+// 網路申請寄件說明
+.send_illustrate_block {
+    padding-bottom: 60px
+}
+.send_illustrate_group {
+    margin: 40px 30px;
+    .title {
+        @extend .block01_h2;
+    }
+    .content {
+        ol {
+            margin: 30px 0px 30px 30px;
+            padding: 0;
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+// 寄件區塊標題
+.send_block_title {
+    padding: 10px 20px;
+    background-color: $color-orange;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.125em;
+}
+// 配送方式
+.delivery_method_block {
+    margin: 0 30px 30px;
+    .payment_method {
+        display: flex;
+        @media(max-width: 992px) {
+            flex-wrap: wrap;
+        }
+        a {
+            flex: auto;
+            text-align: center;
+            @media(max-width: 992px) {
+                flex: none;
+                flex-basis: 48%;
+                margin: 0 1% 10px;
+            }
+            @media(max-width: 575px) {
+                flex-basis: 100%;
+                margin: 0 0 10px;
+            }
+        }
+    }
+}
+.fee_matters_block {
+    margin: 30px;
+    .mycardlist {
+        margin: 0 0 20px;
+        padding: 0;
+        overflow: hidden;
+        li {
+            width: 31%;
+            margin-right: 2%;
+            margin-bottom: 15px;
+            float: left;
+            list-style-type: none;
+            height: 190px;
+            @include box-sizing();
+            @media(max-width: 1300px) {
+                width: 48%;
+            }
+            @include screen('tablet') {
+                width: 100%;
+                margin-right: 0;
+            }
+            @include screen('mobile') {
+                width: 48%;
+                margin-right: 2%;
+            }
+            @media(max-width: 730px) {
+                width: 100%;
+                margin-right: 0;
+                float: none;
+                clear: both;
+            }
+            @media(max-width: 480px) {
+                height: auto;
+            }
+            &:last-child {
+                margin-right: 0;
+                // height: auto;
+            }
+            a {
+                display: block;
+                &:focus {
+                    box-shadow: 0 0px 0px 2px $form-focus inset;
+                    .cardblock {
+                        box-shadow: 3px 2px 4px 3px #ccc;
+                    }
+                }
+            }
+            .cardblock {
+                display: block;
+                border: 1px solid #ccc;
+                padding: 15px 5px;
+                width: 100%;
+                height: 180px;
+                border-radius: 10px;
+                position: relative;
+                margin-top: 10px;
+                transition: .2s;
+                @include box-sizing();
+                @media(max-width: 480px) {
+                    height: auto;
+                    min-height: 200px;
+                }
+                &:hover {
+                    margin-top: 0px;
+                    box-shadow: 3px 2px 4px 3px #ccc;
+                }
+            }
+            h3 {
+                margin: 0 0 10px 10px;
+                font-size: 1.5em;
+                position: relative;
+                padding-left: 20px;
+                color: #000;
+                &:before {
+                    content: '';
+                    // width: 10px;
+                    // height:10px;
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    border: 8px solid #666;
+                    border-color: transparent transparent transparent #666;
+                }
+            }
+            //
+            .data {
+                text-align: center;
+                color: #898989;
+                display: block;
+                margin-top: 50px;
+                >span {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin: 0 5px;
+                    @media(max-width: 480px) {
+                        display: block;
+                        margin-bottom: 30px
+                    }
+                    em {
+                        font-size: 3.7em;
+                        margin-right: 10px;
+                    }
+                }
+                >span:nth-child(2) {
+                    position: relative;
+                    padding-top: 50px;
+                    padding-left: 5px;
+                    &:before {
+                        content: '';
+                        width: 7px;
+                        height: 80px;
+                        background-color: #999;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transform: skewX(-30deg)
+                    }
+                    em {
+                        font-size: 2.5em;
+                        margin-right: 10px;
+                    }
+                    @media(max-width: 480px) {
+                        padding-top: 0;
+                        &:before {
+                            width: 0;
+                            height: 0;
+                        }
+                        em {
+                            font-size: 3.7em;
+                        }
+                    }
+                }
+            }
+            .remark {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                padding: 5px;
+                background-color: #999;
+                color: #fff;
+                border-radius: 0 0 10px 10px;
+                text-align: center;
+                font-size: 0.938em;
+            }
+            //
+            .badrecord {
+                display: block;
+                margin-top: 30px;
+                @media(max-width: 380px) {
+                    text-align: center;
+                }
+                .caveat {
+                    float: left;
+                    margin: 0 30px 0 10px;
+                    @include screen('mobile') {
+                        margin: 0 20px 0 10px;
+                    }
+                    @media(max-width: 380px) {
+                        float: none;
+                        clear: both;
+                        margin: 0 0 20px;
+                    }
+                }
+                ul {
+                    margin: 0px;
+                    padding: 0;
+                    overflow: hidden;
+                    @media(max-width: 380px) {
+                        margin: 0 30px;
+                    }
+                    li {
+                        display: block;
+                        float: none;
+                        border: none;
+                        width: auto;
+                        height: auto;
+                        padding: 0 0 5px 15px;
+                        margin: 0 0 5px;
+                        list-style-type: disc;
+                        background-image: url('../images/icon_point.png');
+                        background-position: 0 8px;
+                        background-repeat: no-repeat;
+                        text-align: left;
+                        &:after {
+                            content: '';
+                            border: none;
+                        }
+                    }
+                }
+            }
+            // 
+        }
+    }
+    // 聯絡人
+    .contact_person_block {
+        .contact_person_group {
+            margin-bottom: 40px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 20px 50px 10px;
+            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+            position: relative;
+            @include box-sizing;
+            background-color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            &:before {
+                content: '';
+                border: 30px solid $color-orange;
+                border-color: $color-orange transparent transparent $color-orange;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            @include screen('mobile') {
+                padding: 20px 20px 10px 50px;
+            }
+            // 資料
+            .data_list {
+                flex: none;
+                flex-basis: 48%;
+                margin: 0 1% 20px;
+                display: flex;
+                @include screen('tablet') {
+                    flex-basis: 100%;
+                    flex-wrap: wrap;
+                    padding-bottom: 20px;
+                    border-bottom: 1px dotted #999;
+                }
+                .title {
+                    flex: none;
+                    flex-basis: 48%;
+                    color: nth($primaryColor, $style);
+                    font-weight: bolder;
+                    position: relative;
+                    span {
+                        padding-bottom: 3px;
+                        border-bottom: 2px solid nth($primaryColor, $style);
+                        @include screen('tablet') {
+                            border-bottom: none;
+                        }
+                    }
+                    @media(max-width: 480px) {
+                        flex-basis: 100%;
+                        margin-bottom: 10px;
+                    }
+                }
+                .content {
+                    flex-basis: 48%;
+                    span {
+                        display: block
+                    }
+                    @media(max-width: 480px) {
+                        flex-basis: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+// 備註
+.remark_block {
+    line-height: 1.5em;
+}
+// 我的訂單
+.myorder_block {
+    padding: 10px 0 60px;
+    .order_list_group {
+        margin: 20px 30px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 0;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+        position: relative;
+        @include box-sizing;
+        background-color: #fff;
+    }
+    .order_number {
+        background-color: $color-orange;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 1.125em;
+    }
+    .order_content {
+        padding: 20px 0px;
+        border-bottom: 1px solid #d3d3d3;
+        ul {
+            margin: 0 50px;
+            padding: 0;
+            li {
+                margin-bottom: 10px;
+                .money {
+                    color: $color-red;
+                    font-size: 1.5em;
+                    font-weight: bolder;
+                    letter-spacing: 0.02em;
+                }
+            }
+        }
+        .btn_grp {
+            text-align: right;
+            padding: 0 20px 0 0;
+        }
+    }
+}

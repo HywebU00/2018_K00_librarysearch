@@ -194,7 +194,7 @@
     // _mystudy.scss
     .modify_data,
     .write_data,
-    .forget_password, .mystudysearch_data {
+    .forget_password, .mystudysearch_data, .stored_value_group, .reader_form_group, .delivery_method_block {
         .title {
             color: nth($primaryColor, $style);
         }
@@ -233,6 +233,26 @@
         }
     }
     // _lp.scss
+    .contact_person_block {
+        .contact_person_group {
+            .data_list {
+                .title {
+                    color: nth($primaryColor, $style);
+                    span {
+                        border-bottom: 2px solid nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .send_block_title {
+        background-color: nth($primaryColor, $style);
+    }
+    .myorder_block {
+        .order_number {
+            background-color: nth($primaryColor, $style);
+        }
+    }
     .filter_data_block {
         .title {
             color: nth($primaryColor, $style);
@@ -677,7 +697,7 @@
     // _mystudy.scss
     .modify_data,
     .write_data,
-    .forget_password, .mystudysearch_data {
+    .forget_password, .mystudysearch_data, .stored_value_group, .reader_form_group, .delivery_method_block {
         .title {
             color: nth($primaryColor, $style);
         }
@@ -725,6 +745,26 @@
         }
     }
     // _lp.scss
+    .contact_person_block {
+        .contact_person_group {
+            .data_list {
+                .title {
+                    color: nth($primaryColor, $style);
+                    span {
+                        border-bottom: 2px solid nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .send_block_title {
+        background-color: nth($primaryColor, $style);
+    }
+    .myorder_block {
+        .order_number {
+            background-color: nth($primaryColor, $style);
+        }
+    }
     .filter_data_block {
         .title {
             color: nth($primaryColor, $style);
@@ -1244,7 +1284,7 @@
     // _mystudy.scss
     .modify_data,
     .write_data,
-    .forget_password, .mystudysearch_data {
+    .forget_password, .mystudysearch_data, .stored_value_group, .reader_form_group, .delivery_method_block {
         .title {
             color: nth($primaryColor, $style);
         }
@@ -1389,6 +1429,26 @@
         }
     }
     // _lp.scss
+    .contact_person_block {
+        .contact_person_group {
+            .data_list {
+                .title {
+                    color: nth($primaryColor, $style);
+                    span {
+                        border-bottom: 2px solid nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .send_block_title {
+        background-color: nth($primaryColor, $style);
+    }
+    .myorder_block {
+        .order_number {
+            background-color: nth($primaryColor, $style);
+        }
+    }
     .filter_data_block {
         .title {
             color: nth($primaryColor, $style);
@@ -2261,7 +2321,7 @@
     // _mystudy.scss
     .modify_data,
     .write_data,
-    .forget_password, .mystudysearch_data {
+    .forget_password, .mystudysearch_data, .stored_value_group, .reader_form_group, .delivery_method_block {
         .title {
             color: nth($primaryColor, $style);
         }
@@ -2309,6 +2369,26 @@
         }
     }
     // _lp.scss
+    .contact_person_block {
+        .contact_person_group {
+            .data_list {
+                .title {
+                    color: nth($primaryColor, $style);
+                    span {
+                        border-bottom: 2px solid nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .send_block_title {
+        background-color: nth($primaryColor, $style);
+    }
+    .myorder_block {
+        .order_number {
+            background-color: nth($primaryColor, $style);
+        }
+    }
     .filter_data_block {
         .title {
             color: nth($primaryColor, $style);
@@ -2720,7 +2800,7 @@
     // _mystudy.scss
     .modify_data,
     .write_data,
-    .forget_password, .mystudysearch_data {
+    .forget_password, .mystudysearch_data, .stored_value_group, .reader_form_group, .delivery_method_block {
         .title {
             color: nth($primaryColor, $style);
         }
@@ -2768,6 +2848,26 @@
         }
     }
     // _lp.scss
+    .contact_person_block {
+        .contact_person_group {
+            .data_list {
+                .title {
+                    color: nth($primaryColor, $style);
+                    span {
+                        border-bottom: 2px solid nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .send_block_title {
+        background-color: nth($primaryColor, $style);
+    }
+    .myorder_block {
+        .order_number {
+            background-color: nth($primaryColor, $style);
+        }
+    }
     .filter_data_block {
         .title {
             color: nth($primaryColor, $style);
@@ -3179,7 +3279,7 @@
     // _mystudy.scss
     .modify_data,
     .write_data,
-    .forget_password, .mystudysearch_data {
+    .forget_password, .mystudysearch_data, .stored_value_group, .reader_form_group, .delivery_method_block {
         .title {
             color: nth($primaryColor, $style);
         }
@@ -3227,6 +3327,26 @@
         }
     }
     // _lp.scss
+    .contact_person_block {
+        .contact_person_group {
+            .data_list {
+                .title {
+                    color: nth($primaryColor, $style);
+                    span {
+                        border-bottom: 2px solid nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .send_block_title {
+        background-color: nth($primaryColor, $style);
+    }
+    .myorder_block {
+        .order_number {
+            background-color: nth($primaryColor, $style);
+        }
+    }
     .filter_data_block {
         .title {
             color: nth($primaryColor, $style);
@@ -3638,7 +3758,7 @@
     // _mystudy.scss
     .modify_data,
     .write_data,
-    .forget_password, .mystudysearch_data {
+    .forget_password, .mystudysearch_data, .stored_value_group, .reader_form_group, .delivery_method_block {
         .title {
             color: nth($primaryColor, $style);
         }
@@ -3686,6 +3806,26 @@
         }
     }
     // _lp.scss
+    .contact_person_block {
+        .contact_person_group {
+            .data_list {
+                .title {
+                    color: nth($primaryColor, $style);
+                    span {
+                        border-bottom: 2px solid nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .send_block_title {
+        background-color: nth($primaryColor, $style);
+    }
+    .myorder_block {
+        .order_number {
+            background-color: nth($primaryColor, $style);
+        }
+    }
     .filter_data_block {
         .title {
             color: nth($primaryColor, $style);
@@ -4097,7 +4237,7 @@
     // _mystudy.scss
     .modify_data,
     .write_data,
-    .forget_password, .mystudysearch_data {
+    .forget_password, .mystudysearch_data, .stored_value_group, .reader_form_group, .delivery_method_block {
         .title {
             color: nth($primaryColor, $style);
         }
@@ -4145,6 +4285,26 @@
         }
     }
     // _lp.scss
+    .contact_person_block {
+        .contact_person_group {
+            .data_list {
+                .title {
+                    color: nth($primaryColor, $style);
+                    span {
+                        border-bottom: 2px solid nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .send_block_title {
+        background-color: nth($primaryColor, $style);
+    }
+    .myorder_block {
+        .order_number {
+            background-color: nth($primaryColor, $style);
+        }
+    }
     .filter_data_block {
         .title {
             color: nth($primaryColor, $style);
@@ -4558,7 +4718,7 @@
     // _mystudy.scss
     .modify_data,
     .write_data,
-    .forget_password, .mystudysearch_data {
+    .forget_password, .mystudysearch_data, .stored_value_group, .reader_form_group, .delivery_method_block {
         .title {
             color: nth($primaryColor, $style);
         }
@@ -4606,6 +4766,26 @@
         }
     }
     // _lp.scss
+    .contact_person_block {
+        .contact_person_group {
+            .data_list {
+                .title {
+                    color: nth($primaryColor, $style);
+                    span {
+                        border-bottom: 2px solid nth($primaryColor, $style);
+                    }
+                }
+            }
+        }
+    }
+    .send_block_title {
+        background-color: nth($primaryColor, $style);
+    }
+    .myorder_block {
+        .order_number {
+            background-color: nth($primaryColor, $style);
+        }
+    }
     .filter_data_block {
         .title {
             color: nth($primaryColor, $style);

@@ -252,7 +252,7 @@
                     &.adddelbtn {
                         width: 100% !important;
                     }
-                   @media(max-width: 575px) {
+                    @media(max-width: 575px) {
                         &:nth-child(1) {
                             width: 50%;
                         }
@@ -1224,8 +1224,8 @@ html .ui-button.ui-state-disabled:active {
                 position: relative;
                 flex: none;
                 margin: 0 45px;
-                @include screen('xs_mobile'){
-                     margin: 0 10px;
+                @include screen('xs_mobile') {
+                    margin: 0 10px;
                 }
                 a {
                     color: #ddd;
@@ -1279,7 +1279,7 @@ html .ui-button.ui-state-disabled:active {
                                 border: 10px solid #ddd;
                                 border-color: transparent transparent transparent #eee;
                                 top: 3px;
-                                right:-5px;
+                                right: -5px;
                             }
                         }
                     }

@@ -7,7 +7,7 @@ $sites:initial, child01, customization01, customization02, version01, version02,
 $primaryColor:	#005d98, #5c9588, #5c9588, #0e664c, #1c4b82, #ff8b00, #00a79d, #774181, #088c6f, #00b7ee;	//主色 
 $secondaryColor:#781F79;//輔色
 $lightColor:	#fed857 ,#5c9588, #5c9588, #f3d22f, #e9846a, #a7c077, #f49a6e, #e6b2c6, #f3d394, #fbe8d3;//點綴
-$linkColor:     #774e2b ,#774e2b, #774e2b, #6C4727, #1c4b82, #774e2b, #00988d, #774181, #07785f, #44b1e2;//連結
+$linkColor:     #774e2b ,#774e2b, #185554, #235f92, #1c4b82, #774e2b, #00988d, #774181, #07785f, #44b1e2;//連結
 $importantColor:#e52104;//重要
 $style: index($sites,initial) ; //選擇initial後 = $style:1
 // 但注意真實顏色與語意的關聯必須易於辨識
@@ -25,6 +25,7 @@ $color-brown2: 				#774e2b;
 $color-dark: 				#333;
 $hrColor:					#d3d3d3;		  			 //
 $color-darkgreen:			#a4b2a6;
+$color-white:			    #fff;
 // hr顏色
 $color-word:				#666;                    //一般字的顏色
 // 連結顏色
