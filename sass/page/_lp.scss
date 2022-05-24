@@ -3174,9 +3174,9 @@
     .order_list_group {
         margin: 20px 30px;
         border-radius: 5px;
-        border: 1px solid #ccc;
+        // border: 1px solid #ccc;
         padding: 0;
-        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
         position: relative;
         @include box-sizing;
         background-color: #fff;
@@ -3186,6 +3186,7 @@
         padding: 10px 20px;
         color: #fff;
         font-size: 1.125em;
+        border-radius: 5px 5px 0 0;
     }
     .order_content {
         padding: 20px 0px;
