@@ -1153,7 +1153,7 @@
                             margin-right: 5px;
                         }
                         a {
-                            &.prompt, &.prompt2 {
+                            &.prompt, &.prompt2, &.prompt_in3 {
                                 width: 25px;
                                 height: 25px;
                                 background-color: #666;
@@ -1181,7 +1181,7 @@
                                 }
                             }
                         }
-                        .prompt_block, .prompt_block2 {
+                        .prompt_block, .prompt_block2, .prompt_block_in3 {
                             background-color: #666;
                             color: #fff;
                             position: absolute;
@@ -1205,6 +1205,7 @@
                                     text-align: left;
                                     white-space: normal;
                                     padding-left: 40px;
+                                    display: block;
                                     span {
                                         width: 36px;
                                         height: 36px;
@@ -1362,7 +1363,6 @@
                                         transform: rotate(-135deg);
                                         top: 8px;
                                     }
-                                   
                                 }
                             }
                         }
@@ -1397,8 +1397,8 @@
                             display: none;
                             &.tdopen {
                                 display: block;
-                                &.active{
-                                    &:before{
+                                &.active {
+                                    &:before {
                                         color: #fff;
                                     }
                                 }

@@ -1395,6 +1395,13 @@ $(function() {
         $('.prompt_block').hide();
         $(this).removeClass('arrow');
     })
+    $('.prompt_block_in3').hide();
+    $('.bookplace_list .prompt_in3').click(function() {
+        $('.prompt_block_in3').fadeToggle();
+        $(this).toggleClass('arrow');
+        $(this).parent('th').siblings('th').children('.prompt_block_in3').hide();
+        $(this).parent('th').siblings('th').children('.prompt_in3').removeClass('arrow');
+    })
     $('.prompt_block2').hide();
     $('.bookplace_list .prompt2').click(function() {
         $('.prompt_block2').fadeToggle();
