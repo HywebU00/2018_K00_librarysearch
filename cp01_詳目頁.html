@@ -1279,48 +1279,52 @@
                                         <!-- 無收錄 end-->
                                         <!-- 預約start -->
                                         <div class="reserve_block">
-                                            <!-- 到頂後加 class加fixed，請參考左欄js寫法 -->
-                                            <div class="title">預約</div>
                                             <form action="">
-                                                <div class="reserve_data">
-                                                    <div class="form_grid">
-                                                        <div class="form_grp">
-                                                            <label for=" " class="form_title ">題名：</label>
-                                                            <div class="form_content"> 101個植物世界 </div>
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <label for=" " class="form_title ">作者．著者敘述：</label>
-                                                            <div class="form_content">劉暢作・晴天漫畫工作室繪</div>
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <label for="" class="form_title"> 取書館別：</label>
-                                                            <div class="form_content ">
-                                                                <select id="selectSample" name="" class="any_width">
-                                                                    <option value="">選擇取書館</option>
-                                                                    <option value="">屏東縣立圖書館</option>
-                                                                    <option value="">恆春鎮立圖書館</option>
-                                                                </select><a class="btnstyle bluebg">預設取書館</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <label for="" class="form_title"> 預約書到館通知方式：</label>
-                                                            <div class="form_content ">
-                                                                <select id="selectSample" name="" class="any_width">
-                                                                    <option value="">無需通知</option>
-                                                                    <option value="">電話聯絡</option>
-                                                                    <option value="">簡訊通知</option>
-                                                                </select><a class="btnstyle bluebg">修改</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="form_grp">
-                                                            <label for=" " class="form_title ">您以勾選資料：</label>
-                                                            <div class="form_content">2筆</div>
+                                                <div class="form_grid">
+                                                    <div class="title">預約</div>
+                                                    <!--  -->
+                                                    <div class="form_grp form_inline">
+                                                        <label for="" class="form_title">提名：</label>
+                                                        <div class="form_content"> 101個植物世界 </div>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="form_grp form_inline rightcol">
+                                                        <label for="" class="form_title">作者：</label>
+                                                        <div class="form_content"> 劉暢作・晴天漫畫工作室繪 </div>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="form_grp form_inline ">
+                                                        <label for="" class="form_title">取書館別：</label>
+                                                        <div class="form_content form_inline">
+                                                            <select id="selectSample" name="" class="any_width">
+                                                                <option value="">選擇取書館</option>
+                                                                <option value="">屏東縣立圖書館</option>
+                                                                <option value="">恆春鎮立圖書館</option>
+                                                            </select><a class="btnstyle bluebg">預設取書館</a>
                                                         </div>
                                                     </div>
                                                     <!--  -->
-                                                </div>
-                                                <div class="btn_grp">
-                                                    <input name="" type="submit" value="確定預約">
+                                                    <div class="form_grp form_inline rightcol">
+                                                        <label for="" class="form_title">通知方式：</label>
+                                                        <div class="form_content form_inline">
+                                                            <select id="selectSample" name="" class="any_width">
+                                                                <option value="">無需通知</option>
+                                                                <option value="">電話聯絡</option>
+                                                                <option value="">簡訊通知</option>
+                                                            </select><a class="btnstyle bluebg">修改</a>
+                                                        </div>
+                                                    </div>
+                                                    <!--  -->
+                                                    <div class="form_grp single_field"><label class="form_title">你以勾選資料：</label>
+                                                        <div class="form_content form_inline">2筆</div>
+                                                    </div>
+                                                    <!--  -->
+                                                    <!--  -->
+                                                    <!--  -->
+                                                    <div class="btn_grp">
+                                                        <input name="Search" type="submit" value="確定預約" />
+                                                        <input name="" type="reset" value="取消預約">
+                                                    </div>
                                                 </div>
                                             </form>
                                         </div>
@@ -1396,7 +1400,8 @@
                                                                                     <li><span>新</span>代表為新書</li>
                                                                                     <li><span>指</span>代表為指定參考書</li>
                                                                                 </ul>
-                                                                            </div></th>
+                                                                            </div>
+                                                                        </th>
                                                                         <th><span>特藏/用途</span><a href="javascript:;" class="prompt_in3">i</a>
                                                                             <div class="prompt_block_in3">
                                                                                 <ul>
