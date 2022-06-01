@@ -2112,8 +2112,8 @@
 }
 .reserve_block {
     padding: 10px 30px 0;
-    background-color: #eee;
-    // color: #333;
+    background-color: #666;
+    color: #eee;
     // position: relative;
     // z-index: 9;
     // margin: 0;
@@ -2139,17 +2139,21 @@
         }
     }
     .title {
-        margin: 10px 0 !important;
+        margin: 10px 0 15px !important;
+        color: #fff !important;
     }
     .form_grid {
         .form_grp {
+            border-bottom: 1px solid #bbb;
+            padding: 0.4em 0 0.2em;
             &.single_field {
                 .form_title {
-                    width: 170px !important;
+                    width: auto !important;
                     padding: 0.3em 0.3em 0.3em 0;
+                    color: #eee;
                 }
                 .form_content {
-                    width: calc(100% - 170px) !important;
+                    width: auto !important;
                     padding: 0.3em 0;
                 }
                 @media(max-width: 500px) {
@@ -2164,6 +2168,8 @@
             .form_title {
                 width: auto !important;
                 padding: 0.3em 0.3em 0.3em 0;
+                color: #eee;
+                font-weight: bolder;
             }
             .form_content {
                 width: auto !important;
