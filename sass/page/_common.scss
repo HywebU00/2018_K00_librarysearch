@@ -1433,12 +1433,41 @@ html .ui-button.ui-state-disabled:active {
                 }
             }
         }
+        .numberpage {
+            display: flex;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 0 0 10px;
+            em {
+                padding: 0 5px;
+            }
+            .exact_page {
+                width: 60px;
+                height: 30px;
+                padding: 5px;
+                margin: 0 5px;
+            }
+            .go_btn {
+                width: 30px !important;
+                height: 30px !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                min-width: 30px;
+                border-radius: 50%;
+                background-color: #666;
+                color: #fff;
+                &:hover, &:focus {
+                    background-color: #333;
+                }
+            }
+        }
     }
 }
 .page02 {
     .pageblock {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         padding: 0px 10px;
         .first,
@@ -1446,8 +1475,7 @@ html .ui-button.ui-state-disabled:active {
         .next,
         .last,
         .fakespace {
-            // display: inline-block;
-            // float: none;
+            padding: 16px 8px 0;
         }
         .fakespace {
             width: auto;
@@ -1464,6 +1492,9 @@ html .ui-button.ui-state-disabled:active {
             div.number02 {
                 display: flex;
             }
+        }
+        .numberpage {
+            display: flex;
         }
     }
 }
