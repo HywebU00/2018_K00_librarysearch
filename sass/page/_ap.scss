@@ -81,6 +81,7 @@
             .password_toggle {
                 display: flex;
                 position: relative;
+                flex-wrap:wrap;
                 button {
                     &.btn-icon {
                         font-size: 0;
