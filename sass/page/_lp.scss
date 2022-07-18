@@ -591,6 +591,16 @@
                     }
                 }
             }
+            .data_type_block {
+                padding: 3px 15px;
+                margin-bottom: 10px;
+                font-size: 0.875em;
+                background-color: nth($lightColor, $style);
+                color: #000;
+                border-radius: 50px;
+                display: inline-block;
+                position: relative;
+            }
             .booktype {
                 float: left;
                 margin-right: 15px;

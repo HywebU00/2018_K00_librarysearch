@@ -230,6 +230,16 @@
         .bookdata {
             padding: 20px;
             overflow: hidden;
+            .data_type_block {
+                padding: 3px 15px;
+                margin-bottom: 10px;
+                font-size: 0.875em;
+                background-color: nth($lightColor, $style);
+                color: #000;
+                border-radius: 50px;
+                display: inline-block;
+                position: relative;
+            }
             h2 {
                 color: #333;
                 margin: 0 40px 20px 0;
