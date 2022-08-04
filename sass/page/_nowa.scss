@@ -7,9 +7,9 @@
     }
     .btn:focus,
     .header .qrcode_mpbtn a:focus,
-    footer .footer_accessibility a:focus,
+    footer .footer_accessibility a:focus, .search_block .searchsystem .form_search input[type="submit"]:focus
         {
-        box-shadow: none;
+        box-shadow: none ;
     }
     .featured_block .themebook2 ul li a:focus {
         box-shadow: none;
