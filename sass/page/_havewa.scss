@@ -1,0 +1,30 @@
+.havewa {
+    .goCenter, .accesskey {
+        display: block;
+    }
+    a:focus, .scrollToTop:focus {
+        box-shadow: 0 0px 0px 2px #f1ad00 inset;
+    }
+    .btn:focus,
+    .header .qrcode_mpbtn a:focus,
+    footer .footer_accessibility a:focus,
+        {
+        box-shadow: 0 0px 0px 2px #f1ad00;
+    }
+    .featured_block .themebook2 ul li a:focus {
+        box-shadow: 0 0px 0px 3px #fff;
+    }
+    button:focus,
+    input[type="button"]:focus,
+    input[type="submit"]:focus,
+    input[type='text']:focus,
+    input[type='reset']:focus,
+    input[type='file']:focus,
+    input[type='tel']:focus,
+    input[type='email']:focus,
+    input[type='password']:focus,
+    textarea:focus,
+    select:focus {
+        box-shadow: 0 0px 0px 2px $form-focus !important;
+    }
+}

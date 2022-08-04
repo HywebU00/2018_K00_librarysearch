@@ -1641,9 +1641,7 @@
             &:hover, &:focus {
                 color: $aHover;
             }
-            &:focus{
-                box-shadow: 0 0px 0px 3px $form-focus inset;
-            }
+           
         }
     }
     //星星評分

@@ -1,0 +1,30 @@
+.nowa {
+    .goCenter, .accesskey {
+        display: none;
+    }
+    a:focus, .scrollToTop:focus {
+        box-shadow: none;
+    }
+    .btn:focus,
+    .header .qrcode_mpbtn a:focus,
+    footer .footer_accessibility a:focus,
+        {
+        box-shadow: none;
+    }
+    .featured_block .themebook2 ul li a:focus {
+        box-shadow: none;
+    }
+    button:focus,
+    input[type="button"]:focus,
+    input[type="submit"]:focus,
+    input[type='text']:focus,
+    input[type='reset']:focus,
+    input[type='file']:focus,
+    input[type='tel']:focus,
+    input[type='email']:focus,
+    input[type='password']:focus,
+    textarea:focus,
+    select:focus {
+        box-shadow: none;
+    }
+}

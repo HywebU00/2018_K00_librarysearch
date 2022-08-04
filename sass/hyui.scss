@@ -48,11 +48,13 @@
 @import "page/_mystudy";				//共用
 @import "page/_ap";	
 @import "page/_linemobile";					//行動借閱
+@import "page/_nowa";        			//沒有無障礙
+@import "page/_havewa";       			 //有無障礙
 // 換版
 // @import "page/_initial";				//最初版
 // // @import "page/_child01";				//兒童版
 // @import "page/_customization01";		//客製版01
-
+	
 // 無障礙
 @import "sass/_nojs";					//無障礙關閉js設定
 @import "page/_line";					//無障礙關閉js設定
