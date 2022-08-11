@@ -5,11 +5,7 @@
     a:focus, .scrollToTop:focus {
         box-shadow: 0 0px 0px 2px #f1ad00 inset;
     }
-    .btn:focus,
-    .header .qrcode_mpbtn a:focus,
-    footer .footer_accessibility a:focus, 
-    .search_block .searchsystem .form_search input[type="submit"]:focus
-        {
+    .btn:focus, .header .qrcode_mpbtn a:focus, footer .footer_accessibility a:focus, .search_block .searchsystem .form_search input[type="submit"]:focus, .advanced_search .advanced_block .searchsystem ul li a:focus, .advanced_search .advanced_block .btn_grp input[type="submit"]:focus{
         box-shadow: 0 0px 0px 2px #f1ad00;
     }
     .featured_block .themebook2 ul li a:focus {

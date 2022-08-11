@@ -605,6 +605,9 @@
             }
             input[type="button"] {
                 min-width: 4em !important;
+                &:focus{
+                    background-color:#ddd
+                }
             }
         }
     }

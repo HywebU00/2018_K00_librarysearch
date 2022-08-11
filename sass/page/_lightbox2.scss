@@ -1492,3 +1492,27 @@ body.fix {
         }
     }
 }
+// 上傳付款證明
+.prove_content {
+    p {
+        font-size: 1.063em;
+        line-height: 1.7em;
+    }
+    .upload_block {
+        width: 100%;
+        background-color: #eee;
+        text-align: center;
+        line-height: 1.7em;
+        padding: 20px 30px 30px;
+        margin: 20px auto;
+        border-radius: 5px;
+        box-sizing: border-box;
+        .image {
+            width: 50px;
+            margin: 20px auto;
+            img {
+                width: 50px;
+            }
+        }
+    }
+}

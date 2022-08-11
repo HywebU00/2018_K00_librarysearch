@@ -442,9 +442,7 @@
                     padding: 0 24px 0 .5em;
                     height: 2.4em;
                     line-height: 2.4em;
-                    &:focus {
-                        box-shadow: 0 0px 0px 2px $form-focus inset;
-                    }
+                   
                 }
             }
             .form_search {
@@ -599,9 +597,7 @@
                             img {
                                 width: 24px;
                             }
-                            &:focus {
-                                box-shadow: 0 0px 0px 2px $form-focus inset;
-                            }
+                            
                         }
                     }
                 }

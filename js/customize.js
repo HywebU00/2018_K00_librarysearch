@@ -1066,6 +1066,19 @@ $(function() {
         $('#sdg_readingstyle').fadeOut();
         $('body').removeClass('fix');
     })
+    // 上傳付款證明
+    $('.Proof_btn').click(function() {
+        $('#prove_lightbox').fadeIn();
+        $('body').addClass('fix');
+    })
+    $('.lightboxstyle_block .close').click(function() {
+        $('#prove_lightbox').fadeOut();
+        $('body').removeClass('fix');
+    })
+    $('.overlay').click(function() {
+        $('#prove_lightbox').fadeOut();
+        $('body').removeClass('fix');
+    })
 })
 //詳目頁 匯出點選
 $(function() {
