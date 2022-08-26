@@ -649,6 +649,16 @@
             height: auto;
             overflow: hidden;
             margin-bottom: 10px;
+            a{
+                display: block;
+                padding:2px ;
+                &:focus{
+                    box-shadow: 0 0px 0px 2px #f1ad00  !important;
+                    img{
+                         box-shadow: 0 0px 0px 2px #f1ad00 
+                    }
+                }
+            }
             img {
                 width: 100%;
                 height: auto;

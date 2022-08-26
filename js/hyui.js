@@ -565,7 +565,7 @@ $(function() {
     ///////////////置頂go to top////////////
     /*-----------------------------------*/
     $(window).bind('scroll', function() {
-        if ($(this).scrollTop() > 200) {
+        if ($(this).scrollTop() > 50) {
             $('.scrollToTop').fadeIn();
         } else {
             $('.scrollToTop').fadeOut();
@@ -574,6 +574,13 @@ $(function() {
     /*-----------------------------------*/
     /////click event to scroll to top//////
     /*-----------------------------------*/
+    $('.scrollToTop')
+        .off()
+        .click(function(e) {
+            $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
+            // $('a.goCenter').focus(); //加入這行
+            e.preventDefault();
+        });
     $('.scrollToTop').keydown(function(e) {
         $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
         _body.find('a.goCenter').focus();

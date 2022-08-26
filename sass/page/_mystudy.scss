@@ -1387,7 +1387,8 @@
                 background: $color-yellow;
                 color: #000;
                 &:focus {
-                    box-shadow: 0 0px 0px 2px $form-focus;
+                    // box-shadow: 0 0px 0px 2px $form-focus;
+                    background:lighten( $color-yellow, 5);
                 }
             }
         }
@@ -1670,6 +1671,7 @@
             flex-basis: 170px;
             margin: 0 5px 5px;
             a {
+                display: block;
                 &.unread {
                     // pointer-events: none;
                     opacity: 0.4;
@@ -1677,6 +1679,9 @@
                     // cursor: not-allowed;
                     // display: inline-block;
                     -webkit-filter: grayscale(1);
+                }
+                &:focus{
+                    box-shadow: 0 0px 0px 2px #f1ad00 ;
                 }
             }
         }

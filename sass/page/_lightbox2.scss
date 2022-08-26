@@ -178,10 +178,17 @@ body.fix {
                         border: 2px solid nth($primaryColor, $style);
                         padding: .5em !important;
                         text-align: center;
+                        box-sizing: border-box;
                         &:hover, &.active {
                             background-color: nth($primaryColor, $style);
                             color: #fff;
                         }
+                    }
+                    @media(max-width: 400px) {
+                        width: auto;
+                        float: none;
+                        clear: both;
+                        margin: 0 0 5px;
                     }
                 }
             }
@@ -191,6 +198,62 @@ body.fix {
             clear: both;
             p {
                 margin: 10px 0 !important;
+            }
+            .form_grp {
+                label {
+                    margin: 5px 0;
+                }
+                input[type="text"],
+                input[type="password"] {
+                    width: 78%;
+                    @include screen('tablet'){
+                         width: 100%;
+                    }
+                }
+                &.password_toggle {
+                    display: flex;
+                    position: relative;
+                    flex-wrap: wrap;
+                    button {
+                        &.btn-icon {
+                            font-size: 0;
+                            right: .5em;
+                            bottom: 10px;
+                            height: 30px;
+                            top: auto;
+                            background: none;
+                            border: transparent;
+                            position: absolute;
+                            padding: 0 !important;
+                            min-width: 3em;
+                            box-shadow: none;
+                            margin-right: 22px;
+                            @media(max-width: 400px) {
+                                bottom: 0;
+                            }
+                            &:focus {
+                                box-shadow: 0 0px 0px 2px #f1ad00;
+                            }
+                        }
+                        &.btn_icon_hide {
+                            background-image: url('../images/icon/icon_hide.svg');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 20px;
+                            width: 20px;
+                        }
+                        &.btn_icon_show {
+                            background-image: url('../images/icon/icon_show.svg');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 20px;
+                            width: 20px;
+                        }
+                        @include screen('tablet') {
+                            top: 1.7em;
+                        }
+                    }
+                }
             }
         }
         //

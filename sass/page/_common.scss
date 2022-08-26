@@ -1591,7 +1591,8 @@ html .ui-button.ui-state-disabled:active {
                 background: $color-yellow;
                 color: #000;
                 &:focus {
-                    box-shadow: 0 0px 0px 2px $form-focus;
+                    // box-shadow: 0 0px 0px 2px $form-focus;
+                     background:lighten( $color-yellow, 5);
                 }
             }
         }

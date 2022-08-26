@@ -2,15 +2,16 @@
     .goCenter, .accesskey {
         display: block;
     }
-    a:focus, .scrollToTop:focus {
-        box-shadow: 0 0px 0px 2px #f1ad00 inset;
+    a:focus, .scrollToTop:focus,  .mystudycontent .mycardlist li a:focus  {
+        box-shadow: 0 0px 0px 2px #f1ad00 inset !important ;
     }
-    .btn:focus, .header .qrcode_mpbtn a:focus, footer .footer_accessibility a:focus, .search_block .searchsystem .form_search input[type="submit"]:focus, .advanced_search .advanced_block .searchsystem ul li a:focus, .advanced_search .advanced_block .btn_grp input[type="submit"]:focus{
-        box-shadow: 0 0px 0px 2px #f1ad00;
+    .btn:focus, .header .qrcode_mpbtn a:focus, footer .footer_accessibility a:focus, .search_block .searchsystem .form_search input[type="submit"]:focus, .advanced_search .advanced_block .searchsystem ul li a:focus, .advanced_search .advanced_block .btn_grp input[type="submit"]:focus, .search_blockin .searchsystem .select_left select:focus, .header .member_record .member_pic a:focus, .customization02 .search_blockin .form_search input[type="submit"]:focus, .btnstyle.morebg:focus, .mainrightblock .book_detaildata .bookdata .listdata ul.no_icon li a.btnstyle:focus, .mystudycontent .service_list ul li span a:focus, .booklist_block .booklist .bookmidblock ul li .addtagbtn:focus, .booklist_block .booklist .bookmidblock ul li .closebtn:focus, .tracking_subscription_block .searchsystem ul li a:focus, .mystudy_sdg_reading .SDG_banner .SDG_img a:focus, .reservation_block .btn_grp a.btnstyle:focus, .linecontent .book-gallery .book .cover a:focus, .linecontent .book-gallery .book .cover a:focus, .linecontent .book-gallery .book .cover a:focus img, .bookselection_block .bookselection_group .leftblock .bookselection_list ul li a:focus, .SDG_block .SDG_banner .SDG_img a:focus{
+        box-shadow: 0 0px 0px 2px #f1ad00 !important;
     }
     .featured_block .themebook2 ul li a:focus {
         box-shadow: 0 0px 0px 3px #fff;
     }
+
     button:focus,
     input[type="button"]:focus,
     input[type="submit"]:focus,
@@ -22,6 +23,13 @@
     input[type='password']:focus,
     textarea:focus,
     select:focus {
-        box-shadow: 0 0px 0px 2px $form-focus ;
+        box-shadow: 0 0px 0px 2px $form-focus !important;
     }
+     .customization02 .search_blockin .form_search input[type="submit"]:focus {
+        background-color: #bf8e07;
+    }
+    .theme_recommend .themerecommend_box a:focus, .theme_recommend2 .themerecommend_box a:focus{
+        box-shadow: 3px 2px 4px 3px #ccc !important;
+    }
+   
 }

@@ -338,6 +338,9 @@
                                     text-decoration: underline !important;
                                     ;
                                 }
+                                &:focus{
+                                    box-shadow: 0 0px 0px 2px #f1ad00!important;
+                                }
                             }
                         }
                     }
