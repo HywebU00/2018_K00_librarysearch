@@ -3644,6 +3644,9 @@
     // _mp.scss
     .search_block {
         background-image: url('../images/search_blockbg02_version04.jpg');
+        // @media(max-width: 1200px){
+        //     background-position: -100px top;
+        // }
         .searchsystem {
             .recent_searches {
                 .title {
