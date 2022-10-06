@@ -275,7 +275,7 @@
                 width: 52px;
                 min-width: auto;
                 height: 54px;
-                &:focus{
+                &:focus {
                     background-color: darken(#f4573f, 20);
                 }
             }
@@ -621,7 +621,7 @@
                     cursor: pointer;
                     margin-right: 10px;
                     font-size: 0;
-                    a{
+                    a {
                         display: block;
                     }
                     @media(max-width: 380px) {
@@ -704,7 +704,7 @@
                 font-size: 1.483em;
                 color: #333;
                 padding-top: 20px;
-                line-height:1.3em;
+                line-height: 1.3em;
                 span {
                     width: 140px;
                     height: 140px;
@@ -820,8 +820,8 @@
                 text-align: center;
                 vertical-align: bottom;
                 margin: 0 auto;
-                padding:3px;
-                box-sizing:border-box;
+                padding: 3px;
+                box-sizing: border-box;
                 img {
                     width: 148px;
                     height: 200px;
@@ -914,7 +914,6 @@
             width: 100%;
         }
     }
-    
 }
 .recommendbooks_block {
     border-bottom: 1px solid #ccc;
@@ -1329,11 +1328,10 @@
                     color: #000;
                     display: block;
                     &:hover {
-                        color:darken($importantColor, 10);
-                        
+                        color: darken($importantColor, 10);
                     }
-                    &:focus{
-                         box-shadow: 0 0px 0px 3px #fff ;
+                    &:focus {
+                        box-shadow: 0 0px 0px 3px #fff;
                     }
                 }
                 .image {
@@ -1486,7 +1484,7 @@
         padding: 0 5px;
         a {
             display: block;
-            padding: 20px ;
+            padding: 20px;
             @include gradient(#dcdcdc, #e5e5e5, vertical);
             color: #333;
             font-size: 1.25em;
@@ -1507,11 +1505,11 @@
     }
     .slick-next {
         right: -45px;
-        top:0;
+        top: 0;
     }
     .slick-prev {
         left: -45px;
-        top:0;
+        top: 0;
     }
 }
 // 熱門借閱分隔線
@@ -1557,11 +1555,9 @@
         @include make-md-column(6);
         @include make-lg-column(4);
         @include gutter(0);
-       
         @include screen('mobile') {
             display: none;
         }
-       
     }
     .hotbook_block03 {
         @include make-xs-column(12);
@@ -1569,11 +1565,9 @@
         @include make-md-column(6);
         @include make-lg-column(4);
         @include gutter(0);
-       
         @include screen('mobile') {
             display: none;
         }
-       
     }
     .hotbook_block04 {
         @include make-xs-column(4);
@@ -1582,7 +1576,6 @@
         @include make-lg-column(4);
         @include gutter(0);
         display: none;
-        
         @include screen('mobile') {
             display: block;
             left: 32.5%;
@@ -1591,7 +1584,6 @@
             width: 100%;
             left: 0%;
         }
-       
     }
     .hotbook_block05 {
         @include make-xs-column(4);
@@ -1600,7 +1592,6 @@
         @include make-lg-column(4);
         @include gutter(0);
         display: none;
-        
         @include screen('mobile') {
             display: block;
             left: -35%;
@@ -1618,7 +1609,6 @@
         @include make-lg-column(4);
         @include gutter(0);
         display: none;
-
         @include screen('mobile') {
             display: block;
         }
@@ -1641,7 +1631,6 @@
             &:hover, &:focus {
                 color: $aHover;
             }
-           
         }
     }
     //星星評分

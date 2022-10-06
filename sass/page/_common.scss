@@ -442,7 +442,6 @@
                     padding: 0 24px 0 .5em;
                     height: 2.4em;
                     line-height: 2.4em;
-                   
                 }
             }
             .form_search {
@@ -597,7 +596,6 @@
                             img {
                                 width: 24px;
                             }
-                            
                         }
                     }
                 }
@@ -1177,15 +1175,9 @@ html .ui-button.ui-state-disabled:active {
         display: block;
         cursor: pointer;
         position: absolute;
-        right: 7%;
+        right: 3%;
         top: 12px;
         z-index: 9999;
-        @include screen('xs_mobile') {
-            background-size: 70%;
-            right: 3%;
-            top: 10px;
-            background-position: center;
-        }
     }
     // .close3 {
     //     display: none;
@@ -1592,7 +1584,7 @@ html .ui-button.ui-state-disabled:active {
                 color: #000;
                 &:focus {
                     // box-shadow: 0 0px 0px 2px $form-focus;
-                     background:lighten( $color-yellow, 5);
+                    background: lighten($color-yellow, 5);
                 }
             }
         }
