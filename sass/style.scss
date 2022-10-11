@@ -2992,10 +2992,10 @@
             }
         }
         .bookdata {
-                .data_type_block {
-                    background-color: nth($lightColor, $style);
-                }
+            .data_type_block {
+                background-color: nth($lightColor, $style);
             }
+        }
     }
     .switch_btn {
         a {
@@ -3644,10 +3644,13 @@
     // _mp.scss
     .search_block {
         background-image: url('../images/search_blockbg02_version04.jpg');
-        background-position: left top;
-        // @media(max-width: 1200px){
-        //     background-position: -100px top;
-        // }
+        background-position: right top;
+        @media(max-width: 1200px) {
+            background-position: -400px top;
+        }
+        @include screen('tablet') {
+            background-position: center top;
+        }
         .searchsystem {
             .recent_searches {
                 .title {
