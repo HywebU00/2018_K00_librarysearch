@@ -338,8 +338,8 @@
                                     text-decoration: underline !important;
                                     ;
                                 }
-                                &:focus{
-                                    box-shadow: 0 0px 0px 2px #f1ad00!important;
+                                &:focus {
+                                    box-shadow: 0 0px 0px 2px #f1ad00 !important;
                                 }
                             }
                         }
@@ -1292,6 +1292,16 @@
                                 }
                                 &:only-child {
                                     margin-right: 0px;
+                                }
+                                .close{
+                                    a {
+                                        width: 31px;
+                                        height: 31px;
+                                        background-color: transparent;
+                                        &:hover {
+                                            background-color: transparent;
+                                        }
+                                    }
                                 }
                             }
                         }
