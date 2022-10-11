@@ -3651,6 +3651,9 @@
         @include screen('tablet') {
             background-position: center top;
         }
+       @include screen('xs_mobile'){
+            background-position: left top;
+        }
         .searchsystem {
             .recent_searches {
                 .title {
