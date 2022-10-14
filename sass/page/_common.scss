@@ -43,11 +43,58 @@
         &.searchblackbg {
             background-color: rgba(0, 0, 0, .5);
         }
+        &.diminutive {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 50px;
+            padding-bottom: 40px;
+            .searchtitle {
+                flex: 0 0 auto;
+            }
+            @include screen('xs_mobile') {
+                flex-wrap: wrap;
+                .searchtitle {
+                    flex-basis: 100%;
+                }
+            }
+            .diminutive_link {
+                margin-left: 40px;
+                flex: 0 0 auto;
+                @include screen('xs_mobile') {
+                    margin-left: 0px;
+                }
+                a {
+                    color: #fff;
+                    display: block;
+                    position: relative;
+                    padding: 3px 10px 3px 25px;
+                    transition: .5s;
+                    border-radius: 5px;
+                    background-color: transparent;
+                    border: 1px solid rgba(255, 255, 255, .5);
+                    white-space: nowrap;
+                    &:before {
+                        content: '';
+                        border: 6px solid #fff;
+                        border-top-color: transparent;
+                        border-bottom-color: transparent;
+                        border-right-color: transparent;
+                        position: absolute;
+                        left: 10px;
+                        top: 8px;
+                    }
+                    &:hover {
+                        background-color: #000;
+                    }
+                }
+            }
+        }
         .searchtitle {
             color: #fff;
-            font-size: 1.625em;
+            font-size: 1.687em;
             margin-bottom: 15px;
-            letter-spacing: 0.01em;
+            letter-spacing: 0.05em;
             line-height: 1.2em;
         }
         .select_left {
@@ -1529,6 +1576,12 @@ html .ui-button.ui-state-disabled:active {
         float: left;
         margin-top: 0px;
         vertical-align: middle;
+    }
+    .generalbtn {
+        float: right;
+        @include screen('mobile') {
+            float: none;
+        }
     }
     @include screen('mobile') {
         .general_title {

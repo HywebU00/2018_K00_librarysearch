@@ -139,9 +139,7 @@
                         <div class="loginblock">
                             <div class="close"></div>
                             <h2>會員登入</h2>
-                            <p>登入說明文字：會員登入
-                                <!-- 本校校職員生的帳號密碼與資訊服務相同，帳號為學號/員工編號，密碼若忘記，請洽圖書館暨資訊處系統開發組， (電話：07-78111151轉2830) -->
-                            </p>
+                            <p>帳號請輸入借閱證號或身分證字號<br>密碼請輸入自訂密碼(預設密碼：生日月日四碼)<br>若驗證碼數字看不清楚，可點擊數字，重新產生新的驗證碼</p>
                             <form>
                                 <div class="form_grp form_inline">
                                     <label for="username">帳號:</label>
@@ -151,10 +149,32 @@
                                     <label for="password">密碼:</label>
                                     <input name="password" type="password" placeholder="請輸入密碼">
                                 </div>
+                                <div class="form_grp"><label class="form_title">驗證碼</label><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGhlaWdodD0nNTAnIHdpZHRoPSd0cnVlJz48dGV4dCBmb250LWZhbWlseT0nVmVyZGFuYScgZm9udC1zaXplPSczMCcgeD0nMCcgeT0nMjUnIGZpbGw9JyNBQzMyMzcnIHRyYW5zZm9ybT0ncm90YXRlKDEuMDE2OTIwNTYxMTgwMzMxMSknPjk8L3RleHQ+PHRleHQgZm9udC1mYW1pbHk9J1ZlcmRhbmEnIGZvbnQtc2l6ZT0nMzAnIHg9JzIwJyB5PScyNScgZmlsbD0nIzhEQzMyOCcgdHJhbnNmb3JtPSdyb3RhdGUoNC44NjU1NjE2NDg4NzA0ODcpJz44PC90ZXh0Pjx0ZXh0IGZvbnQtZmFtaWx5PSdWZXJkYW5hJyBmb250LXNpemU9JzMwJyB4PSc0MCcgeT0nMjUnIGZpbGw9JyNFNDIwNkEnIHRyYW5zZm9ybT0ncm90YXRlKDAuMTA1NDA2OTc0NDkyMzQ0NzEpJz4zPC90ZXh0Pjx0ZXh0IGZvbnQtZmFtaWx5PSdWZXJkYW5hJyBmb250LXNpemU9JzMwJyB4PSc2MCcgeT0nMjUnIGZpbGw9JyM3NzI5RjcnIHRyYW5zZm9ybT0ncm90YXRlKDQuNTkzODcwNzE5NjI2MDE2KSc+NjwvdGV4dD48dGV4dCBmb250LWZhbWlseT0nVmVyZGFuYScgZm9udC1zaXplPSczMCcgeD0nODAnIHk9JzI1JyBmaWxsPScjRUQ3RkRGJyB0cmFuc2Zvcm09J3JvdGF0ZSg0LjQ0NjQ1MDIyMjMwODQ5OCknPjA8L3RleHQ+PC9zdmc+" tabindex="0" alt="驗證碼 : 98360" class="captcha" style="background: none; max-width: 120px; max-height: 50px;"><a href="javascript:;">如無法辨識請點此讀取</a>
+                                    <div class="lightboxstyle" style="display: none;">
+                                        <div class="overlay"></div>
+                                        <div class="lightboxstyle_block">
+                                            <div class="close" style="display: block;"><a href="javascript:;">關閉</a></div>
+                                            <form>
+                                                <div class="lightbox_data">
+                                                    <div id="captchaTxt" tabindex="0">驗證碼 : 98360</div>
+                                                    <div class="btn_grp"><input type="button" value="關閉視窗"></div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div><input name="captcha" placeholder="請輸入驗證碼" value="">
+                                </div>
                                 <div class="btn_grp">
-                                    <input name="" type="button" value="忘記密碼" />
-                                    <input name="" type="reset" value="清除">
-                                    <input name="" type="submit" value="確認" class="okbtn" />
+                                    <!--  <input name="" type="button" value="忘記密碼" />
+                                    <input name="" type="reset" value="清除"> -->
+                                    <input name="" type="submit" value="登入"  />
+                                </div>
+                                <div class="other_login">
+                                    <h3><span>其他登入方式</span></h3>
+                                    <button type="button" class="btn btn-orange">台北通登入</button>
+                                    <!-- <input name="" type="button " value="台北通登入" class="btn"/> -->
+                                </div>
+                                <div class="unable_login">
+                                    <h3><span>無法登入?</span></h3><input name="" type="button" value="忘記密碼" /><input name="" type="button" value="網路辦證" />
                                 </div>
                             </form>
                         </div>
