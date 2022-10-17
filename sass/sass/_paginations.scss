@@ -17,6 +17,8 @@
     .page {
         margin: 0px 0;
         padding: 0;
+        flex-wrap: wrap;
+
         li {
             display: inline-block;
             min-width: 40px;
