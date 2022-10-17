@@ -13,7 +13,14 @@
     }
     @include screen('xs_mobile') {
         display: none;
+        &.xs_mobile_visible{
+            display: block;
+            .page{
+                display: block;
+            }
+        }
     }
+
     .page {
         margin: 0px 0;
         padding: 0;
@@ -142,6 +149,7 @@
     .pagination .form_inline {
         display: none;
     }
+
 }
 /*----------------------------------------------------條件查詢 */
 .condition {
