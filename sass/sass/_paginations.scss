@@ -11,20 +11,23 @@
         color: $color-orange;
         margin: 0px .5em;
     }
-    @include screen('xs_mobile') {
-        display: none;
-        &.xs_mobile_visible{
-            display: block;
-            .page{
-                display: block;
-            }
-        }
-    }
+    // @include screen('xs_mobile') {
+    //     display: none;
+    //     &.xs_mobile_visible{
+    //         display: inline-block;
+    //         .page{
+    //             display: block;
+    //         }
+    //     }
+    // }
 
     .page {
         margin: 0px 0;
         padding: 0;
         flex-wrap: wrap;
+        @include screen('xs_mobile'){
+            display: block;
+        }
 
         li {
             display: inline-block;
@@ -127,6 +130,11 @@
                     transform: rotate(45deg);
                 }
             }
+            .number_pages{
+                min-width: 2em;
+                max-width: 4em;
+                text-align: center;
+            }
         }
     }
 }
@@ -146,9 +154,9 @@
         margin: 0px 0px;
         text-align: center;
     }
-    .pagination .form_inline {
-        display: none;
-    }
+    // .pagination .form_inline {
+    //     display: none;
+    // }
 
 }
 /*----------------------------------------------------條件查詢 */

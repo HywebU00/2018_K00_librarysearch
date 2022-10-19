@@ -309,6 +309,7 @@ body {
     .mobile_visible {
         display: none !important;
     }
+
 }
 @include screen('mobile') {
     .mobile_hidden {
@@ -317,7 +318,8 @@ body {
     .mobile_visible {
         display: inline-block !important;
     }
-}
+} 
+
 a:hover {
     color: $aHover;
 }
