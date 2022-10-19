@@ -138,6 +138,7 @@
         }
     }
 }
+
 .pagination .total {
     padding: 5px;
     select {
@@ -147,6 +148,9 @@
     .btn {
         min-width: auto;
         padding: 0.4em 1em !important;
+    }
+    .every_page{
+        color:#333;
     }
 }
 @media (max-width: 767px) {
