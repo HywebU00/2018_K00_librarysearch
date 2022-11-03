@@ -60,7 +60,6 @@ body.fix {
         border-radius: 5px;
         overflow: auto;
         text-align: left;
-
         // @media(max-width: 767px) {
         //     max-width: 100vh;
         //     top: 45%;
@@ -78,7 +77,7 @@ body.fix {
             width: 100%;
             max-width: 100vh;
             min-width: auto;
-             max-height: 100vh;
+            max-height: 100vh;
             @include box-sizing;
         }
         .close {
@@ -136,13 +135,25 @@ body.fix {
                 left: 0;
                 right: 0;
                 z-index: 9;
-                border: 1px solid #999;
-                border-radius: 5px;
+                border-top: 2px solid #999;
+                border-radius: 0px;
                 z-index: 2;
+            }
+            &.otherstyle {
+                &:before {
+                    border: 1px solid #999;
+                    border-radius: 5px;
+                }
+                h3 {
+                    text-align: center;
+                    span {
+                        margin-left: 0;
+                    }
+                }
             }
             h3 {
                 position: relative;
-                text-align: center;
+                text-align: left;
                 margin: 10px 0 5px !important;
                 padding: 0 !important;
                 font-size: 1.25em;
@@ -153,12 +164,12 @@ body.fix {
                     position: relative;
                     z-index: 98;
                     display: inline-block;
-                    // margin-left: 20px;
+                    margin-left: 20px;
                     color: #333;
                 }
             }
-            input,button{
-                position:relative;
+            input, button {
+                position: relative;
                 z-index: 3;
             }
         }
