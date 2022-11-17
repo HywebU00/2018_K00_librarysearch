@@ -1349,6 +1349,7 @@
                             padding: 10px 15px;
                             border-radius: 5px;
                             z-index: 9;
+                            text-align: left;
                             @include screen('mobile') {
                                 right: auto;
                                 left: 0;
