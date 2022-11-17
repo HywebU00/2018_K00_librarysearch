@@ -229,11 +229,11 @@ $(function() {
             });
             // 點外面關閉
             $(document).on('touchend click', function(e) {
-                var container = $(".language >a, .language ul li a, .form_search, .prompt3, .prompt_btn, .member_pic, .optionblock .option_01 .name, .bookplace_list, .prompt, .prompt2, .open_innertable ");
+                var container = $(".language >a, .language ul li a, .form_search, .prompt3, .prompt_btn, .member_pic, .optionblock .option_01 .name, .bookplace_list, .prompt, .prompt2, .open_innertable, .shelf_btn");
                 if (!container.is(e.target) && container.has(e.target).length === 0) {
-                    $('.language ul, .recent_searches, .prompt_block3, .promptblock, .member_data, .optionblock .option_01 .option_list, .prompt_block, .prompt_block2').slideUp();
+                    $('.language ul, .recent_searches, .prompt_block3, .promptblock, .member_data, .optionblock .option_01 .option_list, .prompt_block, .prompt_block2, .shelf_block').slideUp();
                     $('.bookplace_list .innertable').slideUp(0);
-                    $('.prompt, .prompt2').removeClass('arrow');
+                    $('.prompt, .prompt2, .shelf_btn').removeClass('arrow');
                     $('.bookplace_list td').removeClass('active');
                     $('.open_innertable').removeClass('active');
                 }
@@ -574,13 +574,11 @@ $(function() {
     /*-----------------------------------*/
     /////click event to scroll to top//////
     /*-----------------------------------*/
-    $('.scrollToTop')
-        .off()
-        .click(function(e) {
-            $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
-            // $('a.goCenter').focus(); //加入這行
-            e.preventDefault();
-        });
+    $('.scrollToTop').off().click(function(e) {
+        $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
+        // $('a.goCenter').focus(); //加入這行
+        e.preventDefault();
+    });
     $('.scrollToTop').keydown(function(e) {
         $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
         _body.find('a.goCenter').focus();

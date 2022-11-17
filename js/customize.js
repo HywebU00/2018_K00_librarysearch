@@ -1442,6 +1442,10 @@ $(function() {
     $('.analysis_prompt .prompt_btn').focusout(function() {
         $('.promptblock').hide();
     })
+    $('.bookplace_list .shelf_btn').click(function() {
+        $('.shelf_block').fadeToggle();
+        $(this).toggleClass('arrow');
+    })
 })
 //詳目頁 表格收合
 $(function() {
