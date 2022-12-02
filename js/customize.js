@@ -1445,6 +1445,7 @@ $(function() {
     $('.bookplace_list .shelf_btn').click(function() {
         $('.shelf_block').fadeToggle();
         $(this).toggleClass('arrow');
+        $(this).parents('td').siblings().find('.shelf_block').hide();
     })
 })
 //詳目頁 表格收合
