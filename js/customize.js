@@ -1079,6 +1079,19 @@ $(function() {
         $('#prove_lightbox').fadeOut();
         $('body').removeClass('fix');
     })
+    // SR
+    $('.SR_btn').click(function() {
+        $('#SR_style').fadeIn();
+        $('body').addClass('fix');
+    })
+    $('.lightboxstyle_block .close').click(function() {
+        $('#SR_style').fadeOut();
+        $('body').removeClass('fix');
+    })
+    $('.overlay').click(function() {
+        $('#SR_style').fadeOut();
+        $('body').removeClass('fix');
+    })
 })
 //詳目頁 匯出點選
 $(function() {

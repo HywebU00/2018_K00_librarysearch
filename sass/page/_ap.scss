@@ -81,7 +81,7 @@
             .password_toggle {
                 display: flex;
                 position: relative;
-                flex-wrap:wrap;
+                flex-wrap: wrap;
                 button {
                     &.btn-icon {
                         font-size: 0;
@@ -605,8 +605,8 @@
             }
             input[type="button"] {
                 min-width: 4em !important;
-                &:focus{
-                    background-color:#ddd
+                &:focus {
+                    background-color: #ddd
                 }
             }
         }
@@ -632,10 +632,9 @@
 .featured_blocklist {
     background-color: nth($lightColor, $style);
     position: relative;
-    padding: 20px 0px ;
+    padding: 20px 0px;
     text-align: left;
     border-bottom: 1px solid #d3d3d3;
-   
     .container {
         width: 100% !important;
         max-width: 100% !important;
@@ -1907,16 +1906,99 @@
                 }
             }
             .searchblockdata {
+                h2 {
+                    span {
+                        margin-left: 10px;
+                        font-size: 0.813em;
+                        a {
+                            color: #fff;
+                            background-color:#555;
+                            padding:0 8px;
+                            font-weight: normal;
+                            border-radius: 5px;
+                            &:hover{
+                                background-color:#666;
+                            }
+                            
+                        }
+                    }
+                }
                 .form_content {
                     .select_date {
-                        @include screen('notebook') {
-                            width: 44% !important;
-                        }
-                        @include screen('tablet') {
-                            width: 46% !important;
-                        }
+                        width: 46% !important;
                         @media(max-width: 580px) {
                             width: 99% !important;
+                        }
+                    }
+                    .to {
+                        float: left;
+                        margin: 5px 0 0;
+                        width: 6%;
+                        text-align: center;
+                        @media(max-width: 580px) {
+                            display: none;
+                        }
+                    }
+                    .select_date_inline {
+                        display: flex;
+                         @media(max-width: 580px){
+                            flex-wrap: wrap;
+                         }
+                        select {
+                            width: 200px;
+                            height: 40px;
+                            margin-right: 5px;
+                             @media(max-width: 580px){
+                                width: 100%;
+                             }
+                        }
+                    }
+                    // 年級
+                    .grade_list {
+                        ul {
+                            margin: 0;
+                            padding: 0;
+                            list-style-type: none;
+                            display: flex;
+                            flex-wrap: wrap;
+                            li {
+                                width: 15.5%;
+                                margin: 0 0.58% 10px;
+                                @media(max-width: 1200px){
+                                     width: 19%;
+                                     margin: 0 0.5% 10px;
+                                }
+                                @include screen('tablet'){
+                                    width: 24%;
+                                }
+                                @include screen('mobile'){
+                                     width:32%;
+                                      margin: 0 0.66% 10px;
+                                }
+                                @include screen('xs_mobile'){
+                                     width:48%;
+                                     margin: 0 1% 10px;
+                                }
+                                @media(max-width: 400px){
+                                    width:100%;
+                                    margin: 0 0 10px;
+                                }
+                                a {
+                                    display: block;
+                                    padding: 8px 15px;
+                                    background-color: #fff;
+                                    color: #333;
+                                    border-radius: 5px;
+                                    text-align: center;
+                                    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                                    transition: .5s;
+                                    &:hover {
+                                        box-shadow: none;
+                                        background-color: #666;
+                                        color: #fff;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -3529,8 +3611,8 @@
                     display: inline-block;
                     -webkit-filter: grayscale(1);
                 }
-                 &:focus{
-                    box-shadow: 0 0px 0px 2px #f1ad00 ;
+                &:focus {
+                    box-shadow: 0 0px 0px 2px #f1ad00;
                 }
             }
         }

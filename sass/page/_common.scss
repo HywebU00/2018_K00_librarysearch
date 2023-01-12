@@ -593,16 +593,15 @@
             .form_content {
                 .to {
                     float: left;
-                    margin: 5px 3px 0;
+                    margin: 5px 0 0;
+                    width: 6%;
+                    text-align: center;
                     @media(max-width: 580px) {
                         display: none;
                     }
                 }
                 .select_date {
                     width: 45% !important;
-                    @include screen('mobile') {
-                        width: 46% !important;
-                    }
                     @media(max-width: 580px) {
                         width: 99% !important;
                     }
@@ -616,13 +615,7 @@
                     border-radius: 5px;
                     margin-bottom: .3em;
                     background-color: #fff;
-                    width: 44% !important;
-                    @media(max-width: 1040px)and(min-width:991px) {
-                        width: 44% !important;
-                    }
-                    @include screen('tablet') {
-                        width: 46% !important;
-                    }
+                    width: 46% !important;
                     @media(max-width: 580px) {
                         width: 99% !important;
                         float: none;

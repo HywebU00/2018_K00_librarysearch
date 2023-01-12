@@ -191,6 +191,7 @@
     .classification {
         background-color: nth($lightColor, $style);
     }
+    
     // _mystudy.scss
     .modify_data,
     .write_data,
@@ -376,6 +377,7 @@
             }
         }
     }
+    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(#f8b551, 20);
@@ -892,6 +894,7 @@
             }
         }
     }
+    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 20);
@@ -903,6 +906,7 @@
             }
         }
     }
+    
     //_footer.scss
     footer {
         background-color: darken(nth($primaryColor, $style), 20);
@@ -1722,6 +1726,7 @@
             }
         }
     }
+    
     //分類瀏覽
     .classification {
         .path {
@@ -2531,6 +2536,7 @@
             }
         }
     }
+    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 10);
@@ -3018,6 +3024,7 @@
             }
         }
     }
+    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 5);
@@ -3505,6 +3512,7 @@
             }
         }
     }
+    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 10);
@@ -3651,7 +3659,7 @@
         @include screen('tablet') {
             background-position: center top;
         }
-       @include screen('xs_mobile'){
+        @include screen('xs_mobile') {
             background-position: left top;
         }
         .searchsystem {
@@ -4002,6 +4010,7 @@
             }
         }
     }
+    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 10);
@@ -4490,6 +4499,7 @@
             }
         }
     }
+    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 10);
@@ -4978,6 +4988,7 @@
             }
         }
     }
+    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 10);
