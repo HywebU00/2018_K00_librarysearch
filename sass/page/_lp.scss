@@ -1086,7 +1086,7 @@
             overflow: hidden;
             .displaymore {
                 float: right;
-                width: 60px;
+                width: 65px;
                 margin-bottom: 5px;
                 position: relative;
                 padding: 3px 5px 3px 25px;
@@ -1732,11 +1732,10 @@
             margin: 0;
             padding: 12px 15px;
             text-align: center;
-            background-color: $color-orange;
+            background-color: nth($primaryColor, $style);
             color: #fff;
             font-size: 1.25em;
             font-weight: 400;
-            // background-image: linear-gradient(0deg, darken($color-darkgreen, 5) 10%, $color-darkgreen 100%);
         }
         .more {
             text-align: center;
@@ -1824,7 +1823,7 @@
         .linkstitle {
             font-size: 1.25em;
             text-align: center;
-            background-color: $color-green;
+            background-color: #666;
             color: #fff;
             padding: 10px 15px;
         }
@@ -1896,7 +1895,7 @@
             @include box-sizing;
             // box-shadow: 0 0 10px 3px lighten($color-darkgreen,15) inset;
             overflow: hidden;
-            color: darken($color-darkgreen, 35);
+            color: #333;
             margin-top: 10px;
             transition: .2s;
             @include screen('mobile') {
@@ -1904,18 +1903,18 @@
             }
             &:hover,
             &:focus {
-                color: darken($color-darkgreen, 20);
-                background-color: lighten($color-green, 30);
+                background-color: lighten($color-yellow, 0);
                 box-shadow: none;
                 margin-top: 0;
                 box-shadow: 3px 2px 4px 3px #ccc;
+                color: #333;
             }
             h3 {
                 margin: 0 0 20px;
                 font-size: 1.5em;
                 padding: 0 0 10px;
                 border-bottom: 1px solid #fff;
-                color: darken($color-darkgreen, 35);
+                color: #333;
             }
             .images {
                 width: 100px;
@@ -1949,8 +1948,8 @@
                     padding: 0 0 0 10px;
                     &:before {
                         content: '';
-                        border: 5px solid darken($color-darkgreen, 35);
-                        border-color: transparent transparent transparent darken($color-darkgreen, 35);
+                        border: 5px solid #333;
+                        border-color: transparent transparent transparent #333;
                         position: absolute;
                         left: 0;
                         top: 6px;
@@ -2175,20 +2174,20 @@
             margin: 0px 0 15px;
         }
         a {
-            border: 1px solid #ccc;
+            
             border-radius: 5px;
             height: 170px;
             margin-top: 10px;
             transition: .2s;
             background-color: lighten($color-yellow, 20);
-            color: darken($color-darkgreen, 35);
+            color: #333;
             font-weight: 500;
             display: block;
             &:hover, &:focus {
                 margin-top: 0px;
                 box-shadow: 3px 2px 4px 3px #ccc;
-                color: darken($color-darkgreen, 35);
-                background-color: lighten($color-green, 20);
+                color: #333;
+               background-color: lighten($color-yellow, 0);
                 border-radius: 10px;
             }
             .box {
@@ -2378,7 +2377,7 @@
             padding: 8px 20px;
             font-size: 1.25em;
             color: #fff;
-            background-color: #6ab6df;
+            background-color: $color-blue;
             float: left;
             text-align: center;
             border-radius: 5px 5px 0 0;
@@ -2394,7 +2393,7 @@
         }
         table {
             clear: both;
-            border-top: 4px solid #6ab6df;
+            border-top: 4px solid $color-blue;
             th {
                 width: 20%;
                 border: 1px solid #ccc
@@ -2414,15 +2413,15 @@
     }
     .reply {
         h2 {
-            background-color: #e56171;
+            background-color: $color-red;
         }
         table {
-            border-color: #e56171;
+            border-top: 4px solid $color-red;
         }
     }
     .supplement {
         h2 {
-            background-color: #76ae73;
+            background-color: $color-green;
         }
         table {
             border-color: #76ae73;
@@ -2554,13 +2553,13 @@
     padding: 25px;
     .explain {
         padding: 20px 25px;
-        background-color: $color-red;
+        background-color: #C41E06;
         border-radius: 5px;
         color: #fff;
         font-size: 1.125em;
         span {
             font-size: 1.25em;
-            color: nth($lightColor, $style);
+            color: #F7E091;
             padding: 0 20px;
         }
     }

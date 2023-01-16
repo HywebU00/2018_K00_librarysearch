@@ -1583,6 +1583,42 @@
                     }
                 }
             }
+            // E_SDG_logo
+            .E_SDG_logo_block {
+                display: flex;
+                align-items: center;
+                margin: 0 30px 20px;
+                @include screen('xs_mobile') {
+                    margin: 0 0 20px;
+                    flex-wrap: wrap;
+                }
+                .esdg_logo {
+                    margin-right: 10px;
+                    img {
+                        width: 320px;
+                    }
+                    @media(max-width: 380px) {
+                        margin: 0 0 10px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                span {
+                    a {
+                        display: block;
+                        padding: 10px 16px 8px;
+                        background-color: #E1167E;
+                        color: #fff;
+                        border-radius: 5px;
+                        font-size: 1.25em;
+                        transform: .5s;
+                        &:hover {
+                            background-color: darken(#E1167E, 5);
+                        }
+                    }
+                }
+            }
             // 永續發展目標
             .listdata_sdg {
                 ul {

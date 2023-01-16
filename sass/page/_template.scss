@@ -531,74 +531,77 @@ select {
     &.cancel {
         background-image: url('../images/btnstyle_icon11.png');
     }
-    &.bluebg {
-        background-color: #0288c5;
-        border: 2px solid #0288c5;
-        color: #fff;
-        transition: .2s;
-        &:hover {
-            background-color: #2cb5ed;
-            border: 2px solid #2cb5ed;
+     &.bluebg {
+            background-color: #016593;
+            border: 2px solid #016593;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #027EB6;
+                border: 2px solid #027EB6;
+            }
         }
-    }
     &.bluebg2 {
-        background-color: #64b5f6;
-        border: 2px solid #64b5f6;
-        color: #fff;
-        transition: .2s;
-        &:hover {
-            filter: brightness(120%);
+            background-color: #0d5cbe;
+            border: 2px solid #0d5cbe;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #3e78c0;
+                border: 2px solid #3e78c0;
+            }
         }
-    }
-    &.bluebg3 {
-        background-color: nth($primaryColor, $style);
-        border: 2px solid nth($primaryColor, $style);
-        color: #fff;
-        transition: .2s;
-        &:hover {
-            background-color: darken(nth($primaryColor, $style), 10);
-            border: 2px solid darken(nth($primaryColor, $style), 10);
+   &.bluebg3 {
+            background-color: nth($primaryColor, $style);
+            border: 2px solid nth($primaryColor, $style);
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: darken(nth($primaryColor, $style), 10);
+                border: 2px solid darken(nth($primaryColor, $style), 10);
+            }
         }
-    }
     &.greenbg {
-        background-color: #638e0c;
-        border: 2px solid #638e0c;
-        color: #fff;
-        filter: brightness(120%);
-        transition: .2s;
-        &:hover {
-            background-color: #82b41e;
-            border: 2px solid #82b41e;
-        }
-    }
-    &.greenbg2 {
-        background-color: #2bbbad;
-        border: 2px solid #2bbbad;
-        color: #fff;
-        transition: .2s;
-        &:hover {
+            background-color: #496809;
+            border: 2px solid #496809;
+            color: #fff;
             filter: brightness(120%);
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #59800B;
+                border: 2px solid #59800B;
+            }
         }
-    }
+    &.greenbg2 {
+            background-color: #00807b;
+            border: 2px solid #00807b;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #15827e;
+                border: 2px solid #15827e;
+            }
+        }
     &.redbg {
-        background-color: darken(#c70321, 5);
-        border: 2px solid darken(#c70321, 5);
-        color: #fff;
-        transition: .2s;
-        &:hover {
-            background-color: lighten(#c70321, 10);
-            border: 2px solid lighten(#c70321, 10);
+            background-color: #ae031d;
+            border: 2px solid #ae031d;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #e20022;
+                border: 2px solid #e20022;
+            }
         }
-    }
     &.redbg2 {
-        background-color: darken(#E57373, 5);
-        border: 2px solid darken(#E57373, 5);
-        color: #fff;
-        transition: .2s;
-        &:hover {
-            filter: brightness(140%);
+            background-color: #b0582d;
+            border: 2px solid #b0582d;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #b05f46;
+                border: 2px solid #b05f46;
+            }
         }
-    }
     &.whitebg {
         border: 2px solid #fff;
         background-color: #fff;
@@ -607,40 +610,39 @@ select {
         &:hover {
             background-color: #d2d2d2;
             border: 2px solid #d2d2d2;
-            ;
             color: #333 !important;
         }
     }
-    &.brownbg {
-        background-color: #59493f;
-        border: 2px solid #59493f;
-        color: #fff;
-        transition: .2s;
-        &:hover {
-            background-color: lighten(#59493f, 10);
-            border: 2px solid lighten(#59493f, 10);
+     &.brownbg {
+            background-color: #59493f;
+            border: 2px solid #59493f;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: lighten(#59493f, 10);
+                border: 2px solid lighten(#59493f, 10);
+            }
         }
-    }
-    &.orangebg {
-        background-color: darken(#eb6000, 6);
-        border: 2px solid darken(#eb6000, 6);
-        color: #fff;
-        transition: .2s;
-        &:hover {
-            background-color: #eb6000;
-            border: 2px solid #eb6000;
+   &.orangebg {
+            background-color: darken(#C75100, 3);
+            border: 2px solid darken(#C75100, 3);
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #C75100;
+                border: 2px solid #C75100;
+            }
         }
-    }
     &.graybg {
-        background-color: #828282;
-        border: 2px solid #828282;
-        color: #fff;
-        transition: .2s;
-        &:hover {
-            background-color: #a0a0a0;
-            border: 2px solid #a0a0a0;
+            background-color: #666666;
+            border: 2px solid #666666;
+            color: #fff;
+            transition: .2s;
+            &:hover, &:focus {
+                background-color: #757575;
+                border: 2px solid #757575;
+            }
         }
-    }
     &.blackbg {
         background-color: #000;
         border: 2px solid #000;

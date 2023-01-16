@@ -396,7 +396,7 @@
                     background-color: $importantColor;
                     border: 1px solid darken($importantColor, 25);
                     &:hover {
-                        background-color: lighten(#f4573f, 8);
+                        background-color: darken(#e52104, 8);
                     }
                 }
             }
@@ -1557,7 +1557,7 @@ html .ui-button.ui-state-disabled:active {
         float: left;
         margin: 0px 20px 0 100px;
         color: #fff;
-        text-shadow: #474747 2px 2px 4px;
+         text-shadow: 0px 0px 6px rgba(0,0,0,1),0px 0px 6px rgba(0,0,0,.5);
         letter-spacing: .05em;
         vertical-align: middle;
         line-height: 1.2em;

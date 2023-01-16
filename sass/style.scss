@@ -180,18 +180,11 @@
         h3, .datalist, .explain {
             color: #FFF;
         }
-        .keywords {
-            ul {
-                li {
-                    background: nth($linkColor, $style);
-                }
-            }
-        }
+        
     }
     .classification {
-        background-color: nth($lightColor, $style);
+        background-color: nth($primaryColor, $style);
     }
-    
     // _mystudy.scss
     .modify_data,
     .write_data,
@@ -208,13 +201,7 @@
             }
         }
     }
-    .mystudyname {
-        .nameblock {
-            h2 {
-                text-shadow: rgb(71, 71, 71) 2px 2px 6px;
-            }
-        }
-    }
+    .mystudyname {}
     .security_deposit_block {
         .title {
             color: nth($primaryColor, $style);
@@ -377,7 +364,6 @@
             }
         }
     }
-    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(#f8b551, 20);
@@ -690,16 +676,10 @@
         h3, .datalist, .explain {
             color: #fff;
         }
-        .keywords {
-            ul {
-                li {
-                    background: nth($linkColor, $style);
-                }
-            }
-        }
+        
     }
     .classification {
-        background-color: darken(nth($lightColor, $style), 10);
+        background-color: nth($primaryColor, $style);
         span {
             color: #fff;
         }
@@ -720,13 +700,7 @@
             }
         }
     }
-    .mystudyname {
-        .nameblock {
-            h2 {
-                text-shadow: rgb(71, 71, 71) 2px 2px 6px;
-            }
-        }
-    }
+    .mystudyname {}
     .mystudymenu {
         >ul {
             >li {
@@ -782,29 +756,30 @@
     }
     .hotqa_list {
         h2 {
-            background-color: darken(nth($lightColor, $style), 10);
-            color: darken(nth($primaryColor, $style), 40);
+            background-color: nth($primaryColor, $style);
+           
         }
     }
     .devicereservation_block {
         .device_list {
             a {
-                background-color: nth($lightColor, $style);
+                background-color:darken(nth($lightColor, $style), 5); 
+                 color: #fff;
                 &:hover,
                 &:focus {
-                    color: #000;
-                    background-color: darken(nth($lightColor, $style), 10);
+                    color: #fff;
+                    background-color: darken(nth($lightColor, $style), 15);
                 }
                 h3 {
-                    color: #000;
+                    color: #fff;
                     font-weight: 400;
                 }
                 ul {
                     li {
-                        color: #000;
+                        color: #fff;
                         &:before {
-                            border: 5px solid #000;
-                            border-color: transparent transparent transparent #000;
+                            border: 5px solid #fff;
+                            border-color: transparent transparent transparent #fff;
                         }
                     }
                 }
@@ -825,11 +800,11 @@
     }
     .reservation_explain {
         background-color: darken(nth($lightColor, $style), 10);
-        color: #000;
+        color: #fff;
     }
     .device_explain {
         background-color: darken(nth($lightColor, $style), 10);
-        color: #000;
+        color: #fff;
         h3 {
             font-weight: 400;
         }
@@ -894,7 +869,6 @@
             }
         }
     }
-    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 20);
@@ -906,7 +880,6 @@
             }
         }
     }
-    
     //_footer.scss
     footer {
         background-color: darken(nth($primaryColor, $style), 20);
@@ -1006,10 +979,6 @@
 // 客製版02北市圖書館
 .customization02 {
     $style: index($sites, customization02);
-    $color-blue: #3e78c0;
-    $color-green: #107859;
-    $color-orange: #C75100;
-    $color-red: #e20022;
     // _header.scss
     .header {
         background: #1b1b1b;
@@ -1272,18 +1241,12 @@
         h3, .datalist, .explain {
             color: #333;
         }
-        .keywords {
-            ul {
-                li {
-                    background: nth($linkColor, $style);
-                }
-            }
-        }
+        
     }
     .classification {
-        background-color: nth($primaryColor, $style);
+        background-color: #7fbe25;
         span {
-            color: #fff;
+            color: #000;
         }
     }
     input[readonly],
@@ -1323,11 +1286,6 @@
         }
     }
     .mystudyname {
-        .nameblock {
-            h2 {
-                text-shadow: rgb(71, 71, 71) 2px 2px 6px;
-            }
-        }
         .member_pic {
             >span {
                 background-color: $color-red;
@@ -1339,60 +1297,6 @@
             >li {
                 >a {
                     color: darken(nth($linkColor, $style), 10);
-                }
-            }
-        }
-    }
-    .mystudycontent {
-        .booknotice {
-            li {
-                em {
-                    background-color: $color-blue;
-                    &.redbg {
-                        background-color: darken(#ec636e, 14);
-                    }
-                    &.orangebg {
-                        background-color: $color-orange;
-                    }
-                    &.greenbg {
-                        background-color: $color-green;
-                    }
-                }
-            }
-        }
-    }
-    .mycardlist {
-        li {
-            .cardblock {
-                &.redblock {
-                    &:after {
-                        border-color: transparent darken(#ec636e, 14) transparent transparent;
-                    }
-                }
-                &.blueblock {
-                    &:after {
-                        border-color: transparent $color-blue transparent transparent;
-                    }
-                }
-                &.greenblock {
-                    &:after {
-                        border-color: transparent $color-green transparent transparent;
-                    }
-                }
-                &.yellowblock {
-                    &:after {
-                        border-color: transparent #ebb100 transparent transparent;
-                    }
-                }
-                &.orangeblock {
-                    &:after {
-                        border-color: transparent $color-orange transparent transparent;
-                    }
-                }
-                &.purpleblock {
-                    &:after {
-                        border-color: transparent #a063b5 transparent transparent;
-                    }
                 }
             }
         }
@@ -1483,11 +1387,12 @@
     .devicereservation_block {
         .device_list {
             a {
-                background-color: nth($lightColor, $style);
+                background-color: lighten(nth($lightColor, $style), 5);
+                
                 &:hover,
                 &:focus {
                     color: #000;
-                    background-color: darken(nth($lightColor, $style), 5);
+                    background-color: darken(nth($lightColor, $style),5);
                 }
                 h3 {
                     color: #000;
@@ -1507,13 +1412,13 @@
     }
     .meets_box {
         a {
-            background-color: nth($primaryColor, $style);
-            color: #fff;
+            background-color: lighten(nth($lightColor, $style), 5);
+            color: #000;
             font-weight: 400;
             &:hover,
             &:focus {
-                color: #fff;
-                background-color: darken(nth($primaryColor, $style), 5);
+                color: #000;
+                    background-color: darken(nth($lightColor, $style),5);
             }
         }
     }
@@ -1551,54 +1456,26 @@
             color: #666;
         }
     }
-    .reader_advice {
-        .reaction,
-        .reply,
-        .supplement {
-            h2 {
-                background-color: $color-blue;
-            }
-            table {
-                border-top: 4px solid $color-blue;
-            }
-        }
-        .reply {
-            h2 {
-                background-color: $color-red;
-            }
-            table {
-                border-top: 4px solid $color-red;
-            }
-        }
-        .supplement {
-            h2 {
-                background-color: $color-green;
-            }
-            table {
-                border-top: 4px solid $color-green;
-            }
-        }
-    }
     .data_quantity2 {
         em {
             color: $color-orange;
         }
     }
-    // 查無結果
-    .no_result {
-        .explain {
-            background-color: $color-orange;
-            line-height: 1.7em;
-            span {
-                color: lighten(nth($lightColor, $style), 5);
-                background-color: #333;
-                padding: 5px 10px;
-                margin: 0 10px;
-                font-size: 1em;
-                border-radius: 5px;
-            }
-        }
-    }
+    // // 查無結果
+    // .no_result {
+    //     .explain {
+    //         background-color: $color-orange;
+    //         line-height: 1.7em;
+    //         span {
+    //             color: lighten(nth($lightColor, $style), 5);
+    //             background-color: #333;
+    //             padding: 5px 10px;   
+    //             margin: 0 10px;
+    //             font-size: 1em;
+    //             border-radius: 5px;
+    //         }
+    //     }
+    // }
     //熱門回答區塊
     .hotqa_block {
         //熱門回答區塊
@@ -1607,12 +1484,7 @@
                 background-color: $color-orange;
             }
         }
-        //相關連結 下載附件
-        .related_linksblock {
-            .linkstitle {
-                background-color: $color-green;
-            }
-        }
+        
     }
     //借閱區塊
     .device_borrow {
@@ -1647,7 +1519,7 @@
             }
             .bookdata2 {
                 h3 {
-                    color: darken(nth($primaryColor, $style), 20);
+                    color: darken(nth($primaryColor, $style), 0);
                 }
                 //各個圖書館
                 .librarylist {
@@ -1726,7 +1598,6 @@
             }
         }
     }
-    
     //分類瀏覽
     .classification {
         .path {
@@ -1922,119 +1793,6 @@
     }
     //按鈕共用
     .btnstyle {
-        &.bluebg {
-            background-color: #016593;
-            border: 2px solid #016593;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #027EB6;
-                border: 2px solid #027EB6;
-            }
-        }
-        &.bluebg2 {
-            background-color: #0d5cbe;
-            border: 2px solid #0d5cbe;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #3e78c0;
-                border: 2px solid #3e78c0;
-            }
-        }
-        &.bluebg3 {
-            background-color: nth($primaryColor, $style);
-            border: 2px solid nth($primaryColor, $style);
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: darken(nth($primaryColor, $style), 10);
-                border: 2px solid darken(nth($primaryColor, $style), 10);
-            }
-        }
-        &.greenbg {
-            background-color: #496809;
-            border: 2px solid #496809;
-            color: #fff;
-            filter: brightness(120%);
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #59800B;
-                border: 2px solid #59800B;
-            }
-        }
-        &.greenbg2 {
-            background-color: #00807b;
-            border: 2px solid #00807b;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #15827e;
-                border: 2px solid #15827e;
-            }
-        }
-        &.redbg {
-            background-color: #ae031d;
-            border: 2px solid #ae031d;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #e20022;
-                border: 2px solid #e20022;
-            }
-        }
-        &.redbg2 {
-            background-color: #b0582d;
-            border: 2px solid #b0582d;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #b05f46;
-                border: 2px solid #b05f46;
-            }
-        }
-        &.whitebg {
-            border: 2px solid #fff;
-            background-color: #fff;
-            color: #333 !important;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #d2d2d2;
-                border: 2px solid #d2d2d2;
-                ;
-                color: #333 !important;
-            }
-        }
-        &.brownbg {
-            background-color: #59493f;
-            border: 2px solid #59493f;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: lighten(#59493f, 10);
-                border: 2px solid lighten(#59493f, 10);
-            }
-        }
-        &.orangebg {
-            background-color: darken(#C75100, 3);
-            border: 2px solid darken(#C75100, 3);
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #C75100;
-                border: 2px solid #C75100;
-            }
-        }
-        &.graybg {
-            background-color: #666666;
-            border: 2px solid #666666;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #757575;
-                border: 2px solid #757575;
-            }
-        }
         // 框線按鈕
         &.border_bluebg {
             border: 1px solid #0d5cbe !important;
@@ -2333,16 +2091,10 @@
         h3, .datalist, .explain {
             color: #fff;
         }
-        .keywords {
-            ul {
-                li {
-                    background: nth($linkColor, $style);
-                }
-            }
-        }
+        
     }
     .classification {
-        background-color: darken(nth($lightColor, $style), 10);
+        background-color: darken(nth($lightColor, $style), 27);
         span {
             color: #fff;
         }
@@ -2363,13 +2115,7 @@
             }
         }
     }
-    .mystudyname {
-        .nameblock {
-            h2 {
-                text-shadow: rgb(71, 71, 71) 2px 2px 6px;
-            }
-        }
-    }
+    .mystudyname {}
     .mystudymenu {
         >ul {
             >li {
@@ -2536,7 +2282,6 @@
             }
         }
     }
-    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 10);
@@ -2821,18 +2566,24 @@
         h3, .datalist, .explain {
             color: #fff;
         }
-        .keywords {
-            ul {
-                li {
-                    background: nth($linkColor, $style);
-                }
-            }
-        }
+        
     }
     .classification {
         background-color: darken(nth($lightColor, $style), 10);
         span {
-            color: #fff;
+            color: #000;
+        }
+        .path {
+            li {
+                color: #000;
+                &:before {
+                    color: #000;
+                }
+                a {
+                    color: #000;
+                    &:hover {}
+                }
+            }
         }
     }
     // _mystudy.scss
@@ -2851,13 +2602,7 @@
             }
         }
     }
-    .mystudyname {
-        .nameblock {
-            h2 {
-                text-shadow: rgb(71, 71, 71) 2px 2px 6px;
-            }
-        }
-    }
+    .mystudyname {}
     .mystudymenu {
         >ul {
             >li {
@@ -3024,7 +2769,6 @@
             }
         }
     }
-    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 5);
@@ -3309,18 +3053,24 @@
         h3, .datalist, .explain {
             color: #fff;
         }
-        .keywords {
-            ul {
-                li {
-                    background: nth($linkColor, $style);
-                }
-            }
-        }
+        
     }
     .classification {
         background-color: darken(nth($lightColor, $style), 10);
         span {
-            color: #fff;
+            color: #000;
+        }
+        .path {
+            li {
+                color: #000;
+                &:before {
+                    color: #000;
+                }
+                a {
+                    color: #000;
+                    &:hover {}
+                }
+            }
         }
     }
     // _mystudy.scss
@@ -3339,13 +3089,7 @@
             }
         }
     }
-    .mystudyname {
-        .nameblock {
-            h2 {
-                text-shadow: rgb(71, 71, 71) 2px 2px 6px;
-            }
-        }
-    }
+    .mystudyname {}
     .mystudymenu {
         >ul {
             >li {
@@ -3512,7 +3256,6 @@
             }
         }
     }
-    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 10);
@@ -3807,18 +3550,24 @@
         h3, .datalist, .explain {
             color: #fff;
         }
-        .keywords {
-            ul {
-                li {
-                    background: nth($linkColor, $style);
-                }
-            }
-        }
+        
     }
     .classification {
         background-color: darken(nth($lightColor, $style), 10);
         span {
-            color: #fff;
+            color: #000;
+        }
+        .path {
+            li {
+                color: #000;
+                &:before {
+                    color: #000;
+                }
+                a {
+                    color: #000;
+                    &:hover {}
+                }
+            }
         }
     }
     // _mystudy.scss
@@ -3837,13 +3586,7 @@
             }
         }
     }
-    .mystudyname {
-        .nameblock {
-            h2 {
-                text-shadow: rgb(71, 71, 71) 2px 2px 6px;
-            }
-        }
-    }
+    .mystudyname {}
     .mystudymenu {
         >ul {
             >li {
@@ -3900,6 +3643,7 @@
     .hotqa_list {
         h2 {
             background-color: nth($lightColor, $style);
+            color: #000;
         }
     }
     .devicereservation_block {
@@ -3908,19 +3652,19 @@
                 background-color: nth($lightColor, $style);
                 &:hover,
                 &:focus {
-                    color: #fff;
+                    color: #000;
                     background-color: darken(nth($lightColor, $style), 10);
                 }
                 h3 {
-                    color: #fff;
+                    color: #000;
                     font-weight: 400;
                 }
                 ul {
                     li {
-                        color: #fff;
+                        color: #000;
                         &:before {
-                            border: 5px solid #fff;
-                            border-color: transparent transparent transparent #fff;
+                            border: 5px solid #000;
+                            border-color: transparent transparent transparent #000;
                         }
                     }
                 }
@@ -3941,7 +3685,7 @@
     }
     .reservation_explain {
         background-color: nth($lightColor, $style);
-        color: #fff;
+        color: #333;
     }
     .device_explain {
         background-color: nth($lightColor, $style);
@@ -4010,7 +3754,6 @@
             }
         }
     }
-    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 10);
@@ -4295,18 +4038,24 @@
         h3, .datalist, .explain {
             color: #000;
         }
-        .keywords {
-            ul {
-                li {
-                    background: nth($linkColor, $style);
-                }
-            }
-        }
+        
     }
     .classification {
         background-color: darken(nth($lightColor, $style), 10);
         span {
-            color: #fff;
+            color: #000;
+        }
+        .path {
+            li {
+                color: #000;
+                &:before {
+                    color: #000;
+                }
+                a {
+                    color: #000;
+                    &:hover {}
+                }
+            }
         }
     }
     // _mystudy.scss
@@ -4325,13 +4074,7 @@
             }
         }
     }
-    .mystudyname {
-        .nameblock {
-            h2 {
-                text-shadow: rgb(71, 71, 71) 2px 2px 6px;
-            }
-        }
-    }
+    .mystudyname {}
     .mystudymenu {
         >ul {
             >li {
@@ -4499,7 +4242,6 @@
             }
         }
     }
-    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 10);
@@ -4785,18 +4527,12 @@
         h3, .datalist, .explain {
             color: #000f;
         }
-        .keywords {
-            ul {
-                li {
-                    background: nth($linkColor, $style);
-                }
-            }
-        }
+        
     }
     .classification {
-        background-color: darken(nth($lightColor, $style), 20);
-        span {
-            color: #000;
+        background-color: darken(nth($primaryColor, $style), 15);
+        background-color: span {
+            color: #fff;
         }
     }
     // _mystudy.scss
@@ -4815,13 +4551,7 @@
             }
         }
     }
-    .mystudyname {
-        .nameblock {
-            h2 {
-                text-shadow: rgb(71, 71, 71) 2px 2px 6px;
-            }
-        }
-    }
+    .mystudyname {}
     .mystudymenu {
         >ul {
             >li {
@@ -4877,7 +4607,7 @@
     }
     .hotqa_list {
         h2 {
-            background-color: darken(nth($lightColor, $style), 20);
+            background-color: nth($primaryColor, $style);
         }
     }
     .devicereservation_block {
@@ -4988,7 +4718,6 @@
             }
         }
     }
-    
     // _fatfooter.scss
     .fatfooter {
         background-color: darken(nth($primaryColor, $style), 10);
