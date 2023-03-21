@@ -2132,6 +2132,17 @@
             line-height: 1.7em;
         }
     }
+    // 分類推薦 
+    .sortrecommend {
+        margin: 30px 0 20px;
+        @include screen('mobile') {
+            width: 80%;
+            margin: 30px auto;
+        }
+        @media(max-width: 480px) {
+            width: 75%;
+        }
+    }
 }
 //符合項目
 .meetsblock {
@@ -2174,7 +2185,6 @@
             margin: 0px 0 15px;
         }
         a {
-            
             border-radius: 5px;
             height: 170px;
             margin-top: 10px;
@@ -2187,7 +2197,7 @@
                 margin-top: 0px;
                 box-shadow: 3px 2px 4px 3px #ccc;
                 color: #333;
-               background-color: lighten($color-yellow, 0);
+                background-color: lighten($color-yellow, 0);
                 border-radius: 10px;
             }
             .box {
@@ -3211,7 +3221,7 @@
                     font-weight: bolder;
                     letter-spacing: 0.02em;
                 }
-                .btn{
+                .btn {
                     padding: 0.3em 1em !important;
                 }
             }
@@ -3221,4 +3231,115 @@
             padding: 0 20px 0 0;
         }
     }
+}
+//設備項目
+.equipment_item_block{
+margin-bottom:2em;
+}
+.equipment_item_group {
+    margin: 0 0 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 20px 50px 20px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    position: relative;
+   
+    @include box-sizing;
+    &:before {
+        content: '';
+        border: 30px solid $color-orange;
+        border-color: $color-orange transparent transparent $color-orange;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    h3 {
+        margin: 0 0 30px;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+        font-size: 1.875em;
+        color: $color-orange;
+    }
+    .title {
+        font-size: 1.5em;
+        float: left;
+        margin: 0px 30px 20px 0;
+        padding: 0;
+        
+        width: 25%;
+        line-height: 1.3em;
+        @include screen('mobile') {
+            width: auto;
+            float: none;
+        }
+    }
+    .content {
+        overflow: hidden;
+        ul {
+            margin: 0;
+            padding: 0;
+             display: flex;
+             flex-wrap:wrap;
+            li {
+                list-style: none;
+                margin-bottom: 8px;
+                padding-left: 18px;
+                position: relative;
+                margin-right: 2em; 
+                white-space: nowrap;   
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: #999;
+                    left: 0;
+                    top: 8px;
+                }
+                em{
+                    color:$color-red;
+                }
+            }
+            &.total{
+               
+                margin:0 0 1.5em;
+
+                li{
+                    font-size: 1.5em;
+                    flex:0 0 auto;
+                    flex-basis: 40%;
+                    margin:0 2em .5em 0;
+
+                }
+            }
+        }
+    }
+    .btn_grp{
+        text-align: right;
+         border-top: 1px solid #ddd;
+    }
+}
+// 設備表格
+.equipment_Tb{
+    clear: both;
+    float:none;
+    margin-bottom: 2em;
+    .table_list{
+        background-color: #eee;
+        min-height: 150px;
+        padding:15px;
+        table{
+            background-color: #fff;
+        }
+        &.nodata{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            color:#000;
+            font-size: 1.25em;
+        }
+    }
+
 }

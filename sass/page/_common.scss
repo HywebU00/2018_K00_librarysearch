@@ -1335,7 +1335,7 @@ html .ui-button.ui-state-disabled:active {
     justify-content: center;
     &.fixed {
         position: fixed;
-        z-index: 3;
+        z-index: 9;
         bottom: 50px;
         left: 50%;
         transform: translate(-50%, 0);

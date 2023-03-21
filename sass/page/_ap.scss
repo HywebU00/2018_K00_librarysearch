@@ -2309,9 +2309,11 @@
         }
         .slick-next {
             right: -45px;
+            top:0;
         }
         .slick-prev {
             left: -45px;
+             top:0;
         }
         @media(max-width: 400px) {
             .slick-next {
@@ -2432,7 +2434,7 @@
                 border: 21.5px solid $color-orange;
                 border-color: transparent transparent transparent $color-orange;
                 position: absolute;
-                right: -43px;
+                right: -42px;
                 top: 0;
             }
         }
