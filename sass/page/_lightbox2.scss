@@ -1606,3 +1606,17 @@ body.fix {
         }
     }
 }
+
+// 設備辦法
+.equipment_pass_date{
+    margin-bottom: 1em;
+    text-align: right;
+}
+.method_block{
+    overflow-y: scroll;
+    height:50vh;
+    border:1px solid #ddd;
+    padding:20px;
+    
+    
+}

@@ -1175,6 +1175,19 @@ $(function () {
     $('#SR_style').fadeOut();
     $('body').removeClass('fix');
   });
+  // 設備預約
+  $('.equipment_reserve_btn').click(function () {
+    $('#equipment_reserve_style').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.lightboxstyle_block .close').click(function () {
+    $('#equipment_reserve_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#equipment_reserve_style').fadeOut();
+    $('body').removeClass('fix');
+  });
 });
 //詳目頁 匯出點選
 $(function () {
