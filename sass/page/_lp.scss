@@ -565,7 +565,7 @@
             .bookdata {
                 // float: left;
                 flex: 0 0 auto;
-                flex-basis: calc(100% - 130px);
+                flex-basis: calc(100% - 140px);
                 @media (max-width: 800px) {
                     order: 2;
                     flex-basis: 100%;
@@ -908,10 +908,11 @@
             .bookshare {
                 position: relative;
                 flex: none;
-                flex-basis: 120px;
+                flex-basis: 130px;
                 display: flex;
                 justify-content: flex-end;
                 align-items: flex-start;
+
                 @media(max-width: 800px) {
                     flex-basis: 100%;
                     order: 1;
@@ -920,6 +921,7 @@
                     margin: 0;
                     padding: 0;
                     display: flex;
+                    // flex-wrap: wrap;
                     justify-content: flex-end;
                     align-items: center;
                     li {
