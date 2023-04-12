@@ -1188,6 +1188,19 @@ $(function () {
     $('#equipment_reserve_style').fadeOut();
     $('body').removeClass('fix');
   });
+  // 我的書房編輯標籤
+  $('.addtag_lightboxbtn').click(function () {
+    $('#addtag_lightboxstyle').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.lightboxstyle_block>.close').click(function () {
+    $('#addtag_lightboxstyle').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#addtag_lightboxstyle').fadeOut();
+    $('body').removeClass('fix');
+  });
 });
 //詳目頁 匯出點選
 $(function () {
@@ -1690,6 +1703,7 @@ $(function () {
     $('.addoption').hide();
   });
 });
+
 // 顯示資料多寡
 $(function () {
   $('.displaymore').click(function () {

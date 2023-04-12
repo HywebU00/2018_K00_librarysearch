@@ -23,11 +23,10 @@
 </head>
 
 <body>
-   
     <!-- wrapper 最大寬度 -->
     <div class="wrapper   nowa havewa">
-         <!-- 直接跳主內容區 -->
-    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+        <!-- 直接跳主內容區 -->
+        <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
         <!-- sidebar  start-->
         <aside class="sidebar">
             <div class="m_area">
@@ -424,6 +423,15 @@
                                 </ul>
                             </div>
                             <!-- 篩選資料類型 end-->
+                            <!-- 書房頁籤 start -->
+                            <div class="studybook_tabs">
+                                <ul>
+                                    <li><a href="#" class="active">總覽</a></li>
+                                    <li><a href="#">未閱讀</a></li>
+                                    <li><a href="#">已閱讀</a></li>
+                                </ul>
+                            </div>
+                            <!-- 書房頁籤 end -->
                             <!-- 書本條列 start -->
                             <div class="booklist_block">
                                 <form>
@@ -488,10 +496,12 @@
                                                     <ul>
                                                         <li>幼福文化</li>
                                                         <li class="no_semicolon">
-                                                            <input type="button" class="download" value="common:webpac.book.downloadbtn">
+                                                            <!-- <input type="button" class="download" value="common:webpac.book.downloadbtn"> -->
+                                                             <input type="button" class="download" value="common:webpac">
                                                         </li>
                                                         <li class="no_semicolon">
-                                                            <input type="button" class="borrow" value="common:webpac.book.borrowbtn">
+                                                           <!--  <input type="button" class="borrow" value="common:webpac.book.borrowbtn"> -->
+                                                           <input type="button" class="borrow" value="common:webpac.book">
                                                         </li>
                                                     </ul>
                                                     <ul>
@@ -541,6 +551,9 @@
                                                         </li>
                                                     </ul>
                                                     <ul>
+                                                        <li class="tagblock no_semicolon"><a href="#" class="btnstyle graybg label">心情<span class="close addtagdelbtn"></span></a><a href="#" class="btnstyle graybg label">兒童<span class="close addtagdelbtn"></span></a><a href="#" class="btnstyle graybg label">嚴肅議題<span class="close addtagdelbtn"></span></a><a href="javascript:;" class="addtag_lightboxbtn"><img src="images/icon_add.png"></a></li>
+                                                    </ul>
+                                                    <ul>
                                                         <li>請問您認為哪些關鍵字符合此目標?</li>
                                                     </ul>
                                                     <ul>
@@ -578,6 +591,37 @@
                                                         </div>
                                                     </div>
                                                     <!-- 標籤刪除詢問燈箱end -->
+                                                    <!-- 編輯標籤 燈箱start -->
+                                                    <div class="lightboxstyle" id="addtag_lightboxstyle">
+                                                        <div class="overlay"></div>
+                                                        <div class="lightboxstyle_block">
+                                                            <div class="close"></div>
+                                                            <h2>編輯標籤</h2>
+                                                            <form action="">
+                                                                <div class="lightbox_data">
+                                                                    <div class="editlabel_block">
+                                                                        <div class="title">我的標籤：</div>
+                                                                        <div class="editlabeldata">
+                                                                            <ul>
+                                                                                <li class="tagblock"><a href="#" class="btnstyle graybg label">心情<span class="close"></span></a><a href="#" class="btnstyle graybg label">兒童<span class="close"></span></a><a href="#" class="btnstyle graybg label">嚴肅議題<span class="close"></span></a>
+                                                                                </li>
+                                                                                <li class="content_inline"><input type="text" name="" value="" placeholder="請用逗號分隔"><button type="buttone" class="btnstyle bluebg2">加入標籤</button></li>
+                                                                            </ul>
+                                                                            <div class="usedlabel">我最近使用的標籤(前五個) </div>
+                                                                            <ul>
+                                                                                <li class="tagblock no_semicolon"><a href="javascript:;" class="btnstyle graybg ">標籤文字</a><a href="javascript:;" class="btnstyle graybg">這是讀者設定的編嵌</a><a href="javascript:;" class="btnstyle graybg">貿易</a><a href="javascript:;" class="btnstyle graybg">移民</a><a href="javascript:;" class="btnstyle graybg ">標籤文字</a><a href="javascript:;" class="btnstyle graybg">這是讀者設定的編嵌</a><a href="javascript:;" class="btnstyle graybg">貿易</a><a href="javascript:;" class="btnstyle graybg">移民</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- <div class="btn_grp">
+                                                                    <input name="" type="submit" value="確定申請跨館通閱">
+                                                                    <input name="" type="reset" value="取消/關閉視窗">
+                                                                </div> -->
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 編輯標籤 燈箱end -->
                                                 </div>
                                                 <!-- 調整end -->
                                                 <!-- bookdata end -->
@@ -586,6 +630,9 @@
                                                     <ul>
                                                         <li><a href="#"><img src="images/book_share_icon01_2.png" alt=""></a></li>
                                                         <!-- 當點選收藏後，愛心要變成紅色的 -->
+                                                        <li>
+                                                            <div class="borrowed">已借閱</div>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                                 <!-- bookshare end -->
@@ -664,6 +711,12 @@
                                                     <ul>
                                                         <li><a href="#"><img src="images/book_share_icon01_2.png" alt=""></a></li>
                                                         <!-- 當點選收藏後，愛心要變成紅色的 -->
+                                                        <li>
+                                                            <select id="selectSample" name="">
+                                                                <option value="">未閱讀</option>
+                                                                <option value="">已閱讀</option>
+                                                            </select>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                                 <!-- bookshare end -->
@@ -2025,7 +2078,6 @@
         <!-- 分欄end -->
     </div>
     <!-- 詳目頁燈箱end  -->
-    
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="vendor/jquery.easing.min.js"></script>
     <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>

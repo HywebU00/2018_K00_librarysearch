@@ -983,6 +983,42 @@ body.fix {
                     font-size: 0.813em;
                 }
             }
+            // 編輯標籤
+            .editlabel_block {
+                padding: 5px 0;
+                .title {
+                       
+                        margin-bottom: .5em;
+                        font-size: 1.125em;
+                    }
+                .editlabeldata {
+                    
+                    ul {
+                        li {
+                            display: block;
+                            margin-bottom: .5em;
+                            .close {
+                                top: 3px;
+                                right: 1px;
+                            }
+                            &.content_inline{
+                                display: flex;
+                            }
+                            button{
+                                min-width:auto;
+                                margin-left:0.3em;
+                            }
+                        }
+                    }
+                    .usedlabel{
+                         margin-bottom: .5em;
+                        font-size: 1.125em;
+                        margin-top:1em;
+                        padding-top:1em;
+                        border-top:1px solid #ccc;
+                    }
+                }
+            }
         }
         .lightbox_image {
             img {
@@ -1606,17 +1642,14 @@ body.fix {
         }
     }
 }
-
 // 設備辦法
-.equipment_pass_date{
+.equipment_pass_date {
     margin-bottom: 1em;
     text-align: right;
 }
-.method_block{
+.method_block {
     overflow-y: scroll;
-    height:50vh;
-    border:1px solid #ddd;
-    padding:20px;
-    
-    
+    height: 50vh;
+    border: 1px solid #ddd;
+    padding: 20px;
 }
