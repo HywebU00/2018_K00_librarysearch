@@ -72,7 +72,7 @@
             padding: 0 0 0 5px;
             float: left;
             color: #fff;
-            text-shadow: 0px 0px 6px rgba(0,0,0,1),0px 0px 6px rgba(0,0,0,.5);
+            text-shadow: 0px 0px 6px rgba(0, 0, 0, 1), 0px 0px 6px rgba(0, 0, 0, .5);
             font-weight: 600;
             font-size: 2em;
             letter-spacing: .05em;
@@ -82,7 +82,6 @@
             @include screen('mobile') {
                 display: none;
             }
-            
         }
         .name {
             margin: 65px 0 0 0px;
@@ -342,7 +341,7 @@
                 display: inline-block;
                 vertical-align: middle;
                 &.redbg {
-                   background-color: darken(#ec636e, 14);
+                    background-color: darken(#ec636e, 14);
                 }
                 &.orangebg {
                     background-color: $color-orange;
@@ -357,8 +356,8 @@
                 em {
                     margin-left: 0px;
                     margin-bottom: 10px;
-                    display:block;
-                    width:auto;
+                    display: block;
+                    width: auto;
                 }
             }
         }
@@ -441,12 +440,12 @@
                 }
                 &.redblock {
                     &:after {
-                         border-color: transparent darken(#ec636e, 14) transparent transparent;
+                        border-color: transparent darken(#ec636e, 14) transparent transparent;
                     }
                 }
                 &.blueblock {
                     &:after {
-                         border-color: transparent $color-blue transparent transparent;
+                        border-color: transparent $color-blue transparent transparent;
                     }
                 }
                 &.greenblock {
@@ -456,7 +455,7 @@
                 }
                 &.yellowblock {
                     &:after {
-                         border-color: transparent #ebb100 transparent transparent;
+                        border-color: transparent #ebb100 transparent transparent;
                     }
                 }
                 &.orangeblock {
@@ -495,7 +494,7 @@
                 margin-top: 50px;
                 display: flex;
                 justify-content: center;
-                @media(max-width: 480px){
+                @media(max-width: 480px) {
                     display: block;
                 }
                 >span {
@@ -575,22 +574,22 @@
                         height: auto;
                         padding: 0 0 5px 15px;
                         margin: 0 0 5px;
-                        list-style-type:none;
-                        position:relative;
+                        list-style-type: none;
+                        position: relative;
                         text-align: left;
                         &:after {
                             content: '';
                             border: none;
                         }
-                        &:before{
+                        &:before {
                             content: '';
-                            width:8px;
+                            width: 8px;
                             height: 8px;
-                            background-color:#777;
+                            background-color: #777;
                             border-radius: 50%;
-                            position:absolute;
-                            left:0;
-                            top:7px;
+                            position: absolute;
+                            left: 0;
+                            top: 7px;
                         }
                     }
                 }
@@ -855,14 +854,14 @@
         // placeholder
         ::-webkit-input-placeholder {
             /* Edge */
-            color: #999;
+            color: #666;
         }
         :-ms-input-placeholder {
             /* Internet Explorer 10-11 */
-            color: #999;
+            color: #666;
         }
         ::placeholder {
-            color: #999;
+            color: #666;
         }
         //
         .upload_grp {
@@ -887,7 +886,7 @@
                 position: relative;
                 float: left;
                 @include screen('xs_mobile') {
-                    margin: 0 auto;
+                    margin: 0 auto 15px;
                     float: none;
                     clear: both;
                 }
@@ -914,13 +913,16 @@
             .upload_btn {
                 position: relative;
                 display: inline-block;
-                margin: 0 15px 0px 0;
-                @include screen('xs_mobile') {
-                    top: 10px;
-                    right: 0;
-                    left: 0;
-                    bottom: 0;
-                }
+                margin: 0 0 15px 0;
+                // @include screen('xs_mobile') {
+                //     top: 10px;
+                //     right: 0;
+                //     left: 0;
+                //     bottom: 0;
+                // }
+            }
+            .upload_remark {
+                display: block;
             }
         }
         img {
@@ -1383,7 +1385,7 @@
                 color: #000;
                 &:focus {
                     // box-shadow: 0 0px 0px 2px $form-focus;
-                    background:lighten( $color-yellow, 5);
+                    background: lighten($color-yellow, 5);
                 }
             }
         }
@@ -1675,8 +1677,8 @@
                     // display: inline-block;
                     -webkit-filter: grayscale(1);
                 }
-                &:focus{
-                    box-shadow: 0 0px 0px 2px #f1ad00 ;
+                &:focus {
+                    box-shadow: 0 0px 0px 2px #f1ad00;
                 }
             }
         }
