@@ -941,6 +941,61 @@
                 }
             }
         }
+        // 仿select
+        .selectblock {
+            position: relative;
+        }
+        // 請選擇
+        .select {
+            line-height: 2.4em;
+            height: 2.4em;
+            padding: 0 24px 0 .5em;
+            border: 1px solid #d3d3d3 !important;
+            background: #fff url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+            background-size: 25px;
+            margin-right: 2px;
+            margin-bottom: 0;
+            display: inline-block;
+            border-radius: 5px;
+            width: 100%;
+            @include box-sizing;
+        }
+        .selectdownblock {
+            border: 1px solid #d3d3d3;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            position: absolute;
+            top: 2.5em;
+            left: 0;
+            z-index: 9;
+            width: 100%;
+            max-height: 300px;
+            overflow-y: scroll;
+            @include box-sizing;
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    list-style: none;
+                    padding: 0;
+                    input {
+                        margin-right: 8px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+}
+.mystudysearch_data {
+    .form_grp {
+        display: flex;
+        overflow: visible !important;
+        @include screen('mobile') {
+            flex-wrap: wrap;
+        }
     }
 }
 .write_data {
