@@ -1253,7 +1253,7 @@
                 line-height: 1.5em;
                 font-size: 2em;
                 vertical-align: middle;
-                padding: 10px 20px ;
+                padding: 10px 20px;
                 @include box-sizing;
             }
         }
@@ -1277,7 +1277,6 @@
             text-align: center;
             background-image: none;
             padding: 10px 35px !important;
-            
         }
     }
 }
@@ -1557,7 +1556,6 @@
                     // border:1px solid #ccc;
                     box-shadow: 0 0 3px #ccc;
                     background-image: linear-gradient(135deg, #fff 10%, #ccc 100%);
-
                     &:hover, &:focus {
                         // @include gradient(#fbda74, #f4bf1e, vertical);
                         background-image: linear-gradient(135deg, #fff 10%, #fed857 100%);
@@ -1600,7 +1598,7 @@
             text-align: center;
             @include box-sizing;
             position: relative;
-             box-shadow: 0 0 3px #ccc;
+            box-shadow: 0 0 3px #ccc;
             border: 1px solid #eee;
             background-image: linear-gradient(135deg, #fff 10%, #ccc 100%);
             @include screen('mobile') {
@@ -1912,14 +1910,13 @@
                         font-size: 0.813em;
                         a {
                             color: #fff;
-                            background-color:#555;
-                            padding:0 8px;
+                            background-color: #555;
+                            padding: 0 8px;
                             font-weight: normal;
                             border-radius: 5px;
-                            &:hover{
-                                background-color:#666;
+                            &:hover {
+                                background-color: #666;
                             }
-                            
                         }
                     }
                 }
@@ -1941,16 +1938,71 @@
                     }
                     .select_date_inline {
                         display: flex;
-                         @media(max-width: 580px){
+                        @media(max-width: 580px) {
                             flex-wrap: wrap;
-                         }
-                        select {
-                            width: 200px;
-                            height: 40px;
+                        }
+                        .select_left {
                             margin-right: 5px;
-                             @media(max-width: 580px){
-                                width: 100%;
-                             }
+                            select {
+                                flex: 0 0 auto;
+                                flex-basis: 200px;
+                                width: 200px;
+                                height: 40px;
+                                margin-right: 5px;
+                                @media(max-width: 580px) {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .form_search {
+                            flex: 1 1 auto;
+                            flex-basis: calc(100% - 205px);
+                            background-color: #fff;
+                            box-shadow: none;
+                            margin: 0;
+                            border-radius: 5px;
+                            border: 1px solid #d3d3d3;
+                            padding: 0 24px 0 0.5em !important;
+                            height: 2.4em;
+                            line-height: 2em;
+                            background-color: #fff;
+                            -moz-box-sizing: border-box;
+                            -webkit-box-sizing: border-box;
+                            box-sizing: border-box;
+                            display: flex;
+                            align-items:center;
+                            input[type="text"] {
+                                border-radius: 0;
+                                border: none;
+                                margin: 0;
+                                color: #333;
+                                flex: 1 1 auto;
+                                flex-basis: calc(100% - 50px);
+                                // @include screen('tablet'){
+                                //     width: 90%;
+                                // }
+                                // @include screen('mobile') {
+                                //     width: 75%;
+                                // }
+                                // @include screen('xs_mobile') {
+                                //     width: 70%;
+                                // }
+                                // @media(max-width: 480px) {
+                                //     width: 70%;
+                                // }
+                                // @media(max-width: 380px) {
+                                //     width: 60%;
+                                // }
+                                &.nobtn {
+                                    width: 95%;
+                                }
+                            }
+                            .keyboardInputInitiator{
+                                    flex:0 0 auto;
+                                    flex-basis: 25px;
+                                    width:25px;
+                                    height: 16px;
+                                }
                         }
                     }
                     // 年級
@@ -1964,23 +2016,23 @@
                             li {
                                 width: 15.5%;
                                 margin: 0 0.58% 10px;
-                                @media(max-width: 1200px){
-                                     width: 19%;
-                                     margin: 0 0.5% 10px;
+                                @media(max-width: 1200px) {
+                                    width: 19%;
+                                    margin: 0 0.5% 10px;
                                 }
-                                @include screen('tablet'){
+                                @include screen('tablet') {
                                     width: 24%;
                                 }
-                                @include screen('mobile'){
-                                     width:32%;
-                                      margin: 0 0.66% 10px;
+                                @include screen('mobile') {
+                                    width: 32%;
+                                    margin: 0 0.66% 10px;
                                 }
-                                @include screen('xs_mobile'){
-                                     width:48%;
-                                     margin: 0 1% 10px;
+                                @include screen('xs_mobile') {
+                                    width: 48%;
+                                    margin: 0 1% 10px;
                                 }
-                                @media(max-width: 400px){
-                                    width:100%;
+                                @media(max-width: 400px) {
+                                    width: 100%;
                                     margin: 0 0 10px;
                                 }
                                 a {
@@ -1997,7 +2049,7 @@
                                         background-color: #666;
                                         color: #fff;
                                     }
-                                    &.here{
+                                    &.here {
                                         background-color: #666;
                                         color: #fff;
                                     }
@@ -2309,11 +2361,11 @@
         }
         .slick-next {
             right: -45px;
-            top:0;
+            top: 0;
         }
         .slick-prev {
             left: -45px;
-             top:0;
+            top: 0;
         }
         @media(max-width: 400px) {
             .slick-next {
