@@ -1963,7 +1963,7 @@
                             border-radius: 5px;
                             border: 1px solid #d3d3d3;
                             padding: 0 24px 0 0.5em !important;
-                            height: 2.4em;
+                            height: 2.5em;
                             line-height: 2em;
                             background-color: #fff;
                             -moz-box-sizing: border-box;
@@ -1978,21 +1978,8 @@
                                 color: #333;
                                 flex: 1 1 auto;
                                 flex-basis: calc(100% - 50px);
-                                // @include screen('tablet'){
-                                //     width: 90%;
-                                // }
-                                // @include screen('mobile') {
-                                //     width: 75%;
-                                // }
-                                // @include screen('xs_mobile') {
-                                //     width: 70%;
-                                // }
-                                // @media(max-width: 480px) {
-                                //     width: 70%;
-                                // }
-                                // @media(max-width: 380px) {
-                                //     width: 60%;
-                                // }
+                                height: 2.3em;
+                               
                                 &.nobtn {
                                     width: 95%;
                                 }
