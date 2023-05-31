@@ -117,7 +117,7 @@ $btn-radius:4px;
 }
 .disabled {
     pointer-events: none;
-    opacity: 0.6;
+    opacity: 0.8;
     box-shadow:none;
     cursor: not-allowed;
     display: inline-block;
@@ -127,7 +127,7 @@ $btn-radius:4px;
     pointer-events: none;
 }
 .disabled_hidebtn{
-    opacity: 0.6;
+    opacity: 0.8;
     box-shadow:none;
     cursor: not-allowed;
     display: inline-block;
