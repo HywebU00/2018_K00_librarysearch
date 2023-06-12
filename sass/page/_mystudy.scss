@@ -691,11 +691,12 @@
                 border-bottom: 1px solid #ccc;
                 position: relative;
                 display: flex;
-                align-items: flex-start;
+                align-items: center;
+
                 &:before {
                     content: '';
                     position: absolute;
-                    top: 16px;
+                    top: 20px;
                     left: 3px;
                     border: 8px solid #666;
                     border-color: transparent transparent transparent #666;
@@ -706,9 +707,11 @@
                 span {
                     flex:0 0 auto;
                    display: flex;
+                    align-items: center;
                     a {
                         display: block;
                         text-align: center;
+                        margin:0 5px 0 0;
                         &:focus {
                             box-shadow: 0 0px 0px 2px $form-focus;
                         }
@@ -716,6 +719,9 @@
                 }
                 @include screen('mobile'){
                     flex-wrap: wrap;
+                    &:before{
+                        top: 16px;
+                    }
                     div{
                         flex-basis: 100%;
                         margin-bottom: 0.5em;

@@ -180,7 +180,6 @@
         h3, .datalist, .explain {
             color: #FFF;
         }
-        
     }
     .classification {
         background-color: nth($primaryColor, $style);
@@ -676,7 +675,6 @@
         h3, .datalist, .explain {
             color: #fff;
         }
-        
     }
     .classification {
         background-color: nth($primaryColor, $style);
@@ -757,14 +755,13 @@
     .hotqa_list {
         h2 {
             background-color: nth($primaryColor, $style);
-           
         }
     }
     .devicereservation_block {
         .device_list {
             a {
-                background-color:darken(nth($lightColor, $style), 5); 
-                 color: #fff;
+                background-color: darken(nth($lightColor, $style), 5);
+                color: #fff;
                 &:hover,
                 &:focus {
                     color: #fff;
@@ -1241,7 +1238,6 @@
         h3, .datalist, .explain {
             color: #333;
         }
-        
     }
     .classification {
         background-color: #7fbe25;
@@ -1388,11 +1384,10 @@
         .device_list {
             a {
                 background-color: lighten(nth($lightColor, $style), 5);
-                
                 &:hover,
                 &:focus {
                     color: #000;
-                    background-color: darken(nth($lightColor, $style),5);
+                    background-color: darken(nth($lightColor, $style), 5);
                 }
                 h3 {
                     color: #000;
@@ -1418,7 +1413,7 @@
             &:hover,
             &:focus {
                 color: #000;
-                    background-color: darken(nth($lightColor, $style),5);
+                background-color: darken(nth($lightColor, $style), 5);
             }
         }
     }
@@ -1461,21 +1456,26 @@
             color: $color-orange;
         }
     }
-    // // 查無結果
-    // .no_result {
-    //     .explain {
-    //         background-color: $color-orange;
-    //         line-height: 1.7em;
-    //         span {
-    //             color: lighten(nth($lightColor, $style), 5);
-    //             background-color: #333;
-    //             padding: 5px 10px;   
-    //             margin: 0 10px;
-    //             font-size: 1em;
-    //             border-radius: 5px;
-    //         }
-    //     }
-    // }
+    // 查無結果
+    .no_result {
+        .explain {
+            padding: 20px 25px;
+            background-color: #fff;
+            border-radius: 5px;
+            color: #C41E06;
+            font-size: 1.125em;
+            border:2px solid #C41E06;
+            span {
+                font-size: 1.25em;
+                color: #fff;
+                background-color: #C41E06;
+                padding: 5px 10px;
+                margin:0 10px;
+                 border-radius: 5px;
+
+            }
+        }
+    }
     //熱門回答區塊
     .hotqa_block {
         //熱門回答區塊
@@ -1484,7 +1484,6 @@
                 background-color: $color-orange;
             }
         }
-        
     }
     //借閱區塊
     .device_borrow {
@@ -2088,7 +2087,6 @@
         h3, .datalist, .explain {
             color: #fff;
         }
-        
     }
     .classification {
         background-color: darken(nth($lightColor, $style), 27);
@@ -2563,7 +2561,6 @@
         h3, .datalist, .explain {
             color: #fff;
         }
-        
     }
     .classification {
         background-color: darken(nth($lightColor, $style), 10);
@@ -3050,7 +3047,6 @@
         h3, .datalist, .explain {
             color: #fff;
         }
-        
     }
     .classification {
         background-color: darken(nth($lightColor, $style), 10);
@@ -3547,7 +3543,6 @@
         h3, .datalist, .explain {
             color: #fff;
         }
-        
     }
     .classification {
         background-color: darken(nth($lightColor, $style), 10);
@@ -4035,7 +4030,6 @@
         h3, .datalist, .explain {
             color: #000;
         }
-        
     }
     .classification {
         background-color: darken(nth($lightColor, $style), 10);
@@ -4524,7 +4518,6 @@
         h3, .datalist, .explain {
             color: #000f;
         }
-        
     }
     .classification {
         background-color: darken(nth($primaryColor, $style), 15);

@@ -764,7 +764,7 @@
                     .addtag {
                         position: relative;
                         float: left;
-                        z-index: 3;
+                        z-index: 10;
                         margin-right: 2px;
                         input[type="text"] {
                             width: 210px;
@@ -777,7 +777,7 @@
                             }
                         }
                         .addoption {
-                            position: relative;
+                            position: absolute;
                             top: 0px;
                             left: 0;
                             width: 210px;
@@ -787,6 +787,7 @@
                             background-color: #fff;
                             @include box-sizing;
                             display: none;
+
                             @include screen('mobile') {
                                 width: 180px;
                                 top: auto;

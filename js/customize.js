@@ -1702,6 +1702,10 @@ $(function () {
     $('.addtagbtn').show();
     $('.addoption').hide();
   });
+
+  $('.lightboxstyle .editlabel').click(function () {
+    $('.lightboxstyle .addoption').slideDown();
+  });
 });
 
 // 顯示資料多寡
