@@ -3722,7 +3722,7 @@
                     opacity: 0.4;
                     box-shadow: none;
                     // cursor: not-allowed;
-                    display: inline-block;
+                    
                     -webkit-filter: grayscale(1);
                 }
                 &:focus {
@@ -3831,6 +3831,14 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: flex-start;
+                &.unread {
+                    // pointer-events: none;
+                    opacity: 0.4;
+                    box-shadow: none;
+                    // cursor: not-allowed;
+                    
+                    -webkit-filter: grayscale(1);
+                }
                 em {
                     font-size: 1.875em;
                     flex: 0 0 none;
