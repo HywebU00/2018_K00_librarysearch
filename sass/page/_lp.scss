@@ -787,7 +787,6 @@
                             background-color: #fff;
                             @include box-sizing;
                             display: none;
-
                             @include screen('mobile') {
                                 width: 180px;
                                 top: auto;
@@ -913,7 +912,6 @@
                 display: flex;
                 justify-content: flex-end;
                 align-items: flex-start;
-
                 @media(max-width: 800px) {
                     flex-basis: 100%;
                     order: 1;
@@ -1259,7 +1257,7 @@
             width: auto;
             float: none;
             .bookdata {
-                 flex: 1 1 auto;
+                flex: 1 1 auto;
                 // width: auto;
                 // flex-basis: 100%;
                 @media (max-width: 800px) {
@@ -3392,6 +3390,22 @@
                     color: #000;
                 }
             }
+        }
+    }
+    .prompt {
+        position: absolute;
+        top:5px;
+        left:289px;
+        a {
+            width: 25px;
+            height: 25px;
+            background-color: #666;
+            color: #fff;
+            border-radius: 50%;
+            line-height: 25px;
+            display: inline-block;
+            text-align: center;
+            margin-right: 5px;
         }
     }
 }

@@ -425,7 +425,7 @@
                         margin-bottom: 10px;
                         display: block;
                         a {
-                            color: $importantColor;
+                            color: nth($linkColor, $style);
                             text-decoration: underline;
                             &:hover {
                                 text-decoration: none;

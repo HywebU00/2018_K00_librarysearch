@@ -1201,6 +1201,19 @@ $(function () {
     $('#addtag_lightboxstyle').fadeOut();
     $('body').removeClass('fix');
   });
+  //書房頁籤
+  $('.studybook_tabsbtn').click(function () {
+    $('#studybook_tabsstyle').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('#studybook_tabsstyle .close').click(function () {
+    $('#studybook_tabsstyle').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#studybook_tabsstyle').fadeOut();
+    $('body').removeClass('fix');
+  });
 });
 //詳目頁 匯出點選
 $(function () {
