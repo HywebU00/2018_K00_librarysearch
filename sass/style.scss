@@ -327,6 +327,13 @@
         background-color: nth($lightColor, $style);
     }
     // _cp.scss
+    .book_detail {
+        .book_cover_source {
+            a {
+                color: nth($linkColor, $style);
+            }
+        }
+    }
     .mainrightblock,
     .mainrightblock2 {
         .book_detaildata {
@@ -429,6 +436,14 @@
                     }
                 }
             }
+        }
+    }
+    // _template.scss
+    //按鈕共用
+    .btnstyle {
+        
+        &.morebg{
+             color: nth($linkColor, $style) !important;
         }
     }
     // line 
@@ -839,6 +854,13 @@
         background-color: nth($lightColor, $style);
     }
     // _cp.scss
+    .book_detail {
+        .book_cover_source {
+            a {
+                color: nth($linkColor, $style);
+            }
+        }
+    }
     .mainrightblock,
     .mainrightblock2 {
         .book_detaildata {
@@ -910,6 +932,9 @@
                 background-color: lighten(#206061, 10);
                 border: 2px solid lighten(#206061, 10);
             }
+        }
+        &.morebg{
+             color: nth($linkColor, $style) !important;
         }
     }
     // line 
@@ -1518,6 +1543,13 @@
         background-color: nth($lightColor, $style);
     }
     // _cp.scss
+    .book_detail {
+        .book_cover_source {
+            a {
+                color: nth($linkColor, $style);
+            }
+        }
+    }
     .mainrightblock,
     .mainrightblock2 {
         .book_detaildata {
@@ -1831,6 +1863,9 @@
                 background-color: #59800B !important;
                 border: 1px solid #59800B !important;
             }
+        }
+        &.morebg{
+             color: nth($linkColor, $style) !important;
         }
     }
     // line 
@@ -2267,6 +2302,13 @@
         background-color: nth($lightColor, $style);
     }
     // _cp.scss
+    .book_detail {
+        .book_cover_source {
+            a {
+                color: nth($linkColor, $style);
+            }
+        }
+    }
     .mainrightblock,
     .mainrightblock2 {
         .book_detaildata {
@@ -2338,6 +2380,9 @@
                 background-color: lighten(nth($primaryColor, $style), 10);
                 border: 2px solid lighten(nth($primaryColor, $style), 10);
             }
+        }
+        &.morebg{
+             color: nth($linkColor, $style) !important;
         }
     }
     // line 
@@ -2762,6 +2807,13 @@
         background-color: nth($lightColor, $style);
     }
     // _cp.scss
+    .book_detail {
+        .book_cover_source {
+            a {
+                color: nth($linkColor, $style);
+            }
+        }
+    }
     .mainrightblock,
     .mainrightblock2 {
         .book_detaildata {
@@ -2833,6 +2885,9 @@
                 background-color: lighten(nth($primaryColor, $style), 5);
                 border: 2px solid lighten(nth($primaryColor, $style), 5);
             }
+        }
+        &.morebg{
+             color: nth($linkColor, $style) !important;
         }
     }
     // line 
@@ -3257,6 +3312,13 @@
         background-color: nth($lightColor, $style);
     }
     // _cp.scss
+    .book_detail {
+        .book_cover_source {
+            a {
+                color: nth($linkColor, $style);
+            }
+        }
+    }
     .mainrightblock,
     .mainrightblock2 {
         .book_detaildata {
@@ -3269,10 +3331,10 @@
                 .data_type_block {
                     background-color: nth($lightColor, $style);
                 }
-                .listdata{
-                    ul{
-                        li{
-                            a{
+                .listdata {
+                    ul {
+                        li {
+                            a {
                                 color: nth($linkColor, $style);
                             }
                         }
@@ -3328,6 +3390,9 @@
                 background-color: nth($primaryColor, $style);
                 border: 2px solid nth($primaryColor, $style);
             }
+        }
+        &.morebg{
+             color: nth($linkColor, $style) !important;
         }
     }
     // line 
@@ -3763,6 +3828,13 @@
         background-color: nth($lightColor, $style);
     }
     // _cp.scss
+    .book_detail {
+        .book_cover_source {
+            a {
+                color: nth($linkColor, $style);
+            }
+        }
+    }
     .mainrightblock,
     .mainrightblock2 {
         .book_detaildata {
@@ -3775,10 +3847,10 @@
                 .data_type_block {
                     background-color: nth($lightColor, $style);
                 }
-                .listdata{
-                    ul{
-                        li{
-                            a{
+                .listdata {
+                    ul {
+                        li {
+                            a {
                                 color: nth($linkColor, $style);
                             }
                         }
@@ -3834,6 +3906,9 @@
                 background-color: nth($primaryColor, $style);
                 border: 2px solid nth($primaryColor, $style);
             }
+        }
+        &.morebg{
+             color: nth($linkColor, $style) !important;
         }
     }
     // line 
@@ -4259,6 +4334,13 @@
         background-color: nth($lightColor, $style);
     }
     // _cp.scss
+    .book_detail {
+        .book_cover_source {
+            a {
+                color: nth($linkColor, $style);
+            }
+        }
+    }
     .mainrightblock,
     .mainrightblock2 {
         .book_detaildata {
@@ -4271,10 +4353,10 @@
                 .data_type_block {
                     background-color: nth($lightColor, $style);
                 }
-                .listdata{
-                    ul{
-                        li{
-                            a{
+                .listdata {
+                    ul {
+                        li {
+                            a {
                                 color: nth($linkColor, $style);
                             }
                         }
@@ -4330,6 +4412,9 @@
                 background-color: nth($primaryColor, $style);
                 border: 2px solid nth($primaryColor, $style);
             }
+        }
+        &.morebg{
+             color: nth($linkColor, $style) !important;
         }
     }
     // line 
@@ -4743,6 +4828,13 @@
         background-color: nth($lightColor, $style);
     }
     // _cp.scss
+    .book_detail {
+        .book_cover_source {
+            a {
+                color: nth($linkColor, $style);
+            }
+        }
+    }
     .mainrightblock,
     .mainrightblock2 {
         .book_detaildata {
@@ -4755,10 +4847,10 @@
                 .data_type_block {
                     background-color: nth($lightColor, $style);
                 }
-                .listdata{
-                    ul{
-                        li{
-                            a{
+                .listdata {
+                    ul {
+                        li {
+                            a {
                                 color: nth($linkColor, $style);
                             }
                         }
@@ -4814,6 +4906,9 @@
                 background-color: nth($primaryColor, $style);
                 border: 2px solid nth($primaryColor, $style);
             }
+        }
+        &.morebg{
+             color: nth($linkColor, $style) !important;
         }
     }
     // line 

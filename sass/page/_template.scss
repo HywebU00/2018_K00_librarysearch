@@ -668,7 +668,7 @@ select {
     &.morebg {
         background-color: transparent;
         border: none;
-        color: $color-red !important;
+        color: nth($linkColor, $style) !important;
         position: relative;
         font-weight: 600;
         box-shadow: none;
@@ -676,7 +676,7 @@ select {
         &:hover {
             background-color: transparent;
             border: none;
-            color: $aHover !important;
+            
             text-decoration: underline !important;
         }
         &:focus {
