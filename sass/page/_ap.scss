@@ -852,23 +852,86 @@
         @media(max-width: 620px) {
             margin: 10px 10px 0;
         }
-        .images {
+        .SDG_img {
             width: 300px;
-            @include aspect-ratio(4, 3);
-            background-color: transparent;
+            background-color: #f51733;
+            color: #fff;
             float: left;
+            overflow: hidden;
             margin-right: 30px;
-            &:before {
-                padding-top: 0;
+            padding: 10px 10px 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            &.no01{
+                background-color: #f51733;
+            }
+            &.no02{
+                 background-color: #d59f3a;
+            }
+            &.no03{
+                  background-color: #0e994d;
+            }
+            &.no04{
+                 background-color: #ca1d36;
+            }
+            &.no05{
+                 background-color: #f83f33;
+            }
+            &.no06{
+                 background-color: #00afd7;
+            }
+            &.no07{
+                 background-color: #ffb637;
+            }
+            &.no08{
+                 background-color: #961838;
+            }
+            &.no09{
+                 background-color: #fd6d36;
+            }
+            &.no10{
+                 background-color: #ea1784;
+            }
+            &.no11{
+                 background-color: #ff9d3b;
+            }
+            &.no12{
+                 background-color: #d18b32;
+            }
+            &.no13{
+                 background-color: #427741;
+            }
+            &.no14{
+                 background-color: #007eb8;
+            }
+            &.no15{
+                 background-color: #29af51;
+            }
+            &.no16{
+                  background-color: #005488;
+            }
+            &.no17{
+                 background-color: #123865;
             }
             @media(max-width: 620px) {
                 width: 100%;
                 float: none;
                 margin: 0 0 20px;
             }
+            em {
+                font-size: 1.875em;
+                flex: 0 0 none;
+                flex-basis: 35px;
+            }
+            span {
+                    flex: 1 1 auto;
+                    flex-basis: calc(100% - 35px);
+                }
             img {
                 width: 100%;
-                bottom: auto;
+               
             }
         }
         h3 {
