@@ -461,7 +461,7 @@
         clear: both;
         position: relative;
         display: flex;
-        // flex-wrap: wrap;
+        flex-wrap: wrap;
         &.special {
             background-color: lighten(nth($lightColor, $style), 20);
         }
