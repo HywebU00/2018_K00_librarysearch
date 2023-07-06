@@ -309,7 +309,6 @@ body {
     .mobile_visible {
         display: none !important;
     }
-
 }
 @include screen('mobile') {
     .mobile_hidden {
@@ -318,8 +317,7 @@ body {
     .mobile_visible {
         display: inline-block !important;
     }
-} 
-
+}
 a:hover {
     color: $aHover;
 }
@@ -531,77 +529,77 @@ select {
     &.cancel {
         background-image: url('../images/btnstyle_icon11.png');
     }
-     &.bluebg {
-            background-color: #016593;
-            border: 2px solid #016593;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #027EB6;
-                border: 2px solid #027EB6;
-            }
+    &.bluebg {
+        background-color: #016593;
+        border: 2px solid #016593;
+        color: #fff;
+        transition: .2s;
+        &:hover, &:focus {
+            background-color: #027EB6;
+            border: 2px solid #027EB6;
         }
+    }
     &.bluebg2 {
-            background-color: #0d5cbe;
-            border: 2px solid #0d5cbe;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #3e78c0;
-                border: 2px solid #3e78c0;
-            }
+        background-color: #0d5cbe;
+        border: 2px solid #0d5cbe;
+        color: #fff;
+        transition: .2s;
+        &:hover, &:focus {
+            background-color: #3e78c0;
+            border: 2px solid #3e78c0;
         }
-   &.bluebg3 {
-            background-color: nth($primaryColor, $style);
-            border: 2px solid nth($primaryColor, $style);
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: darken(nth($primaryColor, $style), 10);
-                border: 2px solid darken(nth($primaryColor, $style), 10);
-            }
+    }
+    &.bluebg3 {
+        background-color: nth($primaryColor, $style);
+        border: 2px solid nth($primaryColor, $style);
+        color: #fff;
+        transition: .2s;
+        &:hover, &:focus {
+            background-color: darken(nth($primaryColor, $style), 10);
+            border: 2px solid darken(nth($primaryColor, $style), 10);
         }
+    }
     &.greenbg {
-            background-color: #496809;
-            border: 2px solid #496809;
-            color: #fff;
-            filter: brightness(120%);
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #59800B;
-                border: 2px solid #59800B;
-            }
+        background-color: #496809;
+        border: 2px solid #496809;
+        color: #fff;
+        filter: brightness(120%);
+        transition: .2s;
+        &:hover, &:focus {
+            background-color: #59800B;
+            border: 2px solid #59800B;
         }
+    }
     &.greenbg2 {
-            background-color: #00807b;
-            border: 2px solid #00807b;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #15827e;
-                border: 2px solid #15827e;
-            }
+        background-color: #00807b;
+        border: 2px solid #00807b;
+        color: #fff;
+        transition: .2s;
+        &:hover, &:focus {
+            background-color: #15827e;
+            border: 2px solid #15827e;
         }
+    }
     &.redbg {
-            background-color: #ae031d;
-            border: 2px solid #ae031d;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #e20022;
-                border: 2px solid #e20022;
-            }
+        background-color: #ae031d;
+        border: 2px solid #ae031d;
+        color: #fff;
+        transition: .2s;
+        &:hover, &:focus {
+            background-color: #e20022;
+            border: 2px solid #e20022;
         }
+    }
     &.redbg2 {
-            background-color: #b0582d;
-            border: 2px solid #b0582d;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #b05f46;
-                border: 2px solid #b05f46;
-            }
+        background-color: #b0582d;
+        border: 2px solid #b0582d;
+        color: #fff;
+        transition: .2s;
+        &:hover, &:focus {
+            background-color: #b05f46;
+            border: 2px solid #b05f46;
         }
+    }
     &.whitebg {
         border: 2px solid #fff;
         background-color: #fff;
@@ -613,36 +611,36 @@ select {
             color: #333 !important;
         }
     }
-     &.brownbg {
-            background-color: #59493f;
-            border: 2px solid #59493f;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: lighten(#59493f, 10);
-                border: 2px solid lighten(#59493f, 10);
-            }
+    &.brownbg {
+        background-color: #59493f;
+        border: 2px solid #59493f;
+        color: #fff;
+        transition: .2s;
+        &:hover, &:focus {
+            background-color: lighten(#59493f, 10);
+            border: 2px solid lighten(#59493f, 10);
         }
-   &.orangebg {
-            background-color: darken(#C75100, 3);
-            border: 2px solid darken(#C75100, 3);
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #C75100;
-                border: 2px solid #C75100;
-            }
+    }
+    &.orangebg {
+        background-color: darken(#C75100, 3);
+        border: 2px solid darken(#C75100, 3);
+        color: #fff;
+        transition: .2s;
+        &:hover, &:focus {
+            background-color: #C75100;
+            border: 2px solid #C75100;
         }
+    }
     &.graybg {
-            background-color: #666666;
-            border: 2px solid #666666;
-            color: #fff;
-            transition: .2s;
-            &:hover, &:focus {
-                background-color: #757575;
-                border: 2px solid #757575;
-            }
+        background-color: #666666;
+        border: 2px solid #666666;
+        color: #fff;
+        transition: .2s;
+        &:hover, &:focus {
+            background-color: #757575;
+            border: 2px solid #757575;
         }
+    }
     &.blackbg {
         background-color: #000;
         border: 2px solid #000;
@@ -668,19 +666,41 @@ select {
     &.morebg {
         background-color: transparent;
         border: none;
-        color: nth($linkColor, $style) !important;
+        color: #016593 !important;
         position: relative;
         font-weight: 600;
         box-shadow: none;
         transition: .2s;
+        padding-right: 20px !important;
         &:hover {
             background-color: transparent;
             border: none;
-            
             text-decoration: underline !important;
         }
         &:focus {
             box-shadow: 0 0px 0px 2px $form-focus;
+        }
+        &:before {
+            content: '';
+            border: 8px solid #016593;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            position: absolute;
+            right: 0;
+            top: 8px;
+        }
+        &.open {
+            &:before {
+                content: '';
+                border: 8px solid #016593;
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-left-color: transparent;
+                position: absolute;
+                right: 0;
+                top: 0px;
+            }
         }
     }
     // 框線按鈕

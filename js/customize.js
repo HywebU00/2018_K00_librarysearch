@@ -1961,3 +1961,10 @@ $(function () {
       }
     });
 });
+// 顯示更多
+$(function(){
+  $('.morebg').click(function(){
+    $(this).toggleClass('open');
+    
+  })
+})

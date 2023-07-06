@@ -439,13 +439,7 @@
         }
     }
     // _template.scss
-    //按鈕共用
-    .btnstyle {
-        
-        &.morebg{
-             color: nth($linkColor, $style) !important;
-        }
-    }
+    
     // line 
     .linecontent {
         &.mobile-card {
@@ -933,9 +927,7 @@
                 border: 2px solid lighten(#206061, 10);
             }
         }
-        &.morebg{
-             color: nth($linkColor, $style) !important;
-        }
+      
     }
     // line 
     .linecontent {
@@ -1864,9 +1856,7 @@
                 border: 1px solid #59800B !important;
             }
         }
-        &.morebg{
-             color: nth($linkColor, $style) !important;
-        }
+       
     }
     // line 
     .linecontent {
@@ -2381,9 +2371,7 @@
                 border: 2px solid lighten(nth($primaryColor, $style), 10);
             }
         }
-        &.morebg{
-             color: nth($linkColor, $style) !important;
-        }
+       
     }
     // line 
     .linecontent {
@@ -2886,9 +2874,7 @@
                 border: 2px solid lighten(nth($primaryColor, $style), 5);
             }
         }
-        &.morebg{
-             color: nth($linkColor, $style) !important;
-        }
+       
     }
     // line 
     .linecontent {
@@ -3391,9 +3377,7 @@
                 border: 2px solid nth($primaryColor, $style);
             }
         }
-        &.morebg{
-             color: nth($linkColor, $style) !important;
-        }
+        
     }
     // line 
     .linecontent {
@@ -3907,9 +3891,7 @@
                 border: 2px solid nth($primaryColor, $style);
             }
         }
-        &.morebg{
-             color: nth($linkColor, $style) !important;
-        }
+        
     }
     // line 
     .linecontent {
@@ -4413,9 +4395,7 @@
                 border: 2px solid nth($primaryColor, $style);
             }
         }
-        &.morebg{
-             color: nth($linkColor, $style) !important;
-        }
+        
     }
     // line 
     .linecontent {
@@ -4907,9 +4887,7 @@
                 border: 2px solid nth($primaryColor, $style);
             }
         }
-        &.morebg{
-             color: nth($linkColor, $style) !important;
-        }
+       
     }
     // line 
     .linecontent {
