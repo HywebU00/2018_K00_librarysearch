@@ -688,7 +688,7 @@ select {
             border-left-color: transparent;
             position: absolute;
             right: 0;
-            top: 8px;
+            top: 10px;
         }
         &.open {
             &:before {
@@ -699,7 +699,7 @@ select {
                 border-left-color: transparent;
                 position: absolute;
                 right: 0;
-                top: 0px;
+                top: 2px;
             }
         }
     }
