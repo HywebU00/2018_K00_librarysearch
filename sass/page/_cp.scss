@@ -165,7 +165,7 @@
     .book_cover_source {
         text-align: center;
         a {
-             color: nth($linkColor, $style);
+            color: nth($linkColor, $style);
             text-decoration: underline;
             display: inline-block;
             &:hover {
@@ -273,36 +273,57 @@
                                 margin: 0;
                                 padding: 0.5em;
                                 list-style-type: none;
-                                @include screen('mobile') {
-                                    display: flex;
-                                }
+                                // @include screen('mobile') {
+                                //     display: flex;
+                                // }
                                 // @include screen('xs_mobile') {
                                 //     display: block;
                                 // }
                                 li {
-                                    text-align: right;
+                                    text-align: left;
                                     margin-bottom: .4em;
                                     white-space: nowrap;
-                                    @include screen('mobile') {
-                                        flex: 1 1 auto;
-                                        margin-bottom: 0;
-                                    }
-                                    // @include screen('xs_mobile'){
+                                    position: relative;
+                                    padding-right: 2.2em;
+                                    // @include screen('mobile') {
+                                    //     flex: 1 1 auto;
+                                    //     margin-bottom: 0;
+                                    //     padding-right: 0;
+                                    // }
+                                    // @include screen('xs_mobile') {
                                     //     margin-bottom: .4em;
+                                    //     padding-right: 2.2em;
                                     // }
                                     &:last-child {
                                         margin-bottom: 0;
                                     }
                                     em {
                                         font-size: 1.375em;
-                                        margin-right: 0.7em;
+                                        margin-right: 0;
                                         color: $color-orange;
                                         display: inline-block;
                                         font-weight: bolder;
                                         border-radius: 50px;
-                                        @include screen('mobile') {
-                                            margin-right: 0.2em;
-                                        }
+                                        text-align: right;
+                                        width: 2em;
+                                        position: absolute;
+                                        right: 0;
+                                        // @include screen('mobile') {
+                                        //     margin-right: 0.2em;
+                                        //     position: relative;
+                                        //     right: auto;
+                                        //     width: auto;
+                                        //     text-align: left;
+                                        //     margin-left: 5px;
+                                        // }
+                                        // @include screen('xs_mobile') {
+                                        //     margin-right: 0;
+                                        //     position: absolute;
+                                        //     right: 0;
+                                        //     width: 2em;
+                                        //     text-align: right;
+                                        //     margin-left: auto;
+                                        // }
                                     }
                                 }
                             }
@@ -454,7 +475,6 @@
                                 &:focus {
                                     box-shadow: 0 0px 0px 2px #f1ad00 !important;
                                 }
-                                
                             }
                         }
                     }
