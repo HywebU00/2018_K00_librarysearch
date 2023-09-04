@@ -864,56 +864,56 @@
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
-            &.no01{
+            &.no01 {
                 background-color: #f51733;
             }
-            &.no02{
-                 background-color: #d59f3a;
+            &.no02 {
+                background-color: #d59f3a;
             }
-            &.no03{
-                  background-color: #0e994d;
+            &.no03 {
+                background-color: #0e994d;
             }
-            &.no04{
-                 background-color: #ca1d36;
+            &.no04 {
+                background-color: #ca1d36;
             }
-            &.no05{
-                 background-color: #f83f33;
+            &.no05 {
+                background-color: #f83f33;
             }
-            &.no06{
-                 background-color: #00afd7;
+            &.no06 {
+                background-color: #00afd7;
             }
-            &.no07{
-                 background-color: #ffb637;
+            &.no07 {
+                background-color: #ffb637;
             }
-            &.no08{
-                 background-color: #961838;
+            &.no08 {
+                background-color: #961838;
             }
-            &.no09{
-                 background-color: #fd6d36;
+            &.no09 {
+                background-color: #fd6d36;
             }
-            &.no10{
-                 background-color: #ea1784;
+            &.no10 {
+                background-color: #ea1784;
             }
-            &.no11{
-                 background-color: #ff9d3b;
+            &.no11 {
+                background-color: #ff9d3b;
             }
-            &.no12{
-                 background-color: #d18b32;
+            &.no12 {
+                background-color: #d18b32;
             }
-            &.no13{
-                 background-color: #427741;
+            &.no13 {
+                background-color: #427741;
             }
-            &.no14{
-                 background-color: #007eb8;
+            &.no14 {
+                background-color: #007eb8;
             }
-            &.no15{
-                 background-color: #29af51;
+            &.no15 {
+                background-color: #29af51;
             }
-            &.no16{
-                  background-color: #005488;
+            &.no16 {
+                background-color: #005488;
             }
-            &.no17{
-                 background-color: #123865;
+            &.no17 {
+                background-color: #123865;
             }
             @media(max-width: 620px) {
                 width: 100%;
@@ -926,13 +926,12 @@
                 flex-basis: 35px;
             }
             span {
-                    flex: 1 1 auto;
-                    font-size: 1.25em;
-                    flex-basis: calc(100% - 35px);
-                }
+                flex: 1 1 auto;
+                font-size: 1.25em;
+                flex-basis: calc(100% - 35px);
+            }
             img {
                 width: 100%;
-               
             }
         }
         h3 {
@@ -3723,7 +3722,6 @@
                     opacity: 0.4;
                     box-shadow: none;
                     // cursor: not-allowed;
-                    
                     -webkit-filter: grayscale(1);
                 }
                 &:focus {
@@ -3837,7 +3835,6 @@
                     opacity: 0.4;
                     box-shadow: none;
                     // cursor: not-allowed;
-                    
                     -webkit-filter: grayscale(1);
                 }
                 em {
@@ -3879,21 +3876,30 @@
             display: flex;
             background-color: #fff;
             box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-            padding: 10px 20px 10px 10px;
+            border: 1px solid #ddd;
+            padding: 10px 20px;
             box-sizing: border-box;
             border-radius: 5px;
             align-items: center;
+            @include screen('notebook') {
+                flex-wrap: wrap;
+            }
             @include screen('tablet') {
                 flex-basis: 100%;
                 margin: 0 0 20px;
+                flex-wrap: nowrap;
+            }
+            @include screen('mobile') {
+                flex-wrap: wrap;
             }
             .images {
                 flex: none;
                 flex-basis: 100px;
+                max-width: 100px;
                 width: 100px;
                 height: 100px;
                 background-color: rgba(0, 0, 0, .1);
-                margin: 0px 20px;
+                margin: 0px 20px 0 0;
                 position: relative;
                 border-radius: 50%;
                 vertical-align: middle;
@@ -3911,11 +3917,49 @@
                     margin: auto;
                     opacity: .7;
                 }
+                @media(max-width: 400px) {
+                    margin: 0px auto;
+                }
             }
             p {
-                flex: auto;
+                flex: 1 1 auto;
                 font-size: 1.125em;
                 text-align: left;
+                @include screen('notebook') {
+                    flex-basis: calc(100% - 120px);
+                }
+                @include screen('tablet') {
+                    flex-basis: auto;
+                }
+                @include screen('mobile') {
+                    flex-basis: calc(100% - 140px);
+                }
+                @media(max-width: 400px) {
+                    flex-basis: 100%;
+                }
+            }
+            .finish_block {
+                flex: 0 0 auto;
+                flex-basis: 120px;
+                margin-left: 1em;
+                label {
+                    margin: 0;
+                    padding: .5em;
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                }
+                @include screen('notebook') {
+                    flex: 1 1 auto;
+                    margin: 0em 0 0 0;
+                }
+                @include screen('tablet') {
+                    flex: 0 0 auto;
+                    margin: 0 0 0 1em;
+                }
+                @include screen('mobile') {
+                    flex: 1 1 auto;
+                    margin: 0em 0 0 0;
+                }
             }
         }
     }
@@ -3926,5 +3970,22 @@
             background-position: 20px center;
             background-repeat: no-repeat;
         }
+    }
+}
+// 行動項目燈箱裡
+.actionitemsl_block {
+    .sortrecommend {
+        margin: 30px 0 20px !important;
+        @include box-sizing;
+        @include screen('mobile') {
+            width: 80%;
+            margin: 30px auto!important;
+        }
+        @media(max-width: 480px) {
+            width: 75% !important;
+        }
+    }
+    .SDG_targetdata_group {
+        display: block !important;
     }
 }

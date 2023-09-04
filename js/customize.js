@@ -548,6 +548,7 @@ $(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     dots: false,
+
     responsive: [
       {
         breakpoint: 1200,
@@ -1212,6 +1213,20 @@ $(function () {
   });
   $('.overlay').click(function () {
     $('#studybook_tabsstyle').fadeOut();
+    $('body').removeClass('fix');
+  });
+  // 行動項目
+  $('#actionitemsl_btn').click(function () {
+    $('#actionitemslstyle').fadeIn();
+    $('body').addClass('fix');
+    $('.sortrecommend').slick('refresh');
+  });
+  $('#actionitemslstyle .close').click(function () {
+    $('#actionitemslstyle').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#actionitemslstyle').fadeOut();
     $('body').removeClass('fix');
   });
 });
