@@ -3863,7 +3863,18 @@
     }
     .title {
         @extend .block01_h2;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
+    }
+    .finishitem {
+        margin-bottom: 10px;
+        font-size: 1.25em;
+        text-align: right;
+        margin-right: 10px;
+        em {
+            font-style: normal;
+            color: $color-orange;
+            padding: 0 5px;
+        }
     }
     .SDG_targetdata_group {
         display: flex;
@@ -3979,7 +3990,7 @@
         @include box-sizing;
         @include screen('mobile') {
             width: 80%;
-            margin: 30px auto!important;
+            margin: 30px auto !important;
         }
         @media(max-width: 480px) {
             width: 75% !important;
