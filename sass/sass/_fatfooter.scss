@@ -11,7 +11,7 @@ $fatTextColor: $color-word; //fatFooter 連結顏色
     margin-right: auto; // 右上方切換收合按鈕設定
     background-color: #313131;
     position: relative;
-   
+    z-index: 9;
     .container {
         position: relative;
         @include box-sizing();
@@ -30,13 +30,12 @@ $fatTextColor: $color-word; //fatFooter 連結顏色
         position: absolute;
         right: 50%;
         top: -25px;
-        z-index: 1;
         margin: 0 -25px 0 0;
         padding: 10px !important;
         min-width: auto;
         max-width: auto;
         transition: .5s;
-       
+        z-index: 9;
         text-indent: -9999px;
         @include border-radius(50%);
         box-shadow: none;
