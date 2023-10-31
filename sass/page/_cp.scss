@@ -1403,7 +1403,7 @@
                             }
                         }
                         ul {
-                            display: inline-block;
+                            display: block;
                             list-style: none;
                             margin: 0 0 0 0px;
                             padding: 0;
@@ -1442,9 +1442,9 @@
                                         &:before {
                                             content: '';
                                             border: 12px solid #666;
-                                            border-color: #666 transparent transparent transparent;
+                                            border-color:  transparent transparent #666 transparent;
                                             position: absolute;
-                                            bottom: 24px;
+                                            bottom: -12px;
                                             left: 6px;
                                             // @include screen('tablet') {
                                             //     // bottom: auto;
@@ -1473,22 +1473,17 @@
                             background-color: #666;
                             color: #fff;
                             position: absolute;
-                            bottom: 48px;
+                            top: 48px;
                             left: 0;
                             width: 200px;
                             display: none;
-                            border: 2px solid #fff;
                             border-bottom: none;
                             @include box-sizing;
                             padding: 10px 15px;
                             border-radius: 5px;
                             z-index: 9;
                             text-align: left;
-                            @include screen('mobile') {
-                                right: auto;
-                                left: 0;
-                                margin-left: -100px;
-                            }
+                            
                             .shelf_number {
                                 display: block;
                             }
