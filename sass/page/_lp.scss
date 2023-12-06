@@ -463,7 +463,7 @@
         display: flex;
         flex-wrap: wrap;
         &.special {
-            background-color: lighten(nth($lightColor, $style), 20);
+            background-color: lighten(nth($lightColor, $style), 25);
         }
         //左
         .bookleftblock {
@@ -2596,7 +2596,7 @@
         h2 {
             font-size: 1.25em;
             margin: 20px 0 30px;
-            color: $color-brown2;
+            color: nth($primaryColor, $style);
         }
         ul {
             margin: 0;

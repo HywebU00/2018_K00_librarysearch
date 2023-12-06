@@ -865,55 +865,55 @@
             flex-wrap: wrap;
             align-items: flex-start;
             &.no01 {
-                background-color: #f51733;
+               background-color: #EA132E;
             }
             &.no02 {
-                background-color: #d59f3a;
+                background-color: #A36B01;
             }
             &.no03 {
-                background-color: #0e994d;
+                background-color: #6D7E01;
             }
             &.no04 {
                 background-color: #ca1d36;
             }
             &.no05 {
-                background-color: #f83f33;
+               background-color: #9B4AB1;
             }
             &.no06 {
-                background-color: #00afd7;
+                background-color: #00819E;
             }
             &.no07 {
-                background-color: #ffb637;
+                background-color: #9A7027;
             }
             &.no08 {
                 background-color: #961838;
             }
             &.no09 {
-                background-color: #fd6d36;
+               background-color: #BE5A02;
             }
             &.no10 {
-                background-color: #ea1784;
+                background-color: #E1157E;
             }
             &.no11 {
-                background-color: #ff9d3b;
+                background-color: #85743F;
             }
             &.no12 {
-                background-color: #d18b32;
+                background-color: #9E6B49;
             }
             &.no13 {
-                background-color: #427741;
+                background-color: #3C8368;
             }
             &.no14 {
-                background-color: #007eb8;
+                background-color: #017CB5;
             }
             &.no15 {
-                background-color: #29af51;
+                background-color: #20873F;
             }
             &.no16 {
                 background-color: #005488;
             }
             &.no17 {
-                background-color: #123865;
+               background-color: #11345F;
             }
             @media(max-width: 620px) {
                 width: 100%;
@@ -1067,7 +1067,7 @@
         .box {
             display: inline-block;
             height: auto;
-            line-height: 1.5em;
+            line-height: 1.3em;
             font-size: 2em;
             vertical-align: middle;
             padding: 10px 20px 10px 20px;
@@ -3740,17 +3740,17 @@
         justify-content: center;
         flex-wrap: wrap;
         .SDG_img {
-            flex: none;
+            flex: 0 0 auto;
             flex-basis: 170px;
             margin: 0 5px 10px;
             &:nth-of-type(2) {
                 a {
-                    background-color: #d59f3a;
+                    background-color: #A36B01;
                 }
             }
             &:nth-of-type(3) {
                 a {
-                    background-color: #0e994d;
+                    background-color: #6D7E01;
                 }
             }
             &:nth-of-type(4) {
@@ -3760,17 +3760,17 @@
             }
             &:nth-of-type(5) {
                 a {
-                    background-color: #f83f33;
+                    background-color: #9B4AB1;
                 }
             }
             &:nth-of-type(6) {
                 a {
-                    background-color: #00afd7;
+                    background-color: #00819E;
                 }
             }
             &:nth-of-type(7) {
                 a {
-                    background-color: #ffb637;
+                    background-color: #9A7027;
                 }
             }
             &:nth-of-type(8) {
@@ -3780,37 +3780,37 @@
             }
             &:nth-of-type(9) {
                 a {
-                    background-color: #fd6d36;
+                    background-color: #BE5A02;
                 }
             }
             &:nth-of-type(10) {
                 a {
-                    background-color: #ea1784;
+                    background-color: #E1157E;  
                 }
             }
             &:nth-of-type(11) {
                 a {
-                    background-color: #ff9d3b;
+                    background-color: #85743F;
                 }
             }
             &:nth-of-type(12) {
                 a {
-                    background-color: #d18b32;
+                    background-color: #9E6B49;
                 }
             }
             &:nth-of-type(13) {
                 a {
-                    background-color: #427741;
+                    background-color: #3C8368;
                 }
             }
             &:nth-of-type(14) {
                 a {
-                    background-color: #007eb8;
+                    background-color: #017CB5;
                 }
             }
             &:nth-of-type(15) {
                 a {
-                    background-color: #29af51;
+                    background-color: #20873F;
                 }
             }
             &:nth-of-type(16) {
@@ -3820,12 +3820,12 @@
             }
             &:nth-of-type(17) {
                 a {
-                    background-color: #123865;
+                    background-color: #11345F;
                 }
             }
             a {
                 display: block;
-                background-color: #f51733;
+                background-color: #EA132E;
                 color: #fff;
                 height: 100%;
                 padding: 10px 5px 0;

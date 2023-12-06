@@ -38,7 +38,7 @@
         color:#666;
         text-decoration: none;
         &:hover{
-            color:#f4573f;
+            color:darken($importantColor, 5);
             text-decoration: underline;
         }
     }

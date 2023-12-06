@@ -515,7 +515,7 @@
             float: none;
             @include box-sizing();
             h3 {
-                color: $color-brown2;
+               color: nth($primaryColor, $style);
                 position: relative;
                 padding: 15px 0 0 0;
                 margin: 0 0 25px;

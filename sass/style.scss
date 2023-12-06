@@ -63,6 +63,12 @@
                 a {
                     &.addfield {
                         background-color: nth($primaryColor, $style);
+                        &:hover {
+                            background-color: darken(nth($primaryColor, $style), 5);
+                        }
+                    }
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }
@@ -326,6 +332,13 @@
     .booklist_block .booklist .bookmidblock .data_type_block {
         background-color: nth($lightColor, $style);
     }
+    .no_result {
+        .related_words {
+            h2 {
+                color: nth($primaryColor, $style);
+            }
+        }
+    }
     // _cp.scss
     .book_detail {
         .book_cover_source {
@@ -339,7 +352,7 @@
         .book_detaildata {
             .bookdata2 {
                 h3 {
-                    color: darken(nth($primaryColor, $style), 20);
+                    color: nth($primaryColor, $style);
                 }
             }
             .bookdata {
@@ -439,7 +452,6 @@
         }
     }
     // _template.scss
-    
     // line 
     .linecontent {
         &.mobile-card {
@@ -558,6 +570,12 @@
                 a {
                     &.addfield {
                         background-color: nth($primaryColor, $style);
+                        &:hover {
+                            background-color: darken(nth($primaryColor, $style), 5);
+                        }
+                    }
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }
@@ -847,6 +865,13 @@
     .booklist_block .booklist .bookmidblock .data_type_block {
         background-color: nth($lightColor, $style);
     }
+    .no_result {
+        .related_words {
+            h2 {
+                color: nth($primaryColor, $style);
+            }
+        }
+    }
     // _cp.scss
     .book_detail {
         .book_cover_source {
@@ -860,7 +885,7 @@
         .book_detaildata {
             .bookdata2 {
                 h3 {
-                    color: darken(nth($primaryColor, $style), 20);
+                    color: nth($primaryColor, $style);
                 }
             }
             .bookdata {
@@ -927,7 +952,6 @@
                 border: 2px solid lighten(#206061, 10);
             }
         }
-      
     }
     // line 
     .linecontent {
@@ -1091,6 +1115,12 @@
                 a {
                     &.addfield {
                         background-color: nth($primaryColor, $style);
+                        &:hover {
+                            background-color: darken(nth($primaryColor, $style), 5);
+                        }
+                    }
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }
@@ -1534,6 +1564,13 @@
     .booklist_block .booklist .bookmidblock .data_type_block {
         background-color: nth($lightColor, $style);
     }
+    .no_result {
+        .related_words {
+            h2 {
+                color: nth($primaryColor, $style);
+            }
+        }
+    }
     // _cp.scss
     .book_detail {
         .book_cover_source {
@@ -1856,7 +1893,6 @@
                 border: 1px solid #59800B !important;
             }
         }
-       
     }
     // line 
     .linecontent {
@@ -2003,6 +2039,12 @@
                 a {
                     &.addfield {
                         background-color: nth($primaryColor, $style);
+                        &:hover {
+                            background-color: darken(nth($primaryColor, $style), 5);
+                        }
+                    }
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }
@@ -2136,7 +2178,7 @@
     .featured_blocklist {
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
-            color: #fff;
+            color: #333;
         }
     }
     .classification {
@@ -2218,6 +2260,7 @@
     .hotqa_list {
         h2 {
             background-color: nth($lightColor, $style);
+            color: #333;
         }
     }
     .devicereservation_block {
@@ -2290,6 +2333,13 @@
     }
     .booklist_block .booklist .bookmidblock .data_type_block {
         background-color: nth($lightColor, $style);
+    }
+    .no_result {
+        .related_words {
+            h2 {
+                color: nth($primaryColor, $style);
+            }
+        }
     }
     // _cp.scss
     .book_detail {
@@ -2371,7 +2421,6 @@
                 border: 2px solid lighten(nth($primaryColor, $style), 10);
             }
         }
-       
     }
     // line 
     .linecontent {
@@ -2494,6 +2543,12 @@
                 a {
                     &.addfield {
                         background-color: nth($primaryColor, $style);
+                        &:hover {
+                            background-color: darken(nth($primaryColor, $style), 5);
+                        }
+                    }
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }
@@ -2627,7 +2682,7 @@
     .featured_blocklist {
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
-            color: #fff;
+            color: #333;
         }
     }
     .classification {
@@ -2721,6 +2776,7 @@
     .hotqa_list {
         h2 {
             background-color: nth($lightColor, $style);
+            color: #333;
         }
     }
     .devicereservation_block {
@@ -2793,6 +2849,13 @@
     }
     .booklist_block .booklist .bookmidblock .data_type_block {
         background-color: nth($lightColor, $style);
+    }
+    .no_result {
+        .related_words {
+            h2 {
+                color: nth($primaryColor, $style);
+            }
+        }
     }
     // _cp.scss
     .book_detail {
@@ -2874,7 +2937,6 @@
                 border: 2px solid lighten(nth($primaryColor, $style), 5);
             }
         }
-       
     }
     // line 
     .linecontent {
@@ -2960,7 +3022,7 @@
     $style: index($sites, version03);
     // _header.scss
     .header {
-        @include gradient(#00a79d, #00988d, vertical);
+        @include gradient(#0B857D, #0B857D, vertical);
         >.container {
             .sidebarCtrl {
                 background-image: url('../images/sidebarCtrl_white.png');
@@ -2997,6 +3059,12 @@
                 a {
                     &.addfield {
                         background-color: nth($primaryColor, $style);
+                        &:hover {
+                            background-color: darken(nth($primaryColor, $style), 5);
+                        }
+                    }
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }
@@ -3006,12 +3074,12 @@
         div {
             a {
                 span {
-                    background-color: darken(nth($primaryColor, $style), 15);
+                    background-color: nth($primaryColor, $style);
                 }
                 &:hover {
                     color: darken(nth($primaryColor, $style), 10);
                     span {
-                        background-color: nth($primaryColor, $style);
+                        background-color: lighten(nth($primaryColor, $style), 5);
                     }
                 }
             }
@@ -3130,11 +3198,11 @@
     .featured_blocklist {
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
-            color: #fff;
+            color: #333;
         }
     }
     .classification {
-        background-color: darken(nth($lightColor, $style), 10);
+        background-color: nth($lightColor, $style);
         span {
             color: #000;
         }
@@ -3224,6 +3292,7 @@
     .hotqa_list {
         h2 {
             background-color: nth($lightColor, $style);
+            color: #333;
         }
     }
     .devicereservation_block {
@@ -3232,22 +3301,14 @@
                 background-color: nth($lightColor, $style);
                 &:hover,
                 &:focus {
-                    color: #fff;
+                   
                     background-color: darken(nth($lightColor, $style), 10);
+                    
                 }
                 h3 {
-                    color: #fff;
                     font-weight: 400;
                 }
-                ul {
-                    li {
-                        color: #fff;
-                        &:before {
-                            border: 5px solid #fff;
-                            border-color: transparent transparent transparent #fff;
-                        }
-                    }
-                }
+                
             }
         }
     }
@@ -3265,11 +3326,9 @@
     }
     .reservation_explain {
         background-color: nth($lightColor, $style);
-        color: #fff;
     }
     .device_explain {
         background-color: nth($lightColor, $style);
-        color: #fff;
         h3 {
             font-weight: 400;
         }
@@ -3296,6 +3355,13 @@
     }
     .booklist_block .booklist .bookmidblock .data_type_block {
         background-color: nth($lightColor, $style);
+    }
+    .no_result {
+        .related_words {
+            h2 {
+                color: nth($primaryColor, $style);
+            }
+        }
     }
     // _cp.scss
     .book_detail {
@@ -3373,11 +3439,10 @@
             border: 2px solid nth($primaryColor, $style);
             color: #fff;
             &:hover {
-                background-color: nth($primaryColor, $style);
-                border: 2px solid nth($primaryColor, $style);
+                background-color: darken(nth($primaryColor, $style), 5);
+                border: 2px solid darken(nth($primaryColor, $style), 5);
             }
         }
-        
     }
     // line 
     .linecontent {
@@ -3510,6 +3575,12 @@
                 a {
                     &.addfield {
                         background-color: nth($primaryColor, $style);
+                        &:hover {
+                            background-color: darken(nth($primaryColor, $style), 5);
+                        }
+                    }
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }
@@ -3643,7 +3714,7 @@
     .featured_blocklist {
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
-            color: #fff;
+            color: #333;
         }
     }
     .classification {
@@ -3811,6 +3882,13 @@
     .booklist_block .booklist .bookmidblock .data_type_block {
         background-color: nth($lightColor, $style);
     }
+    .no_result {
+        .related_words {
+            h2 {
+                color: nth($primaryColor, $style);
+            }
+        }
+    }
     // _cp.scss
     .book_detail {
         .book_cover_source {
@@ -3891,7 +3969,6 @@
                 border: 2px solid nth($primaryColor, $style);
             }
         }
-        
     }
     // line 
     .linecontent {
@@ -4014,6 +4091,12 @@
                 a {
                     &.addfield {
                         background-color: nth($primaryColor, $style);
+                        &:hover {
+                            background-color: darken(nth($primaryColor, $style), 5);
+                        }
+                    }
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }
@@ -4147,7 +4230,7 @@
     .featured_blocklist {
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
-            color: #000;
+            color: #333;
         }
     }
     .classification {
@@ -4315,6 +4398,13 @@
     .booklist_block .booklist .bookmidblock .data_type_block {
         background-color: nth($lightColor, $style);
     }
+    .no_result {
+        .related_words {
+            h2 {
+                color: nth($primaryColor, $style);
+            }
+        }
+    }
     // _cp.scss
     .book_detail {
         .book_cover_source {
@@ -4395,7 +4485,6 @@
                 border: 2px solid nth($primaryColor, $style);
             }
         }
-        
     }
     // line 
     .linecontent {
@@ -4519,6 +4608,12 @@
                 a {
                     &.addfield {
                         background-color: nth($primaryColor, $style);
+                        &:hover {
+                            background-color: darken(nth($primaryColor, $style), 5);
+                        }
+                    }
+                    &:hover {
+                        color: #fff;
                     }
                 }
             }
@@ -4652,7 +4747,7 @@
     .featured_blocklist {
         background-color: nth($lightColor, $style);
         h3, .datalist, .explain {
-            color: #000f;
+            color: #333;
         }
     }
     .classification {
@@ -4807,6 +4902,13 @@
     .booklist_block .booklist .bookmidblock .data_type_block {
         background-color: nth($lightColor, $style);
     }
+    .no_result {
+        .related_words {
+            h2 {
+                color: nth($primaryColor, $style);
+            }
+        }
+    }
     // _cp.scss
     .book_detail {
         .book_cover_source {
@@ -4887,7 +4989,6 @@
                 border: 2px solid nth($primaryColor, $style);
             }
         }
-       
     }
     // line 
     .linecontent {

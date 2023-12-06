@@ -7,9 +7,15 @@
          padding: 1em 2em;
          background: #EEE;
          @include border-radius(6px);
+         li{
+            margin-bottom: 5px;
+         }
      }
      h2 {
          @extend .block01_h2;
+     }
+     p{
+        line-height: 1.5em;
      }
  }
  .cascading {
