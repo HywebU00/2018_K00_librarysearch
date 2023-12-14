@@ -1,8 +1,8 @@
 body.fix {
-    height: 100%;
-    overflow: hidden !important;
-    width: 100%;
-    position: fixed;
+  height: 100%;
+  overflow: hidden !important;
+  width: 100%;
+  position: fixed;
 }
 //共用燈箱設定
 .login_lightbox,
@@ -10,1378 +10,1441 @@ body.fix {
 .lightboxstyle,
 .exportstyle,
 .forwardstyle,
-.referencestyle, .mystudymenu_lightbox, .choose_librarycard_lightbox, .explain_linghtbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox {
-    position: fixed;
+.referencestyle,
+.mystudymenu_lightbox,
+.choose_librarycard_lightbox,
+.explain_linghtbox,
+.qrcode_lightbox,
+.recommendbook_lightbox,
+.search_field_lightbox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99;
+  display: none;
+  .overlay {
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .8);
-    z-index: 99;
-    display: none;
-    .overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
+  }
 }
 .close {
-    a {
-        background-image: url('../images/icon_close.png');
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        width: 31px;
-        height: 31px;
-        display: block;
-        cursor: pointer;
-        font-size: 0;
-    }
+  a {
+    background-image: url('../images/icon_close.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 31px;
+    height: 31px;
+    display: block;
+    cursor: pointer;
+    font-size: 0;
+  }
 }
 .mainleftblock .lightboxstyle {
-    .close {
-        display: block !important;
-        z-index: 9;
-    }
+  .close {
+    display: block !important;
+    z-index: 9;
+  }
 }
 // 登入
-.login_lightbox, .choose_librarycard_lightbox, .qrcode_lightbox, .recommendbook_lightbox, .search_field_lightbox {
-    .loginblock {
-        max-width: 50vw;
-        min-width: 450px;
-        max-height: 80vh;
+.login_lightbox,
+.choose_librarycard_lightbox,
+.qrcode_lightbox,
+.recommendbook_lightbox,
+.search_field_lightbox {
+  .loginblock {
+    max-width: 50vw;
+    min-width: 450px;
+    max-height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 45px 25px 35px 25px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: auto;
+    text-align: left;
+    // @media(max-width: 767px) {
+    //     max-width: 100vh;
+    //     top: 45%;
+    //     left: 25%;
+    //     transform: translate(-50%, -50%);
+    //     padding: 35px 20px 35px 20px;
+    // }
+    @include screen('xs_mobile') {
+      transform: translate(0, 0);
+      padding: 50px 20px 35px 20px;
+      left: 0;
+      top: 0;
+      border-radius: 0;
+      height: 100%;
+      width: 100%;
+      max-width: 100vh;
+      min-width: auto;
+      max-height: 100vh;
+      @include box-sizing;
+    }
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
+    h2 {
+      font-size: 1.875em !important;
+      text-align: center;
+      border-bottom: 2px solid nth($primaryColor, $style);
+      margin: 0px auto 20px;
+      padding: 0 0 20px;
+      color: nth($primaryColor, $style) !important;
+      line-height: 1.35em;
+    }
+    .form_grp {
+      label {
+        font-size: 1.188em;
+        width: 20%;
+      }
+      input[type='text'],
+      input[type='password'] {
+        width: 75%;
+      }
+      @include screen('tablet') {
+        label {
+          font-size: 1.25em;
+          width: 100%;
+        }
+        input[type='text'],
+        input[type='password'] {
+          width: 100%;
+        }
+      }
+      img {
+        vertical-align: middle;
+      }
+    }
+    .btn_grp {
+      padding: 0;
+      margin: 10px 0;
+    }
+    .unable_login,
+    .other_login {
+      margin: 20px 0 30px;
+      padding: 0;
+      text-align: center;
+      position: relative;
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 45px 25px 35px 25px;
-        background-color: #fff;
-        border-radius: 5px;
-        overflow: auto;
+        top: 15px;
+        left: 0;
+        right: 0;
+        z-index: 9;
+        border-top: 2px solid #999;
+        border-radius: 0px;
+        z-index: 2;
+      }
+      &.otherstyle {
+        padding: 5px 10px;
+        &:before {
+          border: 1px solid #999;
+          border-radius: 5px;
+        }
+        h3 {
+          text-align: center;
+          span {
+            margin-left: 0;
+          }
+        }
+      }
+      h3 {
+        position: relative;
         text-align: left;
-        // @media(max-width: 767px) {
-        //     max-width: 100vh;
-        //     top: 45%;
-        //     left: 25%;
-        //     transform: translate(-50%, -50%);
-        //     padding: 35px 20px 35px 20px;
-        // }
-        @include screen('xs_mobile') {
-            transform: translate(0, 0);
-            padding: 50px 20px 35px 20px;
-            left: 0;
-            top: 0;
-            border-radius: 0;
-            height: 100%;
-            width: 100%;
-            max-width: 100vh;
-            min-width: auto;
-            max-height: 100vh;
-            @include box-sizing;
+        margin: 0 0 5px !important;
+        padding: 0 !important;
+        font-size: 1.25em;
+        border: none !important;
+        span {
+          background-color: #fff;
+          padding: 5px 15px;
+          position: relative;
+          z-index: 98;
+          display: inline-block;
+          margin-left: 20px;
+          color: #333;
         }
-        .close {
-            position: absolute;
-            right: 15px;
-            top: 10px;
-        }
-        h2 {
-            font-size: 1.875em !important;
+      }
+      input,
+      button {
+        position: relative;
+        z-index: 3;
+      }
+    }
+    @media (max-width: 400px) {
+      .btn,
+      .btn-green,
+      .btn-blue,
+      .btn-yellow,
+      .btn-orange,
+      .btn-red,
+      .btn-purple,
+      form button,
+      form input[type='button'],
+      form input[type='submit'],
+      form input[type='reset'],
+      form .upload_grp .upload_btn {
+        margin: 0 0 10px;
+      }
+    }
+    .logintab {
+      ul {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        li {
+          width: 48%;
+          float: left;
+          list-style: none;
+          margin: 0 0.2em !important;
+          a {
+            display: block !important;
+            color: nth($primaryColor, $style);
+            border: 2px solid nth($primaryColor, $style);
+            padding: 0.5em !important;
             text-align: center;
-            border-bottom: 2px solid nth($primaryColor, $style);
-            margin: 0px auto 20px;
-            padding: 0 0 20px;
-            color: nth($primaryColor, $style) !important;
-            line-height: 1.35em;
-        }
-        .form_grp {
-            label {
-                font-size: 1.188em;
-                width: 20%;
+            box-sizing: border-box;
+            &:hover,
+            &.active {
+              background-color: nth($primaryColor, $style);
+              color: #fff;
             }
-            input[type="text"],
-            input[type="password"] {
-                width: 75%;
+          }
+          @media (max-width: 400px) {
+            width: auto;
+            float: none;
+            clear: both;
+            margin: 0 0 5px;
+          }
+        }
+      }
+    }
+    //
+    .account_content {
+      clear: both;
+      p {
+        margin: 10px 0 !important;
+      }
+      .form_grp {
+        label {
+          margin: 5px 0;
+        }
+        input[type='text'],
+        input[type='password'] {
+          width: 78%;
+          @include screen('tablet') {
+            width: 100%;
+          }
+        }
+        &.password_toggle {
+          display: flex;
+          position: relative;
+          flex-wrap: wrap;
+          button {
+            &.btn-icon {
+              font-size: 0;
+              right: 0.5em;
+              bottom: 10px;
+              height: 30px;
+              top: auto;
+              background: none;
+              border: transparent;
+              position: absolute;
+              padding: 0 !important;
+              min-width: 3em;
+              box-shadow: none;
+              margin-right: 22px;
+              @media (max-width: 400px) {
+                bottom: 0;
+              }
+              &:focus {
+                box-shadow: 0 0px 0px 2px #f1ad00;
+              }
+            }
+            &.btn_icon_hide {
+              background-image: url('../images/icon/icon_hide.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: 20px;
+              width: 20px;
+            }
+            &.btn_icon_show {
+              background-image: url('../images/icon/icon_show.svg');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: 20px;
+              width: 20px;
             }
             @include screen('tablet') {
-                label {
-                    font-size: 1.25em;
-                    width: 100%;
-                }
-                input[type="text"],
-                input[type="password"] {
-                    width: 100%;
-                }
+              top: 1.7em;
             }
-            img {
-                vertical-align: middle;
-            }
+          }
         }
-        .btn_grp {
-            padding: 0;
-            margin: 10px 0;
-        }
-        .unable_login, .other_login {
-            margin: 20px 0;
-            padding: 0 0 15px;
-            text-align: center;
-            position: relative;
-            &:before {
-                content: '';
-                width: 100%;
-                min-height: 90px;
-                position: absolute;
-                top: 15px;
-                left: 0;
-                right: 0;
-                z-index: 9;
-                border-top: 2px solid #999;
-                border-radius: 0px;
-                z-index: 2;
-            }
-            &.otherstyle {
-                &:before {
-                    border: 1px solid #999;
-                    border-radius: 5px;
-                }
-                h3 {
-                    text-align: center;
-                    span {
-                        margin-left: 0;
-                    }
-                }
-            }
-            h3 {
-                position: relative;
-                text-align: left;
-                margin: 10px 0 5px !important;
-                padding: 0 !important;
-                font-size: 1.25em;
-                border: none !important;
-                span {
-                    background-color: #fff;
-                    padding: 5px 15px;
-                    position: relative;
-                    z-index: 98;
-                    display: inline-block;
-                    margin-left: 20px;
-                    color: #333;
-                }
-            }
-            input, button {
-                position: relative;
-                z-index: 3;
-            }
-        }
-        @media(max-width: 400px) {
-            .btn,
-            .btn-green,
-            .btn-blue,
-            .btn-yellow,
-            .btn-orange,
-            .btn-red,
-            .btn-purple,
-            form button,
-            form input[type="button"],
-            form input[type="submit"],
-            form input[type="reset"],
-            form .upload_grp .upload_btn {
-                margin: 0 0 10px;
-            }
-        }
-        .logintab {
-            ul {
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                li {
-                    width: 48%;
-                    float: left;
-                    list-style: none;
-                    margin: 0 .2em !important;
-                    a {
-                        display: block !important;
-                        color: nth($primaryColor, $style);
-                        border: 2px solid nth($primaryColor, $style);
-                        padding: .5em !important;
-                        text-align: center;
-                        box-sizing: border-box;
-                        &:hover, &.active {
-                            background-color: nth($primaryColor, $style);
-                            color: #fff;
-                        }
-                    }
-                    @media(max-width: 400px) {
-                        width: auto;
-                        float: none;
-                        clear: both;
-                        margin: 0 0 5px;
-                    }
-                }
-            }
-        }
-        // 
-        .account_content {
-            clear: both;
-            p {
-                margin: 10px 0 !important;
-            }
-            .form_grp {
-                label {
-                    margin: 5px 0;
-                }
-                input[type="text"],
-                input[type="password"] {
-                    width: 78%;
-                    @include screen('tablet') {
-                        width: 100%;
-                    }
-                }
-                &.password_toggle {
-                    display: flex;
-                    position: relative;
-                    flex-wrap: wrap;
-                    button {
-                        &.btn-icon {
-                            font-size: 0;
-                            right: .5em;
-                            bottom: 10px;
-                            height: 30px;
-                            top: auto;
-                            background: none;
-                            border: transparent;
-                            position: absolute;
-                            padding: 0 !important;
-                            min-width: 3em;
-                            box-shadow: none;
-                            margin-right: 22px;
-                            @media(max-width: 400px) {
-                                bottom: 0;
-                            }
-                            &:focus {
-                                box-shadow: 0 0px 0px 2px #f1ad00;
-                            }
-                        }
-                        &.btn_icon_hide {
-                            background-image: url('../images/icon/icon_hide.svg');
-                            background-repeat: no-repeat;
-                            background-position: center;
-                            background-size: 20px;
-                            width: 20px;
-                        }
-                        &.btn_icon_show {
-                            background-image: url('../images/icon/icon_show.svg');
-                            background-repeat: no-repeat;
-                            background-position: center;
-                            background-size: 20px;
-                            width: 20px;
-                        }
-                        @include screen('tablet') {
-                            top: 1.7em;
-                        }
-                    }
-                }
-            }
-        }
-        //
-        .qrcode_content {
-            text-align: center;
-            display: none;
-            padding-top: 30px;
-            .qrcode {
-                border: 1px solid #ccc;
-                text-align: center;
-                padding: 15px;
-                width: 60%;
-                margin: 0 auto 10px;
-                img {
-                    display: block;
-                    width: 128px;
-                    height: 128px;
-                    margin: 0 auto;
-                }
-                .reorganize {
-                    background-image: url('../images/icon_reorganize.png');
-                    background-repeat: no-repeat;
-                    background-position: 10px center;
-                    display: block;
-                    padding: 5px 5px 5px 30px;
-                    width: 70px;
-                    margin: 0 auto;
-                    text-align: left;
-                }
-            }
-            .means {
-                margin: 10px 10px 20px;
-                position: relative;
-                display: inline-block;
-                padding: 0;
-                &:before {
-                    content: 'i';
-                    width: 25px;
-                    height: 25px;
-                    background-color: #666;
-                    color: #fff;
-                    border-radius: 50%;
-                    display: inline-block;
-                    line-height: 25px;
-                    position: absolute;
-                    left: -30px;
-                }
-            }
-            .qrcode_btn {
-                a {
-                    background-color: nth($primaryColor, $style);
-                    color: #fff;
-                    display: block;
-                    padding: 10px;
-                    border-radius: 4px;
-                    box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
-                    &:hover {
-                        background-color: lighten(nth($primaryColor, $style), 10);
-                    }
-                }
-            }
-        }
-        // 
+      }
     }
+    //
+    .qrcode_content {
+      text-align: center;
+      display: none;
+      padding-top: 30px;
+      .qrcode {
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 15px;
+        width: 60%;
+        margin: 0 auto 10px;
+        img {
+          display: block;
+          width: 128px;
+          height: 128px;
+          margin: 0 auto;
+        }
+        .reorganize {
+          background-image: url('../images/icon_reorganize.png');
+          background-repeat: no-repeat;
+          background-position: 10px center;
+          display: block;
+          padding: 5px 5px 5px 30px;
+          width: 70px;
+          margin: 0 auto;
+          text-align: left;
+        }
+      }
+      .means {
+        margin: 10px 10px 20px;
+        position: relative;
+        display: inline-block;
+        padding: 0;
+        &:before {
+          content: 'i';
+          width: 25px;
+          height: 25px;
+          background-color: #666;
+          color: #fff;
+          border-radius: 50%;
+          display: inline-block;
+          line-height: 25px;
+          position: absolute;
+          left: -30px;
+        }
+      }
+      .qrcode_btn {
+        a {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          display: block;
+          padding: 10px;
+          border-radius: 4px;
+          box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+          &:hover {
+            background-color: lighten(nth($primaryColor, $style), 10);
+          }
+        }
+      }
+    }
+    //
+  }
 }
 .recommendbook_lightbox {
-    .loginblock {
-        max-width: 50vw;
-        min-width: 900px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 45px 25px 35px 25px;
-        background-color: #fff;
-        border-radius: 5px;
-        overflow: auto;
-        text-align: left;
-        @include screen('tablet') {
-            min-width: 700px;
-        }
-        @media(max-width: 767px) {
-            min-width: 500px;
-            top: 50%;
-            left: 50%;
-            padding: 35px 20px 35px 20px;
-        }
-        @include screen('xs_mobile') {
-            max-width: 100vh;
-            transform: translate(0, 0);
-            padding: 50px 20px 35px 20px;
-            left: 0;
-            top: 0;
-            border-radius: 0;
-            height: 100%;
-            width: 100%;
-            max-width: auto;
-            min-width: auto;
-            @include box-sizing;
-        }
+  .loginblock {
+    max-width: 50vw;
+    min-width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 45px 25px 35px 25px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: auto;
+    text-align: left;
+    @include screen('tablet') {
+      min-width: 700px;
     }
+    @media (max-width: 767px) {
+      min-width: 500px;
+      top: 50%;
+      left: 50%;
+      padding: 35px 20px 35px 20px;
+    }
+    @include screen('xs_mobile') {
+      max-width: 100vh;
+      transform: translate(0, 0);
+      padding: 50px 20px 35px 20px;
+      left: 0;
+      top: 0;
+      border-radius: 0;
+      height: 100%;
+      width: 100%;
+      max-width: auto;
+      min-width: auto;
+      @include box-sizing;
+    }
+  }
 }
-// 查詢欄位  
+// 查詢欄位
 .search_field_lightbox {
-    .loginblock {
-        max-width: 50vw;
-        min-width: 250px;
-        max-height: 80vh;
-        @media(max-width: 767px) {
-            max-width: 100vh;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 35px 20px 35px 20px;
-        }
-        @include screen('xs_mobile') {
-            transform: translate(0, 0);
-            padding: 50px 20px 35px 20px;
-            left: 0;
-            top: 0;
-            border-radius: 0;
-            height: 100%;
-            width: 100%;
-            max-height: 100vh;
-            max-width: auto;
-            min-width: auto;
-            @include box-sizing;
-        }
+  .loginblock {
+    max-width: 50vw;
+    min-width: 250px;
+    max-height: 80vh;
+    @media (max-width: 767px) {
+      max-width: 100vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 35px 20px 35px 20px;
     }
+    @include screen('xs_mobile') {
+      transform: translate(0, 0);
+      padding: 50px 20px 35px 20px;
+      left: 0;
+      top: 0;
+      border-radius: 0;
+      height: 100%;
+      width: 100%;
+      max-height: 100vh;
+      max-width: auto;
+      min-width: auto;
+      @include box-sizing;
+    }
+  }
 }
 // 圖書館借閱卡
 .choose_librarycard_lightbox .loginblock {
-    width: 100%;
-    @media(max-width: 767px) {
-        width: auto;
-    }
+  width: 100%;
+  @media (max-width: 767px) {
+    width: auto;
+  }
 }
 .librarycard_blcok {
-    text-align: center;
-    padding: 10px 0;
-    // width: 70vw;
-    .librarycard {
-        display: inline-block;
-        margin: 0 1% 10px;
-        width: 47%;
-        @include screen('notebook') {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        a {
-            display: block;
-            padding: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            @include screen('xs_mobile') {
-                padding: 15px 10px;
-            }
-            .picimg {
-                width: 56px;
-                background-color: #eee;
-                border: 3px solid #fff;
-                float: left;
-                margin-right: 20px;
-                padding: 8px;
-                img {
-                    width: 56px;
-                }
-                @include screen('xs_mobile') {
-                    margin-right: 10px;
-                }
-            }
-            ul {
-                margin: 0;
-                padding: 0;
-                list-style-type: none;
-                overflow: hidden;
-                font-size: 0.938em;
-                li {
-                    margin-bottom: 8px;
-                    display: block;
-                    float: none;
-                    text-align: left;
-                    padding: 0 0 8px;
-                    border-bottom: 1px dashed #ddd;
-                }
-            }
-            &:hover {
-                background-color: #ffc;
-                color: #333;
-            }
-        }
+  text-align: center;
+  padding: 10px 0;
+  // width: 70vw;
+  .librarycard {
+    display: inline-block;
+    margin: 0 1% 10px;
+    width: 47%;
+    @include screen('notebook') {
+      width: 100%;
+      margin-bottom: 10px;
     }
+    a {
+      display: block;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      @include screen('xs_mobile') {
+        padding: 15px 10px;
+      }
+      .picimg {
+        width: 56px;
+        background-color: #eee;
+        border: 3px solid #fff;
+        float: left;
+        margin-right: 20px;
+        padding: 8px;
+        img {
+          width: 56px;
+        }
+        @include screen('xs_mobile') {
+          margin-right: 10px;
+        }
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        overflow: hidden;
+        font-size: 0.938em;
+        li {
+          margin-bottom: 8px;
+          display: block;
+          float: none;
+          text-align: left;
+          padding: 0 0 8px;
+          border-bottom: 1px dashed #ddd;
+        }
+      }
+      &:hover {
+        background-color: #ffc;
+        color: #333;
+      }
+    }
+  }
 }
 // 相關連結
 .related_lightbox {
-    .relatedbox {
-        max-width: 80vh;
-        // max-height: 60vh;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 35px 20px 35px 20px;
-        background-color: #fff;
-        border-radius: 5px; // @include box-sizing();
-        @media(max-width: 767px) {
-            top: 45%;
-        }
-        @media(max-width: 575px) {
-            max-width: 90vh;
-            left: 30%;
-            transform: translate(-20%, -50%);
-            padding: 35px 20px 35px 10px;
-        }
-        .close {
-            a {
-                background-image: url('../images/icon_close03.png');
-                background-repeat: no-repeat;
-                background-position: 0 0;
-                background-size: 38px;
-                width: 38px;
-                height: 38px;
-                display: block;
-                cursor: pointer;
-                position: absolute;
-                right: 3%;
-                top: 12px;
-                z-index: 9999;
-            }
-        }
-        h2 {
-            font-size: 1.875em;
-            text-align: left;
-            border-bottom: 2px solid nth($primaryColor, $style);
-            margin: 0px auto 20px;
-            padding: 0 0 20px;
-            color: nth($primaryColor, $style);
-        }
-        .relatedlist {
-            margin: 25px 0 0 15px;
-            height: 50vh;
-            overflow-y: auto;
-            padding-right: 0px;
-            scrollbar-face-color: #eee; //（軸面顏色） 
-            scrollbar-highlight-color: #ccc; //軸面左角邊顏色
-            scrollbar-shadow-color: #ccc; //軸面右角邊顏色 
-            scrollbar-3dlight-color: #fff; //左立體邊顏色
-            scrollbar-darkshadow-color: #fff; //右立體邊顏色
-            scrollbar-arrow-color: #666; //箭頭顏色
-            scrollbar-track-color: #fff; //軸軌顏色
-            @include box-sizing();
-            ul {
-                margin: 0;
-                padding: 0;
-                li {
-                    display: inline-block;
-                    width: 48%;
-                    margin-bottom: 8px;
-                    margin-right: .8%;
-                    &:nth-child(2n) {
-                        margin-right: 0;
-                    }
-                    @media(max-width:767px) {
-                        width: 100%;
-                        margin-right: 0;
-                    }
-                    a {
-                        padding: 10px 15px 10px 35px;
-                        display: block;
-                        background-color: #eee;
-                        border-radius: 5px;
-                        transition: .5s;
-                        position: relative;
-                        &:before {
-                            content: '';
-                            position: absolute;
-                            width: 6px;
-                            height: 6px;
-                            border-radius: 50%;
-                            background-color: nth($primaryColor, $style);
-                            left: 15px;
-                            top: 20px;
-                            transition: .5s;
-                        }
-                        &:hover {
-                            padding: 10px 15px 10px 45px;
-                            background-color: nth($lightColor, $style);
-                            color: #000;
-                            &:before {
-                                left: 25px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+  .relatedbox {
+    max-width: 80vh;
+    // max-height: 60vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 35px 20px 35px 20px;
+    background-color: #fff;
+    border-radius: 5px; // @include box-sizing();
+    @media (max-width: 767px) {
+      top: 45%;
     }
+    @media (max-width: 575px) {
+      max-width: 90vh;
+      left: 30%;
+      transform: translate(-20%, -50%);
+      padding: 35px 20px 35px 10px;
+    }
+    .close {
+      a {
+        background-image: url('../images/icon_close03.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 38px;
+        width: 38px;
+        height: 38px;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 3%;
+        top: 12px;
+        z-index: 9999;
+      }
+    }
+    h2 {
+      font-size: 1.875em;
+      text-align: left;
+      border-bottom: 2px solid nth($primaryColor, $style);
+      margin: 0px auto 20px;
+      padding: 0 0 20px;
+      color: nth($primaryColor, $style);
+    }
+    .relatedlist {
+      margin: 25px 0 0 15px;
+      height: 50vh;
+      overflow-y: auto;
+      padding-right: 0px;
+      scrollbar-face-color: #eee; //（軸面顏色）
+      scrollbar-highlight-color: #ccc; //軸面左角邊顏色
+      scrollbar-shadow-color: #ccc; //軸面右角邊顏色
+      scrollbar-3dlight-color: #fff; //左立體邊顏色
+      scrollbar-darkshadow-color: #fff; //右立體邊顏色
+      scrollbar-arrow-color: #666; //箭頭顏色
+      scrollbar-track-color: #fff; //軸軌顏色
+      @include box-sizing();
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          display: inline-block;
+          width: 48%;
+          margin-bottom: 8px;
+          margin-right: 0.8%;
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+          @media (max-width: 767px) {
+            width: 100%;
+            margin-right: 0;
+          }
+          a {
+            padding: 10px 15px 10px 35px;
+            display: block;
+            background-color: #eee;
+            border-radius: 5px;
+            transition: 0.5s;
+            position: relative;
+            &:before {
+              content: '';
+              position: absolute;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background-color: nth($primaryColor, $style);
+              left: 15px;
+              top: 20px;
+              transition: 0.5s;
+            }
+            &:hover {
+              padding: 10px 15px 10px 45px;
+              background-color: nth($lightColor, $style);
+              color: #000;
+              &:before {
+                left: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // 首頁相關連結
 .related_lightbox {
-    .relatedboxmp {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        .close {
-            position: absolute;
-            right: 25px;
-            top: 20px;
-            cursor: pointer;
-            a {
-                background-image: url('../images/icon_close03.png');
-                background-repeat: no-repeat;
-                background-position: 0 0;
-                background-size: 38px;
-                width: 38px;
-                height: 38px;
-                display: block;
-                cursor: pointer;
-            }
-        }
-        h2 {
-            font-size: 1.875em;
-            text-align: left;
-            border-bottom: 2px solid nth($primaryColor, $style);
-            margin: 0px auto 20px;
-            padding: 0 0 20px;
-            color: nth($primaryColor, $style);
-        }
-        .relatedlist {
-            margin: 0;
-            height: 100vh;
-            overflow-y: auto;
-            padding: 100px;
-            @include screen('mobile') {
-                padding: 100px 50px;
-            }
-            scrollbar-face-color: #eee; //（軸面顏色） 
-            scrollbar-highlight-color: #ccc; //軸面左角邊顏色
-            scrollbar-shadow-color: #ccc; //軸面右角邊顏色 
-            scrollbar-3dlight-color: #fff; //左立體邊顏色
-            scrollbar-darkshadow-color: #fff; //右立體邊顏色
-            scrollbar-arrow-color: #666; //箭頭顏色
-            scrollbar-track-color: #fff; //軸軌顏色
-            @include box-sizing();
-            ul {
-                margin: 0;
-                padding: 0;
-                li {
-                    display: inline-block;
-                    margin-right: .8%;
-                    font-size: 1.5em;
-                    @media (min-width: 1200px) {
-                        width: 30%;
-                        margin-bottom: 20px;
-                        &:nth-child(3n) {
-                            margin-right: 0;
-                        }
-                    }
-                    @include screen('notebook') {
-                        width: 48%;
-                        margin-bottom: 15px;
-                        &:nth-child(2n) {
-                            margin-right: 0;
-                        }
-                    }
-                    @include screen('xs_mobile') {
-                        width: 100%;
-                        margin-right: 0;
-                    }
-                    a {
-                        padding: 10px 15px 10px 35px;
-                        display: block;
-                        color: #fff;
-                        text-align: left;
-                        transition: .5s;
-                        position: relative;
-                        &:before {
-                            content: '';
-                            position: absolute;
-                            width: 6px;
-                            height: 6px;
-                            border-radius: 50%;
-                            background-color: #fff;
-                            left: 15px;
-                            top: 20px;
-                            transition: .5s;
-                        }
-                        &:hover {
-                            padding: 10px 15px 10px 45px;
-                            color: #000;
-                            background-color: nth($lightColor, $style);
-                            border-radius: 50px;
-                            &:before {
-                                left: 25px;
-                                background-color: #000;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+  .relatedboxmp {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .close {
+      position: absolute;
+      right: 25px;
+      top: 20px;
+      cursor: pointer;
+      a {
+        background-image: url('../images/icon_close03.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 38px;
+        width: 38px;
+        height: 38px;
+        display: block;
+        cursor: pointer;
+      }
     }
+    h2 {
+      font-size: 1.875em;
+      text-align: left;
+      border-bottom: 2px solid nth($primaryColor, $style);
+      margin: 0px auto 20px;
+      padding: 0 0 20px;
+      color: nth($primaryColor, $style);
+    }
+    .relatedlist {
+      margin: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 100px;
+      @include screen('mobile') {
+        padding: 100px 50px;
+      }
+      scrollbar-face-color: #eee; //（軸面顏色）
+      scrollbar-highlight-color: #ccc; //軸面左角邊顏色
+      scrollbar-shadow-color: #ccc; //軸面右角邊顏色
+      scrollbar-3dlight-color: #fff; //左立體邊顏色
+      scrollbar-darkshadow-color: #fff; //右立體邊顏色
+      scrollbar-arrow-color: #666; //箭頭顏色
+      scrollbar-track-color: #fff; //軸軌顏色
+      @include box-sizing();
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          display: inline-block;
+          margin-right: 0.8%;
+          font-size: 1.5em;
+          @media (min-width: 1200px) {
+            width: 30%;
+            margin-bottom: 20px;
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+          }
+          @include screen('notebook') {
+            width: 48%;
+            margin-bottom: 15px;
+            &:nth-child(2n) {
+              margin-right: 0;
+            }
+          }
+          @include screen('xs_mobile') {
+            width: 100%;
+            margin-right: 0;
+          }
+          a {
+            padding: 10px 15px 10px 35px;
+            display: block;
+            color: #fff;
+            text-align: left;
+            transition: 0.5s;
+            position: relative;
+            &:before {
+              content: '';
+              position: absolute;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background-color: #fff;
+              left: 15px;
+              top: 20px;
+              transition: 0.5s;
+            }
+            &:hover {
+              padding: 10px 15px 10px 45px;
+              color: #000;
+              background-color: nth($lightColor, $style);
+              border-radius: 50px;
+              &:before {
+                left: 25px;
+                background-color: #000;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 //// 燈箱總樣式
 .lightboxstyle {
-    overflow-y: scroll;
-    .lightboxstyle_block {
+  overflow-y: scroll;
+  .lightboxstyle_block {
+    width: 80vh;
+    position: relative;
+    padding: 20px 20px 25px 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    @include box-sizing();
+    @include screen('mobile') {
+      width: 70vh;
+    }
+    @include screen('xs_mobile') {
+      padding: 50px 20px 0px 20px;
+      width: 100%;
+      min-height: 100%;
+      overflow: hidden;
+      border-radius: 0;
+      margin: 0;
+      @include box-sizing;
+    }
+    &.block_extend {
+      width: 90vh;
+      @include screen('mobile') {
         width: 80vh;
-        position: relative;
-        padding: 20px 20px 25px 20px;
-        margin: 20px auto;
-        background-color: #fff;
-        border-radius: 5px;
-        @include box-sizing();
-        @include screen('mobile') {
-            width: 70vh;
-        }
-        @include screen('xs_mobile') {
-            padding: 50px 20px 0px 20px;
-            width: 100%;
-            min-height: 100%;
-            overflow: hidden;
-            border-radius: 0;
-            margin: 0;
-            @include box-sizing;
-        }
-        &.block_extend {
-            width: 90vh;
-            @include screen('mobile') {
-                width: 80vh;
-            }
-            @include screen('xs_mobile') {
-                width: 100%;
-            }
-        }
-        .close {
-            position: absolute;
-            right: 15px;
-            top: 10px;
-        }
-        h2 {
-            font-size: 1.375em;
-            text-align: left;
-            border-bottom: 2px solid nth($primaryColor, $style);
-            margin: 0px auto 20px;
-            padding: 0 30px 10px 0;
-            color: nth($primaryColor, $style);
-            line-height: 1.3em;
-        }
-        //表格資料
-        .lightbox_data {
-            width: 100% !important;
-            overflow-x: hidden;
-            scrollbar-face-color: #eee; //（軸面顏色） 
-            scrollbar-highlight-color: #ccc; //軸面左角邊顏色
-            scrollbar-shadow-color: #ccc; //軸面右角邊顏色 
-            scrollbar-3dlight-color: #fff; //左立體邊顏色
-            scrollbar-darkshadow-color: #fff; //右立體邊顏色
-            scrollbar-arrow-color: #666; //箭頭顏色
-            scrollbar-track-color: #fff; //軸軌顏色
-            //table
-            table {
-                border: 1px dotted $color-gray;
-                th {
-                    border: 1px dotted $color-gray;
-                    text-align: left;
-                    padding: 10px;
-                    span {
-                        margin: 0 5px;
-                        img {
-                            vertical-align: middle;
-                        }
-                    }
-                    a {
-                        color: nth($primaryColor, $style);
-                        &:hover {
-                            color: $color-blue;
-                        }
-                    }
-                }
-                td {
-                    border: none;
-                    padding: 10px 10px 4px;
-                    border: 1px dotted $color-gray;
-                    vertical-align: top;
-                }
-                label {
-                    margin: 0;
-                    padding: 0 0 0 30px;
-                    input {
-                        border-radius: 3px !important;
-                        margin-right: 6px;
-                        margin-left: -28px;
-                    }
-                }
-            }
-            .more {
-                margin: 0 auto;
-                a {
-                    display: block;
-                    text-align: center;
-                    padding: 8px;
-                    background-image: none;
-                    background-color: #F3F3F3 !important;
-                    color: #333;
-                    border-radius: 0;
-                    &:hover {
-                        color: $aHover;
-                    }
-                }
-            }
-            //匯出格式
-            .radio_grp {
-                label {
-                    margin: 0 0 8px;
-                    padding-left: 23px;
-                    padding-top: 3px;
-                    input {
-                        margin-right: 6px;
-                        margin-left: -20px;
-                    }
-                }
-            }
-            //轉寄他人  引用
-            .form_grid {
-                .form_title {
-                    // white-space: nowrap;
-                    // padding-left: 0;
-                    @include screen('mobile') {
-                        padding-left: 0px;
-                    }
-                }
-                .form_content {
-                    @media(max-width: 767px) {
-                        padding-left: 0;
-                        padding-right: 0;
-                    }
-                    img.captcha {
-                        margin-right: 5px;
-                    }
-                    textarea {
-                        height: 7em;
-                    }
-                }
-                button {
-                    margin: -10px 0px 0px;
-                }
-                .btn {
-                    padding: 0.4em 1em !important;
-                }
-            }
-            .form_grid .form_title,
-            .form_grid .form_content {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-            .select_date {
-                width: 45% !important;
-                @include screen('mobile') {
-                    width: 47% !important;
-                }
-                @media(max-width: 580px) {
-                    width: 99% !important;
-                }
-            }
-            //listdata
-            .listdata {
-                p {
-                    margin: 0 0 10px !important;
-                    padding: 0 !important;
-                }
-                ul {
-                    margin: 10px 0;
-                    padding: 0;
-                    li {
-                        display: block;
-                        margin: 0 0 8px;
-                        background-image: url('../images/icon_point.png');
-                        background-repeat: no-repeat;
-                        ;
-                        background-position: 0 5px;
-                        padding-left: 20px;
-                        em {
-                            font-style: normal;
-                            color: $color-orange;
-                        }
-                    }
-                }
-            }
-            //星星
-            .score_star {
-                position: relative;
-                text-align: left;
-                width: 180px;
-                height: 34px;
-                z-index: 0;
-                >img {
-                    position: absolute;
-                    z-index: 99;
-                    width: 180px;
-                    height: 34px;
-                }
-                .score_color {
-                    position: absolute;
-                    z-index: 9;
-                    top: 0;
-                    left: 0;
-                    width: 180px;
-                    height: 34px;
-                    overflow: hidden;
-                }
-            }
-            //
-            .form_contentinline {
-                padding: 0;
-                text-align: left;
-                margin: 10px 0;
-                select {
-                    width: auto;
-                    display: inline-block;
-                    margin-right: 5px;
-                    @include screen('mobile') {
-                        width: 49%;
-                        margin-right: 0px;
-                    }
-                    @include screen('xs_mobile') {
-                        width: 100%;
-                        margin-right: 0px;
-                    }
-                }
-            }
-            // 書名
-            .bookname {
-                margin: 30px 0 10px;
-                font-size: 1.5em;
-                color: nth($primaryColor, $style);
-                line-height: 1.2em;
-                background-image: url('../images/icon_book.png');
-                background-position: 0 0;
-                background-repeat: no-repeat;
-                padding: 0 0 0 30px;
-            }
-            // 兌換條碼
-            .timedata {
-                display: flex;
-                font-size: 1.125em;
-                align-items: center;
-                margin: 0 0 20px;
-                .reciprocal {
-                    flex: none;
-                    flex-basis: 50%;
-                    text-align: center;
-                    font-size: 1.125em;
-                    @media(max-width: 400px) {
-                        flex-basis: 40%
-                    }
-                }
-                .retime {
-                    flex: none;
-                    flex-basis: 50%;
-                    @media(max-width: 400px) {
-                        flex-basis: 60%
-                    }
-                    a {
-                        display: inline-block;
-                        border-radius: 50px;
-                        background-color: #E57373;
-                        color: #fff;
-                        padding: 10px 25px;
-                        text-align: center;
-                        white-space: nowrap;
-                        img {
-                            width: 20px;
-                            margin-right: 10px;
-                            vertical-align: middle
-                        }
-                    }
-                }
-            }
-            .barcode_block {
-                text-align: center;
-                padding: 20px 10px 0;
-                border: 1px solid #ccc;
-                border-radius: 10px;
-                .num {
-                    margin-bottom: 5px;
-                    display: block;
-                }
-                img {
-                    width: 300px;
-                    margin-bottom: 10px;
-                    display: block;
-                    margin: 0 auto;
-                    @media(max-width: 400px) {
-                        width: 90%;
-                    }
-                }
-                p {
-                    font-size: 0.813em;
-                }
-            }
-            // 編輯標籤
-            .editlabel_block {
-                padding: 5px 0;
-                .title {
-                    margin-bottom: .5em;
-                    font-size: 1.125em;
-                }
-                .editlabeldata {
-                    ul {
-                        li {
-                            display: block;
-                            margin-bottom: .5em;
-                            .close {
-                                top: 3px;
-                                right: 1px;
-                            }
-                            &.content_inline {
-                                display: flex;
-                                position: relative;
-                                .addoption {
-                                    position: absolute;
-                                    top: 41px;
-                                    left: 0;
-                                    width:calc(100% - 98px);
-                                    border-radius: 5px;
-                                    border: 1px solid #ccc;
-                                    padding: 4px 10px;
-                                    background-color: #fff;
-                                    @include box-sizing;
-                                    display: none;
-                                    z-index: 1;
-                                   
-                                    ul {
-                                        margin: 0;
-                                        padding: 0;
-                                        list-style: none;
-                                        li {
-                                            display: block;
-                                            margin: 0;
-                                            a {
-                                                display: block;
-                                                padding: 4px;
-                                                border-bottom: 1px solid #ccc;
-                                                text-decoration: none;
-                                                color: #666;
-                                                &:hover {
-                                                    color: $aHover;
-                                                }
-                                            }
-                                            &:last-child {
-                                                a {
-                                                    border: none;
-                                                }
-                                            }
-                                            &:before {
-                                                content: "";
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            button {
-                                min-width: auto;
-                                margin-left: 0.3em;
-                            }
-                        }
-                    }
-                    .usedlabel {
-                        margin-bottom: .5em;
-                        font-size: 1.125em;
-                        margin-top: 1em;
-                        padding-top: 1em;
-                        border-top: 1px solid #ccc;
-                    }
-                }
-            }
-            // 行動項目
-            .actionitemsl_block{
-                
-            }
-        }
-        .lightbox_image {
+      }
+      @include screen('xs_mobile') {
+        width: 100%;
+      }
+    }
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
+    h2 {
+      font-size: 1.375em;
+      text-align: left;
+      border-bottom: 2px solid nth($primaryColor, $style);
+      margin: 0px auto 20px;
+      padding: 0 30px 10px 0;
+      color: nth($primaryColor, $style);
+      line-height: 1.3em;
+    }
+    //表格資料
+    .lightbox_data {
+      width: 100% !important;
+      overflow-x: hidden;
+      scrollbar-face-color: #eee; //（軸面顏色）
+      scrollbar-highlight-color: #ccc; //軸面左角邊顏色
+      scrollbar-shadow-color: #ccc; //軸面右角邊顏色
+      scrollbar-3dlight-color: #fff; //左立體邊顏色
+      scrollbar-darkshadow-color: #fff; //右立體邊顏色
+      scrollbar-arrow-color: #666; //箭頭顏色
+      scrollbar-track-color: #fff; //軸軌顏色
+      //table
+      table {
+        border: 1px dotted $color-gray;
+        th {
+          border: 1px dotted $color-gray;
+          text-align: left;
+          padding: 10px;
+          span {
+            margin: 0 5px;
             img {
-                width: 100%;
-                height: auto;
+              vertical-align: middle;
             }
-        }
-        // 超商訂購
-        .super_business_data {
-            .data_content {
-                margin-bottom: 15px;
-                border: 1px solid #ddd;
-                border-radius: 10px;
-                box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-                padding: 20px;
-                box-sizing: border-box;
-                .title {
-                    color: nth($linkColor, $style);
-                    font-weight: bolder;
-                    font-size: 1.25em;
-                    margin-bottom: 15px;
-                }
-                ul {
-                    margin: 0 0 10px;
-                    padding: 0;
-                    list-style-type: none;
-                    li {
-                        margin-bottom: 5px;
-                        span {
-                            font-weight: bolder;
-                        }
-                    }
-                }
-                .btn_group {
-                    button {
-                        margin-right: 5px;
-                    }
-                }
-            }
-        }
-        // 銀行代碼
-        .bank_code_data {
-            .banklist {
-                ul {
-                    display: flex;
-                    flex-wrap: wrap;
-                    margin: 0;
-                    padding: 0;
-                    list-style-type: none;
-                    li {
-                        flex: none;
-                        flex-basis: 23%;
-                        margin: 0 1%;
-                        em {
-                            font-style: normal;
-                            margin-right: 3px;
-                            font-weight: bolder;
-                        }
-                        a {
-                            display: block;
-                        }
-                    }
-                }
-            }
-        }
-        // 
-    }
-    //館藏位置燈箱
-    .lightboxstyle_block2 {
-        max-width: 90vh;
-        // max-height: 60vh;
-        overflow: hidden;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 25px 20px 25px 20px;
-        background-color: #fff;
-        border-radius: 5px; // @include box-sizing();
-        @media(max-width: 768px) {
-            max-width: 100vh;
-            left: 27%;
-            transform: translate(-20%, -50%);
-            padding: 35px 20px 35px 20px;
-        }
-        @include screen('xs_mobile') {
-            transform: translate(0, 0);
-            padding: 50px 20px 35px 20px;
-            width: auto;
-            left: 0;
-            top: 0;
-            border-radius: 0;
-            height: 100%;
-        }
-        .close {
-            position: absolute;
-            right: 20px;
-            top: 15px;
-        }
-        h2 {
-            font-size: 1.562em;
-            text-align: left;
-            border-bottom: 2px solid nth($primaryColor, $style);
-            margin: 0px auto 10px;
-            padding: 0 0 10px;
+          }
+          a {
             color: nth($primaryColor, $style);
+            &:hover {
+              color: $color-blue;
+            }
+          }
         }
-        //表格資料
-        .lightbox_data {
-            max-height: 70vh;
-            width: 90vh;
-            overflow-y: auto;
-            overflow-x: hidden;
-            @media(max-width: 768px) {
-                width: 100% !important;
-                max-height: 40vh;
-            }
-            @include screen('xs_mobile') {
-                width: 100% !important;
-                max-height: 55vh;
-            }
-            scrollbar-face-color: #eee; //（軸面顏色） 
-            scrollbar-highlight-color: #ccc; //軸面左角邊顏色
-            scrollbar-shadow-color: #ccc; //軸面右角邊顏色 
-            scrollbar-3dlight-color: #fff; //左立體邊顏色
-            scrollbar-darkshadow-color: #fff; //右立體邊顏色
-            scrollbar-arrow-color: #666; //箭頭顏色
-            scrollbar-track-color: #fff; //軸軌顏色
-            p {
-                padding: 0;
-                margin: 0 0 5px;
-            }
-            //table
-            table {
-                border: 1px dotted $color-gray;
-                th {
-                    border: 1px dotted $color-gray;
-                    padding: 10px;
-                    span {
-                        margin: 0 5px;
-                        img {
-                            vertical-align: middle;
-                        }
-                    }
-                }
-                td {
-                    border: none;
-                    padding: 10px 10px 4px;
-                    border: 1px dotted $color-gray;
-                }
-                label {
-                    margin: 0;
-                    input {
-                        border-radius: 3px !important;
-                        margin-right: 6px;
-                    }
-                }
-            }
-            .more {
-                margin: 0 auto;
-                a {
-                    display: block;
-                    text-align: center;
-                    padding: 8px;
-                    background-image: none;
-                    background-color: #F3F3F3 !important;
-                    color: #333;
-                    border-radius: 0;
-                    &:hover {
-                        color: $aHover;
-                    }
-                }
-            }
-            //
-            .form_grid .form_title,
-            .form_grid .form_content {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-            .select_date {
-                width: 45% !important;
-                @include screen('mobile') {
-                    width: 47% !important;
-                }
-                @media(max-width: 580px) {
-                    width: 99% !important;
-                }
-            }
-            //轉寄他人  引用
-            .form_contentinline {
-                padding: 0;
-                text-align: left;
-                margin: 10px 0;
-                select {
-                    width: auto;
-                    display: inline-block;
-                    margin-right: 5px;
-                    @include screen('mobile') {
-                        width: 49%;
-                        margin-right: 0px;
-                    }
-                    @include screen('xs_mobile') {
-                        width: 100%;
-                        margin-right: 0px;
-                    }
-                }
-            }
-            //
-            .bookname {
-                margin: 30px 0 10px;
-                font-size: 1.5em;
-                color: nth($primaryColor, $style);
-                line-height: 1.2em;
-                background-image: url('../images/icon_book.png');
-                background-position: 0 0;
-                background-repeat: no-repeat;
-                padding: 0 0 0 30px;
-            }
-            //
+        td {
+          border: none;
+          padding: 10px 10px 4px;
+          border: 1px dotted $color-gray;
+          vertical-align: top;
         }
-    }
-    // 銀行代碼燈箱
-    .lightboxbank_style_block {
-        width: 60vw;
+        label {
+          margin: 0;
+          padding: 0 0 0 30px;
+          input {
+            border-radius: 3px !important;
+            margin-right: 6px;
+            margin-left: -28px;
+          }
+        }
+      }
+      .more {
+        margin: 0 auto;
+        a {
+          display: block;
+          text-align: center;
+          padding: 8px;
+          background-image: none;
+          background-color: #f3f3f3 !important;
+          color: #333;
+          border-radius: 0;
+          &:hover {
+            color: $aHover;
+          }
+        }
+      }
+      //匯出格式
+      .radio_grp {
+        label {
+          margin: 0 0 8px;
+          padding-left: 23px;
+          padding-top: 3px;
+          input {
+            margin-right: 6px;
+            margin-left: -20px;
+          }
+        }
+      }
+      //轉寄他人  引用
+      .form_grid {
+        .form_title {
+          // white-space: nowrap;
+          // padding-left: 0;
+          @include screen('mobile') {
+            padding-left: 0px;
+          }
+        }
+        .form_content {
+          @media (max-width: 767px) {
+            padding-left: 0;
+            padding-right: 0;
+          }
+          img.captcha {
+            margin-right: 5px;
+          }
+          textarea {
+            height: 7em;
+          }
+        }
+        button {
+          margin: -10px 0px 0px;
+        }
+        .btn {
+          padding: 0.4em 1em !important;
+        }
+      }
+      .form_grid .form_title,
+      .form_grid .form_content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .select_date {
+        width: 45% !important;
+        @include screen('mobile') {
+          width: 47% !important;
+        }
+        @media (max-width: 580px) {
+          width: 99% !important;
+        }
+      }
+      //listdata
+      .listdata {
+        p {
+          margin: 0 0 10px !important;
+          padding: 0 !important;
+        }
+        ul {
+          margin: 10px 0;
+          padding: 0;
+          li {
+            display: block;
+            margin: 0 0 8px;
+            background-image: url('../images/icon_point.png');
+            background-repeat: no-repeat;
+            background-position: 0 5px;
+            padding-left: 20px;
+            em {
+              font-style: normal;
+              color: $color-orange;
+            }
+          }
+        }
+      }
+      //星星
+      .score_star {
         position: relative;
-        padding: 20px 20px 25px 20px;
-        margin: 20px auto;
-        background-color: #fff;
-        border-radius: 5px;
-        @include box-sizing();
-        @media(max-width: 1200px) {
-            width: 80vw;
+        text-align: left;
+        width: 180px;
+        height: 34px;
+        z-index: 0;
+        > img {
+          position: absolute;
+          z-index: 99;
+          width: 180px;
+          height: 34px;
         }
-        @include screen('xs_mobile') {
-            padding: 50px 20px 0px 20px;
+        .score_color {
+          position: absolute;
+          z-index: 9;
+          top: 0;
+          left: 0;
+          width: 180px;
+          height: 34px;
+          overflow: hidden;
+        }
+      }
+      //
+      .form_contentinline {
+        padding: 0;
+        text-align: left;
+        margin: 10px 0;
+        select {
+          width: auto;
+          display: inline-block;
+          margin-right: 5px;
+          @include screen('mobile') {
+            width: 49%;
+            margin-right: 0px;
+          }
+          @include screen('xs_mobile') {
             width: 100%;
-            min-height: 100%;
-            overflow: hidden;
-            border-radius: 0;
-            margin: 0;
-            @include box-sizing;
+            margin-right: 0px;
+          }
         }
-        .close {
-            position: absolute;
-            right: 15px;
-            top: 10px;
+      }
+      // 書名
+      .bookname {
+        margin: 30px 0 10px;
+        font-size: 1.5em;
+        color: nth($primaryColor, $style);
+        line-height: 1.2em;
+        background-image: url('../images/icon_book.png');
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        padding: 0 0 0 30px;
+      }
+      // 兌換條碼
+      .timedata {
+        display: flex;
+        font-size: 1.125em;
+        align-items: center;
+        margin: 0 0 20px;
+        .reciprocal {
+          flex: none;
+          flex-basis: 50%;
+          text-align: center;
+          font-size: 1.125em;
+          @media (max-width: 400px) {
+            flex-basis: 40%;
+          }
         }
-        h2 {
-            font-size: 1.375em;
-            text-align: left;
-            border-bottom: 2px solid nth($primaryColor, $style);
-            margin: 0px auto 20px;
-            padding: 0 30px 10px 0;
-            color: nth($primaryColor, $style);
-            line-height: 1.3em;
+        .retime {
+          flex: none;
+          flex-basis: 50%;
+          @media (max-width: 400px) {
+            flex-basis: 60%;
+          }
+          a {
+            display: inline-block;
+            border-radius: 50px;
+            background-color: #e57373;
+            color: #fff;
+            padding: 10px 25px;
+            text-align: center;
+            white-space: nowrap;
+            img {
+              width: 20px;
+              margin-right: 10px;
+              vertical-align: middle;
+            }
+          }
         }
-        // 銀行代碼
-        .bank_code_data {
-            .banklist {
-                ul {
-                    display: flex;
-                    flex-wrap: wrap;
+      }
+      .barcode_block {
+        text-align: center;
+        padding: 20px 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        .num {
+          margin-bottom: 5px;
+          display: block;
+        }
+        img {
+          width: 300px;
+          margin-bottom: 10px;
+          display: block;
+          margin: 0 auto;
+          @media (max-width: 400px) {
+            width: 90%;
+          }
+        }
+        p {
+          font-size: 0.813em;
+        }
+      }
+      // 編輯標籤
+      .editlabel_block {
+        padding: 5px 0;
+        .title {
+          margin-bottom: 0.5em;
+          font-size: 1.125em;
+        }
+        .editlabeldata {
+          ul {
+            li {
+              display: block;
+              margin-bottom: 0.5em;
+              .close {
+                top: 3px;
+                right: 1px;
+              }
+              &.content_inline {
+                display: flex;
+                position: relative;
+                .addoption {
+                  position: absolute;
+                  top: 41px;
+                  left: 0;
+                  width: calc(100% - 98px);
+                  border-radius: 5px;
+                  border: 1px solid #ccc;
+                  padding: 4px 10px;
+                  background-color: #fff;
+                  @include box-sizing;
+                  display: none;
+                  z-index: 1;
+
+                  ul {
                     margin: 0;
                     padding: 0;
-                    list-style-type: none;
+                    list-style: none;
                     li {
-                        flex: none;
-                        flex-basis: 23%;
-                        margin: 0 1% 5px;
-                        @include screen('tablet') {
-                            flex-basis: 32%;
-                            margin: 0 0.66% 5px;
+                      display: block;
+                      margin: 0;
+                      a {
+                        display: block;
+                        padding: 4px;
+                        border-bottom: 1px solid #ccc;
+                        text-decoration: none;
+                        color: #666;
+                        &:hover {
+                          color: $aHover;
                         }
-                        @include screen('mobile') {
-                            flex-basis: 48%;
-                            margin: 0 1% 5px;
-                        }
-                        @media(max-width: 400px) {
-                            flex-basis: 100%;
-                            margin: 0 0% 5px;
-                        }
-                        em {
-                            font-style: normal;
-                            margin-right: 3px;
-                            font-weight: bolder;
-                        }
+                      }
+                      &:last-child {
                         a {
-                            display: block;
+                          border: none;
                         }
+                      }
+                      &:before {
+                        content: '';
+                      }
                     }
+                  }
                 }
+              }
+              button {
+                min-width: auto;
+                margin-left: 0.3em;
+              }
             }
+          }
+          .usedlabel {
+            margin-bottom: 0.5em;
+            font-size: 1.125em;
+            margin-top: 1em;
+            padding-top: 1em;
+            border-top: 1px solid #ccc;
+          }
         }
-        // 
+      }
+      // 行動項目
+      .actionitemsl_block {
+      }
     }
+    .lightbox_image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    // 超商訂購
+    .super_business_data {
+      .data_content {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        padding: 20px;
+        box-sizing: border-box;
+        .title {
+          color: nth($linkColor, $style);
+          font-weight: bolder;
+          font-size: 1.25em;
+          margin-bottom: 15px;
+        }
+        ul {
+          margin: 0 0 10px;
+          padding: 0;
+          list-style-type: none;
+          li {
+            margin-bottom: 5px;
+            span {
+              font-weight: bolder;
+            }
+          }
+        }
+        .btn_group {
+          button {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+    // 銀行代碼
+    .bank_code_data {
+      .banklist {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          li {
+            flex: none;
+            flex-basis: 23%;
+            margin: 0 1%;
+            em {
+              font-style: normal;
+              margin-right: 3px;
+              font-weight: bolder;
+            }
+            a {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    //
+  }
+  //館藏位置燈箱
+  .lightboxstyle_block2 {
+    max-width: 90vh;
+    // max-height: 60vh;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px 20px 25px 20px;
+    background-color: #fff;
+    border-radius: 5px; // @include box-sizing();
+    @media (max-width: 768px) {
+      max-width: 100vh;
+      left: 27%;
+      transform: translate(-20%, -50%);
+      padding: 35px 20px 35px 20px;
+    }
+    @include screen('xs_mobile') {
+      transform: translate(0, 0);
+      padding: 50px 20px 35px 20px;
+      width: auto;
+      left: 0;
+      top: 0;
+      border-radius: 0;
+      height: 100%;
+    }
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+    h2 {
+      font-size: 1.562em;
+      text-align: left;
+      border-bottom: 2px solid nth($primaryColor, $style);
+      margin: 0px auto 10px;
+      padding: 0 0 10px;
+      color: nth($primaryColor, $style);
+    }
+    //表格資料
+    .lightbox_data {
+      max-height: 70vh;
+      width: 90vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      @media (max-width: 768px) {
+        width: 100% !important;
+        max-height: 40vh;
+      }
+      @include screen('xs_mobile') {
+        width: 100% !important;
+        max-height: 55vh;
+      }
+      scrollbar-face-color: #eee; //（軸面顏色）
+      scrollbar-highlight-color: #ccc; //軸面左角邊顏色
+      scrollbar-shadow-color: #ccc; //軸面右角邊顏色
+      scrollbar-3dlight-color: #fff; //左立體邊顏色
+      scrollbar-darkshadow-color: #fff; //右立體邊顏色
+      scrollbar-arrow-color: #666; //箭頭顏色
+      scrollbar-track-color: #fff; //軸軌顏色
+      p {
+        padding: 0;
+        margin: 0 0 5px;
+      }
+      //table
+      table {
+        border: 1px dotted $color-gray;
+        th {
+          border: 1px dotted $color-gray;
+          padding: 10px;
+          span {
+            margin: 0 5px;
+            img {
+              vertical-align: middle;
+            }
+          }
+        }
+        td {
+          border: none;
+          padding: 10px 10px 4px;
+          border: 1px dotted $color-gray;
+        }
+        label {
+          margin: 0;
+          input {
+            border-radius: 3px !important;
+            margin-right: 6px;
+          }
+        }
+      }
+      .more {
+        margin: 0 auto;
+        a {
+          display: block;
+          text-align: center;
+          padding: 8px;
+          background-image: none;
+          background-color: #f3f3f3 !important;
+          color: #333;
+          border-radius: 0;
+          &:hover {
+            color: $aHover;
+          }
+        }
+      }
+      //
+      .form_grid .form_title,
+      .form_grid .form_content {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .select_date {
+        width: 45% !important;
+        @include screen('mobile') {
+          width: 47% !important;
+        }
+        @media (max-width: 580px) {
+          width: 99% !important;
+        }
+      }
+      //轉寄他人  引用
+      .form_contentinline {
+        padding: 0;
+        text-align: left;
+        margin: 10px 0;
+        select {
+          width: auto;
+          display: inline-block;
+          margin-right: 5px;
+          @include screen('mobile') {
+            width: 49%;
+            margin-right: 0px;
+          }
+          @include screen('xs_mobile') {
+            width: 100%;
+            margin-right: 0px;
+          }
+        }
+      }
+      //
+      .bookname {
+        margin: 30px 0 10px;
+        font-size: 1.5em;
+        color: nth($primaryColor, $style);
+        line-height: 1.2em;
+        background-image: url('../images/icon_book.png');
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        padding: 0 0 0 30px;
+      }
+      //
+    }
+  }
+  // 銀行代碼燈箱
+  .lightboxbank_style_block {
+    width: 60vw;
+    position: relative;
+    padding: 20px 20px 25px 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    @include box-sizing();
+    @media (max-width: 1200px) {
+      width: 80vw;
+    }
+    @include screen('xs_mobile') {
+      padding: 50px 20px 0px 20px;
+      width: 100%;
+      min-height: 100%;
+      overflow: hidden;
+      border-radius: 0;
+      margin: 0;
+      @include box-sizing;
+    }
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
+    h2 {
+      font-size: 1.375em;
+      text-align: left;
+      border-bottom: 2px solid nth($primaryColor, $style);
+      margin: 0px auto 20px;
+      padding: 0 30px 10px 0;
+      color: nth($primaryColor, $style);
+      line-height: 1.3em;
+    }
+    // 銀行代碼
+    .bank_code_data {
+      .banklist {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          li {
+            flex: none;
+            flex-basis: 23%;
+            margin: 0 1% 5px;
+            @include screen('tablet') {
+              flex-basis: 32%;
+              margin: 0 0.66% 5px;
+            }
+            @include screen('mobile') {
+              flex-basis: 48%;
+              margin: 0 1% 5px;
+            }
+            @media (max-width: 400px) {
+              flex-basis: 100%;
+              margin: 0 0% 5px;
+            }
+            em {
+              font-style: normal;
+              margin-right: 3px;
+              font-weight: bolder;
+            }
+            a {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    //
+  }
 }
 // 更多評論燈箱start
 .commentcontent_lightbox {
-    position: fixed;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  // padding-left: 15%;
+  display: none;
+  // @include screen('mobile') {
+  //     padding-left: 0;
+  // }
+  .overlay {
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .close2 {
+    background-image: url('../images/icon_close03.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 46px;
+    height: 48px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: 7%;
+    top: 50px;
     z-index: 99999;
-    // padding-left: 15%;
-    display: none;
-    // @include screen('mobile') {
-    //     padding-left: 0;
-    // }
-    .overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 999;
-        background-color: rgba(0, 0, 0, .8);
+    margin-left: -23px;
+    @include screen('mobile') {
+      display: none;
     }
-    .close2 {
+  }
+  .close3 {
+    display: block !important;
+    padding: 10px 10px 5px;
+    display: block;
+    cursor: pointer;
+    background-color: #f3f3f3;
+    position: relative;
+    z-index: 99999;
+  }
+  .bookcomment2 {
+    z-index: 999999;
+    background-color: #fff;
+    position: absolute;
+    .commentblock {
+      border: none !important;
+      padding: 20px;
+      margin-right: 0 !important;
+      h4 {
+        white-space: normal !important;
+      }
+    }
+  }
+}
+// 帳戶與紀錄燈箱
+@include screen('mobile') {
+  .mystudymenu_lightbox {
+    .mystudybox {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      .close {
+        position: absolute;
+        right: 25px;
+        top: 20px;
         background-image: url('../images/icon_close03.png');
         background-repeat: no-repeat;
         background-position: 0 0;
@@ -1389,311 +1452,261 @@ body.fix {
         height: 48px;
         display: block;
         cursor: pointer;
-        position: absolute;
-        left: 7%;
-        top: 50px;
-        z-index: 99999;
-        margin-left: -23px;
-        @include screen('mobile') {
-            display: none;
-        }
+      }
     }
-    .close3 {
-        display: block !important;
-        padding: 10px 10px 5px;
-        display: block;
-        cursor: pointer;
-        background-color: #f3f3f3;
-        position: relative;
-        z-index: 99999;
-    }
-    .bookcomment2 {
-        z-index: 999999;
-        background-color: #fff;
-        position: absolute;
-        .commentblock {
-            border: none !important;
-            padding: 20px;
-            margin-right: 0 !important;
-            h4 {
-                white-space: normal !important;
-            }
-        }
-    }
-}
-// 帳戶與紀錄燈箱
-@include screen('mobile') {
-    .mystudymenu_lightbox {
-        .mystudybox {
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            .close {
-                position: absolute;
-                right: 25px;
-                top: 20px;
-                background-image: url('../images/icon_close03.png');
-                background-repeat: no-repeat;
-                background-position: 0 0;
-                width: 46px;
-                height: 48px;
-                display: block;
-                cursor: pointer;
-            }
-        }
-        // 
-        .member_data2 {
-            clear: both;
-            float: none;
-            padding: 0px 30px;
-            box-shadow: none;
+    //
+    .member_data2 {
+      clear: both;
+      float: none;
+      padding: 0px 30px;
+      box-shadow: none;
+      position: relative;
+      top: 100px;
+      text-align: left;
+      > ul {
+        margin: 0;
+        padding: 0;
+        > li {
+          list-style-type: none;
+          border-bottom: 1px solid #d2d2d2;
+          display: block;
+          float: none;
+          clear: both;
+          overflow: hidden;
+          margin: 0;
+          font-size: 1.125em !important;
+          > a {
+            padding: 12px 15px 10px;
+            display: block;
+            color: #fff;
+            transition: 0.5s;
             position: relative;
-            top: 100px;
-            text-align: left;
-            >ul {
-                margin: 0;
-                padding: 0;
-                >li {
-                    list-style-type: none;
-                    border-bottom: 1px solid #d2d2d2;
-                    display: block;
-                    float: none;
-                    clear: both;
-                    overflow: hidden;
-                    margin: 0;
-                    font-size: 1.125em !important;
-                    >a {
-                        padding: 12px 15px 10px;
-                        display: block;
-                        color: #fff;
-                        transition: .5s;
-                        position: relative;
-                        &:after {
-                            content: '';
-                            position: absolute;
-                            right: 20px;
-                            top: 9px;
-                            border: 2px solid #fff;
-                            width: 10px;
-                            height: 10px;
-                            border-right-color: transparent;
-                            border-bottom-color: transparent;
-                            transform: rotate(225deg);
-                            transition: .5s;
-                        }
-                        &.turnicon {
-                            &:after {
-                                transform: rotate(45deg);
-                                top: 18px;
-                                border-color: #333;
-                                border-right-color: transparent;
-                                border-bottom-color: transparent;
-                            }
-                        }
-                        &:hover {
-                            color: #000;
-                            background-color: #eee;
-                        }
-                    }
-                    ul {
-                        margin: 10px 0 10px;
-                        padding: 0;
-                        float: none;
-                        clear: both;
-                        li {
-                            font-size: 0.983em;
-                            list-style-type: none;
-                            float: none;
-                            clear: both;
-                            margin: 0;
-                            a {
-                                color: #fff;
-                                padding: 7px 10px 7px 30px;
-                                position: relative;
-                                display: block;
-                                &:before {
-                                    content: '';
-                                    position: absolute;
-                                    width: 5px;
-                                    height: 5px;
-                                    border-radius: 50%;
-                                    top: 16px;
-                                    left: 17px;
-                                    background-color: #fff;
-                                }
-                                &:hover {
-                                    color: #000;
-                                    background-color: #ffc;
-                                    &:before {
-                                        background-color: #333;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+            &:after {
+              content: '';
+              position: absolute;
+              right: 20px;
+              top: 9px;
+              border: 2px solid #fff;
+              width: 10px;
+              height: 10px;
+              border-right-color: transparent;
+              border-bottom-color: transparent;
+              transform: rotate(225deg);
+              transition: 0.5s;
             }
+            &.turnicon {
+              &:after {
+                transform: rotate(45deg);
+                top: 18px;
+                border-color: #333;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+              }
+            }
+            &:hover {
+              color: #000;
+              background-color: #eee;
+            }
+          }
+          ul {
+            margin: 10px 0 10px;
+            padding: 0;
+            float: none;
+            clear: both;
+            li {
+              font-size: 0.983em;
+              list-style-type: none;
+              float: none;
+              clear: both;
+              margin: 0;
+              a {
+                color: #fff;
+                padding: 7px 10px 7px 30px;
+                position: relative;
+                display: block;
+                &:before {
+                  content: '';
+                  position: absolute;
+                  width: 5px;
+                  height: 5px;
+                  border-radius: 50%;
+                  top: 16px;
+                  left: 17px;
+                  background-color: #fff;
+                }
+                &:hover {
+                  color: #000;
+                  background-color: #ffc;
+                  &:before {
+                    background-color: #333;
+                  }
+                }
+              }
+            }
+          }
         }
-        // 
+      }
     }
+    //
+  }
 }
 .qrcode_lightbox {
-    .qrcode_block {
-        text-align: center;
-    }
+  .qrcode_block {
+    text-align: center;
+  }
 }
 .recommendbook_lightbox {
-    .bookselection_list {
-        padding-right: 30px;
-        height: 520px;
-        overflow-y: scroll;
-        @include screen('notebook') {
-            padding-right: 0;
-        }
-        ul {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0;
-            padding: 0;
-            li {
-                flex: none;
-                flex-basis: 18%;
-                width: 18%;
-                margin: 0 3.5% 25px;
-                position: relative;
-                @include screen('tablet') {
-                    flex-basis: 23%;
-                    width: 23%;
-                    margin: 0 5.16% 25px;
-                }
-                @include screen('mobile') {
-                    flex-basis: 40%;
-                    width: 40%;
-                    margin: 0 5% 25px;
-                }
-                @media(max-width: 400px) {
-                    flex-basis: 220px;
-                    width: 220px;
-                    margin: 0 auto 25px;
-                }
-                a {
-                    color: #000;
-                    display: block;
-                    &:hover {
-                        color: $importantColor;
-                    }
-                    .image {
-                        height: 210px;
-                        background-color: #fff;
-                        position: relative;
-                        margin-bottom: 10px;
-                        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                        img {
-                            position: absolute;
-                            top: 0;
-                            bottom: 0;
-                            right: 0;
-                            left: 0;
-                            width: 100%;
-                            max-height: 100%;
-                            margin: auto;
-                            z-index: 8;
-                            display: block;
-                        }
-                    }
-                    span {
-                        overflow: hidden;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        font-size: 1.125em;
-                        display: block;
-                    }
-                }
-                // 書封設計
-                .image_titlepage, .image_titlepage2 {
-                    margin: 0 auto 15px;
-                    // width: 100%;
-                    height: 210px;
-                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                    // @media(max-width: 1400px) {
-                    //     height: 370px;
-                    // }
-                    // @include screen('notebook') {
-                    //     width: 170px;
-                    //     height: 220px;
-                    //     margin: 0 0 15px;
-                    // }
-                    &:before {
-                        height: 120px;
-                    }
-                }
-                // .image_titlepage2 {}
-            }
-        }
+  .bookselection_list {
+    padding-right: 30px;
+    height: 520px;
+    overflow-y: scroll;
+    @include screen('notebook') {
+      padding-right: 0;
     }
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      li {
+        flex: none;
+        flex-basis: 18%;
+        width: 18%;
+        margin: 0 3.5% 25px;
+        position: relative;
+        @include screen('tablet') {
+          flex-basis: 23%;
+          width: 23%;
+          margin: 0 5.16% 25px;
+        }
+        @include screen('mobile') {
+          flex-basis: 40%;
+          width: 40%;
+          margin: 0 5% 25px;
+        }
+        @media (max-width: 400px) {
+          flex-basis: 220px;
+          width: 220px;
+          margin: 0 auto 25px;
+        }
+        a {
+          color: #000;
+          display: block;
+          &:hover {
+            color: $importantColor;
+          }
+          .image {
+            height: 210px;
+            background-color: #fff;
+            position: relative;
+            margin-bottom: 10px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            img {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              right: 0;
+              left: 0;
+              width: 100%;
+              max-height: 100%;
+              margin: auto;
+              z-index: 8;
+              display: block;
+            }
+          }
+          span {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 1.125em;
+            display: block;
+          }
+        }
+        // 書封設計
+        .image_titlepage,
+        .image_titlepage2 {
+          margin: 0 auto 15px;
+          // width: 100%;
+          height: 210px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          // @media(max-width: 1400px) {
+          //     height: 370px;
+          // }
+          // @include screen('notebook') {
+          //     width: 170px;
+          //     height: 220px;
+          //     margin: 0 0 15px;
+          // }
+          &:before {
+            height: 120px;
+          }
+        }
+        // .image_titlepage2 {}
+      }
+    }
+  }
 }
 // 首頁查詢欄位
 .search_field_lightbox {
-    .content {
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-            li {
-                border-bottom: 1px solid #ccc;
-                font-size: 1.125em;
-                a {
-                    padding: 10px !important;
-                    display: block !important;
-                    text-align: center;
-                    color: #666 !important;
-                    &:hover {
-                        color: #f4573f;
-                        cursor: pointer;
-                    }
-                    &.active {
-                        background-color: #eee;
-                        color: #f4573f !important;
-                    }
-                }
-            }
+  .content {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        border-bottom: 1px solid #ccc;
+        font-size: 1.125em;
+        a {
+          padding: 10px !important;
+          display: block !important;
+          text-align: center;
+          color: #666 !important;
+          &:hover {
+            color: #f4573f;
+            cursor: pointer;
+          }
+          &.active {
+            background-color: #eee;
+            color: #f4573f !important;
+          }
         }
+      }
     }
+  }
 }
 // 上傳付款證明
 .prove_content {
-    p {
-        font-size: 1.063em;
-        line-height: 1.7em;
+  p {
+    font-size: 1.063em;
+    line-height: 1.7em;
+  }
+  .upload_block {
+    width: 100%;
+    background-color: #eee;
+    text-align: center;
+    line-height: 1.7em;
+    padding: 20px 30px 30px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-sizing: border-box;
+    .image {
+      width: 50px;
+      margin: 20px auto;
+      img {
+        width: 50px;
+      }
     }
-    .upload_block {
-        width: 100%;
-        background-color: #eee;
-        text-align: center;
-        line-height: 1.7em;
-        padding: 20px 30px 30px;
-        margin: 20px auto;
-        border-radius: 5px;
-        box-sizing: border-box;
-        .image {
-            width: 50px;
-            margin: 20px auto;
-            img {
-                width: 50px;
-            }
-        }
-    }
+  }
 }
 // 設備辦法
 .equipment_pass_date {
-    margin-bottom: 1em;
-    text-align: right;
+  margin-bottom: 1em;
+  text-align: right;
 }
 .method_block {
-    overflow-y: scroll;
-    height: 50vh;
-    border: 1px solid #ddd;
-    padding: 20px;
+  overflow-y: scroll;
+  height: 50vh;
+  border: 1px solid #ddd;
+  padding: 20px;
 }

@@ -1,140 +1,146 @@
 // 按鈕設定
-$btn-font-color:$color-word;
-$btn-border:darken($color-word, 5);
-$btn-padding:.5em 2em;
-$btn-radius:4px;
+$btn-font-color: $color-word;
+$btn-border: darken($color-word, 5);
+$btn-padding: 0.5em 2em;
+$btn-radius: 4px;
 // 按鈕外框
 .btn_grp {
-    text-align: center;
-    padding: 1em 0;
-    clear: both;
+  text-align: center;
+  padding: 1em 0;
+  clear: both;
 }
 // 按鈕的共用設定
-@mixin btn_setting($btn-bg:#DDD, $btn-font-color:$btn-font-color) {
-    background: $btn-bg;
-    border: 1px solid darken($btn-bg, 10);
-    color: $btn-font-color;
-    box-shadow:0px 2px 2px RGBA(0, 0, 0, .08);
-    border-radius:$btn-radius;
-    &:hover
-    {
-        background: lighten($btn-bg, 5);
-        box-shadow:none;
-        cursor: pointer;
-        color: #FFF;
-    }
-  
-    &:focus {
-        background: lighten($btn-bg, 5);
-        box-shadow: 0 0px 0px 2px $form-focus ;
-        cursor: pointer;
-        color: #FFF;
-    }
+@mixin btn_setting($btn-bg: #ddd, $btn-font-color: $btn-font-color) {
+  background: $btn-bg;
+  border: 1px solid darken($btn-bg, 10);
+  color: $btn-font-color;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+  border-radius: $btn-radius;
+  &:hover {
+    background: lighten($btn-bg, 3);
+    box-shadow: none;
+    cursor: pointer;
+    color: #fff;
+  }
 
-    &.active {
-        background: lighten($btn-bg, 5);
-        cursor: pointer;
-    }
+  &:focus {
+    background: lighten($btn-bg, 3);
+    box-shadow: 0 0px 0px 2px $form-focus;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  &.active {
+    background: lighten($btn-bg, 3);
+    cursor: pointer;
+  }
 }
 // 按鈕預設陰影
 %btn {
-    font-size: $font-size;
-    background-image: none; //修正firefox
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    text-decoration: none;
-    white-space: nowrap;
-    line-height: normal;
-    width: auto;
-    min-width: 5em;
-    margin: .25em .1em;
+  font-size: $font-size;
+  background-image: none; //修正firefox
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: normal;
+  width: auto;
+  min-width: 5em;
+  margin: 0.25em 0.1em;
 }
 .btn {
-    @extend %btn;
-    padding: $btn-padding !important;
-    touch-action: manipulation;
-    box-sizing: border-box;
-    @include btn_setting();
-    @include text-shadow(RGBA(0, 0, 0, .3) 0px 0px 0px);
-    background-color: rgb(247, 247, 247); // Old browsers
+  @extend %btn;
+  padding: $btn-padding !important;
+  touch-action: manipulation;
+  box-sizing: border-box;
+  @include btn_setting();
+  @include text-shadow(RGBA(0, 0, 0, 0.3) 0px 0px 0px);
+  background-color: rgb(247, 247, 247); // Old browsers
+  // @include filter-gradient(#f7f7f7, #eaeaea, vertical); // IE6-9
+  // @include background-image(linear-gradient(top, rgba(252, 252, 252, 1) 0%, rgba(230, 230, 230, 1) 100%));
+  &:hover,
+  &:focus {
+    color: $btn-font-color;
+    background-color: rgb(230, 230, 230); // Old browsers
     // @include filter-gradient(#f7f7f7, #eaeaea, vertical); // IE6-9
-    // @include background-image(linear-gradient(top, rgba(252, 252, 252, 1) 0%, rgba(230, 230, 230, 1) 100%));
-    &:hover,
-    &:focus {
-        color: $btn-font-color;
-        background-color: rgb(230, 230, 230); // Old browsers
-        // @include filter-gradient(#f7f7f7, #eaeaea, vertical); // IE6-9
-        // @include background-image(linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(220, 220, 220, 1) 100%));
-    }
+    // @include background-image(linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(220, 220, 220, 1) 100%));
+  }
 }
 //按鈕顏色
 //@include btn_setting(按鈕顏色,字的顏色);
 .btn-green {
-    @extend %btn;
-    @include btn_setting($color-green, #FFF);
+  @extend %btn;
+  @include btn_setting($color-green, #fff);
 }
 .btn-blue {
-    @extend %btn;
-    @include btn_setting($color-blue, #FFF);
+  @extend %btn;
+  @include btn_setting($color-blue, #fff);
 }
 .btn-yellow {
-    @extend %btn;
-    @include btn_setting($color-yellow, #FFF);
+  @extend %btn;
+  @include btn_setting($color-yellow, #fff);
 }
 .btn-orange {
-    @extend %btn;
-    @include btn_setting($color-orange, #FFF);
+  @extend %btn;
+  @include btn_setting($color-orange, #fff);
 }
 .btn-red {
-    @extend %btn;
-    @include btn_setting($color-red, #FFF);
+  @extend %btn;
+  @include btn_setting($color-red, #fff);
 }
 .btn-purple {
-    @extend %btn;
-    @include btn_setting($color-purple, #FFF);
+  @extend %btn;
+  @include btn_setting($color-purple, #fff);
 }
 .btn-gray {
-    @extend %btn;
-    @include btn_setting($color-darkgray, #FFF);
+  @extend %btn;
+  @include btn_setting($color-darkgray, #fff);
 }
 .btn-white {
-    @extend %btn;
-    @include btn_setting($color-white, #333);
+  @extend %btn;
+  @include btn_setting($color-white, #333);
+}
+.btn-greenline {
+  @extend %btn;
+  @include btn_setting(#06c755, #333);
+  &:hover {
+    color: #333;
+  }
 }
 // 按鈕大小
 .btn-xl {
-    font-size: $font-size * 1.5; //24px
+  font-size: $font-size * 1.5; //24px
 }
 .btn-lg {
-    font-size: $font-size * 1.25; //20px
+  font-size: $font-size * 1.25; //20px
 }
 .btn-sm {
-    font-size: $font-size * .938; //15px
+  font-size: $font-size * 0.938; //15px
 }
 .btn-xs {
-    font-size: $font-size * .75; //12px
+  font-size: $font-size * 0.75; //12px
 }
 .disabled {
-    pointer-events: none;
-    opacity: 0.8;
-    box-shadow:none;
-    cursor: not-allowed;
-    display: inline-block;
-    -webkit-filter:grayscale(1); 
+  pointer-events: none;
+  opacity: 0.8;
+  box-shadow: none;
+  cursor: not-allowed;
+  display: inline-block;
+  -webkit-filter: grayscale(1);
 }
 .pointer-events {
-    pointer-events: none;
+  pointer-events: none;
 }
-.disabled_hidebtn{
-    opacity: 0.8;
-    box-shadow:none;
+.disabled_hidebtn {
+  opacity: 0.8;
+  box-shadow: none;
+  cursor: not-allowed;
+  display: inline-block;
+  -webkit-filter: grayscale(1);
+  &:hover {
     cursor: not-allowed;
     display: inline-block;
-    -webkit-filter:grayscale(1);
-    &:hover{
-        cursor: not-allowed;
-    display: inline-block;
-    -webkit-filter:grayscale(1);
-    }
+    -webkit-filter: grayscale(1);
+  }
 }
