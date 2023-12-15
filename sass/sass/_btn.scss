@@ -144,3 +144,30 @@ $btn-radius: 4px;
     -webkit-filter: grayscale(1);
   }
 }
+.reflashbtn {
+  font-size: 0;
+  background-image: url('../images/icon/icon_reflash.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  font-size: 0;
+  background-image: url(../images/icon/icon_reflash.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  padding: 0.5em 1em !important;
+  height: 38px;
+  width: 50px;
+  &:hover {
+    background-image: url(../images/icon/icon_reflash.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    padding: 0.5em 1em !important;
+    height: 40px;
+    width: 50px;
+  }
+}
+.readbtn {
+  padding: 0.5em 1em !important;
+}

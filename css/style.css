@@ -769,11 +769,40 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
   -webkit-filter: grayscale(1);
 }
 
+.reflashbtn {
+  font-size: 0;
+  background-image: url("../images/icon/icon_reflash.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  font-size: 0;
+  background-image: url(../images/icon/icon_reflash.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  padding: 0.5em 1em !important;
+  height: 38px;
+  width: 50px;
+}
+.reflashbtn:hover {
+  background-image: url(../images/icon/icon_reflash.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  padding: 0.5em 1em !important;
+  height: 40px;
+  width: 50px;
+}
+
+.readbtn {
+  padding: 0.5em 1em !important;
+}
+
 .form_grid {
   margin: 0em;
 }
 .form_grid .form_grp {
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #ddd;
   overflow: hidden;
   padding: 0.4em 0;
 }
@@ -1005,7 +1034,7 @@ button,
 input[type=button] {
   background: #666;
   border: 1px solid #4d4d4d;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
 }
@@ -1032,7 +1061,7 @@ input[type=button].active {
 input[type=submit] {
   background: #005d98;
   border: 1px solid #003e65;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
 }
@@ -1112,7 +1141,7 @@ select:-moz-focusring {
 input[type=reset] {
   background: #666;
   border: 1px solid #4d4d4d;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
   text-shadow: none;
@@ -1214,7 +1243,7 @@ input[disable]:focus {
   right: 3px;
   background: #666;
   border: 1px solid #4d4d4d;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
   padding: 0.2em 1em !important;
@@ -1275,7 +1304,7 @@ img.captcha ~ img {
 }
 
 abbr {
-  color: #FF0000 !important;
+  color: #ff0000 !important;
   margin: 0px 5px 0 -18px;
   font-size: 1.25em;
   font-weight: bold;
@@ -1373,6 +1402,24 @@ select::-ms-expand {
 @media screen and (max-width: 991px) {
   .password_toggle button {
     top: 1.7em;
+  }
+}
+
+.form-group {
+  margin-left: 20%;
+}
+@media screen and (max-width: 991px) {
+  .form-group {
+    margin-left: 0;
+  }
+}
+.form-group img {
+  vertical-align: center;
+  margin-bottom: 0;
+}
+@media (max-width: 400px) {
+  .form-group img {
+    margin-bottom: 6px;
   }
 }
 
