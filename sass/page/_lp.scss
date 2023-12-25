@@ -135,7 +135,7 @@
     float: left;
     border: 1px solid $color-gray;
     background-color: #fff;
-    height: 2em;
+    height: 2.1em;
     line-height: 1em;
     color: #333;
     box-shadow: none;
@@ -577,6 +577,7 @@
         font-weight: normal;
         font-size: 1.25em;
         line-height: 1.3em;
+        text-align: left;
         @include screen('mobile') {
           margin: 0px 0 10px;
         }
@@ -1877,72 +1878,196 @@
 //設備預約區塊
 .devicereservation_block {
   overflow: hidden;
-  padding: 30px 30px 30px;
-  margin-bottom: 30px;
+  padding: 0;
+  width: 90%;
+  margin: 40px auto 50px;
+  display: flex;
+  flex-wrap: wrap;
+
   h2 {
+    flex: 1 1 auto;
+    flex-basis: 100%;
     @extend .block01_h2;
+    margin-bottom: 0.5em !important;
   }
   .choosebtn {
+    flex: 1 1 auto;
+    flex-basis: 100%;
     clear: both !important;
     display: block !important;
     float: none !important;
-    margin: 0 1%;
+    margin: 0 0 1em 2px;
+  }
+  // 設備篩選
+  .devicefiltering_block {
+    flex: 1 1 auto;
+    flex-basis: 100%;
+    margin: 0 0 1.5em 0;
+    display: flex;
+    font-size: 1.125em;
+    .filter_group {
+      flex: 1 1 auto;
+      // flex-basis: calc(100% - 210px);
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-right: 0;
+      border-radius: 5px;
+      display: flex;
+      align-items: flex-start;
+      box-sizing: border-box;
+      background-color: #eee;
+      .title {
+        flex: 0 0 auto;
+        flex-basis: 60px;
+        font-weight: bolder;
+        margin-left: 0.5em;
+        margin-top: 0.2em;
+      }
+      .filtercontent {
+        flex: 1 1 auto;
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 1.7em;
+        height: auto;
+        transition: 0.5s;
+        &.contentclose {
+          height: 31px;
+          overflow: hidden;
+        }
+        label {
+          margin: 0 0.5em;
+        }
+      }
+      .filterbtn {
+        flex: 0 0 auto;
+        flex-basis: 60px;
+        display: none;
+        &.hasbtn {
+          display: block;
+        }
+        a {
+          display: block;
+          text-align: center;
+          font-size: 0;
+          position: relative;
+          border-radius: 5px;
+          &:hover,
+          &:focus {
+            background-color: #ccc;
+            box-shadow: none !important;
+          }
+
+          &:before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border: 2px solid #666;
+            border-top: none;
+            border-left: none;
+            position: absolute;
+            top: 3px;
+            right: 25px;
+            transform: rotate(45deg);
+            transition: 0.2s;
+          }
+          &.open {
+            &:before {
+              top: 10px;
+              transform: rotate(-135deg);
+            }
+          }
+        }
+      }
+    }
+    .filtersearch {
+      flex: 0 0 auto;
+      flex-basis: 200px;
+      margin-left: 10px;
+      // border: 1px solid #ddd;
+      padding: 0;
+      border-radius: 5px;
+      box-sizing: border-box;
+      background-color: #fff;
+      display: flex;
+      transition: 0.5s;
+      &.clicksearch {
+        flex-basis: 390px;
+      }
+      input[type='text'] {
+        border-radius: 5px 0 0 5px;
+        margin-bottom: 0;
+        height: 53px;
+      }
+      button.searchbtn {
+        background-color: nth($primaryColor, $style);
+        font-size: 0;
+        border-radius: 0 5px 5px 0;
+        width: 70px;
+        background-image: url(../images/icon/icon_search2.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 24px;
+        height: 53px;
+        border: none;
+      }
+    }
   }
   .device_list {
+    flex: 0 0 auto;
+    flex-basis: 24%;
     position: relative;
-    width: 23%;
-    float: left;
-    margin: 0 1% 20px;
-    height: 240px;
-    @media (max-width: 1500px) {
-      width: 31%;
-      margin: 0 1.16% 20px;
+    margin: 0 0.5% 20px;
+    background-color: lighten($color-yellow, 20);
+    border-radius: 5px;
+    transition: 0.2s;
+    padding: 20px;
+    color: #000;
+    box-sizing: border-box;
+    &:hover,
+    &:focus {
+      background-color: lighten($color-yellow, 0);
+      box-shadow: 3px 2px 4px 3px #ccc;
+      color: #000;
+      // transform: translateY(-10px);
     }
-    @media (max-width: 1200px) {
-      width: 47%;
-      margin: 0 1.5% 20px;
+    @media (max-width: 1500px) {
+      flex-basis: 32%;
+      margin: 0 0.66% 20px;
+    }
+    @media (max-width: 1100px) {
+      flex-basis: 48%;
+      margin: 0 1% 20px;
     }
     @include screen('mobile') {
-      width: 100%;
-      margin: 0 0 15px;
-      float: none;
-      height: auto;
+      flex-basis: 100%;
+      margin: 0 0 20px;
     }
     a {
       display: block;
-      padding: 20px;
-      height: 230px;
-      background-color: lighten($color-yellow, 20);
-      border-radius: 5px;
-      @include box-sizing;
-      // box-shadow: 0 0 10px 3px lighten($color-darkgreen,15) inset;
       overflow: hidden;
-      color: #333;
-      margin-top: 10px;
+      color: #000;
       transition: 0.2s;
-      @include screen('mobile') {
-        height: auto;
-      }
+      height: 100%;
       &:hover,
       &:focus {
-        background-color: lighten($color-yellow, 0);
-        box-shadow: none;
-        margin-top: 0;
-        box-shadow: 3px 2px 4px 3px #ccc;
-        color: #333;
+        color: #000;
       }
-      h3 {
-        margin: 0 0 20px;
-        font-size: 1.5em;
-        padding: 0 0 10px;
-        border-bottom: 1px solid #fff;
-        color: #333;
-      }
+    }
+    h3 {
+      margin: 0 0 20px;
+      font-size: 1.5em;
+      padding: 0 0 10px;
+      border-bottom: 1px solid #fff;
+      color: #333;
+    }
+    .content {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1em;
       .images {
         width: 100px;
         height: 100px;
         background-color: rgba(255, 255, 255, 0.8);
-        float: left;
         margin: 0 20px 0 0;
         position: relative;
         border-radius: 50%;
@@ -1978,8 +2103,26 @@
           }
         }
       }
-      @media (max-width: 380px) {
-        height: auto;
+      .quantity {
+        font-size: 1.125rem;
+        span {
+          margin-left: 10px;
+          letter-spacing: 0.4em;
+          em {
+            font-style: normal;
+            font-size: 1.5rem;
+            color: #a42829;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+    button {
+      width: 100%;
+      border: none;
+    }
+    @media (max-width: 380px) {
+      .content {
         .images {
           width: 60px;
           height: 60px;
@@ -2002,25 +2145,9 @@
   }
   h2 {
     @extend .block01_h2;
+    margin-bottom: 1em !important;
   }
-  // 目前項目
-  .currently_item {
-    font-size: 1.25em;
-    margin-bottom: 10px;
-    padding: 0 0 0 20px;
-    position: relative;
-    &:before {
-      content: '';
-      border: 10px solid #666;
-      border-color: transparent transparent transparent #666;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-    span {
-      color: $color-red;
-    }
-  }
+
   // 預約說明
   .reservation_explain {
     text-align: center;
@@ -2075,6 +2202,12 @@
     }
     .word_red {
       font-size: 1.125em;
+    }
+    .form_content {
+      .btn_active {
+        @extend %btn;
+        @include btn_setting($color-orange, #fff);
+      }
     }
   }
   // 預約表單
@@ -2166,6 +2299,243 @@
     }
   }
 }
+// 預約時間
+.reservetime_block {
+  clear: both;
+  display: flex;
+  margin-bottom: 2em;
+  width: 100%;
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+  }
+  .reservetime_group {
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-right: 2%;
+    @media (max-width: 900px) {
+      flex-basis: 48%;
+      justify-content: space-between;
+      margin-right: 0;
+      margin-bottom: 1em;
+      &:nth-of-type(2n-1) {
+        margin-right: 4%;
+      }
+    }
+    @include screen('mobile') {
+      flex-basis: 100%;
+      &:nth-of-type(2n-1) {
+        margin-right: 0;
+      }
+    }
+
+    .title {
+      flex: 1 1 auto;
+      flex-basis: 100%;
+      position: relative;
+      padding-left: 15px;
+
+      &:before {
+        content: '';
+        border: 5px solid $color-orange;
+        border-color: transparent transparent transparent $color-orange;
+        position: absolute;
+        left: 0;
+        top: 6px;
+      }
+    }
+    .content {
+      flex: 1 1 auto;
+      flex-basis: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+      .timedata {
+        flex: 1 1 auto;
+        flex-basis: 100%;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+
+        input {
+          border: none;
+          margin-right: 5px;
+          padding: 0.2em 0em;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+        }
+        select {
+          border: none !important;
+          height: 1.9em;
+          line-height: 1.9em;
+        }
+      }
+      .to {
+        margin: 0 1em;
+      }
+    }
+  }
+  .btn_grp {
+    flex: 0 0 auto;
+    flex-basis: 80px;
+    @include screen('mobile') {
+      flex-basis: 100%;
+    }
+  }
+}
+// 目前項目
+.currently_item {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  font-size: 1.375em;
+  margin-bottom: 0.8em;
+  padding: 0 0 0 20px;
+  position: relative;
+  font-weight: bolder;
+  &:before {
+    content: '';
+    border: 8px solid #666;
+    border-color: transparent transparent transparent #666;
+    position: absolute;
+    left: 0;
+    top: 3px;
+  }
+  span {
+    color: $color-red;
+  }
+}
+.itemtitle {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  font-size: 1.25em;
+  margin: 1em 0;
+  padding: 0;
+  position: relative;
+  font-weight: bolder;
+  display: block;
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  span {
+    position: relative;
+    padding: 0 20px 0 20px;
+    color: #333;
+    background-color: #fff;
+    z-index: 3;
+
+    &:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-color: $color-red;
+      position: absolute;
+      left: 0;
+      top: 7px;
+      z-index: 2;
+    }
+  }
+}
+// 項目選擇
+.itemselect_block {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .itemselect_group {
+    flex: 0 0 auto;
+    flex-basis: 49%;
+    background-color: lighten($color-yellow, 20);
+    color: #000;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 1em;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+    @media (max-width: 900px) {
+      flex-basis: 100%;
+    }
+    @media (max-width: 480px) {
+      flex-wrap: wrap;
+    }
+    .image {
+      flex: 0 0 auto;
+      flex-basis: 70px;
+      border-right: 1px solid #fff;
+      img {
+        width: 50px;
+        margin: 0 auto;
+      }
+    }
+    .spacecontent {
+      flex: 1 1 auto;
+      font-size: 1.25em;
+      padding: 0 10px;
+      box-sizing: border-box;
+      line-height: 1.5;
+      @media (max-width: 480px) {
+        flex-basis: calc(100% - 90px);
+      }
+    }
+    button {
+      flex: 0 0 auto;
+      flex-basis: 100px;
+      border: none;
+      padding: 0.5em 0 !important;
+      @media (max-width: 480px) {
+        flex: 1 1 auto;
+        flex-basis: 100%;
+        margin-top: 0.8em;
+      }
+    }
+  }
+}
+// 預約紀錄
+.appointment_record {
+  position: fixed;
+  right: 50%;
+  top: 45%;
+  transform: translateX(700px);
+  width: 2em;
+  z-index: 99;
+  @media (max-width: 1400px) {
+    right: 0;
+    transform: translateX(0);
+  }
+  a {
+    display: block;
+    padding: 1em 0.5em;
+    background-color: $color-red;
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: darken($color: $color-red, $amount: 5);
+    }
+  }
+}
+// google日曆圖
+.googlecalendar {
+  text-align: center;
+  img {
+    width: 45%;
+    margin: 0 auto;
+  }
+}
 //符合項目
 .meetsblock {
   width: 90%;
@@ -2175,17 +2545,18 @@
   // box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
   //  border-radius: 5px;
   .meetstitle {
-    font-size: 1.25em;
-    margin-bottom: 10px;
+    font-size: 1.375em;
+    margin-bottom: 0.8em;
     padding: 0 0 0 20px;
     position: relative;
+    font-weight: bolder;
     &:before {
       content: '';
-      border: 10px solid #666;
+      border: 8px solid #666;
       border-color: transparent transparent transparent #666;
       position: absolute;
       left: 0;
-      top: 0;
+      top: 3px;
     }
   }
   .meets_box {
@@ -2194,22 +2565,22 @@
     line-height: 180px;
     text-align: center;
     float: left;
-    margin: 0px 0.66% 15px;
+    margin: 0px 0.66% 10px;
     height: 180px;
     position: relative;
     @include box-sizing;
     @include screen('notebook') {
       width: 48%;
-      margin: 0px 1% 15px;
+      margin: 0px 1% 10px;
     }
     @include screen('mobile') {
       width: 100%;
-      margin: 0px 0 15px;
+      margin: 0px 0 10px;
     }
     a {
       border-radius: 5px;
       height: 170px;
-      margin-top: 10px;
+
       transition: 0.2s;
       background-color: lighten($color-yellow, 20);
       color: #333;
@@ -2217,7 +2588,6 @@
       display: block;
       &:hover,
       &:focus {
-        margin-top: 0px;
         box-shadow: 3px 2px 4px 3px #ccc;
         color: #333;
         background-color: lighten($color-yellow, 0);

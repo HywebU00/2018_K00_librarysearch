@@ -1,1084 +1,1085 @@
 // searchblock 查詢系統
 @include screen('mobile') {
-    .keyboardInputInitiator {
-        display: none;
-    }
+  .keyboardInputInitiator {
+    display: none;
+  }
 }
 .search_blockin {
-    background-image: url('../images/search_blockinbg01.jpg');
-    background-repeat: no-repeat;
-    background-position: center top;
-    margin: 0;
-    padding: 20px 0;
-    position: relative;
+  background-image: url('../images/search_blockinbg01.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin: 0;
+  padding: 20px 0;
+  position: relative;
+  @include box-sizing();
+  @media (max-width: 767px) {
+    min-height: 130px;
+    height: auto;
+  }
+  .container {
+    max-width: $container-max;
+  }
+  .col {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .searchsystem {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    font-size: 1em;
+    overflow: hidden;
     @include box-sizing();
-    @media(max-width: 767px) {
-        min-height: 130px;
-        height: auto;
+    @media (max-width: 1200px) {
+      width: 70%;
     }
-    .container {
-        max-width: $container-max;
+    @media (max-width: 992px) {
+      width: 85%;
     }
-    .col {
-        padding-left: 10px;
-        padding-right: 10px;
+    @media (max-width: 700px) {
+      width: 100%;
     }
-    .searchsystem {
-        width: 50%;
-        margin: 0 auto;
-        padding: 20px;
-        text-align: center;
-        font-size: 1em;
-        overflow: hidden;
-        @include box-sizing();
-        @media(max-width: 1200px) {
-            width: 70%;
-        }
-        @media(max-width: 992px) {
-            width: 85%;
-        }
-        @media(max-width: 700px) {
-            width: 100%;
-        }
-        &.searchblackbg {
-            background-color: rgba(0, 0, 0, .5);
-        }
-        &.diminutive {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding-top: 50px;
-            padding-bottom: 40px;
-            .searchtitle {
-                flex: 0 0 auto;
-            }
-            @include screen('xs_mobile') {
-                flex-wrap: wrap;
-                .searchtitle {
-                    flex-basis: 100%;
-                }
-            }
-            .diminutive_link {
-                margin-left: 40px;
-                flex: 0 0 auto;
-                @include screen('xs_mobile') {
-                    margin-left: 0px;
-                }
-                a {
-                    color: #fff;
-                    display: block;
-                    position: relative;
-                    padding: 3px 10px 3px 25px;
-                    transition: .5s;
-                    border-radius: 5px;
-                    background-color: transparent;
-                    border: 1px solid rgba(255, 255, 255, .5);
-                    white-space: nowrap;
-                    &:before {
-                        content: '';
-                        border: 6px solid #fff;
-                        border-top-color: transparent;
-                        border-bottom-color: transparent;
-                        border-right-color: transparent;
-                        position: absolute;
-                        left: 10px;
-                        top: 8px;
-                    }
-                    &:hover {
-                        background-color: #000;
-                    }
-                }
-            }
-        }
+    &.searchblackbg {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    &.diminutive {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 50px;
+      padding-bottom: 40px;
+      .searchtitle {
+        flex: 0 0 auto;
+      }
+      @include screen('xs_mobile') {
+        flex-wrap: wrap;
         .searchtitle {
-            color: #fff;
-            font-size: 1.687em;
-            margin-bottom: 15px;
-            letter-spacing: 0.05em;
-            line-height: 1.2em;
+          flex-basis: 100%;
         }
-        .select_left {
-            float: left;
-            width: 27%;
-            margin-right: 0;
-            margin-bottom: 5px;
-            @media(max-width: 575px) {
-                width: 100%;
-                margin: 0;
-            }
-            select {
-                background-color: #fff;
-                border-radius: 0;
-                border: none;
-                font-size: 1em;
-                height: 40px;
-                line-height: 2.2em;
-                border: none !important;
-                border-right: 1px solid #d3d3d3 !important;
-                &:focus {
-                    box-shadow: 0 0px 0px 2px $form-focus inset;
-                }
-            }
+      }
+      .diminutive_link {
+        margin-left: 40px;
+        flex: 0 0 auto;
+        @include screen('xs_mobile') {
+          margin-left: 0px;
         }
-        .form_search {
-            float: left;
-            background-color: #fff;
-            width: 73%;
-            margin: 0 auto 5px;
-            text-align: left;
-            padding: 0px;
-            overflow: hidden;
-            height: 40px;
-            box-shadow: none;
-            @media(max-width: 575px) {
-                width: 100%;
-                margin: 0 0 5px;
-            }
-            input[type="text"] {
-                border-radius: 0;
-                border: none;
-                font-size: 1em;
-                width: 80%;
-                padding: 12px 10px 10px;
-                font-weight: normal;
-                margin: 0;
-                height: 39px;
-                color: #333;
-                @include screen('mobile') {
-                    width: 75%;
-                }
-                @include screen('xs_mobile') {
-                    width: 70%;
-                }
-                @media(max-width: 480px) {
-                    width: 70%;
-                }
-                @media(max-width: 380px) {
-                    width: 60%;
-                }
-                &.nobtn {
-                    width: 89%;
-                }
-            }
-            input {
-                padding: 15px;
-            }
-            input[type="submit"] {
-                margin: 0;
-                background-color: $importantColor;
-                border: none;
-                border-radius: 0;
-                float: right;
-                height: 40px;
-                background-image: url('../images/icon_search01.png');
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: 25px;
-                width: 52px;
-                min-width: auto; // @media(max-width: 400px) {
-                &:focus {
-                    background-color: darken(#f4573f, 20);
-                }
-            }
-            // placeholder
-            ::-webkit-input-placeholder {
-                /* Chrome */
-                color: #666;
-            }
-            :-ms-input-placeholder {
-                /* IE 10+ */
-                color: #666;
-            }
-            ::-moz-placeholder {
-                /* Firefox 19+ */
-                color: #666;
-                opacity: 1;
-            }
-            :-moz-placeholder {
-                /* Firefox 4 - 18 */
-                color: #666;
-                opacity: 1;
-            }
+        a {
+          color: #fff;
+          display: block;
+          position: relative;
+          padding: 3px 10px 3px 25px;
+          transition: 0.5s;
+          border-radius: 5px;
+          background-color: transparent;
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          white-space: nowrap;
+          &:before {
+            content: '';
+            border: 6px solid #fff;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+            position: absolute;
+            left: 10px;
+            top: 8px;
+          }
+          &:hover {
+            background-color: #000;
+          }
         }
-        .onlysearch {
-            float: none;
-            clear: both;
-            color: #fff;
-            margin: 5px 0;
-            text-align: left;
-            input {
-                margin-right: 5px !important;
-            }
-        }
-        .btn_grp {
-            margin: 0;
-            clear: both;
-            text-align: left;
-            padding: 0 0 10px;
-            float: none;
-            clear: both;
-            a {
-                padding: 5px 15px 5px 10px;
-                margin-bottom: 7px;
-                margin-left: 0;
-                margin-right: 0;
-                display: inline-block;
-                color: #fff;
-                position: relative;
-                &:before {
-                    content: '';
-                    position: absolute;
-                    border: 7px solid #fff;
-                    border-right-color: transparent;
-                    border-top-color: transparent;
-                    border-bottom-color: transparent;
-                    top: 10px;
-                    left: 0px;
-                    display: block;
-                }
-                &:hover {
-                    color: nth($lightColor, $style);
-                    text-decoration: underline;
-                }
-                &.addfield {
-                    background-color: nth($primaryColor, $style);
-                    border-radius: 5px;
-                    margin: 0 10px 7px 0;
-                    padding: 5px 10px 5px 20px;
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        top: 10px;
-                        left: 10px;
-                        display: block;
-                    }
-                }
-            }
-        }
-        .query_word {
-            text-align: left;
-            color: #fff;
-            padding: 10px 0 0 65px;
-            border-top: 1px solid #fff;
-            clear: both;
-            span {
-                margin-left: -65px;
-            }
-            @media(max-width: 480px) {
-                padding: 10px 0 0 0;
-                span {
-                    display: block;
-                    margin-left: 0;
-                    margin-bottom: 10px;
-                }
-            }
-        }
-        // 
-        .form_advanced {
-            margin: 0 0 5px;
-            display: none;
-            float: none;
-            clear: both;
-            table {
-                border: none;
-                td {
-                    border: none;
-                    padding: 0;
-                    vertical-align: top;
-                    float: left;
-                    &:nth-child(1), &:nth-child(2) {
-                        width: 15%;
-                    }
-                    &:nth-child(3) {
-                        width: 70%;
-                    }
-                    // &:nth-child(4) {
-                    //     width: 12%;
-                    //     text-align: center;
-                    // }
-                    &.adddelbtn {
-                        width: 100% !important;
-                    }
-                    @media(max-width: 575px) {
-                        &:nth-child(1) {
-                            width: 50%;
-                        }
-                        &:nth-child(2) {
-                            width: 50%;
-                        }
-                        &:nth-child(3) {
-                            width: 100%;
-                        }
-                        &:nth-child(4) {
-                            width: 100%;
-                            display: block;
-                            text-align: left;
-                        }
-                    }
-                }
-            }
-            .select_left {
-                width: 100%;
-                margin: 0;
-                @include screen('mobile') {
-                    display: block;
-                }
-                select {
-                    background-color: #fff;
-                    border: 1px solid $color-gray;
-                    font-size: 1em;
-                    box-shadow: none;
-                    padding: 0 24px 0 .5em;
-                    height: 40px;
-                    line-height: 2.2em;
-                    &:focus {
-                        box-shadow: 0 0px 0px 2px $form-focus inset;
-                    }
-                }
-            }
-            .form_search {
-                box-shadow: none;
-                width: 100%;
-                margin: 0;
-                padding: 0 24px 0 .5em !important;
-                height: 40px;
-                box-shadow: none;
-                line-height: 2em;
-                @include box-sizing(border-box);
-                @include screen('mobile') {
-                    padding: 0 .5em !important;
-                }
-                input[type="text"] {
-                    border-radius: 0;
-                    border: none;
-                    font-size: 1em;
-                    width: 93.2%;
-                    padding: 7px 10px 5px 0;
-                    font-weight: normal;
-                    margin: 0;
-                    color: #333;
-                    @include screen('mobile') {
-                        width: 100%;
-                    }
-                }
-            }
-            ul {
-                margin: 5px 0 0;
-                padding: 0;
-                float: right;
-                li {
-                    display: inline-block;
-                    margin: 0 3px;
-                    a {
-                        display: block;
-                        &:focus {
-                            box-shadow: 0 0px 0px 2px $form-focus;
-                        }
-                    }
-                }
-            }
-            .onlysearchin {
-                float: left;
-                color: #fff;
-                margin-top: 5px;
-                input {
-                    margin-right: 5px !important;
-                }
-            }
-            .btn_grp {
-                margin: 5px 0 15px;
-                clear: both;
-                float: none;
-                @include screen('mobile') {
-                    text-align: center;
-                }
-                input[type="submit"] {
-                    background-color: $importantColor;
-                    border: 1px solid darken($importantColor, 25);
-                    &:hover {
-                        background-color: darken(#e52104, 8);
-                    }
-                }
-            }
-        }
-        // 
+      }
     }
+    .searchtitle {
+      color: #fff;
+      font-size: 1.687em;
+      margin-bottom: 15px;
+      letter-spacing: 0.05em;
+      line-height: 1.2em;
+    }
+    .select_left {
+      float: left;
+      width: 27%;
+      margin-right: 0;
+      margin-bottom: 5px;
+      @media (max-width: 575px) {
+        width: 100%;
+        margin: 0;
+      }
+      select {
+        background-color: #fff;
+        border-radius: 0;
+        border: none;
+        font-size: 1em;
+        height: 40px;
+        line-height: 2.2em;
+        border: none !important;
+        border-right: 1px solid #d3d3d3 !important;
+        &:focus {
+          box-shadow: 0 0px 0px 2px $form-focus inset;
+        }
+      }
+    }
+    .form_search {
+      float: left;
+      background-color: #fff;
+      width: 73%;
+      margin: 0 auto 5px;
+      text-align: left;
+      padding: 0px;
+      overflow: hidden;
+      height: 40px;
+      box-shadow: none;
+      @media (max-width: 575px) {
+        width: 100%;
+        margin: 0 0 5px;
+      }
+      input[type='text'] {
+        border-radius: 0;
+        border: none;
+        font-size: 1em;
+        width: 80%;
+        padding: 12px 10px 10px;
+        font-weight: normal;
+        margin: 0;
+        height: 39px;
+        color: #333;
+        @include screen('mobile') {
+          width: 75%;
+        }
+        @include screen('xs_mobile') {
+          width: 70%;
+        }
+        @media (max-width: 480px) {
+          width: 70%;
+        }
+        @media (max-width: 380px) {
+          width: 60%;
+        }
+        &.nobtn {
+          width: 89%;
+        }
+      }
+      input {
+        padding: 15px;
+      }
+      input[type='submit'] {
+        margin: 0;
+        background-color: $importantColor;
+        border: none;
+        border-radius: 0;
+        float: right;
+        height: 40px;
+        background-image: url('../images/icon_search01.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 25px;
+        width: 52px;
+        min-width: auto; // @media(max-width: 400px) {
+        &:focus {
+          background-color: darken(#f4573f, 20);
+        }
+      }
+      // placeholder
+      ::-webkit-input-placeholder {
+        /* Chrome */
+        color: #666;
+      }
+      :-ms-input-placeholder {
+        /* IE 10+ */
+        color: #666;
+      }
+      ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #666;
+        opacity: 1;
+      }
+      :-moz-placeholder {
+        /* Firefox 4 - 18 */
+        color: #666;
+        opacity: 1;
+      }
+    }
+    .onlysearch {
+      float: none;
+      clear: both;
+      color: #fff;
+      margin: 5px 0;
+      text-align: left;
+      input {
+        margin-right: 5px !important;
+      }
+    }
+    .btn_grp {
+      margin: 0;
+      clear: both;
+      text-align: left;
+      padding: 0 0 10px;
+      float: none;
+      clear: both;
+      a {
+        padding: 5px 15px 5px 10px;
+        margin-bottom: 7px;
+        margin-left: 0;
+        margin-right: 0;
+        display: inline-block;
+        color: #fff;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          border: 7px solid #fff;
+          border-right-color: transparent;
+          border-top-color: transparent;
+          border-bottom-color: transparent;
+          top: 10px;
+          left: 0px;
+          display: block;
+        }
+        &:hover {
+          color: nth($lightColor, $style);
+          text-decoration: underline;
+        }
+        &.addfield {
+          background-color: nth($primaryColor, $style);
+          border-radius: 5px;
+          margin: 0 10px 7px 0;
+          padding: 5px 10px 5px 20px;
+          &:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: block;
+          }
+        }
+      }
+    }
+    .query_word {
+      text-align: left;
+      color: #fff;
+      padding: 10px 0 0 65px;
+      border-top: 1px solid #fff;
+      clear: both;
+      span {
+        margin-left: -65px;
+      }
+      @media (max-width: 480px) {
+        padding: 10px 0 0 0;
+        span {
+          display: block;
+          margin-left: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    //
+    .form_advanced {
+      margin: 0 0 5px;
+      display: none;
+      float: none;
+      clear: both;
+      table {
+        border: none;
+        td {
+          border: none;
+          padding: 0;
+          vertical-align: top;
+          float: left;
+          &:nth-child(1),
+          &:nth-child(2) {
+            width: 15%;
+          }
+          &:nth-child(3) {
+            width: 70%;
+          }
+          // &:nth-child(4) {
+          //     width: 12%;
+          //     text-align: center;
+          // }
+          &.adddelbtn {
+            width: 100% !important;
+          }
+          @media (max-width: 575px) {
+            &:nth-child(1) {
+              width: 50%;
+            }
+            &:nth-child(2) {
+              width: 50%;
+            }
+            &:nth-child(3) {
+              width: 100%;
+            }
+            &:nth-child(4) {
+              width: 100%;
+              display: block;
+              text-align: left;
+            }
+          }
+        }
+      }
+      .select_left {
+        width: 100%;
+        margin: 0;
+        @include screen('mobile') {
+          display: block;
+        }
+        select {
+          background-color: #fff;
+          border: 1px solid $color-gray;
+          font-size: 1em;
+          box-shadow: none;
+          padding: 0 24px 0 0.5em;
+          height: 40px;
+          line-height: 2.2em;
+          &:focus {
+            box-shadow: 0 0px 0px 2px $form-focus inset;
+          }
+        }
+      }
+      .form_search {
+        box-shadow: none;
+        width: 100%;
+        margin: 0;
+        padding: 0 24px 0 0.5em !important;
+        height: 40px;
+        box-shadow: none;
+        line-height: 2em;
+        @include box-sizing(border-box);
+        @include screen('mobile') {
+          padding: 0 0.5em !important;
+        }
+        input[type='text'] {
+          border-radius: 0;
+          border: none;
+          font-size: 1em;
+          width: 93.2%;
+          padding: 7px 10px 5px 0;
+          font-weight: normal;
+          margin: 0;
+          color: #333;
+          @include screen('mobile') {
+            width: 100%;
+          }
+        }
+      }
+      ul {
+        margin: 5px 0 0;
+        padding: 0;
+        float: right;
+        li {
+          display: inline-block;
+          margin: 0 3px;
+          a {
+            display: block;
+            &:focus {
+              box-shadow: 0 0px 0px 2px $form-focus;
+            }
+          }
+        }
+      }
+      .onlysearchin {
+        float: left;
+        color: #fff;
+        margin-top: 5px;
+        input {
+          margin-right: 5px !important;
+        }
+      }
+      .btn_grp {
+        margin: 5px 0 15px;
+        clear: both;
+        float: none;
+        @include screen('mobile') {
+          text-align: center;
+        }
+        input[type='submit'] {
+          background-color: $importantColor;
+          border: 1px solid darken($importantColor, 25);
+          &:hover {
+            background-color: darken(#e52104, 8);
+          }
+        }
+      }
+    }
+    //
+  }
 }
 .search_blockin2 {
-    background-image: url('../images/search_blockinbg01.jpg');
-    background-repeat: no-repeat;
-    background-position: center top;
-    margin: 0;
-    padding: 0;
-    height: 80px;
-    position: relative;
-    @include box-sizing();
+  background-image: url('../images/search_blockinbg01.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin: 0;
+  padding: 0;
+  height: 80px;
+  position: relative;
+  @include box-sizing();
 }
 // 進階查詢
 .advanced_search {
-    margin: 0 0px 20px;
-    padding: 30px 20px 20px;
-    // background-color: rgba(255, 255, 255, .6);
-    border-radius: 5px;
-    // display:none;
-    z-index: 9999;
-    background-image: url('../images/advanced_searchbg.png');
-    background-repeat: repeat-x;
-    background-position: left top;
-    @include screen('mobile') {
-        margin: 20px 0px;
+  margin: 0 0px 20px;
+  padding: 30px 20px 20px;
+  // background-color: rgba(255, 255, 255, .6);
+  border-radius: 5px;
+  // display:none;
+  z-index: 9999;
+  background-image: url('../images/advanced_searchbg.png');
+  background-repeat: repeat-x;
+  background-position: left top;
+  @include screen('mobile') {
+    margin: 20px 0px;
+  }
+  .advanced_block {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    font-size: 1em;
+    // overflow: hidden;
+    @include box-sizing();
+    @media (max-width: 1200px) {
+      width: 70%;
     }
-    .advanced_block {
-        width: 50%;
-        margin: 0 auto;
+    @media (max-width: 992px) {
+      width: 85%;
+    }
+    @media (max-width: 700px) {
+      width: 90%;
+    }
+    //關閉按鈕
+    .close {
+      display: none;
+      @include screen('mobile') {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        z-index: 9999999;
+        cursor: pointer;
+      }
+    }
+    .searchsystem {
+      width: 100%;
+      border-bottom: 1px dotted $color-gray;
+      @include screen('mobile') {
+        margin-bottom: 5px;
+      }
+      table {
+        border: none;
+        td {
+          border: none;
+          padding: 0 5px 5px 0;
+          vertical-align: top;
+          @include screen('mobile') {
+            display: block;
+            overflow: hidden;
+          }
+        }
+      }
+      .select_left {
+        width: 100%;
+        margin: 0;
+        @include screen('mobile') {
+          display: block;
+        }
+        select {
+          background-color: #fff;
+          border-radius: 5px;
+          border: 1px solid $color-gray;
+          font-size: 1em;
+          padding: 0 24px 0 0.5em;
+          height: 2.4em;
+          line-height: 2.4em;
+        }
+      }
+      .form_search {
+        box-shadow: none;
+        width: 100%;
+        margin: 0;
+        border-radius: 5px;
+        border: 1px solid $color-gray;
+        padding: 0 24px 0 0.5em !important;
+        height: 2.4em;
+        line-height: 2em;
+        background-color: #fff;
+        @include box-sizing(border-box);
+        input[type='text'] {
+          border-radius: 0;
+          border: none;
+          font-size: 1em;
+          width: 90%;
+          padding: 7px 10px 5px 0;
+          font-weight: normal;
+          margin: 0;
+          color: #333;
+        }
+      }
+      ul {
+        margin: 5px 0 0;
         padding: 0;
-        text-align: center;
-        font-size: 1em;
-        // overflow: hidden;
-        @include box-sizing();
-        @media(max-width: 1200px) {
-            width: 70%;
+        li {
+          display: inline-block;
+          margin: 0 3px;
+          @include screen('mobile') {
+            margin: 0 3px 5px;
+          }
+          a {
+            display: block;
+            &:hover {
+            }
+            &:focus {
+              box-shadow: 0 0px 0px 2px $form-focus;
+            }
+          }
         }
-        @media(max-width: 992px) {
-            width: 85%;
-        }
-        @media(max-width: 700px) {
-            width: 90%;
-        }
-        //關閉按鈕
-        .close {
-            display: none;
-            @include screen('mobile') {
-                display: block;
-                position: absolute;
-                right: 15px;
-                top: 10px;
-                z-index: 9999999;
-                cursor: pointer;
-            }
-        }
-        .searchsystem {
-            width: 100%;
-            border-bottom: 1px dotted $color-gray;
-            @include screen('mobile') {
-                margin-bottom: 5px;
-            }
-            table {
-                border: none;
-                td {
-                    border: none;
-                    padding: 0 5px 5px 0;
-                    vertical-align: top;
-                    @include screen('mobile') {
-                        display: block;
-                        overflow: hidden;
-                    }
-                }
-            }
-            .select_left {
-                width: 100%;
-                margin: 0;
-                @include screen('mobile') {
-                    display: block;
-                }
-                select {
-                    background-color: #fff;
-                    border-radius: 5px;
-                    border: 1px solid $color-gray;
-                    font-size: 1em;
-                    padding: 0 24px 0 .5em;
-                    height: 2.4em;
-                    line-height: 2.4em;
-                }
-            }
-            .form_search {
-                box-shadow: none;
-                width: 100%;
-                margin: 0;
-                border-radius: 5px;
-                border: 1px solid $color-gray;
-                padding: 0 24px 0 .5em !important;
-                height: 2.4em;
-                line-height: 2em;
-                background-color: #fff;
-                @include box-sizing(border-box);
-                input[type="text"] {
-                    border-radius: 0;
-                    border: none;
-                    font-size: 1em;
-                    width: 90%;
-                    padding: 7px 10px 5px 0;
-                    font-weight: normal;
-                    margin: 0;
-                    color: #333;
-                }
-            }
-            ul {
-                margin: 5px 0 0;
-                padding: 0;
-                li {
-                    display: inline-block;
-                    margin: 0 3px;
-                    @include screen('mobile') {
-                        margin: 0 3px 5px;
-                    }
-                    a {
-                        display: block;
-                        &:hover {}
-                        &:focus {
-                            box-shadow: 0 0px 0px 2px $form-focus;
-                        }
-                    }
-                }
-            }
-            .btn_grp {
-                margin: 5px 0 15px;
-                clear: both;
-                float: none;
-            }
-        }
-        //
-        h2 {
-            text-align: left;
-            margin: 0 0 10px;
-            padding: 0;
-            font-size: 1.125em;
-            color: #59493f;
-        }
-        .col-6 {
-            margin: 20px 0;
-            .col {
-                padding: 0;
-            }
-            .rightcol {
-                padding-right: 15px;
-            }
-            .leftcol {
-                padding-left: 15px;
-            }
-            @include screen('mobile') {
-                .rightcol,
-                .leftcol {
-                    padding-right: 0;
-                    padding-left: 0;
-                }
-            }
-        }
-        .searchblockdata {
-            text-align: left;
-            margin-bottom: 15px;
-            float: none;
-            clear: both;
-            display: inline-block;
-            padding-bottom: 10px;
-            border-bottom: 1px dotted $color-gray;
-            width: 100%;
-            .radio_grp {
-                margin-left: 2px;
-                label {
-                    input[type="radio"] {
-                        margin-right: 8px;
-                    }
-                }
-                select {
-                    width: 97%;
-                    @include screen('mobile') {
-                        width: 100%;
-                    }
-                    &:focus {
-                        box-shadow: 0 0px 0px 2px $form-focus inset;
-                    }
-                }
-            }
-            .form_content {
-                .to {
-                    float: left;
-                    margin: 5px 0 0;
-                    width: 6%;
-                    text-align: center;
-                    @media(max-width: 580px) {
-                        display: none;
-                    }
-                }
-                .select_date {
-                    width: 45% !important;
-                    @media(max-width: 580px) {
-                        width: 99% !important;
-                    }
-                    input {
-                        width: 100% !important;
-                    }
-                }
-                .select_date2 {
-                    float: left;
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
-                    margin-bottom: .3em;
-                    background-color: #fff;
-                    width: 46% !important;
-                    @media(max-width: 580px) {
-                        width: 99% !important;
-                        float: none;
-                    }
-                    input {
-                        margin-bottom: 0;
-                        border: none;
-                        padding: 0.4em;
-                        width: 70% !important;
-                    }
-                    .image {
-                        vertical-align: middle;
-                        width: 24px;
-                        float: right;
-                        margin: 5px 5px 0 0;
-                        a {
-                            display: block;
-                            img {
-                                width: 24px;
-                            }
-                        }
-                    }
-                }
-                .ui-datepicker {
-                    width: 17em;
-                    padding: .2em .2em 0;
-                    display: none;
-                    z-index: 9 !important
-                }
-            }
-            .selectblock {
-                position: relative;
-            }
-            // 請選擇
-            .select {
-                line-height: 2.4em;
-                height: 2.4em;
-                padding: 0 24px 0 .5em;
-                border: 1px solid #d3d3d3 !important;
-                background: #fff url(../images/basic/icon_select_arrow.svg) no-repeat right center;
-                background-size: 25px;
-                margin-right: 2px;
-                margin-bottom: 0;
-                display: inline-block;
-                border-radius: 5px;
-                width: 100%;
-                @include box-sizing;
-            }
-            .selectdownblock {
-                border: 1px solid #d3d3d3;
-                background-color: #fff;
-                padding: 10px;
-                border-radius: 5px;
-                display: none;
-                position: absolute;
-                top: 2.5em;
-                left: 0;
-                z-index: 9;
-                width: 100%;
-                max-height: 300px;
-                overflow-y: scroll;
-                @include box-sizing;
-                ul {
-                    margin: 0;
-                    padding: 0;
-                    li {
-                        list-style: none;
-                        padding: 0;
-                        input {
-                            margin-right: 8px;
-                            vertical-align: middle;
-                        }
-                    }
-                }
-            }
-        }
-        .btn_grp {
-            clear: both;
-            input[type="submit"] {
-                background: $importantColor;
-                border: 1px solid darken($importantColor, 25);
-                &:hover {
-                    background: darken($importantColor, 8);
-                }
-                &:focus {
-                    border: 1px solid $importantColor;
-                    box-shadow: 0 0px 0px 2px $form-focus;
-                }
-            }
-        }
+      }
+      .btn_grp {
+        margin: 5px 0 15px;
+        clear: both;
+        float: none;
+      }
     }
+    //
+    h2 {
+      text-align: left;
+      margin: 0 0 10px;
+      padding: 0;
+      font-size: 1.125em;
+      color: #59493f;
+    }
+    .col-6 {
+      margin: 20px 0;
+      .col {
+        padding: 0;
+      }
+      .rightcol {
+        padding-right: 15px;
+      }
+      .leftcol {
+        padding-left: 15px;
+      }
+      @include screen('mobile') {
+        .rightcol,
+        .leftcol {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+    }
+    .searchblockdata {
+      text-align: left;
+      margin-bottom: 15px;
+      float: none;
+      clear: both;
+      display: inline-block;
+      padding-bottom: 10px;
+      border-bottom: 1px dotted $color-gray;
+      width: 100%;
+      .radio_grp {
+        margin-left: 2px;
+        label {
+          input[type='radio'] {
+            margin-right: 8px;
+          }
+        }
+        select {
+          width: 97%;
+          @include screen('mobile') {
+            width: 100%;
+          }
+          &:focus {
+            box-shadow: 0 0px 0px 2px $form-focus inset;
+          }
+        }
+      }
+      .form_content {
+        .to {
+          float: left;
+          margin: 5px 0 0;
+          width: 6%;
+          text-align: center;
+          @media (max-width: 580px) {
+            display: none;
+          }
+        }
+        .select_date {
+          width: 45% !important;
+          @media (max-width: 580px) {
+            width: 99% !important;
+          }
+          input {
+            width: 100% !important;
+          }
+        }
+        .select_date2 {
+          float: left;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-bottom: 0.3em;
+          background-color: #fff;
+          width: 46% !important;
+          @media (max-width: 580px) {
+            width: 99% !important;
+            float: none;
+          }
+          input {
+            margin-bottom: 0;
+            border: none;
+            padding: 0.4em;
+            width: 70% !important;
+          }
+          .image {
+            vertical-align: middle;
+            width: 24px;
+            float: right;
+            margin: 5px 5px 0 0;
+            a {
+              display: block;
+              img {
+                width: 24px;
+              }
+            }
+          }
+        }
+        .ui-datepicker {
+          width: 17em;
+          padding: 0.2em 0.2em 0;
+          display: none;
+          z-index: 9 !important;
+        }
+      }
+      .selectblock {
+        position: relative;
+      }
+      // 請選擇
+      .select {
+        line-height: 2.4em;
+        height: 2.4em;
+        padding: 0 24px 0 0.5em;
+        border: 1px solid #d3d3d3 !important;
+        background: #fff url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+        background-size: 25px;
+        margin-right: 2px;
+        margin-bottom: 0;
+        display: inline-block;
+        border-radius: 5px;
+        width: 100%;
+        @include box-sizing;
+      }
+      .selectdownblock {
+        border: 1px solid #d3d3d3;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
+        position: absolute;
+        top: 2.5em;
+        left: 0;
+        z-index: 9;
+        width: 100%;
+        max-height: 300px;
+        overflow-y: scroll;
+        @include box-sizing;
+        ul {
+          margin: 0;
+          padding: 0;
+          li {
+            list-style: none;
+            padding: 0;
+            input {
+              margin-right: 8px;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+    .btn_grp {
+      clear: both;
+      input[type='submit'] {
+        background: $importantColor;
+        border: 1px solid darken($importantColor, 25);
+        &:hover {
+          background: darken($importantColor, 8);
+        }
+        &:focus {
+          border: 1px solid $importantColor;
+          box-shadow: 0 0px 0px 2px $form-focus;
+        }
+      }
+    }
+  }
 }
 //分欄
 .maincolumn {
+  position: relative;
+  background-color: #fff;
+  .mainleftblock_overlay {
+    display: none;
+    @include screen('mobile') {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+    }
+  }
+  .mainleftblock {
+    @include gutter();
+    width: 250px;
+    float: left;
+    @include box-sizing(border-box);
+    padding-top: 15px;
+    padding-bottom: 30px;
     position: relative;
-    background-color: #fff;
-    .mainleftblock_overlay {
-        display: none;
-        @include screen('mobile') {
-            display: block;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, .8);
-            z-index: 9999;
-        }
+    padding-right: 0px;
+    @include screen('tablet') {
+      width: 230px;
     }
-    .mainleftblock {
-        @include gutter();
-        width: 250px;
-        float: left;
-        @include box-sizing(border-box);
-        padding-top: 15px;
-        padding-bottom: 30px;
-        position: relative;
-        padding-right: 0px;
-        @include screen('tablet') {
-            width: 230px;
-        }
-        &:before {
-            content: '';
-            width: 1px;
-            height: 100%;
-            position: absolute;
-            right: 0;
-            top: 0;
-            background-color: $color-gray;
-        }
-        @include screen('mobile') {
-            position: fixed;
-            left: -100%;
-            top: 0;
-            overflow-y: scroll;
-            width: 100%;
-            padding-right: 30px;
-            padding-top: 50px;
-            transition: .5s;
-            height: 100%;
-            display: none;
-            background-color: #fff;
-            z-index: 11;
-        }
-        //關閉按鈕
-        .close {
-            display: none;
-            @include screen('mobile') {
-                display: block;
-                position: absolute;
-                right: 15px;
-                top: 10px;
-                cursor: pointer;
-            }
-        }
-        //
-        .mainleftcontent {
-            padding-right: 15px;
-            &.fixed {
-                position: fixed;
-                top: 55px;
-                overflow-y: scroll;
-                height: 100%;
-                @include box-sizing;
-                padding-bottom: 70px;
-                z-index: 9;
-                scrollbar-face-color: #eee; //（軸面顏色） 
-                scrollbar-highlight-color: #fff; //軸面左角邊顏色
-                scrollbar-shadow-color: #fff; //軸面右角邊顏色 
-                scrollbar-3dlight-color: #fff; //左立體邊顏色
-                scrollbar-darkshadow-color: #fff; //右立體邊顏色
-                scrollbar-arrow-color: #666; //箭頭顏色
-                scrollbar-track-color: #fff; //軸軌顏色
-                .limit h2 {
-                    padding-top: 20px;
-                }
-            }
-        }
+    &:before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: $color-gray;
     }
-    // 
-    .mainrightblock {
-        width: calc(100% - 250px);
-        @include screen('tablet') {
-            width: calc(100% - 230px);
-        }
-        float: left;
-        position: relative;
-        &:before {
-            content: '';
-            width: 1px;
-            height: 100%;
-            position: absolute;
-            left: -1px;
-            top: 0;
-            background-color: $color-gray;
-        }
-        @include screen('mobile') {
-            width: 100%;
-        }
+    @include screen('mobile') {
+      position: fixed;
+      left: -100%;
+      top: 0;
+      overflow-y: scroll;
+      width: 100%;
+      padding-right: 30px;
+      padding-top: 50px;
+      transition: 0.5s;
+      height: 100%;
+      display: none;
+      background-color: #fff;
+      z-index: 11;
     }
-    .mainrightblock2 {
-        @include make-xs-column(12);
-        @include make-sm-column(12); //768px  width:66.6%
-        @include make-md-column(12); //992px  width:66.6%
-        @include make-lg-column(12); //1200px width:66.6%;
-        // border-left: 1px solid $color-gray;
+    //關閉按鈕
+    .close {
+      display: none;
+      @include screen('mobile') {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        cursor: pointer;
+      }
     }
+    //
+    .mainleftcontent {
+      padding-right: 15px;
+      &.fixed {
+        position: fixed;
+        top: 55px;
+        overflow-y: scroll;
+        height: 100%;
+        @include box-sizing;
+        padding-bottom: 70px;
+        z-index: 9;
+        scrollbar-face-color: #eee; //（軸面顏色）
+        scrollbar-highlight-color: #fff; //軸面左角邊顏色
+        scrollbar-shadow-color: #fff; //軸面右角邊顏色
+        scrollbar-3dlight-color: #fff; //左立體邊顏色
+        scrollbar-darkshadow-color: #fff; //右立體邊顏色
+        scrollbar-arrow-color: #666; //箭頭顏色
+        scrollbar-track-color: #fff; //軸軌顏色
+        .limit h2 {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+  //
+  .mainrightblock {
+    width: calc(100% - 250px);
+    @include screen('tablet') {
+      width: calc(100% - 230px);
+    }
+    float: left;
+    position: relative;
+    &:before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      left: -1px;
+      top: 0;
+      background-color: $color-gray;
+    }
+    @include screen('mobile') {
+      width: 100%;
+    }
+  }
+  .mainrightblock2 {
+    @include make-xs-column(12);
+    @include make-sm-column(12); //768px  width:66.6%
+    @include make-md-column(12); //992px  width:66.6%
+    @include make-lg-column(12); //1200px width:66.6%;
+    // border-left: 1px solid $color-gray;
+  }
 }
 //cp詳目頁欄位
 //分欄
 .maincolumn_cp {
+  position: relative;
+  background-color: #fff;
+  .mainleftblock_overlay {
+    display: none;
+    @include screen('mobile') {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+    }
+  }
+  // 詳目頁左欄
+  .mainleftblock {
+    @include gutter();
+    width: 250px;
+    float: left;
+    @include box-sizing(border-box);
+    padding-top: 15px;
+    padding-bottom: 30px;
     position: relative;
-    background-color: #fff;
-    .mainleftblock_overlay {
-        display: none;
-        @include screen('mobile') {
-            display: block;
-            position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, .8);
-            z-index: 9999;
-        }
+    padding-right: 0px;
+    &:before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: $color-gray;
     }
-    // 詳目頁左欄
-    .mainleftblock {
-        @include gutter();
-        width: 250px;
-        float: left;
-        @include box-sizing(border-box);
-        padding-top: 15px;
-        padding-bottom: 30px;
-        position: relative;
-        padding-right: 0px;
-        &:before {
-            content: '';
-            width: 1px;
-            height: 100%;
-            position: absolute;
-            right: 0;
-            top: 0;
-            background-color: $color-gray;
-        }
-        @include screen('mobile') {
-            position: fixed;
-            left: -100%;
-            top: 0;
-            overflow-y: scroll;
-            width: 100%;
-            padding-right: 30px;
-            padding-top: 50px;
-            transition: .5s;
-            height: 100%;
-            display: none;
-            background-color: #fff;
-            z-index: 11;
-        }
-        //關閉按鈕
-        .close {
-            display: none;
-            @include screen('mobile') {
-                display: block;
-                position: absolute;
-                right: 15px;
-                top: 10px;
-                cursor: pointer;
-            }
-        }
-        .mainleftcontent {
-            &.fixed {
-                position: fixed;
-                left: 0;
-                top: 70px;
-                overflow-y: scroll;
-                height: 100%;
-                @include box-sizing;
-                padding-bottom: 70px;
-                z-index: 99999;
-                scrollbar-face-color: #eee; //（軸面顏色） 
-                scrollbar-highlight-color: #ccc; //軸面左角邊顏色
-                scrollbar-shadow-color: #ccc; //軸面右角邊顏色 
-                scrollbar-3dlight-color: #fff; //左立體邊顏色
-                scrollbar-darkshadow-color: #fff; //右立體邊顏色
-                scrollbar-arrow-color: #666; //箭頭顏色
-                scrollbar-track-color: #fff; //軸軌顏色
-            }
-        }
+    @include screen('mobile') {
+      position: fixed;
+      left: -100%;
+      top: 0;
+      overflow-y: scroll;
+      width: 100%;
+      padding-right: 30px;
+      padding-top: 50px;
+      transition: 0.5s;
+      height: 100%;
+      display: none;
+      background-color: #fff;
+      z-index: 11;
     }
-    // 
-    .mainrightblock {
-        width: calc(100% - 250px);
-        float: left;
-        position: relative;
-        &:before {
-            content: '';
-            width: 1px;
-            height: 100%;
-            position: absolute;
-            left: -1px;
-            top: 0;
-            background-color: $color-gray;
-        }
-        @include screen('mobile') {
-            width: 100%;
-        }
+    //關閉按鈕
+    .close {
+      display: none;
+      @include screen('mobile') {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        cursor: pointer;
+      }
     }
-    .mainrightblock2 {
-        @include make-xs-column(12);
-        @include make-sm-column(12); //768px  width:66.6%
-        @include make-md-column(12); //992px  width:66.6%
-        @include make-lg-column(12); //1200px width:66.6%;
-        // border-left: 1px solid $color-gray;
+    .mainleftcontent {
+      &.fixed {
+        position: fixed;
+        left: 0;
+        top: 70px;
+        overflow-y: scroll;
+        height: 100%;
+        @include box-sizing;
+        padding-bottom: 70px;
+        z-index: 99999;
+        scrollbar-face-color: #eee; //（軸面顏色）
+        scrollbar-highlight-color: #ccc; //軸面左角邊顏色
+        scrollbar-shadow-color: #ccc; //軸面右角邊顏色
+        scrollbar-3dlight-color: #fff; //左立體邊顏色
+        scrollbar-darkshadow-color: #fff; //右立體邊顏色
+        scrollbar-arrow-color: #666; //箭頭顏色
+        scrollbar-track-color: #fff; //軸軌顏色
+      }
     }
+  }
+  //
+  .mainrightblock {
+    width: calc(100% - 250px);
+    float: left;
+    position: relative;
+    &:before {
+      content: '';
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      left: -1px;
+      top: 0;
+      background-color: $color-gray;
+    }
+    @include screen('mobile') {
+      width: 100%;
+    }
+  }
+  .mainrightblock2 {
+    @include make-xs-column(12);
+    @include make-sm-column(12); //768px  width:66.6%
+    @include make-md-column(12); //992px  width:66.6%
+    @include make-lg-column(12); //1200px width:66.6%;
+    // border-left: 1px solid $color-gray;
+  }
 }
 //左欄
 // 縮限查詢範圍
 .limit_range {
-    display: none;
-    @include screen('mobile') {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        z-index: 4;
-        a {
-            display: block;
-            text-align: center;
-            padding: 15px 8px;
-            background-image: none;
-            background-color: #d5d5d5;
-            color: #333;
-            border-radius: 0;
-            font-size: 1.125em;
-            img {
-                vertical-align: middle;
-                margin-right: 10px;
-            }
-            &:hover {
-                color: #000;
-            }
-        }
+  display: none;
+  @include screen('mobile') {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 4;
+    a {
+      display: block;
+      text-align: center;
+      padding: 15px 8px;
+      background-image: none;
+      background-color: #d5d5d5;
+      color: #333;
+      border-radius: 0;
+      font-size: 1.125em;
+      img {
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      &:hover {
+        color: #000;
+      }
     }
+  }
 }
 //目前縮限條件
 .limit {
-    h2 {
-        color: nth($linkColor, $style);
-        font-size: 1.25em;
-        margin: 0px 0 5px;
-        padding: 0;
+  h2 {
+    color: nth($linkColor, $style);
+    font-size: 1.25em;
+    margin: 0px 0 5px;
+    padding: 0;
+  }
+  .condition_block {
+    border: 1px solid #d2d2d2;
+    padding: 5px 15px;
+    margin: 0 0 15px;
+    overflow: hidden;
+    border-radius: 3px;
+    h3 {
+      font-size: 1em;
+      margin: 13px 0 5px;
+      padding: 0;
     }
-    .condition_block {
-        border: 1px solid #d2d2d2;
-        padding: 5px 15px;
-        margin: 0 0 15px;
-        overflow: hidden;
-        border-radius: 3px;
-        h3 {
-            font-size: 1em;
-            margin: 13px 0 5px;
-            padding: 0;
+    .condition {
+      position: relative;
+      border: 1px solid #d2d2d2;
+      border-radius: 5px;
+      padding: 3px 30px 3px 10px;
+      margin: 0 0 6px;
+      float: none;
+      span {
+        position: absolute;
+        top: 0px;
+        right: 5px;
+      }
+      a {
+        display: block;
+        padding: auto;
+        background: none;
+        line-height: auto;
+        border: none !important;
+        text-decoration: none;
+        color: #666;
+        &:hover {
+          border: none !important;
+          box-shadow: none;
+          color: #333;
+          background-color: transparent !important;
         }
-        .condition {
-            position: relative;
-            ;
-            border: 1px solid #d2d2d2;
-            border-radius: 5px;
-            padding: 3px 30px 3px 10px;
-            margin: 0 0 6px;
-            float: none;
-            span {
-                position: absolute;
-                top: 0px;
-                right: 5px;
-            }
-            a {
-                display: block;
-                padding: auto;
-                background: none;
-                line-height: auto;
-                border: none !important;
-                text-decoration: none;
-                color: #666;
-                &:hover {
-                    border: none !important;
-                    box-shadow: none;
-                    color: #333;
-                    background-color: transparent !important;
-                }
-            }
-        }
-        .cancel {
-            float: right;
-            border: 1px solid #d2d2d2;
-            border-radius: 5px;
-            margin: 10px 0;
-            a {
-                display: block;
-                background-image: url('../images/icon_cancel.png');
-                background-repeat: no-repeat;
-                background-position: 10px center;
-                padding: 3px 10px 3px 30px;
-            }
-        }
+      }
     }
+    .cancel {
+      float: right;
+      border: 1px solid #d2d2d2;
+      border-radius: 5px;
+      margin: 10px 0;
+      a {
+        display: block;
+        background-image: url('../images/icon_cancel.png');
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        padding: 3px 10px 3px 30px;
+      }
+    }
+  }
 }
 //出版年度
 .publication_year {
-    border: 1px solid #d2d2d2;
-    padding: 15px 10px;
-    margin: 0 0 25px;
-    border-radius: 3px;
+  border: 1px solid #d2d2d2;
+  padding: 15px 10px;
+  margin: 0 0 25px;
+  border-radius: 3px;
+  text-align: center;
+  @include screen('tablet') {
+    padding: 15px 3px;
+  }
+  h2 {
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 1.125em;
+  }
+  p {
+    padding: 0;
+    margin: 0 0px 15px;
     text-align: center;
-    @include screen('tablet') {
-        padding: 15px 3px;
-    }
-    h2 {
-        margin: 0 0 10px;
-        padding: 0;
-        font-size: 1.125em;
-    }
-    p {
-        padding: 0;
-        margin: 0 0px 15px;
-        text-align: center;
-        clear: both;
-    }
-    label {
-        width: 70px;
-        display: inline-block;
-        text-align: center;
-        // @media (max-width: 992px) and (min-width: 767px) {
-        //     width: 100%;
-        // }
-    }
-    input[type="text"] {
-        border: 1px solid #d2d2d2;
-        color: #666;
-        font-weight: bold;
-        width: 27%;
-        display: inline-block;
-        padding: 3px 5px;
-        text-align: center;
-    }
-    input[type="tel"] {
-        border: 1px solid #d2d2d2;
-        color: #666;
-        font-weight: bold;
-        width: 27%;
-        display: inline-block;
-        padding: 3px 5px;
-        text-align: center;
-    }
+    clear: both;
+  }
+  label {
+    width: 70px;
+    display: inline-block;
+    text-align: center;
+    // @media (max-width: 992px) and (min-width: 767px) {
+    //     width: 100%;
+    // }
+  }
+  input[type='text'] {
+    border: 1px solid #d2d2d2;
+    color: #666;
+    font-weight: bold;
+    width: 27%;
+    display: inline-block;
+    padding: 3px 5px;
+    text-align: center;
+  }
+  input[type='tel'] {
+    border: 1px solid #d2d2d2;
+    color: #666;
+    font-weight: bold;
+    width: 27%;
+    display: inline-block;
+    padding: 3px 5px;
+    text-align: center;
+  }
 }
 .ui-widget.ui-widget-content {
-    border: none;
-    background-color: #e5e5e5;
-    margin: 0 5px;
-    @include screen('tablet') {
-        margin: 0 10px;
-    }
+  border: none;
+  background-color: #e5e5e5;
+  margin: 0 5px;
+  @include screen('tablet') {
+    margin: 0 10px;
+  }
 }
 .ui-state-default,
 .ui-widget-content .ui-state-default,
@@ -1086,688 +1087,688 @@
 .ui-button,
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
-    background-color: nth($lightColor, $style);
-    border: 1px solid #d2d2d2;
-    border: none;
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+  background-color: nth($lightColor, $style);
+  border: 1px solid #d2d2d2;
+  border: none;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
 .ui-slider .ui-slider-handle {
-    width: 17px;
-    height: 25px;
+  width: 17px;
+  height: 25px;
 }
 .ui-slider-horizontal .ui-slider-handle {
-    top: -.45em;
+  top: -0.45em;
 }
 //分類
 .sort_block {
-    margin: 20px 0 0px;
-    form {
-        input {
-            border-radius: 3px !important;
-        }
+  margin: 20px 0 0px;
+  form {
+    input {
+      border-radius: 3px !important;
     }
-    .sortlist_block {
-        border-top: 1px solid #d5d5d5;
-        margin: 0 0 10px;
-        padding-top: 14px;
-        h2 {
-            color: nth($linkColor, $style);
-            font-size: 1.25em;
-            margin: 0px 0 10px;
-            padding: 0;
-            position: relative;
-            a {
-                display: block;
-                color: $color-brown2;
-                &:after {
-                    content: '';
-                    position: absolute;
-                    right: 8px;
-                    top: 3px;
-                    border: 1px solid #72777e;
-                    width: 10px;
-                    height: 10px;
-                    border-right-color: transparent;
-                    border-bottom-color: transparent;
-                    transform: rotate(225deg);
-                    transition: .5s;
-                }
-                &.turnicon {
-                    &:after {
-                        transform: rotate(45deg);
-                        top: 8px;
-                    }
-                }
-            }
+  }
+  .sortlist_block {
+    border-top: 1px solid #d5d5d5;
+    margin: 0 0 10px;
+    padding-top: 14px;
+    h2 {
+      color: nth($linkColor, $style);
+      font-size: 1.25em;
+      margin: 0px 0 10px;
+      padding: 0;
+      position: relative;
+      a {
+        display: block;
+        color: $color-brown2;
+        &:after {
+          content: '';
+          position: absolute;
+          right: 8px;
+          top: 3px;
+          border: 1px solid #72777e;
+          width: 10px;
+          height: 10px;
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+          transform: rotate(225deg);
+          transition: 0.5s;
         }
-        .sortlist {
-            display: none;
-            label {
-                display: block;
-                padding: 0 0 0 25px;
-                input[type="checkbox"] {
-                    margin-right: 8px !important;
-                    margin-left: -25px !important;
-                }
-                span {
-                    color: $color-orange;
-                    margin-left: 8px;
-                }
-            }
-            .more {
-                a {
-                    display: block;
-                    background-image: url('../images/more_icon02.png');
-                    background-position: left center;
-                    background-repeat: no-repeat;
-                    padding-left: 25px;
-                    text-align: left;
-                    background-color: #fff !important;
-                    color: #333;
-                    &:hover {
-                        color: #000;
-                        text-decoration: underline;
-                    }
-                }
-            }
+        &.turnicon {
+          &:after {
+            transform: rotate(45deg);
+            top: 8px;
+          }
         }
+      }
     }
+    .sortlist {
+      display: none;
+      label {
+        display: block;
+        padding: 0 0 0 25px;
+        input[type='checkbox'] {
+          margin-right: 8px !important;
+          margin-left: -25px !important;
+        }
+        span {
+          color: $color-orange;
+          margin-left: 8px;
+        }
+      }
+      .more {
+        a {
+          display: block;
+          background-image: url('../images/more_icon02.png');
+          background-position: left center;
+          background-repeat: no-repeat;
+          padding-left: 25px;
+          text-align: left;
+          background-color: #fff !important;
+          color: #333;
+          &:hover {
+            color: #000;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 }
 //右欄
 .rightlineblock {
-    overflow: hidden;
-    height: 100%;
-    float: none;
-    clear: both;
-    @include screen('mobile') {
-        border-left: none;
-    }
+  overflow: hidden;
+  height: 100%;
+  float: none;
+  clear: both;
+  @include screen('mobile') {
+    border-left: none;
+  }
 }
 // 詳目頁燈箱start
 .detailpage_lightbox {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 99;
-    // padding-left: %;
-    display: none;
-    // @include screen('mobile') {
-    //     padding-left: 0;
-    // }
-    .overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 99;
-        background-color: rgba(0, 0, 0, .8);
-    }
-    .close2 {
-        background-image: url('../images/icon_close03.png');
-        background-repeat: no-repeat;
-        background-position: 0 0;
-        background-size: 38px;
-        width: 38px;
-        height: 38px;
-        display: block;
-        cursor: pointer;
-        position: absolute;
-        right: 3%;
-        top: 12px;
-        z-index: 9999;
-    }
-    // .close3 {
-    //     display: none;
-    //     @include screen('mobile') {
-    //         padding: 10px 10px 5px;
-    //         display: block;
-    //         cursor: pointer;
-    //         background-color: #f3f3f3;
-    //         position: relative;
-    //         z-index: 99999;
-    //     }
-    // }
-    .detailpage_block {
-        max-height: 600px;
-        color: #ddd;
-        z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+
+  //   .overlay {
+  //     position: absolute;
+  //     top: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     left: 0;
+  //     z-index: 99;
+  //     background-color: rgba(0, 0, 0, 0.8);
+  //   }
+  .close2 {
+    background-image: url('../images/icon_close03.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 38px;
+    width: 38px;
+    height: 38px;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 3%;
+    top: 12px;
+    z-index: 9999;
+  }
+  // .close3 {
+  //     display: none;
+  //     @include screen('mobile') {
+  //         padding: 10px 10px 5px;
+  //         display: block;
+  //         cursor: pointer;
+  //         background-color: #f3f3f3;
+  //         position: relative;
+  //         z-index: 99999;
+  //     }
+  // }
+  .detailpage_block {
+    max-height: 600px;
+    color: #ddd;
+    z-index: 999;
+    position: relative;
+    ul {
+      margin: 0.5em 2em;
+      padding: 0;
+      list-style-type: none;
+      font-size: 1.375em;
+      display: flex;
+      justify-content: center;
+      @include screen('xs_mobile') {
+        margin: 1em;
+        font-size: 1.25em;
+        justify-content: flex-start;
+      }
+      li {
+        display: inline-block;
         position: relative;
-        ul {
-            margin: .5em 2em;
-            padding: 0;
-            list-style-type: none;
-            font-size: 1.375em;
-            display: flex;
-            justify-content: center;
+        flex: none;
+        margin: 0 45px;
+        @include screen('xs_mobile') {
+          margin: 0 10px;
+        }
+        a {
+          color: #ddd;
+          display: block;
+          font-weight: bolder;
+          padding: 10px 0;
+          @include screen('xs_mobile') {
+            padding: 2px 0;
+          }
+        }
+        &.icon_pre {
+          // margin-right: 60px;
+          // @include screen('xs_mobile') {
+          //     margin-right: 30px;
+          // }
+          a {
+            padding-left: 45px;
             @include screen('xs_mobile') {
-                margin: 1em;
-                font-size: 1.25em;
-                justify-content: flex-start;
+              padding-left: 25px;
             }
-            li {
-                display: inline-block;
-                position: relative;
-                flex: none;
-                margin: 0 45px;
-                @include screen('xs_mobile') {
-                    margin: 0 10px;
-                }
-                a {
-                    color: #ddd;
-                    display: block;
-                    font-weight: bolder;
-                    padding: 10px 0;
-                    @include screen('xs_mobile') {
-                        padding: 2px 0;
-                    }
-                }
-                &.icon_pre {
-                    // margin-right: 60px;
-                    // @include screen('xs_mobile') {
-                    //     margin-right: 30px;
-                    // }
-                    a {
-                        padding-left: 45px;
-                        @include screen('xs_mobile') {
-                            padding-left: 25px;
-                        }
-                        &:before {
-                            content: '';
-                            border: 15px solid #ddd;
-                            border-color: transparent #ddd transparent transparent;
-                            position: absolute;
-                            left: 0;
-                            top: 7px;
-                            @include screen('xs_mobile') {
-                                border: 10px solid #ddd;
-                                border-color: transparent #ddd transparent transparent;
-                                top: 3px;
-                                left: -5px;
-                            }
-                        }
-                    }
-                }
-                &.icon_next {
-                    a {
-                        padding-right: 45px;
-                        @include screen('xs_mobile') {
-                            padding-right: 25px;
-                        }
-                        &:before {
-                            content: '';
-                            border: 15px solid #ddd;
-                            border-color: transparent transparent transparent #ddd;
-                            position: absolute;
-                            right: 0;
-                            top: 7px;
-                            @include screen('xs_mobile') {
-                                border: 10px solid #ddd;
-                                border-color: transparent transparent transparent #eee;
-                                top: 3px;
-                                right: -5px;
-                            }
-                        }
-                    }
-                }
+            &:before {
+              content: '';
+              border: 15px solid #ddd;
+              border-color: transparent #ddd transparent transparent;
+              position: absolute;
+              left: 0;
+              top: 7px;
+              @include screen('xs_mobile') {
+                border: 10px solid #ddd;
+                border-color: transparent #ddd transparent transparent;
+                top: 3px;
+                left: -5px;
+              }
             }
+          }
         }
-    }
-    .maincolumn_cp {
-        z-index: 999999;
-        position: relative;
-        @include screen('mobile') {
-            .rightlineblock {
-                border: none;
+        &.icon_next {
+          a {
+            padding-right: 45px;
+            @include screen('xs_mobile') {
+              padding-right: 25px;
             }
+            &:before {
+              content: '';
+              border: 15px solid #ddd;
+              border-color: transparent transparent transparent #ddd;
+              position: absolute;
+              right: 0;
+              top: 7px;
+              @include screen('xs_mobile') {
+                border: 10px solid #ddd;
+                border-color: transparent transparent transparent #eee;
+                top: 3px;
+                right: -5px;
+              }
+            }
+          }
         }
+      }
     }
+  }
+  .maincolumn_cp {
+    z-index: 999999;
+    position: relative;
+    @include screen('mobile') {
+      .rightlineblock {
+        border: none;
+      }
+    }
+  }
 }
 //分頁
 .page {
-    text-align: center;
-    margin: 20px 0;
-    padding: 20px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    &.fixed {
-        position: fixed;
-        z-index: 9;
-        bottom: 50px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        @include screen('mobile') {
-            bottom: 50px;
-        }
-        .pageblock {
-            box-shadow: 0 0px 20px -1px rgba(0, 0, 0, .3), 0 2px 20px 0 rgba(0, 0, 0, .2), 0 1px 20px 0 rgba(0, 0, 0, .2);
-        }
-        .subpage {
-            div.number01 {
-                box-shadow: 0 0px 10px -1px rgba(0, 0, 0, .3), 0 2px 10px 0 rgba(0, 0, 0, .2), 0 1px 10px 0 rgba(0, 0, 0, .2);
-            }
-        }
-    }
-    @include screen('xs_mobile') {
-        display: none;
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  &.fixed {
+    position: fixed;
+    z-index: 9;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    @include screen('mobile') {
+      bottom: 50px;
     }
     .pageblock {
-        display: inline-block;
-        margin: 0 auto;
-        box-shadow: 0 0px 4px -1px rgba(0, 0, 0, .2), 0 2px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
-        border-radius: 50px;
-        padding: 5px 10px;
-        background-color: #fff;
-        .first,
-        .pre,
-        .next,
-        .last {
-            padding: 5px 8px 0;
-            vertical-align: middle;
-            margin: 0px;
-            float: left;
-            a {
-                display: block;
-                width: 20px;
-            }
-        }
-        .fakespace {
-            width: 85px;
-            float: left;
-            display: block;
-            padding: 15px 0;
-            position: relative;
-        }
-        .subpage {
-            // display: inline-block;
-            overflow: hidden;
-            margin: -32px 0 0 0;
-            padding: 10px 5px;
-            position: absolute;
-            vertical-align: middle;
-            top: 0;
-            left: 0;
-            div.number01 {
-                text-align: center;
-                box-shadow: 0 0px 4px -1px rgba(0, 0, 0, .2), 0 2px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
-                border-radius: 50px;
-                padding: 5px;
-                background-color: #fff;
-                overflow: hidden;
-                @include box-sizing;
-                width: 75px;
-                height: 75px;
-                span {
-                    display: block;
-                    margin-bottom: 0;
-                    line-height: 1.7em;
-                    text-align: center;
-                    font-size: 1.125em;
-                    font-weight: bold;
-                }
-                a {
-                    display: inline-block;
-                    padding: 5px 10px;
-                    background-color: #707070;
-                    border-radius: 50px;
-                    width: auto;
-                    // height: 15px;
-                    font-size: 0.938em;
-                    line-height: 1em;
-                    color: #fff;
-                }
-            }
-            div.number02 {
-                overflow: hidden;
-                display: none;
-                span {
-                    float: left;
-                    margin-right: 8px;
-                    line-height: 1.7em;
-                }
-                @include screen('tablet') {
-                    span {
-                        display: none;
-                    }
-                    span:nth-child(1),
-                    span:nth-child(2),
-                    span:nth-child(3),
-                    span:nth-child(4),
-                    span:nth-child(5) {
-                        display: block;
-                    }
-                }
-                a {
-                    display: block;
-                    padding: 7px 10px;
-                    background-color: #eee;
-                    border-radius: 50px;
-                    width: auto;
-                    // height: 15px;
-                    font-size: 0.938em;
-                    line-height: 1em;
-                    float: left;
-                    color: #333;
-                    &:hover {
-                        color: $aHover;
-                    }
-                    &.here {
-                        background-color: #707070;
-                        color: #fff;
-                    }
-                }
-            }
-        }
-        .numberpage {
-            display: flex;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 0 0 10px;
-            em {
-                padding: 0 5px;
-            }
-            .exact_page {
-                width: 60px;
-                height: 30px;
-                padding: 5px;
-                margin: 0 5px;
-            }
-            .go_btn {
-                width: 30px !important;
-                height: 30px !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                min-width: 30px;
-                border-radius: 50%;
-                background-color: #666;
-                color: #fff;
-                &:hover, &:focus {
-                    background-color: #333;
-                }
-            }
-        }
+      box-shadow: 0 0px 20px -1px rgba(0, 0, 0, 0.3), 0 2px 20px 0 rgba(0, 0, 0, 0.2), 0 1px 20px 0 rgba(0, 0, 0, 0.2);
     }
+    .subpage {
+      div.number01 {
+        box-shadow: 0 0px 10px -1px rgba(0, 0, 0, 0.3), 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  @include screen('xs_mobile') {
+    display: none;
+  }
+  .pageblock {
+    display: inline-block;
+    margin: 0 auto;
+    box-shadow: 0 0px 4px -1px rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 50px;
+    padding: 5px 10px;
+    background-color: #fff;
+    .first,
+    .pre,
+    .next,
+    .last {
+      padding: 5px 8px 0;
+      vertical-align: middle;
+      margin: 0px;
+      float: left;
+      a {
+        display: block;
+        width: 20px;
+      }
+    }
+    .fakespace {
+      width: 85px;
+      float: left;
+      display: block;
+      padding: 15px 0;
+      position: relative;
+    }
+    .subpage {
+      // display: inline-block;
+      overflow: hidden;
+      margin: -32px 0 0 0;
+      padding: 10px 5px;
+      position: absolute;
+      vertical-align: middle;
+      top: 0;
+      left: 0;
+      div.number01 {
+        text-align: center;
+        box-shadow: 0 0px 4px -1px rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+        border-radius: 50px;
+        padding: 5px;
+        background-color: #fff;
+        overflow: hidden;
+        @include box-sizing;
+        width: 75px;
+        height: 75px;
+        span {
+          display: block;
+          margin-bottom: 0;
+          line-height: 1.7em;
+          text-align: center;
+          font-size: 1.125em;
+          font-weight: bold;
+        }
+        a {
+          display: inline-block;
+          padding: 5px 10px;
+          background-color: #707070;
+          border-radius: 50px;
+          width: auto;
+          // height: 15px;
+          font-size: 0.938em;
+          line-height: 1em;
+          color: #fff;
+        }
+      }
+      div.number02 {
+        overflow: hidden;
+        display: none;
+        span {
+          float: left;
+          margin-right: 8px;
+          line-height: 1.7em;
+        }
+        @include screen('tablet') {
+          span {
+            display: none;
+          }
+          span:nth-child(1),
+          span:nth-child(2),
+          span:nth-child(3),
+          span:nth-child(4),
+          span:nth-child(5) {
+            display: block;
+          }
+        }
+        a {
+          display: block;
+          padding: 7px 10px;
+          background-color: #eee;
+          border-radius: 50px;
+          width: auto;
+          // height: 15px;
+          font-size: 0.938em;
+          line-height: 1em;
+          float: left;
+          color: #333;
+          &:hover {
+            color: $aHover;
+          }
+          &.here {
+            background-color: #707070;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .numberpage {
+      display: flex;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0 10px;
+      em {
+        padding: 0 5px;
+      }
+      .exact_page {
+        width: 60px;
+        height: 30px;
+        padding: 5px;
+        margin: 0 5px;
+      }
+      .go_btn {
+        width: 30px !important;
+        height: 30px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        min-width: 30px;
+        border-radius: 50%;
+        background-color: #666;
+        color: #fff;
+        &:hover,
+        &:focus {
+          background-color: #333;
+        }
+      }
+    }
+  }
 }
 .page02 {
-    .pageblock {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        padding: 0px 10px;
-        .first,
-        .pre,
-        .next,
-        .last,
-        .fakespace {
-            padding: 16px 8px 0;
-        }
-        .fakespace {
-            width: auto;
-            padding: 0px 0;
-        }
-        .subpage {
-            display: inline-block;
-            float: none;
-            margin: 0;
-            position: relative;
-            div.number01 {
-                display: none;
-            }
-            div.number02 {
-                display: flex;
-            }
-        }
-        .numberpage {
-            display: flex;
-        }
+  .pageblock {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px 10px;
+    .first,
+    .pre,
+    .next,
+    .last,
+    .fakespace {
+      padding: 16px 8px 0;
     }
+    .fakespace {
+      width: auto;
+      padding: 0px 0;
+    }
+    .subpage {
+      display: inline-block;
+      float: none;
+      margin: 0;
+      position: relative;
+      div.number01 {
+        display: none;
+      }
+      div.number02 {
+        display: flex;
+      }
+    }
+    .numberpage {
+      display: flex;
+    }
+  }
 }
 .hiddenpage.fixed {
-    position: fixed;
-    z-index: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 0px;
-    height: 0px;
+  position: fixed;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0px;
+  height: 0px;
 }
 //一般標題
 .general_block {
-    background-image: url('../images/search_blockinbg01.jpg');
-    background-repeat: no-repeat;
-    background-position: center top;
-    margin: 0;
-    padding: 50px 0 40px;
-    position: relative;
+  background-image: url('../images/search_blockinbg01.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin: 0;
+  padding: 50px 0 40px;
+  position: relative;
+  min-height: 130px;
+  @include box-sizing();
+  @media (max-width: 767px) {
     min-height: 130px;
-    @include box-sizing();
-    @media(max-width: 767px) {
-        min-height: 130px;
-        height: auto;
+    height: auto;
+  }
+  @media (max-width: 480px) {
+    padding: 60px 0 30px;
+  }
+  .general_title {
+    font-size: 2.5em;
+    float: left;
+    margin: 0px 20px 0 100px;
+    color: #fff;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 1), 0px 0px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+    line-height: 1.2em;
+    span {
+      display: inline-block;
     }
-    @media(max-width: 480px) {
-        padding: 60px 0 30px;
+  }
+  .RSS_button {
+    float: left;
+    margin-top: 0px;
+    vertical-align: middle;
+  }
+  .generalbtn {
+    float: right;
+    @include screen('mobile') {
+      float: none;
     }
+  }
+  @include screen('mobile') {
     .general_title {
-        font-size: 2.5em;
-        float: left;
-        margin: 0px 20px 0 100px;
-        color: #fff;
-         text-shadow: 0px 0px 6px rgba(0,0,0,1),0px 0px 6px rgba(0,0,0,.5);
-        letter-spacing: .05em;
-        vertical-align: middle;
-        line-height: 1.2em;
-        span {
-            display: inline-block;
-        }
+      float: none;
+      display: inline-block;
+      margin: 0 20px 0px 0;
     }
     .RSS_button {
-        float: left;
-        margin-top: 0px;
-        vertical-align: middle;
+      float: none;
+      display: inline-block;
     }
-    .generalbtn {
-        float: right;
-        @include screen('mobile') {
-            float: none;
-        }
+  }
+  @media (max-width: 480px) {
+    .general_title {
+      margin: 0 0px 20px 0;
+      display: block;
     }
-    @include screen('mobile') {
-        .general_title {
-            float: none;
-            display: inline-block;
-            margin: 0 20px 0px 0;
-        }
-        .RSS_button {
-            float: none;
-            display: inline-block;
-        }
+    .RSS_button {
+      display: block;
     }
-    @media(max-width: 480px) {
-        .general_title {
-            margin: 0 0px 20px 0;
-            display: block;
-        }
-        .RSS_button {
-            display: block;
-        }
-    }
+  }
 }
 //分類推薦
-.sortrecommend, .bookselection_tab {
-    margin: 30px 30px 20px;
-    @include box-sizing;
-    @include screen('mobile') {
-        width: 80%;
-        margin: 30px auto;
-    }
-    @media(max-width: 480px) {
-        width: 75%;
-    }
-    .sort {
-        padding: 0 5px;
-        a {
-            display: block;
-            padding: 20px 10px;
-            @include gradient(#dcdcdc, #e5e5e5, vertical);
-            color: #333;
-            font-size: 1.313em;
-            text-align: center;
-            border-radius: 5px;
-            position: relative;
-            transition: .2s;
-            &:hover {
-                background-image: none;
-                background-color: $color-yellow;
-                color: #000;
-            }
-            &.here {
-                background: $color-yellow;
-                color: #000;
-                &:focus {
-                    // box-shadow: 0 0px 0px 2px $form-focus;
-                    background: lighten($color-yellow, 5);
-                }
-            }
+.sortrecommend,
+.bookselection_tab {
+  margin: 30px 30px 20px;
+  @include box-sizing;
+  @include screen('mobile') {
+    width: 80%;
+    margin: 30px auto;
+  }
+  @media (max-width: 480px) {
+    width: 75%;
+  }
+  .sort {
+    padding: 0 5px;
+    a {
+      display: block;
+      padding: 20px 10px;
+      @include gradient(#dcdcdc, #e5e5e5, vertical);
+      color: #333;
+      font-size: 1.313em;
+      text-align: center;
+      border-radius: 5px;
+      position: relative;
+      transition: 0.2s;
+      &:hover {
+        background-image: none;
+        background-color: $color-yellow;
+        color: #000;
+      }
+      &.here {
+        background: $color-yellow;
+        color: #000;
+        &:focus {
+          // box-shadow: 0 0px 0px 2px $form-focus;
+          background: lighten($color-yellow, 5);
         }
+      }
     }
+  }
+  .slick-next {
+    right: -45px;
+    top: 0;
+  }
+  .slick-prev {
+    left: -45px;
+    top: 0;
+  }
+  @media (max-width: 400px) {
     .slick-next {
-        right: -45px;
-        top: 0;
+      right: -36px;
     }
     .slick-prev {
-        left: -45px;
-        top: 0;
+      left: -36px;
     }
-    @media(max-width: 400px) {
-        .slick-next {
-            right: -36px;
-        }
-        .slick-prev {
-            left: -36px;
-        }
-    }
+  }
 }
 em {
-    font-style: normal;
-    &.yellowbg {
-        background-color: #ff9;
-    }
+  font-style: normal;
+  &.yellowbg {
+    background-color: #ff9;
+  }
 }
 //隱私權同意
 .privacy_consent {
-    position: fixed;
-    z-index: 999;
-    top: -50%;
-    width: $container-max;
-    background-color: nth($primaryColor, $style);
-    color: #fff;
-    line-height: 1.5em;
-    padding: 0;
-    font-size: 0.938em;
-    transition: .5s;
-    @include screen('notebook') {
+  position: fixed;
+  z-index: 999;
+  top: -50%;
+  width: $container-max;
+  background-color: nth($primaryColor, $style);
+  color: #fff;
+  line-height: 1.5em;
+  padding: 0;
+  font-size: 0.938em;
+  transition: 0.5s;
+  @include screen('notebook') {
+    width: 100%;
+  }
+  &.goin {
+    top: 0;
+  }
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: left;
+    padding: 20px;
+    @include box-sizing;
+    @include screen('xs_mobile') {
+      text-align: center;
+    }
+    span {
+      float: left;
+      width: 80%;
+      @include screen('xs_mobile') {
+        float: none;
         width: 100%;
-    }
-    &.goin {
-        top: 0;
-    }
-    .container {
-        margin: 0 auto;
-        max-width: 1200px;
+        display: block;
+        margin-bottom: 10px;
         text-align: left;
-        padding: 20px;
-        @include box-sizing;
-        @include screen('xs_mobile') {
-            text-align: center;
-        }
-        span {
-            float: left;
-            width: 80%;
-            @include screen('xs_mobile') {
-                float: none;
-                width: 100%;
-                display: block;
-                margin-bottom: 10px;
-                text-align: left;
-            }
-        }
-        .btn_grp {
-            float: right;
-            @include screen('xs_mobile') {
-                float: none;
-                clear: both;
-            }
-        }
+      }
     }
+    .btn_grp {
+      float: right;
+      @include screen('xs_mobile') {
+        float: none;
+        clear: both;
+      }
+    }
+  }
 }
 // 登入後訊息通知框
 .member_message {
-    background-color: darken($color-red, 15);
-    color: #fff;
-    position: fixed;
-    z-index: 998;
-    width: 450px;
-    top: -50%;
-    left: 50%;
-    margin-left: -225px;
-    padding: 20px 60px 0px 30px;
-    border-radius: 0 0 10px 10px;
-    transition: .5s;
-    box-shadow: 1px 1px 4px #666;
-    @include box-sizing;
-    @media(max-width: 480px) {
-        width: 100%;
-        margin-left: 0;
-        left: auto;
-        border-radius: 0;
+  background-color: darken($color-red, 15);
+  color: #fff;
+  position: fixed;
+  z-index: 998;
+  width: 450px;
+  top: -50%;
+  left: 50%;
+  margin-left: -225px;
+  padding: 20px 60px 0px 30px;
+  border-radius: 0 0 10px 10px;
+  transition: 0.5s;
+  box-shadow: 1px 1px 4px #666;
+  @include box-sizing;
+  @media (max-width: 480px) {
+    width: 100%;
+    margin-left: 0;
+    left: auto;
+    border-radius: 0;
+  }
+  &.goin {
+    top: 0;
+  }
+  .close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-color: #fff;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background-position: center;
+    // border: 1px solid #fff;
+    display: block;
+  }
+  .explain {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #fff;
+  }
+  ul {
+    margin: 0px 0 20px 20px;
+    padding: 0;
+    li {
+      margin-bottom: 8px;
     }
-    &.goin {
-        top: 0;
-    }
-    .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        background-color: #fff;
-        width: 31px;
-        height: 31px;
-        border-radius: 50%;
-        background-position: center;
-        // border: 1px solid #fff;
-        display: block;
-    }
-    .explain {
-        padding-bottom: 15px;
-        border-bottom: 1px solid #fff;
-    }
-    ul {
-        margin: 0px 0 20px 20px;
-        padding: 0;
-        li {
-            margin-bottom: 8px;
-        }
-    }
+  }
 }
 // 說明區塊
 .bookselection_explain {
-    margin: 30px 30px 0px;
-    text-align: center;
-    padding: 25px;
-    background-color: #fed857;
-    border-radius: 5px;
-    font-size: 1.25em;
-    line-height: 1.5em;
-    @include box-sizing;
-    @include screen('mobile') {
-        width: 80%;
-        margin: 30px auto 0;
-    }
-    @media(max-width: 480px) {
-        width: 75%;
-    }
+  margin: 30px 30px 0px;
+  text-align: center;
+  padding: 25px;
+  background-color: #fed857;
+  border-radius: 5px;
+  font-size: 1.25em;
+  line-height: 1.5em;
+  @include box-sizing;
+  @include screen('mobile') {
+    width: 80%;
+    margin: 30px auto 0;
+  }
+  @media (max-width: 480px) {
+    width: 75%;
+  }
 }

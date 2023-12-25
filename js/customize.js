@@ -1229,6 +1229,34 @@ $(function () {
     $('#actionitemslstyle').fadeOut();
     $('body').removeClass('fix');
   });
+
+  //項目選擇
+  $('.itemselectbtn').click(function () {
+    $('#itemselect_style').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.lightboxstyle_block .close').click(function () {
+    $('#itemselect_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#itemselect_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+  //加入日曆
+  $('.addcalendar_btn').click(function () {
+    $('#addcalendar_style').fadeIn();
+    $('#itemselect_style').fadeOut();
+    $('body').addClass('fix');
+  });
+  $('.lightboxstyle_block .close').click(function () {
+    $('#addcalendar_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#addcalendar_style').fadeOut();
+    $('body').removeClass('fix');
+  });
 });
 //詳目頁 匯出點選
 $(function () {
@@ -1977,9 +2005,63 @@ $(function () {
     });
 });
 // 顯示更多
-$(function(){
-  $('.morebg').click(function(){
+$(function () {
+  $('.morebg').click(function () {
     $(this).toggleClass('open');
-    
-  })
-})
+  });
+});
+
+$(function () {
+  //device設備檢視收合
+  var winResizeTimer;
+  $(window).resize(function () {
+    clearTimeout(winResizeTimer);
+    winResizeTimer = setTimeout(function () {
+      // 判斷高度
+      var _devicecontent = $('.devicefiltering_block .filter_group .filtercontent');
+      _devicecontent.each(function () {
+        if ($(this).height() > 32) {
+          $(this).addClass('contentclose');
+          $(this).siblings('.filterbtn').addClass('hasbtn');
+        } else {
+          $(this).removeClass('contentclose');
+          $(this).siblings('.filterbtn').removeClass('hasbtn');
+        }
+      });
+      //判斷有無contentclose 改變箭頭
+      var _filterbtn = $('.devicefiltering_block .filter_group .filterbtn');
+      _filterbtn.click(function () {
+        if ($(this).siblings('.filtercontent').hasClass('contentclose')) {
+          $(this).find('a').text('收合');
+          $(this).find('a').addClass('open');
+          $(this).siblings('.filtercontent').removeClass('contentclose');
+        } else {
+          $(this).find('a').text('展開');
+          $(this).find('a').removeClass('open');
+          $(this).siblings('.filtercontent').addClass('contentclose');
+        }
+      });
+    }, 200);
+  });
+  $(window).resize();
+});
+
+//
+$(function () {
+  $('.filtersearch')
+    .on('mouseover', function () {
+      $(this).addClass('clicksearch');
+    })
+    .on('mouseout', function () {
+      $(this).removeClass('clicksearch');
+    });
+});
+
+// $( "div.overout" )
+//   .on( "mouseover", function() {
+//     i += 1;
+//     $( this ).find( "span" ).text( "mouse over x " + i );
+//   } )
+//   .on( "mouseout", function() {
+//     $( this ).find( "span" ).text( "mouse out " );
+//   } );

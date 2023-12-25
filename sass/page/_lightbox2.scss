@@ -852,6 +852,13 @@ body.fix {
         padding-left: 0 !important;
         padding-right: 0 !important;
       }
+      .to {
+        float: left;
+        margin: 5px 5px 0;
+        @media (max-width: 615px) {
+          display: none;
+        }
+      }
       .select_date {
         width: 45% !important;
         @include screen('mobile') {
@@ -860,6 +867,17 @@ body.fix {
         @media (max-width: 580px) {
           width: 99% !important;
         }
+      }
+      .word_red {
+        font-size: 1.125em;
+        font-style: normal;
+        margin: 0 5px;
+      }
+      .usage_time {
+        text-align: right;
+        display: inline-block;
+        width: 100%;
+        margin: 10px 0 5px;
       }
       //listdata
       .listdata {

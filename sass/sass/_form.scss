@@ -28,6 +28,11 @@
     padding-top: 0.5em;
     padding-left: 20px;
     margin-top: 0;
+    &.hidden {
+      + .form_content {
+        width: 100%;
+      }
+    }
   }
   .form_content {
     @include make-xs-column(12);
@@ -393,8 +398,8 @@ abbr[title] {
     margin-top: 5px;
     img {
       vertical-align: middle;
-      margin-right: 3px;
-      width: 24px;
+      margin-right: 5px;
+      width: 20px;
     }
   }
 }

@@ -16,6 +16,7 @@ $btn-radius: 4px;
   color: $btn-font-color;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: $btn-radius;
+  transition: 0.2s;
   &:hover {
     background: lighten($btn-bg, 3);
     box-shadow: none;
@@ -100,6 +101,12 @@ $btn-radius: 4px;
 .btn-white {
   @extend %btn;
   @include btn_setting($color-white, #333);
+  &:hover,
+  &:focus {
+    color: #333;
+    // background: darken($btn-bg, 3);
+    background: darken($color: #eee, $amount: 3);
+  }
 }
 .btn-greenline {
   @extend %btn;

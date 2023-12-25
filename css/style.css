@@ -484,6 +484,7 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
   color: #666;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
   text-shadow: RGBA(0, 0, 0, 0.3) 0px 0px 0px;
   background-color: rgb(247, 247, 247);
 }
@@ -514,6 +515,7 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .btn-green:hover {
   background: #128663;
@@ -538,6 +540,7 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .btn-blue:hover {
   background: #4980c4;
@@ -562,6 +565,7 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .btn-yellow:hover {
   background: #ffb701;
@@ -586,6 +590,7 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .btn-orange:hover {
   background: #c85100;
@@ -610,6 +615,7 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .btn-red:hover {
   background: #eb0124;
@@ -634,6 +640,7 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .btn-purple:hover {
   background: #b065c9;
@@ -658,6 +665,7 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .btn-gray:hover {
   background: #6e6e6e;
@@ -682,6 +690,7 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
   color: #333;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .btn-white:hover {
   background: white;
@@ -699,6 +708,10 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
   background: white;
   cursor: pointer;
 }
+.btn-white:hover, .btn-white:focus {
+  color: #333;
+  background: #e6e6e6;
+}
 
 .btn-greenline {
   background: #06c755;
@@ -706,6 +719,7 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
   color: #333;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .btn-greenline:hover {
   background: #06d65b;
@@ -835,6 +849,9 @@ input[type=button], .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red
     float: left;
     width: 25%;
   }
+}
+.form_grid .form_title.hidden + .form_content {
+  width: 100%;
 }
 .form_grid .form_content {
   float: left;
@@ -1037,6 +1054,7 @@ input[type=button] {
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 button:hover,
 input[type=button]:hover {
@@ -1064,6 +1082,7 @@ input[type=submit] {
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 input[type=submit]:hover {
   background: #0066a7;
@@ -1144,6 +1163,7 @@ input[type=reset] {
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
   text-shadow: none;
 }
 input[type=reset]:hover {
@@ -1246,6 +1266,7 @@ input[disable]:focus {
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
   padding: 0.2em 1em !important;
   border-radius: 4px;
 }
@@ -1338,8 +1359,8 @@ abbr[title] {
 }
 .select_date .image img {
   vertical-align: middle;
-  margin-right: 3px;
-  width: 24px;
+  margin-right: 5px;
+  width: 20px;
 }
 
 input,
@@ -1484,11 +1505,21 @@ select::-ms-expand {
 .child01 .search_blockin .searchsystem .btn_grp a.addfield {
   background-color: #5c9588;
 }
-.child01 .search_blockin2, .child01 .search_blockin, .child01 .mystudyname, .child01 .general_block {
+.child01 .search_blockin2,
+.child01 .search_blockin,
+.child01 .mystudyname,
+.child01 .general_block {
   background-image: url("../images/search_blockbg02_child.jpg");
   background-position: center -80px;
 }
-.child01 .login_lightbox h2, .child01 .choose_librarycard_lightbox h2, .child01 .qrcode_lightbox h2, .child01 .recommendbook_lightbox h2, .child01 .search_field_lightbox h2, .child01 .related_lightbox h2, .child01 .lightboxstyle h2, .child01 .lightboxstyle_block2 h2 {
+.child01 .login_lightbox h2,
+.child01 .choose_librarycard_lightbox h2,
+.child01 .qrcode_lightbox h2,
+.child01 .recommendbook_lightbox h2,
+.child01 .search_field_lightbox h2,
+.child01 .related_lightbox h2,
+.child01 .lightboxstyle h2,
+.child01 .lightboxstyle_block2 h2 {
   border-bottom: 2px solid #5c9588;
   color: #5c9588 !important;
 }
@@ -1524,9 +1555,10 @@ select::-ms-expand {
 .child01 input[type=submit] {
   background: #5c9588;
   border: 1px solid #49756b;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .child01 input[type=submit]:hover {
   background: #629e90;
@@ -1548,30 +1580,44 @@ select::-ms-expand {
   background-color: #5c9588;
 }
 .child01 .featured_blockin h2 {
-  color: #FFF;
+  color: #fff;
 }
 .child01 .featured_blocklist {
   background-color: #5c9588;
 }
-.child01 .featured_blocklist h3, .child01 .featured_blocklist .datalist, .child01 .featured_blocklist .explain {
-  color: #FFF;
+.child01 .featured_blocklist h3,
+.child01 .featured_blocklist .datalist,
+.child01 .featured_blocklist .explain {
+  color: #fff;
 }
 .child01 .classification {
   background-color: #5c9588;
 }
 .child01 .modify_data .title,
 .child01 .write_data .title,
-.child01 .forget_password .title, .child01 .mystudysearch_data .title, .child01 .stored_value_group .title, .child01 .reader_form_group .title, .child01 .delivery_method_block .title {
+.child01 .forget_password .title,
+.child01 .mystudysearch_data .title,
+.child01 .stored_value_group .title,
+.child01 .reader_form_group .title,
+.child01 .delivery_method_block .title {
   color: #5c9588;
 }
 .child01 .modify_data p a,
 .child01 .write_data p a,
-.child01 .forget_password p a, .child01 .mystudysearch_data p a, .child01 .stored_value_group p a, .child01 .reader_form_group p a, .child01 .delivery_method_block p a {
+.child01 .forget_password p a,
+.child01 .mystudysearch_data p a,
+.child01 .stored_value_group p a,
+.child01 .reader_form_group p a,
+.child01 .delivery_method_block p a {
   color: #774e2b;
 }
 .child01 .modify_data p a:hover,
 .child01 .write_data p a:hover,
-.child01 .forget_password p a:hover, .child01 .mystudysearch_data p a:hover, .child01 .stored_value_group p a:hover, .child01 .reader_form_group p a:hover, .child01 .delivery_method_block p a:hover {
+.child01 .forget_password p a:hover,
+.child01 .mystudysearch_data p a:hover,
+.child01 .stored_value_group p a:hover,
+.child01 .reader_form_group p a:hover,
+.child01 .delivery_method_block p a:hover {
   color: #dd1f03;
 }
 .child01 .security_deposit_block .title {
@@ -1602,23 +1648,33 @@ select::-ms-expand {
 .child01 .hotqa_list h2 {
   background-color: #5c9588;
 }
-.child01 .devicereservation_block .device_list a {
+.child01 .devicereservation_block .device_list {
   background-color: #5c9588;
+  color: #fff;
+}
+.child01 .devicereservation_block .device_list:hover, .child01 .devicereservation_block .device_list:focus {
+  background-color: #49756b;
+  color: #fff;
+}
+.child01 .devicereservation_block .device_list a {
+  color: #fff;
 }
 .child01 .devicereservation_block .device_list a:hover, .child01 .devicereservation_block .device_list a:focus {
   color: #fff;
-  background-color: #49756b;
 }
-.child01 .devicereservation_block .device_list a h3 {
+.child01 .devicereservation_block .device_list h3 {
   color: #fff;
   font-weight: 400;
 }
-.child01 .devicereservation_block .device_list a ul li {
+.child01 .devicereservation_block .device_list .content ul li {
   color: #fff;
 }
-.child01 .devicereservation_block .device_list a ul li:before {
+.child01 .devicereservation_block .device_list .content ul li:before {
   border: 5px solid #fff;
   border-color: transparent transparent transparent #fff;
+}
+.child01 .devicereservation_block .device_list .content .quantity span em {
+  color: #f1ad00;
 }
 .child01 .meets_box a {
   background-color: #5c9588;
@@ -1651,6 +1707,9 @@ select::-ms-expand {
 }
 .child01 .no_result .related_words h2 {
   color: #5c9588;
+}
+.child01 .devicefiltering_block .filtersearch button.searchbtn {
+  background-color: #5c9588;
 }
 .child01 .book_detail .book_cover_source a {
   color: #774e2b;
@@ -1843,11 +1902,21 @@ select::-ms-expand {
 .customization01 .search_blockin .searchsystem .btn_grp a.addfield {
   background-color: #5c9588;
 }
-.customization01 .search_blockin2, .customization01 .search_blockin, .customization01 .mystudyname, .customization01 .general_block {
+.customization01 .search_blockin2,
+.customization01 .search_blockin,
+.customization01 .mystudyname,
+.customization01 .general_block {
   background-image: url("../images/search_blockbg02_customization01.jpg");
   background-position: center -140px;
 }
-.customization01 .login_lightbox h2, .customization01 .choose_librarycard_lightbox h2, .customization01 .qrcode_lightbox h2, .customization01 .recommendbook_lightbox h2, .customization01 .search_field_lightbox h2, .customization01 .related_lightbox h2, .customization01 .lightboxstyle h2, .customization01 .lightboxstyle_block2 h2 {
+.customization01 .login_lightbox h2,
+.customization01 .choose_librarycard_lightbox h2,
+.customization01 .qrcode_lightbox h2,
+.customization01 .recommendbook_lightbox h2,
+.customization01 .search_field_lightbox h2,
+.customization01 .related_lightbox h2,
+.customization01 .lightboxstyle h2,
+.customization01 .lightboxstyle_block2 h2 {
   border-bottom: 2px solid #5c9588;
   color: #5c9588 !important;
 }
@@ -1883,9 +1952,10 @@ select::-ms-expand {
 .customization01 input[type=submit] {
   background: #5c9588;
   border: 1px solid #49756b;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .customization01 input[type=submit]:hover {
   background: #629e90;
@@ -1912,7 +1982,9 @@ select::-ms-expand {
 .customization01 .featured_blocklist {
   background-color: #5c9588;
 }
-.customization01 .featured_blocklist h3, .customization01 .featured_blocklist .datalist, .customization01 .featured_blocklist .explain {
+.customization01 .featured_blocklist h3,
+.customization01 .featured_blocklist .datalist,
+.customization01 .featured_blocklist .explain {
   color: #fff;
 }
 .customization01 .classification {
@@ -1923,17 +1995,29 @@ select::-ms-expand {
 }
 .customization01 .modify_data .title,
 .customization01 .write_data .title,
-.customization01 .forget_password .title, .customization01 .mystudysearch_data .title, .customization01 .stored_value_group .title, .customization01 .reader_form_group .title, .customization01 .delivery_method_block .title {
+.customization01 .forget_password .title,
+.customization01 .mystudysearch_data .title,
+.customization01 .stored_value_group .title,
+.customization01 .reader_form_group .title,
+.customization01 .delivery_method_block .title {
   color: #5c9588;
 }
 .customization01 .modify_data p a,
 .customization01 .write_data p a,
-.customization01 .forget_password p a, .customization01 .mystudysearch_data p a, .customization01 .stored_value_group p a, .customization01 .reader_form_group p a, .customization01 .delivery_method_block p a {
+.customization01 .forget_password p a,
+.customization01 .mystudysearch_data p a,
+.customization01 .stored_value_group p a,
+.customization01 .reader_form_group p a,
+.customization01 .delivery_method_block p a {
   color: #185554;
 }
 .customization01 .modify_data p a:hover,
 .customization01 .write_data p a:hover,
-.customization01 .forget_password p a:hover, .customization01 .mystudysearch_data p a:hover, .customization01 .stored_value_group p a:hover, .customization01 .reader_form_group p a:hover, .customization01 .delivery_method_block p a:hover {
+.customization01 .forget_password p a:hover,
+.customization01 .mystudysearch_data p a:hover,
+.customization01 .stored_value_group p a:hover,
+.customization01 .reader_form_group p a:hover,
+.customization01 .delivery_method_block p a:hover {
   color: #dd1f03;
 }
 .customization01 .mystudymenu > ul > li > a {
@@ -1964,24 +2048,33 @@ select::-ms-expand {
 .customization01 .hotqa_list h2 {
   background-color: #5c9588;
 }
-.customization01 .devicereservation_block .device_list a {
+.customization01 .devicereservation_block .device_list {
   background-color: #52857a;
+  color: #fff;
+}
+.customization01 .devicereservation_block .device_list:hover, .customization01 .devicereservation_block .device_list:focus {
+  color: #fff;
+  background-color: #3f665d;
+}
+.customization01 .devicereservation_block .device_list a {
   color: #fff;
 }
 .customization01 .devicereservation_block .device_list a:hover, .customization01 .devicereservation_block .device_list a:focus {
   color: #fff;
-  background-color: #3f665d;
 }
-.customization01 .devicereservation_block .device_list a h3 {
+.customization01 .devicereservation_block .device_list h3 {
   color: #fff;
   font-weight: 400;
 }
-.customization01 .devicereservation_block .device_list a ul li {
+.customization01 .devicereservation_block .device_list .content ul li {
   color: #fff;
 }
-.customization01 .devicereservation_block .device_list a ul li:before {
+.customization01 .devicereservation_block .device_list .content ul li:before {
   border: 5px solid #fff;
   border-color: transparent transparent transparent #fff;
+}
+.customization01 .devicereservation_block .device_list .content .quantity span em {
+  color: #f1ad00;
 }
 .customization01 .meets_box a {
   background-color: #5c9588;
@@ -2014,6 +2107,9 @@ select::-ms-expand {
 }
 .customization01 .no_result .related_words h2 {
   color: #5c9588;
+}
+.customization01 .devicefiltering_block .filtersearch button.searchbtn {
+  background-color: #5c9588;
 }
 .customization01 .book_detail .book_cover_source a {
   color: #185554;
@@ -2217,7 +2313,9 @@ select::-ms-expand {
   background: #f18700;
   color: #333;
 }
-.customization02 .hotbook_column .hotbook_title, .customization02 .hotbook_column .bookno01, .customization02 .hotbook_column .hotbooklist {
+.customization02 .hotbook_column .hotbook_title,
+.customization02 .hotbook_column .bookno01,
+.customization02 .hotbook_column .hotbooklist {
   border: none;
 }
 .customization02 .privacy_consent {
@@ -2241,11 +2339,21 @@ select::-ms-expand {
 .customization02 .search_blockin .form_search input[type=submit]:focus {
   background-color: #bf8e07;
 }
-.customization02 .search_blockin2, .customization02 .search_blockin, .customization02 .mystudyname, .customization02 .general_block {
+.customization02 .search_blockin2,
+.customization02 .search_blockin,
+.customization02 .mystudyname,
+.customization02 .general_block {
   background-image: url("../images/search_blockbg02_customization02.png");
   background-position: center -140px;
 }
-.customization02 .login_lightbox h2, .customization02 .choose_librarycard_lightbox h2, .customization02 .qrcode_lightbox h2, .customization02 .recommendbook_lightbox h2, .customization02 .search_field_lightbox h2, .customization02 .related_lightbox h2, .customization02 .lightboxstyle h2, .customization02 .lightboxstyle_block2 h2 {
+.customization02 .login_lightbox h2,
+.customization02 .choose_librarycard_lightbox h2,
+.customization02 .qrcode_lightbox h2,
+.customization02 .recommendbook_lightbox h2,
+.customization02 .search_field_lightbox h2,
+.customization02 .related_lightbox h2,
+.customization02 .lightboxstyle h2,
+.customization02 .lightboxstyle_block2 h2 {
   border-bottom: 2px solid #0e664c;
   color: #0e664c !important;
 }
@@ -2281,9 +2389,10 @@ select::-ms-expand {
 .customization02 input[type=submit] {
   background: #0e664c;
   border: 1px solid #08392b;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .customization02 input[type=submit]:hover {
   background: #107356;
@@ -2310,7 +2419,9 @@ select::-ms-expand {
 .customization02 .featured_blocklist {
   background-color: #f3d22f;
 }
-.customization02 .featured_blocklist h3, .customization02 .featured_blocklist .datalist, .customization02 .featured_blocklist .explain {
+.customization02 .featured_blocklist h3,
+.customization02 .featured_blocklist .datalist,
+.customization02 .featured_blocklist .explain {
   color: #333;
 }
 .customization02 .classification {
@@ -2328,22 +2439,38 @@ select::-ms-expand {
 }
 .customization02 .modify_data .title,
 .customization02 .write_data .title,
-.customization02 .forget_password .title, .customization02 .mystudysearch_data .title, .customization02 .stored_value_group .title, .customization02 .reader_form_group .title, .customization02 .delivery_method_block .title {
+.customization02 .forget_password .title,
+.customization02 .mystudysearch_data .title,
+.customization02 .stored_value_group .title,
+.customization02 .reader_form_group .title,
+.customization02 .delivery_method_block .title {
   color: #0e664c;
 }
 .customization02 .modify_data p a,
 .customization02 .write_data p a,
-.customization02 .forget_password p a, .customization02 .mystudysearch_data p a, .customization02 .stored_value_group p a, .customization02 .reader_form_group p a, .customization02 .delivery_method_block p a {
+.customization02 .forget_password p a,
+.customization02 .mystudysearch_data p a,
+.customization02 .stored_value_group p a,
+.customization02 .reader_form_group p a,
+.customization02 .delivery_method_block p a {
   color: #235f92;
 }
 .customization02 .modify_data p a:hover,
 .customization02 .write_data p a:hover,
-.customization02 .forget_password p a:hover, .customization02 .mystudysearch_data p a:hover, .customization02 .stored_value_group p a:hover, .customization02 .reader_form_group p a:hover, .customization02 .delivery_method_block p a:hover {
+.customization02 .forget_password p a:hover,
+.customization02 .mystudysearch_data p a:hover,
+.customization02 .stored_value_group p a:hover,
+.customization02 .reader_form_group p a:hover,
+.customization02 .delivery_method_block p a:hover {
   color: #dd1f03;
 }
 .customization02 .modify_data .form_title span,
 .customization02 .write_data .form_title span,
-.customization02 .forget_password .form_title span, .customization02 .mystudysearch_data .form_title span, .customization02 .stored_value_group .form_title span, .customization02 .reader_form_group .form_title span, .customization02 .delivery_method_block .form_title span {
+.customization02 .forget_password .form_title span,
+.customization02 .mystudysearch_data .form_title span,
+.customization02 .stored_value_group .form_title span,
+.customization02 .reader_form_group .form_title span,
+.customization02 .delivery_method_block .form_title span {
   color: #666;
 }
 .customization02 .mystudyname .member_pic > span {
@@ -2390,21 +2517,28 @@ select::-ms-expand {
   background-color: #f3d22f;
   color: #333;
 }
-.customization02 .devicereservation_block .device_list a {
+.customization02 .devicereservation_block .device_list {
   background-color: #f4d747;
+}
+.customization02 .devicereservation_block .device_list:hover, .customization02 .devicereservation_block .device_list:focus {
+  color: #000;
+  background-color: #f2cd17;
+}
+.customization02 .devicereservation_block .device_list a {
+  color: #000;
 }
 .customization02 .devicereservation_block .device_list a:hover, .customization02 .devicereservation_block .device_list a:focus {
   color: #000;
   background-color: #f2cd17;
 }
-.customization02 .devicereservation_block .device_list a h3 {
+.customization02 .devicereservation_block .device_list h3 {
   color: #000;
   font-weight: 400;
 }
-.customization02 .devicereservation_block .device_list a ul li {
+.customization02 .devicereservation_block .device_list .content ul li {
   color: #000;
 }
-.customization02 .devicereservation_block .device_list a ul li:before {
+.customization02 .devicereservation_block .device_list .content ul li:before {
   border: 5px solid #000;
   border-color: transparent transparent transparent #000;
 }
@@ -2444,14 +2578,14 @@ select::-ms-expand {
   padding: 20px 25px;
   background-color: #fff;
   border-radius: 5px;
-  color: #C41E06;
+  color: #c41e06;
   font-size: 1.125em;
-  border: 2px solid #C41E06;
+  border: 2px solid #c41e06;
 }
 .customization02 .no_result .explain span {
   font-size: 1.25em;
   color: #fff;
-  background-color: #C41E06;
+  background-color: #c41e06;
   padding: 5px 10px;
   margin: 0 10px;
   border-radius: 5px;
@@ -2470,6 +2604,9 @@ select::-ms-expand {
 }
 .customization02 .no_result .related_words h2 {
   color: #0e664c;
+}
+.customization02 .devicefiltering_block .filtersearch button.searchbtn {
+  background-color: #0e664c;
 }
 .customization02 .book_detail .book_cover_source a {
   color: #235f92;
@@ -2649,8 +2786,8 @@ select::-ms-expand {
   color: #496809 !important;
 }
 .customization02 .btnstyle.border_greenbg:hover {
-  background-color: #59800B !important;
-  border: 1px solid #59800B !important;
+  background-color: #59800b !important;
+  border: 1px solid #59800b !important;
 }
 .customization02 .linecontent.mobile-card .main-title {
   color: #0e664c;
@@ -2709,9 +2846,10 @@ select::-ms-expand {
 .customization02 .btn-orange {
   background: #b94b00;
   border: 1px solid #863600;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .customization02 .btn-orange:hover {
   background: #c85100;
@@ -2800,11 +2938,21 @@ select::-ms-expand {
 .version01 .search_blockin .searchsystem .btn_grp a.addfield {
   background-color: #1c4b82;
 }
-.version01 .search_blockin2, .version01 .search_blockin, .version01 .mystudyname, .version01 .general_block {
+.version01 .search_blockin2,
+.version01 .search_blockin,
+.version01 .mystudyname,
+.version01 .general_block {
   background-image: url("../images/search_blockbg02_version01.jpg");
   background-position: center -260px;
 }
-.version01 .login_lightbox h2, .version01 .choose_librarycard_lightbox h2, .version01 .qrcode_lightbox h2, .version01 .recommendbook_lightbox h2, .version01 .search_field_lightbox h2, .version01 .related_lightbox h2, .version01 .lightboxstyle h2, .version01 .lightboxstyle_block2 h2 {
+.version01 .login_lightbox h2,
+.version01 .choose_librarycard_lightbox h2,
+.version01 .qrcode_lightbox h2,
+.version01 .recommendbook_lightbox h2,
+.version01 .search_field_lightbox h2,
+.version01 .related_lightbox h2,
+.version01 .lightboxstyle h2,
+.version01 .lightboxstyle_block2 h2 {
   border-bottom: 2px solid #1c4b82;
   color: #1c4b82 !important;
 }
@@ -2840,9 +2988,10 @@ select::-ms-expand {
 .version01 input[type=submit] {
   background: #1c4b82;
   border: 1px solid #133358;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .version01 input[type=submit]:hover {
   background: #1f528f;
@@ -2869,7 +3018,9 @@ select::-ms-expand {
 .version01 .featured_blocklist {
   background-color: #e9846a;
 }
-.version01 .featured_blocklist h3, .version01 .featured_blocklist .datalist, .version01 .featured_blocklist .explain {
+.version01 .featured_blocklist h3,
+.version01 .featured_blocklist .datalist,
+.version01 .featured_blocklist .explain {
   color: #333;
 }
 .version01 .classification {
@@ -2880,17 +3031,29 @@ select::-ms-expand {
 }
 .version01 .modify_data .title,
 .version01 .write_data .title,
-.version01 .forget_password .title, .version01 .mystudysearch_data .title, .version01 .stored_value_group .title, .version01 .reader_form_group .title, .version01 .delivery_method_block .title {
+.version01 .forget_password .title,
+.version01 .mystudysearch_data .title,
+.version01 .stored_value_group .title,
+.version01 .reader_form_group .title,
+.version01 .delivery_method_block .title {
   color: #1c4b82;
 }
 .version01 .modify_data p a,
 .version01 .write_data p a,
-.version01 .forget_password p a, .version01 .mystudysearch_data p a, .version01 .stored_value_group p a, .version01 .reader_form_group p a, .version01 .delivery_method_block p a {
+.version01 .forget_password p a,
+.version01 .mystudysearch_data p a,
+.version01 .stored_value_group p a,
+.version01 .reader_form_group p a,
+.version01 .delivery_method_block p a {
   color: #1c4b82;
 }
 .version01 .modify_data p a:hover,
 .version01 .write_data p a:hover,
-.version01 .forget_password p a:hover, .version01 .mystudysearch_data p a:hover, .version01 .stored_value_group p a:hover, .version01 .reader_form_group p a:hover, .version01 .delivery_method_block p a:hover {
+.version01 .forget_password p a:hover,
+.version01 .mystudysearch_data p a:hover,
+.version01 .stored_value_group p a:hover,
+.version01 .reader_form_group p a:hover,
+.version01 .delivery_method_block p a:hover {
   color: #dd1f03;
 }
 .version01 .mystudymenu > ul > li > a {
@@ -2922,23 +3085,34 @@ select::-ms-expand {
   background-color: #e9846a;
   color: #333;
 }
-.version01 .devicereservation_block .device_list a {
+.version01 .devicereservation_block .device_list {
   background-color: #e9846a;
+  color: #000;
 }
-.version01 .devicereservation_block .device_list a:hover, .version01 .devicereservation_block .device_list a:focus {
-  color: #fff;
+.version01 .devicereservation_block .device_list:hover, .version01 .devicereservation_block .device_list:focus {
+  color: #000;
   background-color: #e25f3e;
 }
-.version01 .devicereservation_block .device_list a h3 {
-  color: #fff;
+.version01 .devicereservation_block .device_list a {
+  color: #000;
+}
+.version01 .devicereservation_block .device_list a:hover, .version01 .devicereservation_block .device_list a:focus {
+  color: #000;
+  background-color: #e25f3e;
+}
+.version01 .devicereservation_block .device_list h3 {
+  color: #000;
   font-weight: 400;
 }
-.version01 .devicereservation_block .device_list a ul li {
-  color: #fff;
+.version01 .devicereservation_block .device_list .content ul li {
+  color: #000;
 }
-.version01 .devicereservation_block .device_list a ul li:before {
-  border: 5px solid #fff;
-  border-color: transparent transparent transparent #fff;
+.version01 .devicereservation_block .device_list .content ul li:before {
+  border: 5px solid #000;
+  border-color: transparent transparent transparent #000;
+}
+.version01 .devicereservation_block .device_list .content .quantity span em {
+  color: #400597;
 }
 .version01 .meets_box a {
   background-color: #e9846a;
@@ -2971,6 +3145,9 @@ select::-ms-expand {
 }
 .version01 .no_result .related_words h2 {
   color: #1c4b82;
+}
+.version01 .devicefiltering_block .filtersearch button.searchbtn {
+  background-color: #1c4b82;
 }
 .version01 .book_detail .book_cover_source a {
   color: #1c4b82;
@@ -3131,11 +3308,21 @@ select::-ms-expand {
 .version02 .search_blockin .searchsystem .btn_grp a.addfield {
   background-color: #ff8b00;
 }
-.version02 .search_blockin2, .version02 .search_blockin, .version02 .mystudyname, .version02 .general_block {
+.version02 .search_blockin2,
+.version02 .search_blockin,
+.version02 .mystudyname,
+.version02 .general_block {
   background-image: url("../images/search_blockbg02_version02.jpg");
   background-position: center -160px;
 }
-.version02 .login_lightbox h2, .version02 .choose_librarycard_lightbox h2, .version02 .qrcode_lightbox h2, .version02 .recommendbook_lightbox h2, .version02 .search_field_lightbox h2, .version02 .related_lightbox h2, .version02 .lightboxstyle h2, .version02 .lightboxstyle_block2 h2 {
+.version02 .login_lightbox h2,
+.version02 .choose_librarycard_lightbox h2,
+.version02 .qrcode_lightbox h2,
+.version02 .recommendbook_lightbox h2,
+.version02 .search_field_lightbox h2,
+.version02 .related_lightbox h2,
+.version02 .lightboxstyle h2,
+.version02 .lightboxstyle_block2 h2 {
   border-bottom: 2px solid #ff8b00;
   color: #ff8b00 !important;
 }
@@ -3171,9 +3358,10 @@ select::-ms-expand {
 .version02 input[type=submit] {
   background: #ff8b00;
   border: 1px solid #cc6f00;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .version02 input[type=submit]:hover {
   background: #ff920f;
@@ -3200,7 +3388,9 @@ select::-ms-expand {
 .version02 .featured_blocklist {
   background-color: #a7c077;
 }
-.version02 .featured_blocklist h3, .version02 .featured_blocklist .datalist, .version02 .featured_blocklist .explain {
+.version02 .featured_blocklist h3,
+.version02 .featured_blocklist .datalist,
+.version02 .featured_blocklist .explain {
   color: #333;
 }
 .version02 .classification {
@@ -3220,17 +3410,29 @@ select::-ms-expand {
 }
 .version02 .modify_data .title,
 .version02 .write_data .title,
-.version02 .forget_password .title, .version02 .mystudysearch_data .title, .version02 .stored_value_group .title, .version02 .reader_form_group .title, .version02 .delivery_method_block .title {
+.version02 .forget_password .title,
+.version02 .mystudysearch_data .title,
+.version02 .stored_value_group .title,
+.version02 .reader_form_group .title,
+.version02 .delivery_method_block .title {
   color: #ff8b00;
 }
 .version02 .modify_data p a,
 .version02 .write_data p a,
-.version02 .forget_password p a, .version02 .mystudysearch_data p a, .version02 .stored_value_group p a, .version02 .reader_form_group p a, .version02 .delivery_method_block p a {
+.version02 .forget_password p a,
+.version02 .mystudysearch_data p a,
+.version02 .stored_value_group p a,
+.version02 .reader_form_group p a,
+.version02 .delivery_method_block p a {
   color: #774e2b;
 }
 .version02 .modify_data p a:hover,
 .version02 .write_data p a:hover,
-.version02 .forget_password p a:hover, .version02 .mystudysearch_data p a:hover, .version02 .stored_value_group p a:hover, .version02 .reader_form_group p a:hover, .version02 .delivery_method_block p a:hover {
+.version02 .forget_password p a:hover,
+.version02 .mystudysearch_data p a:hover,
+.version02 .stored_value_group p a:hover,
+.version02 .reader_form_group p a:hover,
+.version02 .delivery_method_block p a:hover {
   color: #dd1f03;
 }
 .version02 .mystudymenu > ul > li > a {
@@ -3262,23 +3464,31 @@ select::-ms-expand {
   background-color: #a7c077;
   color: #333;
 }
-.version02 .devicereservation_block .device_list a {
+.version02 .devicereservation_block .device_list {
   background-color: #a7c077;
+  color: #000;
 }
-.version02 .devicereservation_block .device_list a:hover, .version02 .devicereservation_block .device_list a:focus {
-  color: #fff;
+.version02 .devicereservation_block .device_list:hover, .version02 .devicereservation_block .device_list:focus {
+  color: #000;
   background-color: #90b054;
 }
-.version02 .devicereservation_block .device_list a h3 {
-  color: #fff;
+.version02 .devicereservation_block .device_list a {
+  color: #000;
+}
+.version02 .devicereservation_block .device_list a:hover, .version02 .devicereservation_block .device_list a:focus {
+  color: #000;
+  background-color: #90b054;
+}
+.version02 .devicereservation_block .device_list h3 {
+  color: #000;
   font-weight: 400;
 }
-.version02 .devicereservation_block .device_list a ul li {
-  color: #fff;
+.version02 .devicereservation_block .device_list .content ul li {
+  color: #000;
 }
-.version02 .devicereservation_block .device_list a ul li:before {
-  border: 5px solid #fff;
-  border-color: transparent transparent transparent #fff;
+.version02 .devicereservation_block .device_list .content ul li:before {
+  border: 5px solid #000;
+  border-color: transparent transparent transparent #000;
 }
 .version02 .meets_box a {
   background-color: #a7c077;
@@ -3311,6 +3521,9 @@ select::-ms-expand {
 }
 .version02 .no_result .related_words h2 {
   color: #ff8b00;
+}
+.version02 .devicefiltering_block .filtersearch button.searchbtn {
+  background-color: #ff8b00;
 }
 .version02 .book_detail .book_cover_source a {
   color: #774e2b;
@@ -3414,8 +3627,8 @@ select::-ms-expand {
 }
 
 .version03 .header {
-  background: #0B857D;
-  background: linear-gradient(to bottom, #0B857D, #0B857D);
+  background: #0b857d;
+  background: linear-gradient(to bottom, #0b857d, #0b857d);
 }
 .version03 .header > .container .sidebarCtrl {
   background-image: url("../images/sidebarCtrl_white.png");
@@ -3471,11 +3684,21 @@ select::-ms-expand {
 .version03 .search_blockin .searchsystem .btn_grp a.addfield {
   background-color: #097e76;
 }
-.version03 .search_blockin2, .version03 .search_blockin, .version03 .mystudyname, .version03 .general_block {
+.version03 .search_blockin2,
+.version03 .search_blockin,
+.version03 .mystudyname,
+.version03 .general_block {
   background-image: url("../images/search_blockbg02_version03.jpg");
   background-position: center -220px;
 }
-.version03 .login_lightbox h2, .version03 .choose_librarycard_lightbox h2, .version03 .qrcode_lightbox h2, .version03 .recommendbook_lightbox h2, .version03 .search_field_lightbox h2, .version03 .related_lightbox h2, .version03 .lightboxstyle h2, .version03 .lightboxstyle_block2 h2 {
+.version03 .login_lightbox h2,
+.version03 .choose_librarycard_lightbox h2,
+.version03 .qrcode_lightbox h2,
+.version03 .recommendbook_lightbox h2,
+.version03 .search_field_lightbox h2,
+.version03 .related_lightbox h2,
+.version03 .lightboxstyle h2,
+.version03 .lightboxstyle_block2 h2 {
   border-bottom: 2px solid #097e76;
   color: #097e76 !important;
 }
@@ -3511,9 +3734,10 @@ select::-ms-expand {
 .version03 input[type=submit] {
   background: #097e76;
   border: 1px solid #064e49;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .version03 input[type=submit]:hover {
   background: #0a8c83;
@@ -3540,7 +3764,9 @@ select::-ms-expand {
 .version03 .featured_blocklist {
   background-color: #f49a6e;
 }
-.version03 .featured_blocklist h3, .version03 .featured_blocklist .datalist, .version03 .featured_blocklist .explain {
+.version03 .featured_blocklist h3,
+.version03 .featured_blocklist .datalist,
+.version03 .featured_blocklist .explain {
   color: #333;
 }
 .version03 .classification {
@@ -3560,17 +3786,29 @@ select::-ms-expand {
 }
 .version03 .modify_data .title,
 .version03 .write_data .title,
-.version03 .forget_password .title, .version03 .mystudysearch_data .title, .version03 .stored_value_group .title, .version03 .reader_form_group .title, .version03 .delivery_method_block .title {
+.version03 .forget_password .title,
+.version03 .mystudysearch_data .title,
+.version03 .stored_value_group .title,
+.version03 .reader_form_group .title,
+.version03 .delivery_method_block .title {
   color: #097e76;
 }
 .version03 .modify_data p a,
 .version03 .write_data p a,
-.version03 .forget_password p a, .version03 .mystudysearch_data p a, .version03 .stored_value_group p a, .version03 .reader_form_group p a, .version03 .delivery_method_block p a {
+.version03 .forget_password p a,
+.version03 .mystudysearch_data p a,
+.version03 .stored_value_group p a,
+.version03 .reader_form_group p a,
+.version03 .delivery_method_block p a {
   color: #097e76;
 }
 .version03 .modify_data p a:hover,
 .version03 .write_data p a:hover,
-.version03 .forget_password p a:hover, .version03 .mystudysearch_data p a:hover, .version03 .stored_value_group p a:hover, .version03 .reader_form_group p a:hover, .version03 .delivery_method_block p a:hover {
+.version03 .forget_password p a:hover,
+.version03 .mystudysearch_data p a:hover,
+.version03 .stored_value_group p a:hover,
+.version03 .reader_form_group p a:hover,
+.version03 .delivery_method_block p a:hover {
   color: #dd1f03;
 }
 .version03 .mystudymenu > ul > li > a {
@@ -3602,14 +3840,26 @@ select::-ms-expand {
   background-color: #f49a6e;
   color: #333;
 }
-.version03 .devicereservation_block .device_list a {
+.version03 .devicereservation_block .device_list {
   background-color: #f49a6e;
+  color: #000;
+}
+.version03 .devicereservation_block .device_list:hover, .version03 .devicereservation_block .device_list:focus {
+  color: #000;
+  background-color: #f0793f;
+}
+.version03 .devicereservation_block .device_list a {
+  color: #000;
 }
 .version03 .devicereservation_block .device_list a:hover, .version03 .devicereservation_block .device_list a:focus {
   background-color: #f0793f;
 }
-.version03 .devicereservation_block .device_list a h3 {
+.version03 .devicereservation_block .device_list h3 {
   font-weight: 400;
+  color: #000;
+}
+.version03 .devicereservation_block .device_list .content .quantity span em {
+  color: #810d0e;
 }
 .version03 .meets_box a {
   background-color: #f49a6e;
@@ -3640,6 +3890,9 @@ select::-ms-expand {
 }
 .version03 .no_result .related_words h2 {
   color: #097e76;
+}
+.version03 .devicefiltering_block .filtersearch button.searchbtn {
+  background-color: #097e76;
 }
 .version03 .book_detail .book_cover_source a {
   color: #097e76;
@@ -3744,7 +3997,7 @@ select::-ms-expand {
 
 .version04 .header {
   background: #774181;
-  background: linear-gradient(to bottom, #774181, #5E3366);
+  background: linear-gradient(to bottom, #774181, #5e3366);
 }
 .version04 .header > .container .sidebarCtrl {
   background-image: url("../images/sidebarCtrl_white.png");
@@ -3816,11 +4069,21 @@ select::-ms-expand {
 .version04 .search_blockin .searchsystem .btn_grp a.addfield {
   background-color: #774181;
 }
-.version04 .search_blockin2, .version04 .search_blockin, .version04 .mystudyname, .version04 .general_block {
+.version04 .search_blockin2,
+.version04 .search_blockin,
+.version04 .mystudyname,
+.version04 .general_block {
   background-image: url("../images/search_blockbg02_version04.jpg");
   background-position: center center;
 }
-.version04 .login_lightbox h2, .version04 .choose_librarycard_lightbox h2, .version04 .qrcode_lightbox h2, .version04 .recommendbook_lightbox h2, .version04 .search_field_lightbox h2, .version04 .related_lightbox h2, .version04 .lightboxstyle h2, .version04 .lightboxstyle_block2 h2 {
+.version04 .login_lightbox h2,
+.version04 .choose_librarycard_lightbox h2,
+.version04 .qrcode_lightbox h2,
+.version04 .recommendbook_lightbox h2,
+.version04 .search_field_lightbox h2,
+.version04 .related_lightbox h2,
+.version04 .lightboxstyle h2,
+.version04 .lightboxstyle_block2 h2 {
   border-bottom: 2px solid #774181;
   color: #774181 !important;
 }
@@ -3856,9 +4119,10 @@ select::-ms-expand {
 .version04 input[type=submit] {
   background: #774181;
   border: 1px solid #58305f;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .version04 input[type=submit]:hover {
   background: #80468b;
@@ -3885,7 +4149,9 @@ select::-ms-expand {
 .version04 .featured_blocklist {
   background-color: #e6b2c6;
 }
-.version04 .featured_blocklist h3, .version04 .featured_blocklist .datalist, .version04 .featured_blocklist .explain {
+.version04 .featured_blocklist h3,
+.version04 .featured_blocklist .datalist,
+.version04 .featured_blocklist .explain {
   color: #333;
 }
 .version04 .classification {
@@ -3905,17 +4171,29 @@ select::-ms-expand {
 }
 .version04 .modify_data .title,
 .version04 .write_data .title,
-.version04 .forget_password .title, .version04 .mystudysearch_data .title, .version04 .stored_value_group .title, .version04 .reader_form_group .title, .version04 .delivery_method_block .title {
+.version04 .forget_password .title,
+.version04 .mystudysearch_data .title,
+.version04 .stored_value_group .title,
+.version04 .reader_form_group .title,
+.version04 .delivery_method_block .title {
   color: #774181;
 }
 .version04 .modify_data p a,
 .version04 .write_data p a,
-.version04 .forget_password p a, .version04 .mystudysearch_data p a, .version04 .stored_value_group p a, .version04 .reader_form_group p a, .version04 .delivery_method_block p a {
+.version04 .forget_password p a,
+.version04 .mystudysearch_data p a,
+.version04 .stored_value_group p a,
+.version04 .reader_form_group p a,
+.version04 .delivery_method_block p a {
   color: #774181;
 }
 .version04 .modify_data p a:hover,
 .version04 .write_data p a:hover,
-.version04 .forget_password p a:hover, .version04 .mystudysearch_data p a:hover, .version04 .stored_value_group p a:hover, .version04 .reader_form_group p a:hover, .version04 .delivery_method_block p a:hover {
+.version04 .forget_password p a:hover,
+.version04 .mystudysearch_data p a:hover,
+.version04 .stored_value_group p a:hover,
+.version04 .reader_form_group p a:hover,
+.version04 .delivery_method_block p a:hover {
   color: #dd1f03;
 }
 .version04 .mystudymenu > ul > li > a {
@@ -3947,23 +4225,34 @@ select::-ms-expand {
   background-color: #e6b2c6;
   color: #000;
 }
-.version04 .devicereservation_block .device_list a {
+.version04 .devicereservation_block .device_list {
   background-color: #e6b2c6;
+  color: #000;
+}
+.version04 .devicereservation_block .device_list:hover, .version04 .devicereservation_block .device_list:focus {
+  color: #000;
+  background-color: #da8caa;
+}
+.version04 .devicereservation_block .device_list a {
+  color: #000;
 }
 .version04 .devicereservation_block .device_list a:hover, .version04 .devicereservation_block .device_list a:focus {
   color: #000;
   background-color: #da8caa;
 }
-.version04 .devicereservation_block .device_list a h3 {
+.version04 .devicereservation_block .device_list h3 {
   color: #000;
   font-weight: 400;
 }
-.version04 .devicereservation_block .device_list a ul li {
+.version04 .devicereservation_block .device_list .content ul li {
   color: #000;
 }
-.version04 .devicereservation_block .device_list a ul li:before {
+.version04 .devicereservation_block .device_list .content ul li:before {
   border: 5px solid #000;
   border-color: transparent transparent transparent #000;
+}
+.version04 .devicereservation_block .device_list .content .quantity span em {
+  color: #93191a;
 }
 .version04 .meets_box a {
   background-color: #e6b2c6;
@@ -3996,6 +4285,9 @@ select::-ms-expand {
 }
 .version04 .no_result .related_words h2 {
   color: #774181;
+}
+.version04 .devicefiltering_block .filtersearch button.searchbtn {
+  background-color: #774181;
 }
 .version04 .book_detail .book_cover_source a {
   color: #774181;
@@ -4100,7 +4392,7 @@ select::-ms-expand {
 
 .version05 .header {
   background: #088c6f;
-  background: linear-gradient(to bottom, #088c6f, #055C49);
+  background: linear-gradient(to bottom, #088c6f, #055c49);
 }
 .version05 .header > .container .sidebarCtrl {
   background-image: url("../images/sidebarCtrl_white.png");
@@ -4156,11 +4448,21 @@ select::-ms-expand {
 .version05 .search_blockin .searchsystem .btn_grp a.addfield {
   background-color: #088c6f;
 }
-.version05 .search_blockin2, .version05 .search_blockin, .version05 .mystudyname, .version05 .general_block {
+.version05 .search_blockin2,
+.version05 .search_blockin,
+.version05 .mystudyname,
+.version05 .general_block {
   background-image: url("../images/search_blockbg02_version05.jpg");
   background-position: center -150px;
 }
-.version05 .login_lightbox h2, .version05 .choose_librarycard_lightbox h2, .version05 .qrcode_lightbox h2, .version05 .recommendbook_lightbox h2, .version05 .search_field_lightbox h2, .version05 .related_lightbox h2, .version05 .lightboxstyle h2, .version05 .lightboxstyle_block2 h2 {
+.version05 .login_lightbox h2,
+.version05 .choose_librarycard_lightbox h2,
+.version05 .qrcode_lightbox h2,
+.version05 .recommendbook_lightbox h2,
+.version05 .search_field_lightbox h2,
+.version05 .related_lightbox h2,
+.version05 .lightboxstyle h2,
+.version05 .lightboxstyle_block2 h2 {
   border-bottom: 2px solid #088c6f;
   color: #088c6f !important;
 }
@@ -4196,9 +4498,10 @@ select::-ms-expand {
 .version05 input[type=submit] {
   background: #088c6f;
   border: 1px solid #055c49;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .version05 input[type=submit]:hover {
   background: #099a7a;
@@ -4225,7 +4528,9 @@ select::-ms-expand {
 .version05 .featured_blocklist {
   background-color: #f3d394;
 }
-.version05 .featured_blocklist h3, .version05 .featured_blocklist .datalist, .version05 .featured_blocklist .explain {
+.version05 .featured_blocklist h3,
+.version05 .featured_blocklist .datalist,
+.version05 .featured_blocklist .explain {
   color: #333;
 }
 .version05 .classification {
@@ -4245,17 +4550,29 @@ select::-ms-expand {
 }
 .version05 .modify_data .title,
 .version05 .write_data .title,
-.version05 .forget_password .title, .version05 .mystudysearch_data .title, .version05 .stored_value_group .title, .version05 .reader_form_group .title, .version05 .delivery_method_block .title {
+.version05 .forget_password .title,
+.version05 .mystudysearch_data .title,
+.version05 .stored_value_group .title,
+.version05 .reader_form_group .title,
+.version05 .delivery_method_block .title {
   color: #088c6f;
 }
 .version05 .modify_data p a,
 .version05 .write_data p a,
-.version05 .forget_password p a, .version05 .mystudysearch_data p a, .version05 .stored_value_group p a, .version05 .reader_form_group p a, .version05 .delivery_method_block p a {
+.version05 .forget_password p a,
+.version05 .mystudysearch_data p a,
+.version05 .stored_value_group p a,
+.version05 .reader_form_group p a,
+.version05 .delivery_method_block p a {
   color: #07785f;
 }
 .version05 .modify_data p a:hover,
 .version05 .write_data p a:hover,
-.version05 .forget_password p a:hover, .version05 .mystudysearch_data p a:hover, .version05 .stored_value_group p a:hover, .version05 .reader_form_group p a:hover, .version05 .delivery_method_block p a:hover {
+.version05 .forget_password p a:hover,
+.version05 .mystudysearch_data p a:hover,
+.version05 .stored_value_group p a:hover,
+.version05 .reader_form_group p a:hover,
+.version05 .delivery_method_block p a:hover {
   color: #dd1f03;
 }
 .version05 .mystudymenu > ul > li > a {
@@ -4287,21 +4604,29 @@ select::-ms-expand {
   background-color: #f3d394;
   color: #000;
 }
-.version05 .devicereservation_block .device_list a {
+.version05 .devicereservation_block .device_list {
   background-color: #f3d394;
+  color: #000;
+}
+.version05 .devicereservation_block .device_list:hover, .version05 .devicereservation_block .device_list:focus {
+  color: #000;
+  background-color: #eec066;
+}
+.version05 .devicereservation_block .device_list a {
+  color: #000;
 }
 .version05 .devicereservation_block .device_list a:hover, .version05 .devicereservation_block .device_list a:focus {
   color: #000;
   background-color: #eec066;
 }
-.version05 .devicereservation_block .device_list a h3 {
+.version05 .devicereservation_block .device_list h3 {
   color: #000;
   font-weight: 400;
 }
-.version05 .devicereservation_block .device_list a ul li {
+.version05 .devicereservation_block .device_list .content ul li {
   color: #000;
 }
-.version05 .devicereservation_block .device_list a ul li:before {
+.version05 .devicereservation_block .device_list .content ul li:before {
   border: 5px solid #000;
   border-color: transparent transparent transparent #000;
 }
@@ -4336,6 +4661,9 @@ select::-ms-expand {
 }
 .version05 .no_result .related_words h2 {
   color: #088c6f;
+}
+.version05 .devicefiltering_block .filtersearch button.searchbtn {
+  background-color: #088c6f;
 }
 .version05 .book_detail .book_cover_source a {
   color: #07785f;
@@ -4497,11 +4825,21 @@ select::-ms-expand {
 .version06 .search_blockin .searchsystem .btn_grp a.addfield {
   background-color: #00b7ee;
 }
-.version06 .search_blockin2, .version06 .search_blockin, .version06 .mystudyname, .version06 .general_block {
+.version06 .search_blockin2,
+.version06 .search_blockin,
+.version06 .mystudyname,
+.version06 .general_block {
   background-image: url("../images/search_blockbg02_version06.jpg");
   background-position: center -210px;
 }
-.version06 .login_lightbox h2, .version06 .choose_librarycard_lightbox h2, .version06 .qrcode_lightbox h2, .version06 .recommendbook_lightbox h2, .version06 .search_field_lightbox h2, .version06 .related_lightbox h2, .version06 .lightboxstyle h2, .version06 .lightboxstyle_block2 h2 {
+.version06 .login_lightbox h2,
+.version06 .choose_librarycard_lightbox h2,
+.version06 .qrcode_lightbox h2,
+.version06 .recommendbook_lightbox h2,
+.version06 .search_field_lightbox h2,
+.version06 .related_lightbox h2,
+.version06 .lightboxstyle h2,
+.version06 .lightboxstyle_block2 h2 {
   border-bottom: 2px solid #00b7ee;
   color: #00b7ee !important;
 }
@@ -4537,9 +4875,10 @@ select::-ms-expand {
 .version06 input[type=submit] {
   background: #00b7ee;
   border: 1px solid #0090bb;
-  color: #FFF;
+  color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
+  transition: 0.2s;
 }
 .version06 input[type=submit]:hover {
   background: #00c3fd;
@@ -4566,7 +4905,9 @@ select::-ms-expand {
 .version06 .featured_blocklist {
   background-color: #fbe8d3;
 }
-.version06 .featured_blocklist h3, .version06 .featured_blocklist .datalist, .version06 .featured_blocklist .explain {
+.version06 .featured_blocklist h3,
+.version06 .featured_blocklist .datalist,
+.version06 .featured_blocklist .explain {
   color: #333;
 }
 .version06 .classification {
@@ -4576,17 +4917,29 @@ select::-ms-expand {
 }
 .version06 .modify_data .title,
 .version06 .write_data .title,
-.version06 .forget_password .title, .version06 .mystudysearch_data .title, .version06 .stored_value_group .title, .version06 .reader_form_group .title, .version06 .delivery_method_block .title {
+.version06 .forget_password .title,
+.version06 .mystudysearch_data .title,
+.version06 .stored_value_group .title,
+.version06 .reader_form_group .title,
+.version06 .delivery_method_block .title {
   color: #00b7ee;
 }
 .version06 .modify_data p a,
 .version06 .write_data p a,
-.version06 .forget_password p a, .version06 .mystudysearch_data p a, .version06 .stored_value_group p a, .version06 .reader_form_group p a, .version06 .delivery_method_block p a {
+.version06 .forget_password p a,
+.version06 .mystudysearch_data p a,
+.version06 .stored_value_group p a,
+.version06 .reader_form_group p a,
+.version06 .delivery_method_block p a {
   color: #44b1e2;
 }
 .version06 .modify_data p a:hover,
 .version06 .write_data p a:hover,
-.version06 .forget_password p a:hover, .version06 .mystudysearch_data p a:hover, .version06 .stored_value_group p a:hover, .version06 .reader_form_group p a:hover, .version06 .delivery_method_block p a:hover {
+.version06 .forget_password p a:hover,
+.version06 .mystudysearch_data p a:hover,
+.version06 .stored_value_group p a:hover,
+.version06 .reader_form_group p a:hover,
+.version06 .delivery_method_block p a:hover {
   color: #dd1f03;
 }
 .version06 .mystudymenu > ul > li > a {
@@ -4617,21 +4970,28 @@ select::-ms-expand {
 .version06 .hotqa_list h2 {
   background-color: #00b7ee;
 }
-.version06 .devicereservation_block .device_list a {
+.version06 .devicereservation_block .device_list {
   background-color: #f9dcbc;
+}
+.version06 .devicereservation_block .device_list:hover, .version06 .devicereservation_block .device_list:focus {
+  color: #000;
+  background-color: #f5c38d;
+}
+.version06 .devicereservation_block .device_list a {
+  color: #000;
 }
 .version06 .devicereservation_block .device_list a:hover, .version06 .devicereservation_block .device_list a:focus {
   color: #000;
   background-color: #f5c38d;
 }
-.version06 .devicereservation_block .device_list a h3 {
+.version06 .devicereservation_block .device_list h3 {
   color: #000;
   font-weight: 400;
 }
-.version06 .devicereservation_block .device_list a ul li {
+.version06 .devicereservation_block .device_list .content ul li {
   color: #000;
 }
-.version06 .devicereservation_block .device_list a ul li:before {
+.version06 .devicereservation_block .device_list .content ul li:before {
   border: 5px solid #000;
   border-color: transparent transparent transparent #000;
 }
@@ -4666,6 +5026,9 @@ select::-ms-expand {
 }
 .version06 .no_result .related_words h2 {
   color: #00b7ee;
+}
+.version06 .devicefiltering_block .filtersearch button.searchbtn {
+  background-color: #00b7ee;
 }
 .version06 .book_detail .book_cover_source a {
   color: #44b1e2;
