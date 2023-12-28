@@ -1243,10 +1243,26 @@ $(function () {
     $('#itemselect_style').fadeOut();
     $('body').removeClass('fix');
   });
+
+  //討論室時間預約
+  $('.discussionroom_btn').click(function () {
+    $('#discussionroom_style').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.lightboxstyle_block .close').click(function () {
+    $('#discussionroom_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#discussionroom_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+
   //加入日曆
   $('.addcalendar_btn').click(function () {
     $('#addcalendar_style').fadeIn();
     $('#itemselect_style').fadeOut();
+    $('#discussionroom_style').fadeOut();
     $('body').addClass('fix');
   });
   $('.lightboxstyle_block .close').click(function () {
@@ -1257,7 +1273,12 @@ $(function () {
     $('#addcalendar_style').fadeOut();
     $('body').removeClass('fix');
   });
+  $('.lightboxstyle_block .closebtn').click(function () {
+    $('#addcalendar_style').fadeOut();
+    $('body').removeClass('fix');
+  });
 });
+
 //詳目頁 匯出點選
 $(function () {
   $('.export_block .close').click(function () {

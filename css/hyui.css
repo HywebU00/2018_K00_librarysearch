@@ -2575,6 +2575,10 @@ a:focus {
   color: rgba(232, 224, 196, 0.5);
   font-size: 1em;
 }
+.accesskey:hover {
+  color: rgba(232, 224, 196, 0.5);
+  text-decoration: underline;
+}
 @media screen and (max-width: 767px) {
   .accesskey {
     display: none;
@@ -2603,7 +2607,7 @@ a.more:after {
   content: "";
   width: 12px;
   height: 12px;
-  border: 2px solid #FFF;
+  border: 2px solid #fff;
   transform: rotate(45deg);
   position: absolute;
   right: -10px;
@@ -2642,7 +2646,7 @@ a.more:hover:after, a.more:focus:after, a.more.active:after {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
-  color: #FFF;
+  color: #fff;
   line-height: 70px;
   text-decoration: none;
   position: fixed;
@@ -2682,7 +2686,7 @@ img.img-responsive {
 }
 .tooltip span {
   display: inline-block;
-  background: #DEDEDE;
+  background: #dedede;
   text-align: center;
   padding: 10px;
   width: 100px;
@@ -2744,7 +2748,7 @@ img.img-responsive {
 .file_download li .update,
 .file_download li .file_view {
   font-size: 0.813em;
-  color: #AAA;
+  color: #aaa;
   width: 100px;
   float: right;
   margin-top: 5px;
@@ -2843,7 +2847,7 @@ img.img-responsive {
 .web_link li {
   position: relative;
   margin-bottom: 10px;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid #eee;
 }
 .web_link li a {
   padding: 0.2em 0px 0.2em 35px;
@@ -5158,10 +5162,10 @@ pre {
   margin-right: 5px !important;
 }
 .RSS_button .btn:hover, .RSS_button .btn:focus {
-  color: #000;
-  background-color: #faab4c !important;
-  border: 1px solid #faab4c !important;
-  background-image: url("../images/icon_rss_black.png") !important;
+  color: #fff;
+  background-color: #b06000 !important;
+  border: 1px solid #b06000 !important;
+  background-image: url("../images/icon_rss.png") !important;
   background-repeat: no-repeat;
   background-position: 4px center;
   background-size: 15px 14px !important;
@@ -5357,7 +5361,7 @@ pre {
   color: #333 !important;
   transition: 0.2s;
 }
-.btnstyle.whitebg:hover {
+.btnstyle.whitebg:hover, .btnstyle.whitebg:focus {
   background-color: #d2d2d2;
   border: 2px solid #d2d2d2;
   color: #333 !important;
@@ -8743,7 +8747,8 @@ body.fix {
   border: 1px solid #d3d3d3;
   display: block;
 }
-.newbooks_block .newbooks div a .image_titlepage, .newbooks_block .newbooks div a .image_titlepage2,
+.newbooks_block .newbooks div a .image_titlepage,
+.newbooks_block .newbooks div a .image_titlepage2,
 .newbooks_block .recommendbooks div a .image_titlepage,
 .newbooks_block .recommendbooks div a .image_titlepage2,
 .newbooks_block .recommendbooks2 div a .image_titlepage,
@@ -8764,7 +8769,8 @@ body.fix {
   width: 148px;
   height: 200px;
 }
-.newbooks_block .newbooks div a .image_titlepage:before, .newbooks_block .newbooks div a .image_titlepage2:before,
+.newbooks_block .newbooks div a .image_titlepage:before,
+.newbooks_block .newbooks div a .image_titlepage2:before,
 .newbooks_block .recommendbooks div a .image_titlepage:before,
 .newbooks_block .recommendbooks div a .image_titlepage2:before,
 .newbooks_block .recommendbooks2 div a .image_titlepage:before,
@@ -8783,7 +8789,8 @@ body.fix {
 .recommendbooks_block2 .recommendbooks2 div a .image_titlepage2:before {
   height: 100px;
 }
-.newbooks_block .newbooks div a .image_titlepage .booktitle, .newbooks_block .newbooks div a .image_titlepage2 .booktitle,
+.newbooks_block .newbooks div a .image_titlepage .booktitle,
+.newbooks_block .newbooks div a .image_titlepage2 .booktitle,
 .newbooks_block .recommendbooks div a .image_titlepage .booktitle,
 .newbooks_block .recommendbooks div a .image_titlepage2 .booktitle,
 .newbooks_block .recommendbooks2 div a .image_titlepage .booktitle,
@@ -8803,7 +8810,8 @@ body.fix {
   text-align: left !important;
   white-space: normal !important;
 }
-.newbooks_block .newbooks div a .image_titlepage .author, .newbooks_block .newbooks div a .image_titlepage2 .author,
+.newbooks_block .newbooks div a .image_titlepage .author,
+.newbooks_block .newbooks div a .image_titlepage2 .author,
 .newbooks_block .recommendbooks div a .image_titlepage .author,
 .newbooks_block .recommendbooks div a .image_titlepage2 .author,
 .newbooks_block .recommendbooks2 div a .image_titlepage .author,
@@ -9379,7 +9387,7 @@ body.fix {
   color: #333;
 }
 .featured_block .featured_data .btn_grp .btn:hover {
-  background: #F77810;
+  background: #f77810;
   border: 1px solid #cd6007;
   color: #fff;
 }
@@ -9474,24 +9482,28 @@ body.fix {
   margin: auto;
   display: block;
 }
-.featured_block .themebook2 ul li .image_titlepage, .featured_block .themebook2 ul li .image_titlepage2 {
+.featured_block .themebook2 ul li .image_titlepage,
+.featured_block .themebook2 ul li .image_titlepage2 {
   margin: 0 auto 15px;
   height: 268px;
   box-shadow: none;
 }
 @media (max-width: 1400px) {
-  .featured_block .themebook2 ul li .image_titlepage, .featured_block .themebook2 ul li .image_titlepage2 {
+  .featured_block .themebook2 ul li .image_titlepage,
+  .featured_block .themebook2 ul li .image_titlepage2 {
     height: 370px;
   }
 }
 @media screen and (max-width: 1399px) {
-  .featured_block .themebook2 ul li .image_titlepage, .featured_block .themebook2 ul li .image_titlepage2 {
+  .featured_block .themebook2 ul li .image_titlepage,
+  .featured_block .themebook2 ul li .image_titlepage2 {
     width: 170px;
     height: 220px;
     margin: 0 0 15px;
   }
 }
-.featured_block .themebook2 ul li .image_titlepage:before, .featured_block .themebook2 ul li .image_titlepage2:before {
+.featured_block .themebook2 ul li .image_titlepage:before,
+.featured_block .themebook2 ul li .image_titlepage2:before {
   height: 120px;
 }
 .featured_block .themebook2 ul li span {
@@ -9612,9 +9624,15 @@ body.fix {
   background-color: #f1ad00;
   color: #333;
 }
+.hotrankings .sort a:hover:focus {
+  box-shadow: 0 0px 0px 2px #f1ad00 !important;
+}
 .hotrankings .sort a.here {
   background: #f1ad00;
   color: #333;
+}
+.hotrankings .sort a.here:hover, .hotrankings .sort a.here:focus {
+  background: #ffc93f;
 }
 .hotrankings .slick-next {
   right: -45px;
@@ -9914,17 +9932,18 @@ body.fix {
   }
 }
 .hotbook_column h3 {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   font-size: 1.125em;
   font-weight: normal;
   margin: 10px 0;
   padding: 0;
 }
 .hotbook_column h3 a {
+  display: block;
   color: #81511b;
   text-decoration: underline;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .hotbook_column h3 a:hover, .hotbook_column h3 a:focus {
   color: #dd1f03;
@@ -10119,7 +10138,8 @@ body.fix {
   max-height: 200px;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
-.hotbook_column .hotbook_block01 .bookno01 .image_titlepage, .hotbook_column .hotbook_block01 .bookno01 .image_titlepage2,
+.hotbook_column .hotbook_block01 .bookno01 .image_titlepage,
+.hotbook_column .hotbook_block01 .bookno01 .image_titlepage2,
 .hotbook_column .hotbook_block04 .bookno01 .image_titlepage,
 .hotbook_column .hotbook_block04 .bookno01 .image_titlepage2,
 .hotbook_column .hotbook_block05 .bookno01 .image_titlepage,
@@ -10130,7 +10150,8 @@ body.fix {
   width: 140px;
   height: 200px;
 }
-.hotbook_column .hotbook_block01 .bookno01 .image_titlepage:before, .hotbook_column .hotbook_block01 .bookno01 .image_titlepage2:before,
+.hotbook_column .hotbook_block01 .bookno01 .image_titlepage:before,
+.hotbook_column .hotbook_block01 .bookno01 .image_titlepage2:before,
 .hotbook_column .hotbook_block04 .bookno01 .image_titlepage:before,
 .hotbook_column .hotbook_block04 .bookno01 .image_titlepage2:before,
 .hotbook_column .hotbook_block05 .bookno01 .image_titlepage:before,
@@ -10208,7 +10229,8 @@ body.fix {
   }
 }
 @media screen and (max-width: 767px) {
-  .hotbook_column .hotbook_block04 .bookno01 .image_titlepage, .hotbook_column .hotbook_block04 .bookno01 .image_titlepage2 {
+  .hotbook_column .hotbook_block04 .bookno01 .image_titlepage,
+  .hotbook_column .hotbook_block04 .bookno01 .image_titlepage2 {
     width: 95% !important;
     height: 240px !important;
     margin: 20px auto 0;
@@ -10225,7 +10247,8 @@ body.fix {
   }
 }
 @media screen and (max-width: 767px) {
-  .hotbook_column .hotbook_block05 .bookno02 .image_titlepage, .hotbook_column .hotbook_block05 .bookno02 .image_titlepage2 {
+  .hotbook_column .hotbook_block05 .bookno02 .image_titlepage,
+  .hotbook_column .hotbook_block05 .bookno02 .image_titlepage2 {
     width: 85% !important;
     height: 210px !important;
     margin: 50px auto 0;
@@ -10242,7 +10265,8 @@ body.fix {
   }
 }
 @media screen and (max-width: 767px) {
-  .hotbook_column .hotbook_block06 .bookno03 .image_titlepage, .hotbook_column .hotbook_block06 .bookno03 .image_titlepage2 {
+  .hotbook_column .hotbook_block06 .bookno03 .image_titlepage,
+  .hotbook_column .hotbook_block06 .bookno03 .image_titlepage2 {
     width: 75% !important;
     height: 160px !important;
     margin: 100px auto 0;
@@ -10335,7 +10359,8 @@ body.fix {
   margin: auto;
 }
 @media screen and (max-width: 575px) {
-  .hotbook_column .hotbook_block04 .bookno01 .image_titlepage, .hotbook_column .hotbook_block04 .bookno01 .image_titlepage2,
+  .hotbook_column .hotbook_block04 .bookno01 .image_titlepage,
+  .hotbook_column .hotbook_block04 .bookno01 .image_titlepage2,
   .hotbook_column .hotbook_block04 .bookno02 .image_titlepage,
   .hotbook_column .hotbook_block04 .bookno02 .image_titlepage2,
   .hotbook_column .hotbook_block04 .bookno03 .image_titlepage,
@@ -10431,7 +10456,8 @@ body.fix {
     width: 75px;
   }
 }
-.hotbook_column .hotbook_block02 .hotbooklist .image_titlepage, .hotbook_column .hotbook_block02 .hotbooklist .image_titlepage2,
+.hotbook_column .hotbook_block02 .hotbooklist .image_titlepage,
+.hotbook_column .hotbook_block02 .hotbooklist .image_titlepage2,
 .hotbook_column .hotbook_block03 .hotbooklist .image_titlepage,
 .hotbook_column .hotbook_block03 .hotbooklist .image_titlepage2 {
   margin: 0 20px 0 0;
@@ -12446,14 +12472,139 @@ body.fix {
   float: none !important;
   margin: 0 0 1em 2px;
 }
-.devicereservation_block .devicefiltering_block {
+
+.device_list {
+  flex: 0 0 auto;
+  flex-basis: 24%;
+  position: relative;
+  margin: 0 0.5% 20px;
+  background-color: #ffd058;
+  border-radius: 5px;
+  transition: 0.2s;
+  padding: 20px;
+  color: #000;
+  box-sizing: border-box;
+}
+.device_list:hover, .device_list:focus {
+  background-color: #f1ad00;
+  box-shadow: 3px 2px 4px 3px #ccc;
+  color: #000;
+}
+@media (max-width: 1500px) {
+  .device_list {
+    flex-basis: 32%;
+    margin: 0 0.66% 20px;
+  }
+}
+@media (max-width: 1100px) {
+  .device_list {
+    flex-basis: 48%;
+    margin: 0 1% 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .device_list {
+    flex-basis: 100%;
+    margin: 0 0 20px;
+  }
+}
+.device_list a {
+  display: block;
+  overflow: hidden;
+  color: #000;
+  transition: 0.2s;
+  height: 100%;
+}
+.device_list a:hover, .device_list a:focus {
+  color: #000;
+}
+.device_list h3 {
+  margin: 0 0 20px;
+  font-size: 1.5em;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #fff;
+  color: #333;
+}
+.device_list .content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.device_list .content .images {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0 20px 0 0;
+  position: relative;
+  border-radius: 50%;
+}
+.device_list .content .images img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 65%;
+  max-height: 65%;
+  margin: auto;
+  opacity: 0.9;
+}
+.device_list .content ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.device_list .content ul li {
+  list-style: none;
+  margin: 0 0 5px;
+  font-size: 1.063em;
+  position: relative;
+  padding: 0 0 0 10px;
+}
+.device_list .content ul li:before {
+  content: "";
+  border: 5px solid #333;
+  border-color: transparent transparent transparent #333;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+.device_list .content .quantity {
+  font-size: 1.125rem;
+}
+.device_list .content .quantity span {
+  margin-left: 10px;
+  letter-spacing: 0.4em;
+}
+.device_list .content .quantity span em {
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #a42829;
+  font-weight: bolder;
+}
+.device_list button {
+  width: 100%;
+  border: none;
+}
+@media (max-width: 380px) {
+  .device_list .content .images {
+    width: 60px;
+    height: 60px;
+  }
+  .device_list .content .images img {
+    max-width: 70%;
+    max-height: 70%;
+  }
+}
+
+.devicefiltering_block {
   flex: 1 1 auto;
   flex-basis: 100%;
   margin: 0 0 1.5em 0;
   display: flex;
   font-size: 1.125em;
 }
-.devicereservation_block .devicefiltering_block .filter_group {
+.devicefiltering_block .filter_group {
   flex: 1 1 auto;
   border: 1px solid #ddd;
   padding: 10px;
@@ -12464,14 +12615,14 @@ body.fix {
   box-sizing: border-box;
   background-color: #eee;
 }
-.devicereservation_block .devicefiltering_block .filter_group .title {
+.devicefiltering_block .filter_group .title {
   flex: 0 0 auto;
   flex-basis: 60px;
   font-weight: bolder;
   margin-left: 0.5em;
   margin-top: 0.2em;
 }
-.devicereservation_block .devicefiltering_block .filter_group .filtercontent {
+.devicefiltering_block .filter_group .filtercontent {
   flex: 1 1 auto;
   display: flex;
   flex-wrap: wrap;
@@ -12479,33 +12630,33 @@ body.fix {
   height: auto;
   transition: 0.5s;
 }
-.devicereservation_block .devicefiltering_block .filter_group .filtercontent.contentclose {
+.devicefiltering_block .filter_group .filtercontent.contentclose {
   height: 31px;
   overflow: hidden;
 }
-.devicereservation_block .devicefiltering_block .filter_group .filtercontent label {
+.devicefiltering_block .filter_group .filtercontent label {
   margin: 0 0.5em;
 }
-.devicereservation_block .devicefiltering_block .filter_group .filterbtn {
+.devicefiltering_block .filter_group .filterbtn {
   flex: 0 0 auto;
   flex-basis: 60px;
   display: none;
 }
-.devicereservation_block .devicefiltering_block .filter_group .filterbtn.hasbtn {
+.devicefiltering_block .filter_group .filterbtn.hasbtn {
   display: block;
 }
-.devicereservation_block .devicefiltering_block .filter_group .filterbtn a {
+.devicefiltering_block .filter_group .filterbtn a {
   display: block;
   text-align: center;
   font-size: 0;
   position: relative;
   border-radius: 5px;
 }
-.devicereservation_block .devicefiltering_block .filter_group .filterbtn a:hover, .devicereservation_block .devicefiltering_block .filter_group .filterbtn a:focus {
+.devicefiltering_block .filter_group .filterbtn a:hover, .devicefiltering_block .filter_group .filterbtn a:focus {
   background-color: #ccc;
   box-shadow: none !important;
 }
-.devicereservation_block .devicefiltering_block .filter_group .filterbtn a:before {
+.devicefiltering_block .filter_group .filterbtn a:before {
   content: "";
   width: 10px;
   height: 10px;
@@ -12518,11 +12669,11 @@ body.fix {
   transform: rotate(45deg);
   transition: 0.2s;
 }
-.devicereservation_block .devicefiltering_block .filter_group .filterbtn a.open:before {
+.devicefiltering_block .filter_group .filterbtn a.open:before {
   top: 10px;
   transform: rotate(-135deg);
 }
-.devicereservation_block .devicefiltering_block .filtersearch {
+.devicefiltering_block .filtersearch {
   flex: 0 0 auto;
   flex-basis: 200px;
   margin-left: 10px;
@@ -12533,15 +12684,15 @@ body.fix {
   display: flex;
   transition: 0.5s;
 }
-.devicereservation_block .devicefiltering_block .filtersearch.clicksearch {
+.devicefiltering_block .filtersearch.clicksearch {
   flex-basis: 390px;
 }
-.devicereservation_block .devicefiltering_block .filtersearch input[type=text] {
+.devicefiltering_block .filtersearch input[type=text] {
   border-radius: 5px 0 0 5px;
   margin-bottom: 0;
   height: 53px;
 }
-.devicereservation_block .devicefiltering_block .filtersearch button.searchbtn {
+.devicefiltering_block .filtersearch button.searchbtn {
   background-color: #005d98;
   font-size: 0;
   border-radius: 0 5px 5px 0;
@@ -12553,128 +12704,275 @@ body.fix {
   height: 53px;
   border: none;
 }
-.devicereservation_block .device_list {
-  flex: 0 0 auto;
-  flex-basis: 24%;
-  position: relative;
-  margin: 0 0.5% 20px;
-  background-color: #ffd058;
-  border-radius: 5px;
-  transition: 0.2s;
-  padding: 20px;
-  color: #000;
-  box-sizing: border-box;
-}
-.devicereservation_block .device_list:hover, .devicereservation_block .device_list:focus {
-  background-color: #f1ad00;
-  box-shadow: 3px 2px 4px 3px #ccc;
-  color: #000;
-}
-@media (max-width: 1500px) {
-  .devicereservation_block .device_list {
-    flex-basis: 32%;
-    margin: 0 0.66% 20px;
-  }
-}
-@media (max-width: 1100px) {
-  .devicereservation_block .device_list {
-    flex-basis: 48%;
-    margin: 0 1% 20px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .devicereservation_block .device_list {
-    flex-basis: 100%;
-    margin: 0 0 20px;
-  }
-}
-.devicereservation_block .device_list a {
-  display: block;
-  overflow: hidden;
-  color: #000;
-  transition: 0.2s;
-  height: 100%;
-}
-.devicereservation_block .device_list a:hover, .devicereservation_block .device_list a:focus {
-  color: #000;
-}
-.devicereservation_block .device_list h3 {
-  margin: 0 0 20px;
-  font-size: 1.5em;
-  padding: 0 0 10px;
-  border-bottom: 1px solid #fff;
-  color: #333;
-}
-.devicereservation_block .device_list .content {
+
+.select_discussionroom {
+  flex: 1 1 auto;
+  flex-basis: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 1em;
+  margin: 10px 0;
+  font-size: 1.125em;
 }
-.devicereservation_block .device_list .content .images {
-  width: 100px;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.8);
-  margin: 0 20px 0 0;
+.select_discussionroom .discussionroom_title {
+  flex: 0 0 auto;
+  font-weight: bolder;
+  background-color: #ddd;
+  color: #333;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+}
+.select_discussionroom .discussionroom_content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.7em;
+  height: auto;
+  transition: 0.5s;
+}
+.select_discussionroom .discussionroom_content label {
+  margin: 0 0.5em;
+}
+
+.time_overview_block {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.time_overview_block .todaydate {
+  font-size: 1.5em;
+  color: #dc0122;
+  font-weight: bolder;
+  margin-right: 0.5em;
+}
+.time_overview_block .calendar_options {
+  margin: 0 0.5em;
+}
+.time_overview_block .calendar_options a {
+  padding: 0;
+  display: block;
+}
+.time_overview_block .calendar_options a.btn {
+  padding: 0.4em 0.8em !important;
+  min-width: 4em !important;
+  border-radius: 8px;
+}
+.time_overview_block .calendar_options img {
+  width: 20px;
+  height: 20px;
+}
+.time_overview_block .datebutton {
+  display: flex;
+  align-items: center;
+}
+.time_overview_block .datebutton .btn {
+  min-width: 3.5em !important;
+}
+.time_overview_block .datebutton .prev {
+  border-radius: 8px 0px 0px 8px;
+  padding: 0.5em 0.4em !important;
   position: relative;
-  border-radius: 50%;
+  text-indent: -99999px;
+  background-image: url("../images/icon/icon_arrow_left.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
 }
-.devicereservation_block .device_list .content .images img {
+.time_overview_block .datebutton .today {
+  border-radius: 0;
+  padding: 0.5em 0.2em !important;
+}
+.time_overview_block .datebutton .next {
+  border-radius: 0 8px 8px 0;
+  padding: 0.5em 0.4em !important;
+  position: relative;
+  text-indent: -99999px;
+  background-image: url("../images/icon/icon_arrow_right.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+}
+
+.viewdata_block {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.viewdata_block .viewmode_group {
+  display: flex;
+}
+.viewdata_block .viewmode_group .viewmode_parallel a,
+.viewdata_block .viewmode_group .viewmode_vertical a {
+  display: block;
+  padding: 5px 10px 5px 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  color: #333;
+  background-color: #fff;
+}
+.viewdata_block .viewmode_group .viewmode_parallel a:hover, .viewdata_block .viewmode_group .viewmode_parallel a:focus, .viewdata_block .viewmode_group .viewmode_parallel a.active,
+.viewdata_block .viewmode_group .viewmode_vertical a:hover,
+.viewdata_block .viewmode_group .viewmode_vertical a:focus,
+.viewdata_block .viewmode_group .viewmode_vertical a.active {
+  border: 1px solid #005d98;
+  background-color: #005d98;
+  color: #fff;
+}
+.viewdata_block .viewmode_group .viewmode_parallel {
+  margin-right: 1em;
+}
+.viewdata_block .viewmode_group .viewmode_parallel a:before {
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: #666;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 10px;
+  box-shadow: 0 -5px 0 #666, 0 5px 0 #666;
+}
+.viewdata_block .viewmode_group .viewmode_parallel a:hover:before, .viewdata_block .viewmode_group .viewmode_parallel a:focus:before, .viewdata_block .viewmode_group .viewmode_parallel a.active:before {
+  background-color: #fff;
+  box-shadow: 0 -5px 0 #fff, 0 5px 0 #fff;
+}
+.viewdata_block .viewmode_group .viewmode_vertical a:before {
+  content: "";
+  width: 2px;
+  height: 15px;
+  background-color: #666;
+  position: absolute;
+  top: calc(50% - 7.5px);
+  left: 15px;
+  box-shadow: -5px 0px 0 #666, 5px 0 0 #666;
+}
+.viewdata_block .viewmode_group .viewmode_vertical a:hover:before, .viewdata_block .viewmode_group .viewmode_vertical a:focus:before, .viewdata_block .viewmode_group .viewmode_vertical a.active:before {
+  background-color: #fff;
+  box-shadow: -5px 0px 0 #fff, 5px 0 0 #fff;
+}
+.viewdata_block .viewcolor_group {
+  display: flex;
+}
+.viewdata_block .viewcolor_group .viewcolor_gray {
+  margin-right: 1em;
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.viewdata_block .viewcolor_group .viewcolor_gray:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #ccc;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+.viewdata_block .viewcolor_group .viewcolor_orange {
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.viewdata_block .viewcolor_group .viewcolor_orange:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #b94b00;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.discussionroom_timeblock {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  margin: 10px 0 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 30px 50px 20px;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 575px) {
+  .discussionroom_timeblock {
+    padding: 20px 20px 20px;
+  }
+}
+.discussionroom_timeblock:before {
+  content: "";
+  border: 30px solid #b94b00;
+  border-color: #b94b00 transparent transparent #b94b00;
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  max-width: 65%;
-  max-height: 65%;
-  margin: auto;
-  opacity: 0.9;
 }
-.devicereservation_block .device_list .content ul {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-.devicereservation_block .device_list .content ul li {
-  list-style: none;
-  margin: 0 0 5px;
-  font-size: 1.063em;
-  position: relative;
-  padding: 0 0 0 10px;
-}
-.devicereservation_block .device_list .content ul li:before {
-  content: "";
-  border: 5px solid #333;
-  border-color: transparent transparent transparent #333;
-  position: absolute;
-  left: 0;
-  top: 6px;
-}
-.devicereservation_block .device_list .content .quantity {
-  font-size: 1.125rem;
-}
-.devicereservation_block .device_list .content .quantity span {
-  margin-left: 10px;
-  letter-spacing: 0.4em;
-}
-.devicereservation_block .device_list .content .quantity span em {
-  font-style: normal;
-  font-size: 1.5rem;
-  color: #a42829;
+.discussionroom_timeblock .title {
+  font-size: 1.25em;
+  margin: 10px 30px 20px 0;
+  color: #b94b00;
   font-weight: bolder;
 }
-.devicereservation_block .device_list button {
-  width: 100%;
-  border: none;
+.discussionroom_timeblock .timelinegroup {
+  display: flex;
+  margin-bottom: 2em;
 }
-@media (max-width: 380px) {
-  .devicereservation_block .device_list .content .images {
-    width: 60px;
-    height: 60px;
-  }
-  .devicereservation_block .device_list .content .images img {
-    max-width: 70%;
-    max-height: 70%;
-  }
+.discussionroom_timeblock .timelinegroup .timeline_hour {
+  flex: 1 1 auto;
+  width: 3.8461538462%;
+  margin-left: -1px;
+}
+.discussionroom_timeblock .timelinegroup .timeline_hour:last-of-type a {
+  border-radius: 0 50px 50px 0;
+}
+.discussionroom_timeblock .timelinegroup .timeline_hour:last-of-type a span {
+  left: auto;
+  right: -10px;
+}
+.discussionroom_timeblock .timelinegroup .timeline_hour:first-of-type a {
+  border-radius: 50px 0 0 50px;
+}
+.discussionroom_timeblock .timelinegroup .timeline_hour.past_reserve a {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+.discussionroom_timeblock .timelinegroup .timeline_hour.past_reserve a:hover {
+  background-color: #ddd;
+}
+.discussionroom_timeblock .timelinegroup .timeline_hour.yorbooked a {
+  background-color: #b94b00;
+  cursor: not-allowed;
+}
+.discussionroom_timeblock .timelinegroup .timeline_hour.yorbooked a:hover {
+  background-color: #b94b00;
+}
+.discussionroom_timeblock .timelinegroup .timeline_hour a {
+  display: block;
+  border: 1px solid #ccc;
+  height: 28px;
+  background-color: #fff;
+  position: relative;
+  transition: 0.2s;
+}
+.discussionroom_timeblock .timelinegroup .timeline_hour a span {
+  position: absolute;
+  top: 30px;
+  left: -10px;
+  font-size: 0.938em;
+  width: 20px;
+  text-align: center;
+}
+.discussionroom_timeblock .timelinegroup .timeline_hour a:hover {
+  background-color: #107859;
+}
+.discussionroom_timeblock .timetablegroup {
+  margin: 0;
+}
+
+.keepright {
+  text-align: right !important;
 }
 
 .reservation_block {
@@ -12689,15 +12987,6 @@ body.fix {
 }
 .reservation_block h2 {
   margin-bottom: 1em !important;
-}
-.reservation_block .reservation_explain {
-  text-align: center;
-  padding: 25px;
-  background-color: #fed857;
-  border-radius: 5px;
-  margin: 20px 0 0;
-  font-size: 1.25em;
-  line-height: 1.5em;
 }
 .reservation_block .reservationform {
   margin-bottom: 40px;
@@ -12874,6 +13163,18 @@ body.fix {
   .reservation_block .sortrecommend {
     width: 75%;
   }
+}
+
+.reservation_explain {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  text-align: center;
+  padding: 25px;
+  background-color: #fed857;
+  border-radius: 5px;
+  margin: 20px 0;
+  font-size: 1.25em;
+  line-height: 1.5em;
 }
 
 .reservetime_block {
@@ -14353,10 +14654,37 @@ body.fix {
   clear: both;
   float: none;
   margin-bottom: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.equipment_Tb .currently_item {
+  flex: 0 0 auto;
+  flex-basis: auto;
+}
+.equipment_Tb .batchbtn {
+  flex: 0 0 auto;
+  flex-basis: auto;
+}
+.equipment_Tb .selectall_btn {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  margin-left: 15px;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .equipment_Tb .selectall_btn {
+    display: block;
+  }
+}
+.equipment_Tb .selectall_btn label {
+  margin: 0;
 }
 .equipment_Tb .table_list {
+  flex: 1 1 auto;
+  flex-basis: 100%;
   background-color: #eee;
-  min-height: 150px;
+  min-height: 100px;
   padding: 15px;
 }
 .equipment_Tb .table_list table {
@@ -26300,13 +26628,38 @@ em.yellowbg {
   background-color: #f0b209 !important;
 }
 
-.havewa .goCenter, .havewa .accesskey {
+.havewa .goCenter,
+.havewa .accesskey {
   display: block;
 }
-.havewa a:focus, .havewa .scrollToTop:focus, .havewa .mystudycontent .mycardlist li a:focus {
+.havewa a:focus,
+.havewa .scrollToTop:focus,
+.havewa .mystudycontent .mycardlist li a:focus {
   box-shadow: 0 0px 0px 2px #f1ad00 inset !important;
 }
-.havewa .btn:focus, .havewa .header .qrcode_mpbtn a:focus, .havewa footer .footer_accessibility a:focus, .havewa .search_block .searchsystem .form_search input[type=submit]:focus, .havewa .advanced_search .advanced_block .searchsystem ul li a:focus, .havewa .advanced_search .advanced_block .btn_grp input[type=submit]:focus, .havewa .search_blockin .searchsystem .select_left select:focus, .havewa .header .member_record .member_pic a:focus, .havewa .customization02 .search_blockin .form_search input[type=submit]:focus, .havewa .btnstyle.morebg:focus, .havewa .mainrightblock .book_detaildata .bookdata .listdata ul.no_icon li a.btnstyle:focus, .havewa .mystudycontent .service_list ul li span a:focus, .havewa .booklist_block .booklist .bookmidblock ul li .addtagbtn:focus, .havewa .booklist_block .booklist .bookmidblock ul li .closebtn:focus, .havewa .tracking_subscription_block .searchsystem ul li a:focus, .havewa .mystudy_sdg_reading .SDG_banner .SDG_img a:focus, .havewa .reservation_block .btn_grp a.btnstyle:focus, .havewa .linecontent .book-gallery .book .cover a:focus, .havewa .linecontent .book-gallery .book .cover a:focus, .havewa .linecontent .book-gallery .book .cover a:focus img, .havewa .bookselection_block .bookselection_group .leftblock .bookselection_list ul li a:focus, .havewa .SDG_block .SDG_banner .SDG_img a:focus {
+.havewa .btn:focus,
+.havewa .header .qrcode_mpbtn a:focus,
+.havewa footer .footer_accessibility a:focus,
+.havewa .search_block .searchsystem .form_search input[type=submit]:focus,
+.havewa .advanced_search .advanced_block .searchsystem ul li a:focus,
+.havewa .advanced_search .advanced_block .btn_grp input[type=submit]:focus,
+.havewa .search_blockin .searchsystem .select_left select:focus,
+.havewa .header .member_record .member_pic a:focus,
+.havewa .customization02 .search_blockin .form_search input[type=submit]:focus,
+.havewa .btnstyle.morebg:focus,
+.havewa .mainrightblock .book_detaildata .bookdata .listdata ul.no_icon li a.btnstyle:focus,
+.havewa .mystudycontent .service_list ul li span a:focus,
+.havewa .booklist_block .booklist .bookmidblock ul li .addtagbtn:focus,
+.havewa .booklist_block .booklist .bookmidblock ul li .closebtn:focus,
+.havewa .tracking_subscription_block .searchsystem ul li a:focus,
+.havewa .mystudy_sdg_reading .SDG_banner .SDG_img a:focus,
+.havewa .reservation_block .btn_grp a.btnstyle:focus,
+.havewa .linecontent .book-gallery .book .cover a:focus,
+.havewa .linecontent .book-gallery .book .cover a:focus,
+.havewa .linecontent .book-gallery .book .cover a:focus img,
+.havewa .bookselection_block .bookselection_group .leftblock .bookselection_list ul li a:focus,
+.havewa .SDG_block .SDG_banner .SDG_img a:focus,
+.havewa .RSS_button a:focus {
   box-shadow: 0 0px 0px 2px #f1ad00 !important;
 }
 .havewa .featured_block .themebook2 ul li a:focus {
@@ -26328,7 +26681,8 @@ em.yellowbg {
 .havewa .customization02 .search_blockin .form_search input[type=submit]:focus {
   background-color: #bf8e07;
 }
-.havewa .theme_recommend .themerecommend_box a:focus, .havewa .theme_recommend2 .themerecommend_box a:focus {
+.havewa .theme_recommend .themerecommend_box a:focus,
+.havewa .theme_recommend2 .themerecommend_box a:focus {
   box-shadow: 3px 2px 4px 3px #ccc !important;
 }
 

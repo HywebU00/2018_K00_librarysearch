@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>凌網科技圖書館查詢系統</title>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+  <!-- 出版年度css -->
+  <link rel="stylesheet" href="vendor/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
+  <link rel="stylesheet" href="css/hyui.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- wrapper 最大寬度 -->
+  <div class="wrapper  nowa havewa">
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+    <!-- sidebar  start-->
+    <aside class="sidebar">
+      <div class="m_area">
+        <div class="menu">
+          <ul>
+            <li><a href="#">主頁</a></li>
+            <li><a href="#">新進圖書</a></li>
+            <li><a href="#">展示書</a></li>
+            <li><a href="#">網路辦證</a></li>
+            <li><a href="#">線上協尋書</a></li>
+            <li><a href="#">設備預約</a></li>
+            <li><a href="#">圖書推薦</a></li>
+            <li><a href="#">其他功能</a></li>
+          </ul>
+        </div>
+        <nav class="navigation">
+          <!-- 語言設定 start-->
+          <div class="language">
+            <a href="javascript:;">Language</a>
+            <ul>
+              <li><a href="javascript:;">中文版</a></li>
+              <li><a href="javascript:;">英文版</a></li>
+            </ul>
+          </div>
+          <!-- 語言設定 end-->
+        </nav>
+        <button type="button" class="sidebarClose">關閉</button>
+      </div>
+      <div class="menu_overlay"></div>
+    </aside>
+    <!-- sidebar  end-->
+    <!-- header Start -->
+    <header class="header">
+      <div class="container">
+        <button type="button" class="sidebarCtrl">側欄選單</button>
+        <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+        <h1><a href="index.htm"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+        <!-- navigation Start -->
+        <nav class="navigation">
+          <!-- 一組ul預設靠右 -->
+          <!-- 兩組ul已寫JQ靠左靠右 -->
+          <ul>
+            <li><a href="javascript:;">Help</a></li>
+            <li><a href="javascript:;">圖書館首頁</a></li>
+          </ul>
+          <!-- 語言設定 start-->
+          <div class="language">
+            <a href="javascript:;">Language</a>
+            <ul>
+              <li><a href="javascript:;">中文版</a></li>
+              <li><a href="javascript:;">英文版</a></li>
+            </ul>
+          </div>
+          <!-- 語言設定 end-->
+          <!-- font_size -->
+          <div class="font_size">
+            <span>字型大小：</span>
+            <!-- 英文用<span>font-size：</span> -->
+            <ul>
+              <li><a href="#" class="small">小</a></li>
+              <li><a href="#" class="medium">中</a></li>
+              <li><a href="#" class="large">大</a></li>
+            </ul>
+          </div>
+          <!-- login start -->
+          <div class="login loginbtn">
+            <button type="button" class="btn btn-sm">登入/線上辦證</button>
+          </div>
+          <!-- login end-->
+        </nav>
+        <!-- 手機才出現的按鈕 start -->
+        <div class="login  loginbtn login_mobile_btn">
+          <button type="button" class="btn btn-sm">登入</button>
+        </div>
+        <!-- 手機才出現的按鈕 end -->
+        <!-- noscript -->
+        <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a
+            href="javascript:;">網站導覽</a>
+        </noscript>
+        <!-- 手機版才出現的menu start-->
+        <div class="menu">
+          <ul>
+            <li><a href="#">主頁</a></li>
+            <li><a href="#">新進圖書</a></li>
+            <li><a href="#">展示書</a></li>
+            <li><a href="#">網路辦證</a></li>
+            <li><a href="#">線上協尋書</a></li>
+            <li><a href="#">設備預約</a></li>
+            <li><a href="#">圖書推薦</a></li>
+            <li><a href="#">其他功能</a></li>
+          </ul>
+        </div>
+        <!-- 手機版才出現的menu end-->
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <div id="center" class="main">
+      <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+      <!-- 一般標題start -->
+      <section class="section col-12 general_block">
+        <div class="container">
+          <div class="col">
+            <div class="general_title"> 設備預約 </div>
+            <!-- <div class="RSS_button">
+                            <a href="#" class="btn">RSS</a>
+                        </div> -->
+          </div>
+        </div>
+      </section>
+      <!-- 一般標題end -->
+      <!-- 分欄start -->
+      <div class="maincolumn">
+        <div class="container">
+          <!-- 右欄 start  -->
+          <div class="mainrightblock2">
+            <!-- 右欄左線start -->
+            <div class="rightlineblock">
+              <!-- 路徑start -->
+              <div class="breadcrumb">
+                <span>現在位置：</span>
+                <ul>
+                  <li><a href="javascript:;">首頁</a></li>
+                  <li>設備預約</li>
+                </ul>
+              </div>
+              <!-- 路徑end-->
+              <!-- 設備預約區塊 start-->
+              <div class="devicereservation_block">
+                <!-- 預約說明 start-->
+                <div class="reservation_explain">請直接點選您想預約的時間區塊後，按「確認預約」按鈕，待時間區塊顯示橘色時，代表預約成功。</div>
+                <!-- 預約說明 end-->
+                <!-- 選擇討論室 start -->
+                <div class="select_discussionroom">
+                  <div class="discussionroom_title">總館討論室1F</div>
+                  <div class="discussionroom_content">
+                    <label>
+                      <input name="checkboxSample" type="checkbox" value="">全部</label>
+                    <label>
+                      <input name="checkboxSample" type="checkbox" value="">總館討論室101</label>
+                    <label>
+                      <input name="checkboxSample" type="checkbox" value="">分館討論室102</label>
+                    <label>
+                      <input name="checkboxSample" type="checkbox" value="">總館討論室103</label>
+                    <label>
+                      <input name="checkboxSample" type="checkbox" value="">分館討論室104</label>
+                  </div>
+                </div>
+                <!-- 選擇討論室 end -->
+                <!-- 時間概況 start -->
+                <div class="time_overview_block">
+                  <div class="todaydate">2023/11/16</div>
+                  <div class="calendar_options"><a href="#" class="btn btn-white"><img src="images/form_calendar.png" alt=""></a></div>
+                  <div class="datebutton"><button type="button" class="btn btn-white prev">前一天</button type="button"><button type="button" class="btn btn-white today">今天</button><button type="button"
+                      type="button" class="btn btn-white next">後一天</button></div>
+                </div>
+                <!-- 時間概況 end -->
+                <!-- 檢視資料 start -->
+                <div class="viewdata_block">
+                  <!-- 檢視方式 start -->
+                  <div class="viewmode_group">
+                    <div class="viewmode_parallel"><a href="#" class="active">平行檢視</a></div>
+                    <div class="viewmode_vertical"><a href="#">垂直檢視</a></div>
+                  </div>
+                  <!-- 檢視方式 end -->
+                  <!-- 檢視顏色 start  -->
+                  <div class="viewcolor_group">
+                    <div class="viewcolor_gray">灰色代表已被預約或無法預約</div>
+                    <div class="viewcolor_orange">橘色代表您已預約</div>
+                  </div>
+                  <!-- 檢視顏色 end  -->
+                </div>
+                <!-- 檢視資料 end -->
+                <!-- 預約紀錄按鈕 start -->
+                <div class="appointment_record"><a href="#">預約記錄(1)</a></div>
+                <!-- 預約紀錄按鈕 end -->
+                <!-- 討論室時間預約1 平行 start -->
+                <div class="discussionroom_timeblock">
+                  <div class="title">總館討論室101</div>
+                  <div class="timelinegroup">
+                    <!-- 8 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>8</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 9 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>9</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 10 -->
+                    <div class="timeline_hour yorbooked">
+                      <a href="#"><span>10</span></a>
+                    </div>
+                    <div class="timeline_hour yorbooked">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 11 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>11</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 12 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>12</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 13 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>13</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 14 -->
+                    <div class="timeline_hour past_reserve">
+                      <a href="#"><span>14</span></a>
+                    </div>
+                    <div class="timeline_hour past_reserve">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 15 -->
+                    <div class="timeline_hour past_reserve">
+                      <a href="#"><span>15</span></a>
+                    </div>
+                    <div class="timeline_hour past_reserve">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 16 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>16</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 17 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>17</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 18 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>18</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 19 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>19</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 20 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>20</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"><span>21</span></a>
+                    </div>
+                    <!--  -->
+                  </div>
+                  <div class="btn_grp">
+                    <input name="Search" type="reset" value="週期預約" />
+                    <input name="Search" type="submit" value="確認預約" class="discussionroom_btn" />
+                  </div>
+                </div>
+                <!-- 討論室時間預約1 平行 end -->
+                <!-- 預約資料 燈箱start -->
+                <div class="lightboxstyle" id="discussionroom_style">
+                  <div class="overlay"></div>
+                  <div class="lightboxstyle_block">
+                    <div class="close"></div>
+                    <h2>確認預約資料</h2>
+                    <form action="">
+                      <div class="lightbox_data">
+                        <div class="form_grid">
+                          <div class="form_grp">
+                            <label for=" " class="form_title ">預約設備/空間：</label>
+                            <div class="form_content"> 總館討論室101</div>
+                          </div>
+                          <div class="form_grp">
+                            <label for=" " class="form_title ">尚可預約時數：</label>
+                            <div class="form_content"> <em class="word_red">2</em>小時 </div>
+                          </div>
+                          <div class="form_grp">
+                            <label for=" " class="form_title ">預約日期：</label>
+                            <div class="form_content">
+                              <div class="select_date">
+                                <input name="" type="text" placeholder="預約日期"><span class="image"><a href="#"><img src="images/form_calendar.png" alt=""></a></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form_grp">
+                            <label for="" class="form_title">預約時間：</label>
+                            <div class="form_content">
+                              <div class="select_date">
+                                <input name="" type="text" placeholder="起始時間"><span class="image"><a href="#"><img src="images/form_clock.png" alt=""></a></span>
+                              </div>
+                              <span class="to">至</span>
+                              <div class="select_date">
+                                <input name="" type="text" placeholder="結束時間"><span class="image"><a href="#"><img src="images/form_clock.png" alt=""></a></span>
+                              </div>
+                              <div class="select_date">
+                                <input name="" type="text" placeholder="起始時間"><span class="image"><a href="#"><img src="images/form_clock.png" alt=""></a></span>
+                              </div>
+                              <span class="to">至</span>
+                              <div class="select_date">
+                                <input name="" type="text" placeholder="結束時間"><span class="image"><a href="#"><img src="images/form_clock.png" alt=""></a></span>
+                              </div>
+                              <div class="usage_time">共<em class="word_red">２</em>小時</div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--  -->
+                      </div>
+                      <div class="btn_grp">
+                        <input name="" type="reset" value="關閉視窗">
+                        <input name="" type="submit" value="預約"><a href="#" class="addcalendar_btn">a</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- 預約資料 燈箱end -->
+                <!-- 加入日曆 燈箱start -->
+                <div class="lightboxstyle" id="addcalendar_style">
+                  <div class="overlay"></div>
+                  <div class="lightboxstyle_block">
+                    <div class="close"></div>
+                    <h2>加入日曆</h2>
+                    <form action="">
+                      <div class="lightbox_data">
+                        <div class="form_grid">
+                          <p>預約完成是否加入Google日曆？</p>
+                          <div class="form_grp">
+                            <label for=" " class="form_title hidden"></label>
+                            <div class="form_content">
+                              <div class="googlecalendar"><img src="images/google_calendar.png" alt="google日曆圖"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--  -->
+                      </div>
+                      <div class="btn_grp">
+                        <input name="" type="reset" value="不用了，謝謝" class="closebtn">
+                        <input name="" type="submit" value="加入">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- 加入日曆 燈箱end -->
+                <!-- 討論室時間預約2 平行 start -->
+                <div class="discussionroom_timeblock">
+                  <div class="title">總館討論室102</div>
+                  <div class="timelinegroup">
+                    <!-- 8 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>8</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 9 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>9</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 10 -->
+                    <div class="timeline_hour  past_reserve">
+                      <a href="#"><span>10</span></a>
+                    </div>
+                    <div class="timeline_hour past_reserve">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 11 -->
+                    <div class="timeline_hour past_reserve">
+                      <a href="#"><span>11</span></a>
+                    </div>
+                    <div class="timeline_hour past_reserve">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 12 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>12</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 13 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>13</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 14 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>14</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 15 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>15</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 16 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>16</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 17 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>17</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 18 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>18</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 19 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>19</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"></a>
+                    </div>
+                    <!-- 20 -->
+                    <div class="timeline_hour">
+                      <a href="#"><span>20</span></a>
+                    </div>
+                    <div class="timeline_hour">
+                      <a href="#"><span>21</span></a>
+                    </div>
+                    <!--  -->
+                  </div>
+                  <div class="btn_grp">
+                    <input name="Search" type="reset" value="週期預約" />
+                    <input name="Search" type="submit" value="確認預約" />
+                  </div>
+                </div>
+                <!-- 討論室時間預約2 平行 end -->
+                <!-- 討論室時間預約2 垂直 start -->
+                <div class="discussionroom_timeblock">
+                  <div class="btn_grp keepright">
+                    <input name="Search" type="reset" value="週期預約" />
+                    <input name="Search" type="submit" value="確認預約" class="discussionroom_btn" />
+                  </div>
+                  <div class="timetablegroup">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>&nbsp;</th>
+                          <th>總館討論室101</th>
+                          <th>總館討論室102</th>
+                          <th>總館討論室103</th>
+                          <th>總館討論室104</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>08:00~08:30</td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                          <td>08:30~09:00</td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+                <!-- 討論室時間預約2 垂直 end -->
+
+              </div>
+              <!-- 設備預約區塊 end-->
+              <!-- 右欄左線end -->
+            </div>
+            <!-- 右欄 end  -->
+          </div>
+        </div>
+        <!-- 分欄end -->
+      </div>
+      <!-- fatfooter Start -->
+      <section class="fatfooter">
+        <div class="container">
+          <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+          <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+          <nav>
+            <ul>
+              <li><a href="javascript:;">關於我們</a>
+                <ul>
+                  <li><a href="javascript:;">個人資料蒐集告知聲明</a></li>
+                  <li><a href="javascript:;">網路隱私權政策</a></li>
+                  <li><a href="javascript:;">交通資訊導引</a></li>
+                </ul>
+              </li>
+              <li><a href="javascript:;">常用連結</a>
+                <ul>
+                  <li><a href="javascript:;">圖書館首頁</a></li>
+                  <li><a href="javascript:;">機構典藏</a></li>
+                  <li><a href="javascript:;">facebook粉絲團</a></li>
+                </ul>
+              </li>
+              <li><a href="javascript:;">其他連結</a>
+                <ul>
+                  <li><a href="javascript:;">HELP</a></li>
+                  <li><a href="javascript:;">借閱政策</a></li>
+                  <li><a href="javascript:;">圖書館首頁</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <!-- fatfooter end -->
+      <!-- footer start-->
+      <footer>
+        <div class="container">
+          <div class="footer_info">
+            <ul>
+              <li>屏東縣政府文化處</li>
+              <li>90054 屏東市大連路69號</li>
+              <li>08-7360330</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- footer end-->
+      <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
+      <!-- 燈箱區塊 start-->
+      <!-- 登入燈箱start -->
+      <div class="login_lightbox">
+        <div class="overlay"></div>
+        <div class="loginblock">
+          <div class="close"></div>
+          <h2>讀者登入</h2>
+          <p>登入說明文字：本校校職員生的帳號密碼與資訊服務相同，帳號為學號/員工編號，密碼若忘記，請洽圖書館暨資訊處系統開發組， (電話：07-78111151轉2830) </p>
+          <form>
+            <div class="form_grp form_inline">
+              <label for="username">讀者帳號:</label>
+              <input name="username" type="text" placeholder="請輸入文字">
+            </div>
+            <div class="form_grp form_inline">
+              <label for="password">讀者密碼:</label>
+              <input name="password" type="password" placeholder="請輸入密碼">
+            </div>
+            <div class="btn_grp">
+              <input name="" type="submit" value="登入" />
+            </div>
+            <div class="unable_login">
+              <h3><span>無法登入?</span></h3>
+              <input name="" type="button" value="忘記密碼" />
+              <input name="" type="button" value="網路辦證" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- 登入燈箱end-->
+      <!-- 檢視閱讀權限燈箱start -->
+      <div class="lightboxstyle" id="read_permissionstyle">
+        <div class="overlay"></div>
+        <div class="lightboxstyle_block">
+          <div class="close"></div>
+          <h2>檢視閱讀權限</h2>
+          <form>
+            <div class="lightbox_data">
+              <p>借閱件數：(本/件/間/張)</p>
+              <div class="listdata">
+                <ul>
+                  <li>教授指定參考資料：<em>2</em> 件</li>
+                  <li>教授指定參考資料：<em>2</em> 件</li>
+                  <li>教授指定參考資料：<em>2</em> 件</li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- 檢視閱讀權限燈箱end -->
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
+    <script type="text/javascript" src="vendor/slick/slick.js">
+    </script>
+    <!-- 出版年度js -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- 出版年度js -->
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

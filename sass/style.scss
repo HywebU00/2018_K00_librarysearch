@@ -379,6 +379,21 @@
       }
     }
   }
+  .viewdata_block {
+    .viewmode_group {
+      .viewmode_parallel,
+      .viewmode_vertical {
+        a {
+          &:hover,
+          &:focus,
+          &.active {
+            border: 1px solid nth($primaryColor, $style);
+            background-color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -638,6 +653,9 @@
   }
   .featured_block {
     background-color: nth($lightColor, $style);
+    h2 {
+      color: #fff;
+    }
   }
   //_common.scss
   .privacy_consent {
@@ -948,6 +966,21 @@
     .filtersearch {
       button.searchbtn {
         background-color: nth($primaryColor, $style);
+      }
+    }
+  }
+  .viewdata_block {
+    .viewmode_group {
+      .viewmode_parallel,
+      .viewmode_vertical {
+        a {
+          &:hover,
+          &:focus,
+          &.active {
+            border: 1px solid nth($primaryColor, $style);
+            background-color: nth($primaryColor, $style);
+          }
+        }
       }
     }
   }
@@ -1682,6 +1715,21 @@
     .filtersearch {
       button.searchbtn {
         background-color: nth($primaryColor, $style);
+      }
+    }
+  }
+  .viewdata_block {
+    .viewmode_group {
+      .viewmode_parallel,
+      .viewmode_vertical {
+        a {
+          &:hover,
+          &:focus,
+          &.active {
+            border: 1px solid nth($primaryColor, $style);
+            background-color: nth($primaryColor, $style);
+          }
+        }
       }
     }
   }
@@ -2498,6 +2546,21 @@
       }
     }
   }
+  .viewdata_block {
+    .viewmode_group {
+      .viewmode_parallel,
+      .viewmode_vertical {
+        a {
+          &:hover,
+          &:focus,
+          &.active {
+            border: 1px solid nth($primaryColor, $style);
+            background-color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -3049,6 +3112,21 @@
       }
     }
   }
+  .viewdata_block {
+    .viewmode_group {
+      .viewmode_parallel,
+      .viewmode_vertical {
+        a {
+          &:hover,
+          &:focus,
+          &.active {
+            border: 1px solid nth($primaryColor, $style);
+            background-color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -3279,6 +3357,9 @@
   }
   .featured_block {
     background-color: nth($lightColor, $style);
+    h2 {
+      color: #850f0f;
+    }
   }
   //_common.scss
   .privacy_consent {
@@ -3592,6 +3673,21 @@
     .filtersearch {
       button.searchbtn {
         background-color: nth($primaryColor, $style);
+      }
+    }
+  }
+  .viewdata_block {
+    .viewmode_group {
+      .viewmode_parallel,
+      .viewmode_vertical {
+        a {
+          &:hover,
+          &:focus,
+          &.active {
+            border: 1px solid nth($primaryColor, $style);
+            background-color: nth($primaryColor, $style);
+          }
+        }
       }
     }
   }
@@ -4163,6 +4259,21 @@
       }
     }
   }
+  .viewdata_block {
+    .viewmode_group {
+      .viewmode_parallel,
+      .viewmode_vertical {
+        a {
+          &:hover,
+          &:focus,
+          &.active {
+            border: 1px solid nth($primaryColor, $style);
+            background-color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -4714,6 +4825,21 @@
       }
     }
   }
+  .viewdata_block {
+    .viewmode_group {
+      .viewmode_parallel,
+      .viewmode_vertical {
+        a {
+          &:hover,
+          &:focus,
+          &.active {
+            border: 1px solid nth($primaryColor, $style);
+            background-color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -5248,6 +5374,21 @@
     .filtersearch {
       button.searchbtn {
         background-color: nth($primaryColor, $style);
+      }
+    }
+  }
+  .viewdata_block {
+    .viewmode_group {
+      .viewmode_parallel,
+      .viewmode_vertical {
+        a {
+          &:hover,
+          &:focus,
+          &.active {
+            border: 1px solid nth($primaryColor, $style);
+            background-color: nth($primaryColor, $style);
+          }
+        }
       }
     }
   }
