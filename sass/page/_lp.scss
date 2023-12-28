@@ -2333,7 +2333,7 @@
   }
 }
 // 討論室時間預約
-.discussionroom_timeblock {
+.discussionroom_timeblock_day {
   flex: 1 1 auto;
   flex-basis: 100%;
   margin: 10px 0 20px;
@@ -2398,6 +2398,7 @@
       &.yorbooked {
         a {
           background-color: $color-orange;
+
           cursor: not-allowed;
           &:hover {
             background-color: $color-orange;
@@ -2428,10 +2429,95 @@
   // 時間表格
   .timetablegroup {
     margin: 0;
+    margin-bottom: 2em;
+    width: 100%;
+    // height: 800px; // 固定高度
+    overflow-x: scroll;
+
     table {
-      th {
+      table-layout: fixed;
+      border: 1px solid #ddd;
+      position: relative;
+
+      thead tr th {
+        position: sticky;
+        top: 0; /* 列首永遠固定於上 */
+        // z-index: 1;
+      }
+      td:first-child,
+      th:first-child {
+        position: sticky;
+        left: 0; /* 首行永遠固定於左 */
+        z-index: 1;
+        background-color: rgb(255 182 193 / 80%);
+        // background: #aea400;
+      }
+
+      th[scope='col'] {
+        border: 1px solid #ddd;
+        background-color: #ccc;
+        color: #333;
+        padding: 0.8em 0.5em;
+        font-size: 1.125em;
+        width: 150px;
+      }
+      th[scope='row'] {
+        background-color: #eee;
+        color: #333;
+        padding: 0.8em 0.5em;
+        font-size: 1em;
+        width: 150px;
       }
       td {
+        border: 1px solid #ccc;
+        padding: 0;
+        position: relative;
+        width: 150px;
+        a {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: #fff;
+          transition: 0.2s;
+          // 灰色不能選
+          &.past_reserve {
+            background-color: #ddd;
+            cursor: not-allowed;
+            &:hover {
+              background-color: #ddd;
+            }
+          }
+          // 已預約
+          &.yorbooked {
+            background-color: $color-orange;
+
+            cursor: not-allowed;
+            &:hover {
+              background-color: $color-orange;
+            }
+          }
+          &:hover {
+            background-color: $color-green;
+          }
+        }
+      }
+      tr {
+        // 線條調整
+        th,
+        td {
+          border-top: none;
+          &:first-child {
+            border-left: none;
+          }
+          &:last-child {
+            border-right: none;
+          }
+        }
       }
     }
   }

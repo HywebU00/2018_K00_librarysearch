@@ -1,291 +1,295 @@
-    //http://lab.25sprout.com/responsive_table/
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        @include screen('xs_mobile') {
-            width: 100%;
-            position: relative;
-        }
-        th,
-        td {
-            padding: .5em;
-            text-align: left;
-        }
-        td {
-            border: #ddd 1px solid;
-            word-break: break-all;
-            a {
-                word-break: break-all;
-                color: nth($linkColor, $style);
-                text-decoration: underline;
-                display: block;
-                &:hover {
-                    color: $aHover;
-                }
-            }
-            &.aCenter {
-                text-align: center;
-            }
-            &.aLeft {
-                text-align: left;
-            }
-            &.aRight {
-                text-align: right;
-            }
-        }
-        th {
-            background-color: #F3F3F3;
-            color: #333;
-            border: #DDD 1px solid;
-            text-align: center;
-            white-space: nowrap;
-        }
-        &.table_hover {
-            tr:hover {
-                background: #F3F3F3;
-            }
-        }
-        &.table_sprite {
-            tr:nth-child(even) {
-                background: #F5F5F5;
-            }
-        }
-        .information_icon {
-            width: 25px;
-            height: 25px;
-            background-color: #666;
-            color: #fff !important;
+//http://lab.25sprout.com/responsive_table/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  @include screen('xs_mobile') {
+    width: 100%;
+    position: relative;
+  }
+  th,
+  td {
+    padding: 0.5em;
+    text-align: left;
+  }
+  td {
+    border: #ddd 1px solid;
+    word-break: break-all;
+    a {
+      word-break: break-all;
+      color: nth($linkColor, $style);
+      text-decoration: underline;
+      display: block;
+      &:hover {
+        color: $aHover;
+      }
+    }
+    &.aCenter {
+      text-align: center;
+    }
+    &.aLeft {
+      text-align: left;
+    }
+    &.aRight {
+      text-align: right;
+    }
+    &.time {
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+  th {
+    background-color: #f3f3f3;
+    color: #333;
+    border: #ddd 1px solid;
+    text-align: center;
+    white-space: nowrap;
+  }
+  &.table_hover {
+    tr:hover {
+      background: #f3f3f3;
+    }
+  }
+  &.table_sprite {
+    tr:nth-child(even) {
+      background: #f5f5f5;
+    }
+  }
+  .information_icon {
+    width: 25px;
+    height: 25px;
+    background-color: #666;
+    color: #fff !important;
+    border-radius: 50%;
+    display: block;
+    line-height: 25px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+    }
+  }
+  input[type='checkbox'] {
+    margin: 0 !important;
+  }
+  img {
+    vertical-align: middle;
+  }
+  .the_term {
+    display: inline-block;
+    padding: 0 5px;
+  }
+  .surplus {
+    font-size: 0.875em;
+    display: inline-block;
+  }
+  .collection {
+    width: 40px;
+    margin: 0 auto;
+    a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #fff;
+      line-height: 40px;
+      text-align: center;
+      &:hover {
+        background-color: #e5e5e5;
+      }
+      img {
+        width: 22px;
+        height: 22px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.table_list {
+  width: 100%;
+  display: block;
+  clear: both;
+  zoom: 1;
+  overflow: hidden;
+  overflow-x: auto;
+  @include screen('mobile') {
+    background-color: transparent !important; //Force table to not be like tables anymore
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    tr {
+      border: 1px solid #ccc;
+      margin-bottom: 10px; // background-color: #333;
+    }
+    td {
+      // Behave  like a "row"
+      border: none !important;
+      border-bottom: 1px solid #eee !important;
+      position: relative;
+      // padding-left: 35% !important;
+      white-space: normal;
+      text-align: left;
+      &:before {
+        content: attr(data-title);
+        // position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        width: 30%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #000;
+      }
+      &.aCenter {
+        text-align: left;
+      }
+      a {
+        display: inline-block;
+      }
+      br {
+        display: none;
+      }
+    }
+  }
+}
+.table_list2 {
+  @include screen('mobile') {
+    background-color: transparent !important; //Force table to not be like tables anymore
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    tr {
+      border: 1px solid #d3d3d3;
+      border-radius: 5px;
+      margin-bottom: 10px; // background-color: #333;
+    }
+    td {
+      // Behave  like a "row"
+      border: none !important;
+      border-bottom: 1px solid #eee !important;
+      position: relative;
+      padding-left: 35% !important;
+      white-space: normal;
+      text-align: left;
+      &:before {
+        content: attr(data-title);
+        position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        width: 30%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #000;
+      }
+      &.aCenter {
+        text-align: left;
+      }
+      &.cancelpadding {
+        padding-left: 10px !important;
+      }
+    }
+  }
+}
+.table_list3 {
+  width: 100%;
+  display: block;
+  clear: both;
+  zoom: 1;
+  overflow: hidden;
+  overflow-x: auto;
+  table {
+    td {
+      ul {
+        margin: 10px;
+        padding: 0;
+        list-style-type: none;
+        li {
+          padding: 0 0 0 15px;
+          margin-bottom: 5px;
+          position: relative;
+          &:before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: #333;
             border-radius: 50%;
-            display: block;
-            line-height: 25px;
-            display: inline-block;
-            text-align: center;
-            margin: 0 auto;
-            text-decoration: none;
-            &:hover {
-                color: #fff;
-            }
+            position: absolute;
+            top: 7px;
+            left: 0;
+          }
         }
-        input[type="checkbox"] {
-            margin: 0 !important;
-        }
-        img {
-            vertical-align: middle;
-        }
-        .the_term {
-            display: inline-block;
-            padding: 0 5px;
-        }
-        .surplus {
-            font-size: 0.875em;
-            display: inline-block;
-        }
-        .collection {
-            width: 40px;
-            margin: 0 auto;
-            a {
-                display: block;
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                background-color: #fff;
-                line-height: 40px;
-                text-align: center;
-                &:hover {
-                    background-color: #e5e5e5;
-                }
-                img {
-                    width: 22px;
-                    height: 22px;
-                    vertical-align: middle;
-                }
-            }
-        }
+      }
     }
-    .table_list {
-        width: 100%;
-        display: block;
-        clear: both;
-        zoom: 1;
-        overflow: hidden;
-        overflow-x: auto;
-        @include screen('mobile') {
-            background-color: transparent !important; //Force table to not be like tables anymore
-            thead,
-            tbody,
-            th,
-            td,
-            tr {
-                display: block;
-            }
-            thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-            tr {
-                border: 1px solid #ccc;
-                margin-bottom: 10px; // background-color: #333;
-            }
-            td {
-                // Behave  like a "row"
-                border: none !important;
-                border-bottom: 1px solid #eee !important;
-                position: relative;
-                // padding-left: 35% !important;
-                white-space: normal;
-                text-align: left;
-                &:before {
-                    content: attr(data-title);
-                    // position: absolute;
-                    top: .5em;
-                    left: .5em;
-                    width: 30%;
-                    padding-right: 10px;
-                    white-space: nowrap;
-                    text-align: left;
-                    font-weight: bold;
-                    color: #000;
-                }
-                &.aCenter {
-                    text-align: left;
-                }
-                a {
-                    display: inline-block;
-                }
-                br {
-                    display: none;
-                }
-            }
-        }
+  }
+  @media (max-width: 1200px) {
+    background-color: transparent !important; //Force table to not be like tables anymore
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+      display: block;
     }
-    .table_list2 {
-        @include screen('mobile') {
-            background-color: transparent !important; //Force table to not be like tables anymore
-            thead,
-            tbody,
-            th,
-            td,
-            tr {
-                display: block;
-            }
-            thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-            tr {
-                border: 1px solid #d3d3d3;
-                border-radius: 5px;
-                margin-bottom: 10px; // background-color: #333;
-            }
-            td {
-                // Behave  like a "row"
-                border: none !important;
-                border-bottom: 1px solid #eee !important;
-                position: relative;
-                padding-left: 35% !important;
-                white-space: normal;
-                text-align: left;
-                &:before {
-                    content: attr(data-title);
-                    position: absolute;
-                    top: .5em;
-                    left: .5em;
-                    width: 30%;
-                    padding-right: 10px;
-                    white-space: nowrap;
-                    text-align: left;
-                    font-weight: bold;
-                    color: #000;
-                }
-                &.aCenter {
-                    text-align: left;
-                }
-                &.cancelpadding {
-                    padding-left: 10px !important;
-                }
-            }
-        }
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
     }
-    .table_list3 {
-        width: 100%;
-        display: block;
-        clear: both;
-        zoom: 1;
-        overflow: hidden;
-        overflow-x: auto;
-        table {
-            td {
-                ul {
-                    margin: 10px ;
-                    padding: 0;
-                    list-style-type: none;
-                    li {
-                        padding: 0 0 0 15px;
-                        margin-bottom: 5px;
-                        position: relative;
-                        &:before {
-                            content: '';
-                            width: 6px;
-                            height: 6px;
-                            background-color: #333;
-                            border-radius: 50%;
-                            position: absolute;
-                            top: 7px;
-                            left: 0;
-                        }
-                    }
-                }
-            }
-        }
-        @media(max-width: 1200px) {
-            background-color: transparent !important; //Force table to not be like tables anymore
-            thead,
-            tbody,
-            th,
-            td,
-            tr {
-                display: block;
-            }
-            thead tr {
-                position: absolute;
-                top: -9999px;
-                left: -9999px;
-            }
-            tr {
-                border: 1px solid #ccc;
-                margin-bottom: 10px; // background-color: #333;
-            }
-            td {
-                // Behave  like a "row"
-                border: none !important;
-                border-bottom: 1px solid #eee !important;
-                position: relative;
-                // padding-left: 35% !important;
-                white-space: normal;
-                text-align: left;
-                &:before {
-                    content: attr(data-title);
-                    // position: absolute;
-                    top: .5em;
-                    left: .5em;
-                    width: 30%;
-                    padding-right: 10px;
-                    white-space: nowrap;
-                    text-align: left;
-                    font-weight: bold;
-                    color: #000;
-                }
-                &.aCenter {
-                    text-align: left;
-                }
-                a {
-                    display: inline-block;
-                }
-                br {
-                    display: none;
-                }
-            }
-        }
+    tr {
+      border: 1px solid #ccc;
+      margin-bottom: 10px; // background-color: #333;
     }
+    td {
+      // Behave  like a "row"
+      border: none !important;
+      border-bottom: 1px solid #eee !important;
+      position: relative;
+      // padding-left: 35% !important;
+      white-space: normal;
+      text-align: left;
+      &:before {
+        content: attr(data-title);
+        // position: absolute;
+        top: 0.5em;
+        left: 0.5em;
+        width: 30%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #000;
+      }
+      &.aCenter {
+        text-align: left;
+      }
+      a {
+        display: inline-block;
+      }
+      br {
+        display: none;
+      }
+    }
+  }
+}

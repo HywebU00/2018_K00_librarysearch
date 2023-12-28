@@ -1564,6 +1564,9 @@
       @include make-lg-column(6);
       @include gutter(0);
       background-color: #fff;
+      a {
+        display: block;
+      }
     }
   }
   .hotbook_block02 {

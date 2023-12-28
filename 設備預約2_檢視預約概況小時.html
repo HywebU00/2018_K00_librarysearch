@@ -204,7 +204,7 @@
                 <div class="appointment_record"><a href="#">預約記錄(1)</a></div>
                 <!-- 預約紀錄按鈕 end -->
                 <!-- 討論室時間預約1 平行 start -->
-                <div class="discussionroom_timeblock">
+                <div class="discussionroom_timeblock_day">
                   <div class="title">總館討論室101</div>
                   <div class="timelinegroup">
                     <!-- 8 -->
@@ -390,7 +390,7 @@
                 </div>
                 <!-- 加入日曆 燈箱end -->
                 <!-- 討論室時間預約2 平行 start -->
-                <div class="discussionroom_timeblock">
+                <div class="discussionroom_timeblock_day">
                   <div class="title">總館討論室102</div>
                   <div class="timelinegroup">
                     <!-- 8 -->
@@ -493,7 +493,7 @@
                 </div>
                 <!-- 討論室時間預約2 平行 end -->
                 <!-- 討論室時間預約2 垂直 start -->
-                <div class="discussionroom_timeblock">
+                <div class="discussionroom_timeblock_day">
                   <div class="btn_grp keepright">
                     <input name="Search" type="reset" value="週期預約" />
                     <input name="Search" type="submit" value="確認預約" class="discussionroom_btn" />
@@ -502,44 +502,135 @@
                     <table>
                       <thead>
                         <tr>
-                          <th>&nbsp;</th>
-                          <th>總館討論室101</th>
-                          <th>總館討論室102</th>
-                          <th>總館討論室103</th>
-                          <th>總館討論室104</th>
+                          <th scope="col">&nbsp;</th>
+                          <th scope="col">總館討論室101</th>
+                          <th scope="col">總館討論室102</th>
+                          <th scope="col">總館討論室103</th>
+                          <th scope="col">總館討論室104</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>08:00~08:30</td>
+                          <th class="time" scope="row">08：00－08：30</th>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                         </tr>
                         <tr>
-                          <td>08:30~09:00</td>
+                          <th class="time" scope="row">08：30－09：00</th>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#" class="yorbooked"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">09：00－09：30</th>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#" class="yorbooked"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">09：30－10：00</th>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                         </tr>
                         <tr>
-                          <td>09:00~09:30</td>
+                          <th class="time" scope="row">10：00－10：30</th>
+                          <td><a href="#"></a></td>
+                          <td><a href="#" class="past_reserve"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">10：30－11：00</th>
+                          <td><a href="#"></a></td>
+                          <td><a href="#" class="past_reserve"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">11：00－11：30</th>
+                          <td><a href="#"></a></td>
+                          <td><a href="#" class="past_reserve"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">11：30－12：00</th>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#" class="past_reserve"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">12：00－12：30</th>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#" class="past_reserve"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">12：30－13：00</th>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#" class="past_reserve"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">13：00－13：30</th>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                         </tr>
                         <tr>
-                          <td>09:30~10:00</td>
+                          <th class="time" scope="row">13：30－14：00</th>
+                          <td><a href="#" class="yorbooked"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">14：30－15：00</th>
+                          <td><a href="#" class="yorbooked"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">15：00－15：30</th>
+                          <td><a href="#" class="yorbooked"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">15：30－16：00</th>
+                          <td><a href="#" class="yorbooked"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">16：30－17：00</th>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                         </tr>
                         <tr>
-                          <td>10:00~10:30</td>
+                          <th class="time" scope="row">17：00－17：30</th>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                          <td><a href="#"></a></td>
+                        </tr>
+                        <tr>
+                          <th class="time" scope="row">17：30－18：00</th>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
                           <td><a href="#"></a></td>
@@ -548,7 +639,10 @@
                       </tbody>
                     </table>
                   </div>
-
+                  <div class="btn_grp ">
+                    <input name="Search" type="reset" value="週期預約" />
+                    <input name="Search" type="submit" value="確認預約" class="discussionroom_btn" />
+                  </div>
                 </div>
                 <!-- 討論室時間預約2 垂直 end -->
 

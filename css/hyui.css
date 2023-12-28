@@ -1469,18 +1469,22 @@ table td.aLeft {
 table td.aRight {
   text-align: right;
 }
+table td.time {
+  text-align: center;
+  white-space: nowrap;
+}
 table th {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   color: #333;
-  border: #DDD 1px solid;
+  border: #ddd 1px solid;
   text-align: center;
   white-space: nowrap;
 }
 table.table_hover tr:hover {
-  background: #F3F3F3;
+  background: #f3f3f3;
 }
 table.table_sprite tr:nth-child(even) {
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
 table .information_icon {
   width: 25px;
@@ -9745,6 +9749,9 @@ body.fix {
     width: 50%;
   }
 }
+.hotbook_column .hotbook_block01 .bookno01 a {
+  display: block;
+}
 .hotbook_column .hotbook_block02 {
   float: left;
   width: 100%;
@@ -12885,7 +12892,7 @@ body.fix {
   top: 4px;
 }
 
-.discussionroom_timeblock {
+.discussionroom_timeblock_day {
   flex: 1 1 auto;
   flex-basis: 100%;
   margin: 10px 0 20px;
@@ -12898,11 +12905,11 @@ body.fix {
   box-sizing: border-box;
 }
 @media screen and (max-width: 575px) {
-  .discussionroom_timeblock {
+  .discussionroom_timeblock_day {
     padding: 20px 20px 20px;
   }
 }
-.discussionroom_timeblock:before {
+.discussionroom_timeblock_day:before {
   content: "";
   border: 30px solid #b94b00;
   border-color: #b94b00 transparent transparent #b94b00;
@@ -12910,46 +12917,46 @@ body.fix {
   top: 0;
   left: 0;
 }
-.discussionroom_timeblock .title {
+.discussionroom_timeblock_day .title {
   font-size: 1.25em;
   margin: 10px 30px 20px 0;
   color: #b94b00;
   font-weight: bolder;
 }
-.discussionroom_timeblock .timelinegroup {
+.discussionroom_timeblock_day .timelinegroup {
   display: flex;
   margin-bottom: 2em;
 }
-.discussionroom_timeblock .timelinegroup .timeline_hour {
+.discussionroom_timeblock_day .timelinegroup .timeline_hour {
   flex: 1 1 auto;
   width: 3.8461538462%;
   margin-left: -1px;
 }
-.discussionroom_timeblock .timelinegroup .timeline_hour:last-of-type a {
+.discussionroom_timeblock_day .timelinegroup .timeline_hour:last-of-type a {
   border-radius: 0 50px 50px 0;
 }
-.discussionroom_timeblock .timelinegroup .timeline_hour:last-of-type a span {
+.discussionroom_timeblock_day .timelinegroup .timeline_hour:last-of-type a span {
   left: auto;
   right: -10px;
 }
-.discussionroom_timeblock .timelinegroup .timeline_hour:first-of-type a {
+.discussionroom_timeblock_day .timelinegroup .timeline_hour:first-of-type a {
   border-radius: 50px 0 0 50px;
 }
-.discussionroom_timeblock .timelinegroup .timeline_hour.past_reserve a {
+.discussionroom_timeblock_day .timelinegroup .timeline_hour.past_reserve a {
   background-color: #ddd;
   cursor: not-allowed;
 }
-.discussionroom_timeblock .timelinegroup .timeline_hour.past_reserve a:hover {
+.discussionroom_timeblock_day .timelinegroup .timeline_hour.past_reserve a:hover {
   background-color: #ddd;
 }
-.discussionroom_timeblock .timelinegroup .timeline_hour.yorbooked a {
+.discussionroom_timeblock_day .timelinegroup .timeline_hour.yorbooked a {
   background-color: #b94b00;
   cursor: not-allowed;
 }
-.discussionroom_timeblock .timelinegroup .timeline_hour.yorbooked a:hover {
+.discussionroom_timeblock_day .timelinegroup .timeline_hour.yorbooked a:hover {
   background-color: #b94b00;
 }
-.discussionroom_timeblock .timelinegroup .timeline_hour a {
+.discussionroom_timeblock_day .timelinegroup .timeline_hour a {
   display: block;
   border: 1px solid #ccc;
   height: 28px;
@@ -12957,7 +12964,7 @@ body.fix {
   position: relative;
   transition: 0.2s;
 }
-.discussionroom_timeblock .timelinegroup .timeline_hour a span {
+.discussionroom_timeblock_day .timelinegroup .timeline_hour a span {
   position: absolute;
   top: 30px;
   left: -10px;
@@ -12965,12 +12972,94 @@ body.fix {
   width: 20px;
   text-align: center;
 }
-.discussionroom_timeblock .timelinegroup .timeline_hour a:hover {
+.discussionroom_timeblock_day .timelinegroup .timeline_hour a:hover {
   background-color: #107859;
 }
-.discussionroom_timeblock .timetablegroup {
+.discussionroom_timeblock_day .timetablegroup {
   margin: 0;
+  margin-bottom: 2em;
+  width: 100%;
+  overflow-x: scroll;
 }
+.discussionroom_timeblock_day .timetablegroup table {
+  table-layout: fixed;
+  border: 1px solid #ddd;
+  position: relative;
+}
+.discussionroom_timeblock_day .timetablegroup table thead tr th {
+  position: sticky;
+  top: 0; /* 列首永遠固定於上 */
+}
+.discussionroom_timeblock_day .timetablegroup table td:first-child,
+.discussionroom_timeblock_day .timetablegroup table th:first-child {
+  position: sticky;
+  left: 0; /* 首行永遠固定於左 */
+  z-index: 1;
+  background-color: rgba(255, 182, 193, 0.8);
+}
+.discussionroom_timeblock_day .timetablegroup table th[scope=col] {
+  border: 1px solid #ddd;
+  background-color: #ccc;
+  color: #333;
+  padding: 0.8em 0.5em;
+  font-size: 1.125em;
+  width: 150px;
+}
+.discussionroom_timeblock_day .timetablegroup table th[scope=row] {
+  background-color: #eee;
+  color: #333;
+  padding: 0.8em 0.5em;
+  font-size: 1em;
+  width: 150px;
+}
+.discussionroom_timeblock_day .timetablegroup table td {
+  border: 1px solid #ccc;
+  padding: 0;
+  position: relative;
+  width: 150px;
+}
+.discussionroom_timeblock_day .timetablegroup table td a {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transition: 0.2s;
+}
+.discussionroom_timeblock_day .timetablegroup table td a.past_reserve {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+.discussionroom_timeblock_day .timetablegroup table td a.past_reserve:hover {
+  background-color: #ddd;
+}
+.discussionroom_timeblock_day .timetablegroup table td a.yorbooked {
+  background-color: #b94b00;
+  cursor: not-allowed;
+}
+.discussionroom_timeblock_day .timetablegroup table td a.yorbooked:hover {
+  background-color: #b94b00;
+}
+.discussionroom_timeblock_day .timetablegroup table td a:hover {
+  background-color: #107859;
+}
+.discussionroom_timeblock_day .timetablegroup table tr th,
+.discussionroom_timeblock_day .timetablegroup table tr td {
+  border-top: none;
+}
+.discussionroom_timeblock_day .timetablegroup table tr th:first-child,
+.discussionroom_timeblock_day .timetablegroup table tr td:first-child {
+  border-left: none;
+}
+.discussionroom_timeblock_day .timetablegroup table tr th:last-child,
+.discussionroom_timeblock_day .timetablegroup table tr td:last-child {
+  border-right: none;
+}
+
 .keepright {
   text-align: right !important;
 }
