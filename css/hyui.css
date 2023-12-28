@@ -5060,6 +5060,7 @@ body ::-webkit-scrollbar-thumb:vertical:active {
   padding: 0;
   min-height: 600px;
 }
+
 .more a {
   padding: 3px 10px;
   border-radius: 4px;
@@ -12970,7 +12971,6 @@ body.fix {
 .discussionroom_timeblock .timetablegroup {
   margin: 0;
 }
-
 .keepright {
   text-align: right !important;
 }
@@ -21684,7 +21684,7 @@ em.yellowbg {
   box-shadow: 0 0px 0px 2px #f1ad00;
 }
 
-.block01_h2, .SDG_targetdata .title, .SDG_block h2, .diversified_block h2, .onlinesearch_block h2, .forgetpassword_block h2, .network_certificate h2, .main h2, .devicereservation_block h2, .reservation_block h2, .lp_content h2, .send_illustrate_group .title, .cp_content h2, .sitemap h2, .mystudy_sdg_reading .title {
+.block01_h2, .SDG_targetdata .title, .SDG_block h2, .diversified_block h2, .onlinesearch_block h2, .forgetpassword_block h2, .network_certificate h2, .devicereservation_block h2, .reservation_block h2, .lp_content h2, .send_illustrate_group .title, .cp_content h2, .sitemap h2, .mystudy_sdg_reading .title {
   margin: 0;
   padding: 0 0 10px;
   text-align: center;

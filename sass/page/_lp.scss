@@ -2428,6 +2428,12 @@
   // 時間表格
   .timetablegroup {
     margin: 0;
+    table {
+      th {
+      }
+      td {
+      }
+    }
   }
 }
 .keepright {
