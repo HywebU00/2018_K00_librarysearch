@@ -2029,6 +2029,10 @@
   margin: 0 0 1.5em 0;
   display: flex;
   font-size: 1.125em;
+  @include screen('mobile') {
+    flex-wrap: wrap;
+  }
+
   .filter_group {
     flex: 1 1 auto;
     // flex-basis: calc(100% - 210px);
@@ -2040,6 +2044,10 @@
     align-items: flex-start;
     box-sizing: border-box;
     background-color: #eee;
+    @include screen('mobile') {
+      flex-basis: 100%;
+      margin-bottom: 0.5em;
+    }
     .title {
       flex: 0 0 auto;
       flex-basis: 60px;
@@ -2114,6 +2122,11 @@
     background-color: #fff;
     display: flex;
     transition: 0.5s;
+    @include screen('mobile') {
+      flex-basis: 100%;
+      flex: 1 1 auto;
+      margin-left: 0;
+    }
     &.clicksearch {
       flex-basis: 390px;
     }
@@ -2141,7 +2154,7 @@
   flex: 1 1 auto;
   flex-basis: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin: 10px 0;
   font-size: 1.125em;
   .discussionroom_title {
@@ -2159,6 +2172,7 @@
     line-height: 1.7em;
     height: auto;
     transition: 0.5s;
+    padding-top: 7px;
 
     label {
       margin: 0 0.5em;
@@ -2172,11 +2186,16 @@
   display: flex;
   align-items: center;
   margin: 10px 0;
+
+  @media (max-width: 480px) {
+    flex-wrap: wrap;
+  }
   .todaydate {
     font-size: 1.5em;
     color: $color-red;
     font-weight: bolder;
     margin-right: 0.5em;
+    white-space: nowrap;
   }
   .calendar_options {
     margin: 0 0.5em;
@@ -2232,10 +2251,18 @@
   flex: 1 1 auto;
   flex-basis: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 10px 0;
+  @include screen('mobile') {
+    flex-wrap: wrap;
+  }
   .viewmode_group {
+    flex: 1 1 auto;
     display: flex;
+    @include screen('mobile') {
+      margin-bottom: 1em;
+    }
     .viewmode_parallel,
     .viewmode_vertical {
       a {
@@ -2302,9 +2329,15 @@
     }
   }
   .viewcolor_group {
+    flex: 1 1 auto;
     display: flex;
+    justify-content: flex-end;
+    @include screen('mobile') {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
     .viewcolor_gray {
-      margin-right: 1em;
+      margin-left: 1em;
       padding: 0 0 0 20px;
       position: relative;
       &:before {
@@ -2318,6 +2351,7 @@
       }
     }
     .viewcolor_orange {
+      margin-left: 1em;
       padding: 0 0 0 20px;
       position: relative;
       &:before {
@@ -2330,10 +2364,24 @@
         top: 4px;
       }
     }
+    .viewcolor_blue {
+      margin-left: 1em;
+      padding: 0 0 0 20px;
+      position: relative;
+      &:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-color: $color-blue;
+        position: absolute;
+        left: 0;
+        top: 4px;
+      }
+    }
   }
 }
 // 討論室時間預約
-.discussionroom_timeblock_day {
+.discussionroom_timeblock {
   flex: 1 1 auto;
   flex-basis: 100%;
   margin: 10px 0 20px;
@@ -2360,6 +2408,9 @@
     margin: 10px 30px 20px 0;
     color: $color-orange;
     font-weight: bolder;
+    @media (max-width: 600px) {
+      margin: 10px 30px 20px;
+    }
   }
   // 時間軸
   .timelinegroup {
@@ -2455,24 +2506,27 @@
 
       th[scope='col'] {
         border: 1px solid #ddd;
-        background-color: #ccc;
-        color: #333;
+        background-color: #666;
+        color: #fff;
         padding: 0.8em 0.5em;
         font-size: 1.125em;
-        width: 150px;
+        width: 120px;
+        &.today {
+          background-color: $color-blue;
+        }
       }
       th[scope='row'] {
-        background-color: #eee;
+        background-color: #fff8e4;
         color: #333;
         padding: 0.8em 0.5em;
         font-size: 1em;
-        width: 150px;
+        width: 120px;
       }
       td {
         border: 1px solid #ccc;
         padding: 0;
         position: relative;
-        width: 150px;
+        width: 120px;
         a {
           display: block;
           position: absolute;
@@ -2582,12 +2636,6 @@
     }
     .word_red {
       font-size: 1.125em;
-    }
-    .form_content {
-      .btn_active {
-        @extend %btn;
-        @include btn_setting($color-orange, #fff);
-      }
     }
   }
   // 預約表單

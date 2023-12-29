@@ -115,6 +115,10 @@ $btn-radius: 4px;
     color: #333;
   }
 }
+.btn_active {
+  @extend %btn;
+  @include btn_setting($color-orange, #fff);
+}
 // 按鈕大小
 .btn-xl {
   font-size: $font-size * 1.5; //24px

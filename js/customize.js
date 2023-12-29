@@ -1257,12 +1257,39 @@ $(function () {
     $('#discussionroom_style').fadeOut();
     $('body').removeClass('fix');
   });
-
+  //討論室時間預約天
+  $('.appointmentday_btn').click(function () {
+    $('#discussionroom_style').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.lightboxstyle_block .close').click(function () {
+    $('#discussionroom_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#discussionroom_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+  //討論室時間預約天_檢視預約
+  $('.viewreserve_btn').click(function () {
+    $('#discussionroom_style2').fadeIn();
+    $('#discussionroom_style').fadeOut();
+    $('body').addClass('fix');
+  });
+  $('.lightboxstyle_block .close').click(function () {
+    $('#discussionroom_style2').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#discussionroom_style2').fadeOut();
+    $('body').removeClass('fix');
+  });
   //加入日曆
   $('.addcalendar_btn').click(function () {
     $('#addcalendar_style').fadeIn();
     $('#itemselect_style').fadeOut();
     $('#discussionroom_style').fadeOut();
+    $('#discussionroom_style2').fadeOut();
     $('body').addClass('fix');
   });
   $('.lightboxstyle_block .close').click(function () {
@@ -2078,11 +2105,10 @@ $(function () {
     });
 });
 
-// $( "div.overout" )
-//   .on( "mouseover", function() {
-//     i += 1;
-//     $( this ).find( "span" ).text( "mouse over x " + i );
-//   } )
-//   .on( "mouseout", function() {
-//     $( this ).find( "span" ).text( "mouse out " );
-//   } );
+// 週期預約設定
+var _switchOnOff2 = $('.switchOnOff2');
+
+_switchOnOff2.click(function () {
+  $(this).toggleClass('on');
+  $('.appointment_cycle_block').fadeToggle();
+});
