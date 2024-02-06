@@ -2210,6 +2210,7 @@
       //MARC
       .MARC {
         margin-bottom: 30px;
+
         table {
           width: 100%;
           border: none;
@@ -2248,7 +2249,8 @@
         }
         pre {
           white-space: pre-wrap;
-          //   outline: 1px solid red;
+          word-break: break-all;
+          overflow: auto;
         }
       }
       //電子書借閱/預約服務

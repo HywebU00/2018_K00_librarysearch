@@ -17781,6 +17781,8 @@ body.fix {
 .mainrightblock .book_detaildata .bookdata2 .MARC pre,
 .mainrightblock2 .book_detaildata .bookdata2 .MARC pre {
   white-space: pre-wrap;
+  word-break: break-all;
+  overflow: auto;
 }
 .mainrightblock .book_detaildata .bookdata2 .borrow_appointment > div,
 .mainrightblock2 .book_detaildata .bookdata2 .borrow_appointment > div {
