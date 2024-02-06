@@ -823,7 +823,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
   height: 38px;
   width: 50px;
 }
-.reflashbtn:hover {
+.reflashbtn:hover, .reflashbtn:focus {
   background-image: url(../images/icon/icon_reflash.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -1335,7 +1335,7 @@ img.captcha {
   display: inline-block;
   vertical-align: middle;
   max-height: 2.4em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
 }
 img.captcha + input {
   display: inline-block;

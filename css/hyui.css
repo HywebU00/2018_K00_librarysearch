@@ -937,7 +937,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
   height: 38px;
   width: 50px;
 }
-.reflashbtn:hover {
+.reflashbtn:hover, .reflashbtn:focus {
   background-image: url(../images/icon/icon_reflash.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -2244,7 +2244,7 @@ img.captcha {
   display: inline-block;
   vertical-align: middle;
   max-height: 2.4em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0;
 }
 img.captcha + input {
   display: inline-block;
@@ -6789,7 +6789,8 @@ body.fix {
   height: 7em;
 }
 .lightboxstyle .lightboxstyle_block .lightbox_data .form_grid button {
-  margin: -10px 0px 0px;
+  margin: 0;
+  vertical-align: middle;
 }
 .lightboxstyle .lightboxstyle_block .lightbox_data .form_grid .btn {
   padding: 0.4em 1em !important;
@@ -15075,12 +15076,14 @@ body.fix {
   width: 100%;
   outline: 1px solid #d3d3d3;
 }
-.book_detail .image_titlepage, .book_detail .image_titlepage2 {
+.book_detail .image_titlepage,
+.book_detail .image_titlepage2 {
   margin: 0 auto 10px;
   width: 55%;
 }
 @media screen and (max-width: 767px) {
-  .book_detail .image_titlepage, .book_detail .image_titlepage2 {
+  .book_detail .image_titlepage,
+  .book_detail .image_titlepage2 {
     width: 65%;
   }
 }
@@ -16573,7 +16576,10 @@ body.fix {
     border-color: transparent transparent #666 transparent;
   }
 }
-.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .shelf_block,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .shelf_block,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3,
@@ -16592,7 +16598,10 @@ body.fix {
   z-index: 9;
 }
 @media screen and (max-width: 991px) {
-  .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .shelf_block,
+  .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block,
+  .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2,
+  .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3,
+  .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .shelf_block,
   .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block,
   .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2,
   .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3,
@@ -16601,7 +16610,10 @@ body.fix {
     bottom: auto;
   }
 }
-.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block ul, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2 ul, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3 ul, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .shelf_block ul,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block ul,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2 ul,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3 ul,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .shelf_block ul,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block ul,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2 ul,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3 ul,
@@ -16609,7 +16621,10 @@ body.fix {
   margin: 0;
   padding: 0;
 }
-.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block ul li, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2 ul li, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3 ul li, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .shelf_block ul li,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block ul li,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2 ul li,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3 ul li,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .shelf_block ul li,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block ul li,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2 ul li,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3 ul li,
@@ -16621,7 +16636,10 @@ body.fix {
   padding-left: 40px;
   display: block;
 }
-.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block ul li span, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2 ul li span, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3 ul li span, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .shelf_block ul li span,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block ul li span,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2 ul li span,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3 ul li span,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .shelf_block ul li span,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block ul li span,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2 ul li span,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3 ul li span,
@@ -16637,7 +16655,10 @@ body.fix {
   display: inline-block;
   margin-left: -40px;
 }
-.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block ul li span img, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2 ul li span img, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3 ul li span img, .mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .shelf_block ul li span img,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block ul li span img,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2 ul li span img,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3 ul li span img,
+.mainrightblock .book_detaildata .bookdata2 .bookplace_list table th .shelf_block ul li span img,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block ul li span img,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block2 ul li span img,
 .mainrightblock2 .book_detaildata .bookdata2 .bookplace_list table th .prompt_block_in3 ul li span img,
@@ -17055,7 +17076,7 @@ body.fix {
 .mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block span a {
   display: block;
   padding: 10px 16px 8px;
-  background-color: #E1167E;
+  background-color: #e1167e;
   color: #fff;
   border-radius: 5px;
   font-size: 1.25em;
@@ -17085,7 +17106,7 @@ body.fix {
 }
 .mainrightblock .book_detaildata .bookdata2 .listdata_sdg ul li span,
 .mainrightblock2 .book_detaildata .bookdata2 .listdata_sdg ul li span {
-  color: #C75100;
+  color: #c75100;
   display: block;
   font-weight: bolder;
   font-size: 1.125em;
@@ -17841,10 +17862,12 @@ body.fix {
   font-size: 1.125em;
   margin: 15px 0 15px;
 }
-.cp_content ol, .cp_content ul {
+.cp_content ol,
+.cp_content ul {
   margin-bottom: 30px;
 }
-.cp_content ol li, .cp_content ul li {
+.cp_content ol li,
+.cp_content ul li {
   margin-bottom: 14px;
   line-height: 1.5em;
 }
@@ -17884,7 +17907,7 @@ body.fix {
 
 .not_included {
   padding: 25px;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   color: #333;
   text-align: center;
 }

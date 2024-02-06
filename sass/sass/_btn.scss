@@ -169,7 +169,8 @@ $btn-radius: 4px;
   padding: 0.5em 1em !important;
   height: 38px;
   width: 50px;
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: url(../images/icon/icon_reflash.svg);
     background-repeat: no-repeat;
     background-position: center;
