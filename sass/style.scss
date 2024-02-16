@@ -394,6 +394,20 @@
       }
     }
   }
+  .itemselect_block {
+    .itemselect_group {
+      background-color: nth($lightColor, $style);
+      .image {
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        border-radius: 5px;
+        border-right: none;
+      }
+      .spacecontent {
+        color: #fff;
+      }
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -981,6 +995,20 @@
             background-color: nth($primaryColor, $style);
           }
         }
+      }
+    }
+  }
+  .itemselect_block {
+    .itemselect_group {
+      background-color: nth($lightColor, $style);
+      .image {
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        border-radius: 5px;
+        border-right: none;
+      }
+      .spacecontent {
+        color: #fff;
       }
     }
   }
@@ -1731,6 +1759,11 @@
           }
         }
       }
+    }
+  }
+  .itemselect_block {
+    .itemselect_group {
+      background-color: nth($lightColor, $style);
     }
   }
   // _cp.scss
@@ -2561,6 +2594,11 @@
       }
     }
   }
+  .itemselect_block {
+    .itemselect_group {
+      background-color: nth($lightColor, $style);
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -3127,6 +3165,11 @@
       }
     }
   }
+  .itemselect_block {
+    .itemselect_group {
+      background-color: nth($lightColor, $style);
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -3689,6 +3732,11 @@
           }
         }
       }
+    }
+  }
+  .itemselect_block {
+    .itemselect_group {
+      background-color: nth($lightColor, $style);
     }
   }
   // _cp.scss
@@ -4274,6 +4322,11 @@
       }
     }
   }
+  .itemselect_block {
+    .itemselect_group {
+      background-color: nth($lightColor, $style);
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -4840,6 +4893,11 @@
       }
     }
   }
+  .itemselect_block {
+    .itemselect_group {
+      background-color: nth($lightColor, $style);
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -5390,6 +5448,11 @@
           }
         }
       }
+    }
+  }
+  .itemselect_block {
+    .itemselect_group {
+      background-color: nth($lightColor, $style);
     }
   }
   // _cp.scss
