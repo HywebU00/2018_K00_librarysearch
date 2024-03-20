@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>凌網科技圖書館查詢系統</title>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+  <!-- 出版年度css -->
+  <link rel="stylesheet" href="vendor/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
+  <link rel="stylesheet" href="css/hyui.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- wrapper 最大寬度 -->
+  <div class="wrapper version03 nowa havewa">
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+    <!-- sidebar  start-->
+    <aside class="sidebar">
+      <div class="m_area">
+        <div class="menu">
+          <ul>
+            <li><a href="#">主頁</a></li>
+            <li><a href="#">新進圖書</a></li>
+            <li><a href="#">展示書</a></li>
+            <li><a href="#">網路辦證</a></li>
+            <li><a href="#">線上協尋書</a></li>
+            <li><a href="#">設備預約</a></li>
+            <li><a href="#">圖書推薦</a></li>
+            <li><a href="#">其他功能</a></li>
+          </ul>
+        </div>
+        <nav class="navigation">
+          <!-- 語言設定 start-->
+          <div class="language">
+            <a href="javascript:;">Language</a>
+            <ul>
+              <li><a href="javascript:;">中文版</a></li>
+              <li><a href="javascript:;">英文版</a></li>
+            </ul>
+          </div>
+          <!-- 語言設定 end-->
+        </nav>
+        <button type="button" class="sidebarClose">關閉</button>
+      </div>
+      <div class="menu_overlay"></div>
+    </aside>
+    <!-- sidebar  end-->
+    <!-- header Start -->
+    <header class="header">
+      <div class="container">
+        <button type="button" class="sidebarCtrl">側欄選單</button>
+        <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+        <h1><a href="index.htm"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+        <!-- navigation Start -->
+        <nav class="navigation">
+          <!-- 一組ul預設靠右 -->
+          <!-- 兩組ul已寫JQ靠左靠右 -->
+          <ul>
+            <li><a href="javascript:;">Help</a></li>
+            <li><a href="javascript:;">圖書館首頁</a></li>
+          </ul>
+          <!-- 語言設定 start-->
+          <div class="language">
+            <a href="javascript:;">Language</a>
+            <ul>
+              <li><a href="javascript:;">中文版</a></li>
+              <li><a href="javascript:;">英文版</a></li>
+            </ul>
+          </div>
+          <!-- 語言設定 end-->
+          <!-- font_size -->
+          <div class="font_size">
+            <span>字型大小：</span>
+            <!-- 英文用<span>font-size：</span> -->
+            <ul>
+              <li><a href="#" class="small">小</a></li>
+              <li><a href="#" class="medium">中</a></li>
+              <li><a href="#" class="large">大</a></li>
+            </ul>
+          </div>
+          <!-- login start -->
+          <div class="login loginbtn">
+            <button type="button" class="btn btn-sm">登入/線上辦證</button>
+          </div>
+          <!-- login end-->
+          <!-- 登入燈箱start -->
+          <div class="login_lightbox">
+            <div class="overlay"></div>
+            <div class="loginblock">
+              <div class="close"></div>
+              <h2>讀者登入</h2>
+              <p>登入說明文字：本校校職員生的帳號密碼與資訊服務相同，帳號為學號/員工編號，密碼若忘記，請洽圖書館暨資訊處系統開發組， (電話：07-78111151轉2830) </p>
+              <form>
+                <div class="form_grp form_inline">
+                  <label for="username">讀者帳號:</label>
+                  <input name="username" type="text" placeholder="請輸入文字">
+                </div>
+                <div class="form_grp form_inline">
+                  <label for="password">讀者密碼:</label>
+                  <input name="password" type="password" placeholder="請輸入密碼">
+                </div>
+                <div class="btn_grp">
+                  <input name="" type="submit" value="登入" />
+                </div>
+                <div class="unable_login">
+                  <h3><span>無法登入?</span></h3>
+                  <input name="" type="button" value="忘記密碼" />
+                  <input name="" type="button" value="網路辦證" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- 登入燈箱end-->
+        </nav>
+        <!-- 手機才出現的按鈕 start -->
+        <div class="login  loginbtn login_mobile_btn">
+          <button type="button" class="btn btn-sm">登入</button>
+        </div>
+        <!-- 手機才出現的按鈕 end -->
+
+        <!-- noscript -->
+        <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a
+            href="javascript:;">網站導覽</a>
+        </noscript>
+        <!-- 手機版才出現的menu start-->
+        <div class="menu">
+          <ul>
+            <li><a href="#">主頁</a></li>
+            <li><a href="#">新進圖書</a></li>
+            <li><a href="#">展示書</a></li>
+            <li><a href="#">網路辦證</a></li>
+            <li><a href="#">線上協尋書</a></li>
+            <li><a href="#">設備預約</a></li>
+            <li><a href="#">圖書推薦</a></li>
+            <li><a href="#">其他功能</a></li>
+          </ul>
+        </div>
+        <!-- 手機版才出現的menu end-->
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <div id="center" class="main">
+      <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+      <!-- 一般標題start -->
+      <section class="section col-12 general_block">
+        <div class="container">
+          <div class="col">
+            <div class="general_title">為您選書</div>
+            <!-- <div class="RSS_button">
+                            <a href="#" class="btn">RSS</a>
+                        </div> -->
+          </div>
+        </div>
+      </section>
+      <!-- 一般標題end -->
+      <!-- 分欄start -->
+      <div class="maincolumn">
+        <div class="container">
+          <!-- 右欄 start  -->
+          <div class="mainrightblock2">
+            <!-- 右欄左線start -->
+            <div class="rightlineblock">
+              <!-- 路徑start -->
+              <div class="breadcrumb">
+                <span>現在位置：</span>
+                <ul>
+                  <li><a href="javascript:;">首頁</a></li>
+                  <li>為您選書</li>
+                </ul>
+              </div>
+              <!-- 路徑end-->
+              <!-- 為您選書tab start -->
+              <div class="bookselection_tab">
+                <div class="sort"><a href="#">AI資訊分析取用同意書</a></div>
+                <div class="sort"><a href="#" class="here">您的專屬閱讀描述與推薦</a></div>
+                <div class="sort"><a href="#">閱讀分析統計</a></div>
+              </div>
+              <!-- 為您選書tab end -->
+              <!-- AIgpt_block start -->
+              <div class="AI_block">
+                <div class="AIgptgroup">
+                  <div class="title">推薦給您的閱讀書單</div>
+                  <div class="directions">
+                    <div class="content">
+                      <p>系統利用AI人工智慧-大型語言模型(例如ChatGPT)技術輔助，已產生您的專屬「閱讀描述」以及「推薦書單」。</p>
+                      <div class="directions">說明：</div>
+                      <ul>
+                        <li>在完成一次閱讀描述分析後，您每借閱30本圖書以上，系統將再次為您提供新一輪的閱讀描述分析與推薦。</li>
+                        <li>AI生成內容可能產生錯誤，重要內容敬請詳加檢查。</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- 描述 -->
+                  <div class="describe">
+                    <div class="title">專屬閱讀描述</div>
+                    <button type="button" class="btn btn-gray openclosebtn">展開</button>
+                    <!-- p加上class="singleline" 只顯示單行... -->
+                    <p class="singleline">
+                      您是一位熱愛自我成長與探索的讀者。您的書單中，充滿了有關心靈成長的書籍，這些作品圍繞著個人的成長與自我實現，如《五感全開:充滿驚喜和意義的一年》、《第二座山:當世俗成就不再滿足你,你要如何為生命找到意義?》等。此外，您對生態與動物保護有深刻的興趣，如《野生動物大聲講》、《擁抱,台灣的精靈。》等書籍都在您的閱讀清單上。您的書單也包含了許多旅行文學，顯示出您的探索精神與對世界的熱愛。最後，您對社會議題與哲學思考也有著深厚的興趣，透過閱讀如《美學:打開未知的美感體驗》、《生物多樣性:守護生態基因庫,一同為地球物種共生努力》等書籍，您在思考人生哲理與社會現象。
+                    </p>
+                  </div>
+                  <!-- AI推薦書單 並排 -->
+                  <div class="AIrecommendbook_sidebyside">
+                    <div class="AIinformation">
+                      <div class="AIpage">共<span>30</span>筆，<input type="text" name="" id="" value="1">/ 3 頁 <button type="button" class="btn  prev">上一頁</button><button type="button" type="button"
+                          class="btn  next">下一頁</button>
+                      </div>
+                      <div class="AIselect">
+                        <select id="selectSample" name="">
+                          <option value="">列表顯示</option>
+                          <option value="">並排顯示</option>
+                        </select>
+                        <select id="selectSample" name="">
+                          <option value="">相近值大－小</option>
+                          <option value="">相近值小－大</option>
+                          <option value="">出版年新－舊</option>
+                          <option value="">出版年舊－新</option>
+                        </select>
+                        <select id="selectSample" name="">
+                          <option value="">10筆</option>
+                          <option value="">25筆</option>
+                          <option value="">50筆</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- 1 -->
+                    <div class="recommendbook_list">
+                      <div class="recommendbook"><img src="images/recommendbook01.jpg" alt="書名"></div>
+                      <div class="feature_options">
+                        <ul>
+                          <li class="borrowbooks"><a href="javascript:;">我要借書</a></li>
+                          <li class="tobeseen"><a href="javascript:;">加入待看</a></li>
+                          <li class="moreinformation"><a href="javascript:;">更多資訊</a></li>
+                        </ul>
+                      </div>
+                      <div class="content">
+                        <div class="booktitle"><a href="#">1.山海經圖鑑</a></div>
+                      </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="recommendbook_list">
+                      <div class="recommendbook"><img src="images/recommendbook02.jpg" alt="書名"></div>
+                      <div class="feature_options">
+                        <ul>
+                          <li class="borrowbooks"><a href="javascript:;">我要借書</a></li>
+                          <li class="tobeseen"><a href="javascript:;">加入待看</a></li>
+                          <li class="moreinformation"><a href="javascript:;">更多資訊</a></li>
+                        </ul>
+                      </div>
+                      <div class="content">
+                        <div class="booktitle"><a href="#">2. 焚月. 1: 一段不受時空距離阻擋的純愛故事</a></div>
+                      </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="recommendbook_list">
+                      <div class="recommendbook"><img src="images/recommendbook03.jpg" alt="書名"></div>
+                      <div class="feature_options">
+                        <ul>
+                          <li class="borrowbooks"><a href="javascript:;">我要借書</a></li>
+                          <li class="tobeseen"><a href="javascript:;">加入待看</a></li>
+                          <li class="moreinformation"><a href="javascript:;">更多資訊</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="content">
+                        <div class="booktitle"><a href="#">3. 原子習慣 : 細微改變帶來巨大成就的實證法則</a></div>
+                      </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="recommendbook_list">
+                      <div class="recommendbook"><img src="images/recommendbook04.jpg" alt="書名"></div>
+                      <div class="feature_options">
+                        <ul>
+                          <li class="borrowbooks"><a href="javascript:;">我要借書</a></li>
+                          <li class="tobeseen"><a href="javascript:;">加入待看</a></li>
+                          <li class="moreinformation"><a href="javascript:;">更多資訊</a></li>
+                        </ul>
+                      </div>
+                      <div class="content">
+                        <div class="booktitle"><a href="#">4. 三體</a></div>
+                      </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="recommendbook_list">
+                      <div class="recommendbook"><img src="images/recommendbook05.jpg" alt="書名"></div>
+                      <div class="feature_options">
+                        <ul>
+                          <li class="borrowbooks"><a href="javascript:;">我要借書</a></li>
+                          <li class="tobeseen"><a href="javascript:;">加入待看</a></li>
+                          <li class="moreinformation"><a href="javascript:;">更多資訊</a></li>
+                        </ul>
+                      </div>
+                      <div class="content">
+                        <div class="booktitle"><a href="#">5. 口袋神探. 1, 音樂教室的神秘琴聲</a></div>
+                      </div>
+                    </div>
+                    <!--6 -->
+                    <div class="recommendbook_list">
+                      <div class="recommendbook"><img src="images/recommendbook01.jpg" alt="書名"></div>
+                      <div class="feature_options">
+                        <ul>
+                          <li class="borrowbooks"><a href="javascript:;">我要借書</a></li>
+                          <li class="tobeseen"><a href="javascript:;">加入待看</a></li>
+                          <li class="moreinformation"><a href="javascript:;">更多資訊</a></li>
+                        </ul>
+                      </div>
+                      <div class="content">
+                        <div class="booktitle"><a href="#">1.山海經圖鑑</a></div>
+                      </div>
+                    </div>
+                    <!-- 7 -->
+                    <div class="recommendbook_list">
+                      <div class="recommendbook"><img src="images/recommendbook02.jpg" alt="書名"></div>
+                      <div class="feature_options">
+                        <ul>
+                          <li class="borrowbooks"><a href="javascript:;">我要借書</a></li>
+                          <li class="tobeseen"><a href="javascript:;">加入待看</a></li>
+                          <li class="moreinformation"><a href="javascript:;">更多資訊</a></li>
+                        </ul>
+                      </div>
+                      <div class="content">
+                        <div class="booktitle"><a href="#">2. 焚月. 1: 一段不受時空距離阻擋的純愛故事</a></div>
+                      </div>
+                    </div>
+                    <!-- 8 -->
+                    <div class="recommendbook_list">
+                      <div class="recommendbook"><img src="images/recommendbook03.jpg" alt="書名"></div>
+                      <div class="feature_options">
+                        <ul>
+                          <li class="borrowbooks"><a href="javascript:;">我要借書</a></li>
+                          <li class="tobeseen"><a href="javascript:;">加入待看</a></li>
+                          <li class="moreinformation"><a href="javascript:;">更多資訊</a></li>
+                        </ul>
+                      </div>
+
+                      <div class="content">
+                        <div class="booktitle"><a href="#">3. 原子習慣 : 細微改變帶來巨大成就的實證法則</a></div>
+                      </div>
+                    </div>
+                    <!-- 9 -->
+                    <div class="recommendbook_list">
+                      <div class="recommendbook"><img src="images/recommendbook04.jpg" alt="書名"></div>
+                      <div class="feature_options">
+                        <ul>
+                          <li class="borrowbooks"><a href="javascript:;">我要借書</a></li>
+                          <li class="tobeseen"><a href="javascript:;">加入待看</a></li>
+                          <li class="moreinformation"><a href="javascript:;">更多資訊</a></li>
+                        </ul>
+                      </div>
+                      <div class="content">
+                        <div class="booktitle"><a href="#">4. 三體</a></div>
+                      </div>
+                    </div>
+                    <!-- 10 -->
+                    <div class="recommendbook_list">
+                      <div class="recommendbook"><img src="images/recommendbook05.jpg" alt="書名"></div>
+                      <div class="feature_options">
+                        <ul>
+                          <li class="borrowbooks"><a href="javascript:;">我要借書</a></li>
+                          <li class="tobeseen"><a href="javascript:;">加入待看</a></li>
+                          <li class="moreinformation"><a href="javascript:;">更多資訊</a></li>
+                        </ul>
+                      </div>
+                      <div class="content">
+                        <div class="booktitle"><a href="#">5. 口袋神探. 1, 音樂教室的神秘琴聲</a></div>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <div class="AIinformation">
+                      <div class="AIselect">
+                        <select id="selectSample" name="">
+                          <option value="">列表顯示</option>
+                          <option value="">並排顯示</option>
+                        </select>
+                        <select id="selectSample" name="">
+                          <option value="">相近值大－小</option>
+                          <option value="">相近值小－大</option>
+                          <option value="">出版年新－舊</option>
+                          <option value="">出版年舊－新</option>
+                        </select>
+                        <select id="selectSample" name="">
+                          <option value="">10筆</option>
+                          <option value="">25筆</option>
+                          <option value="">50筆</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <!-- 更多資訊燈箱start -->
+                    <div class="lightboxstyle" id="AIGPT_morestyle">
+                      <div class="overlay"></div>
+                      <div class="lightboxbank_style_block">
+                        <div class="close"></div>
+                        <h2>更多資訊</h2>
+                        <form>
+                          <div class="AIGPT_information">
+                            <div class="AIGPT_group">
+                              <!-- <div class="evaluate_block">
+                                <div class="evaluate">
+                                  <label><input type="radio" name="" id="">推得好</label><label><input type="radio" name="" id="">推得不好</label>
+                                </div>
+                              </div> -->
+                              <div class="recommendbook"><img src="images/recommendbook01.jpg" alt="書名"></div>
+                              <div class="content">
+                                <div class="booktitle">山海經圖鑑</div>
+                                <div class="introduce">
+                                  《山海經圖鑑》將古籍《山海經》以圖鑑形式呈現，透過李豐楙和何敬堯的專文導讀，讓讀者能夠在欣賞到清代彩繪本的精緻插圖之餘，更深入了解這充滿妖異神祇的古代神話世界。本書是國家圖書館珍藏的清代彩繪本的完美再現，帶領讀者探索神秘文化的光影和奇幻氛圍。對於熱愛文學、藝術以及對古代中國神話有濃厚興趣的讀者來說，這是一本不可多得的文化寶典。
+                                </div>
+                                <div class="button_block"><button type="button" class="btn">我想借書</button><button type="button" class="btn">探索相似書</button></div>
+                              </div>
+                            </div>
+                            <!-- 推薦類別 -->
+                            <!-- 1 -->
+                            <div class="recommended_categories">
+                              <div class="category_people"><span>給文學愛好者</span></div>
+                              <div class="reason">推薦原因：詳細描繪了中國神話文學的精髓與深度。</div>
+                              <ul>
+                                <li><span>主題：</span><a href="#">古代神話與民俗</a></li>
+                                <li><span>描述：</span>展現了《山海經》所蘊含的古老神話和民俗故事的原始魅力。</li>
+                                <li><span>關鍵詞：</span><a href="#">原始神話</a>/<a href="#">民俗傳說</a>/<a href="#">文化遺產</a></li>
+                              </ul>
+                            </div>
+                            <!-- 2 -->
+                            <div class="recommended_categories">
+                              <div class="category_people"><span>給藝術學生與愛好者</span></div>
+                              <div class="reason">推薦原因：提供了一次學習和經歷中國傳統藝術風格的機會。</div>
+                              <ul>
+                                <li><span>主題：</span><a href="#">藝術賞析</a></li>
+                                <li><span>描述：</span>精美的清代彩繪展現了當代藝術家對傳統題材的新詮釋。</li>
+                                <li><span>關鍵詞：</span><a href="#">藝術詮釋</a>/<a href="#">清代彩畫</a>/<a href="#">視覺藝術</a></li>
+                              </ul>
+                            </div>
+                            <!-- 3 -->
+                            <div class="recommended_categories">
+                              <div class="category_people"><span>給青少年及大學生</span></div>
+                              <div class="reason">推薦原因：激勵年輕世代培養豐富的想像力和創造力。</div>
+                              <ul>
+                                <li><span>主題：</span><a href="#">想像力與創意</a></li>
+                                <li><span>描述：</span>著重於用想像將古代作品與現代視覺藝術相結合。</li>
+                                <li><span>關鍵詞：</span><a href="#">創意啟發</a>/<a href="#">想像力</a>/<a href="#">視覺敘事</a></li>
+                              </ul>
+                            </div>
+                            <!--  -->
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <!-- 更多資訊燈箱end -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- AIgpt_block end -->
+            </div>
+            <!-- 右欄左線end -->
+          </div>
+          <!-- 右欄 end  -->
+        </div>
+      </div>
+      <!-- 分欄end -->
+    </div>
+    <!-- fatfooter Start -->
+    <section class="fatfooter">
+      <div class="container">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+        <nav>
+          <ul>
+            <li><a href="javascript:;">關於我們</a>
+              <ul>
+                <li><a href="javascript:;">個人資料蒐集告知聲明</a></li>
+                <li><a href="javascript:;">網路隱私權政策</a></li>
+                <li><a href="javascript:;">交通資訊導引</a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:;">常用連結</a>
+              <ul>
+                <li><a href="javascript:;">圖書館首頁</a></li>
+                <li><a href="javascript:;">機構典藏</a></li>
+                <li><a href="javascript:;">facebook粉絲團</a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:;">其他連結</a>
+              <ul>
+                <li><a href="javascript:;">HELP</a></li>
+                <li><a href="javascript:;">借閱政策</a></li>
+                <li><a href="javascript:;">圖書館首頁</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <!-- fatfooter end -->
+    <!-- footer start-->
+    <footer>
+      <div class="container">
+        <div class="footer_info">
+          <ul>
+            <li>屏東縣政府文化處</li>
+            <li>90054 屏東市大連路69號</li>
+            <li>08-7360330</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end-->
+    <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
+  </div>
+  <div class="add_tobeseen"><a href="javascript:;"><span>99</span></a></div>
+  <!-- 燈箱區塊 start-->
+  <!-- 檢視閱讀權限燈箱start -->
+  <div class="lightboxstyle" id="read_permissionstyle">
+    <div class="overlay"></div>
+    <div class="lightboxstyle_block">
+      <div class="close"></div>
+      <h2>檢視閱讀權限</h2>
+      <form>
+        <div class="lightbox_data">
+          <p>借閱件數：(本/件/間/張)</p>
+          <div class="listdata">
+            <ul>
+              <li>教授指定參考資料：<em>2</em> 件</li>
+              <li>教授指定參考資料：<em>2</em> 件</li>
+              <li>教授指定參考資料：<em>2</em> 件</li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- 檢視閱讀權限燈箱end -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="vendor/jquery.easing.min.js"></script>
+  <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
+  <script type="text/javascript" src="vendor/slick/slick.js">
+  </script>
+  <!-- 出版年度js -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- 出版年度js -->
+  <script src="js/hyui.js"></script>
+  <script src="js/customize.js"></script>
+</body>
+
+</html>

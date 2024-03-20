@@ -181,6 +181,15 @@
       }
     }
   }
+  .AIGPT_information {
+    .AIGPT_group {
+      .content {
+        .booktitle {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -203,6 +212,110 @@
   .classification {
     background-color: nth($primaryColor, $style);
   }
+  // 步驟
+  .AIgptgroup {
+    .directions {
+      .content {
+        .directions {
+          color: nth($linkColor, $style);
+        }
+      }
+      .reading_needs_block {
+        .needs_group {
+          .needs_content {
+            .needs_directions {
+              &:before {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    .describe {
+      .title {
+        color: nth($linkColor, $style);
+      }
+    }
+    .AIgptstep {
+      .Step_block {
+        .online_stepblock {
+          ul {
+            li {
+              &:last-child {
+                &.active {
+                  &:after {
+                    background: nth($primaryColor, $style);
+                    background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(236, 236, 236, 1) 50%, rgba(236, 236, 236, 1) 100%);
+                    @media (max-width: 992px) {
+                      background: rgba(187, 187, 187, 1);
+                    }
+                  }
+                }
+              }
+              &.active {
+                div {
+                  background-color: nth($primaryColor, $style);
+                  @media (max-width: 992px) {
+                    &:before {
+                      background-color: nth($primaryColor, $style);
+                    }
+                  }
+                }
+                &:before {
+                  border: 6px solid nth($primaryColor, $style);
+                  background-color: nth($primaryColor, $style);
+                  background-image: url('https://i.postimg.cc/m2D0BtTR/icon-tick.png');
+                  background-position: 0;
+                  background-repeat: no-repeat;
+                  background-size: 20px;
+                }
+                &:after {
+                  background: nth($primaryColor, $style);
+                  background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(187, 187, 187, 1) 50%, rgba(187, 187, 187, 1) 100%);
+                  @media (max-width: 992px) {
+                    background: rgba(187, 187, 187, 1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .Features_block {
+        .featureslist {
+          .title {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+    .AIrecommendbook {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+    .AIrecommendbook_sidebyside {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+  }
+
   // _mystudy.scss
   .modify_data,
   .write_data,
@@ -778,6 +891,15 @@
       }
     }
   }
+  .AIGPT_information {
+    .AIGPT_group {
+      .content {
+        .booktitle {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -801,6 +923,109 @@
     background-color: nth($primaryColor, $style);
     span {
       color: #fff;
+    }
+  }
+  // 步驟
+  .AIgptgroup {
+    .directions {
+      .content {
+        .directions {
+          color: nth($linkColor, $style);
+        }
+      }
+      .reading_needs_block {
+        .needs_group {
+          .needs_content {
+            .needs_directions {
+              &:before {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    .describe {
+      .title {
+        color: nth($linkColor, $style);
+      }
+    }
+    .AIgptstep {
+      .Step_block {
+        .online_stepblock {
+          ul {
+            li {
+              &:last-child {
+                &.active {
+                  &:after {
+                    background: nth($primaryColor, $style);
+                    background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(236, 236, 236, 1) 50%, rgba(236, 236, 236, 1) 100%);
+                    @media (max-width: 992px) {
+                      background: rgba(187, 187, 187, 1);
+                    }
+                  }
+                }
+              }
+              &.active {
+                div {
+                  background-color: nth($primaryColor, $style);
+                  @media (max-width: 992px) {
+                    &:before {
+                      background-color: nth($primaryColor, $style);
+                    }
+                  }
+                }
+                &:before {
+                  border: 6px solid nth($primaryColor, $style);
+                  background-color: nth($primaryColor, $style);
+                  background-image: url('https://i.postimg.cc/m2D0BtTR/icon-tick.png');
+                  background-position: 0;
+                  background-repeat: no-repeat;
+                  background-size: 20px;
+                }
+                &:after {
+                  background: nth($primaryColor, $style);
+                  background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(187, 187, 187, 1) 50%, rgba(187, 187, 187, 1) 100%);
+                  @media (max-width: 992px) {
+                    background: rgba(187, 187, 187, 1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .Features_block {
+        .featureslist {
+          .title {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+    .AIrecommendbook {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+    .AIrecommendbook_sidebyside {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
     }
   }
   // _mystudy.scss
@@ -1441,6 +1666,15 @@
       }
     }
   }
+  .AIGPT_information {
+    .AIGPT_group {
+      .content {
+        .booktitle {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -1470,6 +1704,121 @@
   input[disable] {
     & ~ label {
       color: $color-darkgray;
+    }
+  }
+  // 步驟
+  .AIgptgroup {
+    .directions {
+      .content {
+        .directions {
+          color: nth($linkColor, $style);
+        }
+      }
+      .reading_needs_block {
+        .needs_group {
+          .needs_content {
+            .needs_directions {
+              &:before {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    .describe {
+      .title {
+        color: nth($linkColor, $style);
+      }
+    }
+    .AIgptstep {
+      .Step_block {
+        .online_stepblock {
+          ul {
+            li {
+              &:last-child {
+                &.active {
+                  &:after {
+                    background: nth($primaryColor, $style);
+                    background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(236, 236, 236, 1) 50%, rgba(236, 236, 236, 1) 100%);
+                    @media (max-width: 992px) {
+                      background: rgba(187, 187, 187, 1);
+                    }
+                  }
+                }
+              }
+              &.active {
+                div {
+                  background-color: nth($primaryColor, $style);
+                  @media (max-width: 992px) {
+                    &:before {
+                      background-color: nth($primaryColor, $style);
+                    }
+                  }
+                }
+                &:before {
+                  border: 6px solid nth($primaryColor, $style);
+                  background-color: nth($primaryColor, $style);
+                  background-image: url('https://i.postimg.cc/m2D0BtTR/icon-tick.png');
+                  background-position: 0;
+                  background-repeat: no-repeat;
+                  background-size: 20px;
+                }
+                &:after {
+                  background: nth($primaryColor, $style);
+                  background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(187, 187, 187, 1) 50%, rgba(187, 187, 187, 1) 100%);
+                  @media (max-width: 992px) {
+                    background: rgba(187, 187, 187, 1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .Features_block {
+        .featureslist {
+          .title {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+    .AIrecommendbook {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+    .AIrecommendbook_sidebyside {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+    .AIrecommendbook_sidebyside {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
     }
   }
   //線上協尋書
@@ -2372,6 +2721,15 @@
       }
     }
   }
+  .AIGPT_information {
+    .AIGPT_group {
+      .content {
+        .booktitle {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -2395,6 +2753,109 @@
     background-color: darken(nth($lightColor, $style), 27);
     span {
       color: #fff;
+    }
+  }
+  // 步驟
+  .AIgptgroup {
+    .directions {
+      .content {
+        .directions {
+          color: nth($linkColor, $style);
+        }
+      }
+      .reading_needs_block {
+        .needs_group {
+          .needs_content {
+            .needs_directions {
+              &:before {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    .describe {
+      .title {
+        color: nth($linkColor, $style);
+      }
+    }
+    .AIgptstep {
+      .Step_block {
+        .online_stepblock {
+          ul {
+            li {
+              &:last-child {
+                &.active {
+                  &:after {
+                    background: nth($primaryColor, $style);
+                    background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(236, 236, 236, 1) 50%, rgba(236, 236, 236, 1) 100%);
+                    @media (max-width: 992px) {
+                      background: rgba(187, 187, 187, 1);
+                    }
+                  }
+                }
+              }
+              &.active {
+                div {
+                  background-color: nth($primaryColor, $style);
+                  @media (max-width: 992px) {
+                    &:before {
+                      background-color: nth($primaryColor, $style);
+                    }
+                  }
+                }
+                &:before {
+                  border: 6px solid nth($primaryColor, $style);
+                  background-color: nth($primaryColor, $style);
+                  background-image: url('https://i.postimg.cc/m2D0BtTR/icon-tick.png');
+                  background-position: 0;
+                  background-repeat: no-repeat;
+                  background-size: 20px;
+                }
+                &:after {
+                  background: nth($primaryColor, $style);
+                  background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(187, 187, 187, 1) 50%, rgba(187, 187, 187, 1) 100%);
+                  @media (max-width: 992px) {
+                    background: rgba(187, 187, 187, 1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .Features_block {
+        .featureslist {
+          .title {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+    .AIrecommendbook {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+    .AIrecommendbook_sidebyside {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
     }
   }
   // _mystudy.scss
@@ -2937,6 +3398,15 @@
       }
     }
   }
+  .AIGPT_information {
+    .AIGPT_group {
+      .content {
+        .booktitle {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -2970,6 +3440,109 @@
         a {
           color: #000;
           &:hover {
+          }
+        }
+      }
+    }
+  }
+  // 步驟
+  .AIgptgroup {
+    .directions {
+      .content {
+        .directions {
+          color: nth($linkColor, $style);
+        }
+      }
+      .reading_needs_block {
+        .needs_group {
+          .needs_content {
+            .needs_directions {
+              &:before {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    .describe {
+      .title {
+        color: nth($linkColor, $style);
+      }
+    }
+    .AIgptstep {
+      .Step_block {
+        .online_stepblock {
+          ul {
+            li {
+              &:last-child {
+                &.active {
+                  &:after {
+                    background: nth($primaryColor, $style);
+                    background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(236, 236, 236, 1) 50%, rgba(236, 236, 236, 1) 100%);
+                    @media (max-width: 992px) {
+                      background: rgba(187, 187, 187, 1);
+                    }
+                  }
+                }
+              }
+              &.active {
+                div {
+                  background-color: nth($primaryColor, $style);
+                  @media (max-width: 992px) {
+                    &:before {
+                      background-color: nth($primaryColor, $style);
+                    }
+                  }
+                }
+                &:before {
+                  border: 6px solid nth($primaryColor, $style);
+                  background-color: nth($primaryColor, $style);
+                  background-image: url('https://i.postimg.cc/m2D0BtTR/icon-tick.png');
+                  background-position: 0;
+                  background-repeat: no-repeat;
+                  background-size: 20px;
+                }
+                &:after {
+                  background: nth($primaryColor, $style);
+                  background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(187, 187, 187, 1) 50%, rgba(187, 187, 187, 1) 100%);
+                  @media (max-width: 992px) {
+                    background: rgba(187, 187, 187, 1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .Features_block {
+        .featureslist {
+          .title {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+    .AIrecommendbook {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+    .AIrecommendbook_sidebyside {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
           }
         }
       }
@@ -3511,6 +4084,15 @@
       }
     }
   }
+  .AIGPT_information {
+    .AIGPT_group {
+      .content {
+        .booktitle {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -3544,6 +4126,109 @@
         a {
           color: #000;
           &:hover {
+          }
+        }
+      }
+    }
+  }
+  // 步驟
+  .AIgptgroup {
+    .directions {
+      .content {
+        .directions {
+          color: nth($linkColor, $style);
+        }
+      }
+      .reading_needs_block {
+        .needs_group {
+          .needs_content {
+            .needs_directions {
+              &:before {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    .describe {
+      .title {
+        color: nth($linkColor, $style);
+      }
+    }
+    .AIgptstep {
+      .Step_block {
+        .online_stepblock {
+          ul {
+            li {
+              &:last-child {
+                &.active {
+                  &:after {
+                    background: nth($primaryColor, $style);
+                    background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(236, 236, 236, 1) 50%, rgba(236, 236, 236, 1) 100%);
+                    @media (max-width: 992px) {
+                      background: rgba(187, 187, 187, 1);
+                    }
+                  }
+                }
+              }
+              &.active {
+                div {
+                  background-color: nth($primaryColor, $style);
+                  @media (max-width: 992px) {
+                    &:before {
+                      background-color: nth($primaryColor, $style);
+                    }
+                  }
+                }
+                &:before {
+                  border: 6px solid nth($primaryColor, $style);
+                  background-color: nth($primaryColor, $style);
+                  background-image: url('https://i.postimg.cc/m2D0BtTR/icon-tick.png');
+                  background-position: 0;
+                  background-repeat: no-repeat;
+                  background-size: 20px;
+                }
+                &:after {
+                  background: nth($primaryColor, $style);
+                  background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(187, 187, 187, 1) 50%, rgba(187, 187, 187, 1) 100%);
+                  @media (max-width: 992px) {
+                    background: rgba(187, 187, 187, 1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .Features_block {
+        .featureslist {
+          .title {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+    .AIrecommendbook {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+    .AIrecommendbook_sidebyside {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
           }
         }
       }
@@ -4087,6 +4772,15 @@
       }
     }
   }
+  .AIGPT_information {
+    .AIGPT_group {
+      .content {
+        .booktitle {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -4120,6 +4814,109 @@
         a {
           color: #000;
           &:hover {
+          }
+        }
+      }
+    }
+  }
+  // 步驟
+  .AIgptgroup {
+    .directions {
+      .content {
+        .directions {
+          color: nth($linkColor, $style);
+        }
+      }
+      .reading_needs_block {
+        .needs_group {
+          .needs_content {
+            .needs_directions {
+              &:before {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    .describe {
+      .title {
+        color: nth($linkColor, $style);
+      }
+    }
+    .AIgptstep {
+      .Step_block {
+        .online_stepblock {
+          ul {
+            li {
+              &:last-child {
+                &.active {
+                  &:after {
+                    background: nth($primaryColor, $style);
+                    background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(236, 236, 236, 1) 50%, rgba(236, 236, 236, 1) 100%);
+                    @media (max-width: 992px) {
+                      background: rgba(187, 187, 187, 1);
+                    }
+                  }
+                }
+              }
+              &.active {
+                div {
+                  background-color: nth($primaryColor, $style);
+                  @media (max-width: 992px) {
+                    &:before {
+                      background-color: nth($primaryColor, $style);
+                    }
+                  }
+                }
+                &:before {
+                  border: 6px solid nth($primaryColor, $style);
+                  background-color: nth($primaryColor, $style);
+                  background-image: url('https://i.postimg.cc/m2D0BtTR/icon-tick.png');
+                  background-position: 0;
+                  background-repeat: no-repeat;
+                  background-size: 20px;
+                }
+                &:after {
+                  background: nth($primaryColor, $style);
+                  background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(187, 187, 187, 1) 50%, rgba(187, 187, 187, 1) 100%);
+                  @media (max-width: 992px) {
+                    background: rgba(187, 187, 187, 1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .Features_block {
+        .featureslist {
+          .title {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+    .AIrecommendbook {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+    .AIrecommendbook_sidebyside {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
           }
         }
       }
@@ -4665,6 +5462,15 @@
       }
     }
   }
+  .AIGPT_information {
+    .AIGPT_group {
+      .content {
+        .booktitle {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -4698,6 +5504,109 @@
         a {
           color: #000;
           &:hover {
+          }
+        }
+      }
+    }
+  }
+  // 步驟
+  .AIgptgroup {
+    .directions {
+      .content {
+        .directions {
+          color: nth($linkColor, $style);
+        }
+      }
+      .reading_needs_block {
+        .needs_group {
+          .needs_content {
+            .needs_directions {
+              &:before {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    .describe {
+      .title {
+        color: nth($linkColor, $style);
+      }
+    }
+    .AIgptstep {
+      .Step_block {
+        .online_stepblock {
+          ul {
+            li {
+              &:last-child {
+                &.active {
+                  &:after {
+                    background: nth($primaryColor, $style);
+                    background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(236, 236, 236, 1) 50%, rgba(236, 236, 236, 1) 100%);
+                    @media (max-width: 992px) {
+                      background: rgba(187, 187, 187, 1);
+                    }
+                  }
+                }
+              }
+              &.active {
+                div {
+                  background-color: nth($primaryColor, $style);
+                  @media (max-width: 992px) {
+                    &:before {
+                      background-color: nth($primaryColor, $style);
+                    }
+                  }
+                }
+                &:before {
+                  border: 6px solid nth($primaryColor, $style);
+                  background-color: nth($primaryColor, $style);
+                  background-image: url('https://i.postimg.cc/m2D0BtTR/icon-tick.png');
+                  background-position: 0;
+                  background-repeat: no-repeat;
+                  background-size: 20px;
+                }
+                &:after {
+                  background: nth($primaryColor, $style);
+                  background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(187, 187, 187, 1) 50%, rgba(187, 187, 187, 1) 100%);
+                  @media (max-width: 992px) {
+                    background: rgba(187, 187, 187, 1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .Features_block {
+        .featureslist {
+          .title {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+    .AIrecommendbook {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+    .AIrecommendbook_sidebyside {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
           }
         }
       }
@@ -5237,6 +6146,15 @@
       }
     }
   }
+  .AIGPT_information {
+    .AIGPT_group {
+      .content {
+        .booktitle {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -5260,6 +6178,109 @@
     background-color: darken(nth($primaryColor, $style), 15);
     background-color: span {
       color: #fff;
+    }
+  }
+  // 步驟
+  .AIgptgroup {
+    .directions {
+      .content {
+        .directions {
+          color: nth($linkColor, $style);
+        }
+      }
+      .reading_needs_block {
+        .needs_group {
+          .needs_content {
+            .needs_directions {
+              &:before {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    .describe {
+      .title {
+        color: nth($linkColor, $style);
+      }
+    }
+    .AIgptstep {
+      .Step_block {
+        .online_stepblock {
+          ul {
+            li {
+              &:last-child {
+                &.active {
+                  &:after {
+                    background: nth($primaryColor, $style);
+                    background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(236, 236, 236, 1) 50%, rgba(236, 236, 236, 1) 100%);
+                    @media (max-width: 992px) {
+                      background: rgba(187, 187, 187, 1);
+                    }
+                  }
+                }
+              }
+              &.active {
+                div {
+                  background-color: nth($primaryColor, $style);
+                  @media (max-width: 992px) {
+                    &:before {
+                      background-color: nth($primaryColor, $style);
+                    }
+                  }
+                }
+                &:before {
+                  border: 6px solid nth($primaryColor, $style);
+                  background-color: nth($primaryColor, $style);
+                  background-image: url('https://i.postimg.cc/m2D0BtTR/icon-tick.png');
+                  background-position: 0;
+                  background-repeat: no-repeat;
+                  background-size: 20px;
+                }
+                &:after {
+                  background: nth($primaryColor, $style);
+                  background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(187, 187, 187, 1) 50%, rgba(187, 187, 187, 1) 100%);
+                  @media (max-width: 992px) {
+                    background: rgba(187, 187, 187, 1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .Features_block {
+        .featureslist {
+          .title {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+    .AIrecommendbook {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+    .AIrecommendbook_sidebyside {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
     }
   }
   // _mystudy.scss

@@ -1706,6 +1706,7 @@
   overflow: hidden;
   padding: 30px;
   margin-bottom: 30px;
+
   .choosebtn {
     margin-left: 0px;
     clear: both;
@@ -2133,7 +2134,7 @@
     input[type='text'] {
       border-radius: 5px 0 0 5px;
       margin-bottom: 0;
-      height: 53px;
+      height: 3em;
     }
     button.searchbtn {
       background-color: nth($primaryColor, $style);
@@ -2583,10 +2584,10 @@
 .reservation_block {
   width: 90%;
   margin: 40px auto 50px;
-  @include screen('mobile') {
-    width: auto;
-    margin: 20px;
-  }
+  // @include screen('mobile') {
+  //   width: auto;
+  //   margin: 20px;
+  // }
   h2 {
     @extend .block01_h2;
     margin-bottom: 1em !important;
@@ -3457,7 +3458,7 @@
 }
 .lp_content {
   width: 90%;
-  margin: 30px auto 60px;
+  margin: 40px auto 50px;
   @include box-sizing;
   h2 {
     @extend .block01_h2;
@@ -3466,13 +3467,16 @@
     margin-bottom: 30px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    padding: 50px 30px 20px;
+    padding: 50px 20px 20px;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
     @include box-sizing;
   }
   p {
     margin: 10px 0;
     line-height: 1.8em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .list {
     margin: 0;
@@ -4028,13 +4032,13 @@
 }
 // 我的訂單
 .myorder_block {
-  padding: 10px 0 60px;
+  padding: 20px 0 60px;
   .order_list_group {
-    margin: 20px 30px;
+    margin: 0 30px 20px;
     border-radius: 5px;
-    // border: 1px solid #ccc;
+    border: 1px solid #ccc;
     padding: 0;
-    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
     position: relative;
     @include box-sizing;
     background-color: #fff;

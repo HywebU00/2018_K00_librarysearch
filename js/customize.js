@@ -1137,6 +1137,19 @@ $(function () {
     $('#bank_codestyle').fadeOut();
     $('body').removeClass('fix');
   });
+  // AIGPT更多資訊燈箱
+  $('.moreinformation').click(function () {
+    $('#AIGPT_morestyle').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.lightboxbank_style_block .close').click(function () {
+    $('#AIGPT_morestyle').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#AIGPT_morestyle').fadeOut();
+    $('body').removeClass('fix');
+  });
   // SDG閱讀紀錄
   $('.sdg_readingbtn').click(function () {
     $('#sdg_readingstyle').fadeIn();
@@ -2111,4 +2124,51 @@ var _switchOnOff2 = $('.switchOnOff2');
 _switchOnOff2.click(function () {
   $(this).toggleClass('on');
   $('.appointment_cycle_block').fadeToggle();
+});
+
+// AIGPT
+$(function () {
+  $('.featureslist .del a').click(function () {
+    $(this).parent().siblings('.hovercontent').addClass('open');
+  });
+  $('.featureslist .hovercontent .reserve a').click(function () {
+    $(this).parents('.hovercontent').removeClass('open');
+  });
+});
+
+$(function () {
+  $('.describe button').click(function () {
+    if ($('.describe p').hasClass('singleline')) {
+      $('p').removeClass('singleline');
+      $(this).text('收合');
+    } else {
+      $('p').addClass('singleline');
+      $(this).text('展開');
+    }
+  });
+});
+
+$(function () {
+  $('.recommendbook_list')
+    .find('.tobeseen')
+    .click(function () {
+      $('.add_tobeseen a').addClass('dynamic');
+      setTimeout(function () {
+        $('.add_tobeseen a').removeClass('dynamic');
+      }, 2500);
+    });
+});
+//冷起始讀者
+$(function () {
+  var _needsselect = $('.reading_needs_block .needs_group ').children('.needs_select').find('input');
+
+  _needsselect.click(function () {
+    let _button = $(this);
+    if (_button.parents('.needs_select').next('.needs_content').is(':hidden')) {
+      _button.parents('.needs_select').next('.needs_content').slideDown();
+      _button.parents('.needs_group').siblings('.needs_group').find('.needs_content').slideUp();
+    } else {
+      _button.parents('.needs_select').next('.needs_content').slideUp();
+    }
+  });
 });

@@ -111,7 +111,7 @@
         border-radius: 0;
         border: none;
         font-size: 1em;
-        height: 40px;
+        height: 2.5em;
         line-height: 2.2em;
         border: none !important;
         border-right: 1px solid #d3d3d3 !important;
@@ -142,7 +142,7 @@
         padding: 12px 10px 10px;
         font-weight: normal;
         margin: 0;
-        height: 39px;
+        height: 2.5em;
         color: #333;
         @include screen('mobile') {
           width: 75%;
@@ -279,6 +279,7 @@
       display: none;
       float: none;
       clear: both;
+
       table {
         border: none;
         td {
@@ -417,8 +418,10 @@
 }
 // 進階查詢
 .advanced_search {
-  margin: 0 0px 20px;
-  padding: 30px 20px 20px;
+  width: 90%;
+  margin: 40px auto 50px;
+  // margin: 0 0px 20px;
+  // padding: 30px 20px 20px;
   // background-color: rgba(255, 255, 255, .6);
   border-radius: 5px;
   // display:none;
@@ -426,26 +429,24 @@
   background-image: url('../images/advanced_searchbg.png');
   background-repeat: repeat-x;
   background-position: left top;
-  @include screen('mobile') {
-    margin: 20px 0px;
-  }
+
   .advanced_block {
-    width: 50%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 30px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    width: 70%;
     margin: 0 auto;
-    padding: 0;
+    // padding: 0;
     text-align: center;
     font-size: 1em;
     // overflow: hidden;
     @include box-sizing();
-    @media (max-width: 1200px) {
-      width: 70%;
-    }
+
     @media (max-width: 992px) {
-      width: 85%;
+      width: 100%;
     }
-    @media (max-width: 700px) {
-      width: 90%;
-    }
+
     //關閉按鈕
     .close {
       display: none;
@@ -1621,6 +1622,7 @@ html .ui-button.ui-state-disabled:active {
       border-radius: 5px;
       position: relative;
       transition: 0.2s;
+      line-height: 1.3em;
       &:hover {
         background-image: none;
         background-color: $color-yellow;
@@ -1637,13 +1639,26 @@ html .ui-button.ui-state-disabled:active {
     }
   }
   .slick-next {
-    right: -45px;
+    right: -20px;
     top: 0;
+    background-color: transparent;
   }
   .slick-prev {
-    left: -45px;
+    left: -20px;
     top: 0;
+    background-color: transparent;
   }
+  @media (max-width: 767px) {
+    .slick-next {
+      right: -45px;
+      top: 0;
+    }
+    .slick-prev {
+      left: -45px;
+      top: 0;
+    }
+  }
+
   @media (max-width: 400px) {
     .slick-next {
       right: -36px;

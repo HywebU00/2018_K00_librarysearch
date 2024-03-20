@@ -1,76 +1,84 @@
- /* sitemap */
- .sitemap {
-     margin: 20px 30px;
-     color: #666;
-     @include clearfix;
-     .accesskeyDefine {
-         padding: 1em 2em;
-         background: #EEE;
-         @include border-radius(6px);
-         li{
-            margin-bottom: 5px;
-         }
-     }
-     h2 {
-         @extend .block01_h2;
-     }
-     p{
-        line-height: 1.5em;
-     }
- }
- .cascading {
-     margin: 0;
-     padding: 0;
-     border-top: 1px solid #CCC;
-     @include box-sizing;
-     li {
-         margin: 0 1% 1em;
-         line-height: 1.5em;
-         font-size: 1em;
-         list-style: none;
-         width: 22%;
-         display: inline-block;
-         vertical-align: top;
-         a {
-             margin: 10px 0px;
-             color: #333;
-             padding: .5em;
-             display: block;
-             font-size: 1.25em;
-             font-weight: bold;
-             border-bottom: 2px solid nth($primaryColor, $style);
-             &:hover,
-             &:focus {
-                 color: nth($primaryColor, $style) !important;
-                 text-decoration: none;
-             }
-         }
-         ul {
-             margin-left: 0px;
-             padding-left: 0%;
-             li {
-                 width: 100%;
-                 display: block !important;
-                 margin-bottom: 0;
-                 a {
-                     margin-top: 0px;
-                     margin-bottom: 0px;
-                     display: block;
-                     font-size: 1em;
-                     border-bottom: 1px dotted #ccc;
-                     background-color: transparent;
-                     font-weight: normal;
-                     color: #666;
-                     font-weight: normal;
-                 }
-             }
-         }
-     }
-     @include screen('mobile') {
-         width: 95%;
-         margin: 0px auto;
-         li {
-             width: 100%;
-         }
-     }
- }
+/* sitemap */
+.sitemap {
+  margin: 40px auto 30px;
+  width: 90%;
+  color: #666;
+  @include clearfix;
+  .accesskeyDefine {
+    padding: 1em 2em;
+    background: #eee;
+    @include border-radius(6px);
+    li {
+      margin-bottom: 5px;
+    }
+  }
+  h2 {
+    @extend .block01_h2;
+  }
+  p {
+    line-height: 1.5em;
+  }
+}
+.cascading {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ccc;
+  @include box-sizing;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  li {
+    margin: 0 1% 1em;
+    line-height: 1.5em;
+    font-size: 1em;
+    list-style: none;
+    width: 23%;
+    vertical-align: top;
+    @include screen('mobile') {
+      width: 48%;
+    }
+    @include screen('xs_mobile') {
+      width: 100%;
+      margin: 0 0 1em;
+    }
+    a {
+      margin: 10px 0px;
+      color: #333;
+      padding: 0.5em;
+      display: block;
+      font-size: 1.25em;
+      font-weight: bold;
+      border-bottom: 2px solid nth($primaryColor, $style);
+      &:hover,
+      &:focus {
+        color: nth($primaryColor, $style) !important;
+        text-decoration: none;
+      }
+    }
+    ul {
+      margin-left: 0px;
+      padding-left: 0%;
+      li {
+        width: 100%;
+        display: block !important;
+        margin-bottom: 0;
+        a {
+          margin-top: 0px;
+          margin-bottom: 0px;
+          display: block;
+          font-size: 1em;
+          border-bottom: 1px dotted #ccc;
+          background-color: transparent;
+          font-weight: normal;
+          color: #666;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
