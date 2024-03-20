@@ -16,14 +16,13 @@
   <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
   <!-- 出版年度css -->
   <link rel="stylesheet" href="vendor/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+  <!--  <link rel="stylesheet" href="/resources/demos/style.css"> -->
   <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
   <link rel="stylesheet" href="css/hyui.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
   <!-- wrapper 最大寬度 -->
   <div class="wrapper version03 nowa havewa">
     <!-- 直接跳主內容區 -->
@@ -92,46 +91,107 @@
               <li><a href="#" class="large">大</a></li>
             </ul>
           </div>
-          <!-- login start -->
-          <div class="login loginbtn">
-            <button type="button" class="btn btn-sm">登入/線上辦證</button>
-          </div>
-          <!-- login end-->
-          <!-- 登入燈箱start -->
-          <div class="login_lightbox">
-            <div class="overlay"></div>
-            <div class="loginblock">
-              <div class="close"></div>
-              <h2>讀者登入</h2>
-              <p>登入說明文字：本校校職員生的帳號密碼與資訊服務相同，帳號為學號/員工編號，密碼若忘記，請洽圖書館暨資訊處系統開發組， (電話：07-78111151轉2830) </p>
-              <form>
-                <div class="form_grp form_inline">
-                  <label for="username">讀者帳號:</label>
-                  <input name="username" type="text" placeholder="請輸入文字">
-                </div>
-                <div class="form_grp form_inline">
-                  <label for="password">讀者密碼:</label>
-                  <input name="password" type="password" placeholder="請輸入密碼">
-                </div>
-                <div class="btn_grp">
-                  <input name="" type="submit" value="登入" />
-                </div>
-                <div class="unable_login">
-                  <h3><span>無法登入?</span></h3>
-                  <input name="" type="button" value="忘記密碼" />
-                  <input name="" type="button" value="網路辦證" />
-                </div>
-              </form>
+          <!-- 會員紀錄 start -->
+          <div class="member_record">
+            <!-- 收藏紀錄 start-->
+            <div class="heart"><a href="javascript:;"><img src="images/icon_collect.png" alt="收藏紀錄"></a></div>
+            <!-- 收藏紀錄 end-->
+            <!-- 會員資料 start -->
+            <div class="member_name">王小明</div>
+            <div class="member_pic"><a href="#"><img src="images/featured_people04.jpg" alt="照片"></a><span>555</span></div>
+            <div class="member_data">
+              <ul>
+                <li><a href="#">我的帳戶</a>
+                  <ul>
+                    <li><a href="#">我的主頁</a></li>
+                    <li><a href="#">修改個人資料</a></li>
+                    <li><a href="#">待繳費用/罰則紀錄</a></li>
+                    <li><a href="#">與圖書館對話</a></li>
+                    <li><a href="#">借閱證線上掛失</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">我的閱讀紀錄</a>
+                  <ul>
+                    <li><a href="#">我的借閱紀錄</a></li>
+                    <li><a href="#">我的預約記錄</a></li>
+                    <li><a href="#">我的跨館通閱清單</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">我的書櫃</a>
+                  <ul>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">我的標籤</a></li>
+                    <li><a href="#">評分/評論紀錄</a></li>
+                    <li><a href="#">我的推薦採購書籍</a></li>
+                    <li><a href="#">我的興趣主題</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">其他紀錄</a>
+                  <ul>
+                    <li><a href="#">我的借閱歷史紀錄</a></li>
+                    <li><a href="#">我的預約歷史紀錄</a></li>
+                    <li><a href="#">我的跨館通閱歷史紀錄</a></li>
+                    <li><a href="#">我的罰則歷史紀錄</a></li>
+                    <li><a href="#">我的查詢歷史紀錄</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="signout">登出</a></li>
+              </ul>
             </div>
+            <!-- 會員資料 end -->
           </div>
-          <!-- 登入燈箱end-->
+          <!-- 會員紀錄 end-->
         </nav>
         <!-- 手機才出現的按鈕 start -->
-        <div class="login  loginbtn login_mobile_btn">
-          <button type="button" class="btn btn-sm">登入</button>
+        <!-- 會員紀錄 start -->
+        <div class="member_record member_mobile_btn">
+          <!-- 會員資料 start -->
+          <div class="member_pic"><a href="#"><img src="images/featured_people04.jpg" alt="照片"></a>
+            <span>5</span>
+          </div>
+          <div class="member_data">
+            <ul>
+              <li><a href="#">我的帳戶</a>
+                <ul>
+                  <li><a href="#">我的主頁</a></li>
+                  <li><a href="#">修改個人資料</a></li>
+                  <li><a href="#">待繳費用/罰則紀錄</a></li>
+                  <li><a href="#">與圖書館對話</a></li>
+                  <li><a href="#">借閱證線上掛失</a></li>
+                </ul>
+              </li>
+              <li><a href="#">我的閱讀紀錄</a>
+                <ul>
+                  <li><a href="#">我的借閱紀錄</a></li>
+                  <li><a href="#">我的預約記錄</a></li>
+                  <li><a href="#">我的跨館通閱清單</a></li>
+                </ul>
+              </li>
+              <li><a href="#">我的書櫃</a>
+                <ul>
+                  <li><a href="#">我的收藏</a></li>
+                  <li><a href="#">我的標籤</a></li>
+                  <li><a href="#">評分/評論紀錄</a></li>
+                  <li><a href="#">我的推薦採購書籍</a></li>
+                  <li><a href="#">我的興趣主題</a></li>
+                </ul>
+              </li>
+              <li><a href="#">其他紀錄</a>
+                <ul>
+                  <li><a href="#">我的借閱歷史紀錄</a></li>
+                  <li><a href="#">我的預約歷史紀錄</a></li>
+                  <li><a href="#">我的跨館通閱歷史紀錄</a></li>
+                  <li><a href="#">我的罰則歷史紀錄</a></li>
+                  <li><a href="#">我的查詢歷史紀錄</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="signout">登出</a></li>
+            </ul>
+          </div>
+          <!-- 會員資料 end -->
         </div>
+        <!-- 會員紀錄 end-->
         <!-- 手機才出現的按鈕 end -->
-
         <!-- noscript -->
         <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a
             href="javascript:;">網站導覽</a>
@@ -156,23 +216,97 @@
     <!-- main Start -->
     <div id="center" class="main">
       <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
-      <!-- 一般標題start -->
-      <section class="section col-12 general_block">
+      <!-- 我的書房start -->
+      <section class="section col-12 mystudyname">
         <div class="container">
           <div class="col">
-            <div class="general_title">為您選書</div>
-            <!-- <div class="RSS_button">
-                            <a href="#" class="btn">RSS</a>
-                        </div> -->
+            <div class="member_pic"><a href="#"><img src="images/featured_people04.jpg" alt="照片"></a>
+              <span>555</span>
+            </div>
+            <div class="nameblock">
+              <h2>我的個人書房</h2>
+              <div class="name"><em>HI ! 王小明您好，<span>A111222233</span></em>歡迎來到您的專屬書房</div>
+              <div class="mystudybtn">
+                <input type="button" name="" class="btnstyle whitebg" value="檢視閱讀權限" id="read_permissionbtn">
+                <input type="button" name="" class="btnstyle whitebg" value="登出">
+                <input type="button" name="" class="btnstyle whitebg linedel" value="借閱證切換" id="read_permissionbtn">
+                <input type="button" name="" class="btnstyle whitebg linedel" value="通知時間" id="read_permissionbtn">
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <!-- 一般標題end -->
+      <!-- 我的書房end -->
+      <!-- 檢視閱讀權限燈箱start -->
+      <div class="lightboxstyle" id="read_permissionstyle">
+        <div class="overlay"></div>
+        <div class="lightboxstyle_block">
+          <div class="close"></div>
+          <h2>檢視閱讀權限</h2>
+          <form>
+            <div class="lightbox_data">
+              <p>借閱件數：(本/件/間/張)</p>
+              <div class="listdata">
+                <ul>
+                  <li>教授指定參考資料：<em>2</em> 件</li>
+                  <li>教授指定參考資料：<em>2</em> 件</li>
+                  <li>教授指定參考資料：<em>2</em> 件</li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- 檢視閱讀權限燈箱end -->
       <!-- 分欄start -->
       <div class="maincolumn">
         <div class="container">
+          <!-- 左欄 start  -->
+          <div class="mainleftblock">
+            <div class="mainleftcontent">
+              <!-- 我的書房menu start -->
+              <div class="mystudymenu">
+                <ul>
+                  <li><a href="javascript:;">我的帳戶</a>
+                    <ul>
+                      <li><a href="javascript:;">我的主頁</a></li>
+                      <li><a href="javascript:;">修改個人資料</a></li>
+                      <li><a href="javascript:;">待繳費用/罰則紀錄</a></li>
+                      <li><a href="javascript:;">與圖書館對話</a></li>
+                      <li><a href="javascript:;">借閱證線上掛失</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:;">我的閱讀紀錄</a>
+                    <ul>
+                      <li><a href="javascript:;">我的借閱紀錄</a></li>
+                      <li><a href="javascript:;">我的預約記錄</a></li>
+                      <li><a href="javascript:;">我的跨館通閱清單</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:;">我的書櫃</a>
+                    <ul>
+                      <li><a href="javascript:;">我的收藏</a></li>
+                      <li><a href="javascript:;">我的標籤</a></li>
+                      <li><a href="javascript:;">評分/評論紀錄</a></li>
+                      <li><a href="javascript:;">我的推薦採購書籍</a></li>
+                      <li><a href="javascript:;">我的興趣主題</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:;">AI推薦書籍</a>
+                    <ul>
+                      <li><a href="javascript:;">推薦適合我的新書</a></li>
+                      <li><a href="javascript:;">尋找借閱相似書</a></li>
+                      <li><a href="javascript:;">專屬推薦設定</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!-- 我的書房menu end -->
+            </div>
+          </div>
+          <!-- 左欄 end  -->
           <!-- 右欄 start  -->
-          <div class="mainrightblock2">
+          <div class="mainrightblock">
             <!-- 右欄左線start -->
             <div class="rightlineblock">
               <!-- 路徑start -->
@@ -180,64 +314,54 @@
                 <span>現在位置：</span>
                 <ul>
                   <li><a href="javascript:;">首頁</a></li>
-                  <li>為您選書</li>
+                  <li><a href="#">節點</a></li>
+                  <li>節點</li>
                 </ul>
               </div>
               <!-- 路徑end-->
-              <!-- 為您選書tab start -->
-              <div class="bookselection_tab">
-                <div class="sort"><a href="#">AI資訊分析取用同意書</a></div>
-                <div class="sort"><a href="#" class="here">您的專屬閱讀描述與推薦</a></div>
-                <div class="sort"><a href="#">閱讀分析統計</a></div>
+
+              <!-- 資料全部 start-->
+              <div class="data_all">
+                <div class="data_quantity2"><span>共<em>235</em>筆符合資料</span><span class="sorticon mobile_visible"><a href="#"><img src="images/sort.svg"></a></span>
+                  <div class="optionblock">
+                    <div class="option_01">
+                      <div class="name"><a href="javascript:;">排序方式</a></div>
+                      <div class="option_list">
+                        <ul>
+                          <li><a href="#">熱門借閱</a></li>
+                          <li><a href="#" class="here">熱門預約</a></li>
+                          <li><a href="#">熱門點閱</a></li>
+                          <li><a href="#">熱門評分/評論</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="option_01">
+                      <div class="name"><a href="javascript:;">檢視方式</a></div>
+                      <div class="option_list">
+                        <ul>
+                          <li><a href="#">熱門借閱</a></li>
+                          <li><a href="#">熱門預約</a></li>
+                          <li><a href="#">熱門點閱</a></li>
+                          <li><a href="#">熱門評分/評論</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <!-- 為您選書tab end -->
+              <!-- 資料全部 end-->
               <!-- AIgpt_block start -->
-              <div class="AI_block">
+              <div class="AI_block studyroom">
                 <div class="AIgptgroup">
-                  <div class="title">推薦給您的閱讀書單</div>
                   <div class="directions">
                     <div class="content">
-                      <p>系統利用AI人工智慧-大型語言模型(例如ChatGPT)技術輔助，已產生您的專屬「閱讀描述」以及「推薦書單」。</p>
-                      <div class="directions">說明：</div>
-                      <ul>
-                        <li>在完成一次閱讀描述分析後，您每借閱30本圖書以上，系統將再次為您提供新一輪的閱讀描述分析與推薦。</li>
-                        <li>AI生成內容可能產生錯誤，重要內容敬請詳加檢查。</li>
-                      </ul>
+                      <p>AI推薦適合您的新到館書籍。</p>
                     </div>
                   </div>
-                  <!-- 描述 -->
-                  <div class="describe">
-                    <div class="title">專屬閱讀描述</div>
-                    <button type="button" class="btn btn-gray openclosebtn">展開</button>
-                    <!-- p加上class="singleline" 只顯示單行... -->
-                    <p class="singleline">
-                      您是一位熱愛自我成長與探索的讀者。您的書單中，充滿了有關心靈成長的書籍，這些作品圍繞著個人的成長與自我實現，如《五感全開:充滿驚喜和意義的一年》、《第二座山:當世俗成就不再滿足你,你要如何為生命找到意義?》等。此外，您對生態與動物保護有深刻的興趣，如《野生動物大聲講》、《擁抱,台灣的精靈。》等書籍都在您的閱讀清單上。您的書單也包含了許多旅行文學，顯示出您的探索精神與對世界的熱愛。最後，您對社會議題與哲學思考也有著深厚的興趣，透過閱讀如《美學:打開未知的美感體驗》、《生物多樣性:守護生態基因庫,一同為地球物種共生努力》等書籍，您在思考人生哲理與社會現象。
-                    </p>
-                  </div>
+
                   <!-- AI推薦書單 -->
                   <div class="AIrecommendbook">
-                    <div class="AIinformation">
-                      <div class="AIpage">共<span>30</span>筆，<input type="text" name="" id="" value="1">/ 3 頁 <button type="button" class="btn  prev">上一頁</button><button type="button" type="button"
-                          class="btn  next">下一頁</button>
-                      </div>
-                      <div class="AIselect">
-                        <select id="selectSample" name="">
-                          <option value="">列表顯示</option>
-                          <option value="">並排顯示</option>
-                        </select>
-                        <select id="selectSample" name="">
-                          <option value="">相近值大－小</option>
-                          <option value="">相近值小－大</option>
-                          <option value="">出版年新－舊</option>
-                          <option value="">出版年舊－新</option>
-                        </select>
-                        <select id="selectSample" name="">
-                          <option value="">10筆</option>
-                          <option value="">25筆</option>
-                          <option value="">50筆</option>
-                        </select>
-                      </div>
-                    </div>
+
                     <!-- 1 -->
                     <div class="recommendbook_list">
                       <div class="feature_options">
@@ -388,31 +512,13 @@
                         </div>
                       </div>
                     </div>
-                    <!--  -->
-                    <div class="AIinformation">
-                      <div class="AIselect">
-                        <select id="selectSample" name="">
-                          <option value="">列表顯示</option>
-                          <option value="">並排顯示</option>
-                        </select>
-                        <select id="selectSample" name="">
-                          <option value="">相近值大－小</option>
-                          <option value="">相近值小－大</option>
-                          <option value="">出版年新－舊</option>
-                          <option value="">出版年舊－新</option>
-                        </select>
-                        <select id="selectSample" name="">
-                          <option value="">10筆</option>
-                          <option value="">25筆</option>
-                          <option value="">50筆</option>
-                        </select>
-                      </div>
-                    </div>
+
                     <!--  -->
                   </div>
                 </div>
               </div>
               <!-- AIgpt_block end -->
+
             </div>
             <!-- 右欄左線end -->
           </div>
@@ -470,28 +576,6 @@
     <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
   </div>
   <div class="add_tobeseen"><a href="javascript:;"><span>99</span></a></div>
-  <!-- 燈箱區塊 start-->
-  <!-- 檢視閱讀權限燈箱start -->
-  <div class="lightboxstyle" id="read_permissionstyle">
-    <div class="overlay"></div>
-    <div class="lightboxstyle_block">
-      <div class="close"></div>
-      <h2>檢視閱讀權限</h2>
-      <form>
-        <div class="lightbox_data">
-          <p>借閱件數：(本/件/間/張)</p>
-          <div class="listdata">
-            <ul>
-              <li>教授指定參考資料：<em>2</em> 件</li>
-              <li>教授指定參考資料：<em>2</em> 件</li>
-              <li>教授指定參考資料：<em>2</em> 件</li>
-            </ul>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-  <!-- 檢視閱讀權限燈箱end -->
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="vendor/jquery.easing.min.js"></script>

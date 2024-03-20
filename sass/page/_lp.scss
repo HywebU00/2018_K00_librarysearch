@@ -443,6 +443,14 @@
 //書本條列
 .booklist_block {
   clear: both;
+  .directions {
+    line-height: 1.8em;
+    padding: 1em 1.5em;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+
+    margin: 1em 1em 0.5em;
+  }
   &.mystudyooklist {
     .booklist2 {
       .bookmidblock {
@@ -703,6 +711,8 @@
           &.word_title {
             font-size: 1.125em;
             position: relative;
+            display: block;
+            margin-bottom: 0.5em;
             &:before {
               display: none;
             }
