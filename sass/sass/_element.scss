@@ -198,12 +198,17 @@ img.img-responsive {
     }
     &:before {
       position: absolute; // outline: 1px solid red;
-      top: 0.5em;
+      top: 50%;
       left: 0px;
+      transform: translateY(-50%);
       text-align: right;
       width: 30px;
       counter-increment: counter;
       content: counters(counter, '.') ' . ';
+      @include screen('mobile') {
+        top: 0.6em;
+        transform: none;
+      }
     }
     .update,
     .file_view {
@@ -230,15 +235,47 @@ img.img-responsive {
     }
     span {
       flex: 0 0 auto;
-      color: #333;
-      padding-top: 0.3em;
+      color: #999;
+      padding: 0 0.3em;
     }
     .valuedata {
       flex: 1 1 auto;
-      padding-top: 0.3em;
-      text-align: right;
+      text-align: left;
       display: none;
       word-break: break-all;
+      background-color: #fef3d0;
+      padding: 0.8em 1em;
+      border-radius: 5px;
+      margin-left: 1em;
+      @include screen('mobile') {
+        margin-left: 0;
+        margin-top: 0.3em;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: disc;
+
+        li {
+          padding: 0.2em 0.3em 0.2em 1em;
+          border-bottom: 0;
+          margin-bottom: 0.5em;
+          &:before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50px;
+            background-color: #333;
+            position: absolute;
+            left: 0;
+            top: 1em;
+            @include screen('mobile') {
+              top: 0.8em;
+            }
+          }
+        }
+      }
+
       span {
         padding: 0;
         color: $color-red;
@@ -255,7 +292,7 @@ img.img-responsive {
       line-height: 1.45em;
       @include text-overflow;
       &.directions_icon {
-        padding: 0 0.3em;
+        padding: 0;
         img {
           width: 22px;
           vertical-align: middle;
