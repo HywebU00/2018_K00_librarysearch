@@ -4533,24 +4533,32 @@
             position: relative;
             &:before {
               content: '';
-              width: 1px;
-              height: 12px;
-              background-color: #000;
-              transform: rotate(45deg);
+              background-image: url('../images/icon/icon_close.svg');
+              background-repeat: no-repeat;
+              background-size: 14px;
+              background-position: center;
               position: absolute;
-              left: 0.9em;
-              top: 14px;
+              width: 14px;
+              height: 14px;
+              left: 8px;
+              top: 50%;
+              transform: translateY(-50%);
+              // background-color: #000;
+              // transform: rotate(45deg) translateY(-50%);
+              // position: absolute;
+              // left: 0.5em;
+              // top: 50%;
             }
-            &:after {
-              content: '';
-              width: 1px;
-              height: 12px;
-              background-color: #000;
-              transform: rotate(-45deg);
-              position: absolute;
-              left: 0.9em;
-              top: 14px;
-            }
+            // &:after {
+            //   content: '';
+            //   width: 1px;
+            //   height: 12px;
+            //   background-color: #000;
+            //   transform: rotate(-45deg) translateY(-50%);
+            //   position: absolute;
+            //   left: 1em;
+            //   top: 50%;
+            // }
             &:hover {
               background-color: darken($color: #fed857, $amount: 10);
             }
@@ -5038,5 +5046,165 @@
   input[type='submit'] {
     margin-top: 0;
     margin-bottom: 0;
+  }
+}
+// 過場頁
+.transitions_block {
+  position: fixed;
+  width: 60vw;
+  height: auto;
+  background-color: rgba(67, 67, 67, 1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: auto;
+  z-index: 99;
+  color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 3em;
+  box-sizing: border-box;
+  font-size: 1em;
+  @media (max-width: 1200px) {
+    width: 70vw;
+  }
+  @media (max-width: 992px) {
+    width: 80vw;
+    padding: 2em;
+  }
+  @media (max-width: 767px) {
+    width: 90vw;
+    padding: 1em;
+  }
+  @media (max-width: 575px) {
+    width: 100vw;
+    height: 100vh;
+  }
+  .directions {
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.188em;
+    line-height: 1.6em;
+    em {
+      font-style: normal;
+      padding: 0 0.2em;
+      font-weight: bolder;
+    }
+  }
+  .dynamic_pic {
+    margin-bottom: 1em;
+    $radius_d21: 50; // 大圓半徑
+    $speed_d21: 0.7s; // 動畫速度
+
+    .frame {
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      width: 300px;
+      height: 100px;
+      margin: 0 auto;
+      // position: relative;
+      // border-radius: 2px;
+      // box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+      // background: #2c2e2e;
+      // overflow: hidden;
+      transform: scale(0.8);
+    }
+
+    .day21 {
+      position: relative;
+      .pacman {
+        position: absolute;
+        width: ($radius_d21 * 2) + px; // 100px
+        height: ($radius_d21 * 2) + px; // 100px
+        // top: ((400 - ($radius_d21 * 2))/2) + px; // 150px
+        // left: ((400 - ($radius_d21 * 2))/2) + px; // 150px
+        fill: none;
+        stroke: #f4d146;
+        stroke-width: 50 + px;
+        stroke-dasharray: ($radius_d21 * 3.14); // 半圓周長
+        animation: mouth_d21 $speed_d21 ease-in-out infinite;
+      }
+
+      .eye {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 20px;
+        left: 50px;
+        fill: #2c2e2e;
+        animation: eye_d21 $speed_d21 ease-in-out infinite;
+      }
+
+      .dots {
+        position: absolute;
+        height: 14px;
+        width: 400px;
+        top: 40px; // 193 + 7 = 200 中心點
+        left: 50px; // 中心偏左
+        stroke: #f4d146;
+        stroke-width: 14px;
+        stroke-dasharray: 0px 50px;
+        stroke-linecap: round;
+        animation: points_d21 $speed_d21 linear infinite;
+        stroke-dashoffset: 14;
+      }
+    }
+
+    @keyframes mouth_d21 {
+      0%,
+      100% {
+        translate: -10px;
+        stroke-dashoffset: 0;
+        rotate: 0deg;
+      }
+      50% {
+        translate: 5px;
+        stroke-dashoffset: ($radius_d21 * 3.14/4);
+        rotate: 45deg;
+      }
+    }
+
+    @keyframes eye_d21 {
+      0%,
+      100% {
+        translate: 0px;
+      }
+      50% {
+        translate: -6px -3px;
+      }
+    }
+
+    @keyframes points_d21 {
+      0% {
+        stroke-dashoffset: 14;
+      }
+      100% {
+        stroke-dashoffset: 64;
+      }
+    }
+  }
+  .project_group {
+    padding: 2em;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    overflow-y: scroll;
+    height: calc(100% - 200px);
+    .project_title {
+      margin-bottom: 0;
+      font-size: 1.125em;
+      background-color: #000;
+      display: inline-block;
+      padding: 0.5em 1em;
+      border-radius: 20px;
+      letter-spacing: 0.02em;
+      color: $color-yellow;
+    }
+    p {
+      line-height: 1.8em;
+    }
+    @media (max-width: 767px) {
+      padding: 1.5em 1em;
+    }
   }
 }
