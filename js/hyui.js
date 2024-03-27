@@ -244,7 +244,9 @@ $(function () {
       });
       // 點外面關閉
       $(document).on('touchend click', function (e) {
-        var container = $('.language >a, .language ul li a, .form_search, .prompt3, .prompt_btn, .member_pic, .optionblock .option_01 .name, .bookplace_list, .prompt, .prompt2, .open_innertable, .shelf_btn, .addtag .addinput, .lightboxstyle .editlabeldata .editlabel');
+        var container = $(
+          '.language >a, .language ul li a, .form_search, .prompt3, .prompt_btn, .member_pic, .optionblock .option_01 .name, .bookplace_list, .prompt, .prompt2, .open_innertable, .shelf_btn, .addtag .addinput, .lightboxstyle .editlabeldata .editlabel, .file_download ul li a.directions_icon, .related_linksblock ul li a.directions_icon'
+        );
         if (!container.is(e.target) && container.has(e.target).length === 0) {
           $('.language ul, .recent_searches, .prompt_block3, .promptblock, .member_data, .optionblock .option_01 .option_list, .prompt_block, .prompt_block2, .shelf_block').slideUp();
           $('.bookplace_list .innertable').slideUp(0);
@@ -253,6 +255,8 @@ $(function () {
           $('.open_innertable').removeClass('active');
           $('.addtag .addoption ').slideUp(0);
           $('.lightboxstyle .editlabeldata .addoption ').slideUp(0);
+          $('.file_download ul li .valuedata').fadeOut(0);
+          $('.related_linksblock ul li .valuedata').fadeOut(0);
         }
       });
       //縮限查詢範圍

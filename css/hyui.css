@@ -2737,17 +2737,29 @@ img.img-responsive {
   counter-reset: counter;
   list-style-type: none;
   padding: 0;
-  margin-left: 0;
-}
-@media screen and (max-width: 767px) {
-  .file_download ul {
-    margin-left: 0;
-  }
+  margin: 0;
 }
 .file_download li {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 0 !important;
   border-bottom: 1px solid #ccc;
+  padding: 0.5em 0 0.5em 45px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .file_download li {
+    flex-wrap: wrap;
+  }
+}
+.file_download li:before {
+  position: absolute;
+  top: 0.5em;
+  left: 0px;
+  text-align: right;
+  width: 30px;
+  counter-increment: counter;
+  content: counters(counter, ".") " . ";
 }
 .file_download li .update,
 .file_download li .file_view {
@@ -2780,31 +2792,43 @@ img.img-responsive {
     margin-left: 5px;
   }
 }
+.file_download li span {
+  flex: 0 0 auto;
+  color: #333;
+  padding-top: 0.3em;
+}
+.file_download li .valuedata {
+  flex: 1 1 auto;
+  padding-top: 0.3em;
+  text-align: right;
+  display: none;
+  word-break: break-all;
+}
+.file_download li .valuedata span {
+  padding: 0;
+  color: #dc0122;
+}
+@media screen and (max-width: 767px) {
+  .file_download li .valuedata {
+    flex-basis: 100%;
+    text-align: left;
+  }
+}
 .file_download li a {
-  padding: 0.2em 0px 0.2em 45px;
+  flex: 0 0 auto;
+  padding: 0;
   position: relative;
-  height: auto;
   line-height: 1.45em;
-  display: inline-block;
-  width: 45%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.file_download li a:before {
-  position: absolute;
-  top: 2px;
-  left: 0px;
-  text-align: right;
-  width: 30px;
-  counter-increment: counter;
-  content: counters(counter, ".") " . ";
+.file_download li a.directions_icon {
+  padding: 0 0.3em;
 }
-@media screen and (max-width: 767px) {
-  .file_download li a {
-    margin-right: 0px;
-    width: 85%;
-  }
+.file_download li a.directions_icon img {
+  width: 22px;
+  vertical-align: middle;
 }
 .file_download li a .kb {
   font-size: 0.75em;
@@ -12771,22 +12795,22 @@ body.fix {
   text-align: center;
   background-color: #666;
   color: #fff;
-  padding: 10px 15px;
+  padding: 10px;
 }
 .hotqa_block .related_linksblock ul {
-  margin: 10px 30px 30px;
+  margin: 10px 20px 20px;
   padding: 0;
 }
 .hotqa_block .related_linksblock ul li {
   list-style: none;
-}
-.hotqa_block .related_linksblock ul li a {
-  display: block;
-  padding: 5px 5px 5px 15px;
-  border-bottom: 1px solid #eee;
   position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 5px 5px 5px 15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.hotqa_block .related_linksblock ul li a:before {
+.hotqa_block .related_linksblock ul li:before {
   content: "";
   width: 6px;
   height: 6px;
@@ -12795,6 +12819,45 @@ body.fix {
   left: 0;
   top: 15px;
   background-color: #333;
+}
+.hotqa_block .related_linksblock ul li span {
+  flex: 0 0 auto;
+  color: #333;
+  padding-top: 0.3em;
+}
+.hotqa_block .related_linksblock ul li .valuedata {
+  flex: 1 1 auto;
+  padding-top: 0.3em;
+  display: none;
+  word-break: break-all;
+}
+.hotqa_block .related_linksblock ul li .valuedata span {
+  padding: 0;
+  color: #dc0122;
+}
+@media screen and (max-width: 767px) {
+  .hotqa_block .related_linksblock ul li .valuedata {
+    flex-basis: 100%;
+  }
+}
+.hotqa_block .related_linksblock ul li a {
+  flex: 0 0 auto;
+  padding: 0;
+  position: relative;
+  line-height: 1.45em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.hotqa_block .related_linksblock ul li a.directions_icon {
+  padding: 0 0.3em;
+}
+.hotqa_block .related_linksblock ul li a.directions_icon img {
+  width: 22px;
+  vertical-align: middle;
+}
+.hotqa_block .related_linksblock ul li a:hover, .hotqa_block .related_linksblock ul li a:focus {
+  color: #dd1f03 !important;
 }
 
 .devicereservation_block {
