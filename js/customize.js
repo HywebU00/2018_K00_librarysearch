@@ -1150,6 +1150,20 @@ $(function () {
     $('#AIGPT_morestyle').fadeOut();
     $('body').removeClass('fix');
   });
+  // AIGPT探索相似書燈箱
+  $('.similarbooks_btn').click(function () {
+    $('#AIGPT_morestyle').fadeOut();
+    $('#AIGPT_similarbooks').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.lightboxbank_style_block .close').click(function () {
+    $('#AIGPT_similarbooks').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#AIGPT_similarbooks').fadeOut();
+    $('body').removeClass('fix');
+  });
   // SDG閱讀紀錄
   $('.sdg_readingbtn').click(function () {
     $('#sdg_readingstyle').fadeIn();
