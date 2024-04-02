@@ -2189,8 +2189,8 @@ $(function () {
 // 最新消息說明按鈕
 $(function () {
   $('.file_download ul li a.directions_icon').click(function () {
-    $(this).next('.valuedata').fadeIn();
-    $(this).parent().siblings('li').find('.valuedata').fadeOut();
+    $(this).next('.valuedata').show();
+    $(this).parent().siblings('li').find('.valuedata').hide();
   });
 });
 // 單一問題頁面

@@ -198,10 +198,12 @@ input[type='button'] {
   @extend %btn;
   @include btn_setting($color-darkgray, #fff);
   width: auto;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
 }
 input[type='submit'] {
   @extend %btn;
   @include btn_setting(nth($primaryColor, $style), #fff);
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
 }
 textarea {
   @include formStyle();
@@ -251,6 +253,7 @@ input[type='reset'] {
   @extend %btn;
   @include btn_setting($color-darkgray, #fff);
   text-shadow: none;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
 }
 //---------------------------------------------checkbox & radio--------//
 input[type='checkbox'],
