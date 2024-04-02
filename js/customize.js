@@ -2196,7 +2196,7 @@ $(function () {
 // 單一問題頁面
 $(function () {
   $('.related_linksblock ul li a.directions_icon').click(function () {
-    $(this).next('.valuedata').fadeIn();
-    $(this).parent().siblings('li').find('.valuedata').fadeOut();
+    $(this).next('.valuedata').show();
+    $(this).parent().siblings('li').find('.valuedata').hide();
   });
 });
