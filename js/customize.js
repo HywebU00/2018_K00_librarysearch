@@ -1311,6 +1311,32 @@ $(function () {
     $('#discussionroom_style2').fadeOut();
     $('body').removeClass('fix');
   });
+  // 專屬書單燈箱
+  $('.exclusivebook_btn').click(function () {
+    $('#exclusivebookstyle').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.lightboxstyle_block .close').click(function () {
+    $('#exclusivebookstyle').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#exclusivebookstyle').fadeOut();
+    $('body').removeClass('fix');
+  });
+  // 待看清單燈箱
+  $('.toseelist_btn').click(function () {
+    $('#toseelist_style').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.lightboxstyle_block .close').click(function () {
+    $('#toseelist_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#toseelist_style').fadeOut();
+    $('body').removeClass('fix');
+  });
   //加入日曆
   $('.addcalendar_btn').click(function () {
     $('#addcalendar_style').fadeIn();

@@ -4373,7 +4373,7 @@ footer ul li a {
 .function ul li button,
 .function ul li a {
   display: block;
-  padding: 0.2em 1em 0.2em 2em;
+  padding: 0.2em 1em 0.2em 1.5em;
   background-color: #fff;
   border: 1px solid #d3d3d3;
   color: #333;
@@ -4387,8 +4387,12 @@ footer ul li a {
 .function ul li.icon_back:before {
   background: url(../images/icon_back.png) no-repeat center center;
   position: absolute;
-  top: 5px;
+  top: 50%;
   left: 5px;
+  transform: translateY(-50%);
+}
+.function ul li.icon_back a {
+  padding: 0.2em 1em 0.2em 2em;
 }
 @media (max-width: 480px) {
   .function ul li.icon_pre a {
@@ -4398,8 +4402,9 @@ footer ul li a {
 .function ul li.icon_pre:before {
   background: url(../images/icon_pre.png) no-repeat center center;
   position: absolute;
-  top: 5px;
+  top: 50%;
   left: 5px;
+  transform: translateY(-50%);
 }
 @media (max-width: 480px) {
   .function ul li.icon_pre:before {
@@ -4417,8 +4422,9 @@ footer ul li a {
 .function ul li.icon_next:before {
   background: url(../images/icon_next.png) no-repeat center center;
   position: absolute;
-  top: 5px;
+  top: 50%;
   right: 5px;
+  transform: translateY(-50%);
 }
 @media (max-width: 480px) {
   .function ul li.icon_next:before {
@@ -6831,7 +6837,7 @@ body.fix {
 }
 
 .lightboxstyle {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .lightboxstyle .lightboxstyle_block {
   width: 80vh;
@@ -6870,6 +6876,59 @@ body.fix {
   .lightboxstyle .lightboxstyle_block.block_extend {
     width: 100%;
   }
+}
+.lightboxstyle .lightboxstyle_block.fullyopen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  margin: 0;
+  border-radius: 0;
+  padding: 20px 0px 25px 10px;
+}
+.lightboxstyle .lightboxstyle_block.fullyopen h2 {
+  text-align: center;
+}
+.lightboxstyle .lightboxstyle_block.fullyopen .booklist_block {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow-y: auto;
+  height: calc(100vh - 100px);
+  padding-right: 10px;
+}
+.lightboxstyle .lightboxstyle_block.fullyopen .booklist_block .directions {
+  margin: 1em 0.5em 0.5em;
+}
+.lightboxstyle .lightboxstyle_block.fullyopen .booklist_block .data_all {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.5em;
+}
+.lightboxstyle .lightboxstyle_block.fullyopen .booklist_block .data_all .choosebtn {
+  flex: 1 1 auto;
+}
+@media screen and (max-width: 575px) {
+  .lightboxstyle .lightboxstyle_block.fullyopen .booklist_block .data_all .choosebtn {
+    flex-basis: 100%;
+  }
+}
+.lightboxstyle .lightboxstyle_block.fullyopen .booklist_block .data_all .choosebtn a {
+  margin-bottom: 5px;
+}
+.lightboxstyle .lightboxstyle_block.fullyopen .booklist_block .data_all .data_quantity2 {
+  flex: 0 0 auto;
+  text-align: right;
+}
+@media screen and (max-width: 575px) {
+  .lightboxstyle .lightboxstyle_block.fullyopen .booklist_block .data_all .data_quantity2 {
+    flex: 1 1 auto;
+    flex-basis: 100%;
+  }
+}
+.lightboxstyle .lightboxstyle_block.fullyopen .booklist_block .booklist .bookmidblock h2 {
+  border-bottom: none;
 }
 .lightboxstyle .lightboxstyle_block .close {
   position: absolute;
@@ -7514,6 +7573,10 @@ body.fix {
 .lightboxstyle .lightboxbank_style_block .bank_code_data .banklist ul li a {
   display: block;
 }
+.lightboxstyle .function {
+  padding: 0;
+  text-align: left;
+}
 
 .commentcontent_lightbox {
   position: fixed;
@@ -7692,7 +7755,7 @@ body.fix {
 .recommendbook_lightbox .bookselection_list {
   padding-right: 30px;
   height: 520px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 @media screen and (max-width: 1399px) {
   .recommendbook_lightbox .bookselection_list {
@@ -7830,7 +7893,7 @@ body.fix {
 }
 
 .method_block {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 50vh;
   border: 1px solid #ddd;
   padding: 20px;
@@ -8046,6 +8109,114 @@ body.fix {
 }
 .AIGPT_information .recommended_categories ul li a:hover {
   color: #dd1f03;
+}
+
+.exclusive_book {
+  display: flex;
+  flex-wrap: wrap;
+}
+.exclusive_book .booktitle {
+  flex: 1 1 auto;
+  color: #005d98;
+  font-size: 1.625em;
+  font-weight: bolder;
+  margin-bottom: 1em;
+  margin-top: 0;
+  padding-left: 1.8em;
+  position: relative;
+  line-height: 1.2em;
+}
+@media screen and (max-width: 767px) {
+  .exclusive_book .booktitle {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+.exclusive_book .booktitle:before {
+  content: "";
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-image: url("../images/icon_exclusivebook.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px;
+  background-color: rgba(221, 221, 221, 0.8666666667);
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+.exclusive_book .E_SDG_logo_block {
+  flex: 0 0 auto;
+  flex-basis: 35%;
+  max-width: 35%;
+  display: flex;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 767px) {
+  .exclusive_book .E_SDG_logo_block {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+.exclusive_book .E_SDG_logo_block .esdg_logo {
+  flex: 1 1 auto;
+}
+.exclusive_book .E_SDG_logo_block .esdg_logo img {
+  width: 100%;
+}
+.exclusive_book .E_SDG_logo_block span {
+  flex: 0 0 auto;
+  flex-basis: 40px;
+  max-width: 40px;
+  margin-left: 5px;
+}
+.exclusive_book .E_SDG_logo_block span a {
+  display: block;
+  padding: 6px 5px 5px;
+  background-color: #e1167e;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.25em;
+  text-align: center;
+}
+.exclusive_book .content {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  max-width: 100%;
+  border: 1px solid #ddd;
+  padding: 2em 1.5em 2em;
+  border-radius: 5px;
+  margin-bottom: 0;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px inset;
+}
+.exclusive_book .content .title {
+  font-size: 1.25em;
+  margin: 0 0 1em;
+  color: #b94b00;
+  padding: 0 0 0 1em;
+  position: relative;
+}
+.exclusive_book .content .title:before {
+  content: "";
+  width: 8px;
+  height: 20px;
+  background-color: #f1ad00;
+  transform: skewX(-15deg);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.exclusive_book .content p {
+  line-height: 1.8em;
+}
+.exclusive_book .content ul {
+  margin: 0 0 2em;
+  padding: 0;
+  list-style-type: none;
+}
+.exclusive_book .content ul li {
+  margin-bottom: 0.5em;
 }
 
 .section {
@@ -25761,7 +25932,7 @@ em.yellowbg {
 .bookselection_block .bookselection_group .rightblock .analysis_group.fixed {
   position: fixed;
   top: 55px;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100%;
   box-sizing: border-box;
   padding-bottom: 20px;
@@ -26857,6 +27028,13 @@ em.yellowbg {
   flex: 0 0 auto;
   padding-left: 1em;
 }
+.AIgptgroup .directions .contentother button.btn {
+  background-color: #005d98;
+  color: #fff;
+}
+.AIgptgroup .directions .contentother button.btn:hover, .AIgptgroup .directions .contentother button.btn:focus {
+  background-color: #004d7f;
+}
 @media screen and (max-width: 767px) {
   .AIgptgroup .directions {
     flex-wrap: wrap;
@@ -27477,6 +27655,10 @@ em.yellowbg {
   background-repeat: no-repeat;
   background-position: 10px 8px;
   background-size: 10px;
+}
+.AIgptgroup .AIrecommendbook .recommendbook_list .feature_options ul li.tobeseen a:focus {
+  color: #ed8301;
+  background-image: url("../images/feature_options02_active.svg");
 }
 .AIgptgroup .AIrecommendbook .recommendbook_list .feature_options ul li.moreinformation a {
   background-image: url("../images/feature_options03.svg");

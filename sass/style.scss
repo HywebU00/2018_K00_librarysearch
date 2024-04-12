@@ -119,6 +119,7 @@
   .search_field_lightbox,
   .related_lightbox,
   .lightboxstyle,
+  .lightboxstyle_block,
   .lightboxstyle_block2 {
     h2 {
       border-bottom: 2px solid nth($primaryColor, $style);
@@ -190,6 +191,11 @@
       }
     }
   }
+  .exclusive_book {
+    .booktitle {
+      color: nth($primaryColor, $style);
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -218,6 +224,16 @@
       .content {
         .directions {
           color: nth($linkColor, $style);
+        }
+      }
+      .contentother {
+        button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
         }
       }
       .reading_needs_block {
@@ -829,6 +845,7 @@
   .search_field_lightbox,
   .related_lightbox,
   .lightboxstyle,
+  .lightboxstyle_block,
   .lightboxstyle_block2 {
     h2 {
       border-bottom: 2px solid nth($primaryColor, $style);
@@ -900,6 +917,11 @@
       }
     }
   }
+  .exclusive_book {
+    .booktitle {
+      color: nth($primaryColor, $style);
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -931,6 +953,16 @@
       .content {
         .directions {
           color: nth($linkColor, $style);
+        }
+      }
+      .contentother {
+        button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
         }
       }
       .reading_needs_block {
@@ -1604,6 +1636,7 @@
   .search_field_lightbox,
   .related_lightbox,
   .lightboxstyle,
+  .lightboxstyle_block,
   .lightboxstyle_block2 {
     h2 {
       border-bottom: 2px solid nth($primaryColor, $style);
@@ -1675,6 +1708,11 @@
       }
     }
   }
+  .exclusive_book {
+    .booktitle {
+      color: nth($primaryColor, $style);
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -1712,6 +1750,16 @@
       .content {
         .directions {
           color: nth($linkColor, $style);
+        }
+      }
+      .contentother {
+        button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
         }
       }
       .reading_needs_block {
@@ -2659,6 +2707,7 @@
   .search_field_lightbox,
   .related_lightbox,
   .lightboxstyle,
+  .lightboxstyle_block,
   .lightboxstyle_block2 {
     h2 {
       border-bottom: 2px solid nth($primaryColor, $style);
@@ -2730,6 +2779,11 @@
       }
     }
   }
+  .exclusive_book {
+    .booktitle {
+      color: nth($primaryColor, $style);
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -2761,6 +2815,16 @@
       .content {
         .directions {
           color: nth($linkColor, $style);
+        }
+      }
+      .contentother {
+        button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
         }
       }
       .reading_needs_block {
@@ -3336,6 +3400,7 @@
   .search_field_lightbox,
   .related_lightbox,
   .lightboxstyle,
+  .lightboxstyle_block,
   .lightboxstyle_block2 {
     h2 {
       border-bottom: 2px solid nth($primaryColor, $style);
@@ -3407,6 +3472,11 @@
       }
     }
   }
+  .exclusive_book {
+    .booktitle {
+      color: nth($primaryColor, $style);
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -3451,6 +3521,16 @@
       .content {
         .directions {
           color: nth($linkColor, $style);
+        }
+      }
+      .contentother {
+        button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
         }
       }
       .reading_needs_block {
@@ -4022,6 +4102,7 @@
   .search_field_lightbox,
   .related_lightbox,
   .lightboxstyle,
+  .lightboxstyle_block,
   .lightboxstyle_block2 {
     h2 {
       border-bottom: 2px solid nth($primaryColor, $style);
@@ -4093,6 +4174,11 @@
       }
     }
   }
+  .exclusive_book {
+    .booktitle {
+      color: nth($primaryColor, $style);
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -4137,6 +4223,16 @@
       .content {
         .directions {
           color: nth($linkColor, $style);
+        }
+      }
+      .contentother {
+        button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
         }
       }
       .reading_needs_block {
@@ -4710,6 +4806,7 @@
   .search_field_lightbox,
   .related_lightbox,
   .lightboxstyle,
+  .lightboxstyle_block,
   .lightboxstyle_block2 {
     h2 {
       border-bottom: 2px solid nth($primaryColor, $style);
@@ -4781,6 +4878,11 @@
       }
     }
   }
+  .exclusive_book {
+    .booktitle {
+      color: nth($primaryColor, $style);
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -4825,6 +4927,16 @@
       .content {
         .directions {
           color: nth($linkColor, $style);
+        }
+      }
+      .contentother {
+        button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
         }
       }
       .reading_needs_block {
@@ -5400,6 +5512,7 @@
   .search_field_lightbox,
   .related_lightbox,
   .lightboxstyle,
+  .lightboxstyle_block,
   .lightboxstyle_block2 {
     h2 {
       border-bottom: 2px solid nth($primaryColor, $style);
@@ -5471,6 +5584,11 @@
       }
     }
   }
+  .exclusive_book {
+    .booktitle {
+      color: nth($primaryColor, $style);
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -5515,6 +5633,16 @@
       .content {
         .directions {
           color: nth($linkColor, $style);
+        }
+      }
+      .contentother {
+        button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
         }
       }
       .reading_needs_block {
@@ -6084,6 +6212,7 @@
   .search_field_lightbox,
   .related_lightbox,
   .lightboxstyle,
+  .lightboxstyle_block,
   .lightboxstyle_block2 {
     h2 {
       border-bottom: 2px solid nth($primaryColor, $style);
@@ -6155,6 +6284,11 @@
       }
     }
   }
+  .exclusive_book {
+    .booktitle {
+      color: nth($primaryColor, $style);
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -6186,6 +6320,16 @@
       .content {
         .directions {
           color: nth($linkColor, $style);
+        }
+      }
+      .contentother {
+        button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
         }
       }
       .reading_needs_block {

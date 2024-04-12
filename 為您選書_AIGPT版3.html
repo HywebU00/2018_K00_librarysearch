@@ -321,6 +321,11 @@
                       <div class="lightboxbank_style_block">
                         <div class="close"></div>
                         <h2>探索相似書</h2>
+                        <div class="function">
+                          <ul>
+                            <li class="icon_back"><a href="#">回上一頁</a></li>
+                          </ul>
+                        </div>
                         <form>
                           <div class="AIrecommendbook">
                             <div class="AIinformation">
@@ -438,6 +443,9 @@
                             </div>
                             <!--  -->
                             <div class="AIinformation">
+                              <div class="AIpage">共<span>30</span>筆，<input type="text" name="" id="" value="1">/ 3 頁 <button type="button" class="btn  prev">上一頁</button><button type="button"
+                                  type="button" class="btn  next">下一頁</button>
+                              </div>
                               <div class="AIselect">
                                 <select id="selectSample" name="">
                                   <option value="">列表顯示</option>
@@ -537,6 +545,9 @@
                     </div>
                     <!--  -->
                     <div class="AIinformation">
+                      <div class="AIpage">共<span>30</span>筆，<input type="text" name="" id="" value="1">/ 3 頁 <button type="button" class="btn  prev">上一頁</button><button type="button" type="button"
+                          class="btn  next">下一頁</button>
+                      </div>
                       <div class="AIselect">
                         <select id="selectSample" name="">
                           <option value="">列表顯示</option>
@@ -615,30 +626,270 @@
     </footer>
     <!-- footer end-->
     <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
-  </div>
-  <div class="add_tobeseen"><a href="javascript:;"><span>99</span></a></div>
-  <!-- 燈箱區塊 start-->
-  <!-- 檢視閱讀權限燈箱start -->
-  <div class="lightboxstyle" id="read_permissionstyle">
-    <div class="overlay"></div>
-    <div class="lightboxstyle_block">
-      <div class="close"></div>
-      <h2>檢視閱讀權限</h2>
-      <form>
-        <div class="lightbox_data">
-          <p>借閱件數：(本/件/間/張)</p>
-          <div class="listdata">
-            <ul>
-              <li>教授指定參考資料：<em>2</em> 件</li>
-              <li>教授指定參考資料：<em>2</em> 件</li>
-              <li>教授指定參考資料：<em>2</em> 件</li>
-            </ul>
+    <div class="add_tobeseen"><a href="javascript:;" class="toseelist_btn"><span>99</span></a></div>
+    <!-- 待看清單 燈箱start -->
+    <div class="lightboxstyle" id="toseelist_style">
+      <div class="overlay"></div>
+      <div class="lightboxstyle_block fullyopen">
+        <div class="close"></div>
+        <h2>待看清單</h2>
+        <form>
+          <!-- 書本條列 start -->
+          <div class="booklist_block">
+            <form>
+              <!-- booklist_area start booklist 範圍 -->
+              <div class="booklist_area">
+                <div class="directions">您可以將有興趣但目前沒有時間細看的書籍加入待看清單，作為未來追蹤書單使用喔~</div>
+                <div class="data_all">
+                  <div class="choosebtn"><a class="btnstyle whitebg">全選</a><a class="btnstyle bluebg">加入我的收藏</a><a class="btnstyle bluebg">加入標籤</a><a class="btnstyle redbg">取消待看</a></div>
+                  <div class="data_quantity2"><span>共<em>3</em>筆資料</span></span>
+                  </div>
+                </div>
+                <!-- 圖文條列start -->
+                <div class="booklist">
+                  <!-- 左 start-->
+                  <div class="bookleftblock">
+                    <label>
+                      <input type="checkbox" name="" value="">1. </label>
+                    <div class="book">
+                      <div class="image"><img src="images/bookcover.jpg"></div>
+                    </div>
+                  </div>
+                  <!-- 左 end-->
+                  <!-- 中 start-->
+                  <div class="bookmidblock">
+                    <!-- bookdata start -->
+                    <!-- 調整start -->
+                    <div class="bookdata">
+                      <h2><a href="cp01_詳目頁.html"><em class="yellowbg">813</em>之謎</a></h2>
+                      <ul>
+                        <li>條碼號：TEST1014</li>
+                        <li>索書號：2441 c.109</li>
+                      </ul>
+                      <ul>
+                        <li>借書日期：2021-11-19</li>
+                        <li>歸還日期：2021-11-25</li>
+                        <li>應還日期：2021-11-27</li>
+                      </ul>
+                      <ul>
+                        <li>流通狀態：已歸還</li>
+                      </ul>
+                      <ul>
+                        <li><a class="btnstyle bluebg " href="javascript:;"><img src="images/btnstyle_icon07_hover.png">電子書借閱</a><a class="btnstyle  greenbg" href="#">書籍簡介</a></li>
+                      </ul>
+                    </div>
+                    <!-- 調整end -->
+                    <!-- bookdata end -->
+                    <!-- bookshare start -->
+                    <div class="bookshare">
+                      <ul>
+                        <li><a href="#"><img src="images/book_share_icon01_2.png" alt=""></a></li>
+                        <!-- 當點選收藏後，愛心要變成紅色的 -->
+                      </ul>
+                    </div>
+                    <!-- bookshare end -->
+                    <!-- moreshare start-->
+                    <div class="moreshare">
+                      <ul>
+                        <li><a href="#"><img src="images/book_share_icon09.png" alt="查詢"></a></li>
+                        <li><a href="#"><img src="images/book_share_icon07.png" alt="轉寄他人"></a></li>
+                        <li><a href="#"><img src="images/book_share_icon05.png" alt="匯出格式"></a></li>
+                      </ul>
+                    </div>
+                    <!-- moreshare end-->
+                  </div>
+                  <!-- 中 end-->
+                </div>
+                <!-- 圖文條列end -->
+                <!-- 圖文條列start -->
+                <div class="booklist">
+                  <!-- 左 start-->
+                  <div class="bookleftblock">
+                    <label>
+                      <input type="checkbox" name="" value="">2. </label>
+                    <div class="book">
+                      <!-- <div class="image"><img src="images/newbook02.jpg"></div> -->
+                      <!-- 書封設計 -->
+                      <div class="image_titlepage">
+                        <div class="booktitle">看漫畫學.2. 題材選擇-虎牛蛇狗動物諺說</div>
+                        <div class="author"> 高尼克(Larry Gonick),奧華特(Alice Outwater)著 ; 陳瑞清譯. </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 左 end-->
+                  <!-- 中 start-->
+                  <div class="bookmidblock">
+                    <!-- bookdata start -->
+                    <div class="bookdata">
+                      <h2><a href="#" id="linkdetailpage">深度學習力：學歷貶值時代，MIT博士教你從大學就脫穎而出的75個成功法則</a></h2>
+                      <ul>
+                        <li>條碼號：TEST1014</li>
+                        <li>索書號：2441 c.109</li>
+                      </ul>
+                      <ul>
+                        <li>借書日期：2021-11-19</li>
+                        <li>歸還日期：2021-11-25</li>
+                        <li>應還日期：2021-11-27</li>
+                      </ul>
+                      <ul>
+                        <li>流通狀態：已歸還</li>
+                      </ul>
+                      <ul>
+                        <li><a class="btnstyle  graybg" href="#">探索相似書</a></li>
+                      </ul>
+
+                    </div>
+                    <!-- bookdata end -->
+                    <!-- bookshare start -->
+                    <div class="bookshare">
+                      <ul>
+                        <li><a href="#"><img src="images/book_share_icon01_2.png" alt=""></a></li>
+                        <!-- 當點選收藏後，愛心要變成紅色的 -->
+                      </ul>
+                    </div>
+                    <!-- bookshare end -->
+                    <!-- moreshare start-->
+                    <div class="moreshare">
+                      <ul>
+                        <li><a href="#"><img src="images/book_share_icon09.png" alt="查詢"></a></li>
+                        <li><a href="#"><img src="images/book_share_icon07.png" alt="轉寄他人"></a></li>
+                        <li><a href="#"><img src="images/book_share_icon05.png" alt="匯出格式"></a></li>
+                      </ul>
+                    </div>
+                    <!-- moreshare end-->
+                  </div>
+                  <!-- 中 end-->
+                </div>
+                <!-- 圖文條列end -->
+                <!-- 圖文條列start -->
+                <div class="booklist">
+                  <!-- 左 start-->
+                  <div class="bookleftblock">
+                    <label>
+                      <input type="checkbox" name="" value="">3. </label>
+                    <div class="book">
+                      <!-- 書封設計 -->
+                      <div class="image_titlepage2">
+                        <div class="booktitle">看漫畫學.2. 題材選擇-虎牛蛇狗動物諺說</div>
+                        <div class="author"> 高尼克(Larry Gonick),奧華特(Alice Outwater)著 ; 陳瑞清譯. </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- 左 end-->
+                  <!-- 中 start-->
+                  <div class="bookmidblock">
+                    <!-- bookdata start -->
+                    <div class="bookdata">
+                      <h2><a href="#">深度學習力：學歷貶值時代，MIT博士教你從大學就脫穎而出的75個成功法則學歷貶值時代，MIT博士教你從大學就脫穎而出的75個成功法則</a></h2>
+                      <ul>
+                        <li>條碼號：TEST1014</li>
+                        <li>索書號：2441 c.109</li>
+                      </ul>
+                      <ul>
+                        <li>借書日期：2021-11-19</li>
+                        <li>歸還日期：2021-11-25</li>
+                        <li>應還日期：2021-11-27</li>
+                      </ul>
+                      <ul>
+                        <li>流通狀態：已歸還</li>
+                      </ul>
+                      <ul>
+                        <li><a class="btnstyle  graybg" href="#">探索相似書</a></li>
+                      </ul>
+                    </div>
+                    <!-- bookdata end -->
+                    <!-- bookshare start -->
+                    <div class="bookshare">
+                      <ul>
+                        <li><a href="#"><img src="images/book_share_icon01_2.png" alt=""></a></li>
+                        <!-- 當點選收藏後，愛心要變成紅色的 -->
+                      </ul>
+                    </div>
+                    <!-- bookshare end -->
+                    <!-- moreshare start-->
+                    <div class="moreshare">
+                      <ul>
+                        <li><a href="#"><img src="images/book_share_icon09.png" alt="查詢"></a></li>
+                        <li><a href="#"><img src="images/book_share_icon07.png" alt="轉寄他人"></a></li>
+                        <li><a href="#"><img src="images/book_share_icon05.png" alt="匯出格式"></a></li>
+                      </ul>
+                    </div>
+                    <!-- moreshare end-->
+                  </div>
+                  <!-- 中 end-->
+                </div>
+                <!-- 圖文條列end -->
+                <!-- 圖文條列start -->
+                <div class="booklist">
+                  <!-- 左 start-->
+                  <div class="bookleftblock">
+                    <label>
+                      <input type="checkbox" name="" value="">1. </label>
+                    <div class="book">
+                      <div class="image"><img src="images/bookcover.jpg"></div>
+                    </div>
+                  </div>
+                  <!-- 左 end-->
+                  <!-- 中 start-->
+                  <div class="bookmidblock">
+                    <!-- bookdata start -->
+                    <!-- 調整start -->
+                    <div class="bookdata">
+                      <h2><a href="cp01_詳目頁.html"><em class="yellowbg">813</em>之謎</a></h2>
+                      <ul>
+                        <li>條碼號：TEST1014</li>
+                        <li>索書號：2441 c.109</li>
+                      </ul>
+                      <ul>
+                        <li>借書日期：2021-11-19</li>
+                        <li>歸還日期：2021-11-25</li>
+                        <li>應還日期：2021-11-27</li>
+                      </ul>
+                      <ul>
+                        <li>流通狀態：已歸還</li>
+                      </ul>
+                      <ul>
+                        <li><a class="btnstyle  graybg" href="#">探索相似書</a></li>
+                      </ul>
+                    </div>
+                    <!-- 調整end -->
+                    <!-- bookdata end -->
+                    <!-- bookshare start -->
+                    <div class="bookshare">
+                      <ul>
+                        <li><a href="#"><img src="images/book_share_icon01_2.png" alt=""></a></li>
+                        <!-- 當點選收藏後，愛心要變成紅色的 -->
+                      </ul>
+                    </div>
+                    <!-- bookshare end -->
+                    <!-- moreshare start-->
+                    <div class="moreshare">
+                      <ul>
+                        <li><a href="#"><img src="images/book_share_icon09.png" alt="查詢"></a></li>
+                        <li><a href="#"><img src="images/book_share_icon07.png" alt="轉寄他人"></a></li>
+                        <li><a href="#"><img src="images/book_share_icon05.png" alt="匯出格式"></a></li>
+                      </ul>
+                    </div>
+                    <!-- moreshare end-->
+                  </div>
+                  <!-- 中 end-->
+                </div>
+                <!-- 圖文條列end -->
+              </div>
+              <!-- booklist_area end booklist 範圍 -->
+
+
+            </form>
           </div>
-        </div>
-      </form>
+          <!-- 書本條列 end -->
+
+        </form>
+      </div>
     </div>
+    <!-- 待看清單 燈箱end -->
   </div>
-  <!-- 檢視閱讀權限燈箱end -->
+
 
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="vendor/jquery.easing.min.js"></script>

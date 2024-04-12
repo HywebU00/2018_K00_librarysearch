@@ -24,7 +24,7 @@
 
 <body>
     <!-- wrapper 最大寬度 -->
-    <div class="wrapper    version03 nowa havewa">
+    <div class="wrapper version03 nowa havewa">
         <!-- 直接跳主內容區 -->
         <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
         <!-- sidebar  start-->
@@ -131,7 +131,8 @@
                 </div>
                 <!-- 手機才出現的按鈕 end -->
                 <!-- noscript -->
-                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a href="javascript:;">網站導覽</a>
+                <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a
+                        href="javascript:;">網站導覽</a>
                 </noscript>
                 <!-- 手機版才出現的menu start-->
                 <div class="menu">
@@ -195,7 +196,7 @@
                                     <div class="leftblock">
                                         <div class="bookselection_list">
                                             <ul>
-                                                <li><a href="javascript:;">
+                                                <li><a href="javascript:;" class="exclusivebook_btn">
                                                         <div class="image_titlepage2">
                                                             <div class="booktitle">看漫畫學.2. 題材選擇-虎牛蛇狗動物諺說</div>
                                                             <div class="author"> 高尼克(Larry Gonick),奧華特(Alice Outwater)著 ; 陳瑞清譯. </div>
@@ -275,6 +276,40 @@
                                 </div>
                             </div>
                             <!-- 為您選書 end-->
+                            <!-- 書本燈箱start -->
+                            <div class="lightboxstyle" id="exclusivebookstyle">
+                                <div class="overlay"></div>
+                                <div class="lightboxstyle_block block_extend">
+                                    <div class="close"></div>
+                                    <h2>推薦資訊及延伸思考</h2>
+                                    <form>
+                                        <div class="exclusive_book">
+                                            <div class="booktitle">我變成一隻噴火龍了！</div>
+                                            <div class="E_SDG_logo_block">
+                                                <div class="esdg_logo"><a href="#"><img src="images/E_SDG_logo.png" alt="ESDGlogo"></a></div><span><a href="#">10</a></span>
+                                            </div>
+                                            <div class="content">
+                                                <div class="title">推薦緣由</div>
+                                                <p>《我變成一隻噴火龍了！》透過生動有趣的故事，提供讀者對於情緒管理和自我控制的深刻洞見。這與SDGs目標3：確保健康並促進所有年齡層的福祉，息息相關。情緒管理與自我控制能力是維護心理健康的重要因素，也是提升生活質量的關鍵。透過阿古力的噴火魔咒經驗，讀者可以了解如何有效處理負面情緒，並學習如何在挫折面前保持冷靜，進一步理解並實踐SDGs目標3的精神。
+                                                </p>
+                                                <div class="title">延伸思考</div>
+                                                <ul>
+                                                    <li>Q：阿古力在遇到困難時總是容易生氣，你有沒有過類似的經驗？當時你是如何應對的？</li>
+                                                    <li>Q：你覺得阿古力為何會一直噴火（生氣）？他能如何改變這種情況？</li>
+                                                    <li>Q：你認為破解噴火魔咒的方法是什麼？在現實生活中，你又會如何運用這個方法來管理自己的情緒？</li>
+                                                </ul>
+                                                <div class="title">推薦來源</div>
+                                                <p>台北市萬興國小 曾品方老師</p>
+                                            </div>
+
+                                        </div>
+                                        <div class="btn_grp">
+                                            <input name="" type="submit" value="借書去">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- 書本燈箱end -->
                         </div>
                         <!-- 右欄左線end -->
                     </div>
@@ -330,28 +365,6 @@
         </footer>
         <!-- footer end-->
     </div>
-    <!-- 燈箱區塊 start-->
-    <!-- 檢視閱讀權限燈箱start -->
-    <div class="lightboxstyle" id="read_permissionstyle">
-        <div class="overlay"></div>
-        <div class="lightboxstyle_block">
-            <div class="close"></div>
-            <h2>檢視閱讀權限</h2>
-            <form>
-                <div class="lightbox_data">
-                    <p>借閱件數：(本/件/間/張)</p>
-                    <div class="listdata">
-                        <ul>
-                            <li>教授指定參考資料：<em>2</em> 件</li>
-                            <li>教授指定參考資料：<em>2</em> 件</li>
-                            <li>教授指定參考資料：<em>2</em> 件</li>
-                        </ul>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- 檢視閱讀權限燈箱end -->
     <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="vendor/jquery.easing.min.js"></script>
