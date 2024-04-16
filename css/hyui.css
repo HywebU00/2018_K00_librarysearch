@@ -6877,6 +6877,19 @@ body.fix {
     width: 100%;
   }
 }
+.lightboxstyle .lightboxstyle_block.block_extend_further {
+  width: 70%;
+}
+@media screen and (max-width: 767px) {
+  .lightboxstyle .lightboxstyle_block.block_extend_further {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .lightboxstyle .lightboxstyle_block.block_extend_further {
+    width: 100%;
+  }
+}
 .lightboxstyle .lightboxstyle_block.fullyopen {
   position: fixed;
   top: 0;

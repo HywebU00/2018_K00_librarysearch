@@ -732,6 +732,16 @@ body.fix {
         width: 100%;
       }
     }
+    // 再加寬
+    &.block_extend_further {
+      width: 70%;
+      @include screen('mobile') {
+        width: 80%;
+      }
+      @include screen('xs_mobile') {
+        width: 100%;
+      }
+    }
     // 全開
     &.fullyopen {
       position: fixed;
