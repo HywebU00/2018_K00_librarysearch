@@ -4244,6 +4244,9 @@
                 max-width: 100%;
                 margin: 0 0 1.5em;
               }
+              &.active {
+                border: 8px solid lighten($color: $color-orange, $amount: 5);
+              }
               .title {
                 font-size: 1.25em !important;
                 text-align: left;

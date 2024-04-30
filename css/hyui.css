@@ -575,7 +575,7 @@ a:hover, a:focus {
 }
 
 .upload_grp .upload_btn, input[type=reset], input[type=submit], button,
-input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red, .btn-orange, .btn-yellow, .btn-blue, .btn-green, .btn {
+input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-purple, .btn-red, .btn-yellow, .btn-blue, .btn-green, .btn {
   font-size: 1em;
   background-image: none;
   display: inline-block;
@@ -594,7 +594,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
   touch-action: manipulation;
   box-sizing: border-box;
   background: #ddd;
-  border: 1px solid #c4c4c4;
+  border: 1px solid #d0d0d0;
   color: #666;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -625,7 +625,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
 
 .btn-green {
   background: #107859;
-  border: 1px solid #0a4b38;
+  border: 1px solid #0d6248;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -650,7 +650,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
 
 .btn-blue {
   background: #3e78c0;
-  border: 1px solid #326099;
+  border: 1px solid #386cad;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -675,7 +675,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
 
 .btn-yellow {
   background: #f1ad00;
-  border: 1px solid #be8800;
+  border: 1px solid #d89b00;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -700,7 +700,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
 
 .btn-orange {
   background: #b94b00;
-  border: 1px solid #863600;
+  border: 1px solid #a04100;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -725,7 +725,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
 
 .btn-red {
   background: #dc0122;
-  border: 1px solid #a9011a;
+  border: 1px solid #c3011e;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -750,7 +750,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
 
 .btn-purple {
   background: #aa5ac5;
-  border: 1px solid #923daf;
+  border: 1px solid #a047be;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -775,7 +775,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
 
 .btn-gray {
   background: #555;
-  border: 1px solid #3c3c3c;
+  border: 1px solid #484848;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -800,7 +800,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
 
 .btn-white {
   background: #fff;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #f2f2f2;
   color: #333;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -829,7 +829,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
 
 .btn-greenline {
   background: #06c755;
-  border: 1px solid #059540;
+  border: 1px solid #05ae4a;
   color: #333;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -857,7 +857,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
 
 .btn_active {
   background: #b94b00;
-  border: 1px solid #863600;
+  border: 1px solid #a04100;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -1984,7 +1984,7 @@ input[type=number]:-moz-placeholder {
 button,
 input[type=button] {
   background: #555;
-  border: 1px solid #3c3c3c;
+  border: 1px solid #484848;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -2011,10 +2011,300 @@ input[type=button].active {
   background: #5d5d5d;
   cursor: pointer;
 }
+button.btn-green,
+input[type=button].btn-green {
+  background: #107859;
+  border: 1px solid #0d6248;
+  color: #fff;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+  border-radius: 4px;
+  transition: 0.2s;
+}
+button.btn-green:hover,
+input[type=button].btn-green:hover {
+  background: #128663;
+  box-shadow: none;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-green:focus,
+input[type=button].btn-green:focus {
+  background: #128663;
+  box-shadow: 0 0px 0px 2px #f1ad00;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-green.active,
+input[type=button].btn-green.active {
+  background: #128663;
+  cursor: pointer;
+}
+button.btn-blue,
+input[type=button].btn-blue {
+  background: #3e78c0;
+  border: 1px solid #386cad;
+  color: #fff;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+  border-radius: 4px;
+  transition: 0.2s;
+}
+button.btn-blue:hover,
+input[type=button].btn-blue:hover {
+  background: #4980c4;
+  box-shadow: none;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-blue:focus,
+input[type=button].btn-blue:focus {
+  background: #4980c4;
+  box-shadow: 0 0px 0px 2px #f1ad00;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-blue.active,
+input[type=button].btn-blue.active {
+  background: #4980c4;
+  cursor: pointer;
+}
+button.btn-yellow,
+input[type=button].btn-yellow {
+  background: #f1ad00;
+  border: 1px solid #d89b00;
+  color: #fff;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+  border-radius: 4px;
+  transition: 0.2s;
+}
+button.btn-yellow:hover,
+input[type=button].btn-yellow:hover {
+  background: #ffb701;
+  box-shadow: none;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-yellow:focus,
+input[type=button].btn-yellow:focus {
+  background: #ffb701;
+  box-shadow: 0 0px 0px 2px #f1ad00;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-yellow.active,
+input[type=button].btn-yellow.active {
+  background: #ffb701;
+  cursor: pointer;
+}
+button.btn-orange,
+input[type=button].btn-orange {
+  background: #b94b00;
+  border: 1px solid #a04100;
+  color: #fff;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+  border-radius: 4px;
+  transition: 0.2s;
+}
+button.btn-orange:hover,
+input[type=button].btn-orange:hover {
+  background: #c85100;
+  box-shadow: none;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-orange:focus,
+input[type=button].btn-orange:focus {
+  background: #c85100;
+  box-shadow: 0 0px 0px 2px #f1ad00;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-orange.active,
+input[type=button].btn-orange.active {
+  background: #c85100;
+  cursor: pointer;
+}
+button.btn-red,
+input[type=button].btn-red {
+  background: #dc0122;
+  border: 1px solid #c3011e;
+  color: #fff;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+  border-radius: 4px;
+  transition: 0.2s;
+}
+button.btn-red:hover,
+input[type=button].btn-red:hover {
+  background: #eb0124;
+  box-shadow: none;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-red:focus,
+input[type=button].btn-red:focus {
+  background: #eb0124;
+  box-shadow: 0 0px 0px 2px #f1ad00;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-red.active,
+input[type=button].btn-red.active {
+  background: #eb0124;
+  cursor: pointer;
+}
+button.btn-purple,
+input[type=button].btn-purple {
+  background: #aa5ac5;
+  border: 1px solid #a047be;
+  color: #fff;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+  border-radius: 4px;
+  transition: 0.2s;
+}
+button.btn-purple:hover,
+input[type=button].btn-purple:hover {
+  background: #b065c9;
+  box-shadow: none;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-purple:focus,
+input[type=button].btn-purple:focus {
+  background: #b065c9;
+  box-shadow: 0 0px 0px 2px #f1ad00;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-purple.active,
+input[type=button].btn-purple.active {
+  background: #b065c9;
+  cursor: pointer;
+}
+button.btn-gray,
+input[type=button].btn-gray {
+  background: #555;
+  border: 1px solid #484848;
+  color: #fff;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+  border-radius: 4px;
+  transition: 0.2s;
+}
+button.btn-gray:hover,
+input[type=button].btn-gray:hover {
+  background: #5d5d5d;
+  box-shadow: none;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-gray:focus,
+input[type=button].btn-gray:focus {
+  background: #5d5d5d;
+  box-shadow: 0 0px 0px 2px #f1ad00;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-gray.active,
+input[type=button].btn-gray.active {
+  background: #5d5d5d;
+  cursor: pointer;
+}
+button.btn-white,
+input[type=button].btn-white {
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  color: #333;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+  border-radius: 4px;
+  transition: 0.2s;
+}
+button.btn-white:hover,
+input[type=button].btn-white:hover {
+  background: white;
+  box-shadow: none;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-white:focus,
+input[type=button].btn-white:focus {
+  background: white;
+  box-shadow: 0 0px 0px 2px #f1ad00;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-white.active,
+input[type=button].btn-white.active {
+  background: white;
+  cursor: pointer;
+}
+button.btn-white:hover, button.btn-white:focus,
+input[type=button].btn-white:hover,
+input[type=button].btn-white:focus {
+  color: #333;
+  background: #e6e6e6;
+}
+button.btn-greenline,
+input[type=button].btn-greenline {
+  background: #06c755;
+  border: 1px solid #05ae4a;
+  color: #333;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+  border-radius: 4px;
+  transition: 0.2s;
+}
+button.btn-greenline:hover,
+input[type=button].btn-greenline:hover {
+  background: #06d65b;
+  box-shadow: none;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-greenline:focus,
+input[type=button].btn-greenline:focus {
+  background: #06d65b;
+  box-shadow: 0 0px 0px 2px #f1ad00;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn-greenline.active,
+input[type=button].btn-greenline.active {
+  background: #06d65b;
+  cursor: pointer;
+}
+button.btn-greenline:hover,
+input[type=button].btn-greenline:hover {
+  color: #333;
+}
+button.btn_active,
+input[type=button].btn_active {
+  background: #b94b00;
+  border: 1px solid #a04100;
+  color: #fff;
+  box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+  border-radius: 4px;
+  transition: 0.2s;
+}
+button.btn_active:hover,
+input[type=button].btn_active:hover {
+  background: #c85100;
+  box-shadow: none;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn_active:focus,
+input[type=button].btn_active:focus {
+  background: #c85100;
+  box-shadow: 0 0px 0px 2px #f1ad00;
+  cursor: pointer;
+  color: #fff;
+}
+button.btn_active.active,
+input[type=button].btn_active.active {
+  background: #c85100;
+  cursor: pointer;
+}
 
 input[type=submit] {
   background: #005d98;
-  border: 1px solid #003e65;
+  border: 1px solid #004d7f;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -2096,7 +2386,7 @@ select:-moz-focusring {
 
 input[type=reset] {
   background: #555;
-  border: 1px solid #3c3c3c;
+  border: 1px solid #484848;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -2200,7 +2490,7 @@ input[disable]:focus {
   top: 1px;
   right: 3px;
   background: #555;
-  border: 1px solid #3c3c3c;
+  border: 1px solid #484848;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
@@ -8161,37 +8451,142 @@ body.fix {
 }
 .exclusive_book .E_SDG_logo_block {
   flex: 0 0 auto;
-  flex-basis: 35%;
-  max-width: 35%;
-  display: flex;
+  flex-basis: 300px;
+  max-width: 300px;
   margin-bottom: 1em;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   .exclusive_book .E_SDG_logo_block {
     flex-basis: 100%;
     max-width: 100%;
   }
 }
-.exclusive_book .E_SDG_logo_block .esdg_logo {
-  flex: 1 1 auto;
-}
 .exclusive_book .E_SDG_logo_block .esdg_logo img {
-  width: 100%;
+  width: 98%;
 }
-.exclusive_book .E_SDG_logo_block span {
-  flex: 0 0 auto;
-  flex-basis: 40px;
-  max-width: 40px;
-  margin-left: 5px;
+.exclusive_book .E_SDG_logo_block .sdgstargetblock {
+  display: flex;
+  flex-wrap: wrap;
 }
-.exclusive_book .E_SDG_logo_block span a {
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span {
+  margin-right: 0.3em;
+  margin-bottom: 0.5em;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a {
   display: block;
-  padding: 6px 5px 5px;
-  background-color: #e1167e;
+  padding: 4px;
+  background-color: #ea132e;
   color: #fff;
   border-radius: 5px;
-  font-size: 1.25em;
+  font-size: 1.125em;
+  transform: 0.5s;
+  min-width: 30px;
   text-align: center;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a:hover {
+  background-color: #d21129;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget1 {
+  background-color: #ea132e;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget1:hover {
+  background-color: #d21129;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget2 {
+  background-color: #a36b01;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget2:hover {
+  background-color: #8a5a01;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget3 {
+  background-color: #6d7e01;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget3:hover {
+  background-color: #576501;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget4 {
+  background-color: #ca1d36;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget4:hover {
+  background-color: #b41a30;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget5 {
+  background-color: #9b4ab1;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget5:hover {
+  background-color: #8b429f;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget6 {
+  background-color: #00819e;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget6:hover {
+  background-color: #006c85;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget7 {
+  background-color: #9a7027;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget7:hover {
+  background-color: #866122;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget8 {
+  background-color: #961838;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget8:hover {
+  background-color: #801430;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget9 {
+  background-color: #be5a02;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget9:hover {
+  background-color: #a54e02;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget10 {
+  background-color: #e1157e;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget10:hover {
+  background-color: #ca1371;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget11 {
+  background-color: #85743f;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget11:hover {
+  background-color: #746537;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget12 {
+  background-color: #9e6b49;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget12:hover {
+  background-color: #8d5f41;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget13 {
+  background-color: #3c8368;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget13:hover {
+  background-color: #34725a;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget14 {
+  background-color: #017cb5;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget14:hover {
+  background-color: #016b9c;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget15 {
+  background-color: #20873f;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget15:hover {
+  background-color: #1b7235;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget16 {
+  background-color: #005488;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget16:hover {
+  background-color: #00446f;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget17 {
+  background-color: #11345f;
+}
+.exclusive_book .E_SDG_logo_block .sdgstargetblock span a.sdgstarget17:hover {
+  background-color: #0d2849;
 }
 .exclusive_book .content {
   flex: 1 1 auto;
@@ -17626,8 +18021,14 @@ body.fix {
 .mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block,
 .mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 30px 20px;
+}
+@media screen and (max-width: 991px) {
+  .mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block,
+  .mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block {
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 575px) {
   .mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block,
@@ -17638,6 +18039,9 @@ body.fix {
 }
 .mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .esdg_logo,
 .mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .esdg_logo {
+  flex: 0 0 auto;
+  flex-basis: 320px;
+  max-width: 320px;
   margin-right: 10px;
 }
 .mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .esdg_logo img,
@@ -17648,25 +18052,211 @@ body.fix {
   .mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .esdg_logo,
   .mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .esdg_logo {
     margin: 0 0 10px;
+    flex-basis: 100%;
+    max-width: 100%;
   }
   .mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .esdg_logo img,
   .mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .esdg_logo img {
     width: 100%;
   }
 }
-.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block span a,
-.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block span a {
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span {
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a {
   display: block;
-  padding: 10px 16px 8px;
-  background-color: #e1167e;
+  padding: 10px 10px 8px;
+  background-color: #ea132e;
   color: #fff;
   border-radius: 5px;
   font-size: 1.25em;
   transform: 0.5s;
+  min-width: 30px;
+  text-align: center;
 }
-.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block span a:hover,
-.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block span a:hover {
-  background-color: #ca1471;
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a:hover {
+  background-color: #d21129;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget1,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget1 {
+  background-color: #ea132e;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget1:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget1:hover {
+  background-color: #d21129;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget2,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget2 {
+  background-color: #a36b01;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget2:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget2:hover {
+  background-color: #8a5a01;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget3,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget3 {
+  background-color: #6d7e01;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget3:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget3:hover {
+  background-color: #576501;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget4,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget4 {
+  background-color: #ca1d36;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget4:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget4:hover {
+  background-color: #b41a30;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget5,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget5 {
+  background-color: #9b4ab1;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget5:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget5:hover {
+  background-color: #8b429f;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget6,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget6 {
+  background-color: #00819e;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget6:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget6:hover {
+  background-color: #006c85;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget7,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget7 {
+  background-color: #9a7027;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget7:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget7:hover {
+  background-color: #866122;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget8,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget8 {
+  background-color: #961838;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget8:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget8:hover {
+  background-color: #801430;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget9,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget9 {
+  background-color: #be5a02;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget9:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget9:hover {
+  background-color: #a54e02;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget10,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget10 {
+  background-color: #e1157e;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget10:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget10:hover {
+  background-color: #ca1371;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget11,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget11 {
+  background-color: #85743f;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget11:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget11:hover {
+  background-color: #746537;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget12,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget12 {
+  background-color: #9e6b49;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget12:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget12:hover {
+  background-color: #8d5f41;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget13,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget13 {
+  background-color: #3c8368;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget13:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget13:hover {
+  background-color: #34725a;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget14,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget14 {
+  background-color: #017cb5;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget14:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget14:hover {
+  background-color: #016b9c;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget15,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget15 {
+  background-color: #20873f;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget15:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget15:hover {
+  background-color: #1b7235;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget16,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget16 {
+  background-color: #005488;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget16:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget16:hover {
+  background-color: #00446f;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget17,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget17 {
+  background-color: #11345f;
+}
+.mainrightblock .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget17:hover,
+.mainrightblock2 .book_detaildata .bookdata2 .E_SDG_logo_block .sdgstargetblock span a.sdgstarget17:hover {
+  background-color: #0d2849;
+}
+.mainrightblock .book_detaildata .bookdata2 .sdgstarget_tab,
+.mainrightblock2 .book_detaildata .bookdata2 .sdgstarget_tab {
+  margin-bottom: 2em;
+}
+.mainrightblock .book_detaildata .bookdata2 .sdgstarget_tab ul,
+.mainrightblock2 .book_detaildata .bookdata2 .sdgstarget_tab ul {
+  margin: 0 30px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+@media screen and (max-width: 575px) {
+  .mainrightblock .book_detaildata .bookdata2 .sdgstarget_tab ul,
+  .mainrightblock2 .book_detaildata .bookdata2 .sdgstarget_tab ul {
+    margin: 0;
+  }
+}
+.mainrightblock .book_detaildata .bookdata2 .sdgstarget_tab ul li,
+.mainrightblock2 .book_detaildata .bookdata2 .sdgstarget_tab ul li {
+  margin-right: 0.8em;
+  font-size: 1.125em;
+  font-weight: bold;
+}
+.mainrightblock .book_detaildata .bookdata2 .sdgstarget_tab ul li a,
+.mainrightblock2 .book_detaildata .bookdata2 .sdgstarget_tab ul li a {
+  padding: 0.5em 1em;
+  display: block;
+  color: #555;
+}
+.mainrightblock .book_detaildata .bookdata2 .sdgstarget_tab ul li a.active,
+.mainrightblock2 .book_detaildata .bookdata2 .sdgstarget_tab ul li a.active {
+  color: #3e78c0;
+  border-bottom: 6px solid #3e78c0;
 }
 .mainrightblock .book_detaildata .bookdata2 .listdata_sdg ul,
 .mainrightblock2 .book_detaildata .bookdata2 .listdata_sdg ul {
@@ -17686,6 +18276,10 @@ body.fix {
   padding: 0 0 15px;
   border-bottom: 1px dotted #ccc;
 }
+.mainrightblock .book_detaildata .bookdata2 .listdata_sdg ul li:last-child,
+.mainrightblock2 .book_detaildata .bookdata2 .listdata_sdg ul li:last-child {
+  border-bottom: none;
+}
 .mainrightblock .book_detaildata .bookdata2 .listdata_sdg ul li span,
 .mainrightblock2 .book_detaildata .bookdata2 .listdata_sdg ul li span {
   color: #c75100;
@@ -17695,18 +18289,6 @@ body.fix {
   margin-bottom: 5px;
   position: relative;
   float: left;
-}
-.mainrightblock .book_detaildata .bookdata2 .listdata_sdg ul li span:after,
-.mainrightblock2 .book_detaildata .bookdata2 .listdata_sdg ul li span:after {
-  content: "";
-  position: absolute;
-  right: -20px;
-  top: 5px;
-  border: 1px solid #666;
-  width: 10px;
-  height: 10px;
-  border-color: #666 #666 transparent transparent;
-  transform: rotate(45deg);
 }
 .mainrightblock .book_detaildata .bookdata2 .listdata_sdg ul li p,
 .mainrightblock2 .book_detaildata .bookdata2 .listdata_sdg ul li p {
@@ -27146,6 +27728,9 @@ em.yellowbg {
     max-width: 100%;
     margin: 0 0 1.5em;
   }
+}
+.AIgptgroup .directions .reading_needs_block .needs_group .needs_content .readdescription_block .readdescription_list.active {
+  border: 8px solid #d35500;
 }
 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .readdescription_block .readdescription_list .title {
   font-size: 1.25em !important;

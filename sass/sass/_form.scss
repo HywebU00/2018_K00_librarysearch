@@ -199,6 +199,46 @@ input[type='button'] {
   @include btn_setting($color-darkgray, #fff);
   width: auto;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
+  // 顏色
+  &.btn-green {
+    @include btn_setting($color-green, #fff);
+  }
+  &.btn-blue {
+    @include btn_setting($color-blue, #fff);
+  }
+  &.btn-yellow {
+    @include btn_setting($color-yellow, #fff);
+  }
+  &.btn-orange {
+    @include btn_setting($color-orange, #fff);
+  }
+  &.btn-red {
+    @include btn_setting($color-red, #fff);
+  }
+  &.btn-purple {
+    @include btn_setting($color-purple, #fff);
+  }
+  &.btn-gray {
+    @include btn_setting($color-darkgray, #fff);
+  }
+  &.btn-white {
+    @include btn_setting($color-white, #333);
+    &:hover,
+    &:focus {
+      color: #333;
+      // background: darken($btn-bg, 3);
+      background: darken($color: #eee, $amount: 3);
+    }
+  }
+  &.btn-greenline {
+    @include btn_setting(#06c755, #333);
+    &:hover {
+      color: #333;
+    }
+  }
+  &.btn_active {
+    @include btn_setting($color-orange, #fff);
+  }
 }
 input[type='submit'] {
   @extend %btn;
@@ -227,6 +267,7 @@ select:focus {
   box-shadow: 0 0px 0px 2px $form-focus;
   outline: none;
 }
+
 //
 //---------------------------------------------下拉選單--------//
 select {

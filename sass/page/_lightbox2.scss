@@ -2066,33 +2066,140 @@ body.fix {
   }
   .E_SDG_logo_block {
     flex: 0 0 auto;
-    flex-basis: 35%;
-    max-width: 35%;
-    display: flex;
+    flex-basis: 300px;
+    max-width: 300px;
     margin-bottom: 1em;
-    @include screen('mobile') {
+    @include screen('tablet') {
       flex-basis: 100%;
       max-width: 100%;
     }
     .esdg_logo {
-      flex: 1 1 auto;
       img {
-        width: 100%;
+        width: 98%;
       }
     }
-    span {
-      flex: 0 0 auto;
-      flex-basis: 40px;
-      max-width: 40px;
-      margin-left: 5px;
-      a {
-        display: block;
-        padding: 6px 5px 5px;
-        background-color: #e1167e;
-        color: #fff;
-        border-radius: 5px;
-        font-size: 1.25em;
-        text-align: center;
+    .sdgstargetblock {
+      display: flex;
+      flex-wrap: wrap;
+      span {
+        margin-right: 0.3em;
+        margin-bottom: 0.5em;
+        a {
+          display: block;
+          padding: 4px;
+          background-color: #ea132e;
+          color: #fff;
+          border-radius: 5px;
+          font-size: 1.125em;
+          transform: 0.5s;
+          min-width: 30px;
+          text-align: center;
+          &:hover {
+            background-color: darken(#ea132e, 5);
+          }
+          &.sdgstarget1 {
+            background-color: #ea132e;
+            &:hover {
+              background-color: darken(#ea132e, 5);
+            }
+          }
+          &.sdgstarget2 {
+            background-color: #a36b01;
+            &:hover {
+              background-color: darken(#a36b01, 5);
+            }
+          }
+          &.sdgstarget3 {
+            background-color: #6d7e01;
+            &:hover {
+              background-color: darken(#6d7e01, 5);
+            }
+          }
+          &.sdgstarget4 {
+            background-color: #ca1d36;
+            &:hover {
+              background-color: darken(#ca1d36, 5);
+            }
+          }
+          &.sdgstarget5 {
+            background-color: #9b4ab1;
+            &:hover {
+              background-color: darken(#9b4ab1, 5);
+            }
+          }
+          &.sdgstarget6 {
+            background-color: #00819e;
+            &:hover {
+              background-color: darken(#00819e, 5);
+            }
+          }
+          &.sdgstarget7 {
+            background-color: #9a7027;
+            &:hover {
+              background-color: darken(#9a7027, 5);
+            }
+          }
+          &.sdgstarget8 {
+            background-color: #961838;
+            &:hover {
+              background-color: darken(#961838, 5);
+            }
+          }
+          &.sdgstarget9 {
+            background-color: #be5a02;
+            &:hover {
+              background-color: darken(#be5a02, 5);
+            }
+          }
+          &.sdgstarget10 {
+            background-color: #e1157e;
+            &:hover {
+              background-color: darken(#e1157e, 5);
+            }
+          }
+          &.sdgstarget11 {
+            background-color: #85743f;
+            &:hover {
+              background-color: darken(#85743f, 5);
+            }
+          }
+          &.sdgstarget12 {
+            background-color: #9e6b49;
+            &:hover {
+              background-color: darken(#9e6b49, 5);
+            }
+          }
+          &.sdgstarget13 {
+            background-color: #3c8368;
+            &:hover {
+              background-color: darken(#3c8368, 5);
+            }
+          }
+          &.sdgstarget14 {
+            background-color: #017cb5;
+            &:hover {
+              background-color: darken(#017cb5, 5);
+            }
+          }
+          &.sdgstarget15 {
+            background-color: #20873f;
+            &:hover {
+              background-color: darken(#20873f, 5);
+            }
+          }
+          &.sdgstarget16 {
+            background-color: #005488;
+            &:hover {
+              background-color: darken(#005488, 5);
+            }
+          }
+          &.sdgstarget17 {
+            background-color: #11345f;
+            &:hover {
+              background-color: darken(#11345f, 5);
+            }
+          }
+        }
       }
     }
   }
