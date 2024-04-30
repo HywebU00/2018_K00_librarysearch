@@ -1910,6 +1910,15 @@
       }
       // 永續發展目標
       .listdata_sdg {
+        .title {
+          font-size: 1.25em;
+          margin: 0 30px 1em;
+          color: #666;
+          font-weight: bold;
+          @include screen('xs_mobile') {
+            margin: 0;
+          }
+        }
         ul {
           margin: 0 30px;
           padding: 0;

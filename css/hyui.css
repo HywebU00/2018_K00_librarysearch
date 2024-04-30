@@ -18260,6 +18260,19 @@ body.fix {
   color: #3e78c0;
   border-bottom: 6px solid #3e78c0;
 }
+.mainrightblock .book_detaildata .bookdata2 .listdata_sdg .title,
+.mainrightblock2 .book_detaildata .bookdata2 .listdata_sdg .title {
+  font-size: 1.25em;
+  margin: 0 30px 1em;
+  color: #666;
+  font-weight: bold;
+}
+@media screen and (max-width: 575px) {
+  .mainrightblock .book_detaildata .bookdata2 .listdata_sdg .title,
+  .mainrightblock2 .book_detaildata .bookdata2 .listdata_sdg .title {
+    margin: 0;
+  }
+}
 .mainrightblock .book_detaildata .bookdata2 .listdata_sdg ul,
 .mainrightblock2 .book_detaildata .bookdata2 .listdata_sdg ul {
   margin: 0 30px;
