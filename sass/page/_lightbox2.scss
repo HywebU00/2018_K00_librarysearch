@@ -2069,16 +2069,18 @@ body.fix {
     flex-basis: 300px;
     max-width: 300px;
     margin-bottom: 1em;
-    @include screen('tablet') {
-      flex-basis: 100%;
-      max-width: 100%;
-    }
+    display: flex;
     .esdg_logo {
+      flex: 1 1 auto;
+      margin-right: 10px;
       img {
-        width: 98%;
+        width: 100%;
       }
     }
     .sdgstargetblock {
+      flex: 0 0 auto;
+      flex-basis: 40px;
+      max-width: 40px;
       display: flex;
       flex-wrap: wrap;
       span {
@@ -2086,7 +2088,7 @@ body.fix {
         margin-bottom: 0.5em;
         a {
           display: block;
-          padding: 4px;
+          padding: 5px;
           background-color: #ea132e;
           color: #fff;
           border-radius: 5px;

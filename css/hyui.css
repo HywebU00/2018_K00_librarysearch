@@ -8454,17 +8454,19 @@ body.fix {
   flex-basis: 300px;
   max-width: 300px;
   margin-bottom: 1em;
+  display: flex;
 }
-@media screen and (max-width: 991px) {
-  .exclusive_book .E_SDG_logo_block {
-    flex-basis: 100%;
-    max-width: 100%;
-  }
+.exclusive_book .E_SDG_logo_block .esdg_logo {
+  flex: 1 1 auto;
+  margin-right: 10px;
 }
 .exclusive_book .E_SDG_logo_block .esdg_logo img {
-  width: 98%;
+  width: 100%;
 }
 .exclusive_book .E_SDG_logo_block .sdgstargetblock {
+  flex: 0 0 auto;
+  flex-basis: 40px;
+  max-width: 40px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -8474,7 +8476,7 @@ body.fix {
 }
 .exclusive_book .E_SDG_logo_block .sdgstargetblock span a {
   display: block;
-  padding: 4px;
+  padding: 5px;
   background-color: #ea132e;
   color: #fff;
   border-radius: 5px;
