@@ -27348,9 +27348,8 @@ em.yellowbg {
   align-items: flex-start;
 }
 .SDG_block .SDG2_banner .SDG_img a.unread {
-  opacity: 0.4;
   box-shadow: none;
-  -webkit-filter: grayscale(1);
+  background-color: #666;
 }
 .SDG_block .SDG2_banner .SDG_img a em {
   font-size: 1.875em;

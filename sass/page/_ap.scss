@@ -3870,11 +3870,8 @@
         flex-wrap: wrap;
         align-items: flex-start;
         &.unread {
-          // pointer-events: none;
-          opacity: 0.4;
           box-shadow: none;
-          // cursor: not-allowed;
-          -webkit-filter: grayscale(1);
+          background-color: #666;
         }
         em {
           font-size: 1.875em;
