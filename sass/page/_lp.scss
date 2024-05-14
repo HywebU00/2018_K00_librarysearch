@@ -2443,6 +2443,20 @@
         top: 4px;
       }
     }
+    .viewcolor_green {
+      margin-left: 1em;
+      padding: 0 0 0 20px;
+      position: relative;
+      &:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-color: $color-green;
+        position: absolute;
+        left: 0;
+        top: 4px;
+      }
+    }
     .viewcolor_blue {
       margin-left: 1em;
       padding: 0 0 0 20px;
@@ -2535,6 +2549,15 @@
           }
         }
       }
+      // 已點過
+      &.visited {
+        a {
+          background-color: $color-green;
+          &:hover {
+            background-color: $color-green;
+          }
+        }
+      }
       a {
         display: block;
         border: 1px solid #ccc;
@@ -2551,7 +2574,7 @@
           text-align: center;
         }
         &:hover {
-          background-color: $color-green;
+          // background-color: $color-green;
         }
       }
     }
@@ -2634,8 +2657,16 @@
               background-color: $color-orange;
             }
           }
-          &:hover {
+          // 已點過
+          &.visited {
             background-color: $color-green;
+            &:hover {
+              background-color: $color-green;
+            }
+          }
+
+          &:hover {
+            // background-color: $color-green;
           }
         }
       }

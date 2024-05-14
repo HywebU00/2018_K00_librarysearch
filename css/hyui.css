@@ -14017,6 +14017,20 @@ body.fix {
   left: 0;
   top: 4px;
 }
+.viewdata_block .viewcolor_group .viewcolor_green {
+  margin-left: 1em;
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.viewdata_block .viewcolor_group .viewcolor_green:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: #107859;
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
 .viewdata_block .viewcolor_group .viewcolor_blue {
   margin-left: 1em;
   padding: 0 0 0 20px;
@@ -14101,6 +14115,12 @@ body.fix {
 .discussionroom_timeblock .timelinegroup .timeline_hour.yorbooked a:hover {
   background-color: #b94b00;
 }
+.discussionroom_timeblock .timelinegroup .timeline_hour.visited a {
+  background-color: #107859;
+}
+.discussionroom_timeblock .timelinegroup .timeline_hour.visited a:hover {
+  background-color: #107859;
+}
 .discussionroom_timeblock .timelinegroup .timeline_hour a {
   display: block;
   border: 1px solid #ccc;
@@ -14116,9 +14136,6 @@ body.fix {
   font-size: 0.938em;
   width: 20px;
   text-align: center;
-}
-.discussionroom_timeblock .timelinegroup .timeline_hour a:hover {
-  background-color: #107859;
 }
 .discussionroom_timeblock .timetablegroup {
   margin: 0;
@@ -14192,7 +14209,10 @@ body.fix {
 .discussionroom_timeblock .timetablegroup table td a.yorbooked:hover {
   background-color: #b94b00;
 }
-.discussionroom_timeblock .timetablegroup table td a:hover {
+.discussionroom_timeblock .timetablegroup table td a.visited {
+  background-color: #107859;
+}
+.discussionroom_timeblock .timetablegroup table td a.visited:hover {
   background-color: #107859;
 }
 .discussionroom_timeblock .timetablegroup table tr th,
