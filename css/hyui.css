@@ -8327,6 +8327,11 @@ body.fix {
     margin-right: 0 !important;
   }
 }
+.AIGPT_information .AIGPT_group .recommendbook .image_titlepage,
+.AIGPT_information .AIGPT_group .recommendbook .image_titlepage2 {
+  width: 110px;
+  margin: 0 auto 1em;
+}
 .AIGPT_information .AIGPT_group .content {
   flex: 1 1 auto;
   flex-basis: calc(100% - 180px);
@@ -28324,6 +28329,11 @@ em.yellowbg {
   max-width: 150px;
   max-height: 150px;
 }
+.AIgptgroup .AIrecommendbook .recommendbook_list .recommendbook .image_titlepage,
+.AIgptgroup .AIrecommendbook .recommendbook_list .recommendbook .image_titlepage2 {
+  width: 110px;
+  margin: 0 auto 1em;
+}
 .AIgptgroup .AIrecommendbook .recommendbook_list .content {
   flex: 1 1 auto;
   flex-basis: calc(100% - 180px);
@@ -28491,6 +28501,11 @@ em.yellowbg {
 .AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list .recommendbook img {
   max-width: 150px;
   max-height: 150px;
+}
+.AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list .recommendbook .image_titlepage,
+.AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list .recommendbook .image_titlepage2 {
+  width: 110px;
+  margin: 0 auto 1em;
 }
 .AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list .feature_options {
   margin-bottom: 0.5em;

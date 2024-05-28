@@ -1923,6 +1923,11 @@ body.fix {
         flex-basis: 100% !important;
         margin-right: 0 !important;
       }
+      .image_titlepage,
+      .image_titlepage2 {
+        width: 110px;
+        margin: 0 auto 1em;
+      }
     }
     .content {
       flex: 1 1 auto;

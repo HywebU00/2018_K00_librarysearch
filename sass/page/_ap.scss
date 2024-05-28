@@ -4806,6 +4806,11 @@
           max-width: 150px;
           max-height: 150px;
         }
+        .image_titlepage,
+        .image_titlepage2 {
+          width: 110px;
+          margin: 0 auto 1em;
+        }
       }
       .content {
         flex: 1 1 auto;
@@ -4959,6 +4964,11 @@
         img {
           max-width: 150px;
           max-height: 150px;
+        }
+        .image_titlepage,
+        .image_titlepage2 {
+          width: 110px;
+          margin: 0 auto 1em;
         }
       }
       .feature_options {
