@@ -8281,21 +8281,44 @@ body.fix {
   display: flex;
   flex-wrap: wrap;
 }
-.AIGPT_information .AIGPT_group .evaluate_block {
-  margin-right: 0.5em;
-  margin-bottom: 0.5em;
+.AIGPT_information .AIGPT_group .AIGPT_btn {
   flex: 1 1 auto;
   flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.AIGPT_information .AIGPT_group .AIGPT_btn button {
+  margin: 0;
+}
+@media (max-width: 400px) {
+  .AIGPT_information .AIGPT_group .AIGPT_btn {
+    justify-content: center;
+  }
+  .AIGPT_information .AIGPT_group .AIGPT_btn button {
+    margin: 0 0 0.5em;
+    flex: 0 0 auto;
+  }
+}
+.AIGPT_information .AIGPT_group .evaluate_block {
+  margin-right: 0.5em;
+  flex: 0 0 auto;
   display: flex;
   justify-content: flex-end;
 }
 @media (max-width: 670px) {
   .AIGPT_information .AIGPT_group .evaluate_block {
-    margin-bottom: 1em;
     justify-content: center;
   }
   .AIGPT_information .AIGPT_group .evaluate_block .evaluate {
     text-align: center !important;
+  }
+}
+@media (max-width: 400px) {
+  .AIGPT_information .AIGPT_group .evaluate_block {
+    flex-basis: 100%;
   }
 }
 .AIGPT_information .AIGPT_group .evaluate_block .evaluate {
@@ -8632,6 +8655,17 @@ body.fix {
 }
 .exclusive_book .content ul li {
   margin-bottom: 0.5em;
+}
+
+button {
+  position: relative;
+}
+button.backbtn {
+  padding: 0.3em 0.8em 0.3em 2em;
+  background-image: url("../images/icon_back.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: 0.5em center !important;
+  margin-bottom: 10px !important;
 }
 
 .section {

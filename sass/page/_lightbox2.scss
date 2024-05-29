@@ -33,6 +33,7 @@ body.fix {
     left: 0;
   }
 }
+
 .close {
   a {
     background-image: url('../images/icon_close.png');
@@ -1882,19 +1883,40 @@ body.fix {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    .evaluate_block {
-      margin-right: 0.5em;
-      margin-bottom: 0.5em;
+
+    .AIGPT_btn {
       flex: 1 1 auto;
       flex-basis: 100%;
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1em;
+      button {
+        margin: 0;
+      }
+      @media (max-width: 400px) {
+        justify-content: center;
+        button {
+          margin: 0 0 0.5em;
+          flex: 0 0 auto;
+          // flex-basis: 100%;
+        }
+      }
+    }
+    .evaluate_block {
+      margin-right: 0.5em;
+      flex: 0 0 auto;
+      display: flex;
       justify-content: flex-end;
       @media (max-width: 670px) {
-        margin-bottom: 1em;
         justify-content: center;
         .evaluate {
           text-align: center !important;
         }
+      }
+      @media (max-width: 400px) {
+        flex-basis: 100%;
       }
       .evaluate {
         padding: 0.3em 1em 0.3em 0;
@@ -2247,5 +2269,16 @@ body.fix {
         margin-bottom: 0.5em;
       }
     }
+  }
+}
+button {
+  position: relative;
+
+  &.backbtn {
+    padding: 0.3em 0.8em 0.3em 2em;
+    background-image: url('../images/icon_back.png') !important;
+    background-repeat: no-repeat !important;
+    background-position: 0.5em center !important;
+    margin-bottom: 10px !important;
   }
 }
