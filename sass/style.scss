@@ -552,6 +552,18 @@
         h3 {
           color: nth($primaryColor, $style);
         }
+        .journal_tab {
+          ul {
+            li {
+              a {
+                &:hover,
+                &.here {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
       }
       .bookdata {
         .data_type_block {
@@ -1283,6 +1295,18 @@
       .bookdata2 {
         h3 {
           color: nth($primaryColor, $style);
+        }
+        .journal_tab {
+          ul {
+            li {
+              a {
+                &:hover,
+                &.here {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
         }
       }
       .bookdata {
@@ -2199,6 +2223,7 @@
         h3 {
           color: darken(nth($primaryColor, $style), 0);
         }
+
         //各個圖書館
         .librarylist {
           ul {
@@ -2239,7 +2264,7 @@
               a {
                 &:hover,
                 &.here {
-                  background-color: $color-green;
+                  background-color: nth($primaryColor, $style);
                 }
               }
             }
@@ -3139,6 +3164,18 @@
         h3 {
           color: nth($primaryColor, $style);
         }
+        .journal_tab {
+          ul {
+            li {
+              a {
+                &:hover,
+                &.here {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
       }
       .bookdata {
         .data_type_block {
@@ -3838,6 +3875,18 @@
         h3 {
           color: nth($primaryColor, $style);
         }
+        .journal_tab {
+          ul {
+            li {
+              a {
+                &:hover,
+                &.here {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
       }
     }
     .bookdata {
@@ -4534,6 +4583,18 @@
       .bookdata2 {
         h3 {
           color: nth($primaryColor, $style);
+        }
+        .journal_tab {
+          ul {
+            li {
+              a {
+                &:hover,
+                &.here {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
         }
       }
       .bookdata {
@@ -5251,6 +5312,18 @@
         h3 {
           color: nth($primaryColor, $style);
         }
+        .journal_tab {
+          ul {
+            li {
+              a {
+                &:hover,
+                &.here {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
       }
       .bookdata {
         .data_type_block {
@@ -5950,6 +6023,18 @@
         h3 {
           color: nth($primaryColor, $style);
         }
+        .journal_tab {
+          ul {
+            li {
+              a {
+                &:hover,
+                &.here {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
       }
       .bookdata {
         .data_type_block {
@@ -6100,7 +6185,7 @@
   $style: index($sites, version06);
   // _header.scss
   .header {
-    @include gradient(#00b7ee, #00b7ee, vertical);
+    @include gradient(#0078c6, #0078c6, vertical);
     box-shadow: none;
     > .container {
       .sidebarCtrl {
@@ -6153,12 +6238,12 @@
     div {
       a {
         span {
-          background-color: darken(nth($primaryColor, $style), 15);
+          background-color: nth($primaryColor, $style);
         }
         &:hover {
-          color: darken(nth($primaryColor, $style), 10);
+          color: darken(nth($primaryColor, $style), 5);
           span {
-            background-color: nth($primaryColor, $style);
+            background-color: darken(nth($primaryColor, $style), 10);
           }
         }
       }
@@ -6634,6 +6719,18 @@
       .bookdata2 {
         h3 {
           color: nth($primaryColor, $style);
+        }
+        .journal_tab {
+          ul {
+            li {
+              a {
+                &:hover,
+                &.here {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
         }
       }
       .bookdata {

@@ -320,7 +320,7 @@ th {
   font-style: normal;
   display: block;
   font-size: 1em;
-  border-left: 5px solid #005d98, #5c9588, #5c9588, #0e664c, #1c4b82, #ff8b00, #097e76, #774181, #088c6f, #00b7ee;
+  border-left: 5px solid #005d98, #5c9588, #5c9588, #0e664c, #1c4b82, #ff8b00, #097e76, #774181, #088c6f, #0078c6;
   padding: 2em;
   box-sizing: border-box;
   margin: 0 0em 2em;
@@ -784,7 +784,7 @@ input[type=button], .btn_active, .btn-greenline, .btn-white, .btn-gray, .btn-pur
 
 .disabled {
   pointer-events: none;
-  opacity: 0.8;
+  opacity: 1;
   box-shadow: none;
   cursor: not-allowed;
   display: inline-block;
@@ -2128,6 +2128,11 @@ select::-ms-expand {
 .child01 .mainrightblock2 .book_detaildata .bookdata2 h3 {
   color: #5c9588;
 }
+.child01 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a:hover, .child01 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a.here,
+.child01 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a:hover,
+.child01 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a.here {
+  background-color: #5c9588;
+}
 .child01 .mainrightblock .book_detaildata .bookdata .data_type_block,
 .child01 .mainrightblock2 .book_detaildata .bookdata .data_type_block {
   background-color: #5c9588;
@@ -2621,6 +2626,11 @@ select::-ms-expand {
 .customization01 .mainrightblock .book_detaildata .bookdata2 h3,
 .customization01 .mainrightblock2 .book_detaildata .bookdata2 h3 {
   color: #5c9588;
+}
+.customization01 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a:hover, .customization01 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a.here,
+.customization01 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a:hover,
+.customization01 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a.here {
+  background-color: #5c9588;
 }
 .customization01 .mainrightblock .book_detaildata .bookdata .data_type_block,
 .customization01 .mainrightblock2 .book_detaildata .bookdata .data_type_block {
@@ -3242,7 +3252,7 @@ select::-ms-expand {
 .customization02 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a:hover, .customization02 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a.here,
 .customization02 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a:hover,
 .customization02 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a.here {
-  background-color: #107859;
+  background-color: #0e664c;
 }
 .customization02 .mainrightblock .book_detaildata .bookdata2 .borrow_appointment span em,
 .customization02 .mainrightblock2 .book_detaildata .bookdata2 .borrow_appointment span em {
@@ -3830,6 +3840,11 @@ select::-ms-expand {
 .version01 .mainrightblock2 .book_detaildata .bookdata2 h3 {
   color: #1c4b82;
 }
+.version01 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a:hover, .version01 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a.here,
+.version01 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a:hover,
+.version01 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a.here {
+  background-color: #1c4b82;
+}
 .version01 .mainrightblock .book_detaildata .bookdata .data_type_block,
 .version01 .mainrightblock2 .book_detaildata .bookdata .data_type_block {
   background-color: #e9846a;
@@ -4288,6 +4303,11 @@ select::-ms-expand {
 .version02 .mainrightblock2 .book_detaildata .bookdata2 h3 {
   color: #ff8b00;
 }
+.version02 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a:hover, .version02 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a.here,
+.version02 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a:hover,
+.version02 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a.here {
+  background-color: #ff8b00;
+}
 .version02 .mainrightblock .bookdata .data_type_block,
 .version02 .mainrightblock2 .bookdata .data_type_block {
   background-color: #a7c077;
@@ -4741,6 +4761,11 @@ select::-ms-expand {
 .version03 .mainrightblock .book_detaildata .bookdata2 h3,
 .version03 .mainrightblock2 .book_detaildata .bookdata2 h3 {
   color: #097e76;
+}
+.version03 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a:hover, .version03 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a.here,
+.version03 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a:hover,
+.version03 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a.here {
+  background-color: #097e76;
 }
 .version03 .mainrightblock .book_detaildata .bookdata .data_type_block,
 .version03 .mainrightblock2 .book_detaildata .bookdata .data_type_block {
@@ -5219,6 +5244,11 @@ select::-ms-expand {
 .version04 .mainrightblock2 .book_detaildata .bookdata2 h3 {
   color: #774181;
 }
+.version04 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a:hover, .version04 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a.here,
+.version04 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a:hover,
+.version04 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a.here {
+  background-color: #774181;
+}
 .version04 .mainrightblock .book_detaildata .bookdata .data_type_block,
 .version04 .mainrightblock2 .book_detaildata .bookdata .data_type_block {
   background-color: #e6b2c6;
@@ -5677,6 +5707,11 @@ select::-ms-expand {
 .version05 .mainrightblock2 .book_detaildata .bookdata2 h3 {
   color: #088c6f;
 }
+.version05 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a:hover, .version05 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a.here,
+.version05 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a:hover,
+.version05 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a.here {
+  background-color: #088c6f;
+}
 .version05 .mainrightblock .book_detaildata .bookdata .data_type_block,
 .version05 .mainrightblock2 .book_detaildata .bookdata .data_type_block {
   background-color: #f3d394;
@@ -5772,21 +5807,21 @@ select::-ms-expand {
 }
 
 .version06 .header {
-  background: #00b7ee;
-  background: linear-gradient(to bottom, #00b7ee, #00b7ee);
+  background: #0078c6;
+  background: linear-gradient(to bottom, #0078c6, #0078c6);
   box-shadow: none;
 }
 .version06 .header > .container .sidebarCtrl {
   background-image: url("../images/sidebarCtrl_white.png");
 }
 .version06 .header > .container .accesskey {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .header h1 {
   margin: -3px 0 0 20px;
 }
 .version06 table td a {
-  color: #44b1e2;
+  color: #0078c6;
 }
 .version06 table td a:hover {
   color: #dd1f03;
@@ -5795,40 +5830,40 @@ select::-ms-expand {
   background-image: url("../images/search_blockbg02_version06.jpg");
 }
 .version06 .search_block .searchsystem .recent_searches .title {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .search_block .searchsystem .searchall a.addfield {
-  background-color: #00b7ee;
+  background-color: #0078c6;
 }
 .version06 .search_block .searchsystem .searchall a.addfield:hover {
-  background-color: #00a3d5;
+  background-color: #0069ad;
 }
 .version06 .search_block .searchsystem .searchall a:hover {
   color: #fff;
 }
 .version06 .related_links div a span {
-  background-color: #007ca2;
+  background-color: #0078c6;
 }
 .version06 .related_links div a:hover {
-  color: #0090bb;
+  color: #0069ad;
 }
 .version06 .related_links div a:hover span {
-  background-color: #00b7ee;
+  background-color: #005993;
 }
 .version06 .featured_block {
   background-color: #fbe8d3;
 }
 .version06 .privacy_consent {
-  background-color: #00b7ee;
+  background-color: #0078c6;
 }
 .version06 .limit h2 {
-  color: #44b1e2;
+  color: #0078c6;
 }
 .version06 .sort_block .sortlist_block h2 a {
-  color: #219bd2;
+  color: #005993;
 }
 .version06 .search_blockin .searchsystem .btn_grp a.addfield {
-  background-color: #00b7ee;
+  background-color: #0078c6;
 }
 .version06 .search_blockin2,
 .version06 .search_blockin,
@@ -5846,66 +5881,66 @@ select::-ms-expand {
 .version06 .lightboxstyle h2,
 .version06 .lightboxstyle_block h2,
 .version06 .lightboxstyle_block2 h2 {
-  border-bottom: 2px solid #00b7ee;
-  color: #00b7ee !important;
+  border-bottom: 2px solid #0078c6;
+  color: #0078c6 !important;
 }
 .version06 .logintab ul li a {
-  color: #00b7ee !important;
-  border: 2px solid #00b7ee !important;
+  color: #0078c6 !important;
+  border: 2px solid #0078c6 !important;
 }
 .version06 .logintab ul li a:hover, .version06 .logintab ul li a.active {
-  background-color: #00b7ee !important;
+  background-color: #0078c6 !important;
   color: #fff !important;
 }
 .version06 .qrcode_btn a {
-  background-color: #00b7ee !important;
+  background-color: #0078c6 !important;
 }
 .version06 .qrcode_btn a:hover {
-  background-color: #22ccff !important;
+  background-color: #0097f9 !important;
 }
 .version06 .relatedlist ul li a:before {
-  background-color: #00b7ee;
+  background-color: #0078c6;
 }
 .version06 .relatedlist ul li a:hover {
   background-color: #fbe8d3;
 }
 .version06 .lightbox_data table th a {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .bookname {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .super_business_data .data_content .title {
-  color: #44b1e2;
+  color: #0078c6;
 }
 .version06 .AIGPT_information .AIGPT_group .content .booktitle {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .exclusive_book .booktitle {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 input[type=submit] {
-  background: #00b7ee;
-  border: 1px solid #00a3d5;
+  background: #0078c6;
+  border: 1px solid #0069ad;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
   transition: 0.2s;
 }
 .version06 input[type=submit]:hover {
-  background: #00c3fd;
+  background: #0081d5;
   box-shadow: none;
   cursor: pointer;
   color: #fff;
 }
 .version06 input[type=submit]:focus {
-  background: #00c3fd;
+  background: #0081d5;
   box-shadow: 0 0px 0px 2px #f1ad00;
   cursor: pointer;
   color: #fff;
 }
 .version06 input[type=submit].active {
-  background: #00c3fd;
+  background: #0081d5;
   cursor: pointer;
 }
 .version06 .featured_blockin {
@@ -5923,29 +5958,29 @@ select::-ms-expand {
   color: #333;
 }
 .version06 .classification {
-  background-color: #007ca2;
+  background-color: #004a7a;
   background-color: span;
   background-color-color: #fff;
 }
 .version06 .AIgptgroup .directions .content .directions {
-  color: #44b1e2;
+  color: #0078c6;
 }
 .version06 .AIgptgroup .directions .contentother button.btn {
-  background-color: #00b7ee;
+  background-color: #0078c6;
   color: #fff;
 }
 .version06 .AIgptgroup .directions .contentother button.btn:hover, .version06 .AIgptgroup .directions .contentother button.btn:focus {
-  background-color: #00a3d5;
+  background-color: #0069ad;
 }
 .version06 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .needs_directions:before {
-  background-color: #00b7ee;
+  background-color: #0078c6;
 }
 .version06 .AIgptgroup .describe .title {
-  color: #44b1e2;
+  color: #0078c6;
 }
 .version06 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li:last-child.active:after {
-  background: #00b7ee;
-  background: linear-gradient(180deg, #00b7ee 0%, #00b7ee 50%, rgb(236, 236, 236) 50%, rgb(236, 236, 236) 100%);
+  background: #0078c6;
+  background: linear-gradient(180deg, #0078c6 0%, #0078c6 50%, rgb(236, 236, 236) 50%, rgb(236, 236, 236) 100%);
 }
 @media (max-width: 992px) {
   .version06 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li:last-child.active:after {
@@ -5953,24 +5988,24 @@ select::-ms-expand {
   }
 }
 .version06 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li.active div {
-  background-color: #00b7ee;
+  background-color: #0078c6;
 }
 @media (max-width: 992px) {
   .version06 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li.active div:before {
-    background-color: #00b7ee;
+    background-color: #0078c6;
   }
 }
 .version06 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li.active:before {
-  border: 6px solid #00b7ee;
-  background-color: #00b7ee;
+  border: 6px solid #0078c6;
+  background-color: #0078c6;
   background-image: url("https://i.postimg.cc/m2D0BtTR/icon-tick.png");
   background-position: 0;
   background-repeat: no-repeat;
   background-size: 20px;
 }
 .version06 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li.active:after {
-  background: #00b7ee;
-  background: linear-gradient(180deg, #00b7ee 0%, #00b7ee 50%, rgb(187, 187, 187) 50%, rgb(187, 187, 187) 100%);
+  background: #0078c6;
+  background: linear-gradient(180deg, #0078c6 0%, #0078c6 50%, rgb(187, 187, 187) 50%, rgb(187, 187, 187) 100%);
 }
 @media (max-width: 992px) {
   .version06 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li.active:after {
@@ -5978,19 +6013,19 @@ select::-ms-expand {
   }
 }
 .version06 .AIgptgroup .AIgptstep .Features_block .featureslist .title {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .AIgptgroup .AIrecommendbook .recommendbook_list .content .booktitle {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .AIgptgroup .AIrecommendbook .recommendbook_list .content .booktitle a {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list .content .booktitle {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list .content .booktitle a {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .modify_data .title,
 .version06 .write_data .title,
@@ -5999,7 +6034,7 @@ select::-ms-expand {
 .version06 .stored_value_group .title,
 .version06 .reader_form_group .title,
 .version06 .delivery_method_block .title {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .modify_data p a,
 .version06 .write_data p a,
@@ -6008,7 +6043,7 @@ select::-ms-expand {
 .version06 .stored_value_group p a,
 .version06 .reader_form_group p a,
 .version06 .delivery_method_block p a {
-  color: #44b1e2;
+  color: #0078c6;
 }
 .version06 .modify_data p a:hover,
 .version06 .write_data p a:hover,
@@ -6020,32 +6055,32 @@ select::-ms-expand {
   color: #dd1f03;
 }
 .version06 .mystudymenu > ul > li > a {
-  color: #219bd2;
+  color: #005993;
 }
 .version06 .security_deposit_block .title {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .pagination .page li.active a {
-  background: #00b7ee;
-  border: #00b7ee solid 1px;
+  background: #0078c6;
+  border: #0078c6 solid 1px;
 }
 .version06 .contact_person_block .contact_person_group .data_list .title {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .contact_person_block .contact_person_group .data_list .title span {
-  border-bottom: 2px solid #00b7ee;
+  border-bottom: 2px solid #0078c6;
 }
 .version06 .send_block_title {
-  background-color: #00b7ee;
+  background-color: #0078c6;
 }
 .version06 .myorder_block .order_number {
-  background-color: #00b7ee;
+  background-color: #0078c6;
 }
 .version06 .filter_data_block .title {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .hotqa_list h2 {
-  background-color: #00b7ee;
+  background-color: #0078c6;
 }
 .version06 .devicereservation_block .device_list {
   background-color: #f9dcbc;
@@ -6093,36 +6128,41 @@ select::-ms-expand {
   font-weight: 400;
 }
 .version06 .booklist .bookmidblock h2 a {
-  color: #44b1e2;
+  color: #0078c6;
 }
 .version06 .booklist .bookmidblock ul li.word_title a {
-  color: #44b1e2;
+  color: #0078c6;
 }
 .version06 .booklist_block .booklist .bookmidblock .data_type_block {
   background-color: #fbe8d3;
 }
 .version06 .no_result .related_words h2 {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .devicefiltering_block .filtersearch button.searchbtn {
-  background-color: #00b7ee;
+  background-color: #0078c6;
 }
 .version06 .viewdata_block .viewmode_group .viewmode_parallel a:hover, .version06 .viewdata_block .viewmode_group .viewmode_parallel a:focus, .version06 .viewdata_block .viewmode_group .viewmode_parallel a.active,
 .version06 .viewdata_block .viewmode_group .viewmode_vertical a:hover,
 .version06 .viewdata_block .viewmode_group .viewmode_vertical a:focus,
 .version06 .viewdata_block .viewmode_group .viewmode_vertical a.active {
-  border: 1px solid #00b7ee;
-  background-color: #00b7ee;
+  border: 1px solid #0078c6;
+  background-color: #0078c6;
 }
 .version06 .itemselect_block .itemselect_group {
   background-color: #fbe8d3;
 }
 .version06 .book_detail .book_cover_source a {
-  color: #44b1e2;
+  color: #0078c6;
 }
 .version06 .mainrightblock .book_detaildata .bookdata2 h3,
 .version06 .mainrightblock2 .book_detaildata .bookdata2 h3 {
-  color: #00b7ee;
+  color: #0078c6;
+}
+.version06 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a:hover, .version06 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a.here,
+.version06 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a:hover,
+.version06 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a.here {
+  background-color: #0078c6;
 }
 .version06 .mainrightblock .book_detaildata .bookdata .data_type_block,
 .version06 .mainrightblock2 .book_detaildata .bookdata .data_type_block {
@@ -6130,89 +6170,89 @@ select::-ms-expand {
 }
 .version06 .mainrightblock .book_detaildata .bookdata .listdata ul li a,
 .version06 .mainrightblock2 .book_detaildata .bookdata .listdata ul li a {
-  color: #44b1e2;
+  color: #0078c6;
 }
 .version06 .switch_btn a {
-  background-color: #00b7ee !important;
+  background-color: #0078c6 !important;
 }
 .version06 .cp_content h3 {
-  color: #0090bb;
+  color: #005993;
 }
 .version06 .bookselection_group .rightblock .content_analysis .title {
-  background-color: #00b7ee;
+  background-color: #0078c6;
 }
 .version06 .fatfooter {
-  background-color: #0090bb;
+  background-color: #005993;
 }
 .version06 .fatfooter .btn-fatfooter {
-  background: #0090bb;
+  background: #005993;
 }
 .version06 .fatfooter .btn-fatfooter:hover, .version06 .fatfooter .btn-fatfooter:focus {
-  background: #006988;
+  background: #003a60;
 }
 .version06 footer {
-  background-color: #0090bb;
+  background-color: #005993;
 }
 .version06 .btnstyle.brownbg {
-  background-color: #00b7ee;
-  border: 2px solid #00b7ee;
+  background-color: #0078c6;
+  border: 2px solid #0078c6;
   color: #fff;
 }
 .version06 .btnstyle.brownbg:hover {
-  background-color: #00b7ee;
-  border: 2px solid #00b7ee;
+  background-color: #0078c6;
+  border: 2px solid #0078c6;
 }
 .version06 .linecontent.mobile-card .main-title {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .linecontent.mobile-card .main-title span {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .linecontent.mobile-card .main-title:before {
-  background: #00b7ee;
+  background: #0078c6;
 }
 .version06 .linecontent.mobile-card .card-step span {
-  background: #00b7ee;
+  background: #0078c6;
 }
 .version06 .linecontent.mobile-card .card-step span.active {
   color: #fff;
   background: #dc0122;
 }
 .version06 .linecontent.mobile-card .card-step em {
-  border: 8px solid #00b7ee;
+  border: 8px solid #0078c6;
   border-left: none;
   border-bottom: none;
 }
 @media screen and (max-device-width: 320px) {
   .version06 .linecontent.mobile-card .card-step em {
-    border: 5px solid #00b7ee;
+    border: 5px solid #0078c6;
     border-left: none;
     border-bottom: none;
   }
 }
 .version06 .linecontent.mobile-card .card-login .id {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .linecontent.mobile-card .card-ok span {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .linecontent.library .main-title {
-  color: #00b7ee;
+  color: #0078c6;
 }
 .version06 .linecontent.library .main-title:before {
-  background: #00b7ee;
+  background: #0078c6;
 }
 .version06 .scanning_button {
-  background-color: #00b7ee;
+  background-color: #0078c6;
 }
 .version06 .scanning_button:hover {
-  background-color: #09c6ff;
+  background-color: #0087e0;
 }
 .version06 .cascading li a {
-  border-bottom: 2px solid #00b7ee;
+  border-bottom: 2px solid #0078c6;
 }
 .version06 .cascading li a:hover, .version06 .cascading li a:focus {
-  color: #00b7ee !important;
+  color: #0078c6 !important;
 }
 .version06 .cascading li ul li a {
   border-bottom: 1px dotted #ccc;

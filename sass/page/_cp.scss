@@ -1275,7 +1275,7 @@
               }
               &:hover,
               &.here {
-                background-color: $color-green;
+                background-color: nth($primaryColor, $style);
                 color: #fff;
               }
             }
