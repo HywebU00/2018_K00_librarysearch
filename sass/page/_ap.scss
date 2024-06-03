@@ -4236,6 +4236,7 @@
               border-radius: 5px;
               padding: 1.5em;
               box-sizing: border-box;
+              position: relative;
               @include screen('mobile') {
                 flex-basis: 100%;
                 max-width: 100%;
@@ -4248,6 +4249,15 @@
                 font-size: 1.25em !important;
                 text-align: left;
                 margin-bottom: 15px;
+              }
+              p {
+                padding-bottom: 3.5em;
+              }
+              .btn_grp {
+                position: absolute;
+                right: 0;
+                left: 0;
+                bottom: 0.5em;
               }
             }
           }

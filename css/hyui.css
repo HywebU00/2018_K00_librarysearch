@@ -27794,6 +27794,7 @@ em.yellowbg {
   border-radius: 5px;
   padding: 1.5em;
   box-sizing: border-box;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .readdescription_block .readdescription_list {
@@ -27809,6 +27810,15 @@ em.yellowbg {
   font-size: 1.25em !important;
   text-align: left;
   margin-bottom: 15px;
+}
+.AIgptgroup .directions .reading_needs_block .needs_group .needs_content .readdescription_block .readdescription_list p {
+  padding-bottom: 3.5em;
+}
+.AIgptgroup .directions .reading_needs_block .needs_group .needs_content .readdescription_block .readdescription_list .btn_grp {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0.5em;
 }
 .AIgptgroup .describe {
   line-height: 1.8em;
