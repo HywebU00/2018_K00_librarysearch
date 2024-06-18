@@ -4777,7 +4777,8 @@
                 background-repeat: no-repeat;
                 background-position: 10px 8px;
                 background-size: 10px;
-                &:focus {
+                &:focus,
+                &.active {
                   color: #ed8301;
                   background-image: url('../images/feature_options02_active.svg');
                 }

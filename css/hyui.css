@@ -28337,7 +28337,7 @@ em.yellowbg {
   background-position: 10px 8px;
   background-size: 10px;
 }
-.AIgptgroup .AIrecommendbook .recommendbook_list .feature_options ul li.tobeseen a:focus {
+.AIgptgroup .AIrecommendbook .recommendbook_list .feature_options ul li.tobeseen a:focus, .AIgptgroup .AIrecommendbook .recommendbook_list .feature_options ul li.tobeseen a.active {
   color: #ed8301;
   background-image: url("../images/feature_options02_active.svg");
 }
