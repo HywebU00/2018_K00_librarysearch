@@ -3326,7 +3326,7 @@
   $style: index($sites, version02);
   // _header.scss
   .header {
-    @include gradient(#ff8b00, #ff8b00, vertical);
+    @include gradient(#bc5702, #bc5702, vertical);
     > .container {
       .sidebarCtrl {
         background-image: url('../images/sidebarCtrl_white.png');
@@ -3794,11 +3794,11 @@
   }
   .reservation_explain {
     background-color: nth($lightColor, $style);
-    color: #fff;
+    color: #000;
   }
   .device_explain {
     background-color: nth($lightColor, $style);
-    color: #fff;
+    color: #000;
     h3 {
       font-weight: 400;
     }
@@ -3911,7 +3911,7 @@
   }
   .cp_content {
     h3 {
-      color: darken(nth($primaryColor, $style), 10);
+      color: darken(nth($primaryColor, $style), 0);
     }
   }
   // _ap.css
@@ -3948,8 +3948,8 @@
       border: 2px solid nth($primaryColor, $style);
       color: #fff;
       &:hover {
-        background-color: lighten(nth($primaryColor, $style), 5);
-        border: 2px solid lighten(nth($primaryColor, $style), 5);
+        background-color: darken(nth($primaryColor, $style), 8);
+        border: 2px solid darken(nth($primaryColor, $style), 8);
       }
     }
   }

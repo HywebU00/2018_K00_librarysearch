@@ -320,7 +320,7 @@ th {
   font-style: normal;
   display: block;
   font-size: 1em;
-  border-left: 5px solid #005d98, #5c9588, #5c9588, #0e664c, #1c4b82, #ff8b00, #097e76, #774181, #088c6f, #0078c6;
+  border-left: 5px solid #005d98, #5c9588, #5c9588, #0e664c, #1c4b82, #bc5702, #097e76, #774181, #088c6f, #0078c6;
   padding: 2em;
   box-sizing: border-box;
   margin: 0 0em 2em;
@@ -3940,14 +3940,14 @@ select::-ms-expand {
 }
 
 .version02 .header {
-  background: #ff8b00;
-  background: linear-gradient(to bottom, #ff8b00, #ff8b00);
+  background: #bc5702;
+  background: linear-gradient(to bottom, #bc5702, #bc5702);
 }
 .version02 .header > .container .sidebarCtrl {
   background-image: url("../images/sidebarCtrl_white.png");
 }
 .version02 .header > .container .accesskey {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .header h1 {
   margin: -3px 0 0 20px;
@@ -3962,31 +3962,31 @@ select::-ms-expand {
   background-image: url("../images/search_blockbg02_version02.jpg");
 }
 .version02 .search_block .searchsystem .recent_searches .title {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .search_block .searchsystem .searchall a.addfield {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 .version02 .search_block .searchsystem .searchall a.addfield:hover {
-  background-color: #e67d00;
+  background-color: #a34b02;
 }
 .version02 .search_block .searchsystem .searchall a:hover {
   color: #fff;
 }
 .version02 .related_links div a span {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 .version02 .related_links div a:hover {
-  color: #cc6f00;
+  color: #8a4001;
 }
 .version02 .related_links div a:hover span {
-  background-color: #ff9e29;
+  background-color: #e46a02;
 }
 .version02 .featured_block {
   background-color: #a7c077;
 }
 .version02 .privacy_consent {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 .version02 .limit h2 {
   color: #774e2b;
@@ -3995,7 +3995,7 @@ select::-ms-expand {
   color: #52351d;
 }
 .version02 .search_blockin .searchsystem .btn_grp a.addfield {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 .version02 .search_blockin2,
 .version02 .search_blockin,
@@ -4013,66 +4013,66 @@ select::-ms-expand {
 .version02 .lightboxstyle h2,
 .version02 .lightboxstyle_block h2,
 .version02 .lightboxstyle_block2 h2 {
-  border-bottom: 2px solid #ff8b00;
-  color: #ff8b00 !important;
+  border-bottom: 2px solid #bc5702;
+  color: #bc5702 !important;
 }
 .version02 .logintab ul li a {
-  color: #ff8b00 !important;
-  border: 2px solid #ff8b00 !important;
+  color: #bc5702 !important;
+  border: 2px solid #bc5702 !important;
 }
 .version02 .logintab ul li a:hover, .version02 .logintab ul li a.active {
-  background-color: #ff8b00 !important;
+  background-color: #bc5702 !important;
   color: #fff !important;
 }
 .version02 .qrcode_btn a {
-  background-color: #ff8b00 !important;
+  background-color: #bc5702 !important;
 }
 .version02 .qrcode_btn a:hover {
-  background-color: #ffa233 !important;
+  background-color: #ee6e03 !important;
 }
 .version02 .relatedlist ul li a:before {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 .version02 .relatedlist ul li a:hover {
   background-color: #a7c077;
 }
 .version02 .lightbox_data table th a {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .bookname {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .super_business_data .data_content .title {
   color: #774e2b;
 }
 .version02 .AIGPT_information .AIGPT_group .content .booktitle {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .exclusive_book .booktitle {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 input[type=submit] {
-  background: #ff8b00;
-  border: 1px solid #e67d00;
+  background: #bc5702;
+  border: 1px solid #a34b02;
   color: #fff;
   box-shadow: 0px 2px 2px RGBA(0, 0, 0, 0.08);
   border-radius: 4px;
   transition: 0.2s;
 }
 .version02 input[type=submit]:hover {
-  background: #ff920f;
+  background: #cb5e02;
   box-shadow: none;
   cursor: pointer;
   color: #fff;
 }
 .version02 input[type=submit]:focus {
-  background: #ff920f;
+  background: #cb5e02;
   box-shadow: 0 0px 0px 2px #f1ad00;
   cursor: pointer;
   color: #fff;
 }
 .version02 input[type=submit].active {
-  background: #ff920f;
+  background: #cb5e02;
   cursor: pointer;
 }
 .version02 .featured_blockin {
@@ -4108,21 +4108,21 @@ select::-ms-expand {
   color: #774e2b;
 }
 .version02 .AIgptgroup .directions .contentother button.btn {
-  background-color: #ff8b00;
+  background-color: #bc5702;
   color: #fff;
 }
 .version02 .AIgptgroup .directions .contentother button.btn:hover, .version02 .AIgptgroup .directions .contentother button.btn:focus {
-  background-color: #e67d00;
+  background-color: #a34b02;
 }
 .version02 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .needs_directions:before {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 .version02 .AIgptgroup .describe .title {
   color: #774e2b;
 }
 .version02 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li:last-child.active:after {
-  background: #ff8b00;
-  background: linear-gradient(180deg, #ff8b00 0%, #ff8b00 50%, rgb(236, 236, 236) 50%, rgb(236, 236, 236) 100%);
+  background: #bc5702;
+  background: linear-gradient(180deg, #bc5702 0%, #bc5702 50%, rgb(236, 236, 236) 50%, rgb(236, 236, 236) 100%);
 }
 @media (max-width: 992px) {
   .version02 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li:last-child.active:after {
@@ -4130,24 +4130,24 @@ select::-ms-expand {
   }
 }
 .version02 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li.active div {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 @media (max-width: 992px) {
   .version02 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li.active div:before {
-    background-color: #ff8b00;
+    background-color: #bc5702;
   }
 }
 .version02 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li.active:before {
-  border: 6px solid #ff8b00;
-  background-color: #ff8b00;
+  border: 6px solid #bc5702;
+  background-color: #bc5702;
   background-image: url("https://i.postimg.cc/m2D0BtTR/icon-tick.png");
   background-position: 0;
   background-repeat: no-repeat;
   background-size: 20px;
 }
 .version02 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li.active:after {
-  background: #ff8b00;
-  background: linear-gradient(180deg, #ff8b00 0%, #ff8b00 50%, rgb(187, 187, 187) 50%, rgb(187, 187, 187) 100%);
+  background: #bc5702;
+  background: linear-gradient(180deg, #bc5702 0%, #bc5702 50%, rgb(187, 187, 187) 50%, rgb(187, 187, 187) 100%);
 }
 @media (max-width: 992px) {
   .version02 .AIgptgroup .AIgptstep .Step_block .online_stepblock ul li.active:after {
@@ -4155,19 +4155,19 @@ select::-ms-expand {
   }
 }
 .version02 .AIgptgroup .AIgptstep .Features_block .featureslist .title {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .AIgptgroup .AIrecommendbook .recommendbook_list .content .booktitle {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .AIgptgroup .AIrecommendbook .recommendbook_list .content .booktitle a {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list .content .booktitle {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list .content .booktitle a {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .modify_data .title,
 .version02 .write_data .title,
@@ -4176,7 +4176,7 @@ select::-ms-expand {
 .version02 .stored_value_group .title,
 .version02 .reader_form_group .title,
 .version02 .delivery_method_block .title {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .modify_data p a,
 .version02 .write_data p a,
@@ -4200,26 +4200,26 @@ select::-ms-expand {
   color: #52351d;
 }
 .version02 .security_deposit_block .title {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .pagination .page li.active a {
-  background: #ff8b00;
-  border: #ff8b00 solid 1px;
+  background: #bc5702;
+  border: #bc5702 solid 1px;
 }
 .version02 .contact_person_block .contact_person_group .data_list .title {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .contact_person_block .contact_person_group .data_list .title span {
-  border-bottom: 2px solid #ff8b00;
+  border-bottom: 2px solid #bc5702;
 }
 .version02 .send_block_title {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 .version02 .myorder_block .order_number {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 .version02 .filter_data_block .title {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .hotqa_list h2 {
   background-color: #a7c077;
@@ -4262,11 +4262,11 @@ select::-ms-expand {
 }
 .version02 .reservation_explain {
   background-color: #a7c077;
-  color: #fff;
+  color: #000;
 }
 .version02 .device_explain {
   background-color: #a7c077;
-  color: #fff;
+  color: #000;
 }
 .version02 .device_explain h3 {
   font-weight: 400;
@@ -4281,17 +4281,17 @@ select::-ms-expand {
   background-color: #a7c077;
 }
 .version02 .no_result .related_words h2 {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .devicefiltering_block .filtersearch button.searchbtn {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 .version02 .viewdata_block .viewmode_group .viewmode_parallel a:hover, .version02 .viewdata_block .viewmode_group .viewmode_parallel a:focus, .version02 .viewdata_block .viewmode_group .viewmode_parallel a.active,
 .version02 .viewdata_block .viewmode_group .viewmode_vertical a:hover,
 .version02 .viewdata_block .viewmode_group .viewmode_vertical a:focus,
 .version02 .viewdata_block .viewmode_group .viewmode_vertical a.active {
-  border: 1px solid #ff8b00;
-  background-color: #ff8b00;
+  border: 1px solid #bc5702;
+  background-color: #bc5702;
 }
 .version02 .itemselect_block .itemselect_group {
   background-color: #a7c077;
@@ -4301,12 +4301,12 @@ select::-ms-expand {
 }
 .version02 .mainrightblock .book_detaildata .bookdata2 h3,
 .version02 .mainrightblock2 .book_detaildata .bookdata2 h3 {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a:hover, .version02 .mainrightblock .book_detaildata .bookdata2 .journal_tab ul li a.here,
 .version02 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a:hover,
 .version02 .mainrightblock2 .book_detaildata .bookdata2 .journal_tab ul li a.here {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 .version02 .mainrightblock .bookdata .data_type_block,
 .version02 .mainrightblock2 .bookdata .data_type_block {
@@ -4317,86 +4317,86 @@ select::-ms-expand {
   color: #774e2b;
 }
 .version02 .switch_btn a {
-  background-color: #ff8b00 !important;
+  background-color: #bc5702 !important;
 }
 .version02 .cp_content h3 {
-  color: #cc6f00;
+  color: #bc5702;
 }
 .version02 .bookselection_group .rightblock .content_analysis .title {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 .version02 .fatfooter {
-  background-color: #e67d00;
+  background-color: #a34b02;
 }
 .version02 .fatfooter .btn-fatfooter {
-  background: #e67d00;
+  background: #a34b02;
 }
 .version02 .fatfooter .btn-fatfooter:hover, .version02 .fatfooter .btn-fatfooter:focus {
-  background: #b36100;
+  background: #703401;
 }
 .version02 footer {
-  background-color: #e67d00;
+  background-color: #a34b02;
 }
 .version02 .btnstyle.brownbg {
-  background-color: #ff8b00;
-  border: 2px solid #ff8b00;
+  background-color: #bc5702;
+  border: 2px solid #bc5702;
   color: #fff;
 }
 .version02 .btnstyle.brownbg:hover {
-  background-color: #ff971a;
-  border: 2px solid #ff971a;
+  background-color: #944402;
+  border: 2px solid #944402;
 }
 .version02 .linecontent.mobile-card .main-title {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .linecontent.mobile-card .main-title span {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .linecontent.mobile-card .main-title:before {
-  background: #ff8b00;
+  background: #bc5702;
 }
 .version02 .linecontent.mobile-card .card-step span {
-  background: #ff8b00;
+  background: #bc5702;
 }
 .version02 .linecontent.mobile-card .card-step span.active {
   color: #fff;
   background: #dc0122;
 }
 .version02 .linecontent.mobile-card .card-step em {
-  border: 8px solid #ff8b00;
+  border: 8px solid #bc5702;
   border-left: none;
   border-bottom: none;
 }
 @media screen and (max-device-width: 320px) {
   .version02 .linecontent.mobile-card .card-step em {
-    border: 5px solid #ff8b00;
+    border: 5px solid #bc5702;
     border-left: none;
     border-bottom: none;
   }
 }
 .version02 .linecontent.mobile-card .card-login .id {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .linecontent.mobile-card .card-ok span {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .linecontent.library .main-title {
-  color: #ff8b00;
+  color: #bc5702;
 }
 .version02 .linecontent.library .main-title:before {
-  background: #ff8b00;
+  background: #bc5702;
 }
 .version02 .scanning_button {
-  background-color: #ff8b00;
+  background-color: #bc5702;
 }
 .version02 .scanning_button:hover {
-  background-color: #ff971a;
+  background-color: #d56302;
 }
 .version02 .cascading li a {
-  border-bottom: 2px solid #ff8b00;
+  border-bottom: 2px solid #bc5702;
 }
 .version02 .cascading li a:hover, .version02 .cascading li a:focus {
-  color: #ff8b00 !important;
+  color: #bc5702 !important;
 }
 .version02 .cascading li ul li a {
   border-bottom: 1px dotted #ccc;
