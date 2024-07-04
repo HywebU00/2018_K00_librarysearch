@@ -608,6 +608,29 @@
         display: inline-block;
         position: relative;
       }
+      .data_type_block2 {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        margin-bottom: 0.8em;
+        .type_list {
+          margin: 0 5px 0 0;
+          padding: 5px 12px;
+          margin-bottom: 10px;
+          font-size: 1em;
+          border: 1px solid #ddd;
+          border-radius: 20px;
+          color: #555;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          img {
+            margin-right: 0.4em;
+            vertical-align: middle;
+            width: 20px;
+          }
+        }
+      }
       .booktype {
         float: left;
         margin-right: 15px;

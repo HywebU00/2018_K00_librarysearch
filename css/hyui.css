@@ -12170,6 +12170,29 @@ button.backbtn {
   display: inline-block;
   position: relative;
 }
+.booklist_block .booklist .bookmidblock .data_type_block2 {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 0.8em;
+}
+.booklist_block .booklist .bookmidblock .data_type_block2 .type_list {
+  margin: 0 5px 0 0;
+  padding: 5px 12px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  color: #555;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+.booklist_block .booklist .bookmidblock .data_type_block2 .type_list img {
+  margin-right: 0.4em;
+  vertical-align: middle;
+  width: 20px;
+}
 .booklist_block .booklist .bookmidblock .booktype {
   float: left;
   margin-right: 15px;
@@ -23794,9 +23817,13 @@ em.yellowbg {
     text-align: center;
   }
 }
+.featured_blockin .featured_data_group {
+  display: flex;
+  flex-wrap: wrap;
+}
 .featured_blockin .featured_data {
-  width: 24%;
-  float: left;
+  flex: 0 0 auto;
+  flex-basis: 24%;
   margin-right: 1%;
   margin-bottom: 1%;
   max-height: 520px;
@@ -23805,20 +23832,19 @@ em.yellowbg {
 }
 @media screen and (max-width: 1399px) {
   .featured_blockin .featured_data {
-    width: 32%;
+    flex-basis: 32%;
     margin-right: 1%;
   }
 }
 @media screen and (max-width: 991px) {
   .featured_blockin .featured_data {
-    width: 49%;
+    flex-basis: 49%;
     margin-right: 1%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 575px) {
   .featured_blockin .featured_data {
-    width: 100%;
-    float: none;
+    flex-basis: 100%;
     margin: 0 auto 20px;
     height: auto;
     max-height: none;

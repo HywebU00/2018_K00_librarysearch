@@ -383,35 +383,30 @@
       text-align: center;
     }
   }
+  .featured_data_group {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .featured_data {
-    width: 24%;
-    float: left;
+    flex: 0 0 auto;
+    flex-basis: 24%;
     margin-right: 1%;
     margin-bottom: 1%;
     max-height: 520px;
     background-color: #fff;
     overflow: hidden;
-    // @media(max-width: 1800px) {
-    //     height: 520px;
-    // }
-    // @media(max-width: 1600px) {
-    //     height: 480px;
-    // }
+
     @include screen('notebook') {
-      width: 32%;
+      flex-basis: 32%;
       margin-right: 1%;
     }
     @include screen('tablet') {
-      width: 49%;
+      flex-basis: 49%;
       margin-right: 1%;
-      // height: 550px;
     }
-    @media (max-width: 850px) {
-      // height: 500px;
-    }
-    @include screen('mobile') {
-      width: 100%;
-      float: none;
+
+    @include screen('xs_mobile') {
+      flex-basis: 100%;
       margin: 0 auto 20px;
       height: auto;
       max-height: none;
