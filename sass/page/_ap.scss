@@ -4783,8 +4783,17 @@
               a {
                 background-image: url('../images/feature_options03.svg');
                 background-repeat: no-repeat;
-                background-position: 10px 9px;
+                background-position: 10px 8px;
                 background-size: 13px;
+              }
+            }
+            &.bookboxreservation {
+              a {
+                padding: 0.2em 0.8em 0.2em 1.9em;
+                background-image: url('../images/feature_options04.svg');
+                background-repeat: no-repeat;
+                background-position: 10px 7px;
+                background-size: 14px;
               }
             }
           }
@@ -4844,6 +4853,37 @@
         .recommendobjects {
           color: #774e2b;
           margin-bottom: 0.3em;
+        }
+        .datelist {
+          margin-bottom: 0.3em;
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            li {
+              color: #774e2b;
+              margin-bottom: 0.1em;
+              position: relative;
+              padding-right: 1em;
+              margin-right: 0.5em;
+              &:after {
+                content: '/';
+                position: absolute;
+                right: 0;
+                top: 0;
+              }
+              &:last-child {
+                &:after {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+        .introduce {
+          line-height: 1.8em;
         }
       }
     }
@@ -4909,13 +4949,42 @@
       flex: 1 1 auto;
       display: flex;
       justify-content: flex-end;
+      align-items: center;
       @include screen('mobile') {
         flex-basis: 100%;
         flex-wrap: wrap;
       }
+      .viewmode {
+        margin-right: 5px;
+        a {
+          display: block;
+          padding: 0em 0.8em 0em 2em;
+          border: 1px solid #d3d3d3 !important;
+          border-radius: 5px;
+          line-height: 2.3em;
+          height: 2.3em;
+        }
+        &.list {
+          a {
+            background-image: url('../images/viewmode_icon02.svg');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            background-size: 15px;
+          }
+        }
+        &.juxtapose {
+          a {
+            background-image: url('../images/viewmode_icon01.svg');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            background-size: 15px;
+          }
+        }
+      }
       select {
         width: auto;
         margin-left: 0.2em;
+        margin-bottom: 0;
         @include screen('xs_mobile') {
           width: 100%;
           margin-left: 0;
@@ -5233,6 +5302,177 @@
     }
     @media (max-width: 767px) {
       padding: 1.5em 1em;
+    }
+  }
+}
+// 共讀書箱
+.sharedreadingbox_block {
+  margin: 40px 35px 60px;
+  @include screen('mobile') {
+    margin: 40px 0px 60px;
+  }
+  .title {
+    color: $color-red;
+    font-size: 1.75em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .readingbox_group {
+    padding: 30px 20px;
+    margin: 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    @include screen('mobile') {
+      margin: 0 20px 60px;
+    }
+  }
+  .readingbox_tab {
+    margin: 0 0 20px;
+    @include box-sizing;
+    .sort {
+      padding: 0 5px;
+      a {
+        display: block;
+        padding: 20px 10px;
+        @include gradient(#dcdcdc, #e5e5e5, vertical);
+        color: #333;
+        font-size: 1.313em;
+        text-align: center;
+        border-radius: 5px;
+        position: relative;
+        transition: 0.2s;
+        line-height: 1.3em;
+        &:hover {
+          background-image: none;
+          background-color: $color-yellow;
+          color: #000;
+        }
+        &.here {
+          background: $color-yellow;
+          color: #000;
+          &:focus {
+            // box-shadow: 0 0px 0px 2px $form-focus;
+            background: lighten($color-yellow, 5);
+          }
+        }
+      }
+    }
+    .slick-next {
+      right: -20px;
+      top: 0;
+      background-color: transparent;
+    }
+    .slick-prev {
+      left: -20px;
+      top: 0;
+      background-color: transparent;
+    }
+    @media (max-width: 767px) {
+      .slick-next {
+        right: -45px;
+        top: 0;
+      }
+      .slick-prev {
+        left: -45px;
+        top: 0;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .slick-next {
+        right: -36px;
+      }
+      .slick-prev {
+        left: -36px;
+      }
+    }
+  }
+  .readingboxtab_content {
+    margin: 10px 0 20px;
+    border-radius: 5px;
+    float: none;
+    clear: both;
+    padding: 20px 10px;
+    text-align: left;
+    background-color: #eee;
+    @include box-sizing;
+    @include screen('xs_mobile') {
+      padding: 20px 10px;
+    }
+
+    .form_grid {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .form_grp {
+      flex: none;
+      flex-basis: calc(100% / 2);
+      max-width: calc(100% / 2);
+      margin-right: 0;
+      @include screen('mobile') {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        display: block;
+      }
+
+      .form_title {
+        flex: 1 1 auto;
+        flex-basis: 100%;
+        width: 100% !important;
+      }
+      .form_content {
+        flex: auto;
+        width: 100% !important;
+        select {
+          width: 100%;
+        }
+      }
+    }
+    .flex-col-equal-3 {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      .form_grp {
+        flex-basis: calc(100% / 3);
+        max-width: calc(100% / 3);
+        margin-right: 0;
+      }
+      @include screen('mobile') {
+        flex-wrap: wrap;
+        .form_grp {
+          flex-basis: 100%;
+          max-width: 100%;
+          margin-right: 0;
+          display: block;
+        }
+      }
+    }
+    .btn_grp {
+      margin: 0;
+    }
+  }
+
+  .AIgptgroup {
+    .AIrecommendbook {
+      margin-bottom: 0;
+      background-color: #fff;
+      padding: 0;
+    }
+    .AIinformation {
+      border-bottom: 1px solid #ddd;
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+        border-top: 1px solid #ddd;
+        padding-top: 1em;
+        margin-top: 1.5em;
+      }
     }
   }
 }

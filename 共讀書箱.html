@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>凌網科技圖書館查詢系統</title>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+  <!-- 出版年度css -->
+  <link rel="stylesheet" href="vendor/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
+  <link rel="stylesheet" href="css/hyui.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- wrapper 最大寬度 -->
+  <div class="wrapper  version06 nowa havewa">
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+    <!-- sidebar  start-->
+    <aside class="sidebar">
+      <div class="m_area">
+        <div class="menu">
+          <ul>
+            <li><a href="#">主頁</a></li>
+            <li><a href="#">新進圖書</a></li>
+            <li><a href="#">展示書</a></li>
+            <li><a href="#">網路辦證</a></li>
+            <li><a href="#">線上協尋書</a></li>
+            <li><a href="#">設備預約</a></li>
+            <li><a href="#">圖書推薦</a></li>
+            <li><a href="#">其他功能</a></li>
+          </ul>
+        </div>
+        <nav class="navigation">
+          <!-- 語言設定 start-->
+          <div class="language">
+            <a href="javascript:;">Language</a>
+            <ul>
+              <li><a href="javascript:;">中文版</a></li>
+              <li><a href="javascript:;">英文版</a></li>
+            </ul>
+          </div>
+          <!-- 語言設定 end-->
+        </nav>
+        <button type="button" class="sidebarClose">關閉</button>
+      </div>
+      <div class="menu_overlay"></div>
+    </aside>
+    <!-- sidebar  end-->
+    <!-- header Start -->
+    <header class="header">
+      <div class="container">
+        <button type="button" class="sidebarCtrl">側欄選單</button>
+        <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+        <h1><a href="index.htm"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+        <!-- navigation Start -->
+        <nav class="navigation">
+          <!-- 一組ul預設靠右 -->
+          <!-- 兩組ul已寫JQ靠左靠右 -->
+          <ul>
+            <li><a href="javascript:;">Help</a></li>
+            <li><a href="javascript:;">圖書館首頁</a></li>
+          </ul>
+          <!-- 語言設定 start-->
+          <div class="language">
+            <a href="javascript:;">Language</a>
+            <ul>
+              <li><a href="javascript:;">中文版</a></li>
+              <li><a href="javascript:;">英文版</a></li>
+            </ul>
+          </div>
+          <!-- 語言設定 end-->
+          <!-- font_size -->
+          <div class="font_size">
+            <span>字型大小：</span>
+            <!-- 英文用<span>font-size：</span> -->
+            <ul>
+              <li><a href="#" class="small">小</a></li>
+              <li><a href="#" class="medium">中</a></li>
+              <li><a href="#" class="large">大</a></li>
+            </ul>
+          </div>
+          <!-- login start -->
+          <div class="login loginbtn">
+            <button type="button" class="btn btn-sm">登入/線上辦證</button>
+          </div>
+          <!-- login end-->
+          <!-- 登入燈箱start -->
+          <div class="login_lightbox">
+            <div class="overlay"></div>
+            <div class="loginblock">
+              <div class="close"></div>
+              <h2>讀者登入</h2>
+              <p>登入說明文字：本校校職員生的帳號密碼與資訊服務相同，帳號為學號/員工編號，密碼若忘記，請洽圖書館暨資訊處系統開發組， (電話：07-78111151轉2830) </p>
+              <form>
+                <div class="form_grp form_inline">
+                  <label for="username">讀者帳號:</label>
+                  <input name="username" type="text" placeholder="請輸入文字">
+                </div>
+                <div class="form_grp form_inline">
+                  <label for="password">讀者密碼:</label>
+                  <input name="password" type="password" placeholder="請輸入密碼">
+                </div>
+                <div class="btn_grp">
+                  <input name="" type="submit" value="登入" />
+                </div>
+                <div class="unable_login">
+                  <h3><span>無法登入?</span></h3>
+                  <input name="" type="button" value="忘記密碼" />
+                  <input name="" type="button" value="網路辦證" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- 登入燈箱end-->
+        </nav>
+        <!-- 手機才出現的按鈕 start -->
+        <div class="login  loginbtn login_mobile_btn">
+          <button type="button" class="btn btn-sm">登入</button>
+        </div>
+        <!-- 手機才出現的按鈕 end -->
+
+        <!-- noscript -->
+        <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a
+            href="javascript:;">網站導覽</a>
+        </noscript>
+        <!-- 手機版才出現的menu start-->
+        <div class="menu">
+          <ul>
+            <li><a href="#">主頁</a></li>
+            <li><a href="#">新進圖書</a></li>
+            <li><a href="#">展示書</a></li>
+            <li><a href="#">網路辦證</a></li>
+            <li><a href="#">線上協尋書</a></li>
+            <li><a href="#">設備預約</a></li>
+            <li><a href="#">圖書推薦</a></li>
+            <li><a href="#">其他功能</a></li>
+          </ul>
+        </div>
+        <!-- 手機版才出現的menu end-->
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <div id="center" class="main">
+      <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+      <!-- 一般標題start -->
+      <section class="section col-12  search_blockin2">
+        <div class="container">
+          <div class="col">
+            <!-- <div class="general_title">為您選書</div> -->
+            <!-- <div class="RSS_button">
+                            <a href="#" class="btn">RSS</a>
+                        </div> -->
+          </div>
+        </div>
+      </section>
+      <!-- 一般標題end -->
+      <!-- 分欄start -->
+      <div class="maincolumn">
+        <div class="container">
+          <!-- 右欄 start  -->
+          <div class="mainrightblock2">
+            <!-- 右欄左線start -->
+            <div class="rightlineblock">
+              <!-- 路徑start -->
+              <div class="breadcrumb">
+                <span>現在位置：</span>
+                <ul>
+                  <li><a href="javascript:;">首頁</a></li>
+                  <li>為您選書</li>
+                </ul>
+              </div>
+              <!-- 路徑end-->
+
+              <!-- 共讀書箱 start -->
+              <div class="sharedreadingbox_block">
+                <div class="title">共讀書箱</div>
+                <!-- readingbox_group start -->
+                <div class="readingbox_group">
+                  <!-- 共讀書箱tab start -->
+                  <div class="readingbox_tab">
+                    <div class="sort"><a href="#" class="here">中文共讀書箱</a></div>
+                    <div class="sort"><a href="#">英文共讀書箱（中區資源中心）</a></div>
+                  </div>
+                  <div class="readingboxtab_content">
+                    <form action="">
+                      <div class="form_grid">
+                        <div class="form_grp">
+                          <label for="" class="form_title">書名</label>
+                          <div class="form_content">
+                            <input name="" type="text" placeholder="請輸入書名">
+                          </div>
+                        </div>
+                        <div class="form_grp">
+                          <label for="" class="form_title">適讀對象</label>
+                          <div class="form_content">
+                            <select id="selectSample" name="">
+                              <option value="">請選擇</option>
+                              <option value="">國小低年級</option>
+                              <option value="">國小中年級</option>
+                              <option value="">國小高年級</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="flex-col-equal-3">
+                          <!--1  -->
+                          <div class="form_grp">
+                            <label for="" class="form_title">館藏地</label>
+                            <div class="form_content">
+                              <select id="selectSample" name="">
+                                <option value="">請選擇</option>
+                                <option value="">總管</option>
+                                <option value="">葫蘆墩分館</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- 2 -->
+                          <div class="form_grp">
+                            <label for="" class="form_title">適讀科目</label>
+                            <div class="form_content">
+                              <select id="selectSample" name="">
+                                <option value="">請選擇</option>
+                                <option value="">國語</option>
+                                <option value="">閱讀</option>
+                              </select>
+                            </div>
+                          </div>
+                          <!-- 3 -->
+                          <div class="form_grp">
+                            <label for="" class="form_title">探討議題</label>
+                            <div class="form_content ">
+                              <input name="" type="text" placeholder="請輸入探討議題">
+                            </div>
+                          </div>
+                          <!--  -->
+                        </div>
+                      </div>
+                      <div class="btn_grp">
+                        <input name="" type="reset" value="清空條件">
+                        <input name="Search" type="submit" value="查詢" />
+                      </div>
+                    </form>
+                  </div>
+
+                  <!-- 共讀書箱tab end -->
+                  <div class="AIgptgroup">
+                    <!-- AI推薦書單 -->
+                    <div class="AIrecommendbook">
+                      <div class="AIinformation">
+                        <div class="AIpage">共<span>30</span>筆，<input type="text" name="" id="" value="1">/ 3 頁 <button type="button" class="btn  prev">上一頁</button><button type="button" type="button"
+                            class="btn  next">下一頁</button>
+                        </div>
+                        <div class="AIselect">
+                          <div class="viewmode list"><a href="javascript:;">列表檢視</a></div>
+                          <div class="viewmode juxtapose"><a href="javascript:;">並排檢視</a></div>
+                          <select id="selectSample" name="">
+                            <option value="">10筆</option>
+                            <option value="">25筆</option>
+                            <option value="">50筆</option>
+                          </select>
+                        </div>
+                      </div>
+                      <!-- 1 -->
+                      <div class="recommendbook_list">
+                        <div class="feature_options">
+                          <ul>
+                            <li class="bookboxreservation"><a href="javascript:;">書箱預約</a></li>
+                            <li class="moreinformation "><a href="javascript:;">詳細資訊</a></li>
+                          </ul>
+                        </div>
+                        <div class="recommendbook"><img src="images/recommendbook08.jpg" alt="書名"></div>
+                        <div class="content">
+                          <div class="booktitle"><a href="#">1.波波麗珍奶店.1, 貓熊外送007</a></div>
+                          <div class="datelist">
+                            <ul>
+                              <li>適讀對象：國小中年級</li>
+                              <li>適讀科目：國語文、閱讀</li>
+                              <li>書箱館藏地：總館</li>
+                              <li>書箱狀態：外借中</li>
+                              <li>預約人數：0</li>
+                            </ul>
+                          </div>
+                          <div class="introduce">
+                            波波麗珍奶店是各行各業的人駐足之處，珠奶奶領著兩個夥伴豬沙沙和豬亞亞一起快活工作，招呼客人，無論你是在外奔波，不知人生方向的外送員，無論你是立志成為棒球國手，卻受傷無法上場，甚至是想開始練習當網紅，卻不得其門而入……來波波麗喝一口珠奶奶親手製作的特調飲料，停一下，喘一下，整頓一下腦中的慌亂和不安，看看杯底的茶葉幸運籤為你帶來什麼指引？
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 書箱預約 燈箱start -->
+                      <div class="lightboxstyle" id="sharedreadingbox_style">
+                        <div class="overlay"></div>
+                        <div class="lightboxstyle_block block_extend">
+                          <div class="close"></div>
+                          <h2>書箱預約</h2>
+                          <form action="">
+                            <div class="lightbox_data">
+                              <div class="form_grid">
+                                <div class="form_grp">
+                                  <label for=" " class="form_title ">書箱館藏地：</label>
+                                  <div class="form_content">
+                                    總館
+                                  </div>
+                                </div>
+                                <div class="form_grp">
+                                  <label for="" class="form_title"> 書箱狀態：</label>
+                                  <div class="form_content ">
+                                    外借中
+                                  </div>
+                                </div>
+                                <div class="form_grp">
+                                  <label for="" class="form_title"> 預約人數：</label>
+                                  <div class="form_content ">
+                                    0
+                                  </div>
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="sharedreadinglightbox">
+                                <div class="subtitle">借閱說明：</div>
+                                <div class="contentlist">
+                                  一、借期60天，書箱可續借1次。<br>
+                                  二、書箱運送方式：111年起，改採物流方式配送/回收。<br>
+                                  三、<span class="word_red">請留意書箱狀態若為借出、有預約人數，表示此書箱有學校借閱，無法即時配送。</span><br>
+                                  四、如老師有調職、更換服務單位等，請與圖書館聯絡以利物流配送作業。<br>
+                                  五、閱讀回饋：凡學生利用本館共讀書箱之圖書參加寫作投稿或比賽等，皆可通報本館，將致贈閱讀好禮以茲鼓勵。<br>
+                                  六、聯絡電話：04-24225101分機606 沈先生<br>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="btn_grp">
+                              <input name="" type="reset" value="取消">
+                              <input name="" type="submit" value="確定預約">
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <!-- 書箱預約 燈箱end -->
+                      <!-- 詳細資訊 燈箱start -->
+                      <div class="lightboxstyle" id="sharedreadingbox_style2">
+                        <div class="overlay"></div>
+                        <div class="lightboxstyle_block block_extend_further">
+                          <div class="close"></div>
+                          <h2>詳細資訊</h2>
+                          <form action="">
+                            <div class="lightbox_data">
+                              <div class="sharedreading_lightbox">
+                                <div class="content">
+                                  <div class="booktitle">波波麗珍奶店.1, 貓熊外送007</div>
+                                  <div class="datelist">
+                                    <ul>
+                                      <li>適讀對象：國小中年級</li>
+                                      <li>適讀科目：國語文、閱讀</li>
+                                      <li>書箱館藏地：總館</li>
+                                      <li>書箱狀態：外借中</li>
+                                      <li>預約人數：0</li>
+                                    </ul>
+                                  </div>
+                                  <div class="introduce">
+                                    波波麗珍奶店是各行各業的人駐足之處，珠奶奶領著兩個夥伴豬沙沙和豬亞亞一起快活工作，招呼客人，無論你是在外奔波，不知人生方向的外送員，無論你是立志成為棒球國手，卻受傷無法上場，甚至是想開始練習當網紅，卻不得其門而入……來波波麗喝一口珠奶奶親手製作的特調飲料，停一下，喘一下，整頓一下腦中的慌亂和不安，看看杯底的茶葉幸運籤為你帶來什麼指引？
+                                  </div>
+                                </div>
+                                <div class="recommendbook"><img src="images/recommendbook08.jpg" alt="書名"></div>
+                                <div class="discuss_list">
+                                  <div class="subtitle"> 討論議題</div>
+                                  <ul>
+                                    <li>閱讀素養</li>
+                                    <li>生涯規劃</li>
+                                    <li>教育</li>
+                                  </ul>
+                                </div>
+                                <div class="contentlist">
+                                  <div class="subtitle">更多書目資訊</div>
+                                  <ul>
+                                    <li>作者 : 亞平文 , Popoland波寶島圖</li>
+                                    <li>出版社 : 親子天下出版 ; , 大和圖書總經銷,</li>
+                                    <li>出版年 : 2023</li>
+                                    <li>ISBN：9786263055070</li>
+                                    <li>適用對象 :學齡兒童，6-8歲</li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <!--  -->
+
+                            </div>
+                            <div class="btn_grp">
+
+                              <input name="" type="submit" value="書籍預約">
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <!-- 詳細資訊 燈箱end -->
+                      <!-- 2 -->
+                      <div class="recommendbook_list">
+                        <div class="feature_options">
+                          <ul>
+                            <li class="bookboxreservation"><a href="javascript:;">書箱預約</a></li>
+                            <li class="moreinformation"><a href="javascript:;">詳細資訊</a></li>
+                          </ul>
+                        </div>
+                        <div class="recommendbook"><img src="images/recommendbook09.jpg" alt="書名"></div>
+                        <div class="content">
+                          <div class="booktitle"><a href="#">2. 阿咪撿到一本書</a></div>
+                          <div class="datelist">
+                            <ul>
+                              <li>適讀對象：國小中年級</li>
+                              <li>適讀科目：國語文、閱讀</li>
+                              <li>書箱館藏地：總館</li>
+                              <li>書箱狀態：外借中</li>
+                              <li>預約人數：0</li>
+                            </ul>
+                          </div>
+                          <div class="introduce">
+                            阿咪在一天的上學途中撿到一本《大英雄粉紅貓》的書，好巧不巧，竟是好朋友阿發掉的書。阿發看在阿咪找到書的份上，於是借給他回去看。阿咪趁夜裡爸媽不在時，窩在床上品讀這本書。一讀下去，不敢相信～越讀越有意思，越讀越覺得……故事情節怎麼也在現實中發生了！故事裡阿咪閱讀的《大英雄粉紅貓》也跟著進行！讓小讀者們跟著阿咪一起讀書、一起沉浸在故事成真的刺
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 3 -->
+                      <div class="recommendbook_list">
+                        <div class="feature_options">
+                          <ul>
+                            <li class="bookboxreservation"><a href="javascript:;">書箱預約</a></li>
+                            <li class="moreinformation"><a href="javascript:;">詳細資訊</a></li>
+                          </ul>
+                        </div>
+                        <div class="recommendbook"><img src="images/recommendbook10.jpg" alt="書名"></div>
+                        <div class="content">
+                          <div class="booktitle"><a href="#">3. 貓卡卡的裁縫店</a></div>
+                          <div class="datelist">
+                            <ul>
+                              <li>適讀對象：國小中年級</li>
+                              <li>適讀科目：國語文、閱讀</li>
+                              <li>書箱館藏地：總館</li>
+                              <li>書箱狀態：外借中</li>
+                              <li>預約人數：0</li>
+                            </ul>
+                          </div>
+                          <div class="introduce">
+                            貓卡卡的裁縫店開張了，卻沒有顧客上門，讓手藝精湛的她有些著急。兩隻老鼠半夜來偷布料，被她捉個正著。了解其中原委後，她決定免費為小老鼠兄妹「米其」和「米麗」縫製一件與眾不同的舞衣；第二節是應人類雲奶奶的請求，為她孫女剪裁一襲海水藍又帶一點兒海浪白沫的漂亮長裙，但卻遲遲等不到小女孩來量尺寸，原來這背後隱藏了一個悲傷的故事；第三節則是有關一隻獾
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 4 -->
+                      <div class="recommendbook_list">
+                        <div class="feature_options">
+                          <ul>
+                            <li class="bookboxreservation"><a href="javascript:;">書箱預約</a></li>
+                            <li class="moreinformation"><a href="javascript:;">詳細資訊</a></li>
+                          </ul>
+                        </div>
+                        <div class="recommendbook"><img src="images/recommendbook11.jpg" alt="書名"></div>
+                        <div class="content">
+                          <div class="booktitle"><a href="#">4. 仙靈傳奇2：詞靈</a></div>
+                          <div class="datelist">
+                            <ul>
+                              <li>適讀對象：國小中年級</li>
+                              <li>適讀科目：國語文、閱讀</li>
+                              <li>書箱館藏地：總館</li>
+                              <li>書箱狀態：外借中</li>
+                              <li>預約人數：0</li>
+                            </ul>
+                          </div>
+                          <div class="introduce">
+                            從詩境遇劫歸來好不容易恢復平靜的生活。 某天儀萱在背出〈虞美人〉後突然失去意識。 原來和唐詩一樣也遭到黑暗力量的破壞。 不同的是詞靈， 因為禁不起正邪力量的爭鬥元神一分為二。 根據詞靈的記憶， 儀萱該如何在成千上萬首詞句中找出靈物的線索？ 如果儀萱有詞靈一半的能力與記憶， 那屬於抑鬱邪惡另一半的陰氣靈，又會是誰？
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 5 -->
+                      <div class="recommendbook_list">
+                        <div class="feature_options">
+                          <ul>
+                            <li class="bookboxreservation"><a href="javascript:;">書箱預約</a></li>
+                            <li class="moreinformation"><a href="javascript:;">詳細資訊</a></li>
+                          </ul>
+                        </div>
+                        <div class="recommendbook"><img src="images/recommendbook12.jpg" alt="書名"></div>
+                        <div class="content">
+                          <div class="booktitle"><a href="#">5. 檸檬水戰爭2檸檬水犯罪事件</a></div>
+                          <div class="datelist">
+                            <ul>
+                              <li>適讀對象：國小中年級</li>
+                              <li>適讀科目：國語文、閱讀</li>
+                              <li>書箱館藏地：總館</li>
+                              <li>書箱狀態：外借中</li>
+                              <li>預約人數：0</li>
+                            </ul>
+                          </div>
+                          <div class="introduce">
+                            由於伊凡和潔西兄妹倆在暑期末販賣檸檬水，辛苦賺到的錢不翼而飛了，種種間接證據顯示，剛買了新遊戲機的史考特是最大的嫌疑犯，為了找回失去的錢，潔西在班上發起了陪審團制的審判，希望能真相大白、伸張正義。過程充滿懸疑、趣味，高潮迭起，不到最後不會知道真相。透過在班上創造的法庭和審判的過程，輕鬆了解一些法律詞彙和陪審團制度，逼真的情節，讓人猶如身歷
+                          </div>
+                        </div>
+                      </div>
+                      <!--  -->
+                      <div class="AIinformation">
+                        <div class="AIpage">共<span>30</span>筆，<input type="text" name="" id="" value="1">/ 3 頁 <button type="button" class="btn  prev">上一頁</button><button type="button" type="button"
+                            class="btn  next">下一頁</button>
+                        </div>
+                        <div class="AIselect">
+                          <div class="viewmode list"><a href="javascript:;">列表檢視</a></div>
+                          <div class="viewmode juxtapose"><a href="javascript:;">並排檢視</a></div>
+                          <select id="selectSample" name="">
+                            <option value="">10筆</option>
+                            <option value="">25筆</option>
+                            <option value="">50筆</option>
+                          </select>
+                        </div>
+                      </div>
+                      <!--  -->
+                    </div>
+                  </div>
+                </div>
+                <!-- readingbox_group end-->
+              </div>
+              <!-- 共讀書箱 end -->
+            </div>
+            <!-- 右欄左線end -->
+          </div>
+          <!-- 右欄 end  -->
+        </div>
+      </div>
+      <!-- 分欄end -->
+    </div>
+    <!-- fatfooter Start -->
+    <section class="fatfooter">
+      <div class="container">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+        <nav>
+          <ul>
+            <li><a href="javascript:;">關於我們</a>
+              <ul>
+                <li><a href="javascript:;">個人資料蒐集告知聲明</a></li>
+                <li><a href="javascript:;">網路隱私權政策</a></li>
+                <li><a href="javascript:;">交通資訊導引</a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:;">常用連結</a>
+              <ul>
+                <li><a href="javascript:;">圖書館首頁</a></li>
+                <li><a href="javascript:;">機構典藏</a></li>
+                <li><a href="javascript:;">facebook粉絲團</a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:;">其他連結</a>
+              <ul>
+                <li><a href="javascript:;">HELP</a></li>
+                <li><a href="javascript:;">借閱政策</a></li>
+                <li><a href="javascript:;">圖書館首頁</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <!-- fatfooter end -->
+    <!-- footer start-->
+    <footer>
+      <div class="container">
+        <div class="footer_info">
+          <ul>
+            <li>屏東縣政府文化處</li>
+            <li>90054 屏東市大連路69號</li>
+            <li>08-7360330</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end-->
+    <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
+
+
+  </div>
+
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="vendor/jquery.easing.min.js"></script>
+  <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
+  <script type="text/javascript" src="vendor/slick/slick.js">
+  </script>
+  <!-- 出版年度js -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- 出版年度js -->
+  <script src="js/hyui.js"></script>
+  <script src="js/customize.js"></script>
+</body>
+
+</html>

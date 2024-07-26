@@ -196,6 +196,20 @@
       color: nth($primaryColor, $style);
     }
   }
+  .sharedreading_lightbox {
+    .content {
+      .booktitle {
+        color: nth($primaryColor, $style);
+      }
+    }
+    .discuss_list {
+      ul {
+        li {
+          background-color: nth($linkColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -932,6 +946,20 @@
   .exclusive_book {
     .booktitle {
       color: nth($primaryColor, $style);
+    }
+  }
+  .sharedreading_lightbox {
+    .content {
+      .booktitle {
+        color: nth($primaryColor, $style);
+      }
+    }
+    .discuss_list {
+      ul {
+        li {
+          background-color: nth($linkColor, $style);
+        }
+      }
     }
   }
   // _form.scss
@@ -1735,6 +1763,20 @@
   .exclusive_book {
     .booktitle {
       color: nth($primaryColor, $style);
+    }
+  }
+  .sharedreading_lightbox {
+    .content {
+      .booktitle {
+        color: nth($primaryColor, $style);
+      }
+    }
+    .discuss_list {
+      ul {
+        li {
+          background-color: nth($linkColor, $style);
+        }
+      }
     }
   }
   // _form.scss
@@ -2809,6 +2851,20 @@
       color: nth($primaryColor, $style);
     }
   }
+  .sharedreading_lightbox {
+    .content {
+      .booktitle {
+        color: nth($primaryColor, $style);
+      }
+    }
+    .discuss_list {
+      ul {
+        li {
+          background-color: nth($linkColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -3512,6 +3568,20 @@
   .exclusive_book {
     .booktitle {
       color: nth($primaryColor, $style);
+    }
+  }
+  .sharedreading_lightbox {
+    .content {
+      .booktitle {
+        color: nth($primaryColor, $style);
+      }
+    }
+    .discuss_list {
+      ul {
+        li {
+          background-color: nth($linkColor, $style);
+        }
+      }
     }
   }
   // _form.scss
@@ -4228,6 +4298,20 @@
       color: nth($primaryColor, $style);
     }
   }
+  .sharedreading_lightbox {
+    .content {
+      .booktitle {
+        color: nth($primaryColor, $style);
+      }
+    }
+    .discuss_list {
+      ul {
+        li {
+          background-color: nth($linkColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -4942,6 +5026,20 @@
   .exclusive_book {
     .booktitle {
       color: nth($primaryColor, $style);
+    }
+  }
+  .sharedreading_lightbox {
+    .content {
+      .booktitle {
+        color: nth($primaryColor, $style);
+      }
+    }
+    .discuss_list {
+      ul {
+        li {
+          background-color: nth($linkColor, $style);
+        }
+      }
     }
   }
   // _form.scss
@@ -5662,6 +5760,20 @@
       color: nth($primaryColor, $style);
     }
   }
+  .sharedreading_lightbox {
+    .content {
+      .booktitle {
+        color: nth($primaryColor, $style);
+      }
+    }
+    .discuss_list {
+      ul {
+        li {
+          background-color: nth($linkColor, $style);
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -6372,6 +6484,20 @@
   .exclusive_book {
     .booktitle {
       color: nth($primaryColor, $style);
+    }
+  }
+  .sharedreading_lightbox {
+    .content {
+      .booktitle {
+        color: nth($primaryColor, $style);
+      }
+    }
+    .discuss_list {
+      ul {
+        li {
+          background-color: nth($linkColor, $style);
+        }
+      }
     }
   }
   // _form.scss

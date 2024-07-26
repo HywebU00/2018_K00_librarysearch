@@ -770,6 +770,37 @@ $(function () {
       }
     },
   });
+  //
+  //共讀書箱tab
+  $('.readingbox_tab').slick({
+    infinite: false,
+    speed: 2000,
+    autoplay: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+
+      {
+        breakpoint: 770,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ],
+  });
 });
 $(function () {
   //選擇語言
@@ -1138,7 +1169,7 @@ $(function () {
     $('body').removeClass('fix');
   });
   // AIGPT更多資訊燈箱
-  $('.moreinformation').click(function () {
+  $('.AI_block .moreinformation').click(function () {
     $('#AIGPT_morestyle').fadeIn();
     $('body').addClass('fix');
   });
@@ -1355,6 +1386,34 @@ $(function () {
   });
   $('.lightboxstyle_block .closebtn').click(function () {
     $('#addcalendar_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+
+  //
+  //書箱預約
+  $('.bookboxreservation').click(function () {
+    $('#sharedreadingbox_style').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.lightboxstyle_block .close').click(function () {
+    $('#sharedreadingbox_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#sharedreadingbox_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+  //書箱預約 詳細資訊
+  $('.sharedreadingbox_block .moreinformation').click(function () {
+    $('#sharedreadingbox_style2').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.lightboxstyle_block .close').click(function () {
+    $('#sharedreadingbox_style2').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#sharedreadingbox_style2').fadeOut();
     $('body').removeClass('fix');
   });
 });

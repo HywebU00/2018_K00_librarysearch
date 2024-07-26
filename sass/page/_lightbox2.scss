@@ -812,7 +812,12 @@ body.fix {
       color: nth($primaryColor, $style);
       line-height: 1.3em;
     }
-
+    .subtitle {
+      margin: 0.5em 0;
+      font-weight: bolder;
+      color: #333;
+      font-size: 1.125em;
+    }
     //表格資料
     .lightbox_data {
       width: 100% !important;
@@ -2280,5 +2285,109 @@ button {
     background-repeat: no-repeat !important;
     background-position: 0.5em center !important;
     margin-bottom: 10px !important;
+  }
+}
+// 共讀書箱燈箱
+
+.sharedreading_lightbox {
+  display: flex;
+  flex-wrap: wrap;
+  .contentlist,
+  .subtitle {
+    flex: 1 1 auto;
+    flex-basis: 100%;
+  }
+  .subtitle {
+    font-size: 1.063em;
+  }
+  .contentlist {
+    @media (max-width: 670px) {
+      order: 4;
+    }
+  }
+  .recommendbook {
+    flex: 0 0 auto;
+    flex-basis: 160px;
+    margin-right: 20px;
+    text-align: center;
+    margin-bottom: 1em;
+    @media (max-width: 670px) {
+      flex-basis: 100%;
+      margin-right: 0;
+
+      order: 1;
+    }
+  }
+  .content {
+    flex: 1 1 auto;
+    flex-basis: calc(100% - 180px);
+    margin-bottom: 1em;
+    @media (max-width: 670px) {
+      flex-basis: 100%;
+      order: 2;
+    }
+    .booktitle {
+      font-size: 1.125em;
+      font-weight: bolder;
+      margin-bottom: 0.5em;
+      color: nth($primaryColor, $style);
+    }
+    .datelist {
+      margin-bottom: 0.3em;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          color: #774e2b;
+          margin-bottom: 0.1em;
+          position: relative;
+          padding-right: 1em;
+          margin-right: 0.5em;
+          &:after {
+            content: '/';
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          &:last-child {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .discuss_list {
+    flex: 1 1 auto;
+    flex-basis: 100%;
+    background-color: #eee;
+    padding: 1em;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    @media (max-width: 670px) {
+      flex-basis: 100%;
+      order: 3;
+    }
+    .subtitle {
+      margin: 0 0 0.5em;
+    }
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        padding: 0.3em 1em;
+        background-color: nth($linkColor, $style);
+        color: #fff;
+        margin-right: 0.5em;
+        border-radius: 5px;
+      }
+    }
   }
 }

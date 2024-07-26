@@ -7247,6 +7247,12 @@ body.fix {
   color: #005d98;
   line-height: 1.3em;
 }
+.lightboxstyle .lightboxstyle_block .subtitle {
+  margin: 0.5em 0;
+  font-weight: bolder;
+  color: #333;
+  font-size: 1.125em;
+}
 .lightboxstyle .lightboxstyle_block .lightbox_data {
   width: 100% !important;
   overflow-x: hidden;
@@ -8666,6 +8672,111 @@ button.backbtn {
   background-repeat: no-repeat !important;
   background-position: 0.5em center !important;
   margin-bottom: 10px !important;
+}
+
+.sharedreading_lightbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sharedreading_lightbox .contentlist,
+.sharedreading_lightbox .subtitle {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+}
+.sharedreading_lightbox .subtitle {
+  font-size: 1.063em;
+}
+@media (max-width: 670px) {
+  .sharedreading_lightbox .contentlist {
+    order: 4;
+  }
+}
+.sharedreading_lightbox .recommendbook {
+  flex: 0 0 auto;
+  flex-basis: 160px;
+  margin-right: 20px;
+  text-align: center;
+  margin-bottom: 1em;
+}
+@media (max-width: 670px) {
+  .sharedreading_lightbox .recommendbook {
+    flex-basis: 100%;
+    margin-right: 0;
+    order: 1;
+  }
+}
+.sharedreading_lightbox .content {
+  flex: 1 1 auto;
+  flex-basis: calc(100% - 180px);
+  margin-bottom: 1em;
+}
+@media (max-width: 670px) {
+  .sharedreading_lightbox .content {
+    flex-basis: 100%;
+    order: 2;
+  }
+}
+.sharedreading_lightbox .content .booktitle {
+  font-size: 1.125em;
+  font-weight: bolder;
+  margin-bottom: 0.5em;
+  color: #005d98;
+}
+.sharedreading_lightbox .content .datelist {
+  margin-bottom: 0.3em;
+}
+.sharedreading_lightbox .content .datelist ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.sharedreading_lightbox .content .datelist ul li {
+  color: #774e2b;
+  margin-bottom: 0.1em;
+  position: relative;
+  padding-right: 1em;
+  margin-right: 0.5em;
+}
+.sharedreading_lightbox .content .datelist ul li:after {
+  content: "/";
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.sharedreading_lightbox .content .datelist ul li:last-child:after {
+  display: none;
+}
+.sharedreading_lightbox .discuss_list {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  background-color: #eee;
+  padding: 1em;
+  border-radius: 5px;
+  margin-bottom: 1em;
+}
+@media (max-width: 670px) {
+  .sharedreading_lightbox .discuss_list {
+    flex-basis: 100%;
+    order: 3;
+  }
+}
+.sharedreading_lightbox .discuss_list .subtitle {
+  margin: 0 0 0.5em;
+}
+.sharedreading_lightbox .discuss_list ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.sharedreading_lightbox .discuss_list ul li {
+  padding: 0.3em 1em;
+  background-color: #774e2b;
+  color: #fff;
+  margin-right: 0.5em;
+  border-radius: 5px;
 }
 
 .section {
@@ -28370,8 +28481,15 @@ em.yellowbg {
 .AIgptgroup .AIrecommendbook .recommendbook_list .feature_options ul li.moreinformation a {
   background-image: url("../images/feature_options03.svg");
   background-repeat: no-repeat;
-  background-position: 10px 9px;
+  background-position: 10px 8px;
   background-size: 13px;
+}
+.AIgptgroup .AIrecommendbook .recommendbook_list .feature_options ul li.bookboxreservation a {
+  padding: 0.2em 0.8em 0.2em 1.9em;
+  background-image: url("../images/feature_options04.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 7px;
+  background-size: 14px;
 }
 .AIgptgroup .AIrecommendbook .recommendbook_list .recommendbook {
   flex: 0 0 auto;
@@ -28432,6 +28550,35 @@ em.yellowbg {
 .AIgptgroup .AIrecommendbook .recommendbook_list .content .recommendobjects {
   color: #774e2b;
   margin-bottom: 0.3em;
+}
+.AIgptgroup .AIrecommendbook .recommendbook_list .content .datelist {
+  margin-bottom: 0.3em;
+}
+.AIgptgroup .AIrecommendbook .recommendbook_list .content .datelist ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.AIgptgroup .AIrecommendbook .recommendbook_list .content .datelist ul li {
+  color: #774e2b;
+  margin-bottom: 0.1em;
+  position: relative;
+  padding-right: 1em;
+  margin-right: 0.5em;
+}
+.AIgptgroup .AIrecommendbook .recommendbook_list .content .datelist ul li:after {
+  content: "/";
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.AIgptgroup .AIrecommendbook .recommendbook_list .content .datelist ul li:last-child:after {
+  display: none;
+}
+.AIgptgroup .AIrecommendbook .recommendbook_list .content .introduce {
+  line-height: 1.8em;
 }
 .AIgptgroup .AIinformation {
   flex: 1 1 auto;
@@ -28498,6 +28645,7 @@ em.yellowbg {
   flex: 1 1 auto;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .AIgptgroup .AIinformation .AIselect {
@@ -28505,9 +28653,33 @@ em.yellowbg {
     flex-wrap: wrap;
   }
 }
+.AIgptgroup .AIinformation .AIselect .viewmode {
+  margin-right: 5px;
+}
+.AIgptgroup .AIinformation .AIselect .viewmode a {
+  display: block;
+  padding: 0em 0.8em 0em 2em;
+  border: 1px solid #d3d3d3 !important;
+  border-radius: 5px;
+  line-height: 2.3em;
+  height: 2.3em;
+}
+.AIgptgroup .AIinformation .AIselect .viewmode.list a {
+  background-image: url("../images/viewmode_icon02.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 15px;
+}
+.AIgptgroup .AIinformation .AIselect .viewmode.juxtapose a {
+  background-image: url("../images/viewmode_icon01.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 15px;
+}
 .AIgptgroup .AIinformation .AIselect select {
   width: auto;
   margin-left: 0.2em;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 575px) {
   .AIgptgroup .AIinformation .AIselect select {
@@ -28811,6 +28983,181 @@ em.yellowbg {
   .transitions_block .project_group {
     padding: 1.5em 1em;
   }
+}
+
+.sharedreadingbox_block {
+  margin: 40px 35px 60px;
+}
+@media screen and (max-width: 767px) {
+  .sharedreadingbox_block {
+    margin: 40px 0px 60px;
+  }
+}
+.sharedreadingbox_block .title {
+  color: #dc0122;
+  font-size: 1.75em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.sharedreadingbox_block .readingbox_group {
+  padding: 30px 20px;
+  margin: 0;
+  box-sizing: border-box;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+@media screen and (max-width: 767px) {
+  .sharedreadingbox_block .readingbox_group {
+    margin: 0 20px 60px;
+  }
+}
+.sharedreadingbox_block .readingbox_tab {
+  margin: 0 0 20px;
+  box-sizing: border-box;
+}
+.sharedreadingbox_block .readingbox_tab .sort {
+  padding: 0 5px;
+}
+.sharedreadingbox_block .readingbox_tab .sort a {
+  display: block;
+  padding: 20px 10px;
+  background: #dcdcdc;
+  background: linear-gradient(to bottom, #dcdcdc, #e5e5e5);
+  color: #333;
+  font-size: 1.313em;
+  text-align: center;
+  border-radius: 5px;
+  position: relative;
+  transition: 0.2s;
+  line-height: 1.3em;
+}
+.sharedreadingbox_block .readingbox_tab .sort a:hover {
+  background-image: none;
+  background-color: #f1ad00;
+  color: #000;
+}
+.sharedreadingbox_block .readingbox_tab .sort a.here {
+  background: #f1ad00;
+  color: #000;
+}
+.sharedreadingbox_block .readingbox_tab .sort a.here:focus {
+  background: #ffba0c;
+}
+.sharedreadingbox_block .readingbox_tab .slick-next {
+  right: -20px;
+  top: 0;
+  background-color: transparent;
+}
+.sharedreadingbox_block .readingbox_tab .slick-prev {
+  left: -20px;
+  top: 0;
+  background-color: transparent;
+}
+@media (max-width: 767px) {
+  .sharedreadingbox_block .readingbox_tab .slick-next {
+    right: -45px;
+    top: 0;
+  }
+  .sharedreadingbox_block .readingbox_tab .slick-prev {
+    left: -45px;
+    top: 0;
+  }
+}
+@media (max-width: 400px) {
+  .sharedreadingbox_block .readingbox_tab .slick-next {
+    right: -36px;
+  }
+  .sharedreadingbox_block .readingbox_tab .slick-prev {
+    left: -36px;
+  }
+}
+.sharedreadingbox_block .readingboxtab_content {
+  margin: 10px 0 20px;
+  border-radius: 5px;
+  float: none;
+  clear: both;
+  padding: 20px 10px;
+  text-align: left;
+  background-color: #eee;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 575px) {
+  .sharedreadingbox_block .readingboxtab_content {
+    padding: 20px 10px;
+  }
+}
+.sharedreadingbox_block .readingboxtab_content .form_grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sharedreadingbox_block .readingboxtab_content .form_grp {
+  flex: none;
+  flex-basis: 50%;
+  max-width: 50%;
+  margin-right: 0;
+}
+@media screen and (max-width: 767px) {
+  .sharedreadingbox_block .readingboxtab_content .form_grp {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    display: block;
+  }
+}
+.sharedreadingbox_block .readingboxtab_content .form_grp .form_title {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  width: 100% !important;
+}
+.sharedreadingbox_block .readingboxtab_content .form_grp .form_content {
+  flex: auto;
+  width: 100% !important;
+}
+.sharedreadingbox_block .readingboxtab_content .form_grp .form_content select {
+  width: 100%;
+}
+.sharedreadingbox_block .readingboxtab_content .flex-col-equal-3 {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.sharedreadingbox_block .readingboxtab_content .flex-col-equal-3 .form_grp {
+  flex-basis: 33.3333333333%;
+  max-width: 33.3333333333%;
+  margin-right: 0;
+}
+@media screen and (max-width: 767px) {
+  .sharedreadingbox_block .readingboxtab_content .flex-col-equal-3 {
+    flex-wrap: wrap;
+  }
+  .sharedreadingbox_block .readingboxtab_content .flex-col-equal-3 .form_grp {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    display: block;
+  }
+}
+.sharedreadingbox_block .readingboxtab_content .btn_grp {
+  margin: 0;
+}
+.sharedreadingbox_block .AIgptgroup .AIrecommendbook {
+  margin-bottom: 0;
+  background-color: #fff;
+  padding: 0;
+}
+.sharedreadingbox_block .AIgptgroup .AIinformation {
+  border-bottom: 1px solid #ddd;
+}
+.sharedreadingbox_block .AIgptgroup .AIinformation:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  border-top: 1px solid #ddd;
+  padding-top: 1em;
+  margin-top: 1.5em;
 }
 
 .linecontent {
