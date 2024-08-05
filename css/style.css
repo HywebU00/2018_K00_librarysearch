@@ -2127,6 +2127,9 @@ select::-ms-expand {
 .child01 .itemselect_block .itemselect_group .spacecontent {
   color: #fff;
 }
+.child01 .reminder_window_block {
+  background-color: #774e2b;
+}
 .child01 .book_detail .book_cover_source a {
   color: #774e2b;
 }
@@ -2631,6 +2634,9 @@ select::-ms-expand {
 }
 .customization01 .itemselect_block .itemselect_group .spacecontent {
   color: #fff;
+}
+.customization01 .reminder_window_block {
+  background-color: #185554;
 }
 .customization01 .book_detail .book_cover_source a {
   color: #185554;
@@ -3227,6 +3233,9 @@ select::-ms-expand {
 }
 .customization02 .itemselect_block .itemselect_group {
   background-color: #f3d22f;
+}
+.customization02 .reminder_window_block {
+  background-color: #235f92;
 }
 .customization02 .book_detail .book_cover_source a {
   color: #235f92;
@@ -3857,6 +3866,9 @@ select::-ms-expand {
 .version01 .itemselect_block .itemselect_group {
   background-color: #e9846a;
 }
+.version01 .reminder_window_block {
+  background-color: #1c4b82;
+}
 .version01 .book_detail .book_cover_source a {
   color: #1c4b82;
 }
@@ -4008,6 +4020,15 @@ select::-ms-expand {
 }
 .version02 .featured_block {
   background-color: #a7c077;
+}
+.version02 .related_block .related_links div a.new:before {
+  color: #333;
+}
+.version02 .related_block .related_links div a.new span {
+  background-color: #a7c077;
+}
+.version02 .related_block .related_links div a.new span:before, .version02 .related_block .related_links div a.new span:after {
+  background: #fed857;
 }
 .version02 .privacy_consent {
   background-color: #bc5702;
@@ -4325,6 +4346,9 @@ select::-ms-expand {
 }
 .version02 .itemselect_block .itemselect_group {
   background-color: #a7c077;
+}
+.version02 .reminder_window_block {
+  background-color: #774e2b;
 }
 .version02 .book_detail .book_cover_source a {
   color: #774e2b;
@@ -4790,6 +4814,9 @@ select::-ms-expand {
 }
 .version03 .itemselect_block .itemselect_group {
   background-color: #f49a6e;
+}
+.version03 .reminder_window_block {
+  background-color: #097e76;
 }
 .version03 .book_detail .book_cover_source a {
   color: #097e76;
@@ -5279,6 +5306,9 @@ select::-ms-expand {
 .version04 .itemselect_block .itemselect_group {
   background-color: #e6b2c6;
 }
+.version04 .reminder_window_block {
+  background-color: #774181;
+}
 .version04 .book_detail .book_cover_source a {
   color: #774181;
 }
@@ -5748,6 +5778,9 @@ select::-ms-expand {
 .version05 .itemselect_block .itemselect_group {
   background-color: #f3d394;
 }
+.version05 .reminder_window_block {
+  background-color: #07785f;
+}
 .version05 .book_detail .book_cover_source a {
   color: #07785f;
 }
@@ -6205,6 +6238,9 @@ select::-ms-expand {
 }
 .version06 .itemselect_block .itemselect_group {
   background-color: #fbe8d3;
+}
+.version06 .reminder_window_block {
+  background-color: #0078c6;
 }
 .version06 .book_detail .book_cover_source a {
   color: #0078c6;

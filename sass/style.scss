@@ -551,6 +551,9 @@
       }
     }
   }
+  .reminder_window_block {
+    background-color: nth($linkColor, $style);
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -1308,6 +1311,9 @@
         color: #fff;
       }
     }
+  }
+  .reminder_window_block {
+    background-color: nth($linkColor, $style);
   }
   // _cp.scss
   .book_detail {
@@ -2228,6 +2234,9 @@
     .itemselect_group {
       background-color: nth($lightColor, $style);
     }
+  }
+  .reminder_window_block {
+    background-color: nth($linkColor, $style);
   }
   // _cp.scss
   .book_detail {
@@ -3205,6 +3214,9 @@
       background-color: nth($lightColor, $style);
     }
   }
+  .reminder_window_block {
+    background-color: nth($linkColor, $style);
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -3447,6 +3459,26 @@
   }
   .featured_block {
     background-color: nth($lightColor, $style);
+  }
+  .related_block {
+    .related_links {
+      div {
+        a {
+          &.new {
+            &:before {
+              color: #333;
+            }
+            span {
+              background-color: nth($lightColor, $style);
+              &:before,
+              &:after {
+                background: #fed857;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   //_common.scss
   .privacy_consent {
@@ -3929,6 +3961,9 @@
     .itemselect_group {
       background-color: nth($lightColor, $style);
     }
+  }
+  .reminder_window_block {
+    background-color: nth($linkColor, $style);
   }
   // _cp.scss
   .book_detail {
@@ -4652,6 +4687,9 @@
     .itemselect_group {
       background-color: nth($lightColor, $style);
     }
+  }
+  .reminder_window_block {
+    background-color: nth($linkColor, $style);
   }
   // _cp.scss
   .book_detail {
@@ -5395,6 +5433,9 @@
       background-color: nth($lightColor, $style);
     }
   }
+  .reminder_window_block {
+    background-color: nth($linkColor, $style);
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -6120,6 +6161,9 @@
       background-color: nth($lightColor, $style);
     }
   }
+  .reminder_window_block {
+    background-color: nth($linkColor, $style);
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -6830,6 +6874,9 @@
     .itemselect_group {
       background-color: nth($lightColor, $style);
     }
+  }
+  .reminder_window_block {
+    background-color: nth($linkColor, $style);
   }
   // _cp.scss
   .book_detail {

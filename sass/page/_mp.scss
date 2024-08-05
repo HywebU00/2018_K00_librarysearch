@@ -712,6 +712,7 @@
         color: #333;
         padding-top: 20px;
         line-height: 1.3em;
+        position: relative;
         span {
           width: 140px;
           height: 140px;
@@ -740,6 +741,50 @@
           span {
             transform: scale(1.1, 1.1);
             background-color: lighten(nth($primaryColor, $style), 8);
+          }
+        }
+        &.new {
+          &:before {
+            content: 'new';
+            color: #333;
+            position: absolute;
+            top: 25px;
+            right: 37px;
+            font-size: 0.688em;
+            z-index: 9;
+            font-weight: bold;
+            transition: 0.5s;
+          }
+
+          span {
+            background-color: $color-orange;
+            &:before,
+            &:after {
+              content: '';
+              position: absolute;
+              top: 0;
+              right: 0;
+              height: 40px;
+              width: 40px;
+              background: #fed857;
+            }
+            &:before {
+              transform: rotate(65deg);
+            }
+            &:after {
+              transform: rotate(110deg);
+            }
+          }
+          &:hover {
+            color: lighten($color: $color-orange, $amount: 5);
+            &:before {
+              transform: scale(1.1, 1.1);
+              top: 20px;
+              right: 32px;
+            }
+            span {
+              background-color: lighten($color: $color-orange, $amount: 5);
+            }
           }
         }
       }
