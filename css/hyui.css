@@ -9774,42 +9774,32 @@ button.backbtn {
   transform: scale(1.1, 1.1);
   background-color: #0076c1;
 }
-.related_block .related_links div a.new:before {
+.related_block .related_links div a.new span {
+  background-color: #b94b00;
+}
+.related_block .related_links div a.new span:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  height: 60px;
+  width: 60px;
+  background-image: url("../images/related_links_bg.svg");
+  background-size: 60px;
+}
+.related_block .related_links div a.new span:after {
   content: "new";
   color: #333;
   position: absolute;
-  top: 25px;
-  right: 37px;
+  top: 5px;
+  right: 5px;
   font-size: 0.688em;
   z-index: 9;
   font-weight: bold;
   transition: 0.5s;
 }
-.related_block .related_links div a.new span {
-  background-color: #b94b00;
-}
-.related_block .related_links div a.new span:before, .related_block .related_links div a.new span:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 40px;
-  width: 40px;
-  background: #fed857;
-}
-.related_block .related_links div a.new span:before {
-  transform: rotate(65deg);
-}
-.related_block .related_links div a.new span:after {
-  transform: rotate(110deg);
-}
 .related_block .related_links div a.new:hover {
   color: #d35500;
-}
-.related_block .related_links div a.new:hover:before {
-  transform: scale(1.1, 1.1);
-  top: 20px;
-  right: 32px;
 }
 .related_block .related_links div a.new:hover span {
   background-color: #d35500;

@@ -4021,14 +4021,8 @@ select::-ms-expand {
 .version02 .featured_block {
   background-color: #a7c077;
 }
-.version02 .related_block .related_links div a.new:before {
-  color: #333;
-}
 .version02 .related_block .related_links div a.new span {
   background-color: #a7c077;
-}
-.version02 .related_block .related_links div a.new span:before, .version02 .related_block .related_links div a.new span:after {
-  background: #fed857;
 }
 .version02 .privacy_consent {
   background-color: #bc5702;

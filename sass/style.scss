@@ -3465,15 +3465,8 @@
       div {
         a {
           &.new {
-            &:before {
-              color: #333;
-            }
             span {
               background-color: nth($lightColor, $style);
-              &:before,
-              &:after {
-                background: #fed857;
-              }
             }
           }
         }
