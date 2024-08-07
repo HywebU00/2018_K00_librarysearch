@@ -5099,6 +5099,10 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 10px;
+                &.active {
+                  background-image: url(../images/feature_options02_active.svg);
+                  border: 1px solid #ed8301;
+                }
               }
             }
             &.moreinformation {

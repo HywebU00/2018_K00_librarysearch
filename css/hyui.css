@@ -28861,6 +28861,10 @@ em.yellowbg {
   background-position: center;
   background-size: 10px;
 }
+.AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list .feature_options ul li.tobeseen a.active {
+  background-image: url(../images/feature_options02_active.svg);
+  border: 1px solid #ed8301;
+}
 .AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list .feature_options ul li.moreinformation a {
   background-image: url("../images/feature_options03.svg");
   background-repeat: no-repeat;
