@@ -72,6 +72,16 @@
           }
         }
       }
+      .searchbutton {
+        span {
+          &.primary_btn {
+            a {
+              background-color: nth($primaryColor, $style);
+              border: 1px solid nth($primaryColor, $style);
+            }
+          }
+        }
+      }
     }
   }
   //_common.scss
@@ -231,6 +241,15 @@
   }
   .classification {
     background-color: nth($primaryColor, $style);
+  }
+  .AI_block {
+    .consent {
+      .agreecontent {
+        .signblock {
+          border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
+    }
   }
   // 步驟
   .AIgptgroup {
@@ -609,6 +628,7 @@
     }
   }
   // _ap.css
+
   // 內容主題分析
   .bookselection_group {
     .rightblock {
@@ -806,6 +826,16 @@
           }
         }
       }
+      .searchbutton {
+        span {
+          &.primary_btn {
+            a {
+              background-color: nth($primaryColor, $style);
+              border: 1px solid nth($primaryColor, $style);
+            }
+          }
+        }
+      }
     }
   }
   .related_links {
@@ -988,6 +1018,15 @@
     background-color: nth($primaryColor, $style);
     span {
       color: #fff;
+    }
+  }
+  .AI_block {
+    .consent {
+      .agreecontent {
+        .signblock {
+          border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
     }
   }
   // 步驟
@@ -1588,6 +1627,16 @@
           }
         }
       }
+      .searchbutton {
+        span {
+          &.primary_btn {
+            a {
+              background-color: nth($primaryColor, $style);
+              border: 1px solid nth($primaryColor, $style);
+            }
+          }
+        }
+      }
     }
   }
   .related_links {
@@ -1814,6 +1863,15 @@
   input[disable] {
     & ~ label {
       color: $color-darkgray;
+    }
+  }
+  .AI_block {
+    .consent {
+      .agreecontent {
+        .signblock {
+          border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
     }
   }
   // 步驟
@@ -2667,6 +2725,1226 @@
   }
   //
 }
+// 客製版03台中市圖書館
+.customization03 {
+  $style: index($sites, customization03);
+  // _header.scss
+  .header {
+    @include gradient(#3a3a3a, #3a3a3a, vertical);
+    > .container {
+      .sidebarCtrl {
+        background-image: url('../images/sidebarCtrl_white.png');
+      }
+      .accesskey {
+        color: nth($primaryColor, $style);
+      }
+    }
+    h1 {
+      margin: -3px 0 0 20px;
+    }
+    .language {
+      a {
+        background-color: #fff;
+      }
+    }
+  }
+  // _table.scss
+  table {
+    td {
+      a {
+        color: nth($linkColor, $style);
+        &:hover {
+          color: $aHover;
+        }
+      }
+    }
+  }
+  // _mp.scss
+  .search_block {
+    background-image: url('../images/search_blockbg02_customization03.jpg');
+    &:before {
+      content: '';
+      background-image: url('../images/search_customization03_before.png');
+      bottom: -29px;
+      height: 134px;
+    }
+    .searchsystem {
+      background: rgb(230, 230, 230);
+      background: linear-gradient(90deg, rgba(230, 230, 230, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 30px 60px;
+      box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.5em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+      margin: 70px auto 50px;
+      @media (max-width: 992px) {
+        padding: 30px 55px;
+        width: 85%;
+      }
+      @media (max-width: 767px) {
+        padding: 30px 40px;
+        width: 90%;
+      }
+      @media (max-width: 520px) {
+        padding: 30px 40px;
+        width: 95%;
+        margin: 50px auto 0;
+      }
+      @media (max-width: 470px) {
+        padding: 30px 35px;
+        width: 95%;
+      }
+      @media (max-width: 400px) {
+        padding: 30px;
+        width: 100%;
+      }
+      .form_search {
+        border: 1px solid #989899 !important;
+        height: 45px;
+        input[type='text'] {
+          padding: 10px 10px 6px;
+          height: auto;
+        }
+        input[type='submit'] {
+          background-color: $color-dark;
+          height: 45px;
+        }
+      }
+      .recent_searches {
+        .title {
+          color: nth($primaryColor, $style);
+        }
+      }
+      .searchall {
+        a {
+          color: $color-dark;
+          &:before {
+            content: '';
+            position: absolute;
+            border: 5px solid $color-dark;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            top: 12px;
+            left: 0px;
+            display: block;
+          }
+          &:hover {
+            color: $color-dark;
+          }
+          &.addfield {
+            color: #fff;
+            background-color: #666;
+            transition: 0.2s;
+
+            &:before {
+              border: 5px solid #fff;
+              border-right-color: transparent;
+              border-top-color: transparent;
+              border-bottom-color: transparent;
+              left: 8px;
+            }
+            &:hover {
+              background-color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+      .onlysearch {
+        color: $color-dark;
+      }
+      .keywordHot {
+        color: $color-dark;
+        margin-bottom: 10px;
+        span {
+          font-weight: bold;
+        }
+        ul {
+          height: auto;
+          li {
+            margin: 0 5px 8px 0;
+            &:after {
+              display: none;
+            }
+            a {
+              color: $color-dark;
+              border-radius: 50px;
+              border: 1px solid #989899;
+              padding: 2px 12px;
+              display: block;
+              transition: 0.2s;
+              &:hover {
+                text-decoration: none;
+                color: $color-dark;
+                background-color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .newsblcok {
+        border-top: 1px solid #878787;
+        .newslist {
+          flex-basis: calc(100% - 160px);
+          max-width: calc(100% - 160px);
+          @include screen('mobile') {
+            flex-basis: 100%;
+            max-width: 100%;
+            order: 2;
+          }
+          .title {
+            background-color: transparent;
+            font-size: $color-dark;
+            font-weight: bold;
+            filter: invert(80%);
+          }
+          ul {
+            li {
+              a {
+                color: $color-dark;
+              }
+            }
+          }
+        }
+        .rightblock {
+          flex-basis: 150px;
+          max-width: 150px;
+          display: flex;
+          justify-content: flex-end;
+          @include screen('mobile') {
+            flex-basis: 100%;
+            max-width: 100%;
+            order: 1;
+            position: absolute;
+            right: 0;
+            top: 10px;
+          }
+          .openclosebtn {
+            &:before {
+              border: 5px solid $color-dark;
+              border-top-color: transparent;
+              border-left-color: transparent;
+              width: auto;
+              height: auto;
+            }
+          }
+          .newsmore {
+            padding-left: 5px;
+            margin-top: 5px;
+            &:before {
+              display: none;
+            }
+            a {
+              color: $color-dark;
+              padding: 0em 0.8em;
+              border-radius: 3px;
+              border: 1px solid $color-dark;
+              transition: 0.2s;
+              &:hover {
+                background-color: #fff;
+              }
+            }
+          }
+        }
+      }
+      .searchbutton {
+        span {
+          &.primary_btn {
+            a {
+              background-color: nth($primaryColor, $style);
+              border: 1px solid nth($primaryColor, $style);
+            }
+          }
+          &.white_btn {
+            a {
+              border: 1px solid #313131;
+            }
+          }
+        }
+      }
+    }
+    .search_fieldtype {
+      select {
+        color: #333 !important;
+        border-bottom: 1px solid #989899 !important;
+
+        background: transparent url(../images/basic/icon_select_arrow_2.svg) no-repeat right center;
+        background-size: 22px;
+      }
+    }
+  }
+  .related_block {
+    padding-top: 2em;
+    // text-align: center;
+    h2 {
+      color: #313131;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 50px;
+      font-size: 1.75em;
+      font-weight: bold;
+      position: relative;
+      display: inline-block;
+
+      &:before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #bcbcbc;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -16px;
+        z-index: 1;
+      }
+      &:after {
+        content: '';
+        width: 50%;
+        height: 2px;
+        background-color: #676459;
+        position: absolute;
+        left: auto;
+        right: 0;
+        bottom: -16px;
+        z-index: 2;
+      }
+    }
+  }
+  .related_links {
+    margin: 0 auto 4em;
+
+    div {
+      a {
+        font-weight: bold;
+        span {
+          background-color: transparent;
+          background-image: url('../images/related_links_blackbg.svg');
+        }
+        &:hover {
+          color: darken(nth($primaryColor, $style), 10);
+          span {
+            background-color: transparent;
+          }
+        }
+        &.new {
+          span {
+            background-color: transparent;
+            background-image: url('../images/related_links_newbg.svg');
+          }
+        }
+      }
+    }
+  }
+  .featured_block {
+    background-color: #dddddd;
+    text-align: center;
+    padding: 0;
+    background-image: url('../images/featured_block_bg.gif');
+    background-repeat: no-repeat;
+    background-position: right top;
+    position: relative;
+    &:before {
+      content: '';
+
+      background-image: url('../images/featured_block_bg.gif');
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: 422px 195px;
+      width: 422px;
+      height: 195px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: scaleX(-1);
+    }
+
+    h2 {
+      color: #313131;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 50px;
+      font-size: 1.75em;
+      font-weight: bold;
+      position: relative;
+      display: inline-block;
+      width: auto;
+      &:before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #bcbcbc;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -16px;
+        z-index: 1;
+      }
+      &:after {
+        content: '';
+        width: 50%;
+        height: 2px;
+        background-color: #676459;
+        position: absolute;
+        left: auto;
+        right: 0;
+        bottom: -16px;
+        z-index: 2;
+      }
+    }
+    .featured_data {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      a {
+        .datablock_top {
+          padding: 0;
+        }
+      }
+    }
+    .more {
+      a {
+        padding: 10px 45px 10px 35px !important;
+        background-image: url('../images/more_icon04.png');
+        background-repeat: no-repeat;
+        background-position: right 1em center;
+        background-size: 16px 15px;
+      }
+    }
+  }
+  .newbooks_block {
+    h2 {
+      color: #313131;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 50px;
+      font-size: 1.75em;
+      font-weight: bold;
+      position: relative;
+      display: inline-block;
+      width: auto;
+      &:before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #bcbcbc;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -16px;
+        z-index: 1;
+      }
+      &:after {
+        content: '';
+        width: 50%;
+        height: 2px;
+        background-color: #676459;
+        position: absolute;
+        left: auto;
+        right: 0;
+        bottom: -16px;
+        z-index: 2;
+      }
+    }
+    .more {
+      a {
+        padding: 10px 45px 10px 35px !important;
+        background-image: url('../images/more_icon04.png');
+        background-repeat: no-repeat;
+        background-position: right 1em center;
+        background-size: 16px 15px;
+      }
+    }
+  }
+  .hotrankings_block {
+    text-align: center;
+    h2 {
+      color: #313131;
+      text-align: center;
+      margin: 0;
+      margin-bottom: 50px;
+      font-size: 1.75em;
+      font-weight: bold;
+      position: relative;
+      display: inline-block;
+      width: auto;
+      &:before {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background-color: #bcbcbc;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -16px;
+        z-index: 1;
+      }
+      &:after {
+        content: '';
+        width: 50%;
+        height: 2px;
+        background-color: #676459;
+        position: absolute;
+        left: auto;
+        right: 0;
+        bottom: -16px;
+        z-index: 2;
+      }
+    }
+    .hotbook_title {
+      h2 {
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+    }
+    .more {
+      a {
+        padding: 10px 45px 10px 35px !important;
+        background-image: url('../images/more_icon04.png');
+        background-repeat: no-repeat;
+        background-position: right 1em center;
+        background-size: 16px 15px;
+      }
+    }
+  }
+  //_common.scss
+  .privacy_consent {
+    background-color: nth($primaryColor, $style);
+  }
+  .limit {
+    h2 {
+      color: nth($linkColor, $style);
+    }
+  }
+  .sort_block {
+    .sortlist_block {
+      h2 {
+        a {
+          color: darken(nth($linkColor, $style), 10);
+        }
+      }
+    }
+  }
+  .search_blockin {
+    .searchsystem {
+      &.searchblackbg {
+        background: rgb(230, 230, 230);
+        background: linear-gradient(90deg, rgba(230, 230, 230, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%);
+        border: 1px solid #ccc;
+        border-radius: 10px;
+
+        box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.5em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+      }
+      &.diminutive {
+        .diminutive_link {
+          a {
+            color: $color-dark;
+            border: 1px solid $color-dark;
+            &:before {
+              border: 6px solid $color-dark;
+              border-top-color: transparent;
+              border-bottom-color: transparent;
+              border-right-color: transparent;
+            }
+            &:hover {
+              background-color: #000;
+              color: #ffffff;
+              &:before {
+                border: 6px solid #fff;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+                border-right-color: transparent;
+              }
+            }
+          }
+        }
+      }
+      .searchtitle {
+        color: #333;
+      }
+      .onlysearch {
+        color: #333;
+      }
+      .btn_grp {
+        a {
+          color: #333;
+          &:before {
+            border: 5px solid #333;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            border-bottom-color: transparent;
+            top: 12px;
+            left: 0px;
+            display: block;
+          }
+
+          &.addfield {
+            background-color: #666;
+            color: #fff;
+            &:before {
+              border: 5px solid #fff;
+              border-right-color: transparent;
+              border-top-color: transparent;
+              border-bottom-color: transparent;
+              left: 8px;
+            }
+            &:hover {
+              background-color: #313131;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .query_word {
+        border-top: 1px solid #878787;
+        color: #333;
+      }
+    }
+  }
+  // 內頁標頭圖
+  .search_blockin2,
+  .search_blockin,
+  .mystudyname,
+  .general_block {
+    background-image: url('../images/search_blockbg02_customization03.jpg');
+    background-position: center -220px;
+  }
+  // _lighitbox2.scss
+  .login_lightbox,
+  .choose_librarycard_lightbox,
+  .qrcode_lightbox,
+  .recommendbook_lightbox,
+  .search_field_lightbox,
+  .related_lightbox,
+  .lightboxstyle,
+  .lightboxstyle_block,
+  .lightboxstyle_block2 {
+    h2 {
+      border-bottom: 2px solid nth($primaryColor, $style);
+      color: nth($primaryColor, $style) !important;
+    }
+  }
+  .logintab {
+    ul {
+      li {
+        a {
+          color: nth($primaryColor, $style) !important;
+          border: 2px solid nth($primaryColor, $style) !important;
+          &:hover,
+          &.active {
+            background-color: nth($primaryColor, $style) !important;
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+  .qrcode_btn {
+    a {
+      background-color: nth($primaryColor, $style) !important;
+      &:hover {
+        background-color: lighten(nth($primaryColor, $style), 10) !important;
+      }
+    }
+  }
+  .relatedlist {
+    ul {
+      li {
+        a {
+          &:before {
+            background-color: nth($primaryColor, $style);
+          }
+          &:hover {
+            background-color: nth($lightColor, $style);
+          }
+        }
+      }
+    }
+  }
+  .lightbox_data {
+    table {
+      th {
+        a {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .bookname {
+    color: nth($primaryColor, $style);
+  }
+  .super_business_data {
+    .data_content {
+      .title {
+        color: nth($linkColor, $style);
+      }
+    }
+  }
+  .AIGPT_information {
+    .AIGPT_group {
+      .content {
+        .booktitle {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .exclusive_book {
+    .booktitle {
+      color: nth($primaryColor, $style);
+    }
+  }
+  .sharedreading_lightbox {
+    .content {
+      .booktitle {
+        color: nth($primaryColor, $style);
+      }
+    }
+    .discuss_list {
+      ul {
+        li {
+          background-color: nth($linkColor, $style);
+        }
+      }
+    }
+  }
+  // _form.scss
+  input[type='submit'] {
+    @include btn_setting(nth($primaryColor, $style), #fff);
+  }
+  // _ap.scss
+  .featured_blockin {
+    background-color: nth($lightColor, $style);
+    h2 {
+      color: #333;
+    }
+  }
+  .featured_blocklist {
+    background-color: nth($lightColor, $style);
+    h3,
+    .datalist,
+    .explain {
+      color: #333;
+    }
+  }
+  .classification {
+    background-color: nth($lightColor, $style);
+    span {
+      color: #000;
+    }
+    .path {
+      li {
+        color: #000;
+        &:before {
+          color: #000;
+        }
+        a {
+          color: #000;
+          &:hover {
+          }
+        }
+      }
+    }
+  }
+  .theme_recommend2 {
+    background-image: linear-gradient(135deg, #ffffff 10%, #eeeeee 100%);
+  }
+  .AI_block {
+    .consent {
+      .agreecontent {
+        .signblock {
+          border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  // 步驟
+  .AIgptgroup {
+    .directions {
+      .content {
+        .directions {
+          color: nth($linkColor, $style);
+        }
+      }
+      .contentother {
+        button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
+        }
+      }
+      .reading_needs_block {
+        .needs_group {
+          .needs_content {
+            .needs_directions {
+              &:before {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    .describe {
+      .title {
+        color: nth($linkColor, $style);
+      }
+    }
+    .AIgptstep {
+      .Step_block {
+        .online_stepblock {
+          ul {
+            li {
+              &:last-child {
+                &.active {
+                  &:after {
+                    background: nth($primaryColor, $style);
+                    background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(236, 236, 236, 1) 50%, rgba(236, 236, 236, 1) 100%);
+                    @media (max-width: 992px) {
+                      background: rgba(187, 187, 187, 1);
+                    }
+                  }
+                }
+              }
+              &.active {
+                div {
+                  background-color: nth($primaryColor, $style);
+                  @media (max-width: 992px) {
+                    &:before {
+                      background-color: nth($primaryColor, $style);
+                    }
+                  }
+                }
+                &:before {
+                  border: 6px solid nth($primaryColor, $style);
+                  background-color: nth($primaryColor, $style);
+                  background-image: url('https://i.postimg.cc/m2D0BtTR/icon-tick.png');
+                  background-position: 0;
+                  background-repeat: no-repeat;
+                  background-size: 20px;
+                }
+                &:after {
+                  background: nth($primaryColor, $style);
+                  background: linear-gradient(180deg, nth($primaryColor, $style) 0%, nth($primaryColor, $style) 50%, rgba(187, 187, 187, 1) 50%, rgba(187, 187, 187, 1) 100%);
+                  @media (max-width: 992px) {
+                    background: rgba(187, 187, 187, 1);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .Features_block {
+        .featureslist {
+          .title {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+    .AIrecommendbook {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+    .AIrecommendbook_sidebyside {
+      .recommendbook_list {
+        .content {
+          .booktitle {
+            color: nth($primaryColor, $style);
+            a {
+              color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+  }
+  // _mystudy.scss
+  .modify_data,
+  .write_data,
+  .forget_password,
+  .mystudysearch_data,
+  .stored_value_group,
+  .reader_form_group,
+  .delivery_method_block {
+    .title {
+      color: nth($primaryColor, $style);
+    }
+    p {
+      a {
+        color: nth($linkColor, $style);
+        &:hover {
+          color: $aHover;
+        }
+      }
+    }
+  }
+  .mystudyname {
+  }
+  .mystudymenu {
+    > ul {
+      > li {
+        > a {
+          color: darken(nth($linkColor, $style), 10);
+        }
+      }
+    }
+  }
+  .security_deposit_block {
+    .title {
+      color: nth($primaryColor, $style);
+    }
+  }
+  // _paginations.scss
+  .pagination {
+    .page {
+      li {
+        &.active {
+          a {
+            background: nth($primaryColor, $style);
+            border: nth($primaryColor, $style) solid 1px;
+          }
+        }
+      }
+    }
+  }
+  // _lp.scss
+  .contact_person_block {
+    .contact_person_group {
+      .data_list {
+        .title {
+          color: nth($primaryColor, $style);
+          span {
+            border-bottom: 2px solid nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
+  .send_block_title {
+    background-color: nth($primaryColor, $style);
+  }
+  .myorder_block {
+    .order_number {
+      background-color: nth($primaryColor, $style);
+    }
+  }
+  .filter_data_block {
+    .title {
+      color: nth($primaryColor, $style);
+    }
+  }
+  .hotqa_list {
+    h2 {
+      background-color: nth($lightColor, $style);
+      color: #333;
+    }
+  }
+  .devicereservation_block {
+    .device_list {
+      background-color: nth($lightColor, $style);
+      color: #000;
+      &:hover,
+      &:focus {
+        color: #000;
+        background-color: darken(nth($lightColor, $style), 10);
+      }
+      a {
+        color: #000;
+        &:hover,
+        &:focus {
+          background-color: darken(nth($lightColor, $style), 10);
+        }
+      }
+      h3 {
+        font-weight: 400;
+        color: #000;
+      }
+      .content {
+        .quantity {
+          span {
+            em {
+              color: #810d0e;
+            }
+          }
+        }
+      }
+    }
+  }
+  .meets_box {
+    a {
+      background-color: nth($lightColor, $style);
+      color: #000;
+      font-weight: 400;
+      &:hover,
+      &:focus {
+        color: #000;
+        background-color: darken(nth($lightColor, $style), 10);
+      }
+    }
+  }
+  .reservation_explain {
+    background-color: nth($lightColor, $style);
+  }
+  .device_explain {
+    background-color: nth($lightColor, $style);
+    h3 {
+      font-weight: 400;
+    }
+  }
+  .booklist {
+    .bookmidblock {
+      h2 {
+        a {
+          color: nth($linkColor, $style);
+        }
+      }
+    }
+    .bookmidblock {
+      ul {
+        li {
+          &.word_title {
+            a {
+              color: nth($linkColor, $style);
+            }
+          }
+        }
+      }
+    }
+  }
+  .booklist_block .booklist .bookmidblock .data_type_block {
+    background-color: nth($lightColor, $style);
+  }
+  .no_result {
+    .related_words {
+      h2 {
+        color: nth($primaryColor, $style);
+      }
+    }
+  }
+  .devicefiltering_block {
+    .filtersearch {
+      button.searchbtn {
+        background-color: nth($primaryColor, $style);
+      }
+    }
+  }
+  .viewdata_block {
+    .viewmode_group {
+      .viewmode_parallel,
+      .viewmode_vertical {
+        a {
+          &:hover,
+          &:focus,
+          &.active {
+            border: 1px solid nth($primaryColor, $style);
+            background-color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
+  .itemselect_block {
+    .itemselect_group {
+      background-color: nth($lightColor, $style);
+    }
+  }
+  .reminder_window_block {
+    background-color: nth($linkColor, $style);
+  }
+  // _cp.scss
+  .book_detail {
+    .book_cover_source {
+      a {
+        color: nth($linkColor, $style);
+      }
+    }
+  }
+  .mainrightblock,
+  .mainrightblock2 {
+    .book_detaildata {
+      .bookdata2 {
+        h3 {
+          color: nth($primaryColor, $style);
+        }
+        .journal_tab {
+          ul {
+            li {
+              a {
+                &:hover,
+                &.here {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
+      }
+      .bookdata {
+        .data_type_block {
+          background-color: nth($lightColor, $style);
+        }
+        .listdata {
+          ul {
+            li {
+              a {
+                color: nth($linkColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .switch_btn {
+    a {
+      background-color: nth($primaryColor, $style) !important;
+    }
+  }
+  .cp_content {
+    h3 {
+      color: darken(nth($primaryColor, $style), 10);
+    }
+  }
+  // _ap.css
+  // 內容主題分析
+  .bookselection_group {
+    .rightblock {
+      .content_analysis {
+        .title {
+          background-color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  // _fatfooter.scss
+  .fatfooter {
+    background-color: darken(nth($primaryColor, $style), 10);
+    .btn-fatfooter {
+      background: #fff;
+      &:before {
+        filter: invert(100%);
+      }
+      &:hover,
+      &:focus {
+        background: #fff;
+      }
+    }
+  }
+  //_footer.scss
+  footer {
+    background-color: darken(nth($primaryColor, $style), 10);
+  }
+  // _template.scss
+  //按鈕共用
+  .btnstyle {
+    &.brownbg {
+      background-color: nth($primaryColor, $style);
+      border: 2px solid nth($primaryColor, $style);
+      color: #fff;
+      &:hover {
+        background-color: darken(nth($primaryColor, $style), 5);
+        border: 2px solid darken(nth($primaryColor, $style), 5);
+      }
+    }
+  }
+  // line
+  .linecontent {
+    &.mobile-card {
+      .main-title {
+        color: nth($primaryColor, $style);
+        span {
+          color: nth($primaryColor, $style);
+        }
+        &:before {
+          background: nth($primaryColor, $style);
+        }
+      }
+      .card-step {
+        span {
+          background: nth($primaryColor, $style);
+          &.active {
+            color: #fff;
+            background: $color-red;
+          }
+        }
+        em {
+          border: 8px solid nth($primaryColor, $style);
+          border-left: none;
+          border-bottom: none;
+          @media screen and (max-device-width: 320px) {
+            border: 5px solid nth($primaryColor, $style);
+            border-left: none;
+            border-bottom: none;
+          }
+        }
+      }
+      .card-login {
+        .id {
+          color: nth($primaryColor, $style);
+        }
+      }
+      .card-ok {
+        span {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+    &.library {
+      .main-title {
+        color: nth($primaryColor, $style);
+        &:before {
+          background: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  // 掃描條碼
+  .scanning_button {
+    background-color: nth($primaryColor, $style);
+    &:hover {
+      background-color: lighten(nth($primaryColor, $style), 5);
+    }
+  }
+  // sitemap
+  .cascading {
+    li {
+      a {
+        border-bottom: 2px solid nth($primaryColor, $style);
+        &:hover,
+        &:focus {
+          color: nth($primaryColor, $style) !important;
+        }
+      }
+      ul {
+        li {
+          a {
+            border-bottom: 1px dotted #ccc;
+          }
+        }
+      }
+    }
+  }
+  // slick-theme.css
+  .slick-prev {
+    background: url('../vendor/slick/icon_arrow_left4.png') center center no-repeat RGBA(255, 255, 255, 0.5);
+    background-size: 30px 47px;
+  }
+  .slick-next {
+    background: url('../vendor/slick/icon_arrow_right4.png') center center no-repeat RGBA(255, 255, 255, 0.5);
+    background-size: 30px 47px;
+  }
+}
 // 版型01
 .version01 {
   $style: index($sites, version01);
@@ -2715,6 +3993,16 @@
           }
           &:hover {
             color: #fff;
+          }
+        }
+      }
+      .searchbutton {
+        span {
+          &.primary_btn {
+            a {
+              background-color: nth($primaryColor, $style);
+              border: 1px solid nth($primaryColor, $style);
+            }
           }
         }
       }
@@ -2897,6 +4185,15 @@
     background-color: darken(nth($lightColor, $style), 27);
     span {
       color: #fff;
+    }
+  }
+  .AI_block {
+    .consent {
+      .agreecontent {
+        .signblock {
+          border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
     }
   }
   // 步驟
@@ -3440,6 +4737,16 @@
           }
         }
       }
+      .searchbutton {
+        span {
+          &.primary_btn {
+            a {
+              background-color: nth($primaryColor, $style);
+              border: 1px solid nth($primaryColor, $style);
+            }
+          }
+        }
+      }
     }
   }
   .related_links {
@@ -3643,6 +4950,15 @@
           color: #000;
           &:hover {
           }
+        }
+      }
+    }
+  }
+  .AI_block {
+    .consent {
+      .agreecontent {
+        .signblock {
+          border-left: 6px solid nth($primaryColor, $style);
         }
       }
     }
@@ -4181,6 +5497,16 @@
           }
         }
       }
+      .searchbutton {
+        span {
+          &.primary_btn {
+            a {
+              background-color: nth($primaryColor, $style);
+              border: 1px solid nth($primaryColor, $style);
+            }
+          }
+        }
+      }
     }
   }
   .related_links {
@@ -4374,6 +5700,15 @@
           color: #000;
           &:hover {
           }
+        }
+      }
+    }
+  }
+  .AI_block {
+    .consent {
+      .agreecontent {
+        .signblock {
+          border-left: 6px solid nth($primaryColor, $style);
         }
       }
     }
@@ -4917,6 +6252,16 @@
           }
         }
       }
+      .searchbutton {
+        span {
+          &.primary_btn {
+            a {
+              background-color: nth($primaryColor, $style);
+              border: 1px solid nth($primaryColor, $style);
+            }
+          }
+        }
+      }
     }
   }
   .related_links {
@@ -5107,6 +6452,15 @@
           color: #000;
           &:hover {
           }
+        }
+      }
+    }
+  }
+  .AI_block {
+    .consent {
+      .agreecontent {
+        .signblock {
+          border-left: 6px solid nth($primaryColor, $style);
         }
       }
     }
@@ -5652,6 +7006,16 @@
           }
         }
       }
+      .searchbutton {
+        span {
+          &.primary_btn {
+            a {
+              background-color: nth($primaryColor, $style);
+              border: 1px solid nth($primaryColor, $style);
+            }
+          }
+        }
+      }
     }
   }
   .related_links {
@@ -5842,6 +7206,15 @@
           color: #000;
           &:hover {
           }
+        }
+      }
+    }
+  }
+  .AI_block {
+    .consent {
+      .agreecontent {
+        .signblock {
+          border-left: 6px solid nth($primaryColor, $style);
         }
       }
     }
@@ -6381,6 +7754,16 @@
           }
         }
       }
+      .searchbutton {
+        span {
+          &.primary_btn {
+            a {
+              background-color: nth($primaryColor, $style);
+              border: 1px solid nth($primaryColor, $style);
+            }
+          }
+        }
+      }
     }
   }
   .related_links {
@@ -6560,6 +7943,15 @@
     background-color: darken(nth($primaryColor, $style), 15);
     background-color: span {
       color: #fff;
+    }
+  }
+  .AI_block {
+    .consent {
+      .agreecontent {
+        .signblock {
+          border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
     }
   }
   // 步驟

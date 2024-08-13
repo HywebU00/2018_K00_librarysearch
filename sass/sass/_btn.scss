@@ -97,6 +97,10 @@ $btn-radius: 4px;
   @extend %btn;
   @include btn_setting($color-darkgray, #fff);
 }
+.btn-black {
+  @extend %btn;
+  @include btn_setting($color-dark, #fff);
+}
 .btn-white {
   @extend %btn;
   @include btn_setting($color-white, #333);

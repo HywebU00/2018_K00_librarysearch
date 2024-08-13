@@ -233,6 +233,21 @@
         }
       }
     }
+    .search_fieldtype {
+      display: flex;
+      margin-bottom: 0.5em;
+      select {
+        color: #fff !important;
+        width: auto;
+        border-radius: 0;
+        border: none !important;
+        border-bottom: 1px solid #fff !important;
+        padding: 0 30px 0 0em;
+        margin-right: 1em;
+        background: transparent url(../images/basic/icon_select_arrow_white.svg) no-repeat right center;
+        background-size: 22px;
+      }
+    }
     .form_search {
       background-color: #fff;
       position: relative;
@@ -418,11 +433,11 @@
         &:before {
           content: '';
           position: absolute;
-          border: 7px solid #fff;
+          border: 5px solid #fff;
           border-right-color: transparent;
           border-top-color: transparent;
           border-bottom-color: transparent;
-          top: 10px;
+          top: 12px;
           left: 0px;
           display: block;
         }
@@ -528,6 +543,50 @@
         }
       }
     }
+    .searchbutton {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 1em;
+      span {
+        margin-right: 0.5em;
+        &.primary_btn {
+          a {
+            background-color: nth($primaryColor, $style);
+            color: #fff;
+            background-image: url('../images/searchbutton_arrow01.png');
+            background-repeat: no-repeat;
+            background-position: right 1em center;
+            padding: 0.5em 2.5em 0.5em 1em;
+            transition: 0.2s;
+            display: block;
+            border-radius: 5px;
+            border: 1px solid nth($primaryColor, $style);
+            &:hover {
+              background-position: right 1em center;
+              padding: 0.5em 3em 0.5em 1em;
+            }
+          }
+        }
+        &.white_btn {
+          a {
+            background-color: #fff;
+            color: $color-dark;
+            background-image: url('../images/searchbutton_arrow02.png');
+            background-repeat: no-repeat;
+            background-position: right 1em center;
+            padding: 0.5em 2.5em 0.5em 1em;
+            transition: 0.2s;
+            border-radius: 5px;
+            border: 1px solid #fff;
+            display: block;
+            &:hover {
+              background-position: right 1em center;
+              padding: 0.5em 3em 0.5em 1em;
+            }
+          }
+        }
+      }
+    }
     .btn-yellow {
       color: #000;
       position: relative;
@@ -549,13 +608,20 @@
       @include screen('mobile') {
         height: 70px;
       }
+      @include screen('xs_mobile') {
+        flex-wrap: wrap;
+      }
       .newslist {
         flex: auto;
         flex-basis: calc(100% - 120px);
         max-width: calc(100% - 120px);
         @include screen('mobile') {
           width: 100%;
+          flex-basis: 100%;
+          max-width: 100%;
+          order: 2;
         }
+
         .title {
           display: inline-block;
           background-color: $importantColor;
@@ -567,11 +633,11 @@
           margin-top: 5px;
           background-image: url('../images/news2.svg');
           background-repeat: no-repeat;
-          background-size: 13px;
+          background-size: 14px 11px;
           background-position: 6px 8px;
           width: auto;
           line-height: 1.3em;
-          font-size: 0.938em;
+          font-size: 1em;
           vertical-align: top;
           @include box-sizing;
           span {
@@ -615,9 +681,17 @@
         flex-basis: 110px;
         max-width: 110px;
         overflow: hidden;
-        @media (max-width: 380px) {
-          width: 110px;
+        @include screen('mobile') {
+          flex-basis: 100%;
+          max-width: 100%;
+          order: 1;
+          position: absolute;
+          right: 0;
+          top: 10px;
         }
+        // @media (max-width: 380px) {
+        //   width: 110px;
+        // }
         .openclosebtn {
           width: 25px;
           height: 25px;
@@ -818,6 +892,25 @@
     //         display: inherit;
     //     }
     // }
+  }
+  .alllink {
+    a {
+      display: inline-block;
+      font-size: 1.25em;
+      color: #555;
+      padding: 0 0 2em 0;
+      position: relative;
+      background-image: url('../images/alllink_icon.png');
+      background-size: 15px 10px;
+      background-repeat: no-repeat;
+      background-position: center bottom 0.5em;
+      font-weight: bold;
+      transition: 0.5s;
+      &:hover {
+        color: #000;
+        background-position: center bottom 1em;
+      }
+    }
   }
 }
 // 新到圖書start
@@ -1083,20 +1176,22 @@
 .featured_block {
   background-color: nth($lightColor, $style);
   position: relative;
-  padding: 75px 0;
-  // z-index: 999;
+  padding: 0;
   text-align: left;
   .container {
     width: 100% !important;
     max-width: 100% !important;
-    @include gutter(60px); //gutter 代表左右要留白
+    padding: 75px 30px;
+    box-sizing: border-box;
+    position: relative;
+    @include screen('mobile') {
+      padding: 55px 30px 20px;
+    }
     @media (max-width: 380px) {
-      @include gutter(30px);
+      padding: 55px 15px 20px;
     }
   }
-  @include screen('mobile') {
-    padding: 55px 0 20px;
-  }
+
   h2 {
     color: #000;
     font-size: 1.875em;
@@ -1109,14 +1204,19 @@
       text-align: center;
     }
   }
+  .featured_data_list {
+    display: block;
+  }
   .featured_data {
-    width: 24%;
+    width: 23%;
     float: left;
     margin-right: 1%;
+    margin-left: 1%;
     margin-bottom: 25px;
     max-height: 520px;
     background-color: #fff;
-    overflow: hidden;
+    // overflow: hidden;
+    display: block;
     // @media(max-width: 1800px) {
     //     height: 520px;
     // }
@@ -1150,7 +1250,7 @@
       position: relative;
       padding: 0;
       background-color: #fff;
-      overflow: hidden;
+      // overflow: hidden;
       @include box-sizing;
       color: #333;
       &:hover {
@@ -1164,6 +1264,39 @@
       .datablock_top {
         position: relative;
         padding: 15px 15px 0 15px;
+        .number {
+          background-color: #606060;
+          color: #fff;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          padding: 0.5em 0.4em;
+          display: block;
+          position: absolute;
+          top: -0.5em;
+          left: 15px;
+          z-index: 9;
+          font-size: 1.375em;
+          font-weight: bold;
+          letter-spacing: 0.07em;
+        }
+        .number ~ .description p {
+          padding-top: 30px;
+          -webkit-line-clamp: 5;
+          @media (max-width: 1700px) {
+            -webkit-line-clamp: 5;
+          }
+          @media (max-width: 1500px) {
+            -webkit-line-clamp: 5;
+          }
+          @media (max-width: 1300px) {
+            -webkit-line-clamp: 4;
+          }
+          @media (max-width: 1100px) {
+            -webkit-line-clamp: 3;
+          }
+          @media (max-width: 1000px) {
+            -webkit-line-clamp: 4;
+          }
+        }
       }
       .datablock_down {
         position: relative;
@@ -1174,7 +1307,7 @@
         width: 100%;
         @include aspect-ratio(4, 3);
         background-color: #fff;
-        outline: 1px solid #eee;
+
         img {
           width: 100%;
         }
@@ -1199,19 +1332,20 @@
           // height: calc(205px + 205px);
           line-height: 30px;
           display: -webkit-box;
-          -webkit-line-clamp: 9;
+          -webkit-line-clamp: 6;
           -webkit-box-orient: vertical;
           text-align: left;
           @media (max-width: 1700px) {
-            -webkit-line-clamp: 8;
-          }
-          @media (max-width: 1500px) {
-            -webkit-line-clamp: 7;
-          }
-          @media (max-width: 1300px) {
             -webkit-line-clamp: 6;
           }
-          @media (max-width: 1300px) {
+          @media (max-width: 1400px) {
+            -webkit-line-clamp: 5;
+          }
+          @media (max-width: 1200px) {
+            -webkit-line-clamp: 4;
+          }
+
+          @media (max-width: 1000px) {
             -webkit-line-clamp: 5;
           }
         }

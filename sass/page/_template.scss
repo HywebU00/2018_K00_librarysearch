@@ -45,6 +45,36 @@ body {
   padding: 55px 0 0 0;
   position: relative;
   background-color: #fff;
+  &.customization03 {
+    width: 100%;
+    max-width: 100%;
+    .header {
+      width: 100%;
+      .container {
+        max-width: $container-max !important;
+      }
+    }
+    .main_mp {
+      max-width: 100%;
+      .related_block,
+      .newbooks_block,
+      .featured_block,
+      .hotrankings_block {
+        .container {
+          max-width: $container-max !important;
+        }
+      }
+      .search_block {
+        margin-bottom: 3em;
+      }
+    }
+  }
+  &.wrapperin {
+    max-width: $container-max;
+    .header {
+      width: $container-max;
+    }
+  }
 }
 .loading {
   @include box-sizing;
@@ -778,68 +808,7 @@ select {
 .align_center {
   text-align: center !important;
 }
-.small_size {
-  font-size: 0.938em;
-  transition: 0.5s;
-}
-.large_size {
-  font-size: 1.125em;
-  transition: 0.5s;
-  .mystudycontent .mycardlist li .data > span em {
-    margin-right: 0px;
-  }
-  .mystudycontent .mycardlist li .data > span:nth-child(2) em {
-    margin-right: 0px;
-  }
-  .devicereservation_block .device_list a {
-    height: 240px;
-    @include screen('mobile') {
-      height: auto;
-    }
-  }
-  .linecontent .book-gallery .book .title {
-    max-height: 48px;
-    height: 48px;
-  }
-  .linecontent .book-gallery {
-    .book {
-      @media only screen and (min-device-width: 480px) {
-        padding: 0px 15px;
-      }
-      @media only screen and (min-device-width: 568px) {
-        width: calc(100% / 3);
-        padding: 0px 10px;
-      }
-      @media only screen and (min-device-width: 640px) {
-        padding: 0px 15px;
-        width: calc(100% / 3);
-      }
-      @media only screen and (min-device-width: 768px) {
-        width: 25%;
-        padding: 0px 10px;
-      }
-      @media only screen and (min-device-width: 853px) {
-        padding: 0px 15px;
-      }
-      @media only screen and (min-device-width: 960px) {
-        width: calc(100% / 4);
-        padding: 0px 10px;
-      }
-      @media only screen and (min-device-width: 1024px) {
-        width: 20%;
-      }
-      @media only screen and (min-device-width: 1200px) {
-        width: 20%;
-      }
-      @media only screen and (min-device-width: 1366px) {
-        width: calc(100% / 6);
-      }
-      @media only screen and (min-device-width: 1700px) {
-        width: calc(100% / 7);
-      }
-    }
-  }
-}
+
 // 購物車
 .shopping_cart {
   position: fixed;
@@ -992,5 +961,71 @@ select {
       padding: 4px 5px;
       font-size: 0.813em;
     }
+  }
+}
+.small_size {
+  font-size: 0.938em;
+  transition: 0.5s;
+}
+.large_size {
+  font-size: 1.125em;
+  transition: 0.5s;
+  .mystudycontent .mycardlist li .data > span em {
+    margin-right: 0px;
+  }
+  .mystudycontent .mycardlist li .data > span:nth-child(2) em {
+    margin-right: 0px;
+  }
+  .devicereservation_block .device_list a {
+    height: 240px;
+    @include screen('mobile') {
+      height: auto;
+    }
+  }
+  .linecontent .book-gallery .book .title {
+    max-height: 48px;
+    height: 48px;
+  }
+  .linecontent .book-gallery {
+    .book {
+      @media only screen and (min-device-width: 480px) {
+        padding: 0px 15px;
+      }
+      @media only screen and (min-device-width: 568px) {
+        width: calc(100% / 3);
+        padding: 0px 10px;
+      }
+      @media only screen and (min-device-width: 640px) {
+        padding: 0px 15px;
+        width: calc(100% / 3);
+      }
+      @media only screen and (min-device-width: 768px) {
+        width: 25%;
+        padding: 0px 10px;
+      }
+      @media only screen and (min-device-width: 853px) {
+        padding: 0px 15px;
+      }
+      @media only screen and (min-device-width: 960px) {
+        width: calc(100% / 4);
+        padding: 0px 10px;
+      }
+      @media only screen and (min-device-width: 1024px) {
+        width: 20%;
+      }
+      @media only screen and (min-device-width: 1200px) {
+        width: 20%;
+      }
+      @media only screen and (min-device-width: 1366px) {
+        width: calc(100% / 6);
+      }
+      @media only screen and (min-device-width: 1700px) {
+        width: calc(100% / 7);
+      }
+    }
+  }
+  .search_block .searchsystem .form_search input[type='text'] {
+    padding: 10px;
+    height: 2.6em;
   }
 }

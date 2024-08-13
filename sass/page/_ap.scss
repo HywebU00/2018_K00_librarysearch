@@ -4086,7 +4086,7 @@
       justify-content: space-between;
       .signblock {
         padding: 0 0 0 1em;
-        border-left: 6px solid $color-green;
+        border-left: 6px solid nth($primaryColor, $style);
         font-weight: bolder;
       }
     }
