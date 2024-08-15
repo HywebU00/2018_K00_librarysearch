@@ -3750,23 +3750,13 @@ select::-ms-expand {
   border-left-color: transparent;
   width: auto;
   height: auto;
-}
-.customization03 .search_block .searchsystem .newsblcok .rightblock .newsmore {
-  padding-left: 5px;
-  margin-top: 5px;
+  top: 5px;
 }
 .customization03 .search_block .searchsystem .newsblcok .rightblock .newsmore:before {
-  display: none;
+  background-color: #333;
 }
 .customization03 .search_block .searchsystem .newsblcok .rightblock .newsmore a {
   color: #333;
-  padding: 0em 0.8em;
-  border-radius: 3px;
-  border: 1px solid #333;
-  transition: 0.2s;
-}
-.customization03 .search_block .searchsystem .newsblcok .rightblock .newsmore a:hover {
-  background-color: #fff;
 }
 .customization03 .search_block .searchsystem .searchbutton span.primary_btn a {
   background-color: #313131;
@@ -4030,6 +4020,12 @@ select::-ms-expand {
   color: #333;
 }
 .customization03 .search_blockin .searchsystem .onlysearch {
+  color: #333;
+}
+.customization03 .search_blockin .searchsystem .onlysearch input {
+  margin-top: -5px;
+}
+.customization03 .search_blockin .searchsystem .form_advanced .onlysearchin {
   color: #333;
 }
 .customization03 .search_blockin .searchsystem .btn_grp a {
@@ -5512,7 +5508,7 @@ select::-ms-expand {
 .version03 .mystudyname,
 .version03 .general_block {
   background-image: url("../images/search_blockbg02_version03.jpg");
-  background-position: center -220px;
+  background-position: center -155px;
 }
 .version03 .login_lightbox h2,
 .version03 .choose_librarycard_lightbox h2,
