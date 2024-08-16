@@ -2799,15 +2799,6 @@
       }
       .form_search {
         border: 1px solid #989899 !important;
-        height: 45px;
-        input[type='text'] {
-          padding: 10px 10px 6px;
-          height: auto;
-        }
-        input[type='submit'] {
-          background-color: $color-dark;
-          height: 45px;
-        }
       }
       .recent_searches {
         .title {
@@ -2901,6 +2892,10 @@
             li {
               a {
                 color: $color-dark;
+                &:hover {
+                  color: $color-orange;
+                  text-decoration: underline;
+                }
               }
             }
           }

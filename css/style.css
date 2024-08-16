@@ -3628,15 +3628,6 @@ select::-ms-expand {
 }
 .customization03 .search_block .searchsystem .form_search {
   border: 1px solid #989899 !important;
-  height: 45px;
-}
-.customization03 .search_block .searchsystem .form_search input[type=text] {
-  padding: 10px 10px 6px;
-  height: auto;
-}
-.customization03 .search_block .searchsystem .form_search input[type=submit] {
-  background-color: #333;
-  height: 45px;
 }
 .customization03 .search_block .searchsystem .recent_searches .title {
   color: #313131;
@@ -3727,6 +3718,10 @@ select::-ms-expand {
 }
 .customization03 .search_block .searchsystem .newsblcok .newslist ul li a {
   color: #333;
+}
+.customization03 .search_block .searchsystem .newsblcok .newslist ul li a:hover {
+  color: #b94b00;
+  text-decoration: underline;
 }
 .customization03 .search_block .searchsystem .newsblcok .rightblock {
   flex-basis: 150px;

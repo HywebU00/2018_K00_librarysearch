@@ -251,7 +251,7 @@
     .form_search {
       background-color: #fff;
       position: relative;
-      height: 54px;
+      height: 50px;
       margin: 0 auto 10px;
       text-align: left;
       padding: 0px;
@@ -261,11 +261,11 @@
         border: none;
         font-size: 1.125em;
         width: 87%;
-        padding: 15px 10px 10px;
+        padding: 13px 10px 12px;
         font-weight: normal;
         margin: 0px;
         color: #333;
-        height: 3em;
+        // height: 3em;
         @media (max-width: 992px) {
           width: 82%;
         }
@@ -290,7 +290,7 @@
         background-position: center center;
         width: 52px;
         min-width: auto;
-        height: 54px;
+        height: 50px;
         &:focus {
           background-color: darken(#f4573f, 20);
         }
@@ -747,6 +747,9 @@
           }
           a {
             color: #fff;
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
