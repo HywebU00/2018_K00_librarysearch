@@ -9337,26 +9337,13 @@ button.backbtn {
   border-radius: 0;
   border: none;
   font-size: 1.125em;
-  width: 87%;
-  padding: 14px 10px 11px;
+  width: calc(100% - 52px - 50px);
+  padding: 12px 10px 12px;
   font-weight: normal;
   margin: 0px;
   color: #333;
-}
-@media (max-width: 992px) {
-  .search_block .searchsystem .form_search input[type=text] {
-    width: 82%;
-  }
-}
-@media (max-width: 767px) {
-  .search_block .searchsystem .form_search input[type=text] {
-    width: 77%;
-  }
-}
-@media (max-width: 575px) {
-  .search_block .searchsystem .form_search input[type=text] {
-    width: 74%;
-  }
+  height: 50px;
+  border: 1px solid red;
 }
 .search_block .searchsystem .form_search input {
   padding: 15px;
