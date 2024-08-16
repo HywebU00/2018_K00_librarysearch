@@ -251,7 +251,7 @@
     .form_search {
       background-color: #fff;
       position: relative;
-      height: 50px;
+      height: 48px;
       margin: 0 auto 10px;
       text-align: left;
       padding: 0px;
@@ -266,7 +266,7 @@
         font-weight: normal;
         margin: 0px;
         color: #333;
-        height: 50px;
+        height: 48px;
       }
       input {
         padding: 15px;
@@ -282,7 +282,7 @@
         background-position: center center;
         width: 52px;
         min-width: auto;
-        height: 50px;
+        height: 48px;
         &:focus {
           background-color: darken(#f4573f, 20);
         }
