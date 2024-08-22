@@ -5369,7 +5369,7 @@ body ::-webkit-scrollbar-thumb:vertical:active {
   max-width: 1400px;
 }
 .wrapper.wrapperin .header {
-  width: 1400px;
+  max-width: 1400px;
 }
 
 .loading {

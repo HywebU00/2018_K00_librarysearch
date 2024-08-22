@@ -72,7 +72,7 @@ body {
   &.wrapperin {
     max-width: $container-max;
     .header {
-      width: $container-max;
+      max-width: $container-max;
     }
   }
 }
