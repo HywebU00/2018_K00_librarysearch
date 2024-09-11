@@ -2391,3 +2391,11 @@ button {
     }
   }
 }
+// 燈箱圖片
+.lightpicblock {
+  line-height: 0;
+  margin-top: 2em;
+  img {
+    max-width: 100%;
+  }
+}
