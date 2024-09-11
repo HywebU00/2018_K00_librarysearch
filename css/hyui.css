@@ -28026,11 +28026,13 @@ em.yellowbg {
   .AI_block .consent .sign {
     position: relative;
     margin-bottom: 1em;
+    float: right;
   }
 }
 .AI_block .consent .content {
   border-bottom: 1px solid #ccc;
   margin-bottom: 1.5em;
+  clear: both;
 }
 .AI_block .consent .content p {
   line-height: 1.8em;

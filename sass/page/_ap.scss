@@ -4078,11 +4078,14 @@
       @include screen('mobile') {
         position: relative;
         margin-bottom: 1em;
+        float: right;
       }
     }
     .content {
       border-bottom: 1px solid #ccc;
       margin-bottom: 1.5em;
+      clear: both;
+
       p {
         line-height: 1.8em;
         text-indent: 2em;
