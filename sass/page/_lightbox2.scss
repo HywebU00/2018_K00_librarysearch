@@ -2398,4 +2398,7 @@ button {
   img {
     max-width: 100%;
   }
+  @include screen('xs_mobile') {
+    margin-top: 0;
+  }
 }

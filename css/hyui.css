@@ -8843,6 +8843,11 @@ button.backbtn {
 .lightpicblock img {
   max-width: 100%;
 }
+@media screen and (max-width: 575px) {
+  .lightpicblock {
+    margin-top: 0;
+  }
+}
 
 .section {
   padding: 0em 0 3em;
