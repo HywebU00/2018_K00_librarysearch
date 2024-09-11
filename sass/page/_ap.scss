@@ -4059,6 +4059,9 @@
       padding-bottom: 1em;
       border-bottom: 1px solid #ccc;
       margin-bottom: 1.5em;
+      @include screen('mobile') {
+        margin-bottom: 1em;
+      }
     }
     .sign {
       display: inline-block;
@@ -4071,6 +4074,10 @@
       border-radius: 5px;
       &.notyet {
         background-color: $color-yellow;
+      }
+      @include screen('mobile') {
+        position: relative;
+        margin-bottom: 1em;
       }
     }
     .content {

@@ -28004,6 +28004,11 @@ em.yellowbg {
   border-bottom: 1px solid #ccc;
   margin-bottom: 1.5em;
 }
+@media screen and (max-width: 767px) {
+  .AI_block .consent .title {
+    margin-bottom: 1em;
+  }
+}
 .AI_block .consent .sign {
   display: inline-block;
   position: absolute;
@@ -28016,6 +28021,12 @@ em.yellowbg {
 }
 .AI_block .consent .sign.notyet {
   background-color: #f1ad00;
+}
+@media screen and (max-width: 767px) {
+  .AI_block .consent .sign {
+    position: relative;
+    margin-bottom: 1em;
+  }
 }
 .AI_block .consent .content {
   border-bottom: 1px solid #ccc;
