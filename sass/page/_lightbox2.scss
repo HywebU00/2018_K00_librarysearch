@@ -1395,15 +1395,15 @@ body.fix {
     padding: 20px 20px 25px 20px;
     margin: 20px auto;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 15px;
     @include box-sizing();
     @media (max-width: 1200px) {
       width: 80vw;
     }
     @include screen('xs_mobile') {
-      padding: 50px 20px 0px 20px;
+      padding: 50px 20px 25px 20px;
       width: 100%;
-      min-height: 100%;
+      // min-height: 100%;
       overflow: hidden;
       border-radius: 0;
       margin: 0;
