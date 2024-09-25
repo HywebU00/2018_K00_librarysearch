@@ -2743,6 +2743,20 @@
       @include box-sizing;
       padding: 10px 15px;
     }
+    .prompt {
+      display: inline;
+      a {
+        width: 25px;
+        height: 25px;
+        background-color: #666;
+        color: #fff;
+        border-radius: 50%;
+        line-height: 25px;
+        display: inline-block;
+        text-align: center;
+        margin-right: 5px;
+      }
+    }
   }
 }
 // 獎勵清單

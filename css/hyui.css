@@ -26676,6 +26676,20 @@ em.yellowbg {
   box-sizing: border-box;
   padding: 10px 15px;
 }
+.data_all .choosebtn .prompt {
+  display: inline;
+}
+.data_all .choosebtn .prompt a {
+  width: 25px;
+  height: 25px;
+  background-color: #666;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 25px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 5px;
+}
 
 .read_passbook_list {
   padding: 0 10px;
