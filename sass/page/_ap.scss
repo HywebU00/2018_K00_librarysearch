@@ -4908,6 +4908,7 @@
         }
         .introduce {
           line-height: 1.8em;
+          @include text-line(3, 1.8em);
         }
       }
     }
@@ -5135,6 +5136,15 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: 13px;
+              }
+            }
+            &.bookboxreservation {
+              a {
+                padding: 0.2em 0.8em 0.2em 1.9em;
+                background-image: url('../images/feature_options04.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 14px;
               }
             }
           }
