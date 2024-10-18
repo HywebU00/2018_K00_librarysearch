@@ -5027,6 +5027,11 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    &.nobg {
+      background-color: #fff;
+      padding: 0em;
+      margin-bottom: 0;
+    }
 
     .recommendbook_list {
       flex: 0 0 auto;

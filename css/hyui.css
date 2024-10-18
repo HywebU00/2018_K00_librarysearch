@@ -28975,6 +28975,11 @@ em.yellowbg {
   display: flex;
   flex-wrap: wrap;
 }
+.AIgptgroup .AIrecommendbook_sidebyside.nobg {
+  background-color: #fff;
+  padding: 0em;
+  margin-bottom: 0;
+}
 .AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list {
   flex: 0 0 auto;
   flex-basis: 18%;
