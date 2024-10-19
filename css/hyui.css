@@ -28975,7 +28975,7 @@ em.yellowbg {
   display: flex;
   flex-wrap: wrap;
 }
-.AIgptgroup .AIrecommendbook_sidebyside.nobg {
+.AIgptgroup .AIrecommendbook_sidebyside.nobgcolor {
   background-color: #fff;
   padding: 0em;
   margin-bottom: 0;
