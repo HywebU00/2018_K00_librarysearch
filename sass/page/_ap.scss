@@ -5300,7 +5300,7 @@
       }
       50% {
         translate: 5px;
-        stroke-dashoffset: ($radius_d21 * 3.14/4);
+        stroke-dashoffset: calc($radius_d21 * 3.14 / 4);
         rotate: 45deg;
       }
     }

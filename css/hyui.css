@@ -7123,34 +7123,25 @@ body.fix {
 .related_lightbox .relatedboxmp .relatedlist ul {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .related_lightbox .relatedboxmp .relatedlist ul li {
-  display: inline-block;
-  margin-right: 0.8%;
+  flex: 0 0 auto;
+  flex-basis: 31%;
+  margin: 0 1.166% 0.8em;
   font-size: 1.5em;
 }
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
   .related_lightbox .relatedboxmp .relatedlist ul li {
-    width: 30%;
-    margin-bottom: 20px;
-  }
-  .related_lightbox .relatedboxmp .relatedlist ul li:nth-child(3n) {
-    margin-right: 0;
-  }
-}
-@media screen and (max-width: 1399px) {
-  .related_lightbox .relatedboxmp .relatedlist ul li {
-    width: 48%;
-    margin-bottom: 15px;
-  }
-  .related_lightbox .relatedboxmp .relatedlist ul li:nth-child(2n) {
-    margin-right: 0;
+    flex-basis: 48%;
+    margin: 0 1% 0.8em;
   }
 }
 @media screen and (max-width: 575px) {
   .related_lightbox .relatedboxmp .relatedlist ul li {
-    width: 100%;
-    margin-right: 0;
+    flex-basis: 100%;
+    margin: 0 0 0.8em;
   }
 }
 .related_lightbox .relatedboxmp .relatedlist ul li a {
@@ -12404,8 +12395,8 @@ button.backbtn {
   height: 150px;
 }
 .booklist_block .booklist .bookleftblock .book .image > img {
-  width: 100%;
-  max-height: 200px;
+  max-width: 100%;
+  max-height: 140px;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
 @media (max-width: 480px) {
@@ -20373,6 +20364,9 @@ button.backbtn {
   width: 24px;
   float: right;
   margin: 5px 5px 0 0;
+}
+.advanced_search .advanced_block .searchblockdata .form_content .select_date2 .image img {
+  width: 24px;
 }
 .advanced_search .advanced_block .searchblockdata .form_content .select_date2 .image a {
   display: block;
