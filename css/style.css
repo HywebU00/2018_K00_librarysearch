@@ -2052,6 +2052,9 @@ select::-ms-expand {
 .child01 .security_deposit_block .title {
   color: #5c9588;
 }
+.child01 .service_list .explain_block a {
+  color: #5c9588;
+}
 .child01 .pagination .page li.active a {
   background: #5c9588;
   border: #5c9588 solid 1px;
@@ -2568,6 +2571,9 @@ select::-ms-expand {
   color: #0d2d2d;
 }
 .customization01 .security_deposit_block .title {
+  color: #5c9588;
+}
+.customization01 .service_list .explain_block a {
   color: #5c9588;
 }
 .customization01 .pagination .page li.active a {
@@ -3149,6 +3155,9 @@ select::-ms-expand {
 }
 .customization02 .authority_group .content .state {
   color: #b94b00;
+}
+.customization02 .service_list .explain_block a {
+  color: #0e664c;
 }
 .customization02 .super_business_block .super_business_group ul li span {
   background-color: #b94b00;
@@ -4271,6 +4280,9 @@ select::-ms-expand {
 .customization03 .security_deposit_block .title {
   color: #313131;
 }
+.customization03 .service_list .explain_block a {
+  color: #313131;
+}
 .customization03 .pagination .page li.active a {
   background: #313131;
   border: #313131 solid 1px;
@@ -4743,6 +4755,9 @@ select::-ms-expand {
   color: #133358;
 }
 .version01 .security_deposit_block .title {
+  color: #1c4b82;
+}
+.version01 .service_list .explain_block a {
   color: #1c4b82;
 }
 .version01 .pagination .page li.active a {
@@ -5230,6 +5245,9 @@ select::-ms-expand {
 .version02 .security_deposit_block .title {
   color: #bc5702;
 }
+.version02 .service_list .explain_block a {
+  color: #bc5702;
+}
 .version02 .pagination .page li.active a {
   background: #bc5702;
   border: #bc5702 solid 1px;
@@ -5710,6 +5728,9 @@ select::-ms-expand {
   color: #064e49;
 }
 .version03 .security_deposit_block .title {
+  color: #097e76;
+}
+.version03 .service_list .explain_block a {
   color: #097e76;
 }
 .version03 .pagination .page li.active a {
@@ -6200,6 +6221,9 @@ select::-ms-expand {
 .version04 .security_deposit_block .title {
   color: #774181;
 }
+.version04 .service_list .explain_block a {
+  color: #774181;
+}
 .version04 .pagination .page li.active a {
   background: #774181;
   border: #774181 solid 1px;
@@ -6682,6 +6706,9 @@ select::-ms-expand {
 .version05 .security_deposit_block .title {
   color: #088c6f;
 }
+.version05 .service_list .explain_block a {
+  color: #088c6f;
+}
 .version05 .pagination .page li.active a {
   background: #088c6f;
   border: #088c6f solid 1px;
@@ -7150,6 +7177,9 @@ select::-ms-expand {
   color: #005993;
 }
 .version06 .security_deposit_block .title {
+  color: #0078c6;
+}
+.version06 .service_list .explain_block a {
   color: #0078c6;
 }
 .version06 .pagination .page li.active a {

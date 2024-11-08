@@ -701,6 +701,35 @@
         font-size: 1rem;
       }
     }
+    .explain_block {
+      background-color: #eee;
+      padding: 1.5em;
+      color: #333;
+      border-radius: 5px;
+      margin-bottom: 0.5em;
+      line-height: 1.6em;
+      a {
+        color: nth($primaryColor, $style);
+        padding: 0 5px;
+        text-decoration: underline;
+        &:hover {
+          color: $aHover;
+        }
+      }
+      .prompt {
+        width: 25px;
+        height: 25px;
+        background-color: #666;
+        color: #fff;
+        border-radius: 50%;
+        line-height: 25px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        margin: 0 5px;
+        font-size: 1rem;
+      }
+    }
     ul {
       margin: 0;
       padding: 0;

@@ -22319,6 +22319,35 @@ em.yellowbg {
   margin-left: 10px;
   font-size: 1rem;
 }
+.mystudycontent .service_list .explain_block {
+  background-color: #eee;
+  padding: 1.5em;
+  color: #333;
+  border-radius: 5px;
+  margin-bottom: 0.5em;
+  line-height: 1.6em;
+}
+.mystudycontent .service_list .explain_block a {
+  color: #005d98;
+  padding: 0 5px;
+  text-decoration: underline;
+}
+.mystudycontent .service_list .explain_block a:hover {
+  color: #dd1f03;
+}
+.mystudycontent .service_list .explain_block .prompt {
+  width: 25px;
+  height: 25px;
+  background-color: #666;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 5px;
+  font-size: 1rem;
+}
 .mystudycontent .service_list ul {
   margin: 0;
   padding: 0;
