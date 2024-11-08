@@ -683,6 +683,24 @@
   // 合作館服務
   .service_list {
     margin-bottom: 60px;
+    h2 {
+      display: flex;
+      align-items: center;
+      .prompt_btn {
+        width: 25px;
+        height: 25px;
+        background-color: #666;
+        color: #fff;
+        border-radius: 50%;
+        line-height: 25px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        margin-left: 10px;
+        // margin-top: -2px;
+        font-size: 1rem;
+      }
+    }
     ul {
       margin: 0;
       padding: 0;

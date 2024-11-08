@@ -22302,6 +22302,23 @@ em.yellowbg {
 .mystudycontent .service_list {
   margin-bottom: 60px;
 }
+.mystudycontent .service_list h2 {
+  display: flex;
+  align-items: center;
+}
+.mystudycontent .service_list h2 .prompt_btn {
+  width: 25px;
+  height: 25px;
+  background-color: #666;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: 10px;
+  font-size: 1rem;
+}
 .mystudycontent .service_list ul {
   margin: 0;
   padding: 0;

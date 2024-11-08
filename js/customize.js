@@ -1273,6 +1273,19 @@ $(function () {
     $('#studybook_tabsstyle').fadeOut();
     $('body').removeClass('fix');
   });
+  //書房合作服務
+  $('.service_list h2 .prompt_btn').click(function () {
+    $('#servicelist_style').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('#servicelist_style .close').click(function () {
+    $('#servicelist_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#servicelist_style').fadeOut();
+    $('body').removeClass('fix');
+  });
   // 行動項目
   $('#actionitemsl_btn').click(function () {
     $('#actionitemslstyle').fadeIn();
