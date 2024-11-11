@@ -4761,6 +4761,18 @@
             @media (max-width: 440px) {
               margin: 0 0 0.5em 1em;
             }
+            &.disabled {
+              a {
+                background-color: #eee;
+                pointer-events: none;
+                opacity: 1;
+                box-shadow: none;
+                cursor: not-allowed !important;
+                display: block;
+                -webkit-filter: grayscale(1);
+                border: 1px solid #ddd;
+              }
+            }
             &:hover {
               background: rgb(221, 221, 221);
               background: linear-gradient(0deg, rgba(221, 221, 221, 1) 0%, rgba(255, 255, 255, 1) 100%);

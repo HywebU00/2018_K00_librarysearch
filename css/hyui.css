@@ -8742,14 +8742,21 @@ button.backbtn {
 .sharedreading_lightbox .recommendbook {
   flex: 0 0 auto;
   flex-basis: 160px;
+  max-width: 160px;
   margin-left: 2em;
   text-align: center;
   margin-bottom: 1em;
 }
+.sharedreading_lightbox .recommendbook img {
+  max-width: 100%;
+  max-height: 100%;
+}
 @media (max-width: 670px) {
   .sharedreading_lightbox .recommendbook {
     flex-basis: 100%;
+    max-width: 100%;
     margin-right: 0;
+    margin-left: 0;
     order: 1;
   }
 }
@@ -28750,6 +28757,16 @@ em.yellowbg {
   .AIgptgroup .AIrecommendbook .recommendbook_list .feature_options ul li {
     margin: 0 0 0.5em 1em;
   }
+}
+.AIgptgroup .AIrecommendbook .recommendbook_list .feature_options ul li.disabled a {
+  background-color: #eee;
+  pointer-events: none;
+  opacity: 1;
+  box-shadow: none;
+  cursor: not-allowed !important;
+  display: block;
+  -webkit-filter: grayscale(1);
+  border: 1px solid #ddd;
 }
 .AIgptgroup .AIrecommendbook .recommendbook_list .feature_options ul li:hover {
   background: rgb(221, 221, 221);
