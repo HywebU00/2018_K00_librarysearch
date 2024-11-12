@@ -5163,6 +5163,18 @@
                 background-position: center;
                 background-size: 14px;
               }
+              &.disabled {
+                a {
+                  background-color: #eee;
+                  pointer-events: none;
+                  opacity: 1;
+                  box-shadow: none;
+                  cursor: not-allowed !important;
+                  display: block;
+                  -webkit-filter: grayscale(1);
+                  border: 1px solid #ddd;
+                }
+              }
             }
           }
         }

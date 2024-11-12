@@ -29157,6 +29157,16 @@ em.yellowbg {
   background-position: center;
   background-size: 14px;
 }
+.AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list .feature_options ul li.bookboxreservation.disabled a {
+  background-color: #eee;
+  pointer-events: none;
+  opacity: 1;
+  box-shadow: none;
+  cursor: not-allowed !important;
+  display: block;
+  -webkit-filter: grayscale(1);
+  border: 1px solid #ddd;
+}
 .AIgptgroup .AIrecommendbook_sidebyside .recommendbook_list .content .booktitle {
   color: #005d98;
   font-size: 1.125em;
