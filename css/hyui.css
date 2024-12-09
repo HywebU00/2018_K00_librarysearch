@@ -5297,6 +5297,201 @@ footer ul li a {
   background-size: 15px;
 }
 
+.tabSet_block {
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .tabSet_block {
+    padding-top: 10px;
+  }
+}
+.tabSet_block .analysis_prompt {
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+.tabSet_block .analysis_prompt span {
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+.tabSet_block .analysis_prompt span .prompt_btn {
+  width: 25px;
+  height: 25px;
+  background-color: #666;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 25px;
+  font-size: 1em;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.tabSet_block .analysis_prompt .promptblock {
+  background-color: #666;
+  color: #fff;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 200px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-radius: 5px;
+  z-index: 9;
+  text-align: left;
+}
+.tabSet_block .analysis_prompt .promptblock:before {
+  content: "";
+  border: 12px solid #666;
+  border-color: transparent transparent #666 transparent;
+  position: absolute;
+  top: -22px;
+  right: 0;
+}
+.tabSet_block .tabSet {
+  margin: 30px auto;
+}
+.tabSet_block .tabSet .tabItems {
+  display: flex;
+}
+.tabSet_block .tabSet .modeBBtn,
+.tabSet_block .tabSet .tabBtn {
+  flex: 1 1 auto;
+  font-size: 1em;
+  height: 2.8em;
+  text-align: center;
+  border: none;
+  margin: 0 1px;
+  border-radius: 5px;
+  box-shadow: none;
+  background: #ddd;
+  cursor: pointer;
+  color: #333;
+  position: relative;
+}
+.tabSet_block .tabSet .modeBBtn:focus-visible,
+.tabSet_block .tabSet .tabBtn:focus-visible {
+  outline: none;
+  box-shadow: 0 0px 0px 2px #f1ad00 inset;
+}
+.tabSet_block .tabSet .modeBBtn.active,
+.tabSet_block .tabSet .tabBtn.active {
+  cursor: default;
+  background: #005d98;
+  color: #fff;
+}
+.tabSet_block .tabSet .modeBBtn.active:before,
+.tabSet_block .tabSet .tabBtn.active:before {
+  content: "";
+  border: 11px solid #005d98;
+  border-color: #005d98 transparent transparent transparent;
+  position: absolute;
+  bottom: -22px;
+  left: calc(50% - 16px);
+}
+@media screen and (max-width: 991px) {
+  .tabSet_block .tabSet .tabItems {
+    flex-wrap: wrap;
+  }
+  .tabSet_block .tabSet .tabBtn {
+    flex: 1 1 33%;
+    margin-bottom: 13px;
+  }
+}
+.tabSet_block .tabSet .tabContent {
+  position: relative;
+  padding: 15px 0;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .tabSet_block .tabSet .tabContent {
+    padding: 0;
+    margin-bottom: 10px;
+    border: none;
+  }
+}
+.tabSet_block .tabSet .tabContent.active {
+  display: block;
+}
+.tabSet_block .tabSet .tabContent a:focus {
+  outline: none;
+  box-shadow: 0 0px 0px 2px #f1ad00 inset;
+}
+@media screen and (max-width: 767px) {
+  .tabSet_block .tabSet .tabContent a:focus {
+    box-shadow: none;
+  }
+}
+.tabSet_block .tabSet .tabContent .content {
+  background-color: #005d98;
+  padding: 15px;
+  border-radius: 5px;
+}
+.tabSet_block .tabSet .tabContent .content ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tabSet_block .tabSet .tabContent .content ul li {
+  flex: 1 1 18%;
+  margin: 0 1% 0 0;
+  border: none;
+}
+.tabSet_block .tabSet .tabContent .content ul li a {
+  display: block;
+  background-color: #eee;
+  color: #00446f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.tabSet_block .tabSet .tabContent .content ul li a:hover {
+  background-color: #fff;
+  color: #005d98;
+}
+@media screen and (max-width: 767px) {
+  .tabSet_block .tabSet .tabContent .content ul li {
+    flex: 1 1 33%;
+    margin: 0 1% 5px 0;
+  }
+}
+.tabSet_block .tabSet .modeBBtn {
+  width: 100%;
+  margin: 0;
+  display: none;
+}
+.tabSet_block .tabSet.modeB .tabItems {
+  display: none;
+}
+.tabSet_block .tabSet.modeB .tabContent {
+  display: block;
+}
+.tabSet_block .tabSet.modeB .tabContent .content {
+  display: none;
+  background-color: #eee;
+}
+.tabSet_block .tabSet.modeB .tabContent .content ul li a {
+  background-color: #fff;
+}
+.tabSet_block .tabSet.modeB .tabContent .content a:focus-visible {
+  outline: #0066cc 2px solid;
+}
+.tabSet_block .tabSet.modeB .modeBBtn {
+  display: block;
+}
+.tabSet_block .tabSet.modeB .modeBBtn:focus {
+  box-shadow: none !important;
+}
+.tabSet_block .tabSet.modeB .modeBBtn:focus-visible {
+  box-shadow: 0 0px 0px 2px #f1ad00 !important;
+}
+
 body {
   background-color: #eee;
   transition: 0.5s;
@@ -7361,6 +7556,9 @@ body.fix {
 }
 .lightboxstyle .lightboxstyle_block .lightbox_data .more a:hover {
   color: #dd1f03;
+}
+.lightboxstyle .lightboxstyle_block .lightbox_data p {
+  line-height: 1.8em;
 }
 .lightboxstyle .lightboxstyle_block .lightbox_data .radio_grp label {
   margin: 0 0 8px;
@@ -29020,6 +29218,7 @@ em.yellowbg {
   .AIgptgroup .AIinformation .AIselect select {
     width: 100%;
     margin-left: 0;
+    margin-bottom: 5px;
   }
 }
 .AIgptgroup .AIrecommendbook_sidebyside {

@@ -875,6 +875,9 @@ body.fix {
           }
         }
       }
+      p {
+        line-height: 1.8em;
+      }
       //匯出格式
       .radio_grp {
         label {
@@ -948,6 +951,7 @@ body.fix {
         width: 100%;
         margin: 10px 0 5px;
       }
+
       //listdata
       .listdata {
         p {

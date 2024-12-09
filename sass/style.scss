@@ -783,7 +783,34 @@
       }
     }
   }
-  //
+  //_tabset.scss
+  .tabSet {
+    .tabBtn {
+      &.active {
+        background: nth($primaryColor, $style);
+        &:before {
+          content: '';
+          border: 11px solid nth($primaryColor, $style);
+          border-color: nth($primaryColor, $style) transparent transparent transparent;
+        }
+      }
+    }
+    .tabcontent {
+      .content {
+        background-color: nth($primaryColor, $style);
+        ul {
+          li {
+            a {
+              color: darken($color: nth($primaryColor, $style), $amount: 8);
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // 客製版01花蓮
 .customization01 {
@@ -1538,7 +1565,34 @@
       }
     }
   }
-  //
+  //_tabset.scss
+  .tabSet {
+    .tabBtn {
+      &.active {
+        background: nth($primaryColor, $style);
+        &:before {
+          content: '';
+          border: 11px solid nth($primaryColor, $style);
+          border-color: nth($primaryColor, $style) transparent transparent transparent;
+        }
+      }
+    }
+    .tabcontent {
+      .content {
+        background-color: nth($primaryColor, $style);
+        ul {
+          li {
+            a {
+              color: darken($color: nth($primaryColor, $style), $amount: 8);
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // 客製版02北市圖書館
 .customization02 {
@@ -2744,7 +2798,34 @@
       }
     }
   }
-  //
+  //_tabset.scss
+  .tabSet {
+    .tabBtn {
+      &.active {
+        background: nth($primaryColor, $style);
+        &:before {
+          content: '';
+          border: 11px solid nth($primaryColor, $style);
+          border-color: nth($primaryColor, $style) transparent transparent transparent;
+        }
+      }
+    }
+    .tabcontent {
+      .content {
+        background-color: nth($primaryColor, $style);
+        ul {
+          li {
+            a {
+              color: darken($color: nth($primaryColor, $style), $amount: 8);
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // 客製版03台中市圖書館
 .customization03 {
@@ -3967,6 +4048,34 @@
     background: url('../vendor/slick/icon_arrow_right4.png') center center no-repeat RGBA(255, 255, 255, 0.5);
     background-size: 30px 47px;
   }
+  //_tabset.scss
+  .tabSet {
+    .tabBtn {
+      &.active {
+        background: nth($primaryColor, $style);
+        &:before {
+          content: '';
+          border: 11px solid nth($primaryColor, $style);
+          border-color: nth($primaryColor, $style) transparent transparent transparent;
+        }
+      }
+    }
+    .tabcontent {
+      .content {
+        background-color: nth($primaryColor, $style);
+        ul {
+          li {
+            a {
+              color: darken($color: nth($primaryColor, $style), $amount: 8);
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // 版型01
 .version01 {
@@ -4714,7 +4823,34 @@
       }
     }
   }
-  //
+  //_tabset.scss
+  .tabSet {
+    .tabBtn {
+      &.active {
+        background: nth($primaryColor, $style);
+        &:before {
+          content: '';
+          border: 11px solid nth($primaryColor, $style);
+          border-color: nth($primaryColor, $style) transparent transparent transparent;
+        }
+      }
+    }
+    .tabcontent {
+      .content {
+        background-color: nth($primaryColor, $style);
+        ul {
+          li {
+            a {
+              color: darken($color: nth($primaryColor, $style), $amount: 8);
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // 版型02
 .version02 {
@@ -5481,7 +5617,34 @@
       }
     }
   }
-  //
+  //_tabset.scss
+  .tabSet {
+    .tabBtn {
+      &.active {
+        background: nth($primaryColor, $style);
+        &:before {
+          content: '';
+          border: 11px solid nth($primaryColor, $style);
+          border-color: nth($primaryColor, $style) transparent transparent transparent;
+        }
+      }
+    }
+    .tabcontent {
+      .content {
+        background-color: nth($primaryColor, $style);
+        ul {
+          li {
+            a {
+              color: darken($color: nth($primaryColor, $style), $amount: 8);
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // 版型03
 .version03 {
@@ -6233,7 +6396,34 @@
       }
     }
   }
-  //
+  //_tabset.scss
+  .tabSet {
+    .tabBtn {
+      &.active {
+        background: nth($primaryColor, $style);
+        &:before {
+          content: '';
+          border: 11px solid nth($primaryColor, $style);
+          border-color: nth($primaryColor, $style) transparent transparent transparent;
+        }
+      }
+    }
+    .tabcontent {
+      .content {
+        background-color: nth($primaryColor, $style);
+        ul {
+          li {
+            a {
+              color: darken($color: nth($primaryColor, $style), $amount: 8);
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // 版型04
 .version04 {
@@ -7004,7 +7194,34 @@
       }
     }
   }
-  //
+  //_tabset.scss
+  .tabSet {
+    .tabBtn {
+      &.active {
+        background: nth($primaryColor, $style);
+        &:before {
+          content: '';
+          border: 11px solid nth($primaryColor, $style);
+          border-color: nth($primaryColor, $style) transparent transparent transparent;
+        }
+      }
+    }
+    .tabcontent {
+      .content {
+        background-color: nth($primaryColor, $style);
+        ul {
+          li {
+            a {
+              color: darken($color: nth($primaryColor, $style), $amount: 8);
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // 版型05
 .version05 {
@@ -7758,7 +7975,34 @@
       }
     }
   }
-  //
+  //_tabset.scss
+  .tabSet {
+    .tabBtn {
+      &.active {
+        background: nth($primaryColor, $style);
+        &:before {
+          content: '';
+          border: 11px solid nth($primaryColor, $style);
+          border-color: nth($primaryColor, $style) transparent transparent transparent;
+        }
+      }
+    }
+    .tabcontent {
+      .content {
+        background-color: nth($primaryColor, $style);
+        ul {
+          li {
+            a {
+              color: darken($color: nth($primaryColor, $style), $amount: 8);
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // 版型06
 .version06 {
@@ -8499,4 +8743,32 @@
     }
   }
   //
+  //_tabset.scss
+  .tabSet {
+    .tabBtn {
+      &.active {
+        background: nth($primaryColor, $style);
+        &:before {
+          content: '';
+          border: 11px solid nth($primaryColor, $style);
+          border-color: nth($primaryColor, $style) transparent transparent transparent;
+        }
+      }
+    }
+    .tabcontent {
+      .content {
+        background-color: nth($primaryColor, $style);
+        ul {
+          li {
+            a {
+              color: darken($color: nth($primaryColor, $style), $amount: 8);
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

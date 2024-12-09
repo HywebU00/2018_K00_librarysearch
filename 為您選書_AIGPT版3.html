@@ -20,12 +20,13 @@
   <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
   <link rel="stylesheet" href="css/hyui.css">
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
   <!-- wrapper 最大寬度 -->
-  <div class="wrapper  customization03 wrapperin nowa havewa">
+  <div class="wrapper  version01 wrapperin nowa havewa">
     <!-- 直接跳主內容區 -->
     <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
     <!-- sidebar  start-->
@@ -197,16 +198,33 @@
                   <div class="title">推薦給您的閱讀書單</div>
                   <div class="directions">
                     <div class="content">
-                      <p>系統利用AI人工智慧-大型語言模型(例如ChatGPT)技術輔助，已產生您的專屬「閱讀描述」以及「推薦書單」。</p>
-                      <div class="directions">說明：</div>
+                      <!-- <p>系統利用AI人工智慧-大型語言模型(例如ChatGPT)技術輔助，已產生您的專屬「閱讀描述」以及「推薦書單」。</p>
+                      <div class="directions">說明：</div> -->
                       <ul>
                         <li>在完成一次閱讀描述分析後，您每借閱30本圖書以上，系統將再次為您提供新一輪的閱讀描述分析與推薦。</li>
                         <li>AI生成內容可能產生錯誤，重要內容敬請詳加檢查。</li>
                       </ul>
                     </div>
+                    <div class="contentother"><button type="button" class="btn describe_btn">專屬閱讀描述</button></div>
                   </div>
+                  <!-- 專屬閱讀描述 燈箱 start-->
+                  <div class="lightboxstyle" id="describe_style">
+                    <div class="overlay"></div>
+                    <div class="lightboxstyle_block">
+                      <div class="close"></div>
+                      <h2>專屬閱讀描述</h2>
+                      <form>
+                        <div class="lightbox_data">
+                          <p>
+                            您是一位熱愛自我成長與探索的讀者。您的書單中，充滿了有關心靈成長的書籍，這些作品圍繞著個人的成長與自我實現，如《五感全開:充滿驚喜和意義的一年》、《第二座山:當世俗成就不再滿足你,你要如何為生命找到意義?》等。此外，您對生態與動物保護有深刻的興趣，如《野生動物大聲講》、《擁抱,台灣的精靈。》等書籍都在您的閱讀清單上。您的書單也包含了許多旅行文學，顯示出您的探索精神與對世界的熱愛。最後，您對社會議題與哲學思考也有著深厚的興趣，透過閱讀如《美學:打開未知的美感體驗》、《生物多樣性:守護生態基因庫,一同為地球物種共生努力》等書籍，您在思考人生哲理與社會現象。
+                          </p>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <!-- 專屬閱讀描述 燈箱 end-->
                   <!-- 描述 -->
-                  <div class="describe">
+                  <div class="describe hidden">
                     <div class="title">專屬閱讀描述</div>
                     <button type="button" class="btn btn-gray openclosebtn">展開</button>
                     <!-- p加上class="singleline" 只顯示單行... -->
@@ -214,6 +232,97 @@
                       您是一位熱愛自我成長與探索的讀者。您的書單中，充滿了有關心靈成長的書籍，這些作品圍繞著個人的成長與自我實現，如《五感全開:充滿驚喜和意義的一年》、《第二座山:當世俗成就不再滿足你,你要如何為生命找到意義?》等。此外，您對生態與動物保護有深刻的興趣，如《野生動物大聲講》、《擁抱,台灣的精靈。》等書籍都在您的閱讀清單上。您的書單也包含了許多旅行文學，顯示出您的探索精神與對世界的熱愛。最後，您對社會議題與哲學思考也有著深厚的興趣，透過閱讀如《美學:打開未知的美感體驗》、《生物多樣性:守護生態基因庫,一同為地球物種共生努力》等書籍，您在思考人生哲理與社會現象。
                     </p>
                   </div>
+                  <!-- 分類頁籤start -->
+                  <div class="tabSet_block">
+                    <div class="tabSet">
+                      <!-- 頁籤的上一層父物件要加 role="tablist" -->
+                      <div class="tabItems">
+                        <button type="button" class="tabBtn active ">自我補充推薦書單</button>
+                        <button type="button" class="tabBtn ">日本旅遊</button>
+                        <button type="button" class="tabBtn">音樂相關書籍</button>
+                        <button type="button" class="tabBtn">文化與社會研究</button>
+                        <button type="button" class="tabBtn">小說文學</button>
+                        <button type="button" class="tabBtn">哲學與思想</button>
+                      </div>
+                      <div class="tabContentGroup">
+                        <!-- 1 -->
+                        <div class="tabContent">
+                          <div class="content">
+                            <ul>
+                              <li><a href="#">一般圖書</a></li>
+                              <li><a href="#">兒童書</a></li>
+                              <li><a href="#">電子書</a></li>
+                              <li><a href="#">漫畫</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="tabContent">
+                          <div class="content">
+                            <ul>
+                              <li><a href="#">2一般圖書</a></li>
+                              <li><a href="#">兒童書</a></li>
+                              <li><a href="#">電子書</a></li>
+                              <li><a href="#">漫畫</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="tabContent">
+                          <div class="content">
+                            <ul>
+                              <li><a href="#">3一般圖書</a></li>
+                              <li><a href="#">兒童書</a></li>
+                              <li><a href="#">電子書</a></li>
+                              <li><a href="#">漫畫</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="tabContent">
+                          <div class="content">
+                            <ul>
+                              <li><a href="#">4一般圖書</a></li>
+                              <li><a href="#">兒童書</a></li>
+                              <li><a href="#">電子書</a></li>
+                              <li><a href="#">漫畫</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- 5 -->
+                        <div class="tabContent">
+                          <div class="content">
+                            <ul>
+                              <li><a href="#">5一般圖書</a></li>
+                              <li><a href="#">兒童書</a></li>
+                              <li><a href="#">電子書</a></li>
+                              <li><a href="#">漫畫</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- 6 -->
+                        <div class="tabContent">
+                          <div class="content">
+                            <ul>
+                              <li><a href="#">6一般圖書</a></li>
+                              <li><a href="#">兒童書</a></li>
+                              <li><a href="#">電子書</a></li>
+                              <li><a href="#">漫畫</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!--  -->
+                      </div>
+                    </div>
+                    <!-- 提示區塊 start-->
+                    <div class="analysis_prompt">
+                      <span><a href="javascript:;" class="prompt_btn">i</a>
+                      </span>
+                      <div class="promptblock">類別項目即為前面AI所分析的借閱特徵。</div>
+                    </div>
+                    <!-- 提示區塊 end-->
+                  </div>
+                  <!-- 分類頁籤end -->
                   <!-- AI推薦書單 -->
                   <div class="AIrecommendbook">
                     <div class="AIinformation">
@@ -905,6 +1014,7 @@
   <!-- 出版年度js -->
   <script src="js/hyui.js"></script>
   <script src="js/customize.js"></script>
+
 </body>
 
 </html>
