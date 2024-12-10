@@ -785,6 +785,7 @@
   }
   //_tabset.scss
   .tabSet {
+    .modeBBtn,
     .tabBtn {
       &.active {
         background: nth($primaryColor, $style);
@@ -795,15 +796,33 @@
         }
       }
     }
-    .tabcontent {
+    .tabContent {
       .content {
-        background-color: nth($primaryColor, $style);
+        background: nth($primaryColor, $style);
         ul {
           li {
             a {
-              color: darken($color: nth($primaryColor, $style), $amount: 8);
               &:hover {
                 color: nth($primaryColor, $style);
+              }
+              &.active {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.modeB {
+      .tabContent {
+        .content {
+          ul {
+            li {
+              a {
+                color: nth($primaryColor, $style);
+                &.active {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -1567,6 +1586,7 @@
   }
   //_tabset.scss
   .tabSet {
+    .modeBBtn,
     .tabBtn {
       &.active {
         background: nth($primaryColor, $style);
@@ -1577,15 +1597,33 @@
         }
       }
     }
-    .tabcontent {
+    .tabContent {
       .content {
-        background-color: nth($primaryColor, $style);
+        background: nth($primaryColor, $style);
         ul {
           li {
             a {
-              color: darken($color: nth($primaryColor, $style), $amount: 8);
               &:hover {
                 color: nth($primaryColor, $style);
+              }
+              &.active {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.modeB {
+      .tabContent {
+        .content {
+          ul {
+            li {
+              a {
+                color: nth($primaryColor, $style);
+                &.active {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -2800,6 +2838,7 @@
   }
   //_tabset.scss
   .tabSet {
+    .modeBBtn,
     .tabBtn {
       &.active {
         background: nth($primaryColor, $style);
@@ -2810,15 +2849,33 @@
         }
       }
     }
-    .tabcontent {
+    .tabContent {
       .content {
-        background-color: nth($primaryColor, $style);
+        background: nth($primaryColor, $style);
         ul {
           li {
             a {
-              color: darken($color: nth($primaryColor, $style), $amount: 8);
               &:hover {
                 color: nth($primaryColor, $style);
+              }
+              &.active {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.modeB {
+      .tabContent {
+        .content {
+          ul {
+            li {
+              a {
+                color: nth($primaryColor, $style);
+                &.active {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -4050,6 +4107,7 @@
   }
   //_tabset.scss
   .tabSet {
+    .modeBBtn,
     .tabBtn {
       &.active {
         background: nth($primaryColor, $style);
@@ -4060,15 +4118,33 @@
         }
       }
     }
-    .tabcontent {
+    .tabContent {
       .content {
-        background-color: nth($primaryColor, $style);
+        background: nth($primaryColor, $style);
         ul {
           li {
             a {
-              color: darken($color: nth($primaryColor, $style), $amount: 8);
               &:hover {
                 color: nth($primaryColor, $style);
+              }
+              &.active {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.modeB {
+      .tabContent {
+        .content {
+          ul {
+            li {
+              a {
+                color: nth($primaryColor, $style);
+                &.active {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -4825,6 +4901,7 @@
   }
   //_tabset.scss
   .tabSet {
+    .modeBBtn,
     .tabBtn {
       &.active {
         background: nth($primaryColor, $style);
@@ -4835,15 +4912,33 @@
         }
       }
     }
-    .tabcontent {
+    .tabContent {
       .content {
-        background-color: nth($primaryColor, $style);
+        background: nth($primaryColor, $style);
         ul {
           li {
             a {
-              color: darken($color: nth($primaryColor, $style), $amount: 8);
               &:hover {
                 color: nth($primaryColor, $style);
+              }
+              &.active {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.modeB {
+      .tabContent {
+        .content {
+          ul {
+            li {
+              a {
+                color: nth($primaryColor, $style);
+                &.active {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -5619,6 +5714,7 @@
   }
   //_tabset.scss
   .tabSet {
+    .modeBBtn,
     .tabBtn {
       &.active {
         background: nth($primaryColor, $style);
@@ -5629,15 +5725,33 @@
         }
       }
     }
-    .tabcontent {
+    .tabContent {
       .content {
-        background-color: nth($primaryColor, $style);
+        background: nth($primaryColor, $style);
         ul {
           li {
             a {
-              color: darken($color: nth($primaryColor, $style), $amount: 8);
               &:hover {
                 color: nth($primaryColor, $style);
+              }
+              &.active {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.modeB {
+      .tabContent {
+        .content {
+          ul {
+            li {
+              a {
+                color: nth($primaryColor, $style);
+                &.active {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -6398,6 +6512,7 @@
   }
   //_tabset.scss
   .tabSet {
+    .modeBBtn,
     .tabBtn {
       &.active {
         background: nth($primaryColor, $style);
@@ -6408,15 +6523,33 @@
         }
       }
     }
-    .tabcontent {
+    .tabContent {
       .content {
-        background-color: nth($primaryColor, $style);
+        background: nth($primaryColor, $style);
         ul {
           li {
             a {
-              color: darken($color: nth($primaryColor, $style), $amount: 8);
               &:hover {
                 color: nth($primaryColor, $style);
+              }
+              &.active {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.modeB {
+      .tabContent {
+        .content {
+          ul {
+            li {
+              a {
+                color: nth($primaryColor, $style);
+                &.active {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -7196,6 +7329,7 @@
   }
   //_tabset.scss
   .tabSet {
+    .modeBBtn,
     .tabBtn {
       &.active {
         background: nth($primaryColor, $style);
@@ -7206,15 +7340,33 @@
         }
       }
     }
-    .tabcontent {
+    .tabContent {
       .content {
-        background-color: nth($primaryColor, $style);
+        background: nth($primaryColor, $style);
         ul {
           li {
             a {
-              color: darken($color: nth($primaryColor, $style), $amount: 8);
               &:hover {
                 color: nth($primaryColor, $style);
+              }
+              &.active {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.modeB {
+      .tabContent {
+        .content {
+          ul {
+            li {
+              a {
+                color: nth($primaryColor, $style);
+                &.active {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -7977,6 +8129,7 @@
   }
   //_tabset.scss
   .tabSet {
+    .modeBBtn,
     .tabBtn {
       &.active {
         background: nth($primaryColor, $style);
@@ -7987,15 +8140,33 @@
         }
       }
     }
-    .tabcontent {
+    .tabContent {
       .content {
-        background-color: nth($primaryColor, $style);
+        background: nth($primaryColor, $style);
         ul {
           li {
             a {
-              color: darken($color: nth($primaryColor, $style), $amount: 8);
               &:hover {
                 color: nth($primaryColor, $style);
+              }
+              &.active {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.modeB {
+      .tabContent {
+        .content {
+          ul {
+            li {
+              a {
+                color: nth($primaryColor, $style);
+                &.active {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -8745,6 +8916,7 @@
   //
   //_tabset.scss
   .tabSet {
+    .modeBBtn,
     .tabBtn {
       &.active {
         background: nth($primaryColor, $style);
@@ -8755,15 +8927,33 @@
         }
       }
     }
-    .tabcontent {
+    .tabContent {
       .content {
-        background-color: nth($primaryColor, $style);
+        background: nth($primaryColor, $style);
         ul {
           li {
             a {
-              color: darken($color: nth($primaryColor, $style), $amount: 8);
               &:hover {
                 color: nth($primaryColor, $style);
+              }
+              &.active {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.modeB {
+      .tabContent {
+        .content {
+          ul {
+            li {
+              a {
+                color: nth($primaryColor, $style);
+                &.active {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }

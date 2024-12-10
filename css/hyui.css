@@ -5436,14 +5436,14 @@ footer ul li a {
   justify-content: center;
 }
 .tabSet_block .tabSet .tabContent .content ul li {
-  flex: 1 1 18%;
+  flex: 0 0 18%;
   margin: 0 1% 0 0;
   border: none;
 }
 .tabSet_block .tabSet .tabContent .content ul li a {
   display: block;
-  background-color: #eee;
-  color: #00446f;
+  background-color: transparent;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -5455,10 +5455,32 @@ footer ul li a {
   background-color: #fff;
   color: #005d98;
 }
+.tabSet_block .tabSet .tabContent .content ul li a.active {
+  background-color: #fff;
+  color: #005d98;
+}
+@media screen and (max-width: 991px) {
+  .tabSet_block .tabSet .tabContent .content ul li {
+    flex: 0 0 24%;
+    margin: 0 1% 5px 0;
+  }
+}
 @media screen and (max-width: 767px) {
   .tabSet_block .tabSet .tabContent .content ul li {
-    flex: 1 1 33%;
+    flex: 0 0 33%;
     margin: 0 1% 5px 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .tabSet_block .tabSet .tabContent .content ul li {
+    flex: 0 0 48%;
+    margin: 0 1% 5px 0;
+  }
+}
+@media (max-width: 480px) {
+  .tabSet_block .tabSet .tabContent .content ul li {
+    flex: 0 0 100%;
+    margin: 0 0 5px 0;
   }
 }
 .tabSet_block .tabSet .modeBBtn {
@@ -5478,6 +5500,11 @@ footer ul li a {
 }
 .tabSet_block .tabSet.modeB .tabContent .content ul li a {
   background-color: #fff;
+  color: #005d98;
+}
+.tabSet_block .tabSet.modeB .tabContent .content ul li a.active {
+  background-color: #005d98;
+  color: #fff;
 }
 .tabSet_block .tabSet.modeB .tabContent .content a:focus-visible {
   outline: #0066cc 2px solid;
