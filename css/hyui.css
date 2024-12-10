@@ -9822,6 +9822,7 @@ button.backbtn {
   }
 }
 .search_block .searchsystem .keywordHot ul {
+  width: calc(100% - 6.5em);
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -9832,6 +9833,11 @@ button.backbtn {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   text-align: left;
+}
+@media screen and (max-width: 575px) {
+  .search_block .searchsystem .keywordHot ul {
+    width: 100%;
+  }
 }
 .search_block .searchsystem .keywordHot ul li {
   display: inline-block;
