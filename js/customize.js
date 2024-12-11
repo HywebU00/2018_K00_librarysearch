@@ -2606,3 +2606,58 @@ tabFunction({
   width: 767, // 尺寸以上tab功能，尺寸以下手風琴功能
   index: 0, // 預設開啟第幾個
 });
+
+// 選單底滑塊
+document.addEventListener('DOMContentLoaded', () => {
+  const inputs = document.querySelectorAll('.segmented-control input');
+  const slider = document.querySelector('.segmented-control .slider');
+  const segmentedControl = document.querySelector('.segmented-control');
+
+  // 計算並設置滑塊的高度和位置（垂直和水平）
+  const setSliderPosition = (index, totalOptions) => {
+    const isMobile = window.innerWidth <= 767; // 判斷是否為手機版
+    const sizePercentage = 100 / totalOptions; // 每個選項的寬度或高度的百分比
+
+    if (isMobile) {
+      // 手機版滑塊位置（上下）
+      const topPercentage = (index * 100) / totalOptions; // 計算垂直方向的位置
+      slider.style.top = `${topPercentage}%`; // 更新滑塊的top位置
+      slider.style.height = `${sizePercentage}%`; // 設置滑塊的高度
+    } else {
+      // 桌面版滑塊位置（水平方向）
+      const leftPercentage = (index * 100) / totalOptions; // 計算水平方向的位置
+      slider.style.left = `${leftPercentage}%`; // 更新滑塊的left位置
+      slider.style.width = `${sizePercentage}%`; // 設置滑塊的寬度
+    }
+  };
+
+  // 計算並設置選項數量的 CSS 變量
+  const setOptionCountVariable = () => {
+    const totalOptions = inputs.length;
+    segmentedControl.style.setProperty('--options-count', totalOptions); // 更新選項數量
+  };
+
+  // 為每個選項添加變更事件監聽器
+  inputs.forEach((input, index) => {
+    input.addEventListener('change', () => {
+      const totalOptions = inputs.length;
+      setSliderPosition(index, totalOptions); // 更新滑塊位置
+    });
+  });
+
+  // 頁面加載時，初始化滑塊位置和高度
+  const checkedInput = document.querySelector('.segmented-control input:checked');
+  const initialIndex = Array.from(inputs).indexOf(checkedInput); // 查找當前選中的選項索引
+  const totalOptions = inputs.length;
+  setSliderPosition(initialIndex, totalOptions); // 初始滑塊位置設置
+  setOptionCountVariable(); // 設置選項數量變量
+
+  // 監聽窗口大小變化事件，更新滑塊位置
+  window.addEventListener('resize', () => {
+    const totalOptions = inputs.length;
+    const checkedInput = document.querySelector('.segmented-control input:checked');
+    const initialIndex = Array.from(inputs).indexOf(checkedInput);
+    setSliderPosition(initialIndex, totalOptions);
+    setOptionCountVariable(); // 更新選項數量變量
+  });
+});

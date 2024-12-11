@@ -819,6 +819,7 @@
     &.modeB {
       .tabContent {
         .content {
+          background-color: nth($primaryColor, $style);
           ul {
             li {
               a {
@@ -832,6 +833,9 @@
         }
       }
     }
+  }
+  .segmented-control input:checked + label {
+    color: nth($primaryColor, $style);
   }
 }
 // 客製版01花蓮
@@ -1623,6 +1627,7 @@
     &.modeB {
       .tabContent {
         .content {
+          background-color: nth($primaryColor, $style);
           ul {
             li {
               a {
@@ -1636,6 +1641,9 @@
         }
       }
     }
+  }
+  .segmented-control input:checked + label {
+    color: nth($primaryColor, $style);
   }
 }
 // 客製版02北市圖書館
@@ -2878,6 +2886,7 @@
     &.modeB {
       .tabContent {
         .content {
+          background-color: nth($primaryColor, $style);
           ul {
             li {
               a {
@@ -2891,6 +2900,9 @@
         }
       }
     }
+  }
+  .segmented-control input:checked + label {
+    color: nth($primaryColor, $style);
   }
 }
 // 客製版03台中市圖書館
@@ -4150,6 +4162,7 @@
     &.modeB {
       .tabContent {
         .content {
+          background-color: nth($primaryColor, $style);
           ul {
             li {
               a {
@@ -4163,6 +4176,9 @@
         }
       }
     }
+  }
+  .segmented-control input:checked + label {
+    color: nth($primaryColor, $style);
   }
 }
 // 版型01
@@ -4947,6 +4963,7 @@
     &.modeB {
       .tabContent {
         .content {
+          background-color: nth($primaryColor, $style);
           ul {
             li {
               a {
@@ -4960,6 +4977,9 @@
         }
       }
     }
+  }
+  .segmented-control input:checked + label {
+    color: nth($primaryColor, $style);
   }
 }
 // 版型02
@@ -5763,6 +5783,7 @@
     &.modeB {
       .tabContent {
         .content {
+          background-color: nth($primaryColor, $style);
           ul {
             li {
               a {
@@ -5776,6 +5797,9 @@
         }
       }
     }
+  }
+  .segmented-control input:checked + label {
+    color: nth($primaryColor, $style);
   }
 }
 // 版型03
@@ -6564,6 +6588,7 @@
     &.modeB {
       .tabContent {
         .content {
+          background-color: nth($primaryColor, $style);
           ul {
             li {
               a {
@@ -6577,6 +6602,9 @@
         }
       }
     }
+  }
+  .segmented-control input:checked + label {
+    color: nth($primaryColor, $style);
   }
 }
 // 版型04
@@ -7384,6 +7412,7 @@
     &.modeB {
       .tabContent {
         .content {
+          background-color: nth($primaryColor, $style);
           ul {
             li {
               a {
@@ -7397,6 +7426,9 @@
         }
       }
     }
+  }
+  .segmented-control input:checked + label {
+    color: nth($primaryColor, $style);
   }
 }
 // 版型05
@@ -8187,6 +8219,7 @@
     &.modeB {
       .tabContent {
         .content {
+          background-color: nth($primaryColor, $style);
           ul {
             li {
               a {
@@ -8200,6 +8233,9 @@
         }
       }
     }
+  }
+  .segmented-control input:checked + label {
+    color: nth($primaryColor, $style);
   }
 }
 // 版型06
@@ -8977,6 +9013,7 @@
     &.modeB {
       .tabContent {
         .content {
+          background-color: nth($primaryColor, $style);
           ul {
             li {
               a {
@@ -8990,5 +9027,8 @@
         }
       }
     }
+  }
+  .segmented-control input:checked + label {
+    color: nth($primaryColor, $style);
   }
 }

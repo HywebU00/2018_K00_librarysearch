@@ -5424,7 +5424,7 @@ footer ul li a {
 }
 .tabSet_block .tabSet .tabContent .content {
   background-color: #005d98;
-  padding: 15px;
+  padding: 5px;
   border-radius: 5px;
 }
 .tabSet_block .tabSet .tabContent .content ul {
@@ -5447,7 +5447,7 @@ footer ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5em 1em;
+  padding: 0.3em 1em;
   border-radius: 5px;
   font-weight: bold;
 }
@@ -5485,7 +5485,7 @@ footer ul li a {
 }
 .tabSet_block .tabSet .modeBBtn {
   width: 100%;
-  margin: 0;
+  margin: 0 0 15px;
   display: none;
 }
 .tabSet_block .tabSet.modeB .tabItems {
@@ -5496,7 +5496,7 @@ footer ul li a {
 }
 .tabSet_block .tabSet.modeB .tabContent .content {
   display: none;
-  background-color: #eee;
+  background-color: #005d98;
 }
 .tabSet_block .tabSet.modeB .tabContent .content ul li a {
   background-color: #fff;
@@ -5512,6 +5512,9 @@ footer ul li a {
 .tabSet_block .tabSet.modeB .modeBBtn {
   display: block;
 }
+.tabSet_block .tabSet.modeB .modeBBtn + .content.active {
+  display: block;
+}
 .tabSet_block .tabSet.modeB .modeBBtn:focus {
   box-shadow: none !important;
 }
@@ -5519,6 +5522,110 @@ footer ul li a {
   box-shadow: 0 0px 0px 2px #f1ad00 !important;
 }
 
+/* Container styling */
+.segmented-control {
+  display: flex;
+  position: relative;
+  width: 100%;
+  /* 寬度滿版 */
+  height: 200px;
+  /* 默認高度（手機版） */
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Label styling */
+.segmented-control label {
+  flex: 1;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 1em;
+  transition: color 0.3s;
+}
+
+.segmented-control label {
+  height: 100%;
+  /* 選項高度占滿容器 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Radio button hidden */
+.segmented-control input {
+  display: none;
+}
+
+/* Slider */
+.segmented-control .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* 滑塊的高度與選項的高度相同 */
+  background-color: #fff;
+  z-index: 1;
+  border-radius: 5px;
+  transition: top 0.3s, left 0.3s, height 0.3s;
+}
+
+/* Active state */
+.segmented-control input:checked + label {
+  color: #005d98;
+  font-weight: bolder;
+}
+
+/* Desktop version (768px or larger) */
+@media (min-width: 768px) {
+  .segmented-control {
+    flex-direction: row;
+    /* 水平排列選項 */
+    height: 40px;
+    /* 較小的高度，適合桌面版 */
+  }
+  .segmented-control label {
+    width: 33.33%;
+    /* 每個選項的寬度 */
+  }
+  .segmented-control .slider {
+    height: 100%;
+    /* 滑塊高度和選項高度一致 */
+    width: 33.33%;
+    /* 滑塊寬度和選項寬度一致 */
+  }
+}
+/* Mobile version (767px or smaller) */
+@media (max-width: 767px) {
+  .segmented-control {
+    flex-direction: column;
+    /* 垂直排列選項 */
+    height: 150px;
+    /* 更大的容器高度 */
+    width: 100%;
+    /* 寬度自適應 */
+  }
+  .segmented-control label {
+    width: 100%;
+    /* 每個選項寬度自適應 */
+    height: calc(100% / var(--options-count));
+    /* 計算每個選項的高度 */
+    line-height: calc(100% / var(--options-count));
+    /* 每個選項的行高 */
+  }
+  .segmented-control .slider {
+    width: 100%;
+    /* 滑塊寬度為100% */
+    height: calc(100% / var(--options-count));
+    /* 滑塊高度與選項數量一致 */
+    top: 0;
+    /* 初始位置在最上方 */
+  }
+}
 body {
   background-color: #eee;
   transition: 0.5s;
@@ -28403,7 +28510,7 @@ em.yellowbg {
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease-in-out;
   border-radius: 5px;
 }
