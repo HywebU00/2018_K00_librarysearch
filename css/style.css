@@ -1964,10 +1964,17 @@ select::-ms-expand {
   background-color: #5c9588;
   color: #fff;
 }
-.child01 .AIgptgroup .directions .contentother button.btn:after {
+.child01 .AIgptgroup .directions .contentother button.btn:hover, .child01 .AIgptgroup .directions .contentother button.btn:focus {
   background-color: #52857a;
 }
-.child01 .AIgptgroup .directions .contentother button.btn:hover, .child01 .AIgptgroup .directions .contentother button.btn:focus {
+.child01 .AIgptgroup .directions .contentother button.shiny {
+  background-color: #5c9588;
+  color: #fff;
+}
+.child01 .AIgptgroup .directions .contentother button.shiny:after {
+  background-color: #52857a;
+}
+.child01 .AIgptgroup .directions .contentother button.shiny:hover, .child01 .AIgptgroup .directions .contentother button.shiny:focus {
   background-color: #52857a;
 }
 .child01 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .needs_directions:before {
@@ -2516,10 +2523,17 @@ select::-ms-expand {
   background-color: #5c9588;
   color: #fff;
 }
-.customization01 .AIgptgroup .directions .contentother button.btn:after {
+.customization01 .AIgptgroup .directions .contentother button.btn:hover, .customization01 .AIgptgroup .directions .contentother button.btn:focus {
   background-color: #52857a;
 }
-.customization01 .AIgptgroup .directions .contentother button.btn:hover, .customization01 .AIgptgroup .directions .contentother button.btn:focus {
+.customization01 .AIgptgroup .directions .contentother button.shiny {
+  background-color: #5c9588;
+  color: #fff;
+}
+.customization01 .AIgptgroup .directions .contentother button.shiny:after {
+  background-color: #52857a;
+}
+.customization01 .AIgptgroup .directions .contentother button.shiny:hover, .customization01 .AIgptgroup .directions .contentother button.shiny:focus {
   background-color: #52857a;
 }
 .customization01 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .needs_directions:before {
@@ -3106,10 +3120,17 @@ select::-ms-expand {
   background-color: #0e664c;
   color: #fff;
 }
-.customization02 .AIgptgroup .directions .contentother button.btn:after {
+.customization02 .AIgptgroup .directions .contentother button.btn:hover, .customization02 .AIgptgroup .directions .contentother button.btn:focus {
   background-color: #0b503b;
 }
-.customization02 .AIgptgroup .directions .contentother button.btn:hover, .customization02 .AIgptgroup .directions .contentother button.btn:focus {
+.customization02 .AIgptgroup .directions .contentother button.shiny {
+  background-color: #0e664c;
+  color: #fff;
+}
+.customization02 .AIgptgroup .directions .contentother button.shiny:after {
+  background-color: #0b503b;
+}
+.customization02 .AIgptgroup .directions .contentother button.shiny:hover, .customization02 .AIgptgroup .directions .contentother button.shiny:focus {
   background-color: #0b503b;
 }
 .customization02 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .needs_directions:before {
@@ -4291,10 +4312,17 @@ select::-ms-expand {
   background-color: #313131;
   color: #fff;
 }
-.customization03 .AIgptgroup .directions .contentother button.btn:after {
+.customization03 .AIgptgroup .directions .contentother button.btn:hover, .customization03 .AIgptgroup .directions .contentother button.btn:focus {
   background-color: #242424;
 }
-.customization03 .AIgptgroup .directions .contentother button.btn:hover, .customization03 .AIgptgroup .directions .contentother button.btn:focus {
+.customization03 .AIgptgroup .directions .contentother button.shiny {
+  background-color: #313131;
+  color: #fff;
+}
+.customization03 .AIgptgroup .directions .contentother button.shiny:after {
+  background-color: #242424;
+}
+.customization03 .AIgptgroup .directions .contentother button.shiny:hover, .customization03 .AIgptgroup .directions .contentother button.shiny:focus {
   background-color: #242424;
 }
 .customization03 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .needs_directions:before {
@@ -4802,10 +4830,17 @@ select::-ms-expand {
   background-color: #1c4b82;
   color: #fff;
 }
-.version01 .AIgptgroup .directions .contentother button.btn:after {
+.version01 .AIgptgroup .directions .contentother button.btn:hover, .version01 .AIgptgroup .directions .contentother button.btn:focus {
   background-color: #173f6d;
 }
-.version01 .AIgptgroup .directions .contentother button.btn:hover, .version01 .AIgptgroup .directions .contentother button.btn:focus {
+.version01 .AIgptgroup .directions .contentother button.shiny {
+  background-color: #1c4b82;
+  color: #fff;
+}
+.version01 .AIgptgroup .directions .contentother button.shiny:after {
+  background-color: #173f6d;
+}
+.version01 .AIgptgroup .directions .contentother button.shiny:hover, .version01 .AIgptgroup .directions .contentother button.shiny:focus {
   background-color: #173f6d;
 }
 .version01 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .needs_directions:before {
@@ -5324,10 +5359,17 @@ select::-ms-expand {
   background-color: #bc5702;
   color: #fff;
 }
-.version02 .AIgptgroup .directions .contentother button.btn:after {
+.version02 .AIgptgroup .directions .contentother button.btn:hover, .version02 .AIgptgroup .directions .contentother button.btn:focus {
   background-color: #a34b02;
 }
-.version02 .AIgptgroup .directions .contentother button.btn:hover, .version02 .AIgptgroup .directions .contentother button.btn:focus {
+.version02 .AIgptgroup .directions .contentother button.shiny {
+  background-color: #bc5702;
+  color: #fff;
+}
+.version02 .AIgptgroup .directions .contentother button.shiny:after {
+  background-color: #a34b02;
+}
+.version02 .AIgptgroup .directions .contentother button.shiny:hover, .version02 .AIgptgroup .directions .contentother button.shiny:focus {
   background-color: #a34b02;
 }
 .version02 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .needs_directions:before {
@@ -5843,10 +5885,17 @@ select::-ms-expand {
   background-color: #097e76;
   color: #fff;
 }
-.version03 .AIgptgroup .directions .contentother button.btn:after {
+.version03 .AIgptgroup .directions .contentother button.btn:hover, .version03 .AIgptgroup .directions .contentother button.btn:focus {
   background-color: #076660;
 }
-.version03 .AIgptgroup .directions .contentother button.btn:hover, .version03 .AIgptgroup .directions .contentother button.btn:focus {
+.version03 .AIgptgroup .directions .contentother button.shiny {
+  background-color: #097e76;
+  color: #fff;
+}
+.version03 .AIgptgroup .directions .contentother button.shiny:after {
+  background-color: #076660;
+}
+.version03 .AIgptgroup .directions .contentother button.shiny:hover, .version03 .AIgptgroup .directions .contentother button.shiny:focus {
   background-color: #076660;
 }
 .version03 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .needs_directions:before {
@@ -6368,10 +6417,17 @@ select::-ms-expand {
   background-color: #774181;
   color: #fff;
 }
-.version04 .AIgptgroup .directions .contentother button.btn:after {
+.version04 .AIgptgroup .directions .contentother button.btn:hover, .version04 .AIgptgroup .directions .contentother button.btn:focus {
   background-color: #673870;
 }
-.version04 .AIgptgroup .directions .contentother button.btn:hover, .version04 .AIgptgroup .directions .contentother button.btn:focus {
+.version04 .AIgptgroup .directions .contentother button.shiny {
+  background-color: #774181;
+  color: #fff;
+}
+.version04 .AIgptgroup .directions .contentother button.shiny:after {
+  background-color: #673870;
+}
+.version04 .AIgptgroup .directions .contentother button.shiny:hover, .version04 .AIgptgroup .directions .contentother button.shiny:focus {
   background-color: #673870;
 }
 .version04 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .needs_directions:before {
@@ -6887,10 +6943,17 @@ select::-ms-expand {
   background-color: #088c6f;
   color: #fff;
 }
-.version05 .AIgptgroup .directions .contentother button.btn:after {
+.version05 .AIgptgroup .directions .contentother button.btn:hover, .version05 .AIgptgroup .directions .contentother button.btn:focus {
   background-color: #07745c;
 }
-.version05 .AIgptgroup .directions .contentother button.btn:hover, .version05 .AIgptgroup .directions .contentother button.btn:focus {
+.version05 .AIgptgroup .directions .contentother button.shiny {
+  background-color: #088c6f;
+  color: #fff;
+}
+.version05 .AIgptgroup .directions .contentother button.shiny:after {
+  background-color: #07745c;
+}
+.version05 .AIgptgroup .directions .contentother button.shiny:hover, .version05 .AIgptgroup .directions .contentother button.shiny:focus {
   background-color: #07745c;
 }
 .version05 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .needs_directions:before {
@@ -7394,10 +7457,17 @@ select::-ms-expand {
   background-color: #0078c6;
   color: #fff;
 }
-.version06 .AIgptgroup .directions .contentother button.btn:after {
+.version06 .AIgptgroup .directions .contentother button.btn:hover, .version06 .AIgptgroup .directions .contentother button.btn:focus {
   background-color: #0069ad;
 }
-.version06 .AIgptgroup .directions .contentother button.btn:hover, .version06 .AIgptgroup .directions .contentother button.btn:focus {
+.version06 .AIgptgroup .directions .contentother button.shiny {
+  background-color: #0078c6;
+  color: #fff;
+}
+.version06 .AIgptgroup .directions .contentother button.shiny:after {
+  background-color: #0069ad;
+}
+.version06 .AIgptgroup .directions .contentother button.shiny:hover, .version06 .AIgptgroup .directions .contentother button.shiny:focus {
   background-color: #0069ad;
 }
 .version06 .AIgptgroup .directions .reading_needs_block .needs_group .needs_content .needs_directions:before {

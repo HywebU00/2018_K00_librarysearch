@@ -263,6 +263,14 @@
         button.btn {
           background-color: nth($primaryColor, $style);
           color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
+        }
+        button.shiny {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
           &:after {
             background-color: darken($color: nth($primaryColor, $style), $amount: 5);
           }
@@ -1099,6 +1107,14 @@
       }
       .contentother {
         button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
+        }
+        button.shiny {
           background-color: nth($primaryColor, $style);
           color: #fff;
           &:after {
@@ -2004,6 +2020,14 @@
       }
       .contentother {
         button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
+        }
+        button.shiny {
           background-color: nth($primaryColor, $style);
           color: #fff;
           &:after {
@@ -3643,6 +3667,14 @@
         button.btn {
           background-color: nth($primaryColor, $style);
           color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
+        }
+        button.shiny {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
           &:after {
             background-color: darken($color: nth($primaryColor, $style), $amount: 5);
           }
@@ -4442,6 +4474,14 @@
       }
       .contentother {
         button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
+        }
+        button.shiny {
           background-color: nth($primaryColor, $style);
           color: #fff;
           &:after {
@@ -5271,6 +5311,14 @@
         button.btn {
           background-color: nth($primaryColor, $style);
           color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
+        }
+        button.shiny {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
           &:after {
             background-color: darken($color: nth($primaryColor, $style), $amount: 5);
           }
@@ -6079,6 +6127,14 @@
       }
       .contentother {
         button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
+        }
+        button.shiny {
           background-color: nth($primaryColor, $style);
           color: #fff;
           &:after {
@@ -6891,6 +6947,14 @@
       }
       .contentother {
         button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
+        }
+        button.shiny {
           background-color: nth($primaryColor, $style);
           color: #fff;
           &:after {
@@ -7707,6 +7771,14 @@
         button.btn {
           background-color: nth($primaryColor, $style);
           color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
+        }
+        button.shiny {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
           &:after {
             background-color: darken($color: nth($primaryColor, $style), $amount: 5);
           }
@@ -8500,6 +8572,14 @@
       }
       .contentother {
         button.btn {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          &:hover,
+          &:focus {
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
+        }
+        button.shiny {
           background-color: nth($primaryColor, $style);
           color: #fff;
           &:after {
