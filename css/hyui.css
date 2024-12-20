@@ -5592,6 +5592,7 @@ footer ul li a {
 @media screen and (max-width: 767px) {
   .segmented-control .slider {
     width: 100%;
+    height: auto;
   }
 }
 
