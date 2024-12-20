@@ -5537,7 +5537,6 @@ footer ul li a {
 }
 
 .segmented-control {
-  --options-count: 4;
   position: relative;
   display: flex;
   list-style-type: none;
@@ -5558,7 +5557,6 @@ footer ul li a {
 }
 
 .segmented-control .segment {
-  /*flex: 1 0 calc(100% / var(--options-count));*/
   flex: 0 0 18%;
   max-width: 18%;
   text-align: center;
@@ -5570,6 +5568,8 @@ footer ul li a {
   transition: color 0.3s;
   position: relative;
   z-index: 2;
+  padding: 0 5px;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 767px) {
   .segmented-control .segment {
