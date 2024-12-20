@@ -424,7 +424,10 @@
 
 .segmented-control .segment.active {
   color: nth($primaryColor, $style);
-  background-color: #fff;
+
   font-weight: bold;
   border-radius: 5px;
+  @include screen('mobile') {
+    background-color: #fff;
+  }
 }
