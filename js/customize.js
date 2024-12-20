@@ -2667,7 +2667,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const updateSegmentedControl = () => {
     const segments = document.querySelectorAll('.segment');
     const count = segments.length;
-    segmentedControl.style.setProperty('--options-count', count);
+    // segmentedControl.style.setProperty('--options-count', count);
 
     // 获取滑块元素
     const slider = document.querySelector('.slider');
