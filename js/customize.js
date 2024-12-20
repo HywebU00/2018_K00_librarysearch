@@ -2608,56 +2608,100 @@ tabFunction({
 });
 
 // 選單底滑塊
+// document.addEventListener('DOMContentLoaded', () => {
+//   const inputs = document.querySelectorAll('.segmented-control input');
+//   const slider = document.querySelector('.segmented-control .slider');
+//   const segmentedControl = document.querySelector('.segmented-control');
+
+//   // 計算並設置滑塊的高度和位置（垂直和水平）
+//   const setSliderPosition = (index, totalOptions) => {
+//     const isMobile = window.innerWidth <= 767; // 判斷是否為手機版
+//     const sizePercentage = 100 / totalOptions; // 每個選項的寬度或高度的百分比
+
+//     if (isMobile) {
+//       // 手機版滑塊位置（上下）
+//       const topPercentage = (index * 100) / totalOptions; // 計算垂直方向的位置
+//       slider.style.top = `${topPercentage}%`; // 更新滑塊的top位置
+//       slider.style.height = `${sizePercentage}%`; // 設置滑塊的高度
+//     } else {
+//       // 桌面版滑塊位置（水平方向）
+//       const leftPercentage = (index * 100) / totalOptions; // 計算水平方向的位置
+//       slider.style.left = `${leftPercentage}%`; // 更新滑塊的left位置
+//       slider.style.width = `${sizePercentage}%`; // 設置滑塊的寬度
+//     }
+//   };
+
+//   // 計算並設置選項數量的 CSS 變量
+//   const setOptionCountVariable = () => {
+//     const totalOptions = inputs.length;
+//     segmentedControl.style.setProperty('--options-count', totalOptions); // 更新選項數量
+//   };
+
+//   // 為每個選項添加變更事件監聽器
+//   inputs.forEach((input, index) => {
+//     input.addEventListener('change', () => {
+//       const totalOptions = inputs.length;
+//       setSliderPosition(index, totalOptions); // 更新滑塊位置
+//     });
+//   });
+
+//   // 頁面加載時，初始化滑塊位置和高度
+//   const checkedInput = document.querySelector('.segmented-control input:checked');
+//   const initialIndex = Array.from(inputs).indexOf(checkedInput); // 查找當前選中的選項索引
+//   const totalOptions = inputs.length;
+//   setSliderPosition(initialIndex, totalOptions); // 初始滑塊位置設置
+//   setOptionCountVariable(); // 設置選項數量變量
+
+//   // 監聽窗口大小變化事件，更新滑塊位置
+//   window.addEventListener('resize', () => {
+//     const totalOptions = inputs.length;
+//     const checkedInput = document.querySelector('.segmented-control input:checked');
+//     const initialIndex = Array.from(inputs).indexOf(checkedInput);
+//     setSliderPosition(initialIndex, totalOptions);
+//     setOptionCountVariable(); // 更新選項數量變量
+//   });
+// });
 document.addEventListener('DOMContentLoaded', () => {
-  const inputs = document.querySelectorAll('.segmented-control input');
-  const slider = document.querySelector('.segmented-control .slider');
   const segmentedControl = document.querySelector('.segmented-control');
 
-  // 計算並設置滑塊的高度和位置（垂直和水平）
-  const setSliderPosition = (index, totalOptions) => {
-    const isMobile = window.innerWidth <= 767; // 判斷是否為手機版
-    const sizePercentage = 100 / totalOptions; // 每個選項的寬度或高度的百分比
+  const updateSegmentedControl = () => {
+    const segments = document.querySelectorAll('.segment');
+    const count = segments.length;
+    segmentedControl.style.setProperty('--options-count', count);
 
-    if (isMobile) {
-      // 手機版滑塊位置（上下）
-      const topPercentage = (index * 100) / totalOptions; // 計算垂直方向的位置
-      slider.style.top = `${topPercentage}%`; // 更新滑塊的top位置
-      slider.style.height = `${sizePercentage}%`; // 設置滑塊的高度
-    } else {
-      // 桌面版滑塊位置（水平方向）
-      const leftPercentage = (index * 100) / totalOptions; // 計算水平方向的位置
-      slider.style.left = `${leftPercentage}%`; // 更新滑塊的left位置
-      slider.style.width = `${sizePercentage}%`; // 設置滑塊的寬度
-    }
-  };
+    // 获取滑块元素
+    const slider = document.querySelector('.slider');
 
-  // 計算並設置選項數量的 CSS 變量
-  const setOptionCountVariable = () => {
-    const totalOptions = inputs.length;
-    segmentedControl.style.setProperty('--options-count', totalOptions); // 更新選項數量
-  };
+    // 每个segment的宽度
+    const segmentWidth = 18; // 假设每个segment宽度为18%
 
-  // 為每個選項添加變更事件監聽器
-  inputs.forEach((input, index) => {
-    input.addEventListener('change', () => {
-      const totalOptions = inputs.length;
-      setSliderPosition(index, totalOptions); // 更新滑塊位置
+    // 计算总宽度
+    const totalWidth = segmentWidth * count;
+
+    // 计算居中时的初始位置
+    const initialLeft = (100 - totalWidth) / 2;
+
+    // 初始化滑块位置
+    const setSliderPosition = (index) => {
+      const leftPosition = initialLeft + index * segmentWidth;
+      slider.style.left = `${leftPosition}%`; // 更新slider的位置
+      console.log(slider.style.left); // 检查日志
+
+      segments.forEach((seg) => seg.classList.remove('active'));
+      segments[index].classList.add('active');
+    };
+
+    // 监听点击事件
+    segments.forEach((segment, index) => {
+      segment.addEventListener('click', () => {
+        setSliderPosition(index); // 点击时更新滑块位置
+      });
     });
-  });
 
-  // 頁面加載時，初始化滑塊位置和高度
-  const checkedInput = document.querySelector('.segmented-control input:checked');
-  const initialIndex = Array.from(inputs).indexOf(checkedInput); // 查找當前選中的選項索引
-  const totalOptions = inputs.length;
-  setSliderPosition(initialIndex, totalOptions); // 初始滑塊位置設置
-  setOptionCountVariable(); // 設置選項數量變量
+    // 默认选中第一个
+    setSliderPosition(0);
+  };
 
-  // 監聽窗口大小變化事件，更新滑塊位置
-  window.addEventListener('resize', () => {
-    const totalOptions = inputs.length;
-    const checkedInput = document.querySelector('.segmented-control input:checked');
-    const initialIndex = Array.from(inputs).indexOf(checkedInput);
-    setSliderPosition(initialIndex, totalOptions);
-    setOptionCountVariable(); // 更新選項數量變量
-  });
+  // 更新选项并设置滑块位置
+  updateSegmentedControl();
 });

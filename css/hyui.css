@@ -5387,7 +5387,7 @@ footer ul li a {
   border-color: #005d98 transparent transparent transparent;
   position: absolute;
   bottom: -22px;
-  left: calc(50% - 16px);
+  left: calc(50% - 11px);
 }
 @media screen and (max-width: 991px) {
   .tabSet_block .tabSet .tabItems {
@@ -5522,110 +5522,86 @@ footer ul li a {
   box-shadow: 0 0px 0px 2px #f1ad00 !important;
 }
 
-/* Container styling */
+.AI_block .tabSet_block .tabSet .tabContent .content ul li {
+  margin: 0;
+}
+@media screen and (max-width: 991px) {
+  .AI_block .tabSet_block .tabSet .tabContent .content ul li {
+    flex: 0 0 24%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .AI_block .tabSet_block .tabSet .tabContent .content ul li {
+    flex: 0 0 100%;
+  }
+}
+
 .segmented-control {
-  display: flex;
+  --options-count: 4;
   position: relative;
-  width: 100%;
-  /* 寬度滿版 */
-  height: 200px;
-  /* 默認高度（手機版） */
+  display: flex;
+  list-style-type: none;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 34px;
+  background-color: #005d98;
   border-radius: 5px;
   overflow: hidden;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 767px) {
+  .segmented-control {
+    flex-direction: column;
+    height: auto;
+  }
 }
 
-/* Label styling */
-.segmented-control label {
-  flex: 1;
+.segmented-control .segment {
+  /*flex: 1 0 calc(100% / var(--options-count));*/
+  flex: 0 0 18%;
+  max-width: 18%;
   text-align: center;
-  line-height: 40px;
+  line-height: 34px;
+  font-size: 1em;
   cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
   position: relative;
   z-index: 2;
-  color: #fff;
-  font-size: 1em;
-  transition: color 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .segmented-control .segment {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
-.segmented-control label {
-  height: 100%;
-  /* 選項高度占滿容器 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Radio button hidden */
-.segmented-control input {
-  display: none;
-}
-
-/* Slider */
 .segmented-control .slider {
   position: absolute;
   top: 0;
   left: 0;
+  width: 18%;
   height: 100%;
-  /* 滑塊的高度與選項的高度相同 */
   background-color: #fff;
-  z-index: 1;
   border-radius: 5px;
-  transition: top 0.3s, left 0.3s, height 0.3s;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .segmented-control .slider {
+    width: 100%;
+  }
 }
 
-/* Active state */
-.segmented-control input:checked + label {
+.segmented-control .segment.active {
   color: #005d98;
-  font-weight: bolder;
+  background-color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
-/* Desktop version (768px or larger) */
-@media (min-width: 768px) {
-  .segmented-control {
-    flex-direction: row;
-    /* 水平排列選項 */
-    height: 40px;
-    /* 較小的高度，適合桌面版 */
-  }
-  .segmented-control label {
-    width: 33.33%;
-    /* 每個選項的寬度 */
-  }
-  .segmented-control .slider {
-    height: 100%;
-    /* 滑塊高度和選項高度一致 */
-    width: 33.33%;
-    /* 滑塊寬度和選項寬度一致 */
-  }
-}
-/* Mobile version (767px or smaller) */
-@media (max-width: 767px) {
-  .segmented-control {
-    flex-direction: column;
-    /* 垂直排列選項 */
-    height: 150px;
-    /* 更大的容器高度 */
-    width: 100%;
-    /* 寬度自適應 */
-  }
-  .segmented-control label {
-    width: 100%;
-    /* 每個選項寬度自適應 */
-    height: calc(100% / var(--options-count));
-    /* 計算每個選項的高度 */
-    line-height: calc(100% / var(--options-count));
-    /* 每個選項的行高 */
-  }
-  .segmented-control .slider {
-    width: 100%;
-    /* 滑塊寬度為100% */
-    height: calc(100% / var(--options-count));
-    /* 滑塊高度與選項數量一致 */
-    top: 0;
-    /* 初始位置在最上方 */
-  }
-}
 body {
   background-color: #eee;
   transition: 0.5s;

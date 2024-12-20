@@ -842,7 +842,10 @@
       }
     }
   }
-  .segmented-control input:checked + label {
+  .segmented-control {
+    background-color: nth($primaryColor, $style);
+  }
+  .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
 }
@@ -1658,7 +1661,10 @@
       }
     }
   }
-  .segmented-control input:checked + label {
+  .segmented-control {
+    background-color: nth($primaryColor, $style);
+  }
+  .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
 }
@@ -2925,7 +2931,10 @@
       }
     }
   }
-  .segmented-control input:checked + label {
+  .segmented-control {
+    background-color: nth($primaryColor, $style);
+  }
+  .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
 }
@@ -4209,7 +4218,10 @@
       }
     }
   }
-  .segmented-control input:checked + label {
+  .segmented-control {
+    background-color: nth($primaryColor, $style);
+  }
+  .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
 }
@@ -5018,7 +5030,10 @@
       }
     }
   }
-  .segmented-control input:checked + label {
+  .segmented-control {
+    background-color: nth($primaryColor, $style);
+  }
+  .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
 }
@@ -5846,7 +5861,10 @@
       }
     }
   }
-  .segmented-control input:checked + label {
+  .segmented-control {
+    background-color: nth($primaryColor, $style);
+  }
+  .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
 }
@@ -6659,7 +6677,10 @@
       }
     }
   }
-  .segmented-control input:checked + label {
+  .segmented-control {
+    background-color: nth($primaryColor, $style);
+  }
+  .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
 }
@@ -7491,7 +7512,10 @@
       }
     }
   }
-  .segmented-control input:checked + label {
+  .segmented-control {
+    background-color: nth($primaryColor, $style);
+  }
+  .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
 }
@@ -8306,7 +8330,10 @@
       }
     }
   }
-  .segmented-control input:checked + label {
+  .segmented-control {
+    background-color: nth($primaryColor, $style);
+  }
+  .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
 }
@@ -9108,7 +9135,10 @@
       }
     }
   }
-  .segmented-control input:checked + label {
+  .segmented-control {
+    background-color: nth($primaryColor, $style);
+  }
+  .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
 }
