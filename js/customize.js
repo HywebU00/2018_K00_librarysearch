@@ -1443,6 +1443,20 @@ $(function () {
     $('#describe_style').fadeOut();
     $('body').removeClass('fix');
   });
+
+  // 同意書
+  $('.Consent_btn').click(function () {
+    $('#Consent_style').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.lightboxstyle_block .close').click(function () {
+    $('#Consent_style').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('#Consent_style').fadeOut();
+    $('body').removeClass('fix');
+  });
 });
 
 //詳目頁 匯出點選

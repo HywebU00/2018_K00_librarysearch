@@ -8246,6 +8246,25 @@ body.fix {
   padding: 0;
   text-align: left;
 }
+.lightboxstyle .agreecontent {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding-top: 1em;
+  padding-left: 0.2em;
+}
+.lightboxstyle .Consent_list {
+  margin: 0 0 0 2em;
+  padding: 0;
+}
+.lightboxstyle .Consent_list li {
+  margin-bottom: 1em;
+}
+.lightboxstyle .Consent_list li span {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
 
 .commentcontent_lightbox {
   position: fixed;
@@ -24143,6 +24162,51 @@ em.yellowbg {
 }
 .mystudy_sdg_reading .SDG_banner .SDG_img a:focus {
   box-shadow: 0 0px 0px 2px #f1ad00;
+}
+
+.wallet_module_block {
+  text-align: center;
+  max-width: 600px;
+  border-radius: 8px;
+  margin: 2em auto;
+  padding: 3em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.wallet_module_block p {
+  font-size: 1.25em;
+  line-height: 1.8em;
+  margin: 0 0 2em;
+}
+.wallet_module_block ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.wallet_module_block ul li {
+  margin: 0 10px;
+}
+.wallet_module_block ul li a {
+  display: block;
+  padding: 0;
+}
+.wallet_module_block ul li a img {
+  margin: 0;
+  padding: 0;
+  line-height: none;
+}
+@media screen and (max-width: 767px) {
+  .wallet_module_block {
+    width: auto;
+    padding: 2em;
+  }
+  .wallet_module_block ul {
+    flex-wrap: wrap;
+  }
+  .wallet_module_block ul li {
+    margin: 0 10px 10px;
+  }
 }
 
 .block01_h2, .SDG_targetdata .title, .SDG_block h2, .diversified_block h2, .onlinesearch_block h2, .forgetpassword_block h2, .network_certificate h2, .devicereservation_block h2, .reservation_block h2, .lp_content h2, .send_illustrate_group .title, .cp_content h2, .sitemap h2, .mystudy_sdg_reading .title {
