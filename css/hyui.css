@@ -12455,8 +12455,8 @@ button.backbtn {
   padding: 0 5px;
 }
 
-.sorticon,
-.searchicon {
+.sorticon a,
+.searchicon a {
   padding: 2px 3px !important;
   width: 18px;
   height: 18px;
@@ -12464,6 +12464,7 @@ button.backbtn {
   border-radius: 3px;
   line-height: 16px;
   margin-left: 4px;
+  display: block;
 }
 .sorticon img,
 .searchicon img {
