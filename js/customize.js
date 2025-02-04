@@ -1530,6 +1530,11 @@ $(function () {
     $('.mystudysearch').stop().slideToggle();
   });
 });
+$(function () {
+  $('.data_quantity2 .searchicon').click(function () {
+    $('.mystudysearch').stop().slideToggle();
+  });
+});
 // 出版年度
 $(function () {
   $('#slider-range').slider({

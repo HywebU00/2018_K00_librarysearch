@@ -12455,16 +12455,18 @@ button.backbtn {
   padding: 0 5px;
 }
 
-.sorticon {
-  padding: 3px !important;
+.sorticon,
+.searchicon {
+  padding: 2px 3px !important;
   width: 18px;
-  height: 16px;
+  height: 18px;
   border: 1px #999 solid;
   border-radius: 3px;
   line-height: 16px;
-  margin-left: 3px;
+  margin-left: 4px;
 }
-.sorticon img {
+.sorticon img,
+.searchicon img {
   width: 16px;
   vertical-align: middle;
 }
