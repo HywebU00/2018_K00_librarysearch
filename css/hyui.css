@@ -22325,7 +22325,6 @@ em.yellowbg {
   flex-wrap: wrap;
   justify-content: flex-start;
   list-style-type: none;
-  outline: 1px solid red;
 }
 .mystudycontent .mycardlist li {
   width: 32%;
