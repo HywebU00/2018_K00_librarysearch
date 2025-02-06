@@ -22319,70 +22319,67 @@ em.yellowbg {
 }
 .mystudycontent .mycardlist {
   margin: 0 0 10px;
-  padding: 0;
+  padding: 1em 0 0 0;
   overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style-type: none;
+  outline: 1px solid red;
 }
 .mystudycontent .mycardlist li {
-  width: 31%;
-  margin-right: 2%;
-  margin-bottom: 15px;
-  float: left;
-  list-style-type: none;
-  height: 210px;
+  width: 32%;
+  margin: 0 2% 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px 0 10px 10px;
+  position: relative;
+  transition: 0.2s;
   box-sizing: border-box;
+  min-height: 200px;
 }
-@media (max-width: 1300px) {
+.mystudycontent .mycardlist li:hover {
+  transform: translateY(-10px);
+  box-shadow: 3px 2px 4px 3px #ccc;
+}
+@media (min-width: 1200px) {
+  .mystudycontent .mycardlist li:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
   .mystudycontent .mycardlist li {
     width: 48%;
   }
+  .mystudycontent .mycardlist li:nth-child(2n) {
+    margin-right: 0;
+  }
 }
-@media screen and (max-width: 991px) {
+@media screen and (min-width: 769px) and (max-width: 991px) {
   .mystudycontent .mycardlist li {
     width: 100%;
     margin-right: 0;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 700px) and (max-width: 768px) {
   .mystudycontent .mycardlist li {
     width: 48%;
-    margin-right: 2%;
+  }
+  .mystudycontent .mycardlist li:nth-child(2n) {
+    margin-right: 0;
   }
 }
-@media (max-width: 730px) {
+@media (max-width: 699px) {
   .mystudycontent .mycardlist li {
     width: 100%;
     margin-right: 0;
-    float: none;
-    clear: both;
   }
-}
-@media (max-width: 480px) {
-  .mystudycontent .mycardlist li {
-    height: auto;
-  }
-}
-.mystudycontent .mycardlist li:last-child {
-  margin-right: 0;
 }
 .mystudycontent .mycardlist li a {
   display: block;
 }
-.mystudycontent .mycardlist li a:focus {
-  box-shadow: 0 0px 0px 2px #f1ad00 inset;
-}
-.mystudycontent .mycardlist li a:focus .cardblock {
-  box-shadow: 3px 2px 4px 3px #ccc;
-}
 .mystudycontent .mycardlist li .cardblock {
   display: block;
-  border: 1px solid #ccc;
   padding: 15px 5px;
-  width: 100%;
-  height: 200px;
-  border-radius: 10px 0 10px 10px;
-  position: relative;
-  margin-top: 10px;
-  transition: 0.2s;
   box-sizing: border-box;
 }
 @media (max-width: 480px) {
@@ -22390,10 +22387,6 @@ em.yellowbg {
     height: auto;
     min-height: 200px;
   }
-}
-.mystudycontent .mycardlist li .cardblock:hover {
-  margin-top: 0px;
-  box-shadow: 3px 2px 4px 3px #ccc;
 }
 .mystudycontent .mycardlist li .cardblock:after {
   content: "";
@@ -22423,6 +22416,12 @@ em.yellowbg {
 }
 .mystudycontent .mycardlist li .cardblock.purpleblock:after {
   border-color: transparent #a063b5 transparent transparent;
+}
+.mystudycontent .mycardlist li .cardbutton {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
 }
 .mystudycontent .mycardlist li h3 {
   margin: 0 0 10px 10px;
@@ -22544,6 +22543,7 @@ em.yellowbg {
   list-style-type: none;
   position: relative;
   text-align: left;
+  min-height: auto;
 }
 .mystudycontent .mycardlist li .badrecord ul li:after {
   content: "";
@@ -22558,6 +22558,10 @@ em.yellowbg {
   position: absolute;
   left: 0;
   top: 7px;
+}
+.mystudycontent .mycardlist li .badrecord ul li:hover {
+  transform: translate(0);
+  box-shadow: none;
 }
 .mystudycontent .mycardlist li .customcard {
   width: 100px;
