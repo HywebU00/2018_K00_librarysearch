@@ -22473,7 +22473,7 @@ em.yellowbg {
 }
 .mystudycontent .mycardlist li {
   width: 32%;
-  margin: 0 2% 20px 0;
+  margin: 0 0.66% 20px;
   border: 1px solid #ccc;
   border-radius: 10px 0 10px 10px;
   position: relative;
@@ -22485,37 +22485,28 @@ em.yellowbg {
   transform: translateY(-10px);
   box-shadow: 3px 2px 4px 3px #ccc;
 }
-@media (min-width: 1200px) {
-  .mystudycontent .mycardlist li:nth-child(3n) {
-    margin-right: 0;
-  }
-}
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .mystudycontent .mycardlist li {
     width: 48%;
-  }
-  .mystudycontent .mycardlist li:nth-child(2n) {
-    margin-right: 0;
+    margin: 0 1% 20px;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .mystudycontent .mycardlist li {
     width: 100%;
-    margin-right: 0;
+    margin: 0 0 20px;
   }
 }
 @media screen and (min-width: 700px) and (max-width: 768px) {
   .mystudycontent .mycardlist li {
     width: 48%;
-  }
-  .mystudycontent .mycardlist li:nth-child(2n) {
-    margin-right: 0;
+    margin: 0 1% 20px;
   }
 }
 @media (max-width: 699px) {
   .mystudycontent .mycardlist li {
     width: 100%;
-    margin-right: 0;
+    margin: 0 0 20px;
   }
 }
 .mystudycontent .mycardlist li a {
