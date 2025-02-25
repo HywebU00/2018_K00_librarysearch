@@ -1482,7 +1482,7 @@ $('.describe_block button.voice').click(function () {
 });
 
 // AI情境式找書＿查詢記錄
-$('.lightboxAI_situational .query_records_btn').click(function () {
+$('.lightboxAI_situational .query_records_btn a').click(function () {
   $('.AI_situationalstyle_records').fadeIn();
   $('.AI_situationalstyle').fadeOut();
   $('body').addClass('fix');
@@ -1530,7 +1530,7 @@ $('.overlay').click(function () {
 });
 
 // AI編輯情境＿查詢記錄
-$('.AI_editstyle .lightboxAI_situational .query_records_btn').click(function () {
+$('.AI_editstyle .lightboxAI_situational .query_records_btn a').click(function () {
   $('.AI_situationalstyle_records').fadeIn();
   $('.AI_editstyle').fadeOut();
   $('body').addClass('fix');
