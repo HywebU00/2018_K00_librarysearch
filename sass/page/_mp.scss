@@ -236,6 +236,9 @@
     .search_fieldtype {
       display: flex;
       margin-bottom: 0.5em;
+      &:has(+ .query_system_block .query_system_tabs) {
+        margin-bottom: 3em;
+      }
       select {
         color: #fff !important;
         width: auto;
@@ -246,6 +249,53 @@
         margin-right: 1em;
         background: transparent url(../images/basic/icon_select_arrow_white.svg) no-repeat right center;
         background-size: 22px;
+      }
+      @include screen('xs_mobile') {
+        &:has(+ .query_system_block .query_system_tabs) {
+          margin-bottom: 1em;
+        }
+      }
+      @media (max-width: 480px) {
+        display: block;
+        &:has(+ .query_system_block .query_system_tabs) {
+          margin-bottom: 1em;
+        }
+        select {
+          width: 100%;
+        }
+      }
+    }
+    // 查詢系統分類
+    .query_system_block {
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 20px 20px 10px;
+      position: relative;
+      margin-bottom: 1em;
+      &:has(.query_system_tabs) {
+        padding: 30px 20px 10px;
+      }
+    }
+    .query_system_tabs {
+      display: flex;
+      justify-content: flex-start;
+      position: absolute;
+      top: -30px;
+      left: 20px;
+      button {
+        margin-right: 0.4em;
+        margin-left: 0;
+        border-radius: 50px;
+        font-size: 1.125rem;
+      }
+      @include screen('xs_mobile') {
+        display: block;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 1em;
+        button {
+          width: 100%;
+        }
       }
     }
     .form_search {
@@ -267,13 +317,16 @@
         margin: 0px;
         color: #333;
         height: 48px;
+        @include screen('mobile') {
+          width: calc(100% - 52px);
+        }
       }
       input {
         padding: 15px;
       }
       input[type='submit'] {
         margin: 0;
-        background-color: #f4573f;
+        background-color: $color-red;
         border: none;
         border-radius: 0;
         float: right;
@@ -439,7 +492,7 @@
         }
         &.addfield {
           background-color: nth($primaryColor, $style);
-          border-radius: 5px;
+          border-radius: 4px;
           margin: 0 10px 7px 0;
           padding: 5px 10px 5px 20px;
           &:before {
@@ -573,7 +626,7 @@
             background-position: right 1em center;
             padding: 0.5em 2.5em 0.5em 1em;
             transition: 0.2s;
-            border-radius: 5px;
+            border-radius: 4px;
             border: 1px solid #fff;
             display: block;
             &:hover {
@@ -624,7 +677,7 @@
           background-color: $importantColor;
           color: #fff;
           padding: 3px 7px 3px 27px;
-          border-radius: 3px;
+          border-radius: 4px;
           display: inline-block;
           margin-right: 10px;
           margin-top: 5px;

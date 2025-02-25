@@ -289,7 +289,7 @@
       margin: 0px 0px 5px 5px;
     }
     .name {
-      border-radius: 5px;
+      border-radius: 4px;
       border: 1px solid #ccc;
       background-color: #fff;
       a {
@@ -501,7 +501,7 @@
         margin-right: 15px;
         // width: 40px;
         input {
-          border-radius: 3px !important;
+          border-radius: 4px !important;
         }
         input[type='checkbox'] {
           margin-right: 5px;
@@ -2146,7 +2146,7 @@
     border: 1px solid #ddd;
     padding: 10px;
     margin-right: 0;
-    border-radius: 5px;
+    border-radius: 4px;
     display: flex;
     align-items: flex-start;
     box-sizing: border-box;
@@ -2376,7 +2376,7 @@
         display: block;
         padding: 5px 10px 5px 35px;
         border: 1px solid #ccc;
-        border-radius: 5px;
+        border-radius: 4px;
         position: relative;
         color: #333;
         background-color: #fff;
@@ -2506,7 +2506,7 @@
   flex: 1 1 auto;
   flex-basis: 100%;
   margin: 10px 0 20px;
-  border-radius: 5px;
+  border-radius: 4px;
   border: 1px solid #ccc;
   padding: 30px 50px 20px;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
@@ -2872,7 +2872,7 @@
   text-align: center;
   padding: 25px;
   background-color: nth($lightColor, $style);
-  border-radius: 5px;
+  border-radius: 4px;
   margin: 20px 0;
   font-size: 1.25em;
   line-height: 1.5em;
@@ -3039,7 +3039,7 @@
     color: #000;
     display: flex;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 4px;
     padding: 1em;
     box-sizing: border-box;
     margin-bottom: 1em;
@@ -3098,7 +3098,7 @@
     padding: 1em 0.5em;
     background-color: $color-red;
     color: #fff;
-    border-radius: 5px 0 0 5px;
+    border-radius: 4px 0 0 4px;
     &:hover,
     &:focus {
       color: #fff;
@@ -3538,7 +3538,7 @@
   .explain {
     padding: 20px 25px;
     background-color: #c41e06;
-    border-radius: 5px;
+    border-radius: 4px;
     color: #fff;
     font-size: 1.125em;
     span {
@@ -3569,7 +3569,7 @@
           display: block;
           padding: 10px 20px;
           background-color: #eee;
-          border-radius: 5px;
+          border-radius: 4px;
         }
       }
     }
@@ -3602,7 +3602,7 @@
   }
   .listconten {
     margin-bottom: 30px;
-    border-radius: 5px;
+    border-radius: 4px;
     border: 1px solid #ccc;
     padding: 50px 20px 20px;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
@@ -4410,7 +4410,7 @@
   padding: 1.5em 1em;
   box-sizing: border-box;
   display: block;
-  border-radius: 5px 0 0 5px;
+  border-radius: 4px 0 0 4px;
   z-index: 10;
   @media (max-width: 400px) {
     width: 100%;

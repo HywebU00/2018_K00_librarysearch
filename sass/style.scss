@@ -220,6 +220,82 @@
       }
     }
   }
+  //  AI找情境
+  .lightboxAI_situational {
+    &:before {
+      background-color: nth($primaryColor, $style);
+    }
+
+    .title {
+      color: nth($primaryColor, $style);
+      border: 1px solid nth($primaryColor, $style);
+      border-width: 0px 8px;
+      a {
+        color: nth($primaryColor, $style);
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    .content {
+      .example_list {
+        ul {
+          li {
+            a {
+              &:hover {
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                border-left-width: 14px;
+              }
+            }
+          }
+        }
+      }
+      .query_records_group {
+        .query_records_list {
+          .query_function {
+            .time {
+              color: nth($primaryColor, $style);
+            }
+          }
+          ul {
+            li {
+              &:hover {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      .extend_list {
+        ul {
+          li {
+            button {
+              &.btn {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
+      }
+      .Keyelements_list {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -370,6 +446,62 @@
             a {
               color: nth($primaryColor, $style);
             }
+          }
+        }
+      }
+    }
+    .AI_explain {
+      span {
+        &:before {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+    }
+    .query_context_block {
+      .title {
+        background-color: nth($primaryColor, $style);
+        &:after {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+      .contextbtn_group {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      @include screen('xs_mobile') {
+        .title {
+          &:after {
+            border: 8px solid nth($primaryColor, $style);
+            border-color: nth($primaryColor, $style) transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .continue_search_group {
+      .contextext {
+        button {
+          &.btn {
+            &:hover {
+              background-color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+      .expand_block {
+        button {
+          &.expandbtn {
+            background-color: nth($primaryColor, $style) !important;
           }
         }
       }
@@ -657,6 +789,16 @@
       }
     }
   }
+  //分類
+  .classification_group {
+    background-color: nth($primaryColor, $style);
+  }
+  .AI_explain {
+    &:before {
+      border: 8px solid nth($primaryColor, $style);
+      border-color: transparent transparent transparent nth($primaryColor, $style);
+    }
+  }
   // _fatfooter.scss
   .fatfooter {
     background-color: darken(#f8b551, 20);
@@ -847,6 +989,18 @@
   }
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
+  }
+  // _btn.scss
+  .btn_primaryColor {
+    @include btn_setting(nth($primaryColor, $style), #fff);
+    border: none;
+    &:hover,
+    &.avtive {
+      color: nth($primaryColor, $style) !important;
+      @include btn_setting(#eee, nth($primaryColor, $style));
+      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+      border: none;
+    }
   }
 }
 // 客製版01花蓮
@@ -1066,6 +1220,81 @@
       }
     }
   }
+  //  AI找情境
+  .lightboxAI_situational {
+    &:before {
+      background-color: nth($primaryColor, $style);
+    }
+    .title {
+      color: nth($primaryColor, $style);
+      border: 1px solid nth($primaryColor, $style);
+      border-width: 0px 8px;
+      a {
+        color: nth($primaryColor, $style);
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    .content {
+      .example_list {
+        ul {
+          li {
+            a {
+              &:hover {
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                border-left-width: 14px;
+              }
+            }
+          }
+        }
+      }
+      .query_records_group {
+        .query_records_list {
+          .query_function {
+            .time {
+              color: nth($primaryColor, $style);
+            }
+          }
+          ul {
+            li {
+              &:hover {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      .extend_list {
+        ul {
+          li {
+            button {
+              &.btn {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
+      }
+      .Keyelements_list {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -1219,6 +1448,62 @@
             a {
               color: nth($primaryColor, $style);
             }
+          }
+        }
+      }
+    }
+    .AI_explain {
+      span {
+        &:before {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+    }
+    .query_context_block {
+      .title {
+        background-color: nth($primaryColor, $style);
+        &:after {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+      .contextbtn_group {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      @include screen('xs_mobile') {
+        .title {
+          &:after {
+            border: 8px solid nth($primaryColor, $style);
+            border-color: nth($primaryColor, $style) transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .continue_search_group {
+      .contextext {
+        button {
+          &.btn {
+            &:hover {
+              background-color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+      .expand_block {
+        button {
+          &.expandbtn {
+            background-color: nth($primaryColor, $style) !important;
           }
         }
       }
@@ -1508,6 +1793,17 @@
       }
     }
   }
+  //分類
+  .classification_group {
+    background-color: nth($primaryColor, $style);
+  }
+  // 說明
+  .AI_explain {
+    &:before {
+      border: 8px solid nth($primaryColor, $style);
+      border-color: transparent transparent transparent nth($primaryColor, $style);
+    }
+  }
   // _fatfooter.scss
   .fatfooter {
     background-color: darken(nth($primaryColor, $style), 20);
@@ -1666,6 +1962,18 @@
   }
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
+  }
+  // _btn.scss
+  .btn_primaryColor {
+    @include btn_setting(nth($primaryColor, $style), #fff);
+    border: none;
+    &:hover,
+    &.avtive {
+      color: nth($primaryColor, $style) !important;
+      @include btn_setting(#eee, nth($primaryColor, $style));
+      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+      border: none;
+    }
   }
 }
 // 客製版02北市圖書館
@@ -1976,6 +2284,82 @@
       }
     }
   }
+  //  AI找情境
+  .lightboxAI_situational {
+    &:before {
+      background-color: nth($primaryColor, $style);
+    }
+    .title {
+      color: nth($primaryColor, $style);
+      border: 1px solid nth($primaryColor, $style);
+      border-width: 0px 8px;
+      a {
+        color: nth($primaryColor, $style);
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    .content {
+      .example_list {
+        ul {
+          li {
+            a {
+              &:hover {
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                border-left-width: 14px;
+              }
+            }
+          }
+        }
+      }
+      .query_records_group {
+        .query_records_list {
+          .query_function {
+            .time {
+              color: nth($primaryColor, $style);
+            }
+          }
+          ul {
+            li {
+              &:hover {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      .extend_list {
+        ul {
+          li {
+            button {
+              &.btn {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
+      }
+      .Keyelements_list {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -2147,6 +2531,62 @@
             a {
               color: nth($primaryColor, $style);
             }
+          }
+        }
+      }
+    }
+    .AI_explain {
+      span {
+        &:before {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+    }
+    .query_context_block {
+      .title {
+        background-color: nth($primaryColor, $style);
+        &:after {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+      .contextbtn_group {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      @include screen('xs_mobile') {
+        .title {
+          &:after {
+            border: 8px solid nth($primaryColor, $style);
+            border-color: nth($primaryColor, $style) transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .continue_search_group {
+      .contextext {
+        button {
+          &.btn {
+            &:hover {
+              background-color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+      .expand_block {
+        button {
+          &.expandbtn {
+            background-color: nth($primaryColor, $style) !important;
           }
         }
       }
@@ -2727,6 +3167,17 @@
       }
     }
   }
+  //分類
+  .classification_group {
+    background-color: nth($primaryColor, $style);
+  }
+  // 說明
+  .AI_explain {
+    &:before {
+      border: 8px solid nth($primaryColor, $style);
+      border-color: transparent transparent transparent nth($primaryColor, $style);
+    }
+  }
   // _fatfooter.scss
   .fatfooter {
     background-color: #313131;
@@ -2936,6 +3387,18 @@
   }
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
+  }
+  // _btn.scss
+  .btn_primaryColor {
+    @include btn_setting(nth($primaryColor, $style), #fff);
+    border: none;
+    &:hover,
+    &.avtive {
+      color: nth($primaryColor, $style) !important;
+      @include btn_setting(#eee, nth($primaryColor, $style));
+      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+      border: none;
+    }
   }
 }
 // 客製版03台中市圖書館
@@ -3614,6 +4077,81 @@
       }
     }
   }
+  //  AI找情境
+  .lightboxAI_situational {
+    &:before {
+      background-color: nth($primaryColor, $style);
+    }
+    .title {
+      color: nth($primaryColor, $style);
+      border: 1px solid nth($primaryColor, $style);
+      border-width: 0px 8px;
+      a {
+        color: nth($primaryColor, $style);
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    .content {
+      .example_list {
+        ul {
+          li {
+            a {
+              &:hover {
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                border-left-width: 14px;
+              }
+            }
+          }
+        }
+      }
+      .query_records_group {
+        .query_records_list {
+          .query_function {
+            .time {
+              color: nth($primaryColor, $style);
+            }
+          }
+          ul {
+            li {
+              &:hover {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      .extend_list {
+        ul {
+          li {
+            button {
+              &.btn {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
+      }
+      .Keyelements_list {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -3783,6 +4321,62 @@
             a {
               color: nth($primaryColor, $style);
             }
+          }
+        }
+      }
+    }
+    .AI_explain {
+      span {
+        &:before {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+    }
+    .query_context_block {
+      .title {
+        background-color: nth($primaryColor, $style);
+        &:after {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+      .contextbtn_group {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      @include screen('xs_mobile') {
+        .title {
+          &:after {
+            border: 8px solid nth($primaryColor, $style);
+            border-color: nth($primaryColor, $style) transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .continue_search_group {
+      .contextext {
+        button {
+          &.btn {
+            &:hover {
+              background-color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+      .expand_block {
+        button {
+          &.expandbtn {
+            background-color: nth($primaryColor, $style) !important;
           }
         }
       }
@@ -4053,6 +4647,17 @@
       }
     }
   }
+  //分類
+  .classification_group {
+    background-color: nth($primaryColor, $style);
+  }
+  // 說明
+  .AI_explain {
+    &:before {
+      border: 8px solid nth($primaryColor, $style);
+      border-color: transparent transparent transparent nth($primaryColor, $style);
+    }
+  }
   // _fatfooter.scss
   .fatfooter {
     background-color: darken(nth($primaryColor, $style), 10);
@@ -4223,6 +4828,18 @@
   }
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
+  }
+  // _btn.scss
+  .btn_primaryColor {
+    @include btn_setting(nth($primaryColor, $style), #fff);
+    border: none;
+    &:hover,
+    &.avtive {
+      color: nth($primaryColor, $style) !important;
+      @include btn_setting(#fff, nth($primaryColor, $style));
+      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+      border: none;
+    }
   }
 }
 // 版型01
@@ -4442,6 +5059,81 @@
       }
     }
   }
+  //  AI找情境
+  .lightboxAI_situational {
+    &:before {
+      background-color: nth($primaryColor, $style);
+    }
+    .title {
+      color: nth($primaryColor, $style);
+      border: 1px solid nth($primaryColor, $style);
+      border-width: 0px 8px;
+      a {
+        color: nth($primaryColor, $style);
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    .content {
+      .example_list {
+        ul {
+          li {
+            a {
+              &:hover {
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                border-left-width: 14px;
+              }
+            }
+          }
+        }
+      }
+      .query_records_group {
+        .query_records_list {
+          .query_function {
+            .time {
+              color: nth($primaryColor, $style);
+            }
+          }
+          ul {
+            li {
+              &:hover {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      .extend_list {
+        ul {
+          li {
+            button {
+              &.btn {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
+      }
+      .Keyelements_list {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -4595,6 +5287,62 @@
             a {
               color: nth($primaryColor, $style);
             }
+          }
+        }
+      }
+    }
+    .AI_explain {
+      span {
+        &:before {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+    }
+    .query_context_block {
+      .title {
+        background-color: nth($primaryColor, $style);
+        &:after {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+      .contextbtn_group {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      @include screen('xs_mobile') {
+        .title {
+          &:after {
+            border: 8px solid nth($primaryColor, $style);
+            border-color: nth($primaryColor, $style) transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .continue_search_group {
+      .contextext {
+        button {
+          &.btn {
+            &:hover {
+              background-color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+      .expand_block {
+        button {
+          &.expandbtn {
+            background-color: nth($primaryColor, $style) !important;
           }
         }
       }
@@ -4877,6 +5625,17 @@
       }
     }
   }
+  //分類
+  .classification_group {
+    background-color: nth($primaryColor, $style);
+  }
+  // 說明
+  .AI_explain {
+    &:before {
+      border: 8px solid nth($primaryColor, $style);
+      border-color: transparent transparent transparent nth($primaryColor, $style);
+    }
+  }
   // _fatfooter.scss
   .fatfooter {
     background-color: darken(nth($primaryColor, $style), 10);
@@ -5035,6 +5794,18 @@
   }
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
+  }
+  // _btn.scss
+  .btn_primaryColor {
+    @include btn_setting(nth($primaryColor, $style), #fff);
+    border: none;
+    &:hover,
+    &.avtive {
+      color: nth($primaryColor, $style) !important;
+      @include btn_setting(#eee, nth($primaryColor, $style));
+      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+      border: none;
+    }
   }
 }
 // 版型02
@@ -5267,6 +6038,81 @@
       }
     }
   }
+  //  AI找情境
+  .lightboxAI_situational {
+    &:before {
+      background-color: nth($primaryColor, $style);
+    }
+    .title {
+      color: nth($primaryColor, $style);
+      border: 1px solid nth($primaryColor, $style);
+      border-width: 0px 8px;
+      a {
+        color: nth($primaryColor, $style);
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    .content {
+      .example_list {
+        ul {
+          li {
+            a {
+              &:hover {
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                border-left-width: 14px;
+              }
+            }
+          }
+        }
+      }
+      .query_records_group {
+        .query_records_list {
+          .query_function {
+            .time {
+              color: nth($primaryColor, $style);
+            }
+          }
+          ul {
+            li {
+              &:hover {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      .extend_list {
+        ul {
+          li {
+            button {
+              &.btn {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
+      }
+      .Keyelements_list {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -5433,6 +6279,62 @@
             a {
               color: nth($primaryColor, $style);
             }
+          }
+        }
+      }
+    }
+    .AI_explain {
+      span {
+        &:before {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+    }
+    .query_context_block {
+      .title {
+        background-color: nth($primaryColor, $style);
+        &:after {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+      .contextbtn_group {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      @include screen('xs_mobile') {
+        .title {
+          &:after {
+            border: 8px solid nth($primaryColor, $style);
+            border-color: nth($primaryColor, $style) transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .continue_search_group {
+      .contextext {
+        button {
+          &.btn {
+            &:hover {
+              background-color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+      .expand_block {
+        button {
+          &.expandbtn {
+            background-color: nth($primaryColor, $style) !important;
           }
         }
       }
@@ -5708,6 +6610,17 @@
       }
     }
   }
+  //分類
+  .classification_group {
+    background-color: nth($primaryColor, $style);
+  }
+  // 說明
+  .AI_explain {
+    &:before {
+      border: 8px solid nth($primaryColor, $style);
+      border-color: transparent transparent transparent nth($primaryColor, $style);
+    }
+  }
   // _fatfooter.scss
   .fatfooter {
     background-color: darken(nth($primaryColor, $style), 5);
@@ -5866,6 +6779,18 @@
   }
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
+  }
+  // _btn.scss
+  .btn_primaryColor {
+    @include btn_setting(nth($primaryColor, $style), #fff);
+    border: none;
+    &:hover,
+    &.avtive {
+      color: nth($primaryColor, $style) !important;
+      @include btn_setting(#eee, nth($primaryColor, $style));
+      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+      border: none;
+    }
   }
 }
 // 版型03
@@ -6088,6 +7013,81 @@
       }
     }
   }
+  //  AI找情境
+  .lightboxAI_situational {
+    &:before {
+      background-color: nth($primaryColor, $style);
+    }
+    .title {
+      color: nth($primaryColor, $style);
+      border: 1px solid nth($primaryColor, $style);
+      border-width: 0px 8px;
+      a {
+        color: nth($primaryColor, $style);
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    .content {
+      .example_list {
+        ul {
+          li {
+            a {
+              &:hover {
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                border-left-width: 14px;
+              }
+            }
+          }
+        }
+      }
+      .query_records_group {
+        .query_records_list {
+          .query_function {
+            .time {
+              color: nth($primaryColor, $style);
+            }
+          }
+          ul {
+            li {
+              &:hover {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      .extend_list {
+        ul {
+          li {
+            button {
+              &.btn {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
+      }
+      .Keyelements_list {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -6254,6 +7254,62 @@
             a {
               color: nth($primaryColor, $style);
             }
+          }
+        }
+      }
+    }
+    .AI_explain {
+      span {
+        &:before {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+    }
+    .query_context_block {
+      .title {
+        background-color: nth($primaryColor, $style);
+        &:after {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+      .contextbtn_group {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      @include screen('xs_mobile') {
+        .title {
+          &:after {
+            border: 8px solid nth($primaryColor, $style);
+            border-color: nth($primaryColor, $style) transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .continue_search_group {
+      .contextext {
+        button {
+          &.btn {
+            &:hover {
+              background-color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+      .expand_block {
+        button {
+          &.expandbtn {
+            background-color: nth($primaryColor, $style) !important;
           }
         }
       }
@@ -6524,6 +7580,17 @@
       }
     }
   }
+  //分類
+  .classification_group {
+    background-color: nth($primaryColor, $style);
+  }
+  // 說明
+  .AI_explain {
+    &:before {
+      border: 8px solid nth($primaryColor, $style);
+      border-color: transparent transparent transparent nth($primaryColor, $style);
+    }
+  }
   // _fatfooter.scss
   .fatfooter {
     background-color: darken(nth($primaryColor, $style), 10);
@@ -6682,6 +7749,18 @@
   }
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
+  }
+  // _btn.scss
+  .btn_primaryColor {
+    @include btn_setting(nth($primaryColor, $style), #fff);
+    border: none;
+    &:hover,
+    &.avtive {
+      color: nth($primaryColor, $style) !important;
+      @include btn_setting(#eee, nth($primaryColor, $style));
+      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+      border: none;
+    }
   }
 }
 // 版型04
@@ -6911,6 +7990,81 @@
       }
     }
   }
+  //  AI找情境
+  .lightboxAI_situational {
+    &:before {
+      background-color: nth($primaryColor, $style);
+    }
+    .title {
+      color: nth($primaryColor, $style);
+      border: 1px solid nth($primaryColor, $style);
+      border-width: 0px 8px;
+      a {
+        color: nth($primaryColor, $style);
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    .content {
+      .example_list {
+        ul {
+          li {
+            a {
+              &:hover {
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                border-left-width: 14px;
+              }
+            }
+          }
+        }
+      }
+      .query_records_group {
+        .query_records_list {
+          .query_function {
+            .time {
+              color: nth($primaryColor, $style);
+            }
+          }
+          ul {
+            li {
+              &:hover {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      .extend_list {
+        ul {
+          li {
+            button {
+              &.btn {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
+      }
+      .Keyelements_list {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -7077,6 +8231,62 @@
             a {
               color: nth($primaryColor, $style);
             }
+          }
+        }
+      }
+    }
+    .AI_explain {
+      span {
+        &:before {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+    }
+    .query_context_block {
+      .title {
+        background-color: nth($primaryColor, $style);
+        &:after {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+      .contextbtn_group {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      @include screen('xs_mobile') {
+        .title {
+          &:after {
+            border: 8px solid nth($primaryColor, $style);
+            border-color: nth($primaryColor, $style) transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .continue_search_group {
+      .contextext {
+        button {
+          &.btn {
+            &:hover {
+              background-color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+      .expand_block {
+        button {
+          &.expandbtn {
+            background-color: nth($primaryColor, $style) !important;
           }
         }
       }
@@ -7359,6 +8569,17 @@
       }
     }
   }
+  //分類
+  .classification_group {
+    background-color: nth($primaryColor, $style);
+  }
+  // 說明
+  .AI_explain {
+    &:before {
+      border: 8px solid nth($primaryColor, $style);
+      border-color: transparent transparent transparent nth($primaryColor, $style);
+    }
+  }
   // _fatfooter.scss
   .fatfooter {
     background-color: darken(nth($primaryColor, $style), 10);
@@ -7517,6 +8738,18 @@
   }
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
+  }
+  // _btn.scss
+  .btn_primaryColor {
+    @include btn_setting(nth($primaryColor, $style), #fff);
+    border: none;
+    &:hover,
+    &.avtive {
+      color: nth($primaryColor, $style) !important;
+      @include btn_setting(#eee, nth($primaryColor, $style));
+      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+      border: none;
+    }
   }
 }
 // 版型05
@@ -7736,6 +8969,81 @@
       }
     }
   }
+  //  AI找情境
+  .lightboxAI_situational {
+    &:before {
+      background-color: nth($primaryColor, $style);
+    }
+    .title {
+      color: nth($primaryColor, $style);
+      border: 1px solid nth($primaryColor, $style);
+      border-width: 0px 8px;
+      a {
+        color: nth($primaryColor, $style);
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    .content {
+      .example_list {
+        ul {
+          li {
+            a {
+              &:hover {
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                border-left-width: 14px;
+              }
+            }
+          }
+        }
+      }
+      .query_records_group {
+        .query_records_list {
+          .query_function {
+            .time {
+              color: nth($primaryColor, $style);
+            }
+          }
+          ul {
+            li {
+              &:hover {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      .extend_list {
+        ul {
+          li {
+            button {
+              &.btn {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
+      }
+      .Keyelements_list {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -7902,6 +9210,62 @@
             a {
               color: nth($primaryColor, $style);
             }
+          }
+        }
+      }
+    }
+    .AI_explain {
+      span {
+        &:before {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+    }
+    .query_context_block {
+      .title {
+        background-color: nth($primaryColor, $style);
+        &:after {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+      .contextbtn_group {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      @include screen('xs_mobile') {
+        .title {
+          &:after {
+            border: 8px solid nth($primaryColor, $style);
+            border-color: nth($primaryColor, $style) transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .continue_search_group {
+      .contextext {
+        button {
+          &.btn {
+            &:hover {
+              background-color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+      .expand_block {
+        button {
+          &.expandbtn {
+            background-color: nth($primaryColor, $style) !important;
           }
         }
       }
@@ -8177,6 +9541,17 @@
       }
     }
   }
+  //分類
+  .classification_group {
+    background-color: nth($primaryColor, $style);
+  }
+  // 說明
+  .AI_explain {
+    &:before {
+      border: 8px solid nth($primaryColor, $style);
+      border-color: transparent transparent transparent nth($primaryColor, $style);
+    }
+  }
   // _fatfooter.scss
   .fatfooter {
     background-color: darken(nth($primaryColor, $style), 10);
@@ -8335,6 +9710,18 @@
   }
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
+  }
+  // _btn.scss
+  .btn_primaryColor {
+    @include btn_setting(nth($primaryColor, $style), #fff);
+    border: none;
+    &:hover,
+    &.avtive {
+      color: nth($primaryColor, $style) !important;
+      @include btn_setting(#eee, nth($primaryColor, $style));
+      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+      border: none;
+    }
   }
 }
 // 版型06
@@ -8555,6 +9942,81 @@
       }
     }
   }
+  //  AI找情境
+  .lightboxAI_situational {
+    &:before {
+      background-color: nth($primaryColor, $style);
+    }
+    .title {
+      color: nth($primaryColor, $style);
+      border: 1px solid nth($primaryColor, $style);
+      border-width: 0px 8px;
+      a {
+        color: nth($primaryColor, $style);
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    .content {
+      .example_list {
+        ul {
+          li {
+            a {
+              &:hover {
+                border: 1px solid nth($primaryColor, $style);
+                color: nth($primaryColor, $style);
+                border-left-width: 14px;
+              }
+            }
+          }
+        }
+      }
+      .query_records_group {
+        .query_records_list {
+          .query_function {
+            .time {
+              color: nth($primaryColor, $style);
+            }
+          }
+          ul {
+            li {
+              &:hover {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      .extend_list {
+        ul {
+          li {
+            button {
+              &.btn {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
+              }
+            }
+          }
+        }
+      }
+      .Keyelements_list {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   // _form.scss
   input[type='submit'] {
     @include btn_setting(nth($primaryColor, $style), #fff);
@@ -8708,6 +10170,62 @@
             a {
               color: nth($primaryColor, $style);
             }
+          }
+        }
+      }
+    }
+    .AI_explain {
+      span {
+        &:before {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+    }
+    .query_context_block {
+      .title {
+        background-color: nth($primaryColor, $style);
+        &:after {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: transparent transparent transparent nth($primaryColor, $style);
+        }
+      }
+      .contextbtn_group {
+        ul {
+          li {
+            a {
+              &:hover,
+              &:focus,
+              &.active {
+                background-color: nth($primaryColor, $style);
+              }
+            }
+          }
+        }
+      }
+      @include screen('xs_mobile') {
+        .title {
+          &:after {
+            border: 8px solid nth($primaryColor, $style);
+            border-color: nth($primaryColor, $style) transparent transparent transparent;
+          }
+        }
+      }
+    }
+    .continue_search_group {
+      .contextext {
+        button {
+          &.btn {
+            &:hover {
+              background-color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+      .expand_block {
+        button {
+          &.expandbtn {
+            background-color: nth($primaryColor, $style) !important;
           }
         }
       }
@@ -8981,6 +10499,17 @@
       }
     }
   }
+  //分類
+  .classification_group {
+    background-color: nth($primaryColor, $style);
+  }
+  // 說明
+  .AI_explain {
+    &:before {
+      border: 8px solid nth($primaryColor, $style);
+      border-color: transparent transparent transparent nth($primaryColor, $style);
+    }
+  }
   // _fatfooter.scss
   .fatfooter {
     background-color: darken(nth($primaryColor, $style), 10);
@@ -9140,5 +10669,17 @@
   }
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
+  }
+  // _btn.scss
+  .btn_primaryColor {
+    @include btn_setting(nth($primaryColor, $style), #fff);
+    border: none;
+    &:hover,
+    &.avtive {
+      color: nth($primaryColor, $style) !important;
+      @include btn_setting(#eee, nth($primaryColor, $style));
+      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+      border: none;
+    }
   }
 }

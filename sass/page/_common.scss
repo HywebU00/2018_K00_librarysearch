@@ -485,7 +485,7 @@
         }
         select {
           background-color: #fff;
-          border-radius: 5px;
+          border-radius: 4px;
           border: 1px solid $color-gray;
           font-size: 1em;
           padding: 0 24px 0 0.5em;
@@ -497,7 +497,7 @@
         box-shadow: none;
         width: 100%;
         margin: 0;
-        border-radius: 5px;
+        border-radius: 4px;
         border: 1px solid $color-gray;
         padding: 0 24px 0 0.5em !important;
         height: 2.4em;
@@ -666,7 +666,7 @@
         margin-right: 2px;
         margin-bottom: 0;
         display: inline-block;
-        border-radius: 5px;
+        border-radius: 4px;
         width: 100%;
         @include box-sizing;
       }
@@ -980,7 +980,7 @@
     padding: 5px 15px;
     margin: 0 0 15px;
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: 4px;
     h3 {
       font-size: 1em;
       margin: 13px 0 5px;
@@ -989,7 +989,7 @@
     .condition {
       position: relative;
       border: 1px solid #d2d2d2;
-      border-radius: 5px;
+      border-radius: 4px;
       padding: 3px 30px 3px 10px;
       margin: 0 0 6px;
       float: none;
@@ -1017,7 +1017,7 @@
     .cancel {
       float: right;
       border: 1px solid #d2d2d2;
-      border-radius: 5px;
+      border-radius: 4px;
       margin: 10px 0;
       a {
         display: block;

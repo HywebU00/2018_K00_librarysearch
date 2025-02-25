@@ -156,6 +156,7 @@ textarea,
 select,
 button {
   @include formStyle(); // 預設載入formStyle設定
+  border-radius: 4px;
 }
 input,
 select,
@@ -428,7 +429,7 @@ abbr[title] {
   float: left;
   border: 1px solid #d3d3d3;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 4px;
   margin-bottom: 0.3em;
   width: 100%;
   input {

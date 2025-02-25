@@ -210,13 +210,21 @@
                                             <option value="">叢書名</option>
                                         </select>
                                     </div>
-                                    <div class="form_search">
-                                        <input type="text" name="" value="" placeholder="請輸入關鍵文字" class="keyboardInput">
-                                        <input type="submit" name="" value="">
-                                        <!-- 最近搜尋 start -->
-                                        <div class="recent_searches"></div>
-                                        <!-- 最近搜尋 end -->
+                                    <!-- 查詢系統分類 start -->
+                                    <div class="query_system_block">
+                                        <div class="query_system_tabs">
+                                            <button type="button" class="btn btn_primaryColor">關鍵字搜尋</button>
+                                            <button type="button" class="btn btn_primaryColor  avtive AI_situational_btn">AI情境式找書</button>
+                                        </div>
+                                        <div class="form_search">
+                                            <input type="text" name="" value="" placeholder="請輸入關鍵文字" class="keyboardInput">
+                                            <input type="submit" name="" value="">
+                                            <!-- 最近搜尋 start -->
+                                            <div class="recent_searches"></div>
+                                            <!-- 最近搜尋 end -->
+                                        </div>
                                     </div>
+                                    <!-- 查詢系統分類 end -->
                                     <div class="onlysearch"><input type="checkbox" name="" value="">僅查詢目前可借閱館藏</div>
                                     <div class="searchall">
                                         <a href="javascript:;" class="searchfield_btn">查全部欄位</a>
@@ -286,6 +294,81 @@
                                 </div>
                             </div>
                             <!-- 查詢欄位 燈箱end-->
+                            <!-- AI情境式找書  燈箱 start -->
+                            <div class="lightboxstyle AI_situationalstyle">
+                                <div class="overlay"></div>
+                                <div class="lightboxAI_situational">
+                                    <div class="close"></div>
+                                    <h2>嗨~ 今天想來點什麼書呢？<br>
+                                        提供一段描述，AI可以幫您找到符合情境的書喔！</h2>
+                                    <div class="content">
+                                        <form action="">
+                                            <div class="describe_block">
+                                                <textarea name="" id="" rows="3"></textarea>
+                                                <button type="button" class="btn">送出</button>
+                                            </div>
+                                            <div class="query_records_btn"><a href="#">查詢記錄</a></div>
+                                        </form>
+                                        <div class="title"><a href="#">參考範例</a></div>
+                                        <div class="example_list">
+                                            <ul>
+                                                <li><a href="#">我心情不好，想看點會讓我開心的書。</a></li>
+                                                <li><a href="#">最近壓力很大，我想要找一些幫助我放鬆心情、達到內心平靜的冥想或靜修書籍。</a></li>
+                                                <li><a href="#">想種些好上手的室內盆栽</a></li>
+                                                <li><a href="#">我感覺自己需要充實，想找一些能夠學到新知識或技巧的書，比如新手寫程式的書。</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- AI情境式找書  燈箱 end -->
+                            <!-- AI情境式找書  燈箱 查詢記錄 start -->
+                            <div class="lightboxstyle AI_situationalstyle_records">
+                                <div class="overlay"></div>
+                                <div class="lightboxAI_situational">
+                                    <div class="close"></div>
+                                    <button type="button" class="btn-white backbtn">回查詢</button>
+                                    <h2>查詢記錄</h2>
+                                    <div class="content">
+                                        <div class="query_records_group">
+                                            <!-- 1 -->
+                                            <div class="query_records_list">
+                                                <div class="query_function">
+                                                    <div class="time">今天</div>
+                                                    <div class="batch_del"><a href="#">批次刪除</a></div>
+                                                </div>
+                                                <ul>
+                                                    <li>我心情不好，想看點會讓我開心的書。<a href="#" class="del">刪除</a></li>
+                                                    <li>我最近在工作上遇到挑戰，想找一些能激勵我並提供正能量的書籍。<a href="#" class="del">刪除</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- 2 -->
+                                            <div class="query_records_list">
+                                                <div class="query_function">
+                                                    <div class="time">本月</div>
+                                                    <div class="batch_del"><a href="#">批次刪除</a></div>
+                                                </div>
+                                                <ul>
+                                                    <li>想讀一些充滿冒險和刺激情節的小說。<a href="#" class="del">刪除</a></li>
+                                                    <li>想找一些我小時候讀過的經典兒童文學，重溫那些美好的記憶。<a href="#" class="del">刪除</a></li>
+                                                </ul>
+                                            </div>
+                                            <!-- 3 -->
+                                            <div class="query_records_list">
+                                                <div class="query_function">
+                                                    <div class="time">更早</div>
+                                                    <div class="batch_del"><a href="#">批次刪除</a></div>
+                                                </div>
+                                                <ul>
+                                                    <li>最近心情有些低落，推薦幾本能讓我開懷大笑或感到愉悅的幽默書吧。<a href="#" class="del">刪除</a></li>
+                                                </ul>
+                                            </div>
+                                            <!--  -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- AI情境式找書  燈箱 查詢記錄 end -->
                         </div>
                     </div>
                 </section>

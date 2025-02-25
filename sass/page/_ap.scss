@@ -4056,6 +4056,11 @@
   @include screen('mobile') {
     margin: 0 20px 60px;
   }
+  &.nobox {
+    box-shadow: none;
+    padding: 30px 0;
+    border: none;
+  }
   &.studyroom {
     box-shadow: none;
     padding: 30px 0px;
@@ -5261,6 +5266,204 @@
               text-decoration: none;
             }
           }
+        }
+      }
+    }
+  }
+  // 說明
+  .AI_explain {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    span {
+      position: relative;
+      &:before {
+        content: '';
+        border: 8px solid nth($primaryColor, $style);
+        border-color: transparent transparent transparent nth($primaryColor, $style);
+        position: absolute;
+        left: -1em;
+        top: 3px;
+      }
+    }
+  }
+  //分類
+  .classification_group {
+    padding: 5px;
+    background-color: nth($primaryColor, $style);
+    border-radius: 5px;
+    margin: 10px 0 20px;
+  }
+  // 查詢情境
+  .query_context_block {
+    display: flex;
+    padding: 0.5em;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-bottom: 1.5em;
+    align-items: center;
+
+    .title {
+      flex: 0 0 auto;
+      flex-basis: 108px;
+      font-size: 1.125rem;
+      margin: 0 1em 0 0;
+      background-color: nth($primaryColor, $style);
+      color: #fff;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      position: relative;
+      box-sizing: border-box;
+      &:after {
+        content: '';
+        border: 8px solid nth($primaryColor, $style);
+        border-color: transparent transparent transparent nth($primaryColor, $style);
+        position: absolute;
+        right: -15px;
+        top: 13px;
+      }
+    }
+    .content {
+      flex: 1 1 auto;
+      @include text-overflow;
+    }
+    .contextbtn_group {
+      flex: 0 0 auto;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          margin-left: 0.3em;
+          a {
+            display: block;
+            padding: 0.5em 1em 0.5em 2.2em;
+            background-color: #666;
+            color: #fff;
+            border-radius: 50px;
+            transition: 0.5s;
+            &.extend {
+              background-image: url('../images/context_icon01.svg');
+              background-position: 0.6em center;
+              background-repeat: no-repeat;
+              background-size: 18px;
+            }
+            &.edit {
+              background-image: url('../images/context_icon02.svg');
+              background-position: 0.8em center;
+              background-repeat: no-repeat;
+              background-size: 15px 20px;
+            }
+            &:hover,
+            &:focus,
+            &.active {
+              background-color: nth($primaryColor, $style);
+            }
+          }
+        }
+      }
+    }
+    @include screen('mobile') {
+      flex-wrap: wrap;
+      justify-content: center;
+      .title {
+      }
+      .content {
+        flex-basis: calc(100% - 108px - 3em);
+      }
+      .contextbtn_group {
+        flex-basis: 100%;
+      }
+    }
+    @include screen('xs_mobile') {
+      padding: 0.5em 1em;
+      .title {
+        margin-bottom: 1em;
+        margin-right: 0;
+        &:after {
+          border: 8px solid nth($primaryColor, $style);
+          border-color: nth($primaryColor, $style) transparent transparent transparent;
+          position: absolute;
+          right: calc(50% - 8px);
+          top: auto;
+          bottom: -16px;
+        }
+      }
+      .content {
+        flex-basis: 100%;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+  // 繼續查別的情境
+  .continue_search_group {
+    z-index: 9;
+    background-color: #ddd;
+    display: flex;
+    padding: 8px 8px;
+    border-radius: 5px;
+    width: 40vw;
+    margin: 0 auto;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    &.fixed {
+      position: fixed;
+      bottom: 50px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    .contextext {
+      flex: 1 1 auto;
+      display: flex;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 3px 5px;
+      margin-right: 5px;
+      align-items: center;
+      input {
+        margin: 0;
+        border: none;
+      }
+      button {
+        font-size: 0;
+        flex: 0 0 auto;
+        flex-basis: 56px;
+
+        &.btn {
+          background-color: #888;
+          width: 56px;
+          height: 36px;
+          border-radius: 50px;
+          background-image: url('../images/icon/icon_aiarrow_white.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 40%;
+          &:hover {
+            background-color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+    .expand_block {
+      flex: 0 0 auto;
+      button {
+        &.expandbtn {
+          padding-left: 1em;
+          background-image: url('../images/icon_expand.svg');
+          background-position: 11px center;
+          background-repeat: no-repeat;
+          background-size: 16px;
+          background-color: nth($primaryColor, $style) !important;
+          color: #fff;
+          margin: 0;
+          padding: 0.7em 0.1em 0.6em 1.2em;
+          border: none;
+          transition: 0.5s;
+          // &:hover {
+          //   background-color: $importantColor !important;
+          // }
         }
       }
     }

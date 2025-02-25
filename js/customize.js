@@ -1459,6 +1459,112 @@ $(function () {
   });
 });
 
+// AI情境式找書
+$('.AI_situational_btn').click(function () {
+  $('.AI_situationalstyle').fadeIn();
+  $('body').addClass('fix');
+});
+$('.AI_situationalstyle .close').click(function () {
+  $('.AI_situationalstyle').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('.AI_situationalstyle').fadeOut();
+  $('body').removeClass('fix');
+});
+//
+$('.lightboxAI_situational .describe_block textarea').click(function () {
+  $('.describe_block button.btn').addClass('btn-submit');
+});
+
+$('.describe_block button.voice').click(function () {
+  $(this).toggleClass('active');
+});
+
+// AI情境式找書＿查詢記錄
+$('.lightboxAI_situational .query_records_btn').click(function () {
+  $('.AI_situationalstyle_records').fadeIn();
+  $('.AI_situationalstyle').fadeOut();
+  $('body').addClass('fix');
+});
+$('.AI_situationalstyle_records .close').click(function () {
+  $('.AI_situationalstyle_records').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('.AI_situationalstyle_records').fadeOut();
+  $('body').removeClass('fix');
+});
+//
+$('.AI_situationalstyle_records .backbtn').click(function () {
+  $('.AI_situationalstyle_records').fadeOut();
+  $('.AI_situationalstyle').fadeIn();
+  $('body').addClass('fix');
+});
+
+// AI延伸情境
+$('.query_context_block .contextbtn_group .extend').click(function () {
+  $('.AI_extendstyle').fadeIn();
+  $('body').addClass('fix');
+});
+$('.AI_extendstyle .close').click(function () {
+  $('.AI_extendstyle').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('.AI_extendstyle').fadeOut();
+  $('body').removeClass('fix');
+});
+// AI編輯情境
+$(' .query_context_block .contextbtn_group .edit').click(function () {
+  $('.AI_editstyle').fadeIn();
+  $('body').addClass('fix');
+});
+$('.AI_editstyle .close').click(function () {
+  $('.AI_editstyle').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('.AI_editstyle').fadeOut();
+  $('body').removeClass('fix');
+});
+
+// AI編輯情境＿查詢記錄
+$('.AI_editstyle .lightboxAI_situational .query_records_btn').click(function () {
+  $('.AI_situationalstyle_records').fadeIn();
+  $('.AI_editstyle').fadeOut();
+  $('body').addClass('fix');
+});
+$('.AI_situationalstyle_records .close').click(function () {
+  $('.AI_situationalstyle_records').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('.AI_situationalstyle_records').fadeOut();
+  $('body').removeClass('fix');
+});
+//
+$('.AI_situationalstyle_records .backbtn').click(function () {
+  $('.AI_situationalstyle_records').fadeOut();
+  $('.AI_editstyle').fadeIn();
+  $('body').addClass('fix');
+});
+
+// 繼續查別情境展開
+
+// AI情境式找書
+$('.continue_search_group .expand_block .expandbtn').click(function () {
+  $('.AI_situationalstyle').fadeIn();
+  $('body').addClass('fix');
+});
+$('.AI_situationalstyle .close').click(function () {
+  $('.AI_situationalstyle').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('.AI_situationalstyle').fadeOut();
+  $('body').removeClass('fix');
+});
 //詳目頁 匯出點選
 $(function () {
   $('.export_block .close').click(function () {
@@ -1726,6 +1832,24 @@ $(function () {
       }
     });
   }
+});
+// 繼續查別的情境
+$(function () {
+  var $continue_search_group = $('.continue_search_group'); // 需要固定的區塊
+  var offsetTop = $continue_search_group.offset().top; // 區塊原始的位置
+  var marginBottom = 350; // 與底部的距離閾值
+  $(window).on('scroll resize', function () {
+    var scrollTop = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var documentHeight = $(document).height();
+    var bottomSpace = documentHeight - (scrollTop + windowHeight); // 計算距離底部的空間
+
+    if (bottomSpace < marginBottom) {
+      $continue_search_group.removeClass('fixed');
+    } else {
+      $continue_search_group.addClass('fixed');
+    }
+  });
 });
 // 自訂卡片
 $(function () {

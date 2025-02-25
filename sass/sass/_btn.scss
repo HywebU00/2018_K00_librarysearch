@@ -122,6 +122,19 @@ $btn-radius: 4px;
   @extend %btn;
   @include btn_setting($color-orange, #fff);
 }
+.btn_primaryColor {
+  @extend %btn;
+  @include btn_setting(nth($primaryColor, $style), #fff);
+  border: none;
+
+  &:hover,
+  &.avtive {
+    color: nth($primaryColor, $style) !important;
+    @include btn_setting(#eee, nth($primaryColor, $style));
+    box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+    border: none;
+  }
+}
 // 按鈕大小
 .btn-xl {
   font-size: $font-size * 1.5; //24px
