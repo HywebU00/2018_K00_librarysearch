@@ -2476,14 +2476,17 @@ button {
   .backbtn {
     position: absolute;
     left: 60px;
-    top: 20px;
+    top: 15px;
+    @include screen('xs_mobile') {
+      left: 20px;
+    }
   }
   h2 {
     font-size: 1.25em;
     font-weight: bold;
     text-align: left;
     border-bottom: none !important;
-    margin: 0px auto 20px;
+    margin: 10px auto 20px;
     padding: 0 30px 10px 0;
     line-height: 1.5em;
     text-align: center;
@@ -2562,6 +2565,7 @@ button {
     .query_records_btn {
       display: flex;
       justify-content: flex-end;
+      margin-bottom: 1em;
       a {
         display: block;
         padding: 0 0 0 1.5em;

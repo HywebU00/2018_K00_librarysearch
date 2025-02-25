@@ -5286,6 +5286,15 @@
         top: 3px;
       }
     }
+    @include screen('mobile') {
+      justify-content: flex-start;
+      span {
+        padding-left: 1.2em;
+        &:before {
+          left: 0;
+        }
+      }
+    }
   }
   //分類
   .classification_group {
@@ -5405,14 +5414,26 @@
     display: flex;
     padding: 8px 8px;
     border-radius: 5px;
-    width: 40vw;
+    width: 45vw;
     margin: 0 auto;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    @media (max-width: 1200px) {
+      width: 60vw;
+    }
+    @include screen('mobile') {
+      width: 80vw;
+    }
+    @include screen('xs_mobile') {
+      width: 85vw;
+    }
     &.fixed {
       position: fixed;
       bottom: 50px;
       left: 50%;
       transform: translate(-50%, 0);
+      // @include screen('xs_mobile') {
+      //   bottom: 150px;
+      // }
     }
     .contextext {
       flex: 1 1 auto;

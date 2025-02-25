@@ -9431,14 +9431,19 @@ button.backbtn {
 .lightboxAI_situational .backbtn {
   position: absolute;
   left: 60px;
-  top: 20px;
+  top: 15px;
+}
+@media screen and (max-width: 575px) {
+  .lightboxAI_situational .backbtn {
+    left: 20px;
+  }
 }
 .lightboxAI_situational h2 {
   font-size: 1.25em;
   font-weight: bold;
   text-align: left;
   border-bottom: none !important;
-  margin: 0px auto 20px;
+  margin: 10px auto 20px;
   padding: 0 30px 10px 0;
   line-height: 1.5em;
   text-align: center;
@@ -9516,6 +9521,7 @@ button.backbtn {
 .lightboxAI_situational .content .query_records_btn {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 1em;
 }
 .lightboxAI_situational .content .query_records_btn a {
   display: block;
@@ -30217,6 +30223,17 @@ em.yellowbg {
   left: -1em;
   top: 3px;
 }
+@media screen and (max-width: 767px) {
+  .AIgptgroup .AI_explain {
+    justify-content: flex-start;
+  }
+  .AIgptgroup .AI_explain span {
+    padding-left: 1.2em;
+  }
+  .AIgptgroup .AI_explain span:before {
+    left: 0;
+  }
+}
 .AIgptgroup .classification_group {
   padding: 5px;
   background-color: #005d98;
@@ -30332,9 +30349,24 @@ em.yellowbg {
   display: flex;
   padding: 8px 8px;
   border-radius: 5px;
-  width: 40vw;
+  width: 45vw;
   margin: 0 auto;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+@media (max-width: 1200px) {
+  .AIgptgroup .continue_search_group {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .AIgptgroup .continue_search_group {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 575px) {
+  .AIgptgroup .continue_search_group {
+    width: 85vw;
+  }
 }
 .AIgptgroup .continue_search_group.fixed {
   position: fixed;
