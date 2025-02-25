@@ -1478,7 +1478,7 @@ $('.lightboxAI_situational .describe_block textarea').click(function () {
 });
 
 $('.describe_block button.voice').click(function () {
-  $(this).toggleClass('active');
+  $(this).stop().toggleClass('active');
 });
 
 // AI情境式找書＿查詢記錄
