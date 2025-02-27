@@ -268,9 +268,10 @@
     // 查詢系統分類
     .query_system_block {
       background-color: rgba(255, 255, 255, 0.5);
-      padding: 20px 20px 10px;
+      padding: 24px 20px 14px;
       position: relative;
       margin-bottom: 1em;
+      border-radius: 10px;
       &:has(.query_system_tabs) {
         padding: 30px 20px 10px;
       }
@@ -285,7 +286,7 @@
         margin-right: 0.4em;
         margin-left: 0;
         border-radius: 50px;
-        font-size: 1.125rem;
+        font-size: 1rem;
       }
       @include screen('xs_mobile') {
         display: block;

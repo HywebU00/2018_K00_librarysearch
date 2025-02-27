@@ -10207,9 +10207,10 @@ button.backbtn {
 }
 .search_block .searchsystem .query_system_block {
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 20px 20px 10px;
+  padding: 24px 20px 14px;
   position: relative;
   margin-bottom: 1em;
+  border-radius: 10px;
 }
 .search_block .searchsystem .query_system_block:has(.query_system_tabs) {
   padding: 30px 20px 10px;
@@ -10225,7 +10226,7 @@ button.backbtn {
   margin-right: 0.4em;
   margin-left: 0;
   border-radius: 50px;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 @media screen and (max-width: 575px) {
   .search_block .searchsystem .query_system_tabs {
