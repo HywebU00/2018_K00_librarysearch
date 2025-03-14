@@ -2848,3 +2848,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // 更新选项并设置滑块位置
   updateSegmentedControl();
 });
+
+// 詳目頁
+
+$(function () {
+  var _limitrowsbtn = $('.bookdata .listdata  ul li .more a');
+  _limitrowsbtn.click(function () {
+    if (_limitrowsbtn.parents('.limitrows').hasClass('cancel')) {
+      _limitrowsbtn.text('顯示更多');
+      _limitrowsbtn.parents('.limitrows').removeClass('cancel');
+    } else {
+      _limitrowsbtn.text('收合資料');
+      _limitrowsbtn.parents('.limitrows').addClass('cancel');
+    }
+  });
+});

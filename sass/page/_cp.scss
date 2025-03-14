@@ -446,6 +446,31 @@
             padding-left: 15px;
             margin-bottom: 10px;
             display: block;
+            &.limitrows {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: flex-end;
+              &.cancel {
+                span {
+                  height: auto;
+                  -webkit-line-clamp: unset;
+                }
+              }
+
+              span {
+                @include text-line(3, 23px);
+                flex: 1 1 auto;
+                flex-basis: 100%;
+              }
+              .more {
+                display: block;
+                margin: 10px 0;
+                a {
+                  display: inline-block;
+                  white-space: nowrap;
+                }
+              }
+            }
             a {
               color: nth($linkColor, $style);
               text-decoration: underline;
