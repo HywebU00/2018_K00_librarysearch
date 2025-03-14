@@ -859,6 +859,21 @@
     }
   }
   // _template.scss
+  .btnstyle {
+    &.whitebg2 {
+      border: 1px solid nth($primaryColor, $style);
+      background-color: #fff;
+      color: nth($primaryColor, $style) !important;
+      transition: 0.2s;
+      box-shadow: none;
+      &:hover,
+      &:focus {
+        background-color: #eee;
+        border: 1px solid nth($primaryColor, $style);
+        color: nth($primaryColor, $style) !important;
+      }
+    }
+  }
   // line
   .linecontent {
     &.mobile-card {
@@ -917,6 +932,7 @@
       background-color: lighten(nth($primaryColor, $style), 5);
     }
   }
+
   // sitemap
   .cascading {
     li {
@@ -1829,6 +1845,19 @@
       &:hover {
         background-color: lighten(#206061, 10);
         border: 2px solid lighten(#206061, 10);
+      }
+    }
+    &.whitebg2 {
+      border: 1px solid nth($primaryColor, $style);
+      background-color: #fff;
+      color: nth($primaryColor, $style) !important;
+      transition: 0.2s;
+      box-shadow: none;
+      &:hover,
+      &:focus {
+        background-color: #eee;
+        border: 1px solid nth($primaryColor, $style);
+        color: nth($primaryColor, $style) !important;
       }
     }
   }
@@ -3230,6 +3259,19 @@
       &:hover {
         background-color: #59800b !important;
         border: 1px solid #59800b !important;
+      }
+    }
+    &.whitebg2 {
+      border: 1px solid nth($primaryColor, $style);
+      background-color: #fff;
+      color: nth($primaryColor, $style) !important;
+      transition: 0.2s;
+      box-shadow: none;
+      &:hover,
+      &:focus {
+        background-color: #eee;
+        border: 1px solid nth($primaryColor, $style);
+        color: nth($primaryColor, $style) !important;
       }
     }
   }
@@ -4688,6 +4730,19 @@
         border: 2px solid darken(nth($primaryColor, $style), 5);
       }
     }
+    &.whitebg2 {
+      border: 1px solid nth($primaryColor, $style);
+      background-color: #fff;
+      color: nth($primaryColor, $style) !important;
+      transition: 0.2s;
+      box-shadow: none;
+      &:hover,
+      &:focus {
+        background-color: #eee;
+        border: 1px solid nth($primaryColor, $style);
+        color: nth($primaryColor, $style) !important;
+      }
+    }
   }
   // line
   .linecontent {
@@ -5661,6 +5716,19 @@
       &:hover {
         background-color: lighten(nth($primaryColor, $style), 10);
         border: 2px solid lighten(nth($primaryColor, $style), 10);
+      }
+    }
+    &.whitebg2 {
+      border: 1px solid nth($primaryColor, $style);
+      background-color: #fff;
+      color: nth($primaryColor, $style) !important;
+      transition: 0.2s;
+      box-shadow: none;
+      &:hover,
+      &:focus {
+        background-color: #eee;
+        border: 1px solid nth($primaryColor, $style);
+        color: nth($primaryColor, $style) !important;
       }
     }
   }
@@ -6648,6 +6716,19 @@
         border: 2px solid darken(nth($primaryColor, $style), 8);
       }
     }
+    &.whitebg2 {
+      border: 1px solid nth($primaryColor, $style);
+      background-color: #fff;
+      color: nth($primaryColor, $style) !important;
+      transition: 0.2s;
+      box-shadow: none;
+      &:hover,
+      &:focus {
+        background-color: #eee;
+        border: 1px solid nth($primaryColor, $style);
+        color: nth($primaryColor, $style) !important;
+      }
+    }
   }
   // line
   .linecontent {
@@ -7616,6 +7697,19 @@
       &:hover {
         background-color: darken(nth($primaryColor, $style), 5);
         border: 2px solid darken(nth($primaryColor, $style), 5);
+      }
+    }
+    &.whitebg2 {
+      border: 1px solid nth($primaryColor, $style);
+      background-color: #fff;
+      color: nth($primaryColor, $style) !important;
+      transition: 0.2s;
+      box-shadow: none;
+      &:hover,
+      &:focus {
+        background-color: #eee;
+        border: 1px solid nth($primaryColor, $style);
+        color: nth($primaryColor, $style) !important;
       }
     }
   }
@@ -8607,6 +8701,19 @@
         border: 2px solid nth($primaryColor, $style);
       }
     }
+    &.whitebg2 {
+      border: 1px solid nth($primaryColor, $style);
+      background-color: #fff;
+      color: nth($primaryColor, $style) !important;
+      transition: 0.2s;
+      box-shadow: none;
+      &:hover,
+      &:focus {
+        background-color: #eee;
+        border: 1px solid nth($primaryColor, $style);
+        color: nth($primaryColor, $style) !important;
+      }
+    }
   }
   // line
   .linecontent {
@@ -9579,6 +9686,19 @@
         border: 2px solid nth($primaryColor, $style);
       }
     }
+    &.whitebg2 {
+      border: 1px solid nth($primaryColor, $style);
+      background-color: #fff;
+      color: nth($primaryColor, $style) !important;
+      transition: 0.2s;
+      box-shadow: none;
+      &:hover,
+      &:focus {
+        background-color: #eee;
+        border: 1px solid nth($primaryColor, $style);
+        color: nth($primaryColor, $style) !important;
+      }
+    }
   }
   // line
   .linecontent {
@@ -10535,6 +10655,19 @@
       &:hover {
         background-color: nth($primaryColor, $style);
         border: 2px solid nth($primaryColor, $style);
+      }
+    }
+    &.whitebg2 {
+      border: 1px solid nth($primaryColor, $style);
+      background-color: #fff;
+      color: nth($primaryColor, $style) !important;
+      transition: 0.2s;
+      box-shadow: none;
+      &:hover,
+      &:focus {
+        background-color: #eee;
+        border: 1px solid nth($primaryColor, $style);
+        color: nth($primaryColor, $style) !important;
       }
     }
   }

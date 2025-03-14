@@ -6323,6 +6323,18 @@ pre {
   border: 2px solid #d2d2d2;
   color: #333 !important;
 }
+.btnstyle.whitebg2 {
+  border: 1px solid #005d98;
+  background-color: #fff;
+  color: #005d98 !important;
+  transition: 0.2s;
+  box-shadow: none;
+}
+.btnstyle.whitebg2:hover, .btnstyle.whitebg2:focus {
+  background-color: #eee;
+  border: 1px solid #005d98;
+  color: #005d98 !important;
+}
 .btnstyle.brownbg {
   background-color: #59493f;
   border: 2px solid #59493f;

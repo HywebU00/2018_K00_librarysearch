@@ -648,6 +648,19 @@ select {
       color: #333 !important;
     }
   }
+  &.whitebg2 {
+    border: 1px solid nth($primaryColor, $style);
+    background-color: #fff;
+    color: nth($primaryColor, $style) !important;
+    transition: 0.2s;
+    box-shadow: none;
+    &:hover,
+    &:focus {
+      background-color: #eee;
+      border: 1px solid nth($primaryColor, $style);
+      color: nth($primaryColor, $style) !important;
+    }
+  }
   &.brownbg {
     background-color: #59493f;
     border: 2px solid #59493f;
