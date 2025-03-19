@@ -723,6 +723,24 @@
   .reminder_window_block {
     background-color: nth($linkColor, $style);
   }
+  .prize_category {
+    ul {
+      li {
+        a {
+          &.here {
+            background-color: nth($primaryColor, $style);
+            &:hover {
+              color: #fff;
+              background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+            }
+          }
+          &:hover {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -1743,6 +1761,24 @@
   }
   .reminder_window_block {
     background-color: nth($linkColor, $style);
+  }
+  .prize_category {
+    ul {
+      li {
+        a {
+          &.here {
+            background-color: nth($primaryColor, $style);
+            &:hover {
+              color: #fff;
+              background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+            }
+          }
+          &:hover {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
   }
   // _cp.scss
   .book_detail {
@@ -2924,6 +2960,24 @@
   }
   .reminder_window_block {
     background-color: nth($linkColor, $style);
+  }
+  .prize_category {
+    ul {
+      li {
+        a {
+          &.here {
+            background-color: nth($primaryColor, $style);
+            &:hover {
+              color: #fff;
+              background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+            }
+          }
+          &:hover {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
   }
   // _cp.scss
   .book_detail {
@@ -4624,6 +4678,24 @@
   .reminder_window_block {
     background-color: nth($linkColor, $style);
   }
+  .prize_category {
+    ul {
+      li {
+        a {
+          &.here {
+            background-color: nth($primaryColor, $style);
+            &:hover {
+              color: #fff;
+              background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+            }
+          }
+          &:hover {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -5614,6 +5686,24 @@
   }
   .reminder_window_block {
     background-color: nth($linkColor, $style);
+  }
+  .prize_category {
+    ul {
+      li {
+        a {
+          &.here {
+            background-color: nth($primaryColor, $style);
+            &:hover {
+              color: #fff;
+              background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+            }
+          }
+          &:hover {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
   }
   // _cp.scss
   .book_detail {
@@ -6613,6 +6703,24 @@
   .reminder_window_block {
     background-color: nth($linkColor, $style);
   }
+  .prize_category {
+    ul {
+      li {
+        a {
+          &.here {
+            background-color: nth($primaryColor, $style);
+            &:hover {
+              color: #fff;
+              background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+            }
+          }
+          &:hover {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -7595,6 +7703,24 @@
   }
   .reminder_window_block {
     background-color: nth($linkColor, $style);
+  }
+  .prize_category {
+    ul {
+      li {
+        a {
+          &.here {
+            background-color: nth($primaryColor, $style);
+            &:hover {
+              color: #fff;
+              background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+            }
+          }
+          &:hover {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
   }
   // _cp.scss
   .book_detail {
@@ -8598,6 +8724,24 @@
   .reminder_window_block {
     background-color: nth($linkColor, $style);
   }
+  .prize_category {
+    ul {
+      li {
+        a {
+          &.here {
+            background-color: nth($primaryColor, $style);
+            &:hover {
+              color: #fff;
+              background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+            }
+          }
+          &:hover {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -9583,6 +9727,24 @@
   .reminder_window_block {
     background-color: nth($linkColor, $style);
   }
+  .prize_category {
+    ul {
+      li {
+        a {
+          &.here {
+            background-color: nth($primaryColor, $style);
+            &:hover {
+              color: #fff;
+              background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+            }
+          }
+          &:hover {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
   // _cp.scss
   .book_detail {
     .book_cover_source {
@@ -10553,6 +10715,24 @@
   }
   .reminder_window_block {
     background-color: nth($linkColor, $style);
+  }
+  .prize_category {
+    ul {
+      li {
+        a {
+          &.here {
+            background-color: nth($primaryColor, $style);
+            &:hover {
+              color: #fff;
+              background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+            }
+          }
+          &:hover {
+            color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
   }
   // _cp.scss
   .book_detail {

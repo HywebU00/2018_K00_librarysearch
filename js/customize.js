@@ -1565,6 +1565,87 @@ $('.overlay').click(function () {
   $('.AI_situationalstyle').fadeOut();
   $('body').removeClass('fix');
 });
+
+//獎勵清單我要兌換
+$('.reward_lightboxbtn').click(function () {
+  $('#reward_lightbox').fadeIn();
+  $('body').addClass('fix');
+});
+$('.lightboxstyle_block .close').click(function () {
+  $('#reward_lightbox').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('#reward_lightbox').fadeOut();
+  $('body').removeClass('fix');
+});
+
+//獎勵清單累積點數
+$('.mypoints2 .points_btn').click(function () {
+  $('#points_style').fadeIn();
+  $('body').addClass('fix');
+});
+$('.lightboxstyle_block .close').click(function () {
+  $('#points_style').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('#points_style').fadeOut();
+  $('body').removeClass('fix');
+});
+//即將到期點數
+$('.mypoints2 .upcomingpoints_btn').click(function () {
+  $('#upcomingpoints_style').fadeIn();
+  $('body').addClass('fix');
+});
+$('.lightboxstyle_block .close').click(function () {
+  $('#upcomingpoints_style').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('#upcomingpoints_style').fadeOut();
+  $('body').removeClass('fix');
+});
+
+//點數確認視窗
+$('.reward_list2 .pointsconfirm_btn').click(function () {
+  $('#pointsconfirm_style').fadeIn();
+  $('body').addClass('fix');
+});
+$('.lightboxstyle_block .close').click(function () {
+  $('#pointsconfirm_style').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('#pointsconfirm_style').fadeOut();
+  $('body').removeClass('fix');
+});
+//點數期限
+$('.reward_list2 .points_theterm_btn').click(function () {
+  $('#points_theterm_style').fadeIn();
+  $('body').addClass('fix');
+});
+$('.lightboxstyle_block .close').click(function () {
+  $('#points_theterm_style').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('#points_theterm_style').fadeOut();
+  $('body').removeClass('fix');
+});
+// 提醒視窗
+$('.reminder_window_btn').click(function () {
+  $('#reminder_window_style').fadeIn();
+  $('body').addClass('fix');
+});
+$('.lightboxstyle_block .close').click(function () {
+  $('#reminder_window_style').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('#reminder_window_style').fadeOut();
+  $('body').removeClass('fix');
+});
 //詳目頁 匯出點選
 $(function () {
   $('.export_block .close').click(function () {
@@ -2850,7 +2931,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // 詳目頁
-
 $(function () {
   var _limitrowsbtn = $('.bookdata .listdata  ul li .more a');
   _limitrowsbtn.click(function () {
@@ -2860,6 +2940,19 @@ $(function () {
     } else {
       _limitrowsbtn.text('收合資料');
       _limitrowsbtn.parents('.limitrows').addClass('cancel');
+    }
+  });
+});
+// 閱讀存摺_獎勵查詢
+$(function () {
+  var _collapse_btn = $('.read_passbook_content .btn_grp .collapse_btn');
+  _collapse_btn.click(function () {
+    if (_collapse_btn.parents('.read_passbook_content').hasClass('formclose')) {
+      _collapse_btn.text('收合');
+      _collapse_btn.parents('.read_passbook_content').removeClass('formclose');
+    } else {
+      _collapse_btn.text('展開');
+      _collapse_btn.parents('.read_passbook_content').addClass('formclose');
     }
   });
 });

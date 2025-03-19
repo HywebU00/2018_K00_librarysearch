@@ -123,6 +123,160 @@
   @include screen('mobile') {
     text-align: left;
   }
+  &.read_passbook {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: none;
+    margin-bottom: 10px;
+    align-items: center;
+    // justify-content: flex-end;
+    &.read_passbook_s {
+      padding: 0 30px 0;
+    }
+    .rightdata {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: flex-end;
+      padding-left: 5px;
+      .choosebtn {
+        .prompt_block3 {
+          right: 0 !important;
+          left: auto;
+        }
+      }
+    }
+
+    .data_explain {
+      flex: 1 1 auto;
+      flex-basis: 100%;
+      margin-bottom: 15px;
+    }
+
+    @include screen('xs_mobile') {
+      .prize_category {
+        flex-basis: 100%;
+        margin-bottom: 10px;
+      }
+      .data_quantity2 {
+        margin: 0;
+      }
+    }
+    @media (max-width: 380px) {
+      .data_quantity2 {
+        width: auto;
+        margin: 0;
+      }
+    }
+  }
+}
+// 閱讀提醒
+.read_remind {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  background-color: #fdeeee;
+  color: $color-red;
+  padding: 5px 10px 3px 40px;
+  margin-bottom: 15px;
+  text-align: left;
+  border-radius: 5px;
+  border: 1px solid #fee8e8;
+  position: relative;
+  &:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 1px solid $color-red;
+    border-radius: 50%;
+    position: absolute;
+    left: 13px;
+    top: 8px;
+  }
+  &:after {
+    content: '!';
+    position: absolute;
+    left: 19px;
+    top: 6px;
+    color: $color-red;
+  }
+}
+
+// 獎品分類
+.prize_category {
+  flex: 0 0 auto;
+  margin-bottom: 5px;
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      color: #333;
+      margin-right: 5px;
+      a {
+        padding: 5px 10px;
+        display: block;
+        border-radius: 4px;
+        background-color: #ddd;
+        &.here {
+          background-color: nth($primaryColor, $style);
+          color: #fff;
+          transition: 0.5s;
+          &:hover {
+            color: #fff;
+            background-color: darken($color: nth($primaryColor, $style), $amount: 5);
+          }
+        }
+        &:hover {
+          color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+}
+// 日期選擇
+.date_selection {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 5px 0 10px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+
+  span {
+    margin-right: 0px;
+    color: #666;
+  }
+  .datepick {
+    flex: 0 0 auto;
+    position: relative;
+
+    input {
+      padding: 0.25em 0em;
+      margin-bottom: 0;
+      border: none;
+    }
+    > input[type='date'] {
+      width: 7.5em;
+    }
+    + .datepick {
+      margin-left: 1em;
+      &:before {
+        content: '~';
+        font-size: 1.5em;
+        color: #777;
+        position: absolute;
+        top: 5px;
+        left: -14px;
+      }
+    }
+  }
+  @include screen('xs_mobile') {
+    flex: 1 1 auto;
+    flex-basis: 100%;
+  }
 }
 // 選擇btn
 .choosebtn {

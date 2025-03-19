@@ -34,6 +34,9 @@ body.fix {
     bottom: 0;
     left: 0;
   }
+  .pagination {
+    margin-bottom: 10px !important;
+  }
 }
 
 .close {
@@ -879,6 +882,7 @@ body.fix {
       }
       p {
         line-height: 1.8em;
+        margin: 0 0 10px;
       }
       //匯出格式
       .radio_grp {
@@ -1326,6 +1330,7 @@ body.fix {
           }
         }
       }
+
       .more {
         margin: 0 auto;
         a {

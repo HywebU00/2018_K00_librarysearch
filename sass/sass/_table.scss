@@ -36,6 +36,10 @@ table {
       text-align: center;
       white-space: nowrap;
     }
+    &.date {
+      text-align: center;
+      white-space: nowrap;
+    }
   }
   th {
     background-color: #f3f3f3;
@@ -152,6 +156,12 @@ table {
         color: #000;
       }
       &.aCenter {
+        text-align: left;
+      }
+      &.aRight {
+        text-align: left;
+      }
+      &.date {
         text-align: left;
       }
       a {

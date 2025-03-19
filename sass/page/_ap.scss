@@ -2395,7 +2395,7 @@
   }
 
   .read_passbook_tab {
-    margin: 30px 10px 20px;
+    margin: 30px 10px 30px;
     @include box-sizing;
     @include screen('tablet') {
       width: 90%;
@@ -2447,8 +2447,26 @@
       }
     }
   }
+  .read_passbook_sort {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px;
+    div {
+      margin: 0 15px;
+      a {
+        display: block;
+        font-size: 1.313em;
+        font-weight: 500;
+        &.here {
+          color: $color-red;
+          text-decoration: underline;
+          text-underline-offset: 15px;
+        }
+      }
+    }
+  }
   .read_passbook_content {
-    margin: 10px 12px;
+    margin: 10px 12px 15px;
     border-radius: 5px;
     float: none;
     clear: both;
@@ -2458,6 +2476,30 @@
     @include box-sizing;
     @include screen('xs_mobile') {
       padding: 20px 10px;
+    }
+    .btn_grp {
+      margin: 0;
+      padding: 1em 0 0.5em 0;
+    }
+    p {
+      line-height: 1.8em;
+    }
+    ol {
+      li {
+        margin-bottom: 8px;
+        line-height: 1.8em;
+      }
+    }
+    &.formclose {
+      .form_grid {
+        .form_grp {
+          display: none;
+          &:nth-child(1),
+          &:nth-child(2) {
+            display: block;
+          }
+        }
+      }
     }
   }
   .mypoints {
@@ -2667,6 +2709,90 @@
     }
   }
 }
+.mypoints2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: rgb(247, 247, 247);
+  background: linear-gradient(180deg, rgba(247, 247, 247, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 5px;
+  border-radius: 5px;
+  padding: 20px 20px 10px;
+  margin: 10px 12px 15px;
+  box-sizing: border-box;
+  font-weight: bold;
+
+  .content {
+    flex: 0 0 auto;
+    padding: 0 20px 0 0;
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 20px;
+
+    &:before {
+      content: '';
+      width: 1px;
+      height: 35px;
+      background-color: #ccc;
+      position: absolute;
+      right: 0;
+      top: -5px;
+    }
+
+    &:last-child {
+      &:before {
+        display: none;
+      }
+    }
+    &.hasbtn {
+      flex: 1 1 auto;
+      margin-right: 0;
+      padding: 0;
+
+      .reward_btn2 {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    span {
+      font-size: 1.375em;
+      padding: 0 8px;
+      color: $color-red;
+      a {
+        color: $color-red;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+      }
+    }
+  }
+  @include screen('tablet') {
+    .content {
+      &.hasbtn {
+        flex: 1 1 auto;
+        margin-right: 0;
+        padding: 0;
+        .reward_btn2 {
+          display: block;
+        }
+      }
+    }
+  }
+  @include screen('xs_mobile') {
+    .content {
+      margin: 0 0 10px;
+      padding: 0 0 12px 0;
+      box-sizing: border-box;
+      flex-basis: 100%;
+      border-bottom: 1px dotted #ddd;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
 // 獎勵按鈕
 .reward_btn {
   margin: 10px;
@@ -2698,6 +2824,41 @@
         margin-right: 10px;
       }
     }
+  }
+}
+.reward_btn2 {
+  margin: 0;
+  padding: 0;
+  a {
+    display: inline-block;
+    padding: 8px 20px 8px 45px;
+    font-size: 1.125em;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: left;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    color: #333;
+    transition: 0.5s;
+    background-image: url('../images/icon_gift.svg');
+    background-repeat: no-repeat;
+    background-position: 15px 8px;
+    background-size: 20px;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      color: #fff;
+      background-color: $color-orange;
+    }
+    // img {
+    //   width: 20px;
+    //   vertical-align: middle;
+    //   margin-right: 15px;
+    //   margin-left: -36px;
+    //   @media (max-width: 400px) {
+    //     margin-right: 10px;
+    //   }
+    // }
   }
 }
 // 閱讀存摺清單
@@ -2774,39 +2935,44 @@
     max-width: 49%;
     position: relative;
     margin-bottom: 20px;
+    &.noused {
+      pointer-events: none;
+      opacity: 0.4;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
     @media (max-width: 900px) {
       flex-basis: 100%;
       max-width: 100%;
     }
     > a {
-      display: block;
+      display: flex;
       background-color: #fff;
       // border: 1px solid #ddd;
       box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-      overflow: hidden;
+      // overflow: hidden;
       padding: 15px;
       border-radius: 5px;
       color: #333;
+      transition: 0.5s;
       &:hover,
       &:focus {
         background-color: #ffc;
         color: #333;
       }
       .image {
-        width: 150px;
-        float: left;
-        margin-right: 30px;
-        overflow: hidden;
+        flex: 0 0 auto;
+        flex-basis: 150px;
+        max-width: 150px;
+        margin-right: 20px;
+
         img {
-          width: 150px;
+          max-width: 150px;
           max-height: 170px;
-        }
-        @media (max-width: 480px) {
-          float: none;
-          margin: 0 auto 20px;
         }
       }
       .content {
+        flex: 1 1 auto;
         overflow: hidden;
         .title {
           font-size: 1.25em;
@@ -2819,6 +2985,9 @@
           text-overflow: ellipsis;
           white-space: nowrap;
           margin-right: 40px;
+          @media (max-width: 480px) {
+            margin-right: 0;
+          }
         }
         ul {
           margin: 0;
@@ -2833,6 +3002,12 @@
               font-weight: 600;
             }
           }
+        }
+      }
+      @media (max-width: 480px) {
+        display: block;
+        .image {
+          margin: 0 auto 20px;
         }
       }
     }
@@ -2855,6 +3030,56 @@
           width: 22px;
           height: 22px;
           vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+// 點數集
+.points_set_block {
+  margin: 20px 30px;
+  background: rgb(232, 232, 232);
+  background: linear-gradient(180deg, rgba(232, 232, 232, 1) 15%, rgba(255, 255, 255, 1) 100%);
+  padding-top: 16px;
+  border-radius: 5px;
+  .points_project {
+    margin: 0 20px;
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      li {
+        font-size: 1.25em;
+        a {
+          padding: 10px 20px;
+          display: block;
+          position: relative;
+          text-align: center;
+          &.here {
+            color: $color-red;
+            &:before {
+              content: '';
+              height: 2px;
+              background-color: $color-red;
+              position: absolute;
+              right: 20px;
+              left: 20px;
+              bottom: -3px;
+            }
+          }
+        }
+        @media (max-width: 400px) {
+          font-size: 1.25em;
+          a {
+            padding: 10px 15px;
+            &.here {
+              &:before {
+                right: 15px;
+                left: 15px;
+              }
+            }
+          }
         }
       }
     }
@@ -5828,6 +6053,95 @@
         border-top: 1px solid #ddd;
         padding-top: 1em;
         margin-top: 1.5em;
+      }
+    }
+  }
+}
+// 點數資料
+.points_content_block {
+  margin: 0 30px 50px;
+  // 獎勵清單
+  .read_passbook_list {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media (max-width: 900px) {
+      display: block;
+    }
+    .reward_list2 {
+      flex: auto;
+      flex-basis: 49%;
+      max-width: 49%;
+      position: relative;
+      margin-bottom: 20px;
+      background-color: #fff;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+      padding: 15px;
+      border-radius: 5px;
+      color: #333;
+      display: flex;
+      box-sizing: border-box;
+      @media (max-width: 1100px) {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+      .image {
+        flex: 0 0 auto;
+        flex-basis: 150px;
+        max-width: 150px;
+        margin-right: 20px;
+        overflow: hidden;
+        img {
+          max-width: 150px;
+          max-height: 170px;
+        }
+      }
+      .content {
+        overflow: hidden;
+        flex: 1 1 auto;
+        .title {
+          font-size: 1.25em;
+          margin-bottom: 10px;
+          color: #333;
+          border-bottom: 1px dashed #ccc;
+          padding-bottom: 10px;
+          font-weight: 800;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        ul {
+          margin: 0 0 15px;
+          padding: 0;
+          list-style-type: none;
+          li {
+            margin: 0 0 5px;
+            em {
+              font-style: normal;
+              color: $color-orange;
+              margin-right: 5px;
+              font-weight: 600;
+            }
+          }
+        }
+        .btnblock {
+          span {
+            display: inline-block;
+          }
+        }
+      }
+      @media (max-width: 480px) {
+        display: block;
+        .image {
+          margin: 0 auto 20px;
+        }
+      }
+    }
+    .reward_list {
+      @media (max-width: 992px) {
+        flex-basis: 100%;
+        max-width: 100%;
       }
     }
   }

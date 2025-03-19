@@ -1,0 +1,777 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>凌網科技圖書館查詢系統</title>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+  <!-- 出版年度css -->
+  <link rel="stylesheet" href="vendor/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="vendor/keyboard/keyboard.css">
+  <link rel="stylesheet" href="css/hyui.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- wrapper 最大寬度 -->
+  <div class="wrapper  customization03  nowa havewa">
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#center" tabindex="1">按 Enter 到主內容區</a>
+    <!-- sidebar  start-->
+    <aside class="sidebar">
+      <div class="m_area">
+        <div class="menu">
+          <ul>
+            <li><a href="#">主頁</a></li>
+            <li><a href="#">新進圖書</a></li>
+            <li><a href="#">展示書</a></li>
+            <li><a href="#">網路辦證</a></li>
+            <li><a href="#">線上協尋書</a></li>
+            <li><a href="#">設備預約</a></li>
+            <li><a href="#">圖書推薦</a></li>
+            <li><a href="#">其他功能</a></li>
+          </ul>
+        </div>
+        <nav class="navigation">
+          <!-- 語言設定 start-->
+          <div class="language">
+            <a href="javascript:;">Language</a>
+            <ul>
+              <li><a href="javascript:;">中文版</a></li>
+              <li><a href="javascript:;">英文版</a></li>
+            </ul>
+          </div>
+          <!-- 語言設定 end-->
+        </nav>
+        <button type="button" class="sidebarClose">關閉</button>
+      </div>
+      <div class="menu_overlay"></div>
+    </aside>
+    <!-- sidebar  end-->
+    <!-- header Start -->
+    <header class="header">
+      <div class="container">
+        <button type="button" class="sidebarCtrl">側欄選單</button>
+        <a class="accesskey" href="#aU" id="aU" accesskey="U" title="網站標題" tabindex="2">:::</a>
+        <h1><a href="index.htm"><img src="images/logo_version.png" alt="凌網科技圖書館" /></a></h1>
+        <!-- navigation Start -->
+        <nav class="navigation">
+          <!-- 一組ul預設靠右 -->
+          <!-- 兩組ul已寫JQ靠左靠右 -->
+          <ul>
+            <li><a href="javascript:;">Help</a></li>
+            <li><a href="javascript:;">圖書館首頁</a></li>
+          </ul>
+          <!-- 語言設定 start-->
+          <div class="language">
+            <a href="javascript:;">Language</a>
+            <ul>
+              <li><a href="javascript:;">中文版</a></li>
+              <li><a href="javascript:;">英文版</a></li>
+            </ul>
+          </div>
+          <!-- 語言設定 end-->
+          <!-- font_size -->
+          <div class="font_size">
+            <span>字型大小：</span>
+            <!-- 英文用<span>font-size：</span> -->
+            <ul>
+              <li><a href="#" class="small">小</a></li>
+              <li><a href="#" class="medium">中</a></li>
+              <li><a href="#" class="large">大</a></li>
+            </ul>
+          </div>
+          <!-- 會員紀錄 start -->
+          <div class="member_record">
+            <!-- 收藏紀錄 start-->
+            <div class="heart"><img src="images/icon_collect.png" alt="收藏紀錄"></div>
+            <!-- 收藏紀錄 end-->
+            <!-- 會員資料 start -->
+            <div class="member_name">王小明</div>
+            <div class="member_pic"><a href="#"><img src="images/member_pic.png" alt="照片"></a><span>555</span></div>
+            <div class="member_data">
+              <ul>
+                <li><a href="#">我的帳戶</a>
+                  <ul>
+                    <li><a href="#">我的主頁</a></li>
+                    <li><a href="#">修改個人資料</a></li>
+                    <li><a href="#">待繳費用/罰則紀錄</a></li>
+                    <li><a href="#">與圖書館對話</a></li>
+                    <li><a href="#">借閱證線上掛失</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">我的閱讀紀錄</a>
+                  <ul>
+                    <li><a href="#">我的借閱紀錄</a></li>
+                    <li><a href="#">我的預約記錄</a></li>
+                    <li><a href="#">我的跨館通閱清單</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">我的書櫃</a>
+                  <ul>
+                    <li><a href="#">我的收藏</a></li>
+                    <li><a href="#">我的標籤</a></li>
+                    <li><a href="#">評分/評論紀錄</a></li>
+                    <li><a href="#">我的推薦採購書籍</a></li>
+                    <li><a href="#">我的興趣主題</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">其他紀錄</a>
+                  <ul>
+                    <li><a href="#">我的借閱歷史紀錄</a></li>
+                    <li><a href="#">我的預約歷史紀錄</a></li>
+                    <li><a href="#">我的跨館通閱歷史紀錄</a></li>
+                    <li><a href="#">我的罰則歷史紀錄</a></li>
+                    <li><a href="#">我的查詢歷史紀錄</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="signout">登出</a></li>
+              </ul>
+            </div>
+            <!-- 會員資料 end -->
+          </div>
+          <!-- 會員紀錄 end-->
+        </nav>
+        <!-- 手機才出現的按鈕 start -->
+        <!-- 會員紀錄 start -->
+        <div class="member_record member_mobile_btn">
+          <!-- 會員資料 start -->
+          <div class="member_pic"><a href="#"><img src="images/member_pic.png" alt="照片"></a>
+            <span>5</span>
+          </div>
+          <div class="member_data">
+            <ul>
+              <li><a href="#">我的帳戶</a>
+                <ul>
+                  <li><a href="#">我的主頁</a></li>
+                  <li><a href="#">修改個人資料</a></li>
+                  <li><a href="#">待繳費用/罰則紀錄</a></li>
+                  <li><a href="#">與圖書館對話</a></li>
+                  <li><a href="#">借閱證線上掛失</a></li>
+                </ul>
+              </li>
+              <li><a href="#">我的閱讀紀錄</a>
+                <ul>
+                  <li><a href="#">我的借閱紀錄</a></li>
+                  <li><a href="#">我的預約記錄</a></li>
+                  <li><a href="#">我的跨館通閱清單</a></li>
+                </ul>
+              </li>
+              <li><a href="#">我的書櫃</a>
+                <ul>
+                  <li><a href="#">我的收藏</a></li>
+                  <li><a href="#">我的標籤</a></li>
+                  <li><a href="#">評分/評論紀錄</a></li>
+                  <li><a href="#">我的推薦採購書籍</a></li>
+                  <li><a href="#">我的興趣主題</a></li>
+                </ul>
+              </li>
+              <li><a href="#">其他紀錄</a>
+                <ul>
+                  <li><a href="#">我的借閱歷史紀錄</a></li>
+                  <li><a href="#">我的預約歷史紀錄</a></li>
+                  <li><a href="#">我的跨館通閱歷史紀錄</a></li>
+                  <li><a href="#">我的罰則歷史紀錄</a></li>
+                  <li><a href="#">我的查詢歷史紀錄</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="signout">登出</a></li>
+            </ul>
+          </div>
+          <!-- 會員資料 end -->
+        </div>
+        <!-- 會員紀錄 end-->
+        <!-- 手機才出現的按鈕 end -->
+        <!-- noscript -->
+        <noscript> 您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結 <a
+            href="javascript:;">網站導覽</a>
+        </noscript>
+        <!-- 手機版才出現的menu start-->
+        <div class="menu">
+          <ul>
+            <li><a href="#">主頁</a></li>
+            <li><a href="#">新進圖書</a></li>
+            <li><a href="#">展示書</a></li>
+            <li><a href="#">網路辦證</a></li>
+            <li><a href="#">線上協尋書</a></li>
+            <li><a href="#">設備預約</a></li>
+            <li><a href="#">圖書推薦</a></li>
+            <li><a href="#">其他功能</a></li>
+          </ul>
+        </div>
+        <!-- 手機版才出現的menu end-->
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <div id="center" class="main">
+      <a class="accesskey" href="#aC" id="aC" accesskey="C" title="主要內容區">:::</a>
+      <!-- 我的書房start -->
+      <section class="section col-12 mystudyname">
+        <div class="container">
+          <div class="col">
+            <div class="member_pic"><a href="#"><img src="images/member_pic2.png" alt="照片"></a>
+              <span>555</span>
+            </div>
+            <div class="nameblock">
+              <h2>我的個人書房</h2>
+              <div class="name"><em>HI ! 王小明您好，<span>A111222233</span></em>歡迎來到您的專屬書房</div>
+              <div class="mystudybtn">
+                <input type="button" name="" class="btnstyle whitebg" value="檢視閱讀權限" id="read_permissionbtn">
+                <input type="button" name="" class="btnstyle whitebg" value="登出">
+                <input type="button" name="" class="btnstyle whitebg linedel" value="借閱證切換" id="read_permissionbtn">
+                <input type="button" name="" class="btnstyle whitebg linedel" value="通知時間" id="read_permissionbtn">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 我的書房end -->
+      <!-- 分欄start -->
+      <div class="maincolumn">
+        <div class="container">
+          <!-- 左欄 start  -->
+          <div class="mainleftblock">
+            <div class="mainleftcontent">
+              <!-- 我的書房menu start -->
+              <div class="mystudymenu">
+                <ul>
+                  <li><a href="javascript:;">我的帳戶</a>
+                    <ul>
+                      <li><a href="javascript:;">我的主頁</a></li>
+                      <li><a href="javascript:;">修改個人資料</a></li>
+                      <li><a href="javascript:;">待繳費用/罰則紀錄</a></li>
+                      <li><a href="javascript:;">與圖書館對話</a></li>
+                      <li><a href="javascript:;">借閱證線上掛失</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:;">我的閱讀紀錄</a>
+                    <ul>
+                      <li><a href="javascript:;">我的借閱紀錄</a></li>
+                      <li><a href="javascript:;">我的預約記錄</a></li>
+                      <li><a href="javascript:;">我的跨館通閱清單</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:;">我的書櫃</a>
+                    <ul>
+                      <li><a href="javascript:;">我的收藏</a></li>
+                      <li><a href="javascript:;">我的標籤</a></li>
+                      <li><a href="javascript:;">評分/評論紀錄</a></li>
+                      <li><a href="javascript:;">我的推薦採購書籍</a></li>
+                      <li><a href="javascript:;">我的興趣主題</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:;">閱讀存摺</a>
+                    <ul>
+                      <li><a href="javascript:;">待換清單</a></li>
+                      <li><a href="javascript:;">點數歷史</a></li>
+                      <li><a href="javascript:;">兌換歷史</a></li>
+                      <li><a href="javascript:;">獎勵收藏清單</a></li>
+                      <li><a href="javascript:;">閱讀財富</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:;">其他紀錄</a>
+                    <ul>
+                      <li><a href="javascript:;">我的借閱歷史紀錄</a></li>
+                      <li><a href="javascript:;">我的預約歷史紀錄</a></li>
+                      <li><a href="javascript:;">我的跨館通閱歷史紀錄</a></li>
+                      <li><a href="javascript:;">我的罰則歷史紀錄</a></li>
+                      <li><a href="javascript:;">我的查詢歷史紀錄</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!-- 我的書房menu end -->
+            </div>
+          </div>
+          <!-- 左欄 end  -->
+          <!-- 右欄 start  -->
+          <div class="mainrightblock">
+            <!-- 右欄左線start -->
+            <div class="rightlineblock">
+              <!-- 路徑start -->
+              <div class="breadcrumb">
+                <span>現在位置：</span>
+                <ul>
+                  <li><a href="javascript:;">首頁</a></li>
+                  <li><a href="#">個人書房</a></li>
+                  <li>待換清單</li>
+                </ul>
+              </div>
+              <!-- 路徑end-->
+              <!-- 排序方式start 手機版才會出現-->
+              <div class="sortbyblock linedel">
+                <ul>
+                  <li><a href="#">相關排序</a></li>
+                  <li><a href="#">最新</a></li>
+                  <li><a href="#">最熱門</a></li>
+                  <li><a href="#">其他</a></li>
+                </ul>
+              </div>
+              <!-- 排序方式end -->
+              <!-- 我的書房查詢 start -->
+              <div class="mystudysearchbtn"><a href="#">清單查詢</a></div>
+              <div class="mystudysearch">
+                <form action="">
+                  <div class="mystudysearch_data">
+                    <div class="form_grid">
+                      <div class="form_grp">
+                        <label for="" class="form_title"> 書刊名：</label>
+                        <div class="form_content ">
+                          <input name="username" type="text" placeholder="請輸入文字">
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for=" " class="form_title ">索書號：</label>
+                        <div class="form_content">
+                          <input name="username" type="text" placeholder="請輸入文字">
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for=" " class="form_title ">借閱日期範圍：</label>
+                        <div class="form_content">
+                          <div class="select_date">
+                            <input name="" type="text" placeholder="起日日期"><span class="image"><a href="#"><img src="images/form_calendar.png" alt=""></a></span>
+                          </div>
+                          <span class="to">至</span>
+                          <div class="select_date">
+                            <input name="" type="text" placeholder="迄日日期"><span class="image"><a href="#"><img src="images/form_calendar.png" alt=""></a></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form_grp">
+                        <label for=" " class="form_title ">狀態篩選：</label>
+                        <div class="form_content check_grp form_inline">
+                          <label><input name="" type="checkbox" value="">顯示借閱中</label>
+                          <label><input name="" type="checkbox" value="">顯示逾期資料</label>
+                        </div>
+                      </div>
+                    </div>
+                    <!--  -->
+                    <div class="btn_grp">
+                      <input name="" type="submit" value="查詢">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!--我的書房查詢 end  -->
+              <!-- 點數集start -->
+              <div class="points_set_block">
+                <div class="points_project">
+                  <ul>
+                    <li><a href="#" class="here">閱讀集點</a></li>
+                    <li><a href="#">活動集點</a></li>
+                    <li><a href="#">電子書集點</a></li>
+                  </ul>
+                </div>
+                <!-- 我的點數 start -->
+                <div class="mypoints2">
+                  <div class="content">總點數<span>300</span>點（含分館點數<span><a href="#" class="points_btn">150</a></span>點）</div>
+                  <div class="content">即將到期<span><a href="#" class="upcomingpoints_btn">30</a></span>點</div>
+                  <div class="content hasbtn">
+                    <div class="reward_btn2"><a href="#">我要用點數換獎勵</a></div>
+                  </div>
+                </div>
+                <!-- 我的點數 end -->
+              </div>
+              <!-- 點數集end -->
+              <!-- 累積點數 燈箱start -->
+              <div class="lightboxstyle" id="points_style">
+                <div class="overlay"></div>
+                <div class="lightboxstyle_block">
+                  <div class="close"></div>
+                  <h2>累積點數</h2>
+                  <form action="">
+                    <div class="lightbox_data">
+                      <p>分館點數說明：<br>到分館借書或參加活動，可獲得該分館專屬點數。點數可用於兌換極點分館的限定獎品。</p>
+                      <table>
+                        <tr>
+                          <th>項目</th>
+                          <th>集點分館</th>
+                          <th>點數</th>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>中市圖(總館)</td>
+                          <td>100</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>北屯分館</td>
+                          <td>30</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>興安分館</td>
+                          <td>15</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>捷運松竹借還書站</td>
+                          <td>5</td>
+                        </tr>
+                      </table>
+                      <!--pagination start -->
+                      <section class="pagination ">
+                        <form action="" class="form_inline ">
+                          <div class="total"> 共<span>4</span>筆資料，第<span>1/4</span>頁，<span class="every_page mobile_hidden">每頁顯示 10
+                              </select>筆，</span> </div>
+                        </form>
+                        <ul class="page">
+                          <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                          <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                          <li class="mobile_visible"><input type="text" name="" value="" placeholder="1" class="number_pages "></li>
+                          <li class="active mobile_hidden"><a href="#">1</a></li>
+                          <!-- <li class="mobile_hidden"><a href="#">2</a></li>
+                                            <li class="mobile_hidden"><a href="#">3</a></li>
+                                            <li class="mobile_hidden"><a href="#">4</a></li>
+                                            <li class="mobile_hidden"><a href="#">5</a></li>
+                                            <li class="mobile_hidden"><a href="#">6</a></li>
+                                            <li class="mobile_hidden"><a href="#">7</a></li>
+                                            <li class="mobile_hidden"><a href="#">8</a></li>
+                                            <li class="mobile_hidden"><a href="#">9</a></li>
+                                            <li class="mobile_hidden"><a href="#">10</a></li>-->
+                          <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                          <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                        </ul>
+                      </section>
+                      <!--pagination  end -->
+                    </div>
+                    <div class="btn_grp">
+                      <input name="" type="submit" value="確定">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- 累積點數 燈箱end -->
+              <!-- 即將到期點數 燈箱start -->
+              <div class="lightboxstyle" id="upcomingpoints_style">
+                <div class="overlay"></div>
+                <div class="lightboxstyle_block">
+                  <div class="close"></div>
+                  <h2>近一個月即將到期點數</h2>
+                  <form action="">
+                    <div class="lightbox_data">
+                      <table>
+                        <tr>
+                          <th>項目</th>
+                          <th>點數到期日</th>
+                          <th>點數</th>
+                          <th>集點分館</th>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>2025/01/08</td>
+                          <td>10</td>
+                          <td>不分館別</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>2025/01/10</td>
+                          <td>10</td>
+                          <td>中市圖(總館)</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>2025/01/31</td>
+                          <td>7</td>
+                          <td>北屯分館</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>2025/01/31</td>
+                          <td>2</td>
+                          <td>興安分館</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>2025/01/31</td>
+                          <td>1</td>
+                          <td>捷運松竹借還書站</td>
+                        </tr>
+
+                      </table>
+                      <!--pagination start -->
+                      <section class="pagination ">
+                        <form action="" class="form_inline ">
+                          <div class="total"> 共<span>4</span>筆資料，第<span>1/4</span>頁，<span class="every_page mobile_hidden">每頁顯示 10
+                              </select>筆，</span> </div>
+                        </form>
+                        <ul class="page">
+                          <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                          <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                          <li class="mobile_visible"><input type="text" name="" value="" placeholder="1" class="number_pages "></li>
+                          <li class="active mobile_hidden"><a href="#">1</a></li>
+                          <!-- <li class="mobile_hidden"><a href="#">2</a></li>
+                                                              <li class="mobile_hidden"><a href="#">3</a></li>
+                                                              <li class="mobile_hidden"><a href="#">4</a></li>
+                                                              <li class="mobile_hidden"><a href="#">5</a></li>
+                                                              <li class="mobile_hidden"><a href="#">6</a></li>
+                                                              <li class="mobile_hidden"><a href="#">7</a></li>
+                                                              <li class="mobile_hidden"><a href="#">8</a></li>
+                                                              <li class="mobile_hidden"><a href="#">9</a></li>
+                                                              <li class="mobile_hidden"><a href="#">10</a></li>-->
+                          <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                          <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                        </ul>
+                      </section>
+                      <!--pagination  end -->
+                    </div>
+                    <div class="btn_grp">
+                      <input name="" type="submit" value="確定">
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- 即將到期點數 燈箱end -->
+              <!-- 資料全部 start-->
+              <div class="data_all read_passbook read_passbook_s">
+                <div class="data_explain">點數係由本館系統批次處理，非即時匯入</div>
+
+                <div class="date_selection"><span>點數增減日：</span>
+                  <div class="datepick">
+                    <input name="" type="date" value="" class="calendar" placeholder="點數增減日期起">
+                  </div>
+                  <div class="datepick">
+                    <input name="" type="date" value="" class="calendar" placeholder="點數增減日期迄">
+                  </div>
+                </div>
+                <div class="rightdata">
+                  <div class="data_quantity2"><span>總共<em>5</em>筆</span>
+                    <div class="optionblock">
+                      <div class="option_01">
+                        <div class="name"><a href="javascript:;">排序方式</a></div>
+                        <div class="option_list">
+                          <ul>
+                            <li><a href="#" class="here">點數增減日期新到舊</a></li>
+                            <li><a href="#">點數增減日期舊到新</a></li>
+                            <li><a href="#">點數到期日新到舊</a></li>
+                            <li><a href="#">點數到期日舊到新</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 資料全部 end-->
+              <!-- 點數資料 start -->
+              <div class="points_content_block">
+                <!-- 表格 start-->
+                <div class="table_list">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>編號</th>
+                        <th>點數類型</th>
+                        <th>集點分館</th>
+                        <th>點數增減</th>
+                        <th>點數增減日期</th>
+                        <th>點數到期日</th>
+                        <th>點數增減方式</th>
+                        <th>備註</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-title="編號" class="aCenter">1.</td>
+                        <td data-title="點數類型">閱讀集點</td>
+                        <td data-title="集點分館">不分館別</td>
+                        <td data-title="點數增減" class="aRight">20</td>
+                        <td data-title="點數增減日期" class="aCenter">2025/12/10</td>
+                        <td data-title="點數到期日" class="aCenter">2025/12/31</a>
+                        </td>
+                        <td data-title="點數增減方式">預約借書</a>
+                        </td>
+                        <td data-title="備註">2025/12/09</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-title="編號" class="aCenter">2.</td>
+                        <td data-title="點數類型">閱讀集點</td>
+                        <td data-title="集點分館">北屯分館</td>
+                        <td data-title="點數增減" class="aRight">10</td>
+                        <td data-title="點數增減日期" class="aCenter">2025/12/10</td>
+                        <td data-title="點數到期日" class="aCenter">2025/12/31</a>
+                        </td>
+                        <td data-title="點數增減方式">到館借書</a>
+                        </td>
+                        <td data-title="備註">2025/12/08</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-title="編號" class="aCenter">3.</td>
+                        <td data-title="點數類型">閱讀集點</td>
+                        <td data-title="集點分館">興安分館</td>
+                        <td data-title="點數增減" class="aRight">10</td>
+                        <td data-title="點數增減日期" class="aCenter">2025/12/08</td>
+                        <td data-title="點數到期日" class="aCenter">2025/12/31</a>
+                        </td>
+                        <td data-title="點數增減方式">到館借書</a>
+                        </td>
+                        <td data-title="備註">2025/12/07</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-title="編號" class="aCenter">4.</td>
+                        <td data-title="點數類型">閱讀集點</td>
+                        <td data-title="集點分館">中市圖(總館)</td>
+                        <td data-title="點數增減" class="aRight">-100</td>
+                        <td data-title="點數增減日期" class="aCenter">&nbsp;</td>
+                        <td data-title="點數到期日" class="aCenter">2025/12/31</a>
+                        </td>
+                        <td data-title="點數增減方式">已兌換</a>
+                        </td>
+                        <td data-title="備註">維尼愛閱防水貼紙</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-title="編號" class="aCenter">5.</td>
+                        <td data-title="點數類型">閱讀集點</td>
+                        <td data-title="集點分館">中市圖(總館)</td>
+                        <td data-title="點數增減" class="aRight">0</td>
+                        <td data-title="點數增減日期" class="aCenter">&nbsp;</td>
+                        <td data-title="點數到期日" class="aCenter">2025/12/31</a>
+                        </td>
+                        <td data-title="點數增減方式">待兌換</a>
+                        </td>
+                        <td data-title="備註">維尼愛閱防水貼紙</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- 表格 end-->
+
+                <!--pagination start -->
+                <section class="pagination">
+                  <form action="" class="form_inline">
+                    <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 <select name="" id="">
+                        <option value="">10</option>
+                        <option value="">20</option>
+                        <option value="">30</option>
+                        <option value="">40</option>
+                      </select>筆 </div>
+                  </form>
+                  <ul class="page">
+                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                    <li class="active"><a href="#">12345</a></li>
+                    <li><a href="#">12345</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                    <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                  </ul>
+                </section>
+                <!--pagination  end -->
+              </div>
+              <!-- 點數資料 end -->
+            </div>
+            <!-- 右欄左線end -->
+          </div>
+          <!-- 右欄 end  -->
+        </div>
+      </div>
+      <!-- 分欄end -->
+    </div>
+    <!-- fatfooter Start -->
+    <section class="fatfooter">
+      <div class="container">
+        <a class="accesskey" href="#aZ" id="aZ" accesskey="Z" title="頁尾區">:::</a>
+        <button type="button" name="收合" class="btn btn-fatfooter">收合</button>
+        <nav>
+          <ul>
+            <li><a href="javascript:;">關於我們</a>
+              <ul>
+                <li><a href="javascript:;">個人資料蒐集告知聲明</a></li>
+                <li><a href="javascript:;">網路隱私權政策</a></li>
+                <li><a href="javascript:;">交通資訊導引</a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:;">常用連結</a>
+              <ul>
+                <li><a href="javascript:;">圖書館首頁</a></li>
+                <li><a href="javascript:;">機構典藏</a></li>
+                <li><a href="javascript:;">facebook粉絲團</a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:;">其他連結</a>
+              <ul>
+                <li><a href="javascript:;">HELP</a></li>
+                <li><a href="javascript:;">借閱政策</a></li>
+                <li><a href="javascript:;">圖書館首頁</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <!-- fatfooter end -->
+    <!-- footer start-->
+    <footer>
+      <div class="container">
+        <div class="footer_info">
+          <ul>
+            <li>屏東縣政府文化處</li>
+            <li>90054 屏東市大連路69號</li>
+            <li>08-7360330</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end-->
+    <a href="javascript:;" class="scrollToTop" title="TOP">TOP</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+  </div>
+  <!-- 燈箱區塊 start-->
+  <!-- 檢視閱讀權限燈箱start -->
+  <div class="lightboxstyle" id="read_permissionstyle">
+    <div class="overlay"></div>
+    <div class="lightboxstyle_block">
+      <div class="close"></div>
+      <h2>檢視閱讀權限</h2>
+      <form>
+        <div class="lightbox_data">
+          <p>借閱件數：(本/件/間/張)</p>
+          <div class="listdata">
+            <ul>
+              <li>教授指定參考資料：<em>2</em> 件</li>
+              <li>教授指定參考資料：<em>2</em> 件</li>
+              <li>教授指定參考資料：<em>2</em> 件</li>
+            </ul>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- 檢視閱讀權限燈箱end -->
+  <!-- 燈箱區塊 end-->
+  <script src="vendor/jquery.easing.min.js"></script>
+  <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
+  <script type="text/javascript" src="vendor/slick/slick.js">
+  </script>
+  <!-- 出版年度js -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- 出版年度js -->
+  <script src="js/hyui.js"></script>
+  <script src="js/customize.js"></script>
+</body>
+
+</html>

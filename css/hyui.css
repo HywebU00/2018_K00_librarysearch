@@ -1576,6 +1576,10 @@ table td.time {
   text-align: center;
   white-space: nowrap;
 }
+table td.date {
+  text-align: center;
+  white-space: nowrap;
+}
 table th {
   background-color: #f3f3f3;
   color: #333;
@@ -1688,6 +1692,12 @@ table .collection a img {
     color: #000;
   }
   .table_list td.aCenter {
+    text-align: left;
+  }
+  .table_list td.aRight {
+    text-align: left;
+  }
+  .table_list td.date {
     text-align: left;
   }
   .table_list td a {
@@ -6740,6 +6750,22 @@ body.fix {
   bottom: 0;
   left: 0;
 }
+.login_lightbox .pagination,
+.related_lightbox .pagination,
+.lightboxstyle .pagination,
+.exportstyle .pagination,
+.forwardstyle .pagination,
+.referencestyle .pagination,
+.mystudymenu_lightbox .pagination,
+.choose_librarycard_lightbox .pagination,
+.explain_linghtbox .pagination,
+.qrcode_lightbox .pagination,
+.recommendbook_lightbox .pagination,
+.search_field_lightbox .pagination,
+.AI_situationalstyle .pagination,
+.AI_situationalstyle_records .pagination {
+  margin-bottom: 10px !important;
+}
 
 .close a {
   background-image: url("../images/icon_close.png");
@@ -7889,6 +7915,7 @@ body.fix {
 }
 .lightboxstyle .lightboxstyle_block .lightbox_data p {
   line-height: 1.8em;
+  margin: 0 0 10px;
 }
 .lightboxstyle .lightboxstyle_block .lightbox_data .radio_grp label {
   margin: 0 0 8px;
@@ -12942,6 +12969,154 @@ button.backbtn {
 @media screen and (max-width: 767px) {
   .data_all {
     text-align: left;
+  }
+}
+.data_all.read_passbook {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: none;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.data_all.read_passbook.read_passbook_s {
+  padding: 0 30px 0;
+}
+.data_all.read_passbook .rightdata {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 5px;
+}
+.data_all.read_passbook .rightdata .choosebtn .prompt_block3 {
+  right: 0 !important;
+  left: auto;
+}
+.data_all.read_passbook .data_explain {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 575px) {
+  .data_all.read_passbook .prize_category {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+  .data_all.read_passbook .data_quantity2 {
+    margin: 0;
+  }
+}
+@media (max-width: 380px) {
+  .data_all.read_passbook .data_quantity2 {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.read_remind {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  background-color: #fdeeee;
+  color: #dc0122;
+  padding: 5px 10px 3px 40px;
+  margin-bottom: 15px;
+  text-align: left;
+  border-radius: 5px;
+  border: 1px solid #fee8e8;
+  position: relative;
+}
+.read_remind:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid #dc0122;
+  border-radius: 50%;
+  position: absolute;
+  left: 13px;
+  top: 8px;
+}
+.read_remind:after {
+  content: "!";
+  position: absolute;
+  left: 19px;
+  top: 6px;
+  color: #dc0122;
+}
+
+.prize_category {
+  flex: 0 0 auto;
+  margin-bottom: 5px;
+}
+.prize_category ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.prize_category ul li {
+  color: #333;
+  margin-right: 5px;
+}
+.prize_category ul li a {
+  padding: 5px 10px;
+  display: block;
+  border-radius: 4px;
+  background-color: #ddd;
+}
+.prize_category ul li a.here {
+  background-color: #005d98;
+  color: #fff;
+  transition: 0.5s;
+}
+.prize_category ul li a.here:hover {
+  color: #fff;
+  background-color: #004d7f;
+}
+.prize_category ul li a:hover {
+  color: #005d98;
+}
+
+.date_selection {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 5px 0 10px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.date_selection span {
+  margin-right: 0px;
+  color: #666;
+}
+.date_selection .datepick {
+  flex: 0 0 auto;
+  position: relative;
+}
+.date_selection .datepick input {
+  padding: 0.25em 0em;
+  margin-bottom: 0;
+  border: none;
+}
+.date_selection .datepick > input[type=date] {
+  width: 7.5em;
+}
+.date_selection .datepick + .datepick {
+  margin-left: 1em;
+}
+.date_selection .datepick + .datepick:before {
+  content: "~";
+  font-size: 1.5em;
+  color: #777;
+  position: absolute;
+  top: 5px;
+  left: -14px;
+}
+@media screen and (max-width: 575px) {
+  .date_selection {
+    flex: 1 1 auto;
+    flex-basis: 100%;
   }
 }
 
@@ -27354,7 +27529,7 @@ em.yellowbg {
   }
 }
 .read_passbook_block .read_passbook_tab {
-  margin: 30px 10px 20px;
+  margin: 30px 10px 30px;
   box-sizing: border-box;
 }
 @media screen and (max-width: 991px) {
@@ -27411,8 +27586,26 @@ em.yellowbg {
     left: -36px;
   }
 }
+.read_passbook_block .read_passbook_sort {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 30px;
+}
+.read_passbook_block .read_passbook_sort div {
+  margin: 0 15px;
+}
+.read_passbook_block .read_passbook_sort div a {
+  display: block;
+  font-size: 1.313em;
+  font-weight: 500;
+}
+.read_passbook_block .read_passbook_sort div a.here {
+  color: #dc0122;
+  text-decoration: underline;
+  text-underline-offset: 15px;
+}
 .read_passbook_block .read_passbook_content {
-  margin: 10px 12px;
+  margin: 10px 12px 15px;
   border-radius: 5px;
   float: none;
   clear: both;
@@ -27425,6 +27618,23 @@ em.yellowbg {
   .read_passbook_block .read_passbook_content {
     padding: 20px 10px;
   }
+}
+.read_passbook_block .read_passbook_content .btn_grp {
+  margin: 0;
+  padding: 1em 0 0.5em 0;
+}
+.read_passbook_block .read_passbook_content p {
+  line-height: 1.8em;
+}
+.read_passbook_block .read_passbook_content ol li {
+  margin-bottom: 8px;
+  line-height: 1.8em;
+}
+.read_passbook_block .read_passbook_content.formclose .form_grid .form_grp {
+  display: none;
+}
+.read_passbook_block .read_passbook_content.formclose .form_grid .form_grp:nth-child(1), .read_passbook_block .read_passbook_content.formclose .form_grid .form_grp:nth-child(2) {
+  display: block;
 }
 .read_passbook_block .mypoints {
   margin: 20px 10px;
@@ -27647,6 +27857,83 @@ em.yellowbg {
   }
 }
 
+.mypoints2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: rgb(247, 247, 247);
+  background: linear-gradient(180deg, rgb(247, 247, 247) 0%, rgb(255, 255, 255) 100%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 5px;
+  border-radius: 5px;
+  padding: 20px 20px 10px;
+  margin: 10px 12px 15px;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+.mypoints2 .content {
+  flex: 0 0 auto;
+  padding: 0 20px 0 0;
+  position: relative;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+.mypoints2 .content:before {
+  content: "";
+  width: 1px;
+  height: 35px;
+  background-color: #ccc;
+  position: absolute;
+  right: 0;
+  top: -5px;
+}
+.mypoints2 .content:last-child:before {
+  display: none;
+}
+.mypoints2 .content.hasbtn {
+  flex: 1 1 auto;
+  margin-right: 0;
+  padding: 0;
+}
+.mypoints2 .content.hasbtn .reward_btn2 {
+  display: flex;
+  justify-content: flex-end;
+}
+.mypoints2 .content span {
+  font-size: 1.375em;
+  padding: 0 8px;
+  color: #dc0122;
+}
+.mypoints2 .content span a {
+  color: #dc0122;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+@media screen and (max-width: 991px) {
+  .mypoints2 .content.hasbtn {
+    flex: 1 1 auto;
+    margin-right: 0;
+    padding: 0;
+  }
+  .mypoints2 .content.hasbtn .reward_btn2 {
+    display: block;
+  }
+}
+@media screen and (max-width: 575px) {
+  .mypoints2 .content {
+    margin: 0 0 10px;
+    padding: 0 0 12px 0;
+    box-sizing: border-box;
+    flex-basis: 100%;
+    border-bottom: 1px dotted #ddd;
+  }
+  .mypoints2 .content:last-child {
+    border-bottom: none;
+  }
+  .mypoints2 .content:before {
+    display: none;
+  }
+}
+
 .reward_btn {
   margin: 10px;
   text-align: center;
@@ -27681,6 +27968,31 @@ em.yellowbg {
   .reward_btn a img {
     margin-right: 10px;
   }
+}
+
+.reward_btn2 {
+  margin: 0;
+  padding: 0;
+}
+.reward_btn2 a {
+  display: inline-block;
+  padding: 8px 20px 8px 45px;
+  font-size: 1.125em;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: left;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  color: #333;
+  transition: 0.5s;
+  background-image: url("../images/icon_gift.svg");
+  background-repeat: no-repeat;
+  background-position: 15px 8px;
+  background-size: 20px;
+}
+.reward_btn2 a:hover, .reward_btn2 a:focus {
+  box-shadow: none;
+  color: #fff;
+  background-color: #b94b00;
 }
 
 .data_all {
@@ -27760,6 +28072,12 @@ em.yellowbg {
   position: relative;
   margin-bottom: 20px;
 }
+.read_passbook_list .reward_list.noused {
+  pointer-events: none;
+  opacity: 0.4;
+  box-shadow: none;
+  cursor: not-allowed;
+}
 @media (max-width: 900px) {
   .read_passbook_list .reward_list {
     flex-basis: 100%;
@@ -27767,35 +28085,30 @@ em.yellowbg {
   }
 }
 .read_passbook_list .reward_list > a {
-  display: block;
+  display: flex;
   background-color: #fff;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  overflow: hidden;
   padding: 15px;
   border-radius: 5px;
   color: #333;
+  transition: 0.5s;
 }
 .read_passbook_list .reward_list > a:hover, .read_passbook_list .reward_list > a:focus {
   background-color: #ffc;
   color: #333;
 }
 .read_passbook_list .reward_list > a .image {
-  width: 150px;
-  float: left;
-  margin-right: 30px;
-  overflow: hidden;
+  flex: 0 0 auto;
+  flex-basis: 150px;
+  max-width: 150px;
+  margin-right: 20px;
 }
 .read_passbook_list .reward_list > a .image img {
-  width: 150px;
+  max-width: 150px;
   max-height: 170px;
 }
-@media (max-width: 480px) {
-  .read_passbook_list .reward_list > a .image {
-    float: none;
-    margin: 0 auto 20px;
-  }
-}
 .read_passbook_list .reward_list > a .content {
+  flex: 1 1 auto;
   overflow: hidden;
 }
 .read_passbook_list .reward_list > a .content .title {
@@ -27810,6 +28123,11 @@ em.yellowbg {
   white-space: nowrap;
   margin-right: 40px;
 }
+@media (max-width: 480px) {
+  .read_passbook_list .reward_list > a .content .title {
+    margin-right: 0;
+  }
+}
 .read_passbook_list .reward_list > a .content ul {
   margin: 0;
   padding: 0;
@@ -27823,6 +28141,14 @@ em.yellowbg {
   color: #b94b00;
   margin-right: 5px;
   font-weight: 600;
+}
+@media (max-width: 480px) {
+  .read_passbook_list .reward_list > a {
+    display: block;
+  }
+  .read_passbook_list .reward_list > a .image {
+    margin: 0 auto 20px;
+  }
 }
 .read_passbook_list .reward_list .collection {
   position: absolute;
@@ -27845,6 +28171,56 @@ em.yellowbg {
   width: 22px;
   height: 22px;
   vertical-align: middle;
+}
+
+.points_set_block {
+  margin: 20px 30px;
+  background: rgb(232, 232, 232);
+  background: linear-gradient(180deg, rgb(232, 232, 232) 15%, rgb(255, 255, 255) 100%);
+  padding-top: 16px;
+  border-radius: 5px;
+}
+.points_set_block .points_project {
+  margin: 0 20px;
+}
+.points_set_block .points_project ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.points_set_block .points_project ul li {
+  font-size: 1.25em;
+}
+.points_set_block .points_project ul li a {
+  padding: 10px 20px;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+.points_set_block .points_project ul li a.here {
+  color: #dc0122;
+}
+.points_set_block .points_project ul li a.here:before {
+  content: "";
+  height: 2px;
+  background-color: #dc0122;
+  position: absolute;
+  right: 20px;
+  left: 20px;
+  bottom: -3px;
+}
+@media (max-width: 400px) {
+  .points_set_block .points_project ul li {
+    font-size: 1.25em;
+  }
+  .points_set_block .points_project ul li a {
+    padding: 10px 15px;
+  }
+  .points_set_block .points_project ul li a.here:before {
+    right: 15px;
+    left: 15px;
+  }
 }
 
 .bookselection_block {
@@ -30802,6 +31178,98 @@ em.yellowbg {
   border-top: 1px solid #ddd;
   padding-top: 1em;
   margin-top: 1.5em;
+}
+
+.points_content_block {
+  margin: 0 30px 50px;
+}
+.points_content_block .read_passbook_list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 900px) {
+  .points_content_block .read_passbook_list {
+    display: block;
+  }
+}
+.points_content_block .read_passbook_list .reward_list2 {
+  flex: auto;
+  flex-basis: 49%;
+  max-width: 49%;
+  position: relative;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding: 15px;
+  border-radius: 5px;
+  color: #333;
+  display: flex;
+  box-sizing: border-box;
+}
+@media (max-width: 1100px) {
+  .points_content_block .read_passbook_list .reward_list2 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+.points_content_block .read_passbook_list .reward_list2 .image {
+  flex: 0 0 auto;
+  flex-basis: 150px;
+  max-width: 150px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+.points_content_block .read_passbook_list .reward_list2 .image img {
+  max-width: 150px;
+  max-height: 170px;
+}
+.points_content_block .read_passbook_list .reward_list2 .content {
+  overflow: hidden;
+  flex: 1 1 auto;
+}
+.points_content_block .read_passbook_list .reward_list2 .content .title {
+  font-size: 1.25em;
+  margin-bottom: 10px;
+  color: #333;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 10px;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.points_content_block .read_passbook_list .reward_list2 .content ul {
+  margin: 0 0 15px;
+  padding: 0;
+  list-style-type: none;
+}
+.points_content_block .read_passbook_list .reward_list2 .content ul li {
+  margin: 0 0 5px;
+}
+.points_content_block .read_passbook_list .reward_list2 .content ul li em {
+  font-style: normal;
+  color: #b94b00;
+  margin-right: 5px;
+  font-weight: 600;
+}
+.points_content_block .read_passbook_list .reward_list2 .content .btnblock span {
+  display: inline-block;
+}
+@media (max-width: 480px) {
+  .points_content_block .read_passbook_list .reward_list2 {
+    display: block;
+  }
+  .points_content_block .read_passbook_list .reward_list2 .image {
+    margin: 0 auto 20px;
+  }
+}
+@media (max-width: 992px) {
+  .points_content_block .read_passbook_list .reward_list {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
 
 .linecontent {
