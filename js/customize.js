@@ -1646,6 +1646,19 @@ $('.overlay').click(function () {
   $('#reminder_window_style').fadeOut();
   $('body').removeClass('fix');
 });
+// 兌換序號
+$('.points_serialnumbe_btn').click(function () {
+  $('#points_serialnumbe_style').fadeIn();
+  $('body').addClass('fix');
+});
+$('.lightboxstyle_block .close').click(function () {
+  $('#points_serialnumbe_style').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('#points_serialnumbe_style').fadeOut();
+  $('body').removeClass('fix');
+});
 //詳目頁 匯出點選
 $(function () {
   $('.export_block .close').click(function () {

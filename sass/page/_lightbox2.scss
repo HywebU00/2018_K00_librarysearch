@@ -884,6 +884,18 @@ body.fix {
         line-height: 1.8em;
         margin: 0 0 10px;
       }
+      .serialnumber {
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        border: 1px dashed #ccc;
+        line-height: 1.8em;
+        .number {
+          font-size: 1.125em;
+          margin-bottom: 0.5em;
+          display: block;
+        }
+      }
       //匯出格式
       .radio_grp {
         label {

@@ -7917,6 +7917,18 @@ body.fix {
   line-height: 1.8em;
   margin: 0 0 10px;
 }
+.lightboxstyle .lightboxstyle_block .lightbox_data .serialnumber {
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px dashed #ccc;
+  line-height: 1.8em;
+}
+.lightboxstyle .lightboxstyle_block .lightbox_data .serialnumber .number {
+  font-size: 1.125em;
+  margin-bottom: 0.5em;
+  display: block;
+}
 .lightboxstyle .lightboxstyle_block .lightbox_data .radio_grp label {
   margin: 0 0 8px;
   padding-left: 23px;
