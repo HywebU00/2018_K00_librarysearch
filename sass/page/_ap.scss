@@ -2477,6 +2477,10 @@
     @include screen('xs_mobile') {
       padding: 20px 10px;
     }
+    &.eventDescription {
+      background-color: #fff;
+      border: 1px solid #ccc;
+    }
     .btn_grp {
       margin: 0;
       padding: 1em 0 0.5em 0;

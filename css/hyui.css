@@ -27631,6 +27631,10 @@ em.yellowbg {
     padding: 20px 10px;
   }
 }
+.read_passbook_block .read_passbook_content.eventDescription {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
 .read_passbook_block .read_passbook_content .btn_grp {
   margin: 0;
   padding: 1em 0 0.5em 0;
