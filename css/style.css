@@ -4238,6 +4238,9 @@ select::-ms-expand {
     width: 100%;
   }
 }
+.customization03 .search_block .searchsystem h2 {
+  color: #3a3a3a;
+}
 .customization03 .search_block .searchsystem .form_search {
   border: 1px solid #989899 !important;
 }
