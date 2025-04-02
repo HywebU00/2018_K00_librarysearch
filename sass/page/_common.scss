@@ -1258,10 +1258,14 @@ input.hasDatepicker {
 }
 .ui-datepicker .ui-datepicker-today .ui-state-default.ui-state-highlight {
   color: $color-red;
-  // background-color: #fde6a0;
+}
+.ui-datepicker .ui-datepicker-today .ui-state-default.ui-state-highlight.ui-state-active {
+  background-color: #666;
+  color: #fff;
 }
 .ui-datepicker .ui-datepicker-today .ui-state-default.ui-state-highlight.ui-state-hover {
   background-color: #fde6a0;
+  color: $color-red;
 }
 .ui-datepicker .ui-widget-content {
   border-color: #e3e3e3;
