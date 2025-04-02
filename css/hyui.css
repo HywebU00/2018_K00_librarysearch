@@ -22157,9 +22157,9 @@ input.hasDatepicker {
 .ui-datepicker td .ui-state-default.ui-state-hover {
   border-color: transparent;
   text-shadow: none;
-  background: #666;
+  background: #ddd;
   font-weight: normal;
-  color: #fff;
+  color: #333;
 }
 
 .ui-datepicker td .ui-state-highlight {
