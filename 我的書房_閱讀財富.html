@@ -341,11 +341,11 @@
                         <label for=" " class="form_title ">借閱日期範圍：</label>
                         <div class="form_content">
                           <div class="select_date">
-                            <input name="" type="text" placeholder="起日日期"><span class="image"><a href="#"><img src="images/form_calendar.png" alt=""></a></span>
+                            <input name="startdate" type="text" class="datepicker" placeholder="起日日期">
                           </div>
                           <span class="to">至</span>
                           <div class="select_date">
-                            <input name="" type="text" placeholder="迄日日期"><span class="image"><a href="#"><img src="images/form_calendar.png" alt=""></a></span>
+                            <input name="" type="text" class="datepicker" placeholder="迄日日期">
                           </div>
                         </div>
                       </div>
@@ -387,10 +387,10 @@
               <div class="data_all read_passbook read_passbook_s">
                 <div class="date_selection"><span>借閱日期：</span>
                   <div class="datepick">
-                    <input name="" type="date" value="" class="calendar" placeholder="借閱日期起">
+                    <input name="startdate" type="text" class="datepicker" placeholder="年/月/日" value="">
                   </div>
                   <div class="datepick">
-                    <input name="" type="date" value="" class="calendar" placeholder="借閱日期迄">
+                    <input name="startdate" type="text" class="datepicker" placeholder="年/月/日" value="">
                   </div>
                 </div>
                 <div><a class="btnstyle graybg" href="javascript:;"><img src="images/btnstyle_icon14_hover.png">匯出</a></div>
@@ -582,7 +582,7 @@
   <script type='text/javascript' src='vendor/keyboard/keyboard.js'></script>
   <script type="text/javascript" src="vendor/slick/slick.js">
   </script>
-
+  <script src="js/jquery-ui.js"></script>
   <!-- 出版年度js -->
   <script src="js/hyui.js"></script>
   <script src="js/customize.js"></script>

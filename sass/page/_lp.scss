@@ -252,14 +252,24 @@
   .datepick {
     flex: 0 0 auto;
     position: relative;
+    display: flex;
 
     input {
       padding: 0.25em 0em;
       margin-bottom: 0;
       border: none;
     }
-    > input[type='date'] {
+    > input[type='text'] {
       width: 7.5em;
+    }
+    span.image {
+      float: right;
+      img {
+        width: 24px;
+        vertical-align: middle;
+        margin-right: 5px;
+        margin-top: 3px;
+      }
     }
     + .datepick {
       margin-left: 1em;

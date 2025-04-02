@@ -2969,3 +2969,40 @@ $(function () {
     }
   });
 });
+// 月曆
+$(function () {
+  $('.datepicker').datepicker({
+    showOn: 'both',
+    changeMonth: true,
+    changeYear: true,
+    buttonImageOnly: true,
+    buttonImage: 'images/form_calendar.png',
+    beforeShow: function (input, inst) {
+      setTimeout(function () {
+        $('.ui-datepicker').css('z-index', 9999);
+      }, 0);
+    },
+  });
+  $('.ui-datepicker-trigger').wrap("<span class='image'></span>");
+  $('.ui-datepicker-trigger').removeClass('ui-datepicker-trigger');
+  $.datepicker.regional['zh-TW'] = {
+    closeText: '關閉',
+    prevText: '&#x3C;上個月',
+    nextText: '下個月&#x3E;',
+    currentText: '今天',
+    monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+    monthNamesShort: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+    dayNames: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'],
+    dayNamesShort: ['日', '一', '二', '三', '四', '五', '六'],
+    dayNamesMin: ['日', '一', '二', '三', '四', '五', '六'],
+    weekHeader: '週',
+    dateFormat: 'yy/mm/dd',
+    firstDay: 0,
+    isRTL: false,
+    showMonthAfterYear: true,
+    yearSuffix: ' ',
+    showButtonPanel: true,
+  };
+
+  $.datepicker.setDefaults($.datepicker.regional['zh-TW']);
+});
