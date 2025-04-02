@@ -22007,38 +22007,6 @@ button.backbtn {
   text-align: center;
 }
 
-.ui-widget.ui-widget-content {
-  border: none;
-  background-color: #e5e5e5;
-  margin: 0 5px;
-}
-@media screen and (max-width: 991px) {
-  .ui-widget.ui-widget-content {
-    margin: 0 10px;
-  }
-}
-
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default,
-.ui-button,
-html .ui-button.ui-state-disabled:hover,
-html .ui-button.ui-state-disabled:active {
-  background-color: #fed857;
-  border: 1px solid #d2d2d2;
-  border: none;
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
-}
-
-.ui-slider .ui-slider-handle {
-  width: 17px;
-  height: 25px;
-}
-
-.ui-slider-horizontal .ui-slider-handle {
-  top: -0.45em;
-}
-
 .sort_block {
   margin: 20px 0 0px;
 }
