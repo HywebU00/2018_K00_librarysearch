@@ -22188,6 +22188,14 @@ input.hasDatepicker {
   border: solid 1px #fff;
 }
 
+.ui-datepicker .ui-datepicker-today .ui-state-default.ui-state-highlight {
+  color: #dc0122;
+}
+
+.ui-datepicker .ui-datepicker-today .ui-state-default.ui-state-highlight.ui-state-hover {
+  background-color: #fde6a0;
+}
+
 .ui-datepicker .ui-widget-content {
   border-color: #e3e3e3;
 }
