@@ -103,16 +103,19 @@
 .data_all {
   border-bottom: 1px solid $color-gray;
   position: relative;
-  text-align: right;
   padding: 6px 10px 3px;
   min-height: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   &.no_bottomline {
     border-bottom: none;
+    margin-bottom: 5px;
   }
   &.no_bottomline_s {
     border-bottom: none;
     padding: 6px 30px 3px;
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     .data_quantity2 {
       @media (max-width: 380px) {
         position: relative;
@@ -120,53 +123,46 @@
       }
     }
   }
-  @include screen('mobile') {
-    text-align: left;
-  }
-  &.read_passbook {
+  .leftdata {
+    flex: 0 0 auto;
     display: flex;
     flex-wrap: wrap;
-    border-bottom: none;
-    margin-bottom: 10px;
-    align-items: center;
-    // justify-content: flex-end;
-    &.read_passbook_s {
-      padding: 0 30px 0;
-    }
-    .rightdata {
-      flex: 1 1 auto;
-      display: flex;
-      justify-content: flex-end;
-      padding-left: 5px;
-      .choosebtn {
-        .prompt_block3 {
-          right: 0 !important;
-          left: auto;
-        }
-      }
-    }
+    max-width: 100%;
+  }
+  .rightdata {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 5px;
 
-    .data_explain {
-      flex: 1 1 auto;
-      flex-basis: 100%;
-      margin-bottom: 15px;
-    }
+    .choosebtn {
+      margin-left: 5px;
 
-    @include screen('xs_mobile') {
-      .prize_category {
-        flex-basis: 100%;
-        margin-bottom: 10px;
-      }
-      .data_quantity2 {
-        margin: 0;
+      .prompt_block3 {
+        right: 0 !important;
+        left: auto;
       }
     }
-    @media (max-width: 380px) {
-      .data_quantity2 {
-        width: auto;
-        margin: 0;
-      }
-    }
+  }
+}
+// 說明
+.material_explain {
+  margin: 0px 30px 5px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 1.063em;
+  position: relative;
+  color: #333;
+  padding-left: 20px;
+  &:before {
+    content: '';
+    border: 8px solid #eb574b;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 2px;
   }
 }
 // 閱讀提醒
@@ -176,7 +172,7 @@
   background-color: #fdeeee;
   color: $color-red;
   padding: 5px 10px 3px 40px;
-  margin-bottom: 15px;
+  margin: 0 10px 15px;
   text-align: left;
   border-radius: 5px;
   border: 1px solid #fee8e8;
@@ -290,7 +286,7 @@
 }
 // 選擇btn
 .choosebtn {
-  margin: 0 0 0 5px;
+  margin: 0;
   display: inline-block;
   text-align: left;
   float: left;
@@ -352,16 +348,12 @@
   vertical-align: top;
   text-align: right;
   @include screen('mobile') {
-    float: right;
     margin-right: 5px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   @media (max-width: 380px) {
     position: relative;
-    width: 100%;
-    right: auto;
-    margin: 15px 0px 10px 0;
+    margin: 5px 0px;
   }
   .number_pens {
     margin: 5px 0;
@@ -448,7 +440,7 @@
   .option_01 {
     position: relative;
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 0px;
     @media (max-width: 380px) {
       margin: 0px 0px 5px 5px;
     }
