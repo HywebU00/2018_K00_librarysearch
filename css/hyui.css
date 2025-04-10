@@ -13220,6 +13220,7 @@ button.backbtn {
 }
 .data_quantity2 span {
   padding-top: 5px;
+  margin-right: 5px;
   display: inline-block;
 }
 @media (max-width: 374px) {
@@ -28260,11 +28261,18 @@ em.yellowbg {
   max-width: 49%;
   position: relative;
   margin-bottom: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.read_passbook_list .reward_list:hover {
+  background-color: #ffc;
 }
 .read_passbook_list .reward_list.noused {
   pointer-events: none;
   opacity: 0.4;
-  box-shadow: none;
   cursor: not-allowed;
 }
 @media (max-width: 900px) {
@@ -28275,16 +28283,15 @@ em.yellowbg {
 }
 .read_passbook_list .reward_list > a {
   display: flex;
-  background-color: #fff;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  padding: 15px;
-  border-radius: 5px;
   color: #333;
   transition: 0.5s;
 }
-.read_passbook_list .reward_list > a:hover, .read_passbook_list .reward_list > a:focus {
-  background-color: #ffc;
+.read_passbook_list .reward_list > a:focus {
   color: #333;
+  box-shadow: none !important;
+}
+.read_passbook_list .reward_list > a:focus-visible {
+  box-shadow: 0 0px 0px 2px #f1ad00 inset !important;
 }
 .read_passbook_list .reward_list > a .image {
   flex: 0 0 auto;
