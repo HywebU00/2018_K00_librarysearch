@@ -1839,8 +1839,9 @@ table .collection a img {
 }
 .form_grid .form_grp {
   border-bottom: 1px solid #ddd;
-  overflow: hidden;
   padding: 0.4em 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .form_grid .form_title {
   float: left;
@@ -21542,10 +21543,26 @@ button.backbtn {
   display: none;
   z-index: 9 !important;
 }
-.advanced_search .advanced_block .searchblockdata .selectblock {
-  position: relative;
+.advanced_search .advanced_block .btn_grp {
+  clear: both;
 }
-.advanced_search .advanced_block .searchblockdata .select {
+.advanced_search .advanced_block .btn_grp input[type=submit] {
+  background: #dd1f03;
+  border: 1px solid #5f0d01;
+}
+.advanced_search .advanced_block .btn_grp input[type=submit]:hover {
+  background: #b51902;
+}
+.advanced_search .advanced_block .btn_grp input[type=submit]:focus {
+  border: 1px solid #dd1f03;
+  box-shadow: 0 0px 0px 2px #f1ad00;
+}
+
+.imitateselect_block {
+  position: relative;
+  width: 100%;
+}
+.imitateselect_block .select {
   line-height: 2.4em;
   height: 2.4em;
   padding: 0 24px 0 0.5em;
@@ -21559,7 +21576,7 @@ button.backbtn {
   width: 100%;
   box-sizing: border-box;
 }
-.advanced_search .advanced_block .searchblockdata .selectdownblock {
+.imitateselect_block .selectdownblock {
   border: 1px solid #d3d3d3;
   background-color: #fff;
   padding: 10px;
@@ -21574,31 +21591,17 @@ button.backbtn {
   overflow-y: scroll;
   box-sizing: border-box;
 }
-.advanced_search .advanced_block .searchblockdata .selectdownblock ul {
+.imitateselect_block .selectdownblock ul {
   margin: 0;
   padding: 0;
 }
-.advanced_search .advanced_block .searchblockdata .selectdownblock ul li {
+.imitateselect_block .selectdownblock ul li {
   list-style: none;
   padding: 0;
 }
-.advanced_search .advanced_block .searchblockdata .selectdownblock ul li input {
+.imitateselect_block .selectdownblock ul li input {
   margin-right: 8px;
   vertical-align: middle;
-}
-.advanced_search .advanced_block .btn_grp {
-  clear: both;
-}
-.advanced_search .advanced_block .btn_grp input[type=submit] {
-  background: #dd1f03;
-  border: 1px solid #5f0d01;
-}
-.advanced_search .advanced_block .btn_grp input[type=submit]:hover {
-  background: #b51902;
-}
-.advanced_search .advanced_block .btn_grp input[type=submit]:focus {
-  border: 1px solid #dd1f03;
-  box-shadow: 0 0px 0px 2px #f1ad00;
 }
 
 .maincolumn {

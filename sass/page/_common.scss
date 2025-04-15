@@ -652,51 +652,6 @@
           z-index: 9 !important;
         }
       }
-      .selectblock {
-        position: relative;
-      }
-      // 請選擇
-      .select {
-        line-height: 2.4em;
-        height: 2.4em;
-        padding: 0 24px 0 0.5em;
-        border: 1px solid #d3d3d3 !important;
-        background: #fff url(../images/basic/icon_select_arrow.svg) no-repeat right center;
-        background-size: 25px;
-        margin-right: 2px;
-        margin-bottom: 0;
-        display: inline-block;
-        border-radius: 4px;
-        width: 100%;
-        @include box-sizing;
-      }
-      .selectdownblock {
-        border: 1px solid #d3d3d3;
-        background-color: #fff;
-        padding: 10px;
-        border-radius: 5px;
-        display: none;
-        position: absolute;
-        top: 2.5em;
-        left: 0;
-        z-index: 9;
-        width: 100%;
-        max-height: 300px;
-        overflow-y: scroll;
-        @include box-sizing;
-        ul {
-          margin: 0;
-          padding: 0;
-          li {
-            list-style: none;
-            padding: 0;
-            input {
-              margin-right: 8px;
-              vertical-align: middle;
-            }
-          }
-        }
-      }
     }
     .btn_grp {
       clear: both;
@@ -709,6 +664,54 @@
         &:focus {
           border: 1px solid $importantColor;
           box-shadow: 0 0px 0px 2px $form-focus;
+        }
+      }
+    }
+  }
+}
+
+// 模仿select
+.imitateselect_block {
+  position: relative;
+  width: 100%;
+  // 請選擇
+  .select {
+    line-height: 2.4em;
+    height: 2.4em;
+    padding: 0 24px 0 0.5em;
+    border: 1px solid #d3d3d3 !important;
+    background: #fff url(../images/basic/icon_select_arrow.svg) no-repeat right center;
+    background-size: 25px;
+    margin-right: 2px;
+    margin-bottom: 0;
+    display: inline-block;
+    border-radius: 4px;
+    width: 100%;
+    @include box-sizing;
+  }
+  .selectdownblock {
+    border: 1px solid #d3d3d3;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    top: 2.5em;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: scroll;
+    @include box-sizing;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        list-style: none;
+        padding: 0;
+        input {
+          margin-right: 8px;
+          vertical-align: middle;
         }
       }
     }

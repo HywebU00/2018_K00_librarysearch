@@ -16,8 +16,11 @@
   margin: 0em;
   .form_grp {
     border-bottom: 1px solid #ddd;
-    overflow: hidden;
+    // overflow: hidden;
     padding: 0.4em 0;
+    display: flex;
+    flex-wrap: wrap;
+    // align-items: center;
   }
   .form_title {
     @include make-xs-column(12);

@@ -2157,7 +2157,7 @@ $(function () {
 });
 // 仿select
 $(function () {
-  $('.selectblock .select').click(function () {
+  $('.imitateselect_block .select').click(function () {
     $('.selectdownblock').stop().slideToggle();
     $(this).parents('.searchblockdata').parents('.col').siblings().find('.selectdownblock').hide();
   });

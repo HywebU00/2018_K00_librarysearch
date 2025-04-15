@@ -920,8 +920,9 @@ input[type=button], .btn_primaryColor, .btn_active, .btn-greenline, .btn-white, 
 }
 .form_grid .form_grp {
   border-bottom: 1px solid #ddd;
-  overflow: hidden;
   padding: 0.4em 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .form_grid .form_title {
   float: left;
