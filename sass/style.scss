@@ -46,6 +46,28 @@
     }
   }
   // _mp.scss
+  .query_system_tabs {
+    button {
+      &.btn {
+        background-color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+        }
+      }
+      &.AI_situational_btn {
+        color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        background-color: #fff !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
   .search_block {
     background-image: url('../images/search_blockbg02_child.jpg');
     height: 630px;
@@ -84,6 +106,7 @@
       }
     }
   }
+
   //_common.scss
   .privacy_consent {
     background-color: nth($primaryColor, $style);
@@ -323,6 +346,18 @@
       .agreecontent {
         .signblock {
           border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .featured_area_block {
+    .featured_area_sort {
+      div {
+        a {
+          &:hover,
+          &.here {
+            background-color: nth($primaryColor, $style);
+          }
         }
       }
     }
@@ -1024,18 +1059,6 @@
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
-  // _btn.scss
-  .btn_primaryColor {
-    @include btn_setting(nth($primaryColor, $style), #fff);
-    border: none;
-    &:hover,
-    &.avtive {
-      color: nth($primaryColor, $style) !important;
-      @include btn_setting(#eee, nth($primaryColor, $style));
-      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
-      border: none;
-    }
-  }
 }
 // 客製版01花蓮
 .customization01 {
@@ -1064,6 +1087,28 @@
     }
   }
   // _mp.scss
+  .query_system_tabs {
+    button {
+      &.btn {
+        background-color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+        }
+      }
+      &.AI_situational_btn {
+        color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        background-color: #fff !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
   .search_block {
     background-image: url('../images/search_blockbg02_customization01.jpg');
     .searchsystem {
@@ -1359,6 +1404,18 @@
       .agreecontent {
         .signblock {
           border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .featured_area_block {
+    .featured_area_sort {
+      div {
+        a {
+          &:hover,
+          &.here {
+            background-color: nth($primaryColor, $style);
+          }
         }
       }
     }
@@ -2028,18 +2085,6 @@
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
-  // _btn.scss
-  .btn_primaryColor {
-    @include btn_setting(nth($primaryColor, $style), #fff);
-    border: none;
-    &:hover,
-    &.avtive {
-      color: nth($primaryColor, $style) !important;
-      @include btn_setting(#eee, nth($primaryColor, $style));
-      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
-      border: none;
-    }
-  }
 }
 // 客製版02北市圖書館
 .customization02 {
@@ -2113,6 +2158,28 @@
     }
   }
   // _mp.scss
+  .query_system_tabs {
+    button {
+      &.btn {
+        background-color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+        }
+      }
+      &.AI_situational_btn {
+        color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        background-color: #fff !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
   .search_block {
     background-image: url('../images/search_blockbg02_customization02.png');
     .searchsystem {
@@ -2461,6 +2528,18 @@
       .agreecontent {
         .signblock {
           border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .featured_area_block {
+    .featured_area_sort {
+      div {
+        a {
+          &:hover,
+          &.here {
+            background-color: nth($primaryColor, $style);
+          }
         }
       }
     }
@@ -3484,18 +3563,6 @@
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
-  // _btn.scss
-  .btn_primaryColor {
-    @include btn_setting(nth($primaryColor, $style), #fff);
-    border: none;
-    &:hover,
-    &.avtive {
-      color: nth($primaryColor, $style) !important;
-      @include btn_setting(#eee, nth($primaryColor, $style));
-      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
-      border: none;
-    }
-  }
 }
 // 客製版03台中市圖書館
 .customization03 {
@@ -3532,6 +3599,28 @@
     }
   }
   // _mp.scss
+  .query_system_tabs {
+    button {
+      &.btn {
+        background-color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+        }
+      }
+      &.AI_situational_btn {
+        color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        background-color: #fff !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
   .search_block {
     background-image: url('../images/search_blockbg02_customization03.jpg');
     &:before {
@@ -4301,6 +4390,18 @@
       }
     }
   }
+  .featured_area_block {
+    .featured_area_sort {
+      div {
+        a {
+          &:hover,
+          &.here {
+            background-color: nth($primaryColor, $style);
+          }
+        }
+      }
+    }
+  }
   // 步驟
   .AIgptgroup {
     .directions {
@@ -4960,18 +5061,6 @@
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
-  // _btn.scss
-  .btn_primaryColor {
-    @include btn_setting(nth($primaryColor, $style), #fff);
-    border: none;
-    &:hover,
-    &.avtive {
-      color: nth($primaryColor, $style) !important;
-      @include btn_setting(#fff, nth($primaryColor, $style));
-      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
-      border: none;
-    }
-  }
 }
 // 版型01
 .version01 {
@@ -5003,6 +5092,28 @@
     }
   }
   // _mp.scss
+  .query_system_tabs {
+    button {
+      &.btn {
+        background-color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+        }
+      }
+      &.AI_situational_btn {
+        color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        background-color: #fff !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
   .search_block {
     background-image: url('../images/search_blockbg02_version01.jpg');
     .searchsystem {
@@ -5295,6 +5406,18 @@
       .agreecontent {
         .signblock {
           border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .featured_area_block {
+    .featured_area_sort {
+      div {
+        a {
+          &:hover,
+          &.here {
+            background-color: nth($primaryColor, $style);
+          }
         }
       }
     }
@@ -5957,18 +6080,6 @@
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
-  // _btn.scss
-  .btn_primaryColor {
-    @include btn_setting(nth($primaryColor, $style), #fff);
-    border: none;
-    &:hover,
-    &.avtive {
-      color: nth($primaryColor, $style) !important;
-      @include btn_setting(#eee, nth($primaryColor, $style));
-      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
-      border: none;
-    }
-  }
 }
 // 版型02
 .version02 {
@@ -6000,6 +6111,28 @@
     }
   }
   // _mp.scss
+  .query_system_tabs {
+    button {
+      &.btn {
+        background-color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+        }
+      }
+      &.AI_situational_btn {
+        color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        background-color: #fff !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
   .search_block {
     background-image: url('../images/search_blockbg02_version02.jpg');
     .searchsystem {
@@ -6318,6 +6451,18 @@
       .agreecontent {
         .signblock {
           border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .featured_area_block {
+    .featured_area_sort {
+      div {
+        a {
+          &:hover,
+          &.here {
+            background-color: nth($primaryColor, $style);
+          }
         }
       }
     }
@@ -6973,18 +7118,6 @@
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
-  // _btn.scss
-  .btn_primaryColor {
-    @include btn_setting(nth($primaryColor, $style), #fff);
-    border: none;
-    &:hover,
-    &.avtive {
-      color: nth($primaryColor, $style) !important;
-      @include btn_setting(#eee, nth($primaryColor, $style));
-      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
-      border: none;
-    }
-  }
 }
 // 版型03
 .version03 {
@@ -7016,6 +7149,28 @@
     }
   }
   // _mp.scss
+  .query_system_tabs {
+    button {
+      &.btn {
+        background-color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+        }
+      }
+      &.AI_situational_btn {
+        color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        background-color: #fff !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
   .search_block {
     background-image: url('../images/search_blockbg02_version03.jpg');
     .searchsystem {
@@ -7324,6 +7479,18 @@
       .agreecontent {
         .signblock {
           border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .featured_area_block {
+    .featured_area_sort {
+      div {
+        a {
+          &:hover,
+          &.here {
+            background-color: nth($primaryColor, $style);
+          }
         }
       }
     }
@@ -7974,18 +8141,6 @@
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
-  // _btn.scss
-  .btn_primaryColor {
-    @include btn_setting(nth($primaryColor, $style), #fff);
-    border: none;
-    &:hover,
-    &.avtive {
-      color: nth($primaryColor, $style) !important;
-      @include btn_setting(#eee, nth($primaryColor, $style));
-      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
-      border: none;
-    }
-  }
 }
 // 版型04
 .version04 {
@@ -8017,6 +8172,28 @@
     }
   }
   // _mp.scss
+  .query_system_tabs {
+    button {
+      &.btn {
+        background-color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+        }
+      }
+      &.AI_situational_btn {
+        color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        background-color: #fff !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
   .search_block {
     background-image: url('../images/search_blockbg02_version04.jpg');
     background-position: right top;
@@ -8332,6 +8509,18 @@
       .agreecontent {
         .signblock {
           border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .featured_area_block {
+    .featured_area_sort {
+      div {
+        a {
+          &:hover,
+          &.here {
+            background-color: nth($primaryColor, $style);
+          }
         }
       }
     }
@@ -8994,18 +9183,6 @@
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
-  // _btn.scss
-  .btn_primaryColor {
-    @include btn_setting(nth($primaryColor, $style), #fff);
-    border: none;
-    &:hover,
-    &.avtive {
-      color: nth($primaryColor, $style) !important;
-      @include btn_setting(#eee, nth($primaryColor, $style));
-      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
-      border: none;
-    }
-  }
 }
 // 版型05
 .version05 {
@@ -9037,6 +9214,28 @@
     }
   }
   // _mp.scss
+  .query_system_tabs {
+    button {
+      &.btn {
+        background-color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+        }
+      }
+      &.AI_situational_btn {
+        color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        background-color: #fff !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
   .search_block {
     background-image: url('../images/search_blockbg02_version05.jpg');
     .searchsystem {
@@ -9342,6 +9541,18 @@
       .agreecontent {
         .signblock {
           border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .featured_area_block {
+    .featured_area_sort {
+      div {
+        a {
+          &:hover,
+          &.here {
+            background-color: nth($primaryColor, $style);
+          }
         }
       }
     }
@@ -9997,18 +10208,6 @@
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
   }
-  // _btn.scss
-  .btn_primaryColor {
-    @include btn_setting(nth($primaryColor, $style), #fff);
-    border: none;
-    &:hover,
-    &.avtive {
-      color: nth($primaryColor, $style) !important;
-      @include btn_setting(#eee, nth($primaryColor, $style));
-      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
-      border: none;
-    }
-  }
 }
 // 版型06
 .version06 {
@@ -10041,6 +10240,28 @@
     }
   }
   // _mp.scss
+  .query_system_tabs {
+    button {
+      &.btn {
+        background-color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+        }
+      }
+      &.AI_situational_btn {
+        color: nth($primaryColor, $style) !important;
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
+        background-color: #fff !important;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style) !important;
+          color: #fff !important;
+        }
+      }
+    }
+  }
   .search_block {
     background-image: url('../images/search_blockbg02_version06.jpg');
     .searchsystem {
@@ -10333,6 +10554,18 @@
       .agreecontent {
         .signblock {
           border-left: 6px solid nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .featured_area_block {
+    .featured_area_sort {
+      div {
+        a {
+          &:hover,
+          &.here {
+            background-color: nth($primaryColor, $style);
+          }
         }
       }
     }
@@ -10986,17 +11219,5 @@
   }
   .segmented-control .segment.active {
     color: nth($primaryColor, $style);
-  }
-  // _btn.scss
-  .btn_primaryColor {
-    @include btn_setting(nth($primaryColor, $style), #fff);
-    border: none;
-    &:hover,
-    &.avtive {
-      color: nth($primaryColor, $style) !important;
-      @include btn_setting(#eee, nth($primaryColor, $style));
-      box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
-      border: none;
-    }
   }
 }

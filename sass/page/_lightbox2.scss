@@ -2529,9 +2529,26 @@ button {
       }
     }
   }
+  .loading_block {
+    width: 107px;
+    height: 107px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #fff;
+    border-radius: 5px;
+    img {
+      width: 107px;
+      height: 107px;
+      border-radius: 5px;
+    }
+  }
   // 內容
   .content {
     text-align: left;
+    position: relative;
     .describe_block {
       border: 1px solid #ccc;
       border-radius: 4px;
@@ -2578,6 +2595,15 @@ button {
           background-color: $color-orange;
         }
       }
+    }
+    .recordinformation_block {
+      display: flex;
+      justify-content: space-between;
+    }
+    .remainingwords {
+      flex: 0 0 auto;
+      color: $color-red;
+      font-size: 0.875em;
     }
     .query_records_btn {
       display: flex;
@@ -2672,6 +2698,9 @@ button {
             text-align: left;
             position: relative;
             transition: 0.5s;
+            &:last-child {
+              margin-bottom: 0;
+            }
             &:hover {
               background-color: nth($primaryColor, $style);
               color: #fff;
@@ -2692,6 +2721,37 @@ button {
               width: 40px;
               height: 40px;
               box-sizing: border-box;
+            }
+          }
+        }
+        .more {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 10px;
+          a {
+            display: block;
+            padding: 0 0 0 1em;
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            transition: 0.5s;
+            position: relative;
+            &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 5px;
+              border: 6px solid #333;
+              border-right-color: transparent;
+              border-top-color: transparent;
+              border-bottom-color: transparent;
+              transition: 0.5s;
+            }
+            &:hover {
+              color: $aHover;
+              &:before {
+                left: 3px;
+              }
             }
           }
         }
@@ -2738,6 +2798,7 @@ button {
         }
       }
     }
+
     // 重點元素
     .Keyelements_list {
       ul {

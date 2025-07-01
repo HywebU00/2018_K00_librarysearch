@@ -717,6 +717,28 @@ $(function () {
       // instead of a settings object
     ],
   });
+  //特色主題
+  $('.featured_area_tab').slick({
+    infinite: false,
+    speed: 2000,
+    autoplay: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        },
+      },
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ],
+  });
   //tabs
   $('.tabs').tabs({
     tiGap: 10,
@@ -848,6 +870,36 @@ $(function () {
 // qrcode
 $(function () {
   $('.qrcode_mpbtn').click(function () {
+    $('.qrcode_lightbox').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.loginblock .close').click(function () {
+    $('.qrcode_lightbox').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('.qrcode_lightbox').fadeOut();
+    $('body').removeClass('fix');
+  });
+});
+// qrcode videosqrcode_btn
+$(function () {
+  $('.scanqrcode_btn').click(function () {
+    $('.qrcode_lightbox').fadeIn();
+    $('body').addClass('fix');
+  });
+  $('.loginblock .close').click(function () {
+    $('.qrcode_lightbox').fadeOut();
+    $('body').removeClass('fix');
+  });
+  $('.overlay').click(function () {
+    $('.qrcode_lightbox').fadeOut();
+    $('body').removeClass('fix');
+  });
+});
+// qrcode videosqrcode_btn
+$(function () {
+  $('.videosqrcode_btn').click(function () {
     $('.qrcode_lightbox').fadeIn();
     $('body').addClass('fix');
   });
@@ -1693,6 +1745,19 @@ $(function () {
     $('.export_block').stop().slideUp();
     $('#communitystyle').stop().slideDown();
   });
+});
+//特色影音
+$('.moreinformation>a').click(function () {
+  $('#featuredvideos_style').fadeIn();
+  $('body').addClass('fix');
+});
+$('.lightboxstyle_block .close').click(function () {
+  $('#featuredvideos_style').fadeOut();
+  $('body').removeClass('fix');
+});
+$('.overlay').click(function () {
+  $('#featuredvideos_style').fadeOut();
+  $('body').removeClass('fix');
 });
 //會員登入後資料
 $(function () {

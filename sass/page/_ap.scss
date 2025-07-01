@@ -6154,3 +6154,458 @@
     }
   }
 }
+
+// 特色主題
+.featured_area_block {
+  overflow: hidden;
+
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  @include screen('mobile') {
+    padding: 20px 20px;
+  }
+
+  .featured_area_tab {
+    margin: 30px 10px 30px;
+    @include box-sizing;
+    @include screen('tablet') {
+      width: 90%;
+      margin: 30px auto;
+    }
+    @media (max-width: 480px) {
+      width: 75%;
+    }
+    .sort {
+      padding: 0 5px;
+      a {
+        display: block;
+        padding: 20px 30px;
+        @include gradient(#dcdcdc, #e5e5e5, vertical);
+        color: #333;
+        font-size: 1.25em;
+        text-align: center;
+        border-radius: 5px;
+        position: relative;
+        transition: 0.2s;
+        &:hover {
+          background-image: none;
+          background-color: $color-yellow;
+          color: #000;
+        }
+        &.here {
+          background: $color-yellow;
+          color: #000;
+          &:focus {
+            box-shadow: 0 0px 0px 2px $form-focus;
+          }
+        }
+      }
+    }
+    .slick-next {
+      right: -45px;
+      top: 0;
+    }
+    .slick-prev {
+      left: -45px;
+      top: 0;
+    }
+    @media (max-width: 400px) {
+      .slick-next {
+        right: -36px;
+      }
+      .slick-prev {
+        left: -36px;
+      }
+    }
+  }
+  .featured_area_sort {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px;
+    flex-wrap: wrap;
+    div {
+      margin: 0 3px 5px;
+      a {
+        display: block;
+        font-size: 1.313em;
+        font-weight: 500;
+        color: $color-dark;
+        background-color: $color-gray;
+        padding: 0.5em 1em;
+        border-radius: 5px;
+        text-align: center;
+        &:hover,
+        &.here {
+          color: #fff;
+          background-color: nth($primaryColor, $style);
+        }
+      }
+    }
+  }
+  .featured_area_search {
+    margin: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    .form_grp {
+      border-bottom: none;
+    }
+    .form_title {
+      width: 20%;
+      font-size: 1.125em;
+      font-weight: bolder;
+      text-align: right;
+      margin: 8px 0 0 0;
+      @include screen('tablet') {
+        width: 100%;
+        text-align: left;
+      }
+    }
+    .form_content {
+      display: flex;
+      align-items: center;
+      input[type='text'] {
+        margin: 0.25em 0.3em;
+        padding: 0.6em;
+      }
+      @include screen('tablet') {
+        width: 100%;
+      }
+    }
+  }
+  .featured_area_content {
+    margin: 10px 20px 15px;
+    border-radius: 5px;
+    float: none;
+    clear: both;
+    padding: 30px;
+    text-align: left;
+    background-color: #fff;
+    @include box-sizing;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    @include screen('xs_mobile') {
+      padding: 20px 10px;
+    }
+    .bookselection_list {
+      ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        li {
+          flex: none;
+          flex-basis: 17%;
+          width: 17%;
+          margin: 0 1.5% 25px;
+          position: relative;
+          @media (max-width: 1200px) {
+            flex-basis: 21%;
+            width: 21%;
+            margin: 0 2% 25px;
+          }
+          @media (max-width: 900px) {
+            flex-basis: 29%;
+            width: 29%;
+            margin: 0 2.16% 25px;
+          }
+          @include screen('mobile') {
+            flex-basis: 29%;
+            width: 29%;
+            margin: 0 2.16% 25px;
+          }
+          @media (max-width: 650px) {
+            flex-basis: 45%;
+            width: 45%;
+            margin: 0 2.5% 25px;
+          }
+          @media (max-width: 400px) {
+            flex-basis: 210px;
+            width: 210px;
+            margin: 0 auto 25px;
+          }
+          a {
+            color: #000;
+            display: block;
+            padding: 3px;
+            box-sizing: border-box;
+            &:hover {
+              color: $aHover;
+            }
+            &:focus {
+              box-shadow: 0 0px 0px 2px $form-focus;
+            }
+            .image {
+              height: 210px;
+              background-color: #fff;
+              position: relative;
+              margin-bottom: 10px;
+              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+              img {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                max-width: 100%;
+                max-height: 100%;
+                margin: auto;
+                z-index: 8;
+                display: block;
+              }
+            }
+            span {
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              font-size: 1.125em;
+              display: block;
+            }
+          }
+          // 書封設計
+          .image_titlepage,
+          .image_titlepage2 {
+            margin: 0 auto 15px;
+            // width: 100%;
+            height: 210px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            // @media(max-width: 1400px) {
+            //     height: 370px;
+            // }
+            // @include screen('notebook') {
+            //     width: 170px;
+            //     height: 220px;
+            //     margin: 0 0 15px;
+            // }
+            &:before {
+              height: 120px;
+            }
+          }
+          // .image_titlepage2 {}
+        }
+      }
+    }
+  }
+}
+// 特色影音清單
+.featured_videos_list {
+  padding: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media (max-width: 900px) {
+    display: block;
+  }
+  .videos_list {
+    flex: auto;
+    flex-basis: 49%;
+    max-width: 49%;
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: flex;
+    padding: 20px;
+    &:hover {
+      background-color: #ffc;
+    }
+
+    @media (max-width: 900px) {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+    @media (max-width: 480px) {
+      display: block;
+      margin: 0 auto 20px;
+    }
+    .image {
+      flex: 0 0 auto;
+      flex-basis: 150px;
+      max-width: 150px;
+      margin-right: 20px;
+
+      img {
+        max-width: 150px;
+        max-height: 170px;
+      }
+      @media (max-width: 480px) {
+        margin: 0 auto 20px;
+      }
+    }
+
+    .content {
+      flex: 1 1 auto;
+      overflow: hidden;
+      .title {
+        font-size: 1.25em;
+        margin-bottom: 10px;
+        color: #333;
+        border-bottom: 1px dashed #ccc;
+        padding-bottom: 10px;
+        font-weight: 800;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-right: 0;
+        @media (max-width: 480px) {
+          text-align: center;
+        }
+      }
+      p {
+        @include text-line(3, 1.5em);
+      }
+      .datalist {
+        margin: 0 0 15px;
+        padding: 0;
+        list-style-type: none;
+        li {
+          margin: 0 0 5px;
+          em {
+            font-style: normal;
+            color: $color-orange;
+            margin-right: 5px;
+            font-weight: 600;
+          }
+        }
+      }
+      .linklist {
+        ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+          list-style-type: none;
+          justify-content: flex-start;
+          @media (max-width: 480px) {
+            justify-content: center;
+          }
+
+          li {
+            margin-right: 0.5em;
+            margin-bottom: 5px;
+            position: relative;
+            flex: 0 0 auto;
+
+            border-radius: 50px;
+            background: #fff;
+            &:hover {
+              background: #eee;
+              background: linear-gradient(180deg, rgba(238, 238, 238, 1) 0%, rgba(204, 204, 204, 1) 100%);
+            }
+            a {
+              display: block;
+              position: relative;
+              z-index: 2;
+              line-height: 1.3em;
+              border: 1px solid #ccc;
+              padding: 0.2em 0.8em 0.2em 1.7em;
+              border-radius: 50px;
+
+              color: #666;
+              &:hover {
+                color: #000;
+              }
+              &:focus {
+              }
+            }
+            &.moreinformation {
+              a {
+                background-image: url('../images/feature_options03.svg');
+                background-repeat: no-repeat;
+                background-position: 10px 8px;
+                background-size: 13px;
+              }
+            }
+            &.scanqrcode_btn {
+              a {
+                background-image: url('../images/qr_code_icon.svg');
+                background-repeat: no-repeat;
+                background-position: 7px 4px;
+                background-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.videosqrcode_btn {
+  font-size: 0;
+  background-image: url('../images/qr_code_icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 26px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  min-width: auto;
+  transform: translateY(-3px);
+  margin-left: 15px;
+  display: inline-block;
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    background-image: url('../images/qr_code_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26px;
+  }
+}
+
+// 特色主題
+.featuredTopics_block {
+  width: 90%;
+  margin: 40px auto 60px;
+  @include box-sizing;
+  h2 {
+    @extend .block01_h2;
+    margin-bottom: 30px;
+  }
+}
+.featuredTopics_list {
+  padding: 2em 0;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      margin: 0 1.5% 25px;
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .pic {
+          width: 180px;
+          height: 180px;
+          display: flex;
+          background-color: #eee;
+          border-radius: 50%;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1em;
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
+          }
+        }
+        span {
+          font-size: 1.25em;
+          font-weight: bolder;
+          color: #333;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
