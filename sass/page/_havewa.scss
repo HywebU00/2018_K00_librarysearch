@@ -1,60 +1,63 @@
 .havewa {
+  :focus:not(:focus-visible) {
+    box-shadow: none; /* 滑鼠點擊時不顯示 */
+  }
   .goCenter,
   .accesskey {
     display: block;
   }
-  a:focus,
-  .scrollToTop:focus,
-  .mystudycontent .mycardlist li a:focus {
+  a:focus-visible,
+  .scrollToTop:focus-visible,
+  .mystudycontent .mycardlist li a:focus-visible {
     box-shadow: 0 0px 0px 2px #f1ad00 inset !important ;
   }
-  .btn:focus,
-  .header .qrcode_mpbtn a:focus,
-  footer .footer_accessibility a:focus,
-  .search_block .searchsystem .form_search input[type='submit']:focus,
-  .advanced_search .advanced_block .searchsystem ul li a:focus,
-  .advanced_search .advanced_block .btn_grp input[type='submit']:focus,
-  .search_blockin .searchsystem .select_left select:focus,
-  .header .member_record .member_pic a:focus,
-  .customization02 .search_blockin .form_search input[type='submit']:focus,
-  .btnstyle.morebg:focus,
-  .mainrightblock .book_detaildata .bookdata .listdata ul.no_icon li a.btnstyle:focus,
-  .mystudycontent .service_list ul li span a:focus,
-  .booklist_block .booklist .bookmidblock ul li .addtagbtn:focus,
-  .booklist_block .booklist .bookmidblock ul li .closebtn:focus,
-  .tracking_subscription_block .searchsystem ul li a:focus,
-  .mystudy_sdg_reading .SDG_banner .SDG_img a:focus,
-  .reservation_block .btn_grp a.btnstyle:focus,
-  .linecontent .book-gallery .book .cover a:focus,
-  .linecontent .book-gallery .book .cover a:focus,
-  .linecontent .book-gallery .book .cover a:focus img,
-  .bookselection_block .bookselection_group .leftblock .bookselection_list ul li a:focus,
-  .SDG_block .SDG_banner .SDG_img a:focus,
-  .RSS_button a:focus {
+  .btn:focus-visible,
+  .header .qrcode_mpbtn a:focus-visible,
+  footer .footer_accessibility a:focus-visible,
+  .search_block .searchsystem .form_search input[type='submit']:focus-visible,
+  .advanced_search .advanced_block .searchsystem ul li a:focus-visible,
+  .advanced_search .advanced_block .btn_grp input[type='submit']:focus-visible,
+  .search_blockin .searchsystem .select_left select:focus-visible,
+  .header .member_record .member_pic a:focus-visible,
+  .customization02 .search_blockin .form_search input[type='submit']:focus-visible,
+  .btnstyle.morebg:focus-visible,
+  .mainrightblock .book_detaildata .bookdata .listdata ul.no_icon li a.btnstyle:focus-visible,
+  .mystudycontent .service_list ul li span a:focus-visible,
+  .booklist_block .booklist .bookmidblock ul li .addtagbtn:focus-visible,
+  .booklist_block .booklist .bookmidblock ul li .closebtn:focus-visible,
+  .tracking_subscription_block .searchsystem ul li a:focus-visible,
+  .mystudy_sdg_reading .SDG_banner .SDG_img a:focus-visible,
+  .reservation_block .btn_grp a.btnstyle:focus-visible,
+  .linecontent .book-gallery .book .cover a:focus-visible,
+  .linecontent .book-gallery .book .cover a:focus-visible,
+  .linecontent .book-gallery .book .cover a:focus-visible img,
+  .bookselection_block .bookselection_group .leftblock .bookselection_list ul li a:focus-visible,
+  .SDG_block .SDG_banner .SDG_img a:focus-visible,
+  .RSS_button a:focus-visible {
     box-shadow: 0 0px 0px 2px #f1ad00 !important;
   }
-  .featured_block .themebook2 ul li a:focus {
+  .featured_block .themebook2 ul li a:focus-visible {
     box-shadow: 0 0px 0px 3px #fff;
   }
 
-  button:focus,
-  input[type='button']:focus,
-  input[type='submit']:focus,
-  input[type='text']:focus,
-  input[type='reset']:focus,
-  input[type='file']:focus,
-  input[type='tel']:focus,
-  input[type='email']:focus,
-  input[type='password']:focus,
-  textarea:focus,
-  select:focus {
+  button:focus-visible,
+  input[type='button']:focus-visible,
+  input[type='submit']:focus-visible,
+  input[type='text']:focus-visible,
+  input[type='reset']:focus-visible,
+  input[type='file']:focus-visible,
+  input[type='tel']:focus-visible,
+  input[type='email']:focus-visible,
+  input[type='password']:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
     box-shadow: 0 0px 0px 2px $form-focus !important;
   }
-  .customization02 .search_blockin .form_search input[type='submit']:focus {
+  .customization02 .search_blockin .form_search input[type='submit']:focus-visible {
     background-color: #bf8e07;
   }
-  .theme_recommend .themerecommend_box a:focus,
-  .theme_recommend2 .themerecommend_box a:focus {
+  .theme_recommend .themerecommend_box a:focus-visible,
+  .theme_recommend2 .themerecommend_box a:focus-visible {
     box-shadow: 3px 2px 4px 3px #ccc !important;
   }
 }

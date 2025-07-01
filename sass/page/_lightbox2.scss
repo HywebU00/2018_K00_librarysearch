@@ -2741,14 +2741,14 @@ button {
               position: absolute;
               left: 0;
               top: 5px;
-              border: 6px solid #333;
+              border: 6px solid nth($primaryColor, $style);
               border-right-color: transparent;
               border-top-color: transparent;
               border-bottom-color: transparent;
               transition: 0.5s;
             }
             &:hover {
-              color: $aHover;
+              color: nth($primaryColor, $style);
               &:before {
                 left: 3px;
               }

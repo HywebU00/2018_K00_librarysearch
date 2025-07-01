@@ -1957,6 +1957,15 @@ select::-ms-expand {
 .child01 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
   background-color: #5c9588;
 }
+.child01 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
+  border: 6px solid #5c9588;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.child01 .lightboxAI_situational .content .query_records_group .query_records_list .more a:hover {
+  color: #5c9588;
+}
 .child01 .lightboxAI_situational .content .extend_list ul li button.btn:hover {
   background-color: #5c9588;
 }
@@ -2009,7 +2018,7 @@ select::-ms-expand {
   border-left: 6px solid #5c9588;
 }
 .child01 .featured_area_block .featured_area_sort div a:hover, .child01 .featured_area_block .featured_area_sort div a.here {
-  background-color: #5c9588;
+  color: #5c9588;
 }
 .child01 .AIgptgroup .directions .content .directions {
   color: #774e2b;
@@ -2622,6 +2631,15 @@ select::-ms-expand {
 .customization01 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
   background-color: #5c9588;
 }
+.customization01 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
+  border: 6px solid #5c9588;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.customization01 .lightboxAI_situational .content .query_records_group .query_records_list .more a:hover {
+  color: #5c9588;
+}
 .customization01 .lightboxAI_situational .content .extend_list ul li button.btn:hover {
   background-color: #5c9588;
 }
@@ -2677,7 +2695,7 @@ select::-ms-expand {
   border-left: 6px solid #5c9588;
 }
 .customization01 .featured_area_block .featured_area_sort div a:hover, .customization01 .featured_area_block .featured_area_sort div a.here {
-  background-color: #5c9588;
+  color: #5c9588;
 }
 .customization01 .AIgptgroup .directions .content .directions {
   color: #185554;
@@ -3324,6 +3342,15 @@ select::-ms-expand {
 .customization02 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
   background-color: #0e664c;
 }
+.customization02 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
+  border: 6px solid #0e664c;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.customization02 .lightboxAI_situational .content .query_records_group .query_records_list .more a:hover {
+  color: #0e664c;
+}
 .customization02 .lightboxAI_situational .content .extend_list ul li button.btn:hover {
   background-color: #0e664c;
 }
@@ -3383,7 +3410,7 @@ select::-ms-expand {
   border-left: 6px solid #0e664c;
 }
 .customization02 .featured_area_block .featured_area_sort div a:hover, .customization02 .featured_area_block .featured_area_sort div a.here {
-  background-color: #0e664c;
+  color: #0e664c;
 }
 .customization02 .AIgptgroup .directions .content .directions {
   color: #235f92;
@@ -4620,6 +4647,15 @@ select::-ms-expand {
 .customization03 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
   background-color: #313131;
 }
+.customization03 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
+  border: 6px solid #313131;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.customization03 .lightboxAI_situational .content .query_records_group .query_records_list .more a:hover {
+  color: #313131;
+}
 .customization03 .lightboxAI_situational .content .extend_list ul li button.btn:hover {
   background-color: #313131;
 }
@@ -4687,7 +4723,7 @@ select::-ms-expand {
   border-left: 6px solid #313131;
 }
 .customization03 .featured_area_block .featured_area_sort div a:hover, .customization03 .featured_area_block .featured_area_sort div a.here {
-  background-color: #313131;
+  color: #313131;
 }
 .customization03 .AIgptgroup .directions .content .directions {
   color: #666;
@@ -5260,6 +5296,15 @@ select::-ms-expand {
 .version01 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
   background-color: #1c4b82;
 }
+.version01 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
+  border: 6px solid #1c4b82;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.version01 .lightboxAI_situational .content .query_records_group .query_records_list .more a:hover {
+  color: #1c4b82;
+}
 .version01 .lightboxAI_situational .content .extend_list ul li button.btn:hover {
   background-color: #1c4b82;
 }
@@ -5315,7 +5360,7 @@ select::-ms-expand {
   border-left: 6px solid #1c4b82;
 }
 .version01 .featured_area_block .featured_area_sort div a:hover, .version01 .featured_area_block .featured_area_sort div a.here {
-  background-color: #1c4b82;
+  color: #1c4b82;
 }
 .version01 .AIgptgroup .directions .content .directions {
   color: #1c4b82;
@@ -5889,6 +5934,15 @@ select::-ms-expand {
 .version02 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
   background-color: #bc5702;
 }
+.version02 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
+  border: 6px solid #bc5702;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.version02 .lightboxAI_situational .content .query_records_group .query_records_list .more a:hover {
+  color: #bc5702;
+}
 .version02 .lightboxAI_situational .content .extend_list ul li button.btn:hover {
   background-color: #bc5702;
 }
@@ -5953,7 +6007,7 @@ select::-ms-expand {
   border-left: 6px solid #bc5702;
 }
 .version02 .featured_area_block .featured_area_sort div a:hover, .version02 .featured_area_block .featured_area_sort div a.here {
-  background-color: #bc5702;
+  color: #bc5702;
 }
 .version02 .AIgptgroup .directions .content .directions {
   color: #774e2b;
@@ -6524,6 +6578,15 @@ select::-ms-expand {
 .version03 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
   background-color: #097e76;
 }
+.version03 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
+  border: 6px solid #097e76;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.version03 .lightboxAI_situational .content .query_records_group .query_records_list .more a:hover {
+  color: #097e76;
+}
 .version03 .lightboxAI_situational .content .extend_list ul li button.btn:hover {
   background-color: #097e76;
 }
@@ -6588,7 +6651,7 @@ select::-ms-expand {
   border-left: 6px solid #097e76;
 }
 .version03 .featured_area_block .featured_area_sort div a:hover, .version03 .featured_area_block .featured_area_sort div a.here {
-  background-color: #097e76;
+  color: #097e76;
 }
 .version03 .AIgptgroup .directions .content .directions {
   color: #097e76;
@@ -7165,6 +7228,15 @@ select::-ms-expand {
 .version04 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
   background-color: #774181;
 }
+.version04 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
+  border: 6px solid #774181;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.version04 .lightboxAI_situational .content .query_records_group .query_records_list .more a:hover {
+  color: #774181;
+}
 .version04 .lightboxAI_situational .content .extend_list ul li button.btn:hover {
   background-color: #774181;
 }
@@ -7229,7 +7301,7 @@ select::-ms-expand {
   border-left: 6px solid #774181;
 }
 .version04 .featured_area_block .featured_area_sort div a:hover, .version04 .featured_area_block .featured_area_sort div a.here {
-  background-color: #774181;
+  color: #774181;
 }
 .version04 .AIgptgroup .directions .content .directions {
   color: #774181;
@@ -7800,6 +7872,15 @@ select::-ms-expand {
 .version05 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
   background-color: #088c6f;
 }
+.version05 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
+  border: 6px solid #088c6f;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.version05 .lightboxAI_situational .content .query_records_group .query_records_list .more a:hover {
+  color: #088c6f;
+}
 .version05 .lightboxAI_situational .content .extend_list ul li button.btn:hover {
   background-color: #088c6f;
 }
@@ -7864,7 +7945,7 @@ select::-ms-expand {
   border-left: 6px solid #088c6f;
 }
 .version05 .featured_area_block .featured_area_sort div a:hover, .version05 .featured_area_block .featured_area_sort div a.here {
-  background-color: #088c6f;
+  color: #088c6f;
 }
 .version05 .AIgptgroup .directions .content .directions {
   color: #07785f;
@@ -8433,6 +8514,15 @@ select::-ms-expand {
 .version06 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
   background-color: #0078c6;
 }
+.version06 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
+  border: 6px solid #0078c6;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.version06 .lightboxAI_situational .content .query_records_group .query_records_list .more a:hover {
+  color: #0078c6;
+}
 .version06 .lightboxAI_situational .content .extend_list ul li button.btn:hover {
   background-color: #0078c6;
 }
@@ -8487,7 +8577,7 @@ select::-ms-expand {
   border-left: 6px solid #0078c6;
 }
 .version06 .featured_area_block .featured_area_sort div a:hover, .version06 .featured_area_block .featured_area_sort div a.here {
-  background-color: #0078c6;
+  color: #0078c6;
 }
 .version06 .AIgptgroup .directions .content .directions {
   color: #0078c6;

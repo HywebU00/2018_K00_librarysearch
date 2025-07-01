@@ -9680,14 +9680,14 @@ button.backbtn {
   position: absolute;
   left: 0;
   top: 5px;
-  border: 6px solid #333;
+  border: 6px solid #005d98;
   border-right-color: transparent;
   border-top-color: transparent;
   border-bottom-color: transparent;
   transition: 0.5s;
 }
 .lightboxAI_situational .content .query_records_group .query_records_list .more a:hover {
-  color: #dd1f03;
+  color: #005d98;
 }
 .lightboxAI_situational .content .query_records_group .query_records_list .more a:hover:before {
   left: 3px;
@@ -31583,14 +31583,14 @@ em.yellowbg {
   font-size: 1.313em;
   font-weight: 500;
   color: #333;
-  background-color: #d3d3d3;
   padding: 0.5em 1em;
   border-radius: 5px;
   text-align: center;
 }
 .featured_area_block .featured_area_sort div a:hover, .featured_area_block .featured_area_sort div a.here {
-  color: #fff;
-  background-color: #005d98;
+  color: #005d98;
+  text-decoration: underline;
+  text-underline-offset: 15px;
 }
 .featured_area_block .featured_area_search {
   margin: 20px;
@@ -31701,9 +31701,6 @@ em.yellowbg {
 }
 .featured_area_block .featured_area_content .bookselection_list ul li a:hover {
   color: #dd1f03;
-}
-.featured_area_block .featured_area_content .bookselection_list ul li a:focus {
-  box-shadow: 0 0px 0px 2px #f1ad00;
 }
 .featured_area_block .featured_area_content .bookselection_list ul li a .image {
   height: 210px;
@@ -32760,61 +32757,64 @@ em.yellowbg {
   background-color: #f0b209 !important;
 }
 
+.havewa :focus:not(:focus-visible) {
+  box-shadow: none; /* 滑鼠點擊時不顯示 */
+}
 .havewa .goCenter,
 .havewa .accesskey {
   display: block;
 }
-.havewa a:focus,
-.havewa .scrollToTop:focus,
-.havewa .mystudycontent .mycardlist li a:focus {
+.havewa a:focus-visible,
+.havewa .scrollToTop:focus-visible,
+.havewa .mystudycontent .mycardlist li a:focus-visible {
   box-shadow: 0 0px 0px 2px #f1ad00 inset !important;
 }
-.havewa .btn:focus,
-.havewa .header .qrcode_mpbtn a:focus,
-.havewa footer .footer_accessibility a:focus,
-.havewa .search_block .searchsystem .form_search input[type=submit]:focus,
-.havewa .advanced_search .advanced_block .searchsystem ul li a:focus,
-.havewa .advanced_search .advanced_block .btn_grp input[type=submit]:focus,
-.havewa .search_blockin .searchsystem .select_left select:focus,
-.havewa .header .member_record .member_pic a:focus,
-.havewa .customization02 .search_blockin .form_search input[type=submit]:focus,
-.havewa .btnstyle.morebg:focus,
-.havewa .mainrightblock .book_detaildata .bookdata .listdata ul.no_icon li a.btnstyle:focus,
-.havewa .mystudycontent .service_list ul li span a:focus,
-.havewa .booklist_block .booklist .bookmidblock ul li .addtagbtn:focus,
-.havewa .booklist_block .booklist .bookmidblock ul li .closebtn:focus,
-.havewa .tracking_subscription_block .searchsystem ul li a:focus,
-.havewa .mystudy_sdg_reading .SDG_banner .SDG_img a:focus,
-.havewa .reservation_block .btn_grp a.btnstyle:focus,
-.havewa .linecontent .book-gallery .book .cover a:focus,
-.havewa .linecontent .book-gallery .book .cover a:focus,
-.havewa .linecontent .book-gallery .book .cover a:focus img,
-.havewa .bookselection_block .bookselection_group .leftblock .bookselection_list ul li a:focus,
-.havewa .SDG_block .SDG_banner .SDG_img a:focus,
-.havewa .RSS_button a:focus {
+.havewa .btn:focus-visible,
+.havewa .header .qrcode_mpbtn a:focus-visible,
+.havewa footer .footer_accessibility a:focus-visible,
+.havewa .search_block .searchsystem .form_search input[type=submit]:focus-visible,
+.havewa .advanced_search .advanced_block .searchsystem ul li a:focus-visible,
+.havewa .advanced_search .advanced_block .btn_grp input[type=submit]:focus-visible,
+.havewa .search_blockin .searchsystem .select_left select:focus-visible,
+.havewa .header .member_record .member_pic a:focus-visible,
+.havewa .customization02 .search_blockin .form_search input[type=submit]:focus-visible,
+.havewa .btnstyle.morebg:focus-visible,
+.havewa .mainrightblock .book_detaildata .bookdata .listdata ul.no_icon li a.btnstyle:focus-visible,
+.havewa .mystudycontent .service_list ul li span a:focus-visible,
+.havewa .booklist_block .booklist .bookmidblock ul li .addtagbtn:focus-visible,
+.havewa .booklist_block .booklist .bookmidblock ul li .closebtn:focus-visible,
+.havewa .tracking_subscription_block .searchsystem ul li a:focus-visible,
+.havewa .mystudy_sdg_reading .SDG_banner .SDG_img a:focus-visible,
+.havewa .reservation_block .btn_grp a.btnstyle:focus-visible,
+.havewa .linecontent .book-gallery .book .cover a:focus-visible,
+.havewa .linecontent .book-gallery .book .cover a:focus-visible,
+.havewa .linecontent .book-gallery .book .cover a:focus-visible img,
+.havewa .bookselection_block .bookselection_group .leftblock .bookselection_list ul li a:focus-visible,
+.havewa .SDG_block .SDG_banner .SDG_img a:focus-visible,
+.havewa .RSS_button a:focus-visible {
   box-shadow: 0 0px 0px 2px #f1ad00 !important;
 }
-.havewa .featured_block .themebook2 ul li a:focus {
+.havewa .featured_block .themebook2 ul li a:focus-visible {
   box-shadow: 0 0px 0px 3px #fff;
 }
-.havewa button:focus,
-.havewa input[type=button]:focus,
-.havewa input[type=submit]:focus,
-.havewa input[type=text]:focus,
-.havewa input[type=reset]:focus,
-.havewa input[type=file]:focus,
-.havewa input[type=tel]:focus,
-.havewa input[type=email]:focus,
-.havewa input[type=password]:focus,
-.havewa textarea:focus,
-.havewa select:focus {
+.havewa button:focus-visible,
+.havewa input[type=button]:focus-visible,
+.havewa input[type=submit]:focus-visible,
+.havewa input[type=text]:focus-visible,
+.havewa input[type=reset]:focus-visible,
+.havewa input[type=file]:focus-visible,
+.havewa input[type=tel]:focus-visible,
+.havewa input[type=email]:focus-visible,
+.havewa input[type=password]:focus-visible,
+.havewa textarea:focus-visible,
+.havewa select:focus-visible {
   box-shadow: 0 0px 0px 2px #f1ad00 !important;
 }
-.havewa .customization02 .search_blockin .form_search input[type=submit]:focus {
+.havewa .customization02 .search_blockin .form_search input[type=submit]:focus-visible {
   background-color: #bf8e07;
 }
-.havewa .theme_recommend .themerecommend_box a:focus,
-.havewa .theme_recommend2 .themerecommend_box a:focus {
+.havewa .theme_recommend .themerecommend_box a:focus-visible,
+.havewa .theme_recommend2 .themerecommend_box a:focus-visible {
   box-shadow: 3px 2px 4px 3px #ccc !important;
 }
 

@@ -288,6 +288,19 @@
               }
             }
           }
+          .more {
+            a {
+              &:before {
+                border: 6px solid nth($primaryColor, $style);
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+              }
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
         }
       }
       .extend_list {
@@ -356,7 +369,7 @@
         a {
           &:hover,
           &.here {
-            background-color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
           }
         }
       }
@@ -1343,6 +1356,19 @@
               }
             }
           }
+          .more {
+            a {
+              &:before {
+                border: 6px solid nth($primaryColor, $style);
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+              }
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
         }
       }
       .extend_list {
@@ -1414,7 +1440,7 @@
         a {
           &:hover,
           &.here {
-            background-color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
           }
         }
       }
@@ -2460,6 +2486,19 @@
               }
             }
           }
+          .more {
+            a {
+              &:before {
+                border: 6px solid nth($primaryColor, $style);
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+              }
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
         }
       }
       .extend_list {
@@ -2538,7 +2577,7 @@
         a {
           &:hover,
           &.here {
-            background-color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
           }
         }
       }
@@ -4309,6 +4348,19 @@
               }
             }
           }
+          .more {
+            a {
+              &:before {
+                border: 6px solid nth($primaryColor, $style);
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+              }
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
         }
       }
       .extend_list {
@@ -4396,7 +4448,7 @@
         a {
           &:hover,
           &.here {
-            background-color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
           }
         }
       }
@@ -5345,6 +5397,19 @@
               }
             }
           }
+          .more {
+            a {
+              &:before {
+                border: 6px solid nth($primaryColor, $style);
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+              }
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
         }
       }
       .extend_list {
@@ -5416,7 +5481,7 @@
         a {
           &:hover,
           &.here {
-            background-color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
           }
         }
       }
@@ -6377,6 +6442,19 @@
               }
             }
           }
+          .more {
+            a {
+              &:before {
+                border: 6px solid nth($primaryColor, $style);
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+              }
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
         }
       }
       .extend_list {
@@ -6461,7 +6539,7 @@
         a {
           &:hover,
           &.here {
-            background-color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
           }
         }
       }
@@ -7405,6 +7483,19 @@
               }
             }
           }
+          .more {
+            a {
+              &:before {
+                border: 6px solid nth($primaryColor, $style);
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+              }
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
         }
       }
       .extend_list {
@@ -7489,7 +7580,7 @@
         a {
           &:hover,
           &.here {
-            background-color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
           }
         }
       }
@@ -8435,6 +8526,19 @@
               }
             }
           }
+          .more {
+            a {
+              &:before {
+                border: 6px solid nth($primaryColor, $style);
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+              }
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
         }
       }
       .extend_list {
@@ -8519,7 +8623,7 @@
         a {
           &:hover,
           &.here {
-            background-color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
           }
         }
       }
@@ -9467,6 +9571,19 @@
               }
             }
           }
+          .more {
+            a {
+              &:before {
+                border: 6px solid nth($primaryColor, $style);
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+              }
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
         }
       }
       .extend_list {
@@ -9551,7 +9668,7 @@
         a {
           &:hover,
           &.here {
-            background-color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
           }
         }
       }
@@ -10493,6 +10610,19 @@
               }
             }
           }
+          .more {
+            a {
+              &:before {
+                border: 6px solid nth($primaryColor, $style);
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+              }
+              &:hover {
+                color: nth($primaryColor, $style);
+              }
+            }
+          }
         }
       }
       .extend_list {
@@ -10564,7 +10694,7 @@
         a {
           &:hover,
           &.here {
-            background-color: nth($primaryColor, $style);
+            color: nth($primaryColor, $style);
           }
         }
       }

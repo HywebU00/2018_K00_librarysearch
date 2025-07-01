@@ -6218,6 +6218,7 @@
       }
     }
   }
+  // 分類
   .featured_area_sort {
     display: flex;
     justify-content: center;
@@ -6230,14 +6231,14 @@
         font-size: 1.313em;
         font-weight: 500;
         color: $color-dark;
-        background-color: $color-gray;
         padding: 0.5em 1em;
         border-radius: 5px;
         text-align: center;
         &:hover,
         &.here {
-          color: #fff;
-          background-color: nth($primaryColor, $style);
+          color: nth($primaryColor, $style);
+          text-decoration: underline;
+          text-underline-offset: 15px;
         }
       }
     }
@@ -6333,9 +6334,9 @@
             &:hover {
               color: $aHover;
             }
-            &:focus {
-              box-shadow: 0 0px 0px 2px $form-focus;
-            }
+            // &:focus {
+            //   box-shadow: 0 0px 0px 2px $form-focus;
+            // }
             .image {
               height: 210px;
               background-color: #fff;
