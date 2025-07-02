@@ -5,9 +5,12 @@
   color: #666;
   @include clearfix;
   .accesskeyDefine {
-    padding: 1em 2em;
+    padding: 20px 50px;
     background: #eee;
-    @include border-radius(6px);
+    @include border-radius(5px);
+    @include screen('mobile') {
+      padding: 20px 40px;
+    }
     li {
       margin-bottom: 5px;
     }

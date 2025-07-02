@@ -1075,12 +1075,15 @@
 }
 .write_data {
   border-radius: 5px;
-  border: 1px solid #ccc;
   padding: 0px 30px 30px;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px 0px #ddd inset;
   @include box-sizing;
   h3 {
     color: $importantColor;
+  }
+  @include screen('mobile') {
+    padding: 20px;
   }
 }
 .modify_data {
@@ -1109,9 +1112,9 @@
   }
   .mystudytrack_list {
     border-radius: 5px;
-    border: 1px solid #ccc;
     padding: 20px 20px 20px 30px;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px 0px #ddd inset;
     position: relative;
     overflow: hidden;
     width: 32%;
@@ -1322,23 +1325,26 @@
   flex: auto;
   flex-basis: 100%;
   max-width: 100%;
-  padding: 20px;
+  padding: 20px 30px;
   box-sizing: border-box;
   line-height: 1.7em;
-  border: 1px solid #ddd;
   margin-bottom: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px 0px #ddd inset;
   font-size: 1.063em;
+  @include screen('mobile') {
+    padding: 20px;
+  }
 }
 .security_deposit_group {
   flex: none;
   flex-basis: 60%;
   max-width: 60%;
   box-sizing: border-box;
-  border: 1px solid #ddd;
   border-radius: 5px;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px 0px #ddd inset;
   margin-right: 20px;
   position: relative;
   @include screen('tablet') {
@@ -1436,9 +1442,9 @@
   flex: none;
   flex-basis: calc(100% - 60% - 20px);
   max-width: calc(100% - 60% - 20px);
-  border: 1px solid #ddd;
   border-radius: 5px;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px 0px #ddd inset;
   position: relative;
   box-sizing: border-box;
   @include screen('tablet') {
@@ -1527,11 +1533,12 @@
 .super_business_block {
   margin-bottom: 20px;
   .super_business_group {
-    border: 1px solid #ddd;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px 0px #ddd inset;
     position: relative;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 30px;
+    border-radius: 5px;
     ul {
       margin: 0;
       padding: 0;
@@ -1678,7 +1685,7 @@
   border-radius: 5px;
   padding: 20px;
   box-sizing: border-box;
-  border: #ddd 1px solid;
+
   .order_number {
     .form_grp {
       border-bottom: none;
@@ -1711,12 +1718,15 @@
 .stored_value_block {
   .stored_value_group {
     line-height: 1.7em;
-    border: 1px solid #ddd;
     margin-bottom: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px 0px #ddd inset;
+    padding: 30px;
     box-sizing: border-box;
+    @include screen('mobile') {
+      padding: 20px;
+    }
   }
   .upload_grp {
     padding-left: 136px;
@@ -1767,12 +1777,15 @@
 .reader_form_group {
   margin: 20px 0 0;
   line-height: 1.7em;
-  border: 1px solid #ddd;
   margin-bottom: 20px;
   border-radius: 5px;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  padding: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px 0px #ddd inset;
+  padding: 30px;
   box-sizing: border-box;
+  @include screen('mobile') {
+    padding: 20px;
+  }
 }
 // 我的SDG閱讀紀錄
 .mystudy_sdg_reading {
@@ -1784,11 +1797,14 @@
   .SDG_explain {
     margin-bottom: 30px;
     border-radius: 5px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px 0px #ddd inset;
     line-height: 1.55em;
     @include box-sizing;
+    @include screen('mobile') {
+      padding: 20px;
+    }
   }
   .SDG_banner {
     overflow: hidden;
@@ -1821,10 +1837,11 @@
 .wallet_module_block {
   text-align: center;
   max-width: 600px;
-  border-radius: 8px;
+  border-radius: 5px;
   margin: 2em auto;
-  padding: 3em;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 30px;
+  border: 1px solid #eee;
+  box-shadow: 0 0 10px 0px #ddd inset;
 
   p {
     font-size: 1.25em;

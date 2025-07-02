@@ -1997,6 +1997,9 @@ select::-ms-expand {
   background: #629e90;
   cursor: pointer;
 }
+.child01 .featuredTopics_list ul li a:hover span {
+  color: #5c9588;
+}
 .child01 .featured_blockin {
   background-color: #5c9588;
 }
@@ -2670,6 +2673,9 @@ select::-ms-expand {
 .customization01 input[type=submit].active {
   background: #629e90;
   cursor: pointer;
+}
+.customization01 .featuredTopics_list ul li a:hover span {
+  color: #5c9588;
 }
 .customization01 .featured_blockin {
   background-color: #5c9588;
@@ -3381,6 +3387,9 @@ select::-ms-expand {
 .customization02 input[type=submit].active {
   background: #107356;
   cursor: pointer;
+}
+.customization02 .featuredTopics_list ul li a:hover span {
+  color: #0e664c;
 }
 .customization02 .featured_blockin {
   background-color: #f3d22f;
@@ -4687,6 +4696,9 @@ select::-ms-expand {
   background: #393939;
   cursor: pointer;
 }
+.customization03 .featuredTopics_list ul li a:hover span {
+  color: #313131;
+}
 .customization03 .featured_blockin {
   background-color: #dddddd;
 }
@@ -5336,6 +5348,9 @@ select::-ms-expand {
   background: #1f528f;
   cursor: pointer;
 }
+.version01 .featuredTopics_list ul li a:hover span {
+  color: #1c4b82;
+}
 .version01 .featured_blockin {
   background-color: #e9846a;
 }
@@ -5973,6 +5988,9 @@ select::-ms-expand {
 .version02 input[type=submit].active {
   background: #cb5e02;
   cursor: pointer;
+}
+.version02 .featuredTopics_list ul li a:hover span {
+  color: #bc5702;
 }
 .version02 .featured_blockin {
   background-color: #a7c077;
@@ -6617,6 +6635,9 @@ select::-ms-expand {
 .version03 input[type=submit].active {
   background: #0a8c83;
   cursor: pointer;
+}
+.version03 .featuredTopics_list ul li a:hover span {
+  color: #097e76;
 }
 .version03 .featured_blockin {
   background-color: #f49a6e;
@@ -7268,6 +7289,9 @@ select::-ms-expand {
   background: #80468b;
   cursor: pointer;
 }
+.version04 .featuredTopics_list ul li a:hover span {
+  color: #774181;
+}
 .version04 .featured_blockin {
   background-color: #e6b2c6;
 }
@@ -7912,6 +7936,9 @@ select::-ms-expand {
   background: #099a7a;
   cursor: pointer;
 }
+.version05 .featuredTopics_list ul li a:hover span {
+  color: #088c6f;
+}
 .version05 .featured_blockin {
   background-color: #f3d394;
 }
@@ -8553,6 +8580,9 @@ select::-ms-expand {
 .version06 input[type=submit].active {
   background: #0081d5;
   cursor: pointer;
+}
+.version06 .featuredTopics_list ul li a:hover span {
+  color: #0078c6;
 }
 .version06 .featured_blockin {
   background-color: #fbe8d3;
