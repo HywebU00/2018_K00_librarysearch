@@ -1818,22 +1818,6 @@ select::-ms-expand {
 .child01 table td a:hover {
   color: #dd1f03;
 }
-.child01 .query_system_tabs button.btn {
-  background-color: #5c9588 !important;
-  box-shadow: 0 0 0 2px #5c9588 inset !important;
-}
-.child01 .query_system_tabs button.btn:hover, .child01 .query_system_tabs button.btn:focus {
-  background-color: #5c9588 !important;
-}
-.child01 .query_system_tabs button.AI_situational_btn {
-  color: #5c9588 !important;
-  box-shadow: 0 0 0 2px #5c9588 inset !important;
-  background-color: #fff !important;
-}
-.child01 .query_system_tabs button.AI_situational_btn:hover, .child01 .query_system_tabs button.AI_situational_btn:focus {
-  background-color: #5c9588 !important;
-  color: #fff !important;
-}
 .child01 .search_block {
   background-image: url("../images/search_blockbg02_child.jpg");
   height: 630px;
@@ -1859,6 +1843,16 @@ select::-ms-expand {
 .child01 .search_block .searchsystem .searchbutton span.primary_btn a {
   background-color: #5c9588;
   border: 1px solid #5c9588;
+}
+.child01 .search_block .query_system_block .AI_situational_btn {
+  color: #5c9588;
+  box-shadow: 0 0 0 2px #5c9588 inset;
+}
+.child01 .search_block .query_system_block .AI_situational_btn:hover, .child01 .search_block .query_system_block .AI_situational_btn:focus {
+  background-color: #5c9588;
+}
+.child01 .search_block .query_system_block .titlename {
+  background-color: #5c9588;
 }
 .child01 .privacy_consent {
   background-color: #5c9588;
@@ -1954,7 +1948,7 @@ select::-ms-expand {
 .child01 .lightboxAI_situational .content .query_records_group .query_records_list .query_function .time {
   color: #5c9588;
 }
-.child01 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
+.child01 .lightboxAI_situational .content .query_records_group .query_records_list ul li a:hover {
   background-color: #5c9588;
 }
 .child01 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
@@ -2487,22 +2481,6 @@ select::-ms-expand {
 .customization01 table td a:hover {
   color: #dd1f03;
 }
-.customization01 .query_system_tabs button.btn {
-  background-color: #5c9588 !important;
-  box-shadow: 0 0 0 2px #5c9588 inset !important;
-}
-.customization01 .query_system_tabs button.btn:hover, .customization01 .query_system_tabs button.btn:focus {
-  background-color: #5c9588 !important;
-}
-.customization01 .query_system_tabs button.AI_situational_btn {
-  color: #5c9588 !important;
-  box-shadow: 0 0 0 2px #5c9588 inset !important;
-  background-color: #fff !important;
-}
-.customization01 .query_system_tabs button.AI_situational_btn:hover, .customization01 .query_system_tabs button.AI_situational_btn:focus {
-  background-color: #5c9588 !important;
-  color: #fff !important;
-}
 .customization01 .search_block {
   background-image: url("../images/search_blockbg02_customization01.jpg");
 }
@@ -2521,6 +2499,16 @@ select::-ms-expand {
 .customization01 .search_block .searchsystem .searchbutton span.primary_btn a {
   background-color: #5c9588;
   border: 1px solid #5c9588;
+}
+.customization01 .search_block .query_system_block .AI_situational_btn {
+  color: #5c9588;
+  box-shadow: 0 0 0 2px #5c9588 inset;
+}
+.customization01 .search_block .query_system_block .AI_situational_btn:hover, .customization01 .search_block .query_system_block .AI_situational_btn:focus {
+  background-color: #5c9588;
+}
+.customization01 .search_block .query_system_block .titlename {
+  background-color: #5c9588;
 }
 .customization01 .related_links div a span {
   background-color: #5c9588;
@@ -2631,7 +2619,7 @@ select::-ms-expand {
 .customization01 .lightboxAI_situational .content .query_records_group .query_records_list .query_function .time {
   color: #5c9588;
 }
-.customization01 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
+.customization01 .lightboxAI_situational .content .query_records_group .query_records_list ul li a:hover {
   background-color: #5c9588;
 }
 .customization01 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
@@ -3169,22 +3157,6 @@ select::-ms-expand {
 .customization02 table td a:hover {
   color: #dd1f03;
 }
-.customization02 .query_system_tabs button.btn {
-  background-color: #0e664c !important;
-  box-shadow: 0 0 0 2px #0e664c inset !important;
-}
-.customization02 .query_system_tabs button.btn:hover, .customization02 .query_system_tabs button.btn:focus {
-  background-color: #0e664c !important;
-}
-.customization02 .query_system_tabs button.AI_situational_btn {
-  color: #0e664c !important;
-  box-shadow: 0 0 0 2px #0e664c inset !important;
-  background-color: #fff !important;
-}
-.customization02 .query_system_tabs button.AI_situational_btn:hover, .customization02 .query_system_tabs button.AI_situational_btn:focus {
-  background-color: #0e664c !important;
-  color: #fff !important;
-}
 .customization02 .search_block {
   background-image: url("../images/search_blockbg02_customization02.png");
 }
@@ -3209,6 +3181,16 @@ select::-ms-expand {
 .customization02 .search_block .searchsystem .searchbutton span.primary_btn a {
   background-color: #0e664c;
   border: 1px solid #0e664c;
+}
+.customization02 .search_block .query_system_block .AI_situational_btn {
+  color: #0e664c;
+  box-shadow: 0 0 0 2px #0e664c inset;
+}
+.customization02 .search_block .query_system_block .AI_situational_btn:hover, .customization02 .search_block .query_system_block .AI_situational_btn:focus {
+  background-color: #0e664c;
+}
+.customization02 .search_block .query_system_block .titlename {
+  background-color: #0e664c;
 }
 .customization02 .related_links div a span {
   background-color: #7fbe25;
@@ -3345,7 +3327,7 @@ select::-ms-expand {
 .customization02 .lightboxAI_situational .content .query_records_group .query_records_list .query_function .time {
   color: #0e664c;
 }
-.customization02 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
+.customization02 .lightboxAI_situational .content .query_records_group .query_records_list ul li a:hover {
   background-color: #0e664c;
 }
 .customization02 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
@@ -4075,22 +4057,6 @@ select::-ms-expand {
 .customization03 table td a:hover {
   color: #dd1f03;
 }
-.customization03 .query_system_tabs button.btn {
-  background-color: #313131 !important;
-  box-shadow: 0 0 0 2px #313131 inset !important;
-}
-.customization03 .query_system_tabs button.btn:hover, .customization03 .query_system_tabs button.btn:focus {
-  background-color: #313131 !important;
-}
-.customization03 .query_system_tabs button.AI_situational_btn {
-  color: #313131 !important;
-  box-shadow: 0 0 0 2px #313131 inset !important;
-  background-color: #fff !important;
-}
-.customization03 .query_system_tabs button.AI_situational_btn:hover, .customization03 .query_system_tabs button.AI_situational_btn:focus {
-  background-color: #313131 !important;
-  color: #fff !important;
-}
 .customization03 .search_block {
   background-image: url("../images/search_blockbg02_customization03.jpg");
 }
@@ -4282,6 +4248,16 @@ select::-ms-expand {
   border-bottom: 1px solid #989899 !important;
   background: transparent url(../images/basic/icon_select_arrow_2.svg) no-repeat right center;
   background-size: 22px;
+}
+.customization03 .search_block .query_system_block .AI_situational_btn {
+  color: #313131;
+  box-shadow: 0 0 0 2px #313131 inset;
+}
+.customization03 .search_block .query_system_block .AI_situational_btn:hover, .customization03 .search_block .query_system_block .AI_situational_btn:focus {
+  background-color: #313131;
+}
+.customization03 .search_block .query_system_block .titlename {
+  background-color: #313131;
 }
 .customization03 .related_block {
   padding-top: 2em;
@@ -4653,7 +4629,7 @@ select::-ms-expand {
 .customization03 .lightboxAI_situational .content .query_records_group .query_records_list .query_function .time {
   color: #313131;
 }
-.customization03 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
+.customization03 .lightboxAI_situational .content .query_records_group .query_records_list ul li a:hover {
   background-color: #313131;
 }
 .customization03 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
@@ -5164,22 +5140,6 @@ select::-ms-expand {
 .version01 table td a:hover {
   color: #dd1f03;
 }
-.version01 .query_system_tabs button.btn {
-  background-color: #1c4b82 !important;
-  box-shadow: 0 0 0 2px #1c4b82 inset !important;
-}
-.version01 .query_system_tabs button.btn:hover, .version01 .query_system_tabs button.btn:focus {
-  background-color: #1c4b82 !important;
-}
-.version01 .query_system_tabs button.AI_situational_btn {
-  color: #1c4b82 !important;
-  box-shadow: 0 0 0 2px #1c4b82 inset !important;
-  background-color: #fff !important;
-}
-.version01 .query_system_tabs button.AI_situational_btn:hover, .version01 .query_system_tabs button.AI_situational_btn:focus {
-  background-color: #1c4b82 !important;
-  color: #fff !important;
-}
 .version01 .search_block {
   background-image: url("../images/search_blockbg02_version01.jpg");
 }
@@ -5198,6 +5158,16 @@ select::-ms-expand {
 .version01 .search_block .searchsystem .searchbutton span.primary_btn a {
   background-color: #1c4b82;
   border: 1px solid #1c4b82;
+}
+.version01 .search_block .query_system_block .AI_situational_btn {
+  color: #1c4b82;
+  box-shadow: 0 0 0 2px #1c4b82 inset;
+}
+.version01 .search_block .query_system_block .AI_situational_btn:hover, .version01 .search_block .query_system_block .AI_situational_btn:focus {
+  background-color: #1c4b82;
+}
+.version01 .search_block .query_system_block .titlename {
+  background-color: #1c4b82;
 }
 .version01 .related_links div a span {
   background-color: #1c4b82;
@@ -5305,7 +5275,7 @@ select::-ms-expand {
 .version01 .lightboxAI_situational .content .query_records_group .query_records_list .query_function .time {
   color: #1c4b82;
 }
-.version01 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
+.version01 .lightboxAI_situational .content .query_records_group .query_records_list ul li a:hover {
   background-color: #1c4b82;
 }
 .version01 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
@@ -5802,22 +5772,6 @@ select::-ms-expand {
 .version02 table td a:hover {
   color: #dd1f03;
 }
-.version02 .query_system_tabs button.btn {
-  background-color: #bc5702 !important;
-  box-shadow: 0 0 0 2px #bc5702 inset !important;
-}
-.version02 .query_system_tabs button.btn:hover, .version02 .query_system_tabs button.btn:focus {
-  background-color: #bc5702 !important;
-}
-.version02 .query_system_tabs button.AI_situational_btn {
-  color: #bc5702 !important;
-  box-shadow: 0 0 0 2px #bc5702 inset !important;
-  background-color: #fff !important;
-}
-.version02 .query_system_tabs button.AI_situational_btn:hover, .version02 .query_system_tabs button.AI_situational_btn:focus {
-  background-color: #bc5702 !important;
-  color: #fff !important;
-}
 .version02 .search_block {
   background-image: url("../images/search_blockbg02_version02.jpg");
 }
@@ -5836,6 +5790,16 @@ select::-ms-expand {
 .version02 .search_block .searchsystem .searchbutton span.primary_btn a {
   background-color: #bc5702;
   border: 1px solid #bc5702;
+}
+.version02 .search_block .query_system_block .AI_situational_btn {
+  color: #bc5702;
+  box-shadow: 0 0 0 2px #bc5702 inset;
+}
+.version02 .search_block .query_system_block .AI_situational_btn:hover, .version02 .search_block .query_system_block .AI_situational_btn:focus {
+  background-color: #bc5702;
+}
+.version02 .search_block .query_system_block .titlename {
+  background-color: #bc5702;
 }
 .version02 .related_links div a span {
   background-color: #bc5702;
@@ -5946,7 +5910,7 @@ select::-ms-expand {
 .version02 .lightboxAI_situational .content .query_records_group .query_records_list .query_function .time {
   color: #bc5702;
 }
-.version02 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
+.version02 .lightboxAI_situational .content .query_records_group .query_records_list ul li a:hover {
   background-color: #bc5702;
 }
 .version02 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
@@ -6449,22 +6413,6 @@ select::-ms-expand {
 .version03 table td a:hover {
   color: #dd1f03;
 }
-.version03 .query_system_tabs button.btn {
-  background-color: #097e76 !important;
-  box-shadow: 0 0 0 2px #097e76 inset !important;
-}
-.version03 .query_system_tabs button.btn:hover, .version03 .query_system_tabs button.btn:focus {
-  background-color: #097e76 !important;
-}
-.version03 .query_system_tabs button.AI_situational_btn {
-  color: #097e76 !important;
-  box-shadow: 0 0 0 2px #097e76 inset !important;
-  background-color: #fff !important;
-}
-.version03 .query_system_tabs button.AI_situational_btn:hover, .version03 .query_system_tabs button.AI_situational_btn:focus {
-  background-color: #097e76 !important;
-  color: #fff !important;
-}
 .version03 .search_block {
   background-image: url("../images/search_blockbg02_version03.jpg");
 }
@@ -6483,6 +6431,16 @@ select::-ms-expand {
 .version03 .search_block .searchsystem .searchbutton span.primary_btn a {
   background-color: #097e76;
   border: 1px solid #097e76;
+}
+.version03 .search_block .query_system_block .AI_situational_btn {
+  color: #097e76;
+  box-shadow: 0 0 0 2px #097e76 inset;
+}
+.version03 .search_block .query_system_block .AI_situational_btn:hover, .version03 .search_block .query_system_block .AI_situational_btn:focus {
+  background-color: #097e76;
+}
+.version03 .search_block .query_system_block .titlename {
+  background-color: #097e76;
 }
 .version03 .related_links div a span {
   background-color: #097e76;
@@ -6593,7 +6551,7 @@ select::-ms-expand {
 .version03 .lightboxAI_situational .content .query_records_group .query_records_list .query_function .time {
   color: #097e76;
 }
-.version03 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
+.version03 .lightboxAI_situational .content .query_records_group .query_records_list ul li a:hover {
   background-color: #097e76;
 }
 .version03 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
@@ -7089,22 +7047,6 @@ select::-ms-expand {
 .version04 table td a:hover {
   color: #dd1f03;
 }
-.version04 .query_system_tabs button.btn {
-  background-color: #774181 !important;
-  box-shadow: 0 0 0 2px #774181 inset !important;
-}
-.version04 .query_system_tabs button.btn:hover, .version04 .query_system_tabs button.btn:focus {
-  background-color: #774181 !important;
-}
-.version04 .query_system_tabs button.AI_situational_btn {
-  color: #774181 !important;
-  box-shadow: 0 0 0 2px #774181 inset !important;
-  background-color: #fff !important;
-}
-.version04 .query_system_tabs button.AI_situational_btn:hover, .version04 .query_system_tabs button.AI_situational_btn:focus {
-  background-color: #774181 !important;
-  color: #fff !important;
-}
 .version04 .search_block {
   background-image: url("../images/search_blockbg02_version04.jpg");
   background-position: right top;
@@ -7139,6 +7081,16 @@ select::-ms-expand {
 .version04 .search_block .searchsystem .searchbutton span.primary_btn a {
   background-color: #774181;
   border: 1px solid #774181;
+}
+.version04 .search_block .query_system_block .AI_situational_btn {
+  color: #774181;
+  box-shadow: 0 0 0 2px #774181 inset;
+}
+.version04 .search_block .query_system_block .AI_situational_btn:hover, .version04 .search_block .query_system_block .AI_situational_btn:focus {
+  background-color: #774181;
+}
+.version04 .search_block .query_system_block .titlename {
+  background-color: #774181;
 }
 .version04 .related_links div a span {
   background-color: #48274e;
@@ -7246,7 +7198,7 @@ select::-ms-expand {
 .version04 .lightboxAI_situational .content .query_records_group .query_records_list .query_function .time {
   color: #774181;
 }
-.version04 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
+.version04 .lightboxAI_situational .content .query_records_group .query_records_list ul li a:hover {
   background-color: #774181;
 }
 .version04 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
@@ -7752,22 +7704,6 @@ select::-ms-expand {
 .version05 table td a:hover {
   color: #dd1f03;
 }
-.version05 .query_system_tabs button.btn {
-  background-color: #088c6f !important;
-  box-shadow: 0 0 0 2px #088c6f inset !important;
-}
-.version05 .query_system_tabs button.btn:hover, .version05 .query_system_tabs button.btn:focus {
-  background-color: #088c6f !important;
-}
-.version05 .query_system_tabs button.AI_situational_btn {
-  color: #088c6f !important;
-  box-shadow: 0 0 0 2px #088c6f inset !important;
-  background-color: #fff !important;
-}
-.version05 .query_system_tabs button.AI_situational_btn:hover, .version05 .query_system_tabs button.AI_situational_btn:focus {
-  background-color: #088c6f !important;
-  color: #fff !important;
-}
 .version05 .search_block {
   background-image: url("../images/search_blockbg02_version05.jpg");
 }
@@ -7786,6 +7722,16 @@ select::-ms-expand {
 .version05 .search_block .searchsystem .searchbutton span.primary_btn a {
   background-color: #088c6f;
   border: 1px solid #088c6f;
+}
+.version05 .search_block .query_system_block .AI_situational_btn {
+  color: #088c6f;
+  box-shadow: 0 0 0 2px #088c6f inset;
+}
+.version05 .search_block .query_system_block .AI_situational_btn:hover, .version05 .search_block .query_system_block .AI_situational_btn:focus {
+  background-color: #088c6f;
+}
+.version05 .search_block .query_system_block .titlename {
+  background-color: #088c6f;
 }
 .version05 .related_links div a span {
   background-color: #044436;
@@ -7893,7 +7839,7 @@ select::-ms-expand {
 .version05 .lightboxAI_situational .content .query_records_group .query_records_list .query_function .time {
   color: #088c6f;
 }
-.version05 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
+.version05 .lightboxAI_situational .content .query_records_group .query_records_list ul li a:hover {
   background-color: #088c6f;
 }
 .version05 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {
@@ -8397,22 +8343,6 @@ select::-ms-expand {
 .version06 table td a:hover {
   color: #dd1f03;
 }
-.version06 .query_system_tabs button.btn {
-  background-color: #0078c6 !important;
-  box-shadow: 0 0 0 2px #0078c6 inset !important;
-}
-.version06 .query_system_tabs button.btn:hover, .version06 .query_system_tabs button.btn:focus {
-  background-color: #0078c6 !important;
-}
-.version06 .query_system_tabs button.AI_situational_btn {
-  color: #0078c6 !important;
-  box-shadow: 0 0 0 2px #0078c6 inset !important;
-  background-color: #fff !important;
-}
-.version06 .query_system_tabs button.AI_situational_btn:hover, .version06 .query_system_tabs button.AI_situational_btn:focus {
-  background-color: #0078c6 !important;
-  color: #fff !important;
-}
 .version06 .search_block {
   background-image: url("../images/search_blockbg02_version06.jpg");
 }
@@ -8431,6 +8361,16 @@ select::-ms-expand {
 .version06 .search_block .searchsystem .searchbutton span.primary_btn a {
   background-color: #0078c6;
   border: 1px solid #0078c6;
+}
+.version06 .search_block .query_system_block .AI_situational_btn {
+  color: #0078c6;
+  box-shadow: 0 0 0 2px #0078c6 inset;
+}
+.version06 .search_block .query_system_block .AI_situational_btn:hover, .version06 .search_block .query_system_block .AI_situational_btn:focus {
+  background-color: #0078c6;
+}
+.version06 .search_block .query_system_block .titlename {
+  background-color: #0078c6;
 }
 .version06 .related_links div a span {
   background-color: #0078c6;
@@ -8538,7 +8478,7 @@ select::-ms-expand {
 .version06 .lightboxAI_situational .content .query_records_group .query_records_list .query_function .time {
   color: #0078c6;
 }
-.version06 .lightboxAI_situational .content .query_records_group .query_records_list ul li:hover {
+.version06 .lightboxAI_situational .content .query_records_group .query_records_list ul li a:hover {
   background-color: #0078c6;
 }
 .version06 .lightboxAI_situational .content .query_records_group .query_records_list .more a:before {

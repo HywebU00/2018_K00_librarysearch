@@ -46,28 +46,7 @@
     }
   }
   // _mp.scss
-  .query_system_tabs {
-    button {
-      &.btn {
-        background-color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-        }
-      }
-      &.AI_situational_btn {
-        color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        background-color: #fff !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-          color: #fff !important;
-        }
-      }
-    }
-  }
+
   .search_block {
     background-image: url('../images/search_blockbg02_child.jpg');
     height: 630px;
@@ -103,6 +82,19 @@
             }
           }
         }
+      }
+    }
+    .query_system_block {
+      .AI_situational_btn {
+        color: nth($primaryColor, $style);
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style);
+        }
+      }
+      .titlename {
+        background-color: nth($primaryColor, $style);
       }
     }
   }
@@ -283,8 +275,10 @@
           }
           ul {
             li {
-              &:hover {
-                background-color: nth($primaryColor, $style);
+              a {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -1113,28 +1107,7 @@
     }
   }
   // _mp.scss
-  .query_system_tabs {
-    button {
-      &.btn {
-        background-color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-        }
-      }
-      &.AI_situational_btn {
-        color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        background-color: #fff !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-          color: #fff !important;
-        }
-      }
-    }
-  }
+
   .search_block {
     background-image: url('../images/search_blockbg02_customization01.jpg');
     .searchsystem {
@@ -1165,6 +1138,19 @@
             }
           }
         }
+      }
+    }
+    .query_system_block {
+      .AI_situational_btn {
+        color: nth($primaryColor, $style);
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style);
+        }
+      }
+      .titlename {
+        background-color: nth($primaryColor, $style);
       }
     }
   }
@@ -1364,8 +1350,10 @@
           }
           ul {
             li {
-              &:hover {
-                background-color: nth($primaryColor, $style);
+              a {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -2210,28 +2198,7 @@
     }
   }
   // _mp.scss
-  .query_system_tabs {
-    button {
-      &.btn {
-        background-color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-        }
-      }
-      &.AI_situational_btn {
-        color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        background-color: #fff !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-          color: #fff !important;
-        }
-      }
-    }
-  }
+
   .search_block {
     background-image: url('../images/search_blockbg02_customization02.png');
     .searchsystem {
@@ -2270,6 +2237,19 @@
             }
           }
         }
+      }
+    }
+    .query_system_block {
+      .AI_situational_btn {
+        color: nth($primaryColor, $style);
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style);
+        }
+      }
+      .titlename {
+        background-color: nth($primaryColor, $style);
       }
     }
   }
@@ -2507,8 +2487,10 @@
           }
           ul {
             li {
-              &:hover {
-                background-color: nth($primaryColor, $style);
+              a {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -3677,28 +3659,7 @@
     }
   }
   // _mp.scss
-  .query_system_tabs {
-    button {
-      &.btn {
-        background-color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-        }
-      }
-      &.AI_situational_btn {
-        color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        background-color: #fff !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-          color: #fff !important;
-        }
-      }
-    }
-  }
+
   .search_block {
     background-image: url('../images/search_blockbg02_customization03.jpg');
     &:before {
@@ -3898,6 +3859,19 @@
 
         background: transparent url(../images/basic/icon_select_arrow_2.svg) no-repeat right center;
         background-size: 22px;
+      }
+    }
+    .query_system_block {
+      .AI_situational_btn {
+        color: nth($primaryColor, $style);
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style);
+        }
+      }
+      .titlename {
+        background-color: nth($primaryColor, $style);
       }
     }
   }
@@ -4382,8 +4356,10 @@
           }
           ul {
             li {
-              &:hover {
-                background-color: nth($primaryColor, $style);
+              a {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -5196,28 +5172,7 @@
     }
   }
   // _mp.scss
-  .query_system_tabs {
-    button {
-      &.btn {
-        background-color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-        }
-      }
-      &.AI_situational_btn {
-        color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        background-color: #fff !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-          color: #fff !important;
-        }
-      }
-    }
-  }
+
   .search_block {
     background-image: url('../images/search_blockbg02_version01.jpg');
     .searchsystem {
@@ -5248,6 +5203,19 @@
             }
           }
         }
+      }
+    }
+    .query_system_block {
+      .AI_situational_btn {
+        color: nth($primaryColor, $style);
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style);
+        }
+      }
+      .titlename {
+        background-color: nth($primaryColor, $style);
       }
     }
   }
@@ -5444,8 +5412,10 @@
           }
           ul {
             li {
-              &:hover {
-                background-color: nth($primaryColor, $style);
+              a {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -6241,28 +6211,7 @@
     }
   }
   // _mp.scss
-  .query_system_tabs {
-    button {
-      &.btn {
-        background-color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-        }
-      }
-      &.AI_situational_btn {
-        color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        background-color: #fff !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-          color: #fff !important;
-        }
-      }
-    }
-  }
+
   .search_block {
     background-image: url('../images/search_blockbg02_version02.jpg');
     .searchsystem {
@@ -6293,6 +6242,19 @@
             }
           }
         }
+      }
+    }
+    .query_system_block {
+      .AI_situational_btn {
+        color: nth($primaryColor, $style);
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style);
+        }
+      }
+      .titlename {
+        background-color: nth($primaryColor, $style);
       }
     }
   }
@@ -6502,8 +6464,10 @@
           }
           ul {
             li {
-              &:hover {
-                background-color: nth($primaryColor, $style);
+              a {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -7305,28 +7269,7 @@
     }
   }
   // _mp.scss
-  .query_system_tabs {
-    button {
-      &.btn {
-        background-color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-        }
-      }
-      &.AI_situational_btn {
-        color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        background-color: #fff !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-          color: #fff !important;
-        }
-      }
-    }
-  }
+
   .search_block {
     background-image: url('../images/search_blockbg02_version03.jpg');
     .searchsystem {
@@ -7357,6 +7300,19 @@
             }
           }
         }
+      }
+    }
+    .query_system_block {
+      .AI_situational_btn {
+        color: nth($primaryColor, $style);
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style);
+        }
+      }
+      .titlename {
+        background-color: nth($primaryColor, $style);
       }
     }
   }
@@ -7556,8 +7512,10 @@
           }
           ul {
             li {
-              &:hover {
-                background-color: nth($primaryColor, $style);
+              a {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -8354,28 +8312,7 @@
     }
   }
   // _mp.scss
-  .query_system_tabs {
-    button {
-      &.btn {
-        background-color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-        }
-      }
-      &.AI_situational_btn {
-        color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        background-color: #fff !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-          color: #fff !important;
-        }
-      }
-    }
-  }
+
   .search_block {
     background-image: url('../images/search_blockbg02_version04.jpg');
     background-position: right top;
@@ -8416,6 +8353,19 @@
             }
           }
         }
+      }
+    }
+    .query_system_block {
+      .AI_situational_btn {
+        color: nth($primaryColor, $style);
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style);
+        }
+      }
+      .titlename {
+        background-color: nth($primaryColor, $style);
       }
     }
   }
@@ -8612,8 +8562,10 @@
           }
           ul {
             li {
-              &:hover {
-                background-color: nth($primaryColor, $style);
+              a {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -9422,28 +9374,7 @@
     }
   }
   // _mp.scss
-  .query_system_tabs {
-    button {
-      &.btn {
-        background-color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-        }
-      }
-      &.AI_situational_btn {
-        color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        background-color: #fff !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-          color: #fff !important;
-        }
-      }
-    }
-  }
+
   .search_block {
     background-image: url('../images/search_blockbg02_version05.jpg');
     .searchsystem {
@@ -9474,6 +9405,19 @@
             }
           }
         }
+      }
+    }
+    .query_system_block {
+      .AI_situational_btn {
+        color: nth($primaryColor, $style);
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style);
+        }
+      }
+      .titlename {
+        background-color: nth($primaryColor, $style);
       }
     }
   }
@@ -9670,8 +9614,10 @@
           }
           ul {
             li {
-              &:hover {
-                background-color: nth($primaryColor, $style);
+              a {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }
@@ -10474,28 +10420,7 @@
     }
   }
   // _mp.scss
-  .query_system_tabs {
-    button {
-      &.btn {
-        background-color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-        }
-      }
-      &.AI_situational_btn {
-        color: nth($primaryColor, $style) !important;
-        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset !important;
-        background-color: #fff !important;
-        &:hover,
-        &:focus {
-          background-color: nth($primaryColor, $style) !important;
-          color: #fff !important;
-        }
-      }
-    }
-  }
+
   .search_block {
     background-image: url('../images/search_blockbg02_version06.jpg');
     .searchsystem {
@@ -10526,6 +10451,19 @@
             }
           }
         }
+      }
+    }
+    .query_system_block {
+      .AI_situational_btn {
+        color: nth($primaryColor, $style);
+        box-shadow: 0 0 0 2px nth($primaryColor, $style) inset;
+        &:hover,
+        &:focus {
+          background-color: nth($primaryColor, $style);
+        }
+      }
+      .titlename {
+        background-color: nth($primaryColor, $style);
       }
     }
   }
@@ -10722,8 +10660,10 @@
           }
           ul {
             li {
-              &:hover {
-                background-color: nth($primaryColor, $style);
+              a {
+                &:hover {
+                  background-color: nth($primaryColor, $style);
+                }
               }
             }
           }

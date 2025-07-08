@@ -1,6 +1,7 @@
 body {
   background-color: #eee;
   transition: 0.5s;
+  overflow: auto;
   &.noscroll {
     // position: fixed!important;
     width: 100%;
@@ -983,6 +984,11 @@ select {
 .large_size {
   font-size: 1.125em;
   transition: 0.5s;
+  .query_system_block {
+    .AI_situational_btn {
+      left: 200px !important;
+    }
+  }
   .mystudycontent .mycardlist li .data > span em {
     margin-right: 0px;
   }
