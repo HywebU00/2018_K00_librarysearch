@@ -865,6 +865,18 @@ body.fix {
           }
         }
       }
+      .explainblock {
+        padding: 1em;
+        background-color: #f3f3f3;
+        border-radius: 5px;
+        margin: 10px 0;
+        p {
+          font-weight: bold;
+        }
+        label {
+          display: block;
+        }
+      }
       .more {
         margin: 0 auto;
         a {
