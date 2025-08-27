@@ -27560,6 +27560,9 @@ em.yellowbg {
   background-color: #666;
   color: #fff;
 }
+.diversified_block .diversified_content .advanced_block .searchblockdata .form_content .grade_list ul li a:focus-visible {
+  box-shadow: 0 0px 0px 2px #f1ad00;
+}
 .diversified_block .diversified_content .data_all {
   padding: 6px 0 3px;
   border: none;
@@ -32847,13 +32850,36 @@ em.yellowbg {
 .linecontent .book-gallery .book dl dd {
   margin-bottom: 6px;
 }
-.nowa .goCenter, .nowa .accesskey {
+.nowa .goCenter,
+.nowa .accesskey {
   display: none;
 }
-.nowa a:focus, .nowa .scrollToTop:focus {
+.nowa a:focus,
+.nowa .scrollToTop:focus {
   box-shadow: none;
 }
-.nowa .btn:focus, .nowa .header .qrcode_mpbtn a:focus, .nowa footer .footer_accessibility a:focus, .nowa .search_block .searchsystem .form_search input[type=submit]:focus, .nowa .advanced_search .advanced_block .searchsystem ul li a:focus, .nowa .advanced_search .advanced_block .btn_grp input[type=submit]:focus, .nowa .search_blockin .searchsystem .select_left select:focus, .nowa .header .member_record .member_pic a:focus, .nowa .customization02 .search_blockin .form_search input[type=submit]:focus, .nowa .btnstyle.morebg:focus, .nowa .mainrightblock .book_detaildata .bookdata .listdata ul.no_icon li a.btnstyle:focus, .nowa .mystudycontent .mycardlist li a:focus, .nowa .mystudycontent .service_list ul li span a:focus, .nowa .booklist_block .booklist .bookmidblock ul li .addtagbtn:focus, .nowa .booklist_block .booklist .bookmidblock ul li .closebtn:focus, .nowa .tracking_subscription_block .searchsystem ul li a:focus, .nowa .mystudy_sdg_reading .SDG_banner .SDG_img a:focus, .nowa .linecontent .book-gallery .book .cover a:focus, .nowa .linecontent .book-gallery .book .cover a:focus img, .nowa .bookselection_block .bookselection_group .leftblock .bookselection_list ul li a:focus, .nowa .SDG_block .SDG_banner .SDG_img a:focus {
+.nowa .btn:focus,
+.nowa .header .qrcode_mpbtn a:focus,
+.nowa footer .footer_accessibility a:focus,
+.nowa .search_block .searchsystem .form_search input[type=submit]:focus,
+.nowa .advanced_search .advanced_block .searchsystem ul li a:focus,
+.nowa .advanced_search .advanced_block .btn_grp input[type=submit]:focus,
+.nowa .advanced_search .advanced_block a:focus,
+.nowa .search_blockin .searchsystem .select_left select:focus,
+.nowa .header .member_record .member_pic a:focus,
+.nowa .customization02 .search_blockin .form_search input[type=submit]:focus,
+.nowa .btnstyle.morebg:focus,
+.nowa .mainrightblock .book_detaildata .bookdata .listdata ul.no_icon li a.btnstyle:focus,
+.nowa .mystudycontent .mycardlist li a:focus,
+.nowa .mystudycontent .service_list ul li span a:focus,
+.nowa .booklist_block .booklist .bookmidblock ul li .addtagbtn:focus,
+.nowa .booklist_block .booklist .bookmidblock ul li .closebtn:focus,
+.nowa .tracking_subscription_block .searchsystem ul li a:focus,
+.nowa .mystudy_sdg_reading .SDG_banner .SDG_img a:focus,
+.nowa .linecontent .book-gallery .book .cover a:focus,
+.nowa .linecontent .book-gallery .book .cover a:focus img,
+.nowa .bookselection_block .bookselection_group .leftblock .bookselection_list ul li a:focus,
+.nowa .SDG_block .SDG_banner .SDG_img a:focus {
   box-shadow: none !important;
 }
 .nowa .featured_block .themebook2 ul li a:focus {
