@@ -1,161 +1,162 @@
-$fatBgColor: #FFF; //fatFooter 底色
+$fatBgColor: #fff; //fatFooter 底色
 $fatTextColor: $color-word; //fatFooter 連結顏色
 .fatfooter {
-    @include make-fatfooter(3, 100%); // 如需要手機版顯示，把以下註解即可，或改為visible
-    @media (max-width: 767px) {}
+  @include make-fatfooter(3, 100%); // 如需要手機版顯示，把以下註解即可，或改為visible
+  @media (max-width: 767px) {
+  }
 }
 .fatfooter {
+  position: relative;
+  padding-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto; // 右上方切換收合按鈕設定
+  background-color: #313131;
+  position: relative;
+  z-index: 10;
+  .container {
     position: relative;
-    padding-bottom: 2em;
-    margin-left: auto;
-    margin-right: auto; // 右上方切換收合按鈕設定
-    background-color: #313131;
-    position: relative;
+    @include box-sizing();
+    @include gutter();
+  }
+  //fatfooter選單
+  .btn-fatfooter {
+    font-size: 0.813em;
+    cursor: pointer;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    border: none;
+    background: #313131;
+    position: absolute;
+    right: 50%;
+    top: -25px;
+    margin: 0 -25px 0 0;
+    padding: 10px !important;
+    min-width: auto;
+    max-width: auto;
+    transition: 0.5s;
     z-index: 9;
-    .container {
-        position: relative;
-        @include box-sizing();
-        @include gutter();
+    text-indent: -9999px;
+    @include border-radius(50%);
+    box-shadow: none;
+    &:before {
+      position: absolute;
+      width: 18px;
+      height: 17px;
+      content: ''; //
+      transform: rotate(0deg);
+      top: 18px;
+      left: 50%;
+      background-image: url('../images/fatfooter_icon01.png');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      margin-left: -9px;
+      transition: 0.3s ease-out;
     }
-    //fatfooter選單
-    .btn-fatfooter {
-        font-size: .813em;
-        cursor: pointer;
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        color: #FFF;
-        border: none;
-        background: #313131;
-        position: absolute;
-        right: 50%;
-        top: -25px;
-        margin: 0 -25px 0 0;
-        padding: 10px !important;
-        min-width: auto;
-        max-width: auto;
-        transition: .5s;
-        z-index: 9;
-        text-indent: -9999px;
-        @include border-radius(50%);
-        box-shadow: none;
-        &:before {
-            position: absolute;
-            width: 18px;
-            height: 17px;
-            content: ""; // 
-            transform: rotate(0deg);
-            top: 18px;
-            left: 50%;
-            background-image: url('../images/fatfooter_icon01.png');
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            margin-left: -9px;
-            transition: .3s ease-out;
-        }
-        &.close {
-            &:before {
-                top: 18px;
-                transform: rotate(180deg);
-            }
-        }
-        &:hover,
-        &:focus {
-            background: #000;
-            text-decoration: none;
-            cursor: pointer;
-            border: none;
-            box-shadow: none;
-        }
+    &.close {
+      &:before {
+        top: 18px;
+        transform: rotate(180deg);
+      }
     }
-    nav {
-        clear: both;
-        color: #fff;
-        overflow: hidden;
+    &:hover,
+    &:focus {
+      background: #000;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  nav {
+    clear: both;
+    color: #fff;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-top: 40px;
+    margin: 0 auto;
+    width: 85%;
+    @include box-sizing(border-box);
+    ul {
+      list-style: none;
+      margin: 0;
+      overflow: hidden;
+      width: 100%;
+      padding: 0;
+      text-align: center;
+      @media (max-width: 767px) {
+        width: 100%;
         display: block;
-        position: relative;
-        padding-top: 40px;
-        margin: 0 auto;
-        width: 85%;
+        margin: 0px auto;
+      }
+      > li {
+        display: inline-block; // outline: 1px solid red;
+        text-align: left;
+        vertical-align: top;
+        line-height: 2.6em; // margin:$fatFooterliMargin;
+        margin: 0 30px 0 0;
         @include box-sizing(border-box);
-        ul {
-            list-style: none;
-            margin: 0;
-            overflow: hidden;
-            width: 100%;
-            padding: 0;
-            text-align: center;
-            @media (max-width: 767px) {
-                width: 100%;
-                display: block;
-                margin: 0px auto;
-            }
-            >li {
-                display: inline-block; // outline: 1px solid red;
-                text-align: left;
-                vertical-align: top;
-                line-height: 2.6em; // margin:$fatFooterliMargin;
-                margin: 0 30px 0 0;
-                @include box-sizing(border-box);
-                @media (max-width: 767px) {
-                    display: block;
-                }
-                >a {
-                    color: #fff;
-                    text-align: left;
-                    line-height: 1.65em;
-                    display: block;
-                    font-size: 1.25em;
-                    font-weight: normal;
-                    padding: 1% 0;
-                    &:hover,
-                    &:focus {
-                        color: #fff;
-                        text-decoration: none;
-                    }
-                }
-                ul {
-                    padding: 10px 0 0 0;
-                    margin-top: 5px;
-                    margin-right: 20px;
-                    overflow: hidden;
-                    border-top: 1px solid rgba(255, 255, 255, .6);
-                    @media (max-width: 767px) {
-                        width: auto;
-                        padding-left: 5%;
-                    }
-                    li {
-                        display: block;
-                        margin: 0;
-                        padding: 5px 0;
-                        border: none;
-                        background: none;
-                        width: 100%;
-                        a {
-                            display: block;
-                            color: rgba(255, 255, 255, .7);
-                            font-weight: normal;
-                            text-align: left;
-                            text-decoration: none;
-                            font-size: .938em;
-                            font-weight: normal;
-                            line-height: 1.4em;
-                            padding: 3px 0px0;
-                            background: none;
-                            @include box-sizing(border-box);
-                            border-bottom: none;
-                            &:hover,
-                            &:focus {
-                                color: #fff;
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-                    ul {
-                        display: none; //第三層關閉
-                    }
-                }
-            }
+        @media (max-width: 767px) {
+          display: block;
         }
+        > a {
+          color: #fff;
+          text-align: left;
+          line-height: 1.65em;
+          display: block;
+          font-size: 1.25em;
+          font-weight: normal;
+          padding: 1% 0;
+          &:hover,
+          &:focus {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+        ul {
+          padding: 10px 0 0 0;
+          margin-top: 5px;
+          margin-right: 20px;
+          overflow: hidden;
+          border-top: 1px solid rgba(255, 255, 255, 0.6);
+          @media (max-width: 767px) {
+            width: auto;
+            padding-left: 5%;
+          }
+          li {
+            display: block;
+            margin: 0;
+            padding: 5px 0;
+            border: none;
+            background: none;
+            width: 100%;
+            a {
+              display: block;
+              color: rgba(255, 255, 255, 0.7);
+              font-weight: normal;
+              text-align: left;
+              text-decoration: none;
+              font-size: 0.938em;
+              font-weight: normal;
+              line-height: 1.4em;
+              padding: 3px 0px0;
+              background: none;
+              @include box-sizing(border-box);
+              border-bottom: none;
+              &:hover,
+              &:focus {
+                color: #fff;
+                text-decoration: underline;
+              }
+            }
+          }
+          ul {
+            display: none; //第三層關閉
+          }
+        }
+      }
     }
+  }
 }

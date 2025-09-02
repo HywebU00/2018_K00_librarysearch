@@ -1,120 +1,122 @@
-@mixin fontSetting($FONT-SIZE:$font-size, $WEIGHT:normal) {
-    font-size: $FONT-SIZE;
-    font-weight: $WEIGHT;
-    color: $color-word;
+@mixin fontSetting($FONT-SIZE: $font-size, $WEIGHT: normal) {
+  font-size: $FONT-SIZE;
+  font-weight: $WEIGHT;
+  color: $color-word;
 }
-@mixin aSetting($COLOR:$aColor, $NOLINE:none) {
-    color: $COLOR;
-    text-decoration: $NOLINE;
-    &:hover,
-    &:focus {
-        color: $aHover;
-        cursor: pointer;
-    }
+@mixin aSetting($COLOR: $aColor, $NOLINE: none) {
+  color: $COLOR;
+  text-decoration: $NOLINE;
+  &:hover,
+  &:focus {
+    color: $aHover;
+    cursor: pointer;
+  }
 }
 body {
-    @include fontSetting(1em);
-    line-height: 1.45em;
-    font-family: $font-family;
-    -webkit-text-size-adjust: none;
-    color: #333;
-    @media print {
-        font-size: .75em;
-    }
+  @include fontSetting(1em);
+  line-height: 1.45em;
+  font-family: $font-family;
+  -webkit-text-size-adjust: none;
+  color: #333;
+  @media print {
+    font-size: 0.75em;
+  }
 }
 a {
-    @include aSetting();
+  @include aSetting();
 }
 // 字級
 .font_size {
-    display: flex;
-    // flex:0 1 12.5em;
+  display: flex;
+  // flex:0 1 12.5em;
+  padding: 0;
+  margin-right: 5px;
+  span {
+    font-size: 0;
+    color: #222;
+    padding-top: 0;
+  }
+  ul {
+    margin: 0;
     padding: 0;
-    margin-right: 5px;
-    span {
+    list-style-type: none;
+    display: flex;
+    flex: 0 0 6em;
+    li {
+      font-size: 1em;
+      flex: 0 0 auto;
+      margin: 0 2px !important;
+      align-items: center;
+      a {
+        display: block;
+        text-align: center;
+        line-height: 32px;
+        border-radius: 50%;
+        background: #fff;
+        width: 32px;
+        height: 32px;
+        color: #000 !important;
+        border: none;
         font-size: 0;
-        color: #222;
-        padding-top: 0;
-    }
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        display: flex;
-        flex: 0 0 6em;
-        li {
-            font-size: 1em;
-            flex: 0 0 auto;
-            margin: 0 2px !important;
-            align-items: center;
-            a {
-                display: block;
-                text-align: center;
-                line-height: 32px;
-                border-radius: 50%;
-                background: #fff;
-                width: 32px;
-                height: 32px;
-                color: #000!important;
-                border:none;
-                font-size: 0;
-                background-image: url('../images/fontsize_middle.svg');
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 28px;
-                transition: .5s;
-                &:hover, &:focus {
-                    background: #666;
-                    color: #FFF;
-                    background-image: url('../images/fontsize_middle_hover.svg');
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 28px;
-                    &.small {
-                        background-image: url('../images/fontsize_small_hover.svg');
-                    }
-                    &.large {
-                        background-image: url('../images/fontsize_big_hover.svg');
-                    }
-                }
-                &.active {
-                    background: #666;
-                    color: #FFF;
-                    background-image: url('../images/fontsize_middle_hover.svg');
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 28px;
-                    &.small {
-                        background-image: url('../images/fontsize_small_hover.svg');
-                    }
-                    &.large {
-                        background-image: url('../images/fontsize_big_hover.svg');
-                    }
-                    &:hover, &:focus {
-                        background: #666;
-                        color: #FFF;
-                        background-image: url('../images/fontsize_middle_hover.svg');
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: 28px;
-                        &.small {
-                            background-image: url('../images/fontsize_small_hover.svg');
-                        }
-                        &.large {
-                            background-image: url('../images/fontsize_big_hover.svg');
-                        }
-                    }
-                }
-                &.small {
-                    background-image: url('../images/fontsize_small.svg');
-                }
-                &.large {
-                    background-image: url('../images/fontsize_big.svg');
-                }
-            }
+        background-image: url('../images/fontsize_middle.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 28px;
+        transition: 0.5s;
+        &:hover,
+        &:focus {
+          background: #666;
+          color: #fff;
+          background-image: url('../images/fontsize_middle_hover.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 28px;
+          &.small {
+            background-image: url('../images/fontsize_small_hover.svg');
+          }
+          &.large {
+            background-image: url('../images/fontsize_big_hover.svg');
+          }
         }
+        &.active {
+          background: #666;
+          color: #fff;
+          background-image: url('../images/fontsize_middle_hover.svg');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 28px;
+          &.small {
+            background-image: url('../images/fontsize_small_hover.svg');
+          }
+          &.large {
+            background-image: url('../images/fontsize_big_hover.svg');
+          }
+          &:hover,
+          &:focus {
+            background: #666;
+            color: #fff;
+            background-image: url('../images/fontsize_middle_hover.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 28px;
+            &.small {
+              background-image: url('../images/fontsize_small_hover.svg');
+            }
+            &.large {
+              background-image: url('../images/fontsize_big_hover.svg');
+            }
+          }
+        }
+        &.small {
+          background-image: url('../images/fontsize_small.svg');
+        }
+        &.large {
+          background-image: url('../images/fontsize_big.svg');
+        }
+      }
     }
-    @include screen('mobile') {
-        display: none;
-    }
+  }
+  @include screen('mobile') {
+    display: none;
+  }
 }

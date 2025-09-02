@@ -328,7 +328,7 @@ th {
   font-style: normal;
   display: block;
   font-size: 1em;
-  border-left: 5px solid #005d98, #5c9588, #5c9588, #0e664c, #313131, #1c4b82, #bc5702, #097e76, #774181, #088c6f, #0078c6;
+  border-left: 5px solid #005d98, #5c9588, #5c9588, #0e664c, #313131, #5c656c, #1c4b82, #bc5702, #097e76, #774181, #088c6f, #0078c6;
   padding: 2em;
   box-sizing: border-box;
   margin: 0 0em 2em;
@@ -410,7 +410,7 @@ a:hover, a:focus {
 }
 .font_size ul li a:hover, .font_size ul li a:focus {
   background: #666;
-  color: #FFF;
+  color: #fff;
   background-image: url("../images/fontsize_middle_hover.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -424,7 +424,7 @@ a:hover, a:focus {
 }
 .font_size ul li a.active {
   background: #666;
-  color: #FFF;
+  color: #fff;
   background-image: url("../images/fontsize_middle_hover.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -438,7 +438,7 @@ a:hover, a:focus {
 }
 .font_size ul li a.active:hover, .font_size ul li a.active:focus {
   background: #666;
-  color: #FFF;
+  color: #fff;
   background-image: url("../images/fontsize_middle_hover.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -3508,7 +3508,7 @@ img.img-responsive {
   left: 0;
 }
 .header .language ul li {
-  margin: 0 0 2px;
+  margin: 0 0 3px;
   width: 100%;
 }
 .header .language ul li a {
@@ -3939,7 +3939,7 @@ img.img-responsive {
   clear: both;
 }
 .search.m_search .keywordHot a {
-  color: #FFF;
+  color: #fff;
 }
 .search.m_search .keywordHot a:hover, .search.m_search .keywordHot a:focus {
   color: #005d98;
@@ -3955,7 +3955,7 @@ img.img-responsive {
   z-index: 7;
 }
 .header.fixed .menu > ul > li > a {
-  color: #FFF;
+  color: #fff;
 }
 
 .menu {
@@ -4503,7 +4503,7 @@ footer ul li a {
   margin-right: auto;
   background-color: #313131;
   position: relative;
-  z-index: 9;
+  z-index: 10;
 }
 .fatfooter .container {
   position: relative;
@@ -4520,7 +4520,7 @@ footer ul li a {
   display: inline-block;
   width: 50px;
   height: 50px;
-  color: #FFF;
+  color: #fff;
   border: none;
   background: #313131;
   position: absolute;
@@ -5805,6 +5805,10 @@ body ::-webkit-scrollbar-thumb:vertical:active {
   -webkit-border-radius: 100px;
 }
 
+body:has(.customization04):has(.wrapperin) {
+  background-color: #f3efe8;
+}
+
 .wrapper {
   max-width: 1400px;
   margin: 0px auto;
@@ -5812,26 +5816,29 @@ body ::-webkit-scrollbar-thumb:vertical:active {
   position: relative;
   background-color: #fff;
 }
-.wrapper.customization03 {
+.wrapper.customization03, .wrapper.customization04 {
   width: 100%;
   max-width: 100%;
 }
-.wrapper.customization03 .header {
+.wrapper.customization03 .header, .wrapper.customization04 .header {
   width: 100%;
 }
-.wrapper.customization03 .header .container {
+.wrapper.customization03 .header .container, .wrapper.customization04 .header .container {
   max-width: 1400px !important;
 }
-.wrapper.customization03 .main_mp {
+.wrapper.customization03 .main_mp, .wrapper.customization04 .main_mp {
   max-width: 100%;
 }
 .wrapper.customization03 .main_mp .related_block .container,
 .wrapper.customization03 .main_mp .newbooks_block .container,
 .wrapper.customization03 .main_mp .featured_block .container,
-.wrapper.customization03 .main_mp .hotrankings_block .container {
+.wrapper.customization03 .main_mp .hotrankings_block .container, .wrapper.customization04 .main_mp .related_block .container,
+.wrapper.customization04 .main_mp .newbooks_block .container,
+.wrapper.customization04 .main_mp .featured_block .container,
+.wrapper.customization04 .main_mp .hotrankings_block .container {
   max-width: 1400px !important;
 }
-.wrapper.customization03 .main_mp .search_block {
+.wrapper.customization03 .main_mp .search_block, .wrapper.customization04 .main_mp .search_block {
   margin-bottom: 3em;
 }
 .wrapper.wrapperin {
@@ -6650,7 +6657,7 @@ pre {
 }
 .large_size .search_block .searchsystem .form_search input[type=text] {
   padding: 10px;
-  height: 2.6em;
+  height: 2.4em;
 }
 
 body.fix {
@@ -10188,6 +10195,8 @@ button.backbtn {
 .search_block .searchsystem {
   width: 80%;
   background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   margin: 45px auto;
   padding: 50px 60px 40px;
   text-align: center;
@@ -12890,7 +12899,7 @@ button.backbtn {
 .lp .list ol {
   list-style-type: none;
   padding: 0;
-  border-top: 2px solid #005d98, #5c9588, #5c9588, #0e664c, #313131, #1c4b82, #bc5702, #097e76, #774181, #088c6f, #0078c6;
+  border-top: 2px solid #005d98, #5c9588, #5c9588, #0e664c, #313131, #5c656c, #1c4b82, #bc5702, #097e76, #774181, #088c6f, #0078c6;
 }
 .lp .list ul li,
 .lp .list ol li {
@@ -21770,7 +21779,7 @@ button.backbtn {
   height: 100%;
   box-sizing: border-box;
   padding-bottom: 70px;
-  z-index: 10;
+  z-index: 9;
   scrollbar-face-color: #eee;
   scrollbar-highlight-color: #fff;
   scrollbar-shadow-color: #fff;
@@ -25347,7 +25356,7 @@ em.yellowbg {
   margin-bottom: 20px;
 }
 .annotation a {
-  color: #005d98, #5c9588, #5c9588, #0e664c, #313131, #1c4b82, #bc5702, #097e76, #774181, #088c6f, #0078c6;
+  color: #005d98, #5c9588, #5c9588, #0e664c, #313131, #5c656c, #1c4b82, #bc5702, #097e76, #774181, #088c6f, #0078c6;
   text-decoration: underline;
 }
 .annotation a:hover {
@@ -25839,7 +25848,7 @@ em.yellowbg {
   }
 }
 .featured_blockin .featured_data a h3 {
-  color: #005d98, #5c9588, #5c9588, #0e664c, #313131, #1c4b82, #bc5702, #097e76, #774181, #088c6f, #0078c6;
+  color: #005d98, #5c9588, #5c9588, #0e664c, #313131, #5c656c, #1c4b82, #bc5702, #097e76, #774181, #088c6f, #0078c6;
   overflow: hidden;
   text-overflow: ellipsis;
   height: 50px;
@@ -32367,7 +32376,7 @@ em.yellowbg {
 }
 .linecontent.mobile-card .card-barcode .barcode-refresh {
   font-size: 1.8em;
-  color: #fed857, #5c9588, #5c9588, #f3d22f, #dddddd, #e9846a, #a7c077, #f49a6e, #e6b2c6, #f3d394, #fbe8d3;
+  color: #fed857, #5c9588, #5c9588, #f3d22f, #dddddd, #dfd7c3, #e9846a, #a7c077, #f49a6e, #e6b2c6, #f3d394, #fbe8d3;
   margin: 10px 10px 10px 0;
   vertical-align: middle;
   padding-left: 10px;
