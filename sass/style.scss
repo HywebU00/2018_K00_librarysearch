@@ -5270,15 +5270,23 @@
   // _mp.scss
 
   .search_block {
+    width: 100%;
+    height: 584px;
     position: relative;
-    background-image: url('../images/search_blockbg02_customization04.jpg');
-    background-position: right top;
+    background-image: none;
+    z-index: 2;
     &:before {
       content: '';
-      background-image: url('../images/search_blockbg01_tainan.png');
-      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../images/search_blockbg02_customization04.jpg');
       background-position: center top;
-      z-index: 1;
+      background-size: cover;
+      clip-path: polygon(0 0, 100% 0%, 100% 70%, 50% 100%, 0 70%);
     }
     .searchsystem {
       background-color: rgba(255, 255, 255, 0.8);
