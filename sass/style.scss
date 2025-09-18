@@ -5962,16 +5962,16 @@
   .search_blockin,
   .mystudyname,
   .general_block {
-    background-image: url('../images/search_blockbgin_customization04.jpg');
-    background-position: center;
+    background-image: url('../images/search_blockbg02_customization04.jpg');
+    background-position: center top;
     position: relative;
     background-size: 100%;
   }
 
-  .mystudyname,
-  .general_block {
-    background-position: center bottom -30px;
-  }
+  // .mystudyname,
+  // .general_block {
+  //   background-position: center top -60px;
+  // }
 
   // _lighitbox2.scss
   .login_lightbox,

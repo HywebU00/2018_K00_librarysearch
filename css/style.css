@@ -5812,14 +5812,10 @@ select::-ms-expand {
 .customization04 .search_blockin,
 .customization04 .mystudyname,
 .customization04 .general_block {
-  background-image: url("../images/search_blockbgin_customization04.jpg");
-  background-position: center;
+  background-image: url("../images/search_blockbg02_customization04.jpg");
+  background-position: center top;
   position: relative;
   background-size: 100%;
-}
-.customization04 .mystudyname,
-.customization04 .general_block {
-  background-position: center bottom -30px;
 }
 .customization04 .login_lightbox h2,
 .customization04 .choose_librarycard_lightbox h2,
